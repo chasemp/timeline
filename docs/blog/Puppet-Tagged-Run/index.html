@@ -1,0 +1,54 @@
+<!DOCTYPE html><html lang="en" data-astro-cid-4sn4zg3r> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Puppet-Tagged-Run — timeline.523.life</title><meta name="description" content="Puppet-Tagged-Run"><link rel="canonical" href="https://timeline.523.life/blog/Puppet-Tagged-Run"><style>:root{--bg: #0b0e13;--panel: #11161f;--text: #e7ecf3;--muted: #97a3b6;--accent: #6aa0ff}[data-astro-cid-4sn4zg3r]{box-sizing:border-box}html,body{margin:0;padding:0;background:var(--bg);color:var(--text);font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,Helvetica Neue,Arial,"Apple Color Emoji","Segoe UI Emoji"}main[data-astro-cid-4sn4zg3r]{max-width:720px;margin:0 auto;padding:24px}.header[data-astro-cid-4sn4zg3r]{margin-bottom:40px}.back-link[data-astro-cid-4sn4zg3r]{color:var(--accent);text-decoration:none;font-size:14px}.back-link[data-astro-cid-4sn4zg3r]:hover{text-decoration:underline}.meta[data-astro-cid-4sn4zg3r]{font-size:14px;color:var(--muted);margin:16px 0 8px}.type[data-astro-cid-4sn4zg3r]{text-transform:uppercase;letter-spacing:.06em;font-size:12px}h1[data-astro-cid-4sn4zg3r]{margin:8px 0 24px;font-size:32px;line-height:1.2}.content[data-astro-cid-4sn4zg3r]{margin:32px 0}.content[data-astro-cid-4sn4zg3r] img[data-astro-cid-4sn4zg3r]{max-width:100%;height:auto;border-radius:8px}.content[data-astro-cid-4sn4zg3r] p[data-astro-cid-4sn4zg3r]{margin:16px 0}.content[data-astro-cid-4sn4zg3r] pre[data-astro-cid-4sn4zg3r]{background:#1a1f2e;padding:16px;border-radius:8px;overflow-x:auto}.content[data-astro-cid-4sn4zg3r] code[data-astro-cid-4sn4zg3r]{font-family:Monaco,Courier New,monospace;font-size:14px}.content[data-astro-cid-4sn4zg3r] a[data-astro-cid-4sn4zg3r]{color:var(--accent)}.post-footer[data-astro-cid-4sn4zg3r]{margin-top:48px;padding-top:24px;border-top:1px solid #1f2937;display:flex;justify-content:space-between;flex-wrap:wrap;gap:16px}@media (max-width: 640px){h1[data-astro-cid-4sn4zg3r]{font-size:24px}main[data-astro-cid-4sn4zg3r]{padding:16px}}
+</style></head> <body data-astro-cid-4sn4zg3r> <main data-astro-cid-4sn4zg3r> <header class="header" data-astro-cid-4sn4zg3r> <nav data-astro-cid-4sn4zg3r> <a href="/" class="back-link" data-astro-cid-4sn4zg3r>← Back to timeline</a> </nav> <div class="meta" data-astro-cid-4sn4zg3r> <span class="type" data-astro-cid-4sn4zg3r>blog</span> · <time datetime="2012-11-28T00:00:00.000Z" data-astro-cid-4sn4zg3r>11/27/2012</time> </div> <h1 data-astro-cid-4sn4zg3r>Puppet-Tagged-Run</h1> </header> <article class="content" data-astro-cid-4sn4zg3r><p>Updating only relevant Puppet configuration sections</p>
+<p>As a puppet installation grows the list of used modules can get large. Especially, if you are pulling from puppetlabs. Testing in its final stages is usually done via puppet to ensure repeatability. The test runs get longer and longer.</p>
+<h3>A full catalog run with no expected changes</h3>
+<blockquote>
+<p>sudo /usr/bin/puppet agent --test --logdest syslog</p>
+</blockquote>
+<pre><code class="language-plaintext">Info: Retrieving plugin
+
+Info: Caching catalog for 
+
+Info: Applying configuration version &#39;1371116293&#39;
+
+Finished catalog run in 16.35 seconds
+</code></pre>
+<p>If you need to rerun this every time you tweak a config file 16 seconds can be a long time.</p>
+<p>If you are only updating a module called &#39;dhcp&#39; you can do:</p>
+<blockquote>
+<p>sudo /usr/bin/puppet agent --test --logdest syslog --tags dhcp</p>
+</blockquote>
+<pre><code class="language-plaintext">
+Info: Retrieving plugin
+
+Info: Caching catalog for 
+
+Info: Applying configuration version &#39;1371116293&#39;
+
+Finished catalog run in 8.46 seconds
+</code></pre>
+<p>This cut the time in half. Doing tagged runs still compiles the entire update. That is to say, Puppet still runs in the usual way figuring out dependencies and such, but when it comes to applicable changes it only looks for changes at the specified tagged resources.</p>
+<p>If you put <code>–debug</code> into the update command you will see a lot of:</p>
+<pre><code class="language-plaintext">Debug: /Stage[main]/Mcollective::Client/Package[mcollective-client]: Not tagged with dhcp
+</code></pre>
+<p>This resource does not match the tag specified, and as such will not be updated.</p>
+<p>Tags can be explicit or implicit. That is to say you can assign them and there are some that are assigned by design. All class/module names are also tags.</p>
+<h3>This automatically creates a tag called <code>hiera</code></h3>
+<pre><code class="language-puppet">class hiera {
+
+}
+</code></pre>
+<h3>Resource types are generally given a tag as well</h3>
+<p>To update file resources only</p>
+<blockquote>
+<p>sudo /usr/bin/puppet agent --test --logdest syslog --tags file</p>
+</blockquote>
+<pre><code class="language-plaintext">Info: Retrieving plugin
+
+Info: Caching catalog for 
+
+Info: Applying configuration version &#39;1371116293&#39;
+
+Finished catalog run in 12.39 seconds
+</code></pre>
+</article> <footer class="post-footer" data-astro-cid-4sn4zg3r> <a href="/" class="back-link" data-astro-cid-4sn4zg3r>← Back to timeline</a> <a href="/Puppet-Tagged-Run/" target="_blank" rel="noopener" data-astro-cid-4sn4zg3r>Original post ↗</a> </footer> </main> </body></html>

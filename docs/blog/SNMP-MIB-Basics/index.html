@@ -1,0 +1,75 @@
+<!DOCTYPE html><html lang="en" data-astro-cid-4sn4zg3r> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>SNMP-MIB-Basics — timeline.523.life</title><meta name="description" content="SNMP-MIB-Basics"><link rel="canonical" href="https://timeline.523.life/blog/SNMP-MIB-Basics"><style>:root{--bg: #0b0e13;--panel: #11161f;--text: #e7ecf3;--muted: #97a3b6;--accent: #6aa0ff}[data-astro-cid-4sn4zg3r]{box-sizing:border-box}html,body{margin:0;padding:0;background:var(--bg);color:var(--text);font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,Helvetica Neue,Arial,"Apple Color Emoji","Segoe UI Emoji"}main[data-astro-cid-4sn4zg3r]{max-width:720px;margin:0 auto;padding:24px}.header[data-astro-cid-4sn4zg3r]{margin-bottom:40px}.back-link[data-astro-cid-4sn4zg3r]{color:var(--accent);text-decoration:none;font-size:14px}.back-link[data-astro-cid-4sn4zg3r]:hover{text-decoration:underline}.meta[data-astro-cid-4sn4zg3r]{font-size:14px;color:var(--muted);margin:16px 0 8px}.type[data-astro-cid-4sn4zg3r]{text-transform:uppercase;letter-spacing:.06em;font-size:12px}h1[data-astro-cid-4sn4zg3r]{margin:8px 0 24px;font-size:32px;line-height:1.2}.content[data-astro-cid-4sn4zg3r]{margin:32px 0}.content[data-astro-cid-4sn4zg3r] img[data-astro-cid-4sn4zg3r]{max-width:100%;height:auto;border-radius:8px}.content[data-astro-cid-4sn4zg3r] p[data-astro-cid-4sn4zg3r]{margin:16px 0}.content[data-astro-cid-4sn4zg3r] pre[data-astro-cid-4sn4zg3r]{background:#1a1f2e;padding:16px;border-radius:8px;overflow-x:auto}.content[data-astro-cid-4sn4zg3r] code[data-astro-cid-4sn4zg3r]{font-family:Monaco,Courier New,monospace;font-size:14px}.content[data-astro-cid-4sn4zg3r] a[data-astro-cid-4sn4zg3r]{color:var(--accent)}.post-footer[data-astro-cid-4sn4zg3r]{margin-top:48px;padding-top:24px;border-top:1px solid #1f2937;display:flex;justify-content:space-between;flex-wrap:wrap;gap:16px}@media (max-width: 640px){h1[data-astro-cid-4sn4zg3r]{font-size:24px}main[data-astro-cid-4sn4zg3r]{padding:16px}}
+</style></head> <body data-astro-cid-4sn4zg3r> <main data-astro-cid-4sn4zg3r> <header class="header" data-astro-cid-4sn4zg3r> <nav data-astro-cid-4sn4zg3r> <a href="/" class="back-link" data-astro-cid-4sn4zg3r>← Back to timeline</a> </nav> <div class="meta" data-astro-cid-4sn4zg3r> <span class="type" data-astro-cid-4sn4zg3r>blog</span> · <time datetime="2012-10-29T00:00:00.000Z" data-astro-cid-4sn4zg3r>10/28/2012</time> </div> <h1 data-astro-cid-4sn4zg3r>SNMP-MIB-Basics</h1> </header> <article class="content" data-astro-cid-4sn4zg3r><p>SNMP is nice but MIB translations can be a pain. It can also be necessary for figuring out what certain numbers mean in the MIB tree.</p>
+<h3>Where does SNMP look for MIBs?</h3>
+<blockquote>
+<p>net-snmp-config --default-mibdirs</p>
+</blockquote>
+<h3>Make user specific directory (needs to be in above path)</h3>
+<blockquote>
+<p>mkdir -p /home/<me>/.snmp/mibs</p>
+</blockquote>
+<h3>Grab MIB data from Cisco (or wherever)</h3>
+<p>Example MIB for Firewall info: <code>ftp://ftp.cisco.com/pub/mibs/v2/CISCO-UNIFIED-FIREWALL-MIB.my</code></p>
+<p>copy to..</p>
+<p><code>/home/&lt;me&gt;/.snmp/mibs/CISCO-UNIFIED-FIREWALL-MIB</code></p>
+<h3>Enable MIB</h3>
+<p>Find out where SNMP is looking for configuration parameters:</p>
+<blockquote>
+<p>net-snmp-config --snmpconfpath</p>
+</blockquote>
+<p>Edit your user snmp configuration (if path is included in above command)</p>
+<blockquote>
+<p>n /home/<me>/.snmp/snmp.conf
+mib +CISCO-UNIFIED-FIREWALL-MIB</p>
+</blockquote>
+<h3>Try walking the top OID tree</h3>
+<blockquote>
+<p>snmpwalk -v2c <community> <remote_device_ip></p>
+</blockquote>
+<pre><code class="language-plaintext">MIB search path: /home/&lt;me&gt;/.snmp/mibs:/usr/share/mibs/site:/usr/share/snmp/mibs:/usr/share/mibs/iana:/usr/share/mibs/ietf:/usr/share/mibs/netsnmp
+Cannot find module (CISCO-SMI): At line 37 in /home/&lt;me&gt;/.snmp/mibs/CISCO-UNIFIED-FIREWALL-MIB
+Cannot find module (CISCO-FIREWALL-TC): At line 46 in /home/&lt;me&gt;/.snmp/mibs/CISCO-UNIFIED-FIREWALL-MIB
+</code></pre>
+<h3>What&#39;s with? &#39;Cannot find module&#39;</h3>
+<p>This means there are MIB dependencies. You can probably retrieve these from <code>ftp://ftp.cisco.com/pub/mibs/v2</code>.</p>
+<pre><code class="language-plaintext">/home/&lt;me&gt;/.snmp/mibs/CISCO-SMI
+/home/&lt;me&gt;/.snmp/mibs/CISCO-FIREWALL-TC
+</code></pre>
+<p>Enable these MIBs as well.</p>
+<h3>Walk the tree and enjoy MIB goodness</h3>
+<blockquote>
+<p><me>@<box>:~# snmpwalk -v2c -c <community> <remote_device_ip> &gt;&gt; snmpinfo.txt</p>
+</blockquote>
+<h3>Show me the basic SNMP catagories</h3>
+<blockquote>
+<p>cut -d: -f 1 snmpinfo.txt | uniq | sort</p>
+</blockquote>
+<pre><code class="language-plaintext">SNMPv2-MIB
+Technical Support
+Copyright (c) 1986-2013 by Cisco Systems, Inc.
+SNMPv2-MIB
+DISMAN-EVENT-MIB
+SNMPv2-MIB
+IF-MIB
+RFC1213-MIB
+IP-MIB
+IP-FORWARD-MIB
+IP-MIB
+TCP-MIB
+UDP-MIB
+SNMPv2-SMI
+SNMPv2-MIB
+SNMPv2-SMI
+</code></pre>
+<p>You can check out DISMAN-EVENT-MIB using grep. If you find a MIB you can use SNMPGET next time.</p>
+<h3>Retrieve Uptime Using MIB&#39;s and SNMPGET</h3>
+<blockquote>
+<p><me>@<box>:~# snmpget -v2c -c <community> <remote_device_ip> DISMAN-EVENT-MIB::sysUpTimeInstance</p>
+</blockquote>
+<p><code>DISMAN-EVENT-MIB::sysUpTimeInstance = Timeticks: (151866995) 17 days, 13:51:09.95</code></p>
+<h3>Reference</h3>
+<p><a href="ftp://ftp.cisco.com/pub/mibs/v2/CISCO-SMI.my">Cisco MIB</a>
+<a href="https://www.net-snmp.org/wiki/index.php/TUT:Using_and_loading_MIBS">NetSNMP</a>
+<a href="https://wiki.debian.org/SNMP">Debian SNMP</a>
+<a href="https://www.cisco.com/c/en/us/td/docs/routers/asr1000/mib/guide/asr1kmib/asr1mib2.html#wp1034752">Cisco ASR MIB</a></p>
+</article> <footer class="post-footer" data-astro-cid-4sn4zg3r> <a href="/" class="back-link" data-astro-cid-4sn4zg3r>← Back to timeline</a> <a href="/SNMP-MIB-Basics/" target="_blank" rel="noopener" data-astro-cid-4sn4zg3r>Original post ↗</a> </footer> </main> </body></html>

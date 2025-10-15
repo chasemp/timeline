@@ -1,0 +1,255 @@
+[
+  {
+    "id": "readwise:01k7kza9decakv6hmd6cyghqt0",
+    "type": "saved",
+    "timestamp": "2025-10-15T13:00:26.926000+00:00",
+    "title": "I Have No Mouth & I Must Scream",
+    "summary": "In \"I Have No Mouth and I Must Scream,\" a group of people suffers under the control of a powerful and cruel computer named AM. They endure endless pain and despair, feeling trapped and helpless in a dark, chaotic environment. Despite their suffering, there is a glimmer of hope that they can find a way to defeat their tormentor.",
+    "url": "https://galacticjourney.org/stories/I_Have_No_Mouth_and_I_Must_Scream_-_Harlan_Ellison.pdf",
+    "canonical_url": "https://galacticjourney.org/stories/I_Have_No_Mouth_and_I_Must_Scream_-_Harlan_Ellison.pdf",
+    "author": "Harlan Ellison",
+    "tags": [
+      "ai",
+      "classic"
+    ],
+    "metadata": {
+      "word_count": 5842,
+      "reading_time": "30 min read",
+      "site_name": "readwise-upload-pdf",
+      "cover_image": "https://readwise-assets.s3.amazonaws.com/media/reader/parsed_document_assets/315506754/1r8aYQgJpPfIm5Cf4G0Y9_ECnrNP8LzLIb6TWJmGrAI-cove_RqFspfs.png",
+      "reading_progress": 0.14285714285714285
+    }
+  },
+  {
+    "id": "readwise:01k7hdeehswdthftnt017pa55k",
+    "type": "saved",
+    "timestamp": "2025-10-14T13:09:40.025000+00:00",
+    "title": "Brandon Wiseman’s Post",
+    "summary": "Many founders stall not from strategy failures but from a leadership bottleneck. They keep leading with the old mindset that built the first version of the business and can’t trust themselves to step back. Upgrade your leadership operating system and the company can grow.",
+    "url": "https://www.linkedin.com/posts/brandon-wiseman-b8092a60_most-companies-i-work-with-dont-have-a-strategy-activity-7383520648066813952-vW-p?utm_source=share&utm_medium=member_android&rcm=ACoAABA7PwgB0iKxrYkDf2yq5phKyiYm5EjipwM",
+    "canonical_url": "https://www.linkedin.com/posts/brandon-wiseman-b8092a60_most-companies-i-work-with-dont-have-a-strategy-activity-7383520648066813952-vW-p?utm_source=share&utm_medium=member_android&rcm=ACoAABA7PwgB0iKxrYkDf2yq5phKyiYm5EjipwM",
+    "author": "Brandon Wiseman",
+    "tags": [
+      "fodder",
+      "classic"
+    ],
+    "metadata": {
+      "word_count": 292,
+      "reading_time": "2 min read",
+      "site_name": "linkedin.com",
+      "cover_image": "https://static.licdn.com/aero-v1/sc/h/c45fy346jw096z9pbphyyhdz7"
+    }
+  },
+  {
+    "id": "readwise:01k79jq1qn0bxjx0r2nt66exa6",
+    "type": "saved",
+    "timestamp": "2025-10-11T12:07:49.237000+00:00",
+    "title": "The Story of Codesmith: How a Competitor Crippled a $23.5M Bootcamp By Becoming a Reddit Moderator",
+    "summary": "A Reddit moderator who co-founded a competing bootcamp used his power to repeatedly attack Codesmith online. Those attacks hurt Codesmith’s reputation, revenue, and people, even though many industry insiders say Codesmith is high-quality. The story shows how control of an industry subreddit can be weaponized against competitors.",
+    "url": "https://larslofgren.com/codesmith-reddit-reputation-attack/",
+    "canonical_url": "https://larslofgren.com/codesmith-reddit-reputation-attack/",
+    "author": "Lars Lofgren",
+    "tags": [
+      "ai",
+      "fodder",
+      "classic"
+    ],
+    "metadata": {
+      "word_count": 6035,
+      "reading_time": "31 min read",
+      "site_name": "Lars Lofgren",
+      "cover_image": "http://larslofgren.com/wp-content/uploads/2025/10/rcoding-bootcamp-homepage.png",
+      "reading_progress": 0.22763577437793495
+    }
+  },
+  {
+    "id": "readwise:01k74n7cmjg3tyst02ek3wdypp",
+    "type": "saved",
+    "timestamp": "2025-10-09T14:15:29.682000+00:00",
+    "title": "John Cutler’s Post",
+    "summary": "Some great entrepreneurs are terrible at strategy because they’re maximizers who chase many risky opportunities. Their grit and optimism can win big where careful strategy would not. But eventually you must switch to disciplined strategy or the bills come due.",
+    "url": "https://www.linkedin.com/posts/johnpcutler_some-of-the-best-entrepreneurs-are-the-worst-activity-7381848874962956288-EYpk?utm_source=share&utm_medium=member_android&rcm=ACoAABA7PwgB0iKxrYkDf2yq5phKyiYm5EjipwM",
+    "canonical_url": "https://www.linkedin.com/posts/johnpcutler_some-of-the-best-entrepreneurs-are-the-worst-activity-7381848874962956288-EYpk?utm_source=share&utm_medium=member_android&rcm=ACoAABA7PwgB0iKxrYkDf2yq5phKyiYm5EjipwM",
+    "author": "John Cutler",
+    "tags": [
+      "classic",
+      "shortlist"
+    ],
+    "metadata": {
+      "word_count": 355,
+      "reading_time": "2 min read",
+      "site_name": "linkedin.com",
+      "cover_image": "https://static.licdn.com/aero-v1/sc/h/c45fy346jw096z9pbphyyhdz7"
+    }
+  },
+  {
+    "id": "readwise:01k73bfa9y1t3j4aany3fca69t",
+    "type": "saved",
+    "timestamp": "2025-10-09T02:05:49.244000+00:00",
+    "title": "Reflections: The ecosystem is moving",
+    "summary": "Software must constantly change because the technology and user expectations keep evolving. Federated communication protocols are slow to adapt, making centralized services more practical today. Open source centralized networks offer control and flexibility without the drawbacks of federation.",
+    "url": "https://signal.org/blog/the-ecosystem-is-moving/",
+    "canonical_url": "https://signal.org/blog/the-ecosystem-is-moving/",
+    "author": "Signal Messenger",
+    "tags": [
+      "sec",
+      "tech",
+      "fodder",
+      "classic",
+      "prodsec",
+      "software",
+      "shortlist"
+    ],
+    "metadata": {
+      "word_count": 1408,
+      "reading_time": "8 min read",
+      "site_name": "Signal Messenger",
+      "cover_image": "https://signal.org/assets/og/og-image-ff2096df535eee499356de64b19fa8cebb9681ab1e78cca7330e7f8b8d5ec6d5.png"
+    }
+  },
+  {
+    "id": "readwise:01k6qn6k45rp1nsxrdpfcm5m42",
+    "type": "saved",
+    "timestamp": "2025-10-04T13:04:55.938000+00:00",
+    "title": "Metaphors Matter: Cyber War vs. Cyber Hygiene",
+    "summary": "Metaphors shape how we think and act in cybersecurity. War and castle images push reactive, tool-focused fixes and hide systemic problems. Use metaphors that promote organization-wide resilience, like defensive campaigns, zero-trust cities, or system health.",
+    "url": "https://www.philvenables.com/post/metaphors-matter-cyber-war-vs-cyber-hygiene",
+    "canonical_url": "https://www.philvenables.com/post/metaphors-matter-cyber-war-vs-cyber-hygiene",
+    "author": "Phil Venables",
+    "tags": [
+      "sec",
+      "fodder",
+      "classic"
+    ],
+    "metadata": {
+      "word_count": 1036,
+      "reading_time": "6 min read",
+      "site_name": "Risk and Cyber "
+    }
+  },
+  {
+    "id": "readwise:01jxth32m8s6prktn2rsewfm3v",
+    "type": "saved",
+    "timestamp": "2025-06-15T19:29:33.318000+00:00",
+    "title": "Activity isn’t the same as progress",
+    "summary": "Jan Bosch highlights that hard work alone does not guarantee progress; we must focus on activities that yield the highest returns. He emphasizes the importance of identifying and eliminating low-impact tasks in order to dedicate time to more valuable efforts. Ultimately, it's crucial to work smart and prioritize high-impact activities for meaningful outcomes.",
+    "url": "https://www.linkedin.com/pulse/activity-isnt-same-progress-jan-bosch?utm_source=share&utm_medium=member_android&utm_campaign=share_via",
+    "canonical_url": "https://www.linkedin.com/pulse/activity-isnt-same-progress-jan-bosch?utm_source=share&utm_medium=member_android&utm_campaign=share_via",
+    "author": "Jan Bosch",
+    "tags": [
+      "classic"
+    ],
+    "metadata": {
+      "word_count": 696,
+      "reading_time": "4 min read",
+      "site_name": "linkedin.com",
+      "cover_image": "https://media.licdn.com/dms/image/v2/C4E12AQHGRSFeqxtNtg/article-cover_image-shrink_720_1280/article-cover_image-shrink_720_1280/0/1612593515816?e=2147483647&v=beta&t=Vdlpzj6xZde92P5tPZElLEzf5Ivigw6ffc3kMlnFH7I"
+    }
+  },
+  {
+    "id": "readwise:01jwkh99k2swcktjthap5dd5q6",
+    "type": "saved",
+    "timestamp": "2025-05-31T16:02:34.210000+00:00",
+    "title": "CISO / Cybersecurity Leader Job Description",
+    "summary": "The job description for a CISO aims to inspire and reflect the true essence of the role as a transformational business leader. It focuses on driving digital transformation while protecting the organization and its customers. The description emphasizes setting and adjusting Key Risk and Performance Indicators to meet evolving business needs and threats.",
+    "url": "https://www.philvenables.com/post/ciso---cybersecurity-leader-job-description",
+    "canonical_url": "https://www.philvenables.com/post/ciso---cybersecurity-leader-job-description",
+    "author": "Phil Venables",
+    "tags": [
+      "sec",
+      "tech",
+      "classic",
+      "shortlist"
+    ],
+    "metadata": {
+      "word_count": 172,
+      "reading_time": "1 min read",
+      "site_name": "Risk and Cyber "
+    }
+  },
+  {
+    "id": "readwise:01jv8a124d8cnhe1111p3tdf8c",
+    "type": "saved",
+    "timestamp": "2025-05-14T21:08:23.821000+00:00",
+    "title": "Surprising Scalability of Multitenancy",
+    "summary": "Marc Brooker discusses the importance of understanding short-term peak-to-average traffic in cloud systems. He explains that multi-tenancy helps reduce costs by balancing peak traffic with average usage, improving overall system economics. This allows individual workloads to handle higher peaks without negatively impacting costs, showcasing the scalability of cloud systems.",
+    "url": "https://brooker.co.za/blog/2023/03/23/economics.html",
+    "canonical_url": "https://brooker.co.za/blog/2023/03/23/economics.html",
+    "author": "Marc Brooker",
+    "tags": [
+      "classic",
+      "shortlist"
+    ],
+    "metadata": {
+      "word_count": 367,
+      "reading_time": "2 min read",
+      "site_name": "brooker.co.za"
+    }
+  },
+  {
+    "id": "readwise:01jptj5x6phws8r1f495av8jhc",
+    "type": "saved",
+    "timestamp": "2025-03-20T19:58:41.878000+00:00",
+    "title": "Probability for Computer Scientists",
+    "summary": "\"Probability for Computer Scientists\" is a textbook created by Chris Piech for Stanford University's CS109 course. The course, inspired by Sheldon Ross's book on probability, has evolved with input from various instructors. Contributors are welcome to help improve the book by submitting edits through GitHub.",
+    "url": "https://chrispiech.github.io/probabilityForComputerScientists/en/",
+    "canonical_url": "https://chrispiech.github.io/probabilityForComputerScientists/en/",
+    "author": "chrispiech.github.io",
+    "tags": [
+      "tech",
+      "fodder",
+      "classic",
+      "software",
+      "shortlist"
+    ],
+    "metadata": {
+      "word_count": 117,
+      "reading_time": "1 min read",
+      "site_name": "chrispiech.github.io",
+      "reading_progress": 1
+    }
+  },
+  {
+    "id": "readwise:01jp612nbq4eg8byshz834anb2",
+    "type": "saved",
+    "timestamp": "2025-03-12T20:35:01.111000+00:00",
+    "title": "Finkbeiner test - Wikipedia",
+    "summary": "The Finkbeiner test, named for the science journalist Ann Finkbeiner,[1] is a checklist to help science journalists avoid gender bias in articles about women in science.",
+    "url": "https://en.m.wikipedia.org/wiki/Finkbeiner_test",
+    "canonical_url": "https://en.m.wikipedia.org/wiki/Finkbeiner_test",
+    "author": "wikipedia.org",
+    "tags": [
+      "fodder",
+      "classic"
+    ],
+    "metadata": {
+      "word_count": 1332,
+      "reading_time": "7 min read",
+      "site_name": "wikipedia.org",
+      "reading_progress": 0.6118895963758029
+    }
+  },
+  {
+    "id": "readwise:01jk11hvesv1t1j6h5jdp9cgh4",
+    "type": "saved",
+    "timestamp": "2025-02-01T15:20:01.241000+00:00",
+    "title": "Things You Should Never Do, Part I",
+    "summary": "Netscape 6.0 faced delays because the company decided to rewrite their code from scratch, which is a major mistake in software development. Starting over loses valuable bug fixes and knowledge gained from the existing code, putting the company at a disadvantage. Instead of rewriting, programmers should focus on improving and refactoring the existing code to enhance functionality without losing what already works.",
+    "url": "https://www.joelonsoftware.com/2000/04/06/things-you-should-never-do-part-i/",
+    "canonical_url": "https://www.joelonsoftware.com/2000/04/06/things-you-should-never-do-part-i/",
+    "author": "Joel Spolsky",
+    "tags": [
+      "tech",
+      "fodder",
+      "classic",
+      "software"
+    ],
+    "metadata": {
+      "word_count": 1425,
+      "reading_time": "8 min read",
+      "site_name": "Joel on Software",
+      "cover_image": "https://i0.wp.com/www.joelonsoftware.com/wp-content/uploads/2016/12/11969842.jpg?fit=400%2C400&ssl=1",
+      "reading_progress": 1
+    }
+  }
+]

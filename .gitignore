@@ -1,0 +1,34 @@
+# Dependencies
+node_modules/
+astro/node_modules/
+
+# Environment
+.env
+.env.local
+
+# Build artifacts at root (gitignored, but /docs is committed for GitHub Pages)
+/build
+/build-info.json
+astro/build
+astro/build-info.json
+
+# Astro
+astro/dist/
+.astro/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+.DS_Store
+
+# Logs
+*.log
+npm-debug.log*
+
+# Test coverage
+coverage/
+
+# Note: /docs is committed for GitHub Pages deployment
+# Unlike typical /src → /docs patterns, we commit docs/ because GitHub Pages serves from it
+

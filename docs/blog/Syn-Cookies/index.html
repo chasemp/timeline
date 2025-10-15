@@ -1,0 +1,25 @@
+<!DOCTYPE html><html lang="en" data-astro-cid-4sn4zg3r> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Syn-Cookies — timeline.523.life</title><meta name="description" content="Syn-Cookies"><link rel="canonical" href="https://timeline.523.life/blog/Syn-Cookies"><style>:root{--bg: #0b0e13;--panel: #11161f;--text: #e7ecf3;--muted: #97a3b6;--accent: #6aa0ff}[data-astro-cid-4sn4zg3r]{box-sizing:border-box}html,body{margin:0;padding:0;background:var(--bg);color:var(--text);font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,Helvetica Neue,Arial,"Apple Color Emoji","Segoe UI Emoji"}main[data-astro-cid-4sn4zg3r]{max-width:720px;margin:0 auto;padding:24px}.header[data-astro-cid-4sn4zg3r]{margin-bottom:40px}.back-link[data-astro-cid-4sn4zg3r]{color:var(--accent);text-decoration:none;font-size:14px}.back-link[data-astro-cid-4sn4zg3r]:hover{text-decoration:underline}.meta[data-astro-cid-4sn4zg3r]{font-size:14px;color:var(--muted);margin:16px 0 8px}.type[data-astro-cid-4sn4zg3r]{text-transform:uppercase;letter-spacing:.06em;font-size:12px}h1[data-astro-cid-4sn4zg3r]{margin:8px 0 24px;font-size:32px;line-height:1.2}.content[data-astro-cid-4sn4zg3r]{margin:32px 0}.content[data-astro-cid-4sn4zg3r] img[data-astro-cid-4sn4zg3r]{max-width:100%;height:auto;border-radius:8px}.content[data-astro-cid-4sn4zg3r] p[data-astro-cid-4sn4zg3r]{margin:16px 0}.content[data-astro-cid-4sn4zg3r] pre[data-astro-cid-4sn4zg3r]{background:#1a1f2e;padding:16px;border-radius:8px;overflow-x:auto}.content[data-astro-cid-4sn4zg3r] code[data-astro-cid-4sn4zg3r]{font-family:Monaco,Courier New,monospace;font-size:14px}.content[data-astro-cid-4sn4zg3r] a[data-astro-cid-4sn4zg3r]{color:var(--accent)}.post-footer[data-astro-cid-4sn4zg3r]{margin-top:48px;padding-top:24px;border-top:1px solid #1f2937;display:flex;justify-content:space-between;flex-wrap:wrap;gap:16px}@media (max-width: 640px){h1[data-astro-cid-4sn4zg3r]{font-size:24px}main[data-astro-cid-4sn4zg3r]{padding:16px}}
+</style></head> <body data-astro-cid-4sn4zg3r> <main data-astro-cid-4sn4zg3r> <header class="header" data-astro-cid-4sn4zg3r> <nav data-astro-cid-4sn4zg3r> <a href="/" class="back-link" data-astro-cid-4sn4zg3r>← Back to timeline</a> </nav> <div class="meta" data-astro-cid-4sn4zg3r> <span class="type" data-astro-cid-4sn4zg3r>blog</span> · <time datetime="2013-05-23T00:00:00.000Z" data-astro-cid-4sn4zg3r>5/22/2013</time> </div> <h1 data-astro-cid-4sn4zg3r>Syn-Cookies</h1> </header> <article class="content" data-astro-cid-4sn4zg3r><p>When you&#39;re being hit with DDOS of any flavor it sucks mightily. Some of the old school attacks like syn floods have been around so long there are decent defenses. One of the (seemingly) lesser known defenses is syn cookies.</p>
+<h3>Who doesn&#39;t like cookies?</h3>
+<p>SYN cookies are particular choices of initial TCP sequence numbers by TCP servers.</p>
+<h3>Linux</h3>
+<pre><code class="language-plaintext">root@&lt;server&gt;:~# cat /proc/sys/net/ipv4/tcp_syncookies
+0
+
+root@&lt;server&gt;:~# cat /proc/sys/net/ipv4/tcp_syncookies
+1
+</code></pre>
+<p>Now syn cookies are enabled. This not a foolproof defense but can help. Remember this method of enabling does not persist through a reboot.</p>
+<h3>Cisco IOS Zone Based FW Syn Cookies</h3>
+<p>Global</p>
+<blockquote>
+<p>parameter-map type inspect global tcp syn-flood limit 20000</p>
+</blockquote>
+<p>Zone Specific</p>
+<blockquote>
+<p>parameter-map type inspect-zone ddos-detection tcp syn-flood rate per-destination 20000</p>
+</blockquote>
+<p>SYN cookies are not without problems. They can cause latency, sometimes very noticeable latency.</p>
+<h3>Reference</h3>
+<p><a href="https://cr.yp.to/syncookies.html">D.J. Bernstein</a></p>
+</article> <footer class="post-footer" data-astro-cid-4sn4zg3r> <a href="/" class="back-link" data-astro-cid-4sn4zg3r>← Back to timeline</a> <a href="/Syn-Cookies/" target="_blank" rel="noopener" data-astro-cid-4sn4zg3r>Original post ↗</a> </footer> </main> </body></html>

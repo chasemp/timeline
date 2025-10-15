@@ -1,0 +1,94 @@
+<!DOCTYPE html><html lang="en" data-astro-cid-4sn4zg3r> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Beginning IOS BGP Configuration — timeline.523.life</title><meta name="description" content="Beginning IOS BGP Configuration"><link rel="canonical" href="https://timeline.523.life/blog/Beginning-BGP-Configuration"><style>:root{--bg: #0b0e13;--panel: #11161f;--text: #e7ecf3;--muted: #97a3b6;--accent: #6aa0ff}[data-astro-cid-4sn4zg3r]{box-sizing:border-box}html,body{margin:0;padding:0;background:var(--bg);color:var(--text);font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,Helvetica Neue,Arial,"Apple Color Emoji","Segoe UI Emoji"}main[data-astro-cid-4sn4zg3r]{max-width:720px;margin:0 auto;padding:24px}.header[data-astro-cid-4sn4zg3r]{margin-bottom:40px}.back-link[data-astro-cid-4sn4zg3r]{color:var(--accent);text-decoration:none;font-size:14px}.back-link[data-astro-cid-4sn4zg3r]:hover{text-decoration:underline}.meta[data-astro-cid-4sn4zg3r]{font-size:14px;color:var(--muted);margin:16px 0 8px}.type[data-astro-cid-4sn4zg3r]{text-transform:uppercase;letter-spacing:.06em;font-size:12px}h1[data-astro-cid-4sn4zg3r]{margin:8px 0 24px;font-size:32px;line-height:1.2}.content[data-astro-cid-4sn4zg3r]{margin:32px 0}.content[data-astro-cid-4sn4zg3r] img[data-astro-cid-4sn4zg3r]{max-width:100%;height:auto;border-radius:8px}.content[data-astro-cid-4sn4zg3r] p[data-astro-cid-4sn4zg3r]{margin:16px 0}.content[data-astro-cid-4sn4zg3r] pre[data-astro-cid-4sn4zg3r]{background:#1a1f2e;padding:16px;border-radius:8px;overflow-x:auto}.content[data-astro-cid-4sn4zg3r] code[data-astro-cid-4sn4zg3r]{font-family:Monaco,Courier New,monospace;font-size:14px}.content[data-astro-cid-4sn4zg3r] a[data-astro-cid-4sn4zg3r]{color:var(--accent)}.post-footer[data-astro-cid-4sn4zg3r]{margin-top:48px;padding-top:24px;border-top:1px solid #1f2937;display:flex;justify-content:space-between;flex-wrap:wrap;gap:16px}@media (max-width: 640px){h1[data-astro-cid-4sn4zg3r]{font-size:24px}main[data-astro-cid-4sn4zg3r]{padding:16px}}
+</style></head> <body data-astro-cid-4sn4zg3r> <main data-astro-cid-4sn4zg3r> <header class="header" data-astro-cid-4sn4zg3r> <nav data-astro-cid-4sn4zg3r> <a href="/" class="back-link" data-astro-cid-4sn4zg3r>← Back to timeline</a> </nav> <div class="meta" data-astro-cid-4sn4zg3r> <span class="type" data-astro-cid-4sn4zg3r>blog</span> · <time datetime="2013-04-17T00:00:00.000Z" data-astro-cid-4sn4zg3r>4/16/2013</time> </div> <h1 data-astro-cid-4sn4zg3r>Beginning IOS BGP Configuration</h1> </header> <article class="content" data-astro-cid-4sn4zg3r><p>This configuration is Cisco based but JunOS isn&#39;t too far of a stretch in my experience.</p>
+<p>First off: you need your ASN. You need your address block. Your address block must be at least /24.</p>
+<p>A general rule of thumb for awhile has been 2 GB of memory per full BGP table. Sometimes more is required and sometimes significantly less. The table is still growing and 2 GB is my personal baseline required.</p>
+<h3>Aliases: you will learn to like them</h3>
+<pre><code class="language-plaintext">alias exec sumbgp6 show bgp ipv6 unicast summary
+alias exec sumbgp show ip bgp summary
+alias exec sbgp show run | section bgp
+</code></pre>
+<h4>Basic BGP stanza</h4>
+<pre><code class="language-plaintext">config t
+ip bgp-community new-format
+!insert your ASN
+router bgp 
+ !your router id should be set explicitly
+ bgp router-id 
+ no bgp fast-external-fallover
+ !notify syslog of bgp changes
+ bgp log-neighbor-changes
+ bgp graceful-restart restart-time 120
+ bgp graceful-restart stalepath-time 360
+ bgp graceful-restart
+ neighbor  remote-as 
+ neighbor  description 
+ neighbor  version 4
+ neighbor  activate
+</code></pre>
+<h3>Our First BGP Summary</h3>
+<pre><code class="language-plaintext">RTRME(config-router)####do sumbgp
+BGP router identifier , local AS number 
+BGP table version is 464187, main routing table version 464187
+446501 network entries using 66082148 bytes of memory
+446501 path entries using 28576064 bytes of memory
+73561/73558 BGP path/bestpath attribute entries using 9415808 bytes of memory
+69308 BGP AS-PATH entries using 2555070 bytes of memory
+68 BGP community entries using 1904 bytes of memory
+0 BGP route-map cache entries using 0 bytes of memory
+0 BGP filter-list cache entries using 0 bytes of memory
+BGP using 106630994 total bytes of memory
+BGP activity 460823/1679 prefixes, 461759/2621 paths, scan interval 60 secs
+
+Neighbor        V           AS MsgRcvd MsgSent   TblVer  InQ OutQ Up/Down  State/PfxRcd
+  4         2914   79993      80   464166    0    0 01:11:19   446501
+</code></pre>
+<h3>BGP: Why you no work?</h3>
+<pre><code>RTRME(config-router)####do sh ip bgp neighbor  advertised-routes
+
+Total number of prefixes 0
+</code></pre>
+<h3>To Advertise it: We need to know where it is</h3>
+<pre><code>RTRME(config)####sh ip bgp 
+% Network not in table
+
+RTRME(config)####ip route   null 0 200
+
+RTRME(config)####do sh ip bgp 
+BGP routing table entry for , version 464822
+Paths: (1 available, best ####1, table default)
+Multipath: eBGP
+  Not advertised to any peer
+  Refresh Epoch 1
+  Local
+    0.0.0.0 from 0.0.0.0 ()
+      Origin IGP, metric 0, localpref 100, weight 32768, valid, sourced, local, best
+RTRME(config)####
+</code></pre>
+<h3>Resetting BGP</h3>
+<p>This is very aggressive and will reset your peering status. Lookup soft in/out if you are alreadying using BGP in production.</p>
+<blockquote>
+<p>RTRME####clear ip bgp *</p>
+</blockquote>
+<h3>Things we know about our neighbor</h3>
+<p>What is their status?</p>
+<blockquote>
+<p>sh ip bgp neighbors</p>
+</blockquote>
+<p>What are we advertising to them?</p>
+<pre><code class="language-plaintext">
+RTRME####sh ip bgp neighbors  advertised-routes 
+BGP table version is 447010, local router ID is 
+Status codes: s suppressed, d damped, h history, * valid, &gt; best, i - internal,
+              r RIB-failure, S Stale, m multipath, b backup-path, x best-external, f RT-Filter, a additional-path
+Origin codes: i - IGP, e - EGP, ? - incomplete
+
+   Network          Next Hop            Metric LocPrf Weight Path
+*&gt;      0.0.0.0                  0         32768 i
+
+Total number of prefixes 1 
+</code></pre>
+<h3>References</h3>
+<p><a href="https://www.cisco.com/c/en/us/support/docs/ip/border-gateway-protocol-bgp/19345-bgp-noad.html">Troubleshoot Border Gateway Protocol Routes that Do Not Advertise</a>
+<a href="https://lg.zayo.com/lg.cgi">Zayo Looking Glass</a>
+<a href="https://www.cisco.com/c/en/us/support/docs/ip/border-gateway-protocol-bgp/16137-cond-adv.html">Configure and Verify the BGP Conditional Advertisement Feature</a></p>
+</article> <footer class="post-footer" data-astro-cid-4sn4zg3r> <a href="/" class="back-link" data-astro-cid-4sn4zg3r>← Back to timeline</a> <a href="/Blog/Beginning-BGP-Configuration/" target="_blank" rel="noopener" data-astro-cid-4sn4zg3r>Original post ↗</a> </footer> </main> </body></html>

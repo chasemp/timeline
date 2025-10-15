@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+    "jsx": "react-jsx",
+    "strict": true,
+    "baseUrl": ".",
+    "types": ["node"],
+    "allowJs": true,
+    "esModuleInterop": true
+  },
+  "include": ["src", "scripts"],
+  "exclude": ["dist", "node_modules"]
+}
+
