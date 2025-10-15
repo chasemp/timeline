@@ -9,9 +9,18 @@ const VERSION = "1.2.0"; // Added hashtag labels and filtering
 // Extract hashtags from timeline items
 function extractHashtags(text: string): string[] {
   if (!text) return [];
-  const hashtagRegex = /#[a-zA-Z0-9_]+/g;
+  const hashtagRegex = /#[a-zA-Z][a-zA-Z0-9_]{2,}/g; // Must start with letter, 3+ chars total
   const matches = text.match(hashtagRegex);
-  return matches ? matches.map(tag => tag.toLowerCase()) : [];
+  if (!matches) return [];
+  
+  return matches
+    .map(tag => tag.toLowerCase())
+    .filter(tag => {
+      // Filter out hex color codes (e.g. #ffffff, #abc123)
+      const withoutHash = tag.substring(1);
+      const isHexColor = /^[0-9a-f]{3}$|^[0-9a-f]{6}$/i.test(withoutHash);
+      return !isHexColor;
+    });
 }
 
 // Add hashtags to each item
