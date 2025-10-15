@@ -382,24 +382,30 @@ const allHashtags = Object.entries(hashtagCounts)
     document.dispatchEvent(new CustomEvent('filters:changed', { detail: { types: values } }));
   }
   
+  // Hashtag dropdown filtering - declare early for use in None button
+  const selectedHashtags = new Set<string>();
+  const hashtagDropdownBtn = document.getElementById('hashtag-dropdown-btn');
+  const hashtagDropdownMenu = document.getElementById('hashtag-dropdown-menu');
+  const selectedCountBadge = document.getElementById('selected-hashtag-count');
+  const hashtagCheckboxes = document.querySelectorAll('.hashtag-option input[type="checkbox"]') as NodeListOf<HTMLInputElement>;
+
   // All button
   document.getElementById('select-all')?.addEventListener('click', () => {
     checkboxes.forEach((input) => input.checked = true);
     updateFilters();
   });
   
-  // None button
+  // None button - clears both content types AND labels
   document.getElementById('select-none')?.addEventListener('click', () => {
     checkboxes.forEach((input) => input.checked = false);
+    
+    // Also clear all selected hashtags
+    hashtagCheckboxes.forEach((checkbox) => checkbox.checked = false);
+    selectedHashtags.clear();
+    updateHashtagFilters();
+    
     updateFilters();
   });
-
-  // Hashtag dropdown filtering
-  const selectedHashtags = new Set<string>();
-  const hashtagDropdownBtn = document.getElementById('hashtag-dropdown-btn');
-  const hashtagDropdownMenu = document.getElementById('hashtag-dropdown-menu');
-  const selectedCountBadge = document.getElementById('selected-hashtag-count');
-  const hashtagCheckboxes = document.querySelectorAll('.hashtag-option input[type="checkbox"]') as NodeListOf<HTMLInputElement>;
 
   function updateHashtagFilters() {
     document.dispatchEvent(new CustomEvent('hashtag:changed', { 
