@@ -1,9 +1,10 @@
 ---
+import { ViewTransitions } from 'astro:transitions';
 import Timeline from "../components/Timeline.astro";
 import timeline from "../data/timeline.json";
 
 const items = (timeline as any[]);
-const VERSION = "1.0.3"; // Bump this to force cache invalidation
+const VERSION = "1.1.0"; // Major feature update: search, themes, API
 ---
 
 <!DOCTYPE html>
@@ -19,6 +20,9 @@ const VERSION = "1.0.3"; // Bump this to force cache invalidation
   <meta http-equiv="Pragma" content="no-cache">
   <meta http-equiv="Expires" content="0">
   <link rel="alternate" type="application/rss+xml" title="Chase Pettet's Timeline" href="/rss.xml" />
+  <link href="/pagefind/pagefind-ui.css" rel="stylesheet">
+  <script is:inline src="/pagefind/pagefind-ui.js"></script>
+  <ViewTransitions />
 </head>
 <body data-version={VERSION}>
 
@@ -27,9 +31,13 @@ const VERSION = "1.0.3"; // Bump this to force cache invalidation
     <header class="header">
       <h1>timeline.<a href="https://523.life" class="home-link">523.life</a></h1>
       <p>A timeline of my public online activity.</p>
+      <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme" title="Toggle light/dark theme">
+        <span class="theme-icon">🌙</span>
+      </button>
     </header>
 
     <section class="controls" aria-label="Filters">
+      <div id="search-container" class="search-container"></div>
       <div class="filter-actions">
         <button id="select-all" class="filter-action">All</button>
         <button id="select-none" class="filter-action">None</button>
@@ -82,7 +90,8 @@ const VERSION = "1.0.3"; // Bump this to force cache invalidation
 </footer>
 
 <style is:global>
-  :root {
+  /* Light theme (old book - current) */
+  :root[data-theme="light"], :root:not([data-theme]) {
     --bg: #f4ecd8;
     --panel: #faf6ed;
     --text: #3d2817;
@@ -92,7 +101,19 @@ const VERSION = "1.0.3"; // Bump this to force cache invalidation
     --border: #d4c4a8;
     --card-bg: #fdfbf7;
   }
-  html, body { margin: 0; padding: 0; background: var(--bg); color: var(--text); font: 16px/1.6 Georgia, "Times New Roman", serif; }
+  
+  /* Dark theme (darker old book) */
+  :root[data-theme="dark"] {
+    --bg: #2a2419;
+    --panel: #342d23;
+    --text: #e8dcc4;
+    --muted: #a89a84;
+    --accent: #d4956f;
+    --spine: #4a3f32;
+    --border: #4a3f32;
+    --card-bg: #3a3228;
+  }
+  html, body { margin: 0; padding: 0; background: var(--bg); color: var(--text); font: 16px/1.6 Georgia, "Times New Roman", serif; transition: background-color 0.3s ease, color 0.3s ease; }
   main { max-width: 1200px; margin: 0 auto; padding: 24px; display: grid; grid-template-columns: 1fr minmax(320px, 420px); gap: 24px; }
   footer { max-width: 1200px; margin: 0 auto; padding: 24px 24px 32px; text-align: center; }
   footer p { margin: 0; color: var(--muted); font-size: 14px; }
@@ -100,12 +121,16 @@ const VERSION = "1.0.3"; // Bump this to force cache invalidation
   footer a:hover { text-decoration: underline; }
   footer .version { opacity: 0.5; font-size: 12px; margin-left: 8px; }
   .timeline-content { grid-column: 1; }
-  .header { text-align: center; margin-bottom: 16px; }
-  .header h1 { margin: 0 0 4px; font-size: 32px; font-weight: 600; color: #8b4513; letter-spacing: -0.02em; }
+  .header { text-align: center; margin-bottom: 16px; position: relative; }
+  .header h1 { margin: 0 0 4px; font-size: 32px; font-weight: 600; color: var(--accent); letter-spacing: -0.02em; }
   .header p { margin: 0 0 16px; color: var(--muted); font-size: 15px; }
+  .theme-toggle { position: absolute; top: 0; right: 0; background: var(--card-bg); border: 1px solid var(--border); border-radius: 8px; padding: 8px 12px; cursor: pointer; font-size: 18px; transition: all 0.2s; }
+  .theme-toggle:hover { background: var(--panel); border-color: var(--accent); transform: scale(1.05); }
+  .theme-icon { display: inline-block; }
   .home-link { color: inherit; text-decoration: none; transition: opacity 0.2s; }
   .home-link:hover { opacity: 0.7; text-decoration: underline; }
   .controls { position: sticky; top: 0; background: linear-gradient(var(--bg), rgba(244, 236, 216, 0.95)); padding: 12px 0; z-index: 10; backdrop-filter: blur(8px); margin-bottom: 12px; }
+  .search-container { margin-bottom: 12px; max-width: 600px; margin-left: auto; margin-right: auto; }
   .filter-actions { display: flex; gap: 8px; justify-content: center; margin-bottom: 10px; }
   .filter-action { background: var(--card-bg); padding: 6px 16px; border-radius: 999px; border: 1px solid var(--border); color: var(--text); font-size: 13px; cursor: pointer; transition: all 0.2s; font-family: Georgia, "Times New Roman", serif; font-weight: 600; }
   .filter-action:hover { background: var(--accent); color: var(--bg); border-color: var(--accent); }
@@ -152,6 +177,37 @@ const VERSION = "1.0.3"; // Bump this to force cache invalidation
 </style>
 
 <script>
+  // Theme toggle
+  const themeToggle = document.getElementById('theme-toggle');
+  const themeIcon = themeToggle?.querySelector('.theme-icon');
+  const html = document.documentElement;
+  
+  // Load saved theme or default to light
+  const savedTheme = localStorage.getItem('theme') || 'light';
+  html.setAttribute('data-theme', savedTheme);
+  if (themeIcon) themeIcon.textContent = savedTheme === 'dark' ? '☀️' : '🌙';
+  
+  themeToggle?.addEventListener('click', () => {
+    const currentTheme = html.getAttribute('data-theme');
+    const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+    html.setAttribute('data-theme', newTheme);
+    localStorage.setItem('theme', newTheme);
+    if (themeIcon) themeIcon.textContent = newTheme === 'dark' ? '☀️' : '🌙';
+  });
+
+  // Initialize Pagefind search
+  window.addEventListener('DOMContentLoaded', () => {
+    new window.PagefindUI({ 
+      element: "#search-container",
+      showSubResults: true,
+      showImages: false,
+      excerptLength: 15,
+      translations: {
+        placeholder: "Search timeline..."
+      }
+    });
+  });
+
   const params = new URLSearchParams(location.search);
   const selected = new Set((params.get('types') ?? 'blog,saved,bluesky,release,wikipedia').split(',').filter(Boolean));
   
