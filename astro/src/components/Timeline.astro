@@ -17,6 +17,12 @@ const typeDisplayName = (type: string) => {
 ---
 
 <section class="timeline" aria-label="Timeline">
+  <div class="empty-state" id="empty-state" hidden>
+    <div class="empty-icon">📭</div>
+    <h3>Nothing to see here...</h3>
+    <p>Looks like you've deselected everything. Even time needs something to show!</p>
+    <p class="empty-hint">Try checking at least one content type above. ↑</p>
+  </div>
   <ol class="list" role="list">
     <!-- Today marker -->
     <li class="row today-marker">
@@ -66,6 +72,11 @@ const typeDisplayName = (type: string) => {
 
 <style>
   .timeline { display: contents; }
+  .empty-state { text-align: center; padding: 80px 20px; color: var(--muted); max-width: 600px; margin: 0 auto; }
+  .empty-icon { font-size: 64px; margin-bottom: 20px; opacity: 0.8; }
+  .empty-state h3 { font-size: 24px; color: var(--text); margin: 0 0 12px; font-weight: 600; }
+  .empty-state p { margin: 8px 0; font-size: 16px; line-height: 1.6; }
+  .empty-hint { font-style: italic; color: var(--accent); font-size: 14px; margin-top: 16px; }
   .list { list-style: none; margin: 0; padding: 0; position: relative; }
   .row { display: grid; grid-template-columns: 24px 1fr; gap: 12px; align-items: start; margin: 12px 0; }
   .spine { position: relative; height: 100%; }
@@ -120,6 +131,21 @@ const typeDisplayName = (type: string) => {
   const typesParam = (params.get('types') ?? '').split(',').filter(Boolean);
 
   let activeHashtags = new Set<string>();
+  const emptyState = document.getElementById('empty-state');
+  const timelineList = document.querySelector('.list');
+
+  function checkIfEmpty() {
+    const visibleRows = Array.from(document.querySelectorAll('.row:not(.today-marker)') as NodeListOf<HTMLElement>)
+      .filter(row => row.style.display !== 'none');
+    
+    if (visibleRows.length === 0) {
+      emptyState?.removeAttribute('hidden');
+      timelineList?.setAttribute('hidden', '');
+    } else {
+      emptyState?.setAttribute('hidden', '');
+      timelineList?.removeAttribute('hidden');
+    }
+  }
 
   function applyFilters() {
     const allowed = new Set(typesParam.length ? typesParam : Array.from(document.querySelectorAll('input[name="type"]')).map(i=>i.value));
@@ -132,6 +158,7 @@ const typeDisplayName = (type: string) => {
       
       (row as HTMLElement).style.display = (typeMatch && hashtagMatch) ? '' : 'none';
     });
+    checkIfEmpty();
   }
   applyFilters();
   
@@ -146,6 +173,7 @@ const typeDisplayName = (type: string) => {
       
       (row as HTMLElement).style.display = (typeMatch && hashtagMatch) ? '' : 'none';
     });
+    checkIfEmpty();
   });
 
   document.addEventListener('hashtag:changed', (e: any) => {
