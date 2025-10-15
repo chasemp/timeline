@@ -1,4 +1,5 @@
 ---
+import { ViewTransitions } from 'astro:transitions';
 import timeline from "../../data/timeline.json";
 
 export function getStaticPaths() {
@@ -20,6 +21,7 @@ const { post } = Astro.props;
   <title>{post.title} — timeline.523.life</title>
   <meta name="description" content={post.summary || post.title}>
   <link rel="canonical" href={`https://timeline.523.life/blog/${post.id.replace('blog:', '')}`}>
+  <ViewTransitions />
 </head>
 <body>
 

@@ -13,8 +13,9 @@ if [ -f .env ]; then
   export $(cat .env | xargs)
 fi
 
-# Use npx astro build directly to skip prebuild hook (which would re-fetch data)
-npx astro build
+# Use npm run build to include postbuild (pagefind)
+# Note: This will run prebuild (data fetch) - ensure data is current
+npm run build
 
 echo "📦 Deploying to docs directory..."
 cd ..
