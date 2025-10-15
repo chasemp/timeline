@@ -82,8 +82,19 @@ const itemsWithHashtags = items.map(item => {
       return !ignoreList.has(tag);
     });
   
+  // Add content type as a label for filtering
+  // Map type to label name
+  const typeLabels: Record<string, string> = {
+    'blog': '#blog',
+    'saved': '#article',
+    'bluesky': '#bluesky',
+    'wikipedia': '#wikipedia',
+    'release': '#release'
+  };
+  const typeTag = typeLabels[item.type] ? [typeLabels[item.type]] : [];
+  
   // Normalize all tags (merge similar ones)
-  const allTags = [...frontmatterTags, ...titleTags, ...summaryTags, ...contentTags]
+  const allTags = [...typeTag, ...frontmatterTags, ...titleTags, ...summaryTags, ...contentTags]
     .map(tag => normalizeTag(tag));
   
   const hashtags = [...new Set(allTags)];
