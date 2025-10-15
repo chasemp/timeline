@@ -48,10 +48,16 @@ function extractHashtags(text: string): string[] {
 
 // Add hashtags to each item
 const itemsWithHashtags = items.map(item => {
+  // Extract hashtags from content (text-based)
   const titleTags = extractHashtags(item.title || '');
   const summaryTags = extractHashtags(item.summary || '');
   const contentTags = extractHashtags(item.content_html || '').slice(0, 10); // Limit from content
-  const hashtags = [...new Set([...titleTags, ...summaryTags, ...contentTags])];
+  
+  // Use frontmatter tags (from blog posts, etc.) - normalize to lowercase with # prefix
+  const frontmatterTags = (item.tags || [])
+    .map((tag: string) => `#${tag.toLowerCase().replace(/\s+/g, '_')}`);
+  
+  const hashtags = [...new Set([...frontmatterTags, ...titleTags, ...summaryTags, ...contentTags])];
   return { ...item, hashtags };
 });
 
