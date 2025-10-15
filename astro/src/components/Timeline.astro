@@ -18,10 +18,11 @@ const typeDisplayName = (type: string) => {
 
 <section class="timeline" aria-label="Timeline">
   <div class="empty-state" id="empty-state" hidden>
-    <div class="empty-icon">📭</div>
-    <h3>Nothing to see here...</h3>
-    <p>Looks like you've deselected everything. Even time needs something to show!</p>
-    <p class="empty-hint">Try checking at least one content type above. ↑</p>
+    <div class="empty-icon">⏰</div>
+    <h3>Time Travel Log: SUCCESS!</h3>
+    <p>I am back in <strong id="current-date"></strong></p>
+    <p>I seem to have traveled back to before there was content on this page.</p>
+    <p><a href="#" class="reset-link" id="reset-machine">Reset machine</a> to continue</p>
   </div>
   <ol class="list" role="list">
     <!-- Today marker -->
@@ -76,7 +77,9 @@ const typeDisplayName = (type: string) => {
   .empty-icon { font-size: 64px; margin-bottom: 20px; opacity: 0.8; }
   .empty-state h3 { font-size: 24px; color: var(--text); margin: 0 0 12px; font-weight: 600; }
   .empty-state p { margin: 8px 0; font-size: 16px; line-height: 1.6; }
-  .empty-hint { font-style: italic; color: var(--accent); font-size: 14px; margin-top: 16px; }
+  .empty-state strong { color: var(--accent); }
+  .reset-link { color: var(--accent); text-decoration: underline; cursor: pointer; font-weight: 600; }
+  .reset-link:hover { opacity: 0.8; }
   .list { list-style: none; margin: 0; padding: 0; position: relative; }
   .row { display: grid; grid-template-columns: 24px 1fr; gap: 12px; align-items: start; margin: 12px 0; }
   .spine { position: relative; height: 100%; }
@@ -133,6 +136,23 @@ const typeDisplayName = (type: string) => {
   let activeHashtags = new Set<string>();
   const emptyState = document.getElementById('empty-state');
   const timelineList = document.querySelector('.list');
+  const currentDateEl = document.getElementById('current-date');
+  const resetMachine = document.getElementById('reset-machine');
+
+  // Set current date in empty state
+  if (currentDateEl) {
+    currentDateEl.textContent = new Date().toLocaleDateString('en-US', { 
+      month: 'long', 
+      day: 'numeric', 
+      year: 'numeric' 
+    });
+  }
+
+  // Handle reset machine click
+  resetMachine?.addEventListener('click', (e) => {
+    e.preventDefault();
+    window.location.href = window.location.pathname; // Reload without query params
+  });
 
   function checkIfEmpty() {
     const visibleRows = Array.from(document.querySelectorAll('.row:not(.today-marker)') as NodeListOf<HTMLElement>)
