@@ -64,9 +64,23 @@ const itemsWithHashtags = items.map(item => {
   const summaryTags = extractHashtags(item.summary || '');
   const contentTags = extractHashtags(item.content_html || '').slice(0, 10); // Limit from content
   
-  // Use frontmatter tags (from blog posts, etc.) - normalize to lowercase with # prefix
+  // Use frontmatter tags (from blog posts, Readwise, etc.) - normalize to lowercase with # prefix
+  // Also filter through extractHashtags to apply ignore list
   const frontmatterTags = (item.tags || [])
-    .map((tag: string) => `#${tag.toLowerCase().replace(/\s+/g, '_')}`);
+    .map((tag: string) => `#${tag.toLowerCase().replace(/\s+/g, '_')}`)
+    .filter(tag => {
+      // Apply same ignore list as text extraction
+      const ignoreList = new Set([
+        '#how', '#make', '#should', '#you', '#the', '#and', '#for', '#with', '#from',
+        '#this', '#that', '#will', '#can', '#are', '#have', '#has', '#more', '#about',
+        '#what', '#when', '#where', '#why', '#who', '#which', '#their', '#there',
+        '#sudo', '#function_password', '#issue', '#issuecomment', '#convert', '#replace',
+        '#append', '#clear', '#destroy', '#prints', '#allow', '#stdeb',
+        '#english',
+        '#shortlist', '#fodder', '#software',
+      ]);
+      return !ignoreList.has(tag);
+    });
   
   // Normalize all tags (merge similar ones)
   const allTags = [...frontmatterTags, ...titleTags, ...summaryTags, ...contentTags]
