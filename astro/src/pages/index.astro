@@ -4,7 +4,36 @@ import Timeline from "../components/Timeline.astro";
 import timeline from "../data/timeline.json";
 
 const items = (timeline as any[]);
-const VERSION = "1.1.0"; // Major feature update: search, themes, API
+const VERSION = "1.2.0"; // Added hashtag labels and filtering
+
+// Extract hashtags from timeline items
+function extractHashtags(text: string): string[] {
+  if (!text) return [];
+  const hashtagRegex = /#[a-zA-Z0-9_]+/g;
+  const matches = text.match(hashtagRegex);
+  return matches ? matches.map(tag => tag.toLowerCase()) : [];
+}
+
+// Add hashtags to each item
+const itemsWithHashtags = items.map(item => {
+  const titleTags = extractHashtags(item.title || '');
+  const summaryTags = extractHashtags(item.summary || '');
+  const contentTags = extractHashtags(item.content_html || '').slice(0, 10); // Limit from content
+  const hashtags = [...new Set([...titleTags, ...summaryTags, ...contentTags])];
+  return { ...item, hashtags };
+});
+
+// Get all unique hashtags with counts
+const hashtagCounts = itemsWithHashtags.reduce((acc, item) => {
+  item.hashtags.forEach((tag: string) => {
+    acc[tag] = (acc[tag] || 0) + 1;
+  });
+  return acc;
+}, {} as Record<string, number>);
+
+const allHashtags = Object.entries(hashtagCounts)
+  .sort((a, b) => b[1] - a[1]) // Sort by count descending
+  .map(([tag, count]) => ({ tag, count }));
 ---
 
 <!DOCTYPE html>
@@ -49,9 +78,21 @@ const VERSION = "1.1.0"; // Major feature update: search, themes, API
         <label title="Github Releases"><input type="checkbox" name="type" value="release" checked> Releases</label>
         <label title="Activity on en.wiki.org"><input type="checkbox" name="type" value="wikipedia" checked> Wikipedia</label>
       </div>
+      {allHashtags.length > 0 && (
+        <div class="hashtag-filters">
+          <div class="hashtag-label">Labels:</div>
+          <div class="hashtags" role="group" aria-label="Hashtag filters">
+            {allHashtags.map(({ tag, count }) => (
+              <button class="hashtag-pill" data-hashtag={tag} title={`${count} item${count > 1 ? 's' : ''}`}>
+                {tag} <span class="hashtag-count">{count}</span>
+              </button>
+            ))}
+          </div>
+        </div>
+      )}
     </section>
 
-    <Timeline items={items} />
+    <Timeline items={itemsWithHashtags} />
   </div>
 
   <div class="backdrop" id="panel-backdrop" hidden></div>
@@ -138,6 +179,14 @@ const VERSION = "1.1.0"; // Major feature update: search, themes, API
   label { background: var(--card-bg); padding: 7px 14px; border-radius: 999px; border: 1px solid var(--border); color: var(--text); font-size: 14px; cursor: pointer; transition: all 0.2s; }
   label:hover { background: var(--panel); border-color: var(--accent); }
   input[type="checkbox"] { vertical-align: middle; margin-right: 6px; accent-color: var(--accent); }
+  
+  .hashtag-filters { margin-top: 16px; padding-top: 12px; border-top: 1px solid var(--border); }
+  .hashtag-label { text-align: center; font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: var(--muted); margin-bottom: 8px; font-family: system-ui, sans-serif; }
+  .hashtags { display: flex; gap: 8px; flex-wrap: wrap; justify-content: center; }
+  .hashtag-pill { background: var(--panel); padding: 4px 10px; border-radius: 999px; border: 1px solid var(--border); color: var(--text); font-size: 12px; cursor: pointer; transition: all 0.2s; font-family: system-ui, sans-serif; display: flex; align-items: center; gap: 4px; }
+  .hashtag-pill:hover { background: var(--accent); color: var(--bg); border-color: var(--accent); transform: translateY(-1px); }
+  .hashtag-pill.active { background: var(--accent); color: var(--bg); border-color: var(--accent); font-weight: 600; }
+  .hashtag-count { opacity: 0.7; font-size: 10px; }
   
   /* Panel styles */
   .panel { position: sticky; top: 12px; align-self: start; height: calc(100dvh - 24px); background: var(--panel); border: 1px solid var(--border); border-radius: 12px; padding: 20px; overflow: auto; box-shadow: 0 2px 12px rgba(0,0,0,0.08); }
@@ -243,6 +292,32 @@ const VERSION = "1.1.0"; // Major feature update: search, themes, API
   document.getElementById('select-none')?.addEventListener('click', () => {
     checkboxes.forEach((input) => input.checked = false);
     updateFilters();
+  });
+
+  // Hashtag filtering
+  const selectedHashtags = new Set<string>();
+  const hashtagPills = document.querySelectorAll('.hashtag-pill') as NodeListOf<HTMLElement>;
+
+  function updateHashtagFilters() {
+    document.dispatchEvent(new CustomEvent('hashtag:changed', { 
+      detail: { hashtags: Array.from(selectedHashtags) } 
+    }));
+  }
+
+  hashtagPills.forEach((pill) => {
+    pill.addEventListener('click', () => {
+      const hashtag = pill.dataset.hashtag!;
+      
+      if (selectedHashtags.has(hashtag)) {
+        selectedHashtags.delete(hashtag);
+        pill.classList.remove('active');
+      } else {
+        selectedHashtags.add(hashtag);
+        pill.classList.add('active');
+      }
+      
+      updateHashtagFilters();
+    });
   });
 </script>
 
