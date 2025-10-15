@@ -9,6 +9,22 @@ const VERSION = "1.2.0"; // Added hashtag labels and filtering
 // Extract hashtags from timeline items
 function extractHashtags(text: string): string[] {
   if (!text) return [];
+  
+  // Ignore list: common words, markdown headers, code snippets, technical noise
+  const ignoreList = new Set([
+    // Common words (markdown headers like "# How to...")
+    '#how', '#make', '#should', '#you', '#the', '#and', '#for', '#with', '#from',
+    '#this', '#that', '#will', '#can', '#are', '#have', '#has', '#more', '#about',
+    '#what', '#when', '#where', '#why', '#who', '#which', '#their', '#there',
+    
+    // Technical/code snippets
+    '#sudo', '#function_password', '#issue', '#issuecomment', '#convert', '#replace',
+    '#append', '#clear', '#destroy', '#prints', '#allow', '#stdeb',
+    
+    // Wikipedia/platform IDs (wp followed by numbers)
+    '#english', // Wikipedia category
+  ]);
+  
   const hashtagRegex = /#[a-zA-Z][a-zA-Z0-9_]{2,}/g; // Must start with letter, 3+ chars total
   const matches = text.match(hashtagRegex);
   if (!matches) return [];
@@ -19,7 +35,14 @@ function extractHashtags(text: string): string[] {
       // Filter out hex color codes (e.g. #ffffff, #abc123)
       const withoutHash = tag.substring(1);
       const isHexColor = /^[0-9a-f]{3}$|^[0-9a-f]{6}$/i.test(withoutHash);
-      return !isHexColor;
+      
+      // Filter out Wikipedia page IDs (#wp followed by numbers)
+      const isWikipediaId = /^#wp\d+$/.test(tag);
+      
+      // Filter out ignored words/technical noise
+      const isIgnored = ignoreList.has(tag);
+      
+      return !isHexColor && !isWikipediaId && !isIgnored;
     });
 }
 
