@@ -271,9 +271,10 @@ const allHashtags = Object.entries(hashtagCounts)
   .dropdown-arrow { font-size: 10px; transition: transform 0.2s; }
   .hashtag-dropdown-button[aria-expanded="true"] .dropdown-arrow { transform: rotate(180deg); }
   .hashtag-dropdown-menu { position: absolute; top: 100%; right: 0; margin-top: 4px; background: var(--panel); border: 1px solid var(--border); border-radius: 8px; box-shadow: 0 4px 16px rgba(0,0,0,0.15); max-height: 300px; overflow-y: auto; z-index: 100; min-width: 220px; }
-  .hashtag-option { display: flex; align-items: center; justify-content: center; gap: 8px; padding: 8px 12px; cursor: pointer; transition: background 0.2s; border-bottom: 1px solid rgba(212, 196, 168, 0.2); }
-  .hashtag-option:last-child { border-bottom: none; }
-  .hashtag-option:hover { background: rgba(193, 122, 79, 0.1); }
+  .hashtag-option { display: flex; align-items: center; justify-content: center; gap: 8px; padding: 10px 16px; cursor: pointer; transition: background 0.2s; border-bottom: 1px solid var(--border); }
+  .hashtag-option:first-child { border-radius: 8px 8px 0 0; }
+  .hashtag-option:last-child { border-bottom: none; border-radius: 0 0 8px 8px; }
+  .hashtag-option:hover { background: var(--card-bg); }
   .hashtag-option input[type="checkbox"] { margin: 0; accent-color: var(--accent); flex-shrink: 0; }
   .hashtag-option .hashtag-text { flex: 1; font-size: 13px; color: var(--text); font-family: system-ui, sans-serif; text-align: center; }
   .hashtag-option .hashtag-count { opacity: 0.6; font-size: 11px; color: var(--muted); font-family: system-ui, sans-serif; flex-shrink: 0; }
