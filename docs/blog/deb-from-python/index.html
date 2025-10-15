@@ -1,0 +1,62 @@
+<!DOCTYPE html><html lang="en" data-astro-cid-4sn4zg3r> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Debian Package from Python Project using stdeb — timeline.523.life</title><meta name="description" content="Debian Package from Python Project using stdeb"><link rel="canonical" href="https://timeline.523.life/blog/deb-from-python"><style>:root{--bg: #0b0e13;--panel: #11161f;--text: #e7ecf3;--muted: #97a3b6;--accent: #6aa0ff}[data-astro-cid-4sn4zg3r]{box-sizing:border-box}html,body{margin:0;padding:0;background:var(--bg);color:var(--text);font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,Helvetica Neue,Arial,"Apple Color Emoji","Segoe UI Emoji"}main[data-astro-cid-4sn4zg3r]{max-width:720px;margin:0 auto;padding:24px}.header[data-astro-cid-4sn4zg3r]{margin-bottom:40px}.back-link[data-astro-cid-4sn4zg3r]{color:var(--accent);text-decoration:none;font-size:14px}.back-link[data-astro-cid-4sn4zg3r]:hover{text-decoration:underline}.meta[data-astro-cid-4sn4zg3r]{font-size:14px;color:var(--muted);margin:16px 0 8px}.type[data-astro-cid-4sn4zg3r]{text-transform:uppercase;letter-spacing:.06em;font-size:12px}h1[data-astro-cid-4sn4zg3r]{margin:8px 0 24px;font-size:32px;line-height:1.2}.content[data-astro-cid-4sn4zg3r]{margin:32px 0}.content[data-astro-cid-4sn4zg3r] img[data-astro-cid-4sn4zg3r]{max-width:100%;height:auto;border-radius:8px}.content[data-astro-cid-4sn4zg3r] p[data-astro-cid-4sn4zg3r]{margin:16px 0}.content[data-astro-cid-4sn4zg3r] pre[data-astro-cid-4sn4zg3r]{background:#1a1f2e;padding:16px;border-radius:8px;overflow-x:auto}.content[data-astro-cid-4sn4zg3r] code[data-astro-cid-4sn4zg3r]{font-family:Monaco,Courier New,monospace;font-size:14px}.content[data-astro-cid-4sn4zg3r] a[data-astro-cid-4sn4zg3r]{color:var(--accent)}.post-footer[data-astro-cid-4sn4zg3r]{margin-top:48px;padding-top:24px;border-top:1px solid #1f2937;display:flex;justify-content:space-between;flex-wrap:wrap;gap:16px}@media (max-width: 640px){h1[data-astro-cid-4sn4zg3r]{font-size:24px}main[data-astro-cid-4sn4zg3r]{padding:16px}}
+</style></head> <body data-astro-cid-4sn4zg3r> <main data-astro-cid-4sn4zg3r> <header class="header" data-astro-cid-4sn4zg3r> <nav data-astro-cid-4sn4zg3r> <a href="/" class="back-link" data-astro-cid-4sn4zg3r>← Back to timeline</a> </nav> <div class="meta" data-astro-cid-4sn4zg3r> <span class="type" data-astro-cid-4sn4zg3r>blog</span> · <time datetime="2012-08-08T00:00:00.000Z" data-astro-cid-4sn4zg3r>8/7/2012</time> </div> <h1 data-astro-cid-4sn4zg3r>Debian Package from Python Project using stdeb</h1> </header> <article class="content" data-astro-cid-4sn4zg3r><p>One of the things I do often is download projects from github. Pypi (py-pee-eye) is nice and so is pip, but I like to have one reference for packages on a host. If at all possible I prefer to make binaries. It is nice for reporting, and because we run our own internal repostories it affords us certain advantages for reporting and dependency handling.</p>
+<h3>Install a few packages</h3>
+<blockquote>
+<p>aptitude install build-essential python-dev python-setuptools python-stdeb python-support</p>
+</blockquote>
+<h3>Download a project: <a href="https://github.com/xb95/nagios-api.git">https://github.com/xb95/nagios-api.git</a></h3>
+<blockquote>
+<p>git clone <a href="https://github.com/xb95/nagios-api.git">https://github.com/xb95/nagios-api.git</a>
+cd nagios-api/</p>
+</blockquote>
+<h3>Making a Deb</h3>
+<p>This where with traditional disutils you would do <code>python setup.py install</code></p>
+<p>But we can also do…</p>
+<blockquote>
+<p>sudo python setup.py --command-packages=stdeb.command bdist_deb</p>
+</blockquote>
+<pre><code class="language-plaintext">running bdist_deb
+running sdist_dsc
+working around Debian #548392, changing XS-Python-Version: to &#39;current&#39;
+CALLING dpkg-source -b nagios-api-1.2.1 nagios-api_1.2.1.orig.tar.gz (in dir deb_dist)
+dpkg-source: info: using source format `1.0&#39;
+dpkg-deb: building package `python-nagios-api&#39; in `../python-nagios-api_1.2.1-1_all.deb&#39;.
+dpkg-deb: warning: ignoring 1 warning about the control file(s)
+dpkg-genchanges -b &gt;../nagios-api_1.2.1-1_amd64.changes
+dpkg-genchanges: binary-only upload - not including any source code
+dpkg-source --after-build nagios-api-1.2.1
+dpkg-buildpackage: binary only upload (no source included)
+&lt;/code&gt;&lt;/pre&gt;
+That was all it took to create a fully installable binary package:
+
+dpkg -i deb_dist/python-nagios-api_1.2.1-1_all.deb 
+
+&lt;pre&gt;&lt;code&gt;
+Selecting previously deselected package python-nagios-api.
+(Reading database ... 38260 files and directories currently installed.)
+Unpacking python-nagios-api (from .../python-nagios-api_1.2.1-1_all.deb) ...
+Setting up python-nagios-api (1.2.1-1) ...
+Processing triggers for python-support ...
+</code></pre>
+<h3>Changing package particulars</h3>
+<p><code>stdeb</code> allows you to specify many options you would normally need to provide in a debian control file. For example
+in order to change the name of the package we end up with from &#39;python-nagios-api&#39; to just nagios-api we can do
+the the following.</p>
+<blockquote>
+<p>cd nagios-api/
+nano stdeb.cfg #should be in the same dir as setup.py</p>
+</blockquote>
+<pre><code>[DEFAULT]
+Package: nagios-api```
+
+Some repositories will have a problem with the lack of changelog file or other particulars. Almost always this can be overcome, but if necessary then you can use:
+
+&gt; python setup.py dh_make
+
+### References
+
+[bdist_deb command for distutils](https://lists.debian.org/debian-python/2004/10/msg00017.html)
+[Nagios API](https://github.com/zorkian/nagios-api)
+[stdeb config](https://pypi.org/project/stdeb/#stdeb-cfg-configuration-file)
+</code></pre>
+</article> <footer class="post-footer" data-astro-cid-4sn4zg3r> <a href="/" class="back-link" data-astro-cid-4sn4zg3r>← Back to timeline</a> <a href="/blog/deb-from-python/" target="_blank" rel="noopener" data-astro-cid-4sn4zg3r>Original post ↗</a> </footer> </main> </body></html>

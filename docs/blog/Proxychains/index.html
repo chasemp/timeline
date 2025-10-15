@@ -1,0 +1,80 @@
+<!DOCTYPE html><html lang="en" data-astro-cid-4sn4zg3r> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Proxychains — timeline.523.life</title><meta name="description" content="Proxychains"><link rel="canonical" href="https://timeline.523.life/blog/Proxychains"><style>:root{--bg: #0b0e13;--panel: #11161f;--text: #e7ecf3;--muted: #97a3b6;--accent: #6aa0ff}[data-astro-cid-4sn4zg3r]{box-sizing:border-box}html,body{margin:0;padding:0;background:var(--bg);color:var(--text);font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,Helvetica Neue,Arial,"Apple Color Emoji","Segoe UI Emoji"}main[data-astro-cid-4sn4zg3r]{max-width:720px;margin:0 auto;padding:24px}.header[data-astro-cid-4sn4zg3r]{margin-bottom:40px}.back-link[data-astro-cid-4sn4zg3r]{color:var(--accent);text-decoration:none;font-size:14px}.back-link[data-astro-cid-4sn4zg3r]:hover{text-decoration:underline}.meta[data-astro-cid-4sn4zg3r]{font-size:14px;color:var(--muted);margin:16px 0 8px}.type[data-astro-cid-4sn4zg3r]{text-transform:uppercase;letter-spacing:.06em;font-size:12px}h1[data-astro-cid-4sn4zg3r]{margin:8px 0 24px;font-size:32px;line-height:1.2}.content[data-astro-cid-4sn4zg3r]{margin:32px 0}.content[data-astro-cid-4sn4zg3r] img[data-astro-cid-4sn4zg3r]{max-width:100%;height:auto;border-radius:8px}.content[data-astro-cid-4sn4zg3r] p[data-astro-cid-4sn4zg3r]{margin:16px 0}.content[data-astro-cid-4sn4zg3r] pre[data-astro-cid-4sn4zg3r]{background:#1a1f2e;padding:16px;border-radius:8px;overflow-x:auto}.content[data-astro-cid-4sn4zg3r] code[data-astro-cid-4sn4zg3r]{font-family:Monaco,Courier New,monospace;font-size:14px}.content[data-astro-cid-4sn4zg3r] a[data-astro-cid-4sn4zg3r]{color:var(--accent)}.post-footer[data-astro-cid-4sn4zg3r]{margin-top:48px;padding-top:24px;border-top:1px solid #1f2937;display:flex;justify-content:space-between;flex-wrap:wrap;gap:16px}@media (max-width: 640px){h1[data-astro-cid-4sn4zg3r]{font-size:24px}main[data-astro-cid-4sn4zg3r]{padding:16px}}
+</style></head> <body data-astro-cid-4sn4zg3r> <main data-astro-cid-4sn4zg3r> <header class="header" data-astro-cid-4sn4zg3r> <nav data-astro-cid-4sn4zg3r> <a href="/" class="back-link" data-astro-cid-4sn4zg3r>← Back to timeline</a> </nav> <div class="meta" data-astro-cid-4sn4zg3r> <span class="type" data-astro-cid-4sn4zg3r>blog</span> · <time datetime="2012-02-18T00:00:00.000Z" data-astro-cid-4sn4zg3r>2/17/2012</time> </div> <h1 data-astro-cid-4sn4zg3r>Proxychains</h1> </header> <article class="content" data-astro-cid-4sn4zg3r><p>Some commands do not natively support a proxy (RE: telnet).  Other times it is just easier to do a one-off instance rather than mess with environment settings.  A lot of people use this with Tor.</p>
+<h5>ProxyChains</h5>
+<p>Allows you to send traffic through a proxy without the command itself having foreknowledge.</p>
+<p><code>aptitude install proxychains</code></p>
+<h5>Config file options</h5>
+<p>Pick one:</p>
+<ol>
+<li>./proxychains.conf</li>
+<li>$(HOME)/.proxychains/proxychains.conf</li>
+<li>/etc/proxychains.conf</li>
+</ol>
+<h5>/etc/proxychains.conf the global option</h5>
+<pre><code>strict_chain
+quiet_mode
+tcp_read_time_out 15000
+tcp_connect_time_out 8000
+[ProxyList]
+#replace this with your proxy
+http    192.168.1.1 8080
+</code></pre>
+<h5>telnet Before Proxychains (behind a proxy)</h5>
+<pre><code>me@vm:~/pkg$ telnet google.com 80
+Trying 2404:6800:4005:806::1006...
+Trying 173.194.127.196...
+Trying 173.194.127.193...
+Trying 173.194.127.200...
+Trying 173.194.127.201...
+Trying 173.194.127.198...
+Trying 173.194.127.199...
+Trying 173.194.127.195...
+Trying 173.194.127.192...
+Trying 173.194.127.206...
+Trying 173.194.127.194...
+Trying 173.194.127.197...
+telnet: Unable to connect to remote host: Network is unreachable
+</code></pre>
+<h5>telnet after ProxyChains (behind a proxy)</h5>
+<pre><code>me@vm:~/pkg$ proxychains telnet google.com 80
+ProxyChains-3.1 (http://proxychains.sf.net)
+Trying 2404:6800:4005:806::1006...
+Trying 173.194.127.196...
+Connected to google.com.
+Escape character is &#39;^]&#39;.
+</code></pre>
+<p>In an environment with heavy automation and numerous service account users it is easy to end up in a situation where compromising one service becomes compromising an entire system.</p>
+<h4>Granting permission to a single command</h4>
+<blockquote>
+<p>vi /etc/sudoers.d/makingpie</p>
+</blockquote>
+<p><code>myuser ALL = NOPASSWD: /usr/local/bin/makepie</code></p>
+<blockquote>
+<p>myuser:#sudo makepie</p>
+</blockquote>
+<p><code>&gt;&gt;&gt;&gt;mmmmm...pie</code></p>
+<h3>What if my user needs to call out to a proxy but &#39;makepie&#39; doesn&#39;t support it?</h3>
+<blockquote>
+<p>sudo LD_PRELOAD=libproxychains.so.3 makepie</p>
+</blockquote>
+<p>Sudo is extra granular and doesn&#39;t like this idea.</p>
+<p><code>sudo: sorry, you are not allowed to set the following environment variables: LD_PRELOAD</code></p>
+<h3>Fixing The heavy handed way</h3>
+<p>Don&#39;t reset user enviroments when using sudo</p>
+<blockquote>
+<p>visudo</p>
+</blockquote>
+<p>Replace: “Defaults env_reset” with: “Defaults !env_reset”</p>
+<h3>Fixing the Piecemeal way</h3>
+<blockquote>
+<p>vi /etc/sudoers.d/ld_preload</p>
+</blockquote>
+<pre><code class="language-plaintext">#allow users to use proxychains env variable (using sudo)
+Defaults env_keep += &quot;LD_PRELOAD&quot;
+</code></pre>
+<h5>Excluding traffic from your proxy</h5>
+<p>In theory you can set the localnet option in your configuration file to exclude the local LAN by default from proxy  behavior.  This has not worked for me with proxychains under Debian 6.0</p>
+<p>In case you are interested though: <a href="https://github.com/haad/proxychains/issues/6#issuecomment-4041824">localnet docs</a></p>
+<h5>Reference</h5>
+<p><a href="http://benizi.com/postfix-proxychains">article one</a> <a href="http://www.jameslovecomputers.com/how-to-install-configure-and-use-proxychains/">article two</a> <a href="http://proxychains.sourceforge.net/howto.html">official howto</a> <a href="https://github.com/haad/proxychains">github</a></p>
+</article> <footer class="post-footer" data-astro-cid-4sn4zg3r> <a href="/" class="back-link" data-astro-cid-4sn4zg3r>← Back to timeline</a> <a href="/blog/Proxychains/" target="_blank" rel="noopener" data-astro-cid-4sn4zg3r>Original post ↗</a> </footer> </main> </body></html>

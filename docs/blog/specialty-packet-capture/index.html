@@ -1,0 +1,105 @@
+<!DOCTYPE html><html lang="en" data-astro-cid-4sn4zg3r> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Specialty Packet Capture — timeline.523.life</title><meta name="description" content="Specialty Packet Capture"><link rel="canonical" href="https://timeline.523.life/blog/specialty-packet-capture"><style>:root{--bg: #0b0e13;--panel: #11161f;--text: #e7ecf3;--muted: #97a3b6;--accent: #6aa0ff}[data-astro-cid-4sn4zg3r]{box-sizing:border-box}html,body{margin:0;padding:0;background:var(--bg);color:var(--text);font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,Helvetica Neue,Arial,"Apple Color Emoji","Segoe UI Emoji"}main[data-astro-cid-4sn4zg3r]{max-width:720px;margin:0 auto;padding:24px}.header[data-astro-cid-4sn4zg3r]{margin-bottom:40px}.back-link[data-astro-cid-4sn4zg3r]{color:var(--accent);text-decoration:none;font-size:14px}.back-link[data-astro-cid-4sn4zg3r]:hover{text-decoration:underline}.meta[data-astro-cid-4sn4zg3r]{font-size:14px;color:var(--muted);margin:16px 0 8px}.type[data-astro-cid-4sn4zg3r]{text-transform:uppercase;letter-spacing:.06em;font-size:12px}h1[data-astro-cid-4sn4zg3r]{margin:8px 0 24px;font-size:32px;line-height:1.2}.content[data-astro-cid-4sn4zg3r]{margin:32px 0}.content[data-astro-cid-4sn4zg3r] img[data-astro-cid-4sn4zg3r]{max-width:100%;height:auto;border-radius:8px}.content[data-astro-cid-4sn4zg3r] p[data-astro-cid-4sn4zg3r]{margin:16px 0}.content[data-astro-cid-4sn4zg3r] pre[data-astro-cid-4sn4zg3r]{background:#1a1f2e;padding:16px;border-radius:8px;overflow-x:auto}.content[data-astro-cid-4sn4zg3r] code[data-astro-cid-4sn4zg3r]{font-family:Monaco,Courier New,monospace;font-size:14px}.content[data-astro-cid-4sn4zg3r] a[data-astro-cid-4sn4zg3r]{color:var(--accent)}.post-footer[data-astro-cid-4sn4zg3r]{margin-top:48px;padding-top:24px;border-top:1px solid #1f2937;display:flex;justify-content:space-between;flex-wrap:wrap;gap:16px}@media (max-width: 640px){h1[data-astro-cid-4sn4zg3r]{font-size:24px}main[data-astro-cid-4sn4zg3r]{padding:16px}}
+</style></head> <body data-astro-cid-4sn4zg3r> <main data-astro-cid-4sn4zg3r> <header class="header" data-astro-cid-4sn4zg3r> <nav data-astro-cid-4sn4zg3r> <a href="/" class="back-link" data-astro-cid-4sn4zg3r>← Back to timeline</a> </nav> <div class="meta" data-astro-cid-4sn4zg3r> <span class="type" data-astro-cid-4sn4zg3r>blog</span> · <time datetime="2015-09-10T00:00:00.000Z" data-astro-cid-4sn4zg3r>9/9/2015</time> </div> <h1 data-astro-cid-4sn4zg3r>Specialty Packet Capture</h1> </header> <article class="content" data-astro-cid-4sn4zg3r><p>Situations where it&#39;s useful to analyze traffic:</p>
+<ul>
+<li>Don&#39;t have access to the logs</li>
+<li>Want to look at traffic somewhere upstream like an LB</li>
+<li>Something is making logs ineffectual</li>
+<li>Other</li>
+</ul>
+<p>Pretty much all roads point to packet sniffing.</p>
+<h2>HTTPRY</h2>
+<p>An efficient packet sniffer aimed at HTTP</p>
+<p>No args output (as oneline but broken down for explanation):</p>
+<pre><code>    2015-10-09 17:46:48         - timestamp
+    10.0.0.1    10.0.0.2        - source-ip/dest-ip or vice versa (depending on arrow)
+    &gt;                   - direction of traffic
+    GET                 - http method
+    foo.com             - http host
+    /myuri              - the URI in question
+    HTTP/1.1                - HTTP version
+    -                   - status code
+    -                   - reason
+</code></pre>
+<p>The output fields are configurable. Say you only serve one site on a box so the host field never changes and the objective is to narrow down a few suspect URI&#39;s.</p>
+<blockquote>
+<p>httpry -f timestamp,source-ip,direction,request-uri</p>
+</blockquote>
+<pre><code>2015-10-09     18:10:43 10.0.0.1    &gt;   /myuri
+</code></pre>
+<p>Since httpry outputs text</p>
+<blockquote>
+<p>httpry -f timestamp,source-ip,request-uri | egrep -i &#39;/myuri/[0-9]&#39;{6}</p>
+</blockquote>
+<p>Other than text munging there are a few native mechanisms for targeting with tcpdump style filters</p>
+<blockquote>
+<p>httpry &#39;host 74.1.1.1 and port 8080&#39;</p>
+</blockquote>
+<p>specifying an HTTP method for collection (along with ability to read/write PCAP)</p>
+<blockquote>
+<p>httpry -m GET,POST</p>
+</blockquote>
+<p>There is also a native statistics mode in <code>httpry -s</code> that by provides meta stats.</p>
+<pre><code class="language-plaintext">2015-10-09 19:20:48 one.myhost.org     147 rps
+2015-10-09 19:20:48 two.myhost.org     2 rps
+2015-10-09 19:20:48 three.myhost.org   9 rps
+2015-10-09 19:20:48 totals  156.46 rps
+</code></pre>
+<p>Show me data aggregated in 30s buckets with a minimum treshold of 10/rps</p>
+<blockquote>
+<p>httpry -s -l 10 -t 30 </p>
+</blockquote>
+<p><code>httpry</code> has the ability to run as a daemon natively as well.</p>
+<h2>ngrep</h2>
+<p>Payload aware network search tool with grep and tcpdump like magic</p>
+<blockquote>
+<p>ngrep port 80 -W single</p>
+</blockquote>
+<pre><code class="language-plaintext">T 10.0.0.1:80 -&gt; 10.0.0.2:65227 [AP] HTTP/1.1 200 OK..\
+Date: Fri, 09 Oct 2015 21:45:16 GMT..\
+Server: Apache..Strict-Transport-Security: max-age=31536000..\
+X-Powered-By: PHP/5.5.9-1ubuntu4.13..X-Frame-Options: Deny..\
+Cache-Control: private, no-cache, no-store, must-revalidate..
+Pragma: no-cache..\
+X-Content-Type-Options: nosniff..\
+Content-Length: 49..Connection: close..Content-Type: application/json....\
+{&quot;result&quot;:[],&quot;error_code&quot;:null,&quot;error_info&quot;:null}
+</code></pre>
+<p>So what if we are behind a reverse proxy and the header source IP address is only part of the story. Most likely we want to analyze the X-Forwarded-For field.</p>
+<p>Sample our web traffic honoring embedded linefeeds (newline) looking for X-forwarded-for header fields, extracting the initial IP value, and showing the top 10 IP&#39;s.</p>
+<blockquote>
+<p>ngrep -n 1000 port 80 -W byline | grep -i x-forwarded-for | awk &#39;{print $2}&#39; | cut -d &#39;,&#39; -f 1 | sort | uniq -c | sort -n | tail -n 10</p>
+</blockquote>
+<p>Watching for mail the hard way: <code>ngrep &#39;vacation&#39; port 25</code></p>
+<pre><code class="language-plaintext">T 2620::62748 -&gt; 2620::76:25 [A]
+Return-Path: no-reply@mail.org..To: foo@mail.org..From: dude &lt;no-reply
+@dude.org&gt;..Reply-to: noway@mail.org..Subject: foo asked for vacation
+</code></pre>
+<p>ngrep is extremely powerful but is vulnerable to packet fragmentation.</p>
+<h2>netsniff-ng</h2>
+<p>A super efficient packet capture tool that is Pcap independent</p>
+<blockquote>
+<p>/usr/sbin/netsniff-ng</p>
+</blockquote>
+<pre><code class="language-plaintext">&lt; 3 66 1444429202.367551
+ [ Eth MAC (84:78:ac:5a:19:41 =&gt; f2:3c:91:6e:f6:f5), Proto (0x0800, IPv4) ]
+ [ Vendor (Unknown =&gt; Unknown) ]
+ [ IPv4 Addr (99.x.x.x =&gt; 74.x.x.x), Proto (6), TTL (53), TOS (0), Ver (4),
+   IHL (5), Tlen (52), ID (48089), Res (0), NoFrag (1), MoreFrag (0), FragOff (0), CS
+   um (0x0daf) is ok ]
+ [ TCP Port (62403 =&gt; 22 (ssh)), SN (0xbb019f19), AN (0xf7b8096d), DataOff (8
+   ), Res (0), Flags (ACK ), Window (8189), CSum (0x33aa), UrgPtr (0) ]
+ [ chr ....T...M..O ]
+ [ hex  01 01 08 0a 54 d4 be f7 4d a3 f6 4f ]
+</code></pre>
+<p>netsniff-ng is interesting for a few reasons:</p>
+<ul>
+<li>It uses a zero-copy mechanism for packet capture (libpcap &gt;1.0 does now too)</li>
+<li>It doesn&#39;t need libpcap</li>
+<li>It can write to libpcap format really efficiently</li>
+</ul>
+<h3>References</h3>
+<p><a href="https://dumpsterventures.com/jason/httpry/">HTTPRY</a></p>
+<p><a href="https://taosecurity.blogspot.com/2008/06/logging-web-traffic-with-httpry.html">Tao Security HTTPRY</a></p>
+<p><a href="http://www.stearns.org/doc/ngrep-intro.current.html">Intro to NGrep</a></p>
+<p><a href="https://github.com/netsniff-ng/netsniff-ng">Netsniff-ng</a></p>
+</article> <footer class="post-footer" data-astro-cid-4sn4zg3r> <a href="/" class="back-link" data-astro-cid-4sn4zg3r>← Back to timeline</a> <a href="/Blog/specialty-packet-capture/" target="_blank" rel="noopener" data-astro-cid-4sn4zg3r>Original post ↗</a> </footer> </main> </body></html>

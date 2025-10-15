@@ -1,0 +1,92 @@
+<!DOCTYPE html><html lang="en" data-astro-cid-4sn4zg3r> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Examining-PXE-Boot — timeline.523.life</title><meta name="description" content="Examining-PXE-Boot"><link rel="canonical" href="https://timeline.523.life/blog/Examining-PXE-Boot"><style>:root{--bg: #0b0e13;--panel: #11161f;--text: #e7ecf3;--muted: #97a3b6;--accent: #6aa0ff}[data-astro-cid-4sn4zg3r]{box-sizing:border-box}html,body{margin:0;padding:0;background:var(--bg);color:var(--text);font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,Helvetica Neue,Arial,"Apple Color Emoji","Segoe UI Emoji"}main[data-astro-cid-4sn4zg3r]{max-width:720px;margin:0 auto;padding:24px}.header[data-astro-cid-4sn4zg3r]{margin-bottom:40px}.back-link[data-astro-cid-4sn4zg3r]{color:var(--accent);text-decoration:none;font-size:14px}.back-link[data-astro-cid-4sn4zg3r]:hover{text-decoration:underline}.meta[data-astro-cid-4sn4zg3r]{font-size:14px;color:var(--muted);margin:16px 0 8px}.type[data-astro-cid-4sn4zg3r]{text-transform:uppercase;letter-spacing:.06em;font-size:12px}h1[data-astro-cid-4sn4zg3r]{margin:8px 0 24px;font-size:32px;line-height:1.2}.content[data-astro-cid-4sn4zg3r]{margin:32px 0}.content[data-astro-cid-4sn4zg3r] img[data-astro-cid-4sn4zg3r]{max-width:100%;height:auto;border-radius:8px}.content[data-astro-cid-4sn4zg3r] p[data-astro-cid-4sn4zg3r]{margin:16px 0}.content[data-astro-cid-4sn4zg3r] pre[data-astro-cid-4sn4zg3r]{background:#1a1f2e;padding:16px;border-radius:8px;overflow-x:auto}.content[data-astro-cid-4sn4zg3r] code[data-astro-cid-4sn4zg3r]{font-family:Monaco,Courier New,monospace;font-size:14px}.content[data-astro-cid-4sn4zg3r] a[data-astro-cid-4sn4zg3r]{color:var(--accent)}.post-footer[data-astro-cid-4sn4zg3r]{margin-top:48px;padding-top:24px;border-top:1px solid #1f2937;display:flex;justify-content:space-between;flex-wrap:wrap;gap:16px}@media (max-width: 640px){h1[data-astro-cid-4sn4zg3r]{font-size:24px}main[data-astro-cid-4sn4zg3r]{padding:16px}}
+</style></head> <body data-astro-cid-4sn4zg3r> <main data-astro-cid-4sn4zg3r> <header class="header" data-astro-cid-4sn4zg3r> <nav data-astro-cid-4sn4zg3r> <a href="/" class="back-link" data-astro-cid-4sn4zg3r>← Back to timeline</a> </nav> <div class="meta" data-astro-cid-4sn4zg3r> <span class="type" data-astro-cid-4sn4zg3r>blog</span> · <time datetime="2012-08-29T00:00:00.000Z" data-astro-cid-4sn4zg3r>8/28/2012</time> </div> <h1 data-astro-cid-4sn4zg3r>Examining-PXE-Boot</h1> </header> <article class="content" data-astro-cid-4sn4zg3r><p>I have a host with MAC 00:30:48:60:f3:ca. This host is configured to look for a PXE server, but was not matching the correct profile.</p>
+<h3>Verify my configuration</h3>
+<blockquote>
+<p>cat dhcpd.conf</p>
+</blockquote>
+<pre><code class="language-plaintext">option PXE.mtftp-cport          code 2 = unsigned integer 16;
+option PXE.mtftp-sport          code 3 = unsigned integer 16;
+option PXE.mtftp-tmout          code 4 = unsigned integer 8;
+option PXE.mtftp-delay          code 5 = unsigned integer 8;
+option PXE.discovery-control    code 6 = unsigned integer 8;
+option PXE.discovery-mcast-addr code 7 = ip-address;
+
+authoritative;
+
+class &quot;PXEclients&quot; {
+    match if (
+          (substring (option vendor-class-identifier, 0, 9) = &quot;PXEClient&quot;)
+      or  (substring (option vendor-class-identifier, 0, 9) = &quot;Etherboot&quot;));
+    option vendor-class-identifier &quot;PXEClient&quot;;
+    vendor-option-space PXE;
+    option PXE.mtftp-ip 0.0.0.0;
+    filename &quot;PXElinux.0&quot;;
+    next-server ;
+}
+</code></pre>
+<h3>is DHCP serving correctly?</h3>
+<pre><code class="language-plaintext">.da.bootps &gt; .da.bootpc: BOOTP/DHCP, Reply, length 300
+.bootps &gt; .da.bootps: BOOTP/DHCP, Request from 00:30:48:60:f3:ca (oui Unknown), length 548
+.da.bootps &gt; .bootps: BOOTP/DHCP, Reply, length 319
+.bootps &gt; .da.bootps: BOOTP/DHCP, Request from 00:30:48:60:f3:ca (oui Unknown), length 548
+</code></pre>
+<h3>Is TFTP matching correctly?</h3>
+<pre><code class="language-plaintext">@:~# tcpdump port 69
+tcpdump: verbose output suppressed, use -v or -vv for full protocol decode
+listening on eth0, link-type EN10MB (Ethernet), capture size 65535 bytes
+10.0.254.247.2070 &gt; .da.tftp:  27 RRQ &quot;PXElinux.0&quot; octet tsize 0
+10.0.254.247.2071 &gt; .da.tftp:  32 RRQ &quot;PXElinux.0&quot; octet blksize 1456
+10.0.254.247.49152 &gt; .da.tftp:  79 RRQ &quot;PXElinux.cfg/53d19f64-d663-a017-8922-00304860f3ca&quot; octet tsize 0 blksize 1408
+10.0.254.247.49153 &gt; .da.tftp:  63 RRQ &quot;PXElinux.cfg/01-00-30-48-60-f3-ca&quot; octet tsize 0 blksize 1408
+10.0.254.247.49154 &gt; .da.tftp:  51 RRQ &quot;PXElinux.cfg/0A00FEF7&quot; octet tsize 0 blksize 1408
+10.0.254.247.49155 &gt; .da.tftp:  50 RRQ &quot;PXElinux.cfg/0A00FEF&quot; octet tsize 0 blksize 1408
+10.0.254.247.49156 &gt; .da.tftp:  49 RRQ &quot;PXElinux.cfg/0A00FE&quot; octet tsize 0 blksize 1408
+10.0.254.247.49157 &gt; .da.tftp:  48 RRQ &quot;PXElinux.cfg/0A00F&quot; octet tsize 0 blksize 1408
+10.0.254.247.49158 &gt; .da.tftp:  47 RRQ &quot;PXElinux.cfg/0A00&quot; octet tsize 0 blksize 1408
+10.0.254.247.49159 &gt; .da.tftp:  46 RRQ &quot;PXElinux.cfg/0A0&quot; octet tsize 0 blksize 1408
+10.0.254.247.49160 &gt; .da.tftp:  45 RRQ &quot;PXElinux.cfg/0A&quot; octet tsize 0 blksize 1408
+10.0.254.247.49161 &gt; .da.tftp:  44 RRQ &quot;PXElinux.cfg/0&quot; octet tsize 0 blksize 1408
+10.0.254.247.49162 &gt; .da.tftp:  50 RRQ &quot;PXElinux.cfg/default&quot; octet tsize 0 blksize 1408
+</code></pre>
+<p>PXE is looking for entries that match itself. So PXE thinks it is:</p>
+<pre><code class="language-plaintext">53d19f64-d663-a017-8922-00304860f3ca
+01-00-30-48-60-f3-ca
+0A00FEF7
+0A00FEF
+0A00FE
+0A00F
+0A00
+0A0
+0A
+0
+default
+</code></pre>
+<p>If you look in <code>/var/tftp/PXElinux.cfg</code></p>
+<pre><code>&lt;me&gt;@&lt;pxe/tftp/server&gt;:/var/tftp/PXElinux.cfg# ls -al
+-rw-r--r--  1 &lt;me&gt; &lt;me&gt; 1833 May  6 16:58 default
+-rw-r--r--  1 &lt;me&gt; &lt;me&gt; 1833 May  6 16:58 reinstall
+</code></pre>
+<p>This means PXE found the default correctly but I wanted it to find another profile</p>
+<h3>Create a new match</h3>
+<blockquote>
+<p>ln -s reinstall 01-00-30-48-60-f3-ca</p>
+</blockquote>
+<pre><code>&lt;me&gt;@&lt;pxe/tftp/server&gt;:/var/tftp/PXElinux.cfg# ls -al
+lrwxrwxrwx  1 &lt;me&gt; &lt;me&gt;    9 May 24 15:02 01-00-30-48-60-f3-ca -&gt; reinstall
+-rw-r--r--  1 &lt;me&gt; &lt;me&gt;  166 May  6 16:58 unattended
+-rw-r--r--  1 &lt;me&gt; &lt;me&gt; 1833 May  6 16:58 reinstall
+</code></pre>
+<p>Now I have a match for my PXE host to find that has non-default instructions. An unattended install.</p>
+<h3>Verify TFTP got the changes</h3>
+<pre><code>@:~# tcpdump port 69
+lab01.da.2070 &gt; .da.tftp:  27 RRQ &quot;PXElinux.0&quot; octet tsize 0
+lab01.da.2071 &gt; .da.tftp:  32 RRQ &quot;PXElinux.0&quot; octet blksize 1456
+lab01.da.49152 &gt; .da.tftp:  79 RRQ &quot;PXElinux.cfg/53d19f64-d663-a017-8922-00304860f3ca&quot; octet tsize 0 blksize 1408
+lab01.da.49153 &gt; .da.tftp:  63 RRQ &quot;PXElinux.cfg/01-00-30-48-60-f3-ca&quot; octet tsize 0 blksize 1408
+lab01.da.49154 &gt; .da.tftp:  35 RRQ &quot;linux&quot; octet tsize 0 blksize 1408
+IP lab01.da.49155 &gt; .da.tftp:  39 RRQ &quot;initrd.gz&quot; octet tsize 0 blksize 1408
+</code></pre>
+<p>PXE has now matched and my host is reinstalling.</p>
+<h3>Reference</h3>
+<p><a href="https://wiki.debian.org/PXEBootInstall">Debian PXE Boot</a></p>
+</article> <footer class="post-footer" data-astro-cid-4sn4zg3r> <a href="/" class="back-link" data-astro-cid-4sn4zg3r>← Back to timeline</a> <a href="/blog/Examining-PXE-Boot/" target="_blank" rel="noopener" data-astro-cid-4sn4zg3r>Original post ↗</a> </footer> </main> </body></html>

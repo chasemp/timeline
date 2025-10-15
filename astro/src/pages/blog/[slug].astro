@@ -1,0 +1,155 @@
+---
+import timeline from "../../data/timeline.json";
+
+export function getStaticPaths() {
+  const blogPosts = (timeline as any[]).filter(item => item.type === 'blog');
+  return blogPosts.map(post => ({
+    params: { slug: post.id.replace('blog:', '') },
+    props: { post }
+  }));
+}
+
+const { post } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{post.title} — timeline.523.life</title>
+  <meta name="description" content={post.summary || post.title}>
+  <link rel="canonical" href={`https://timeline.523.life/blog/${post.id.replace('blog:', '')}`}>
+</head>
+<body>
+
+<main>
+  <header class="header">
+    <nav>
+      <a href="/" class="back-link">← Back to timeline</a>
+    </nav>
+    <div class="meta">
+      <span class="type">{post.type}</span> · <time datetime={post.timestamp}>{new Date(post.timestamp).toLocaleDateString()}</time>
+    </div>
+    <h1>{post.title}</h1>
+  </header>
+
+  <article class="content" set:html={post.content_html} />
+
+  <footer class="post-footer">
+    <a href="/" class="back-link">← Back to timeline</a>
+    {post.url && <a href={post.url} target="_blank" rel="noopener">Original post ↗</a>}
+  </footer>
+</main>
+
+</body>
+</html>
+
+<style>
+  :root {
+    --bg: #0b0e13;
+    --panel: #11161f;
+    --text: #e7ecf3;
+    --muted: #97a3b6;
+    --accent: #6aa0ff;
+  }
+  
+  * { box-sizing: border-box; }
+  
+  html, body { 
+    margin: 0; 
+    padding: 0; 
+    background: var(--bg); 
+    color: var(--text); 
+    font: 16px/1.6 system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Helvetica Neue, Arial, "Apple Color Emoji", "Segoe UI Emoji"; 
+  }
+  
+  main { 
+    max-width: 720px; 
+    margin: 0 auto; 
+    padding: 24px; 
+  }
+  
+  .header { 
+    margin-bottom: 40px; 
+  }
+  
+  .back-link { 
+    color: var(--accent); 
+    text-decoration: none; 
+    font-size: 14px; 
+  }
+  
+  .back-link:hover { 
+    text-decoration: underline; 
+  }
+  
+  .meta { 
+    font-size: 14px; 
+    color: var(--muted); 
+    margin: 16px 0 8px; 
+  }
+  
+  .type { 
+    text-transform: uppercase; 
+    letter-spacing: 0.06em; 
+    font-size: 12px; 
+  }
+  
+  h1 { 
+    margin: 8px 0 24px; 
+    font-size: 32px; 
+    line-height: 1.2; 
+  }
+  
+  .content { 
+    margin: 32px 0; 
+  }
+  
+  .content img { 
+    max-width: 100%; 
+    height: auto; 
+    border-radius: 8px; 
+  }
+  
+  .content p { 
+    margin: 16px 0; 
+  }
+  
+  .content pre { 
+    background: #1a1f2e; 
+    padding: 16px; 
+    border-radius: 8px; 
+    overflow-x: auto; 
+  }
+  
+  .content code { 
+    font-family: 'Monaco', 'Courier New', monospace; 
+    font-size: 14px; 
+  }
+  
+  .content a { 
+    color: var(--accent); 
+  }
+  
+  .post-footer { 
+    margin-top: 48px; 
+    padding-top: 24px; 
+    border-top: 1px solid #1f2937; 
+    display: flex; 
+    justify-content: space-between; 
+    flex-wrap: wrap; 
+    gap: 16px; 
+  }
+  
+  @media (max-width: 640px) {
+    h1 { 
+      font-size: 24px; 
+    }
+    
+    main { 
+      padding: 16px; 
+    }
+  }
+</style>
+

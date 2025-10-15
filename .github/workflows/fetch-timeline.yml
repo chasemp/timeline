@@ -1,0 +1,105 @@
+name: Fetch Timeline Data
+
+on:
+  # Run every 4 hours
+  schedule:
+    - cron: '0 */4 * * *'
+  
+  # Allow manual trigger
+  workflow_dispatch:
+  
+  # Run when fetch scripts change (for testing)
+  push:
+    branches:
+      - master
+    paths:
+      - 'astro/scripts/fetch-*.mts'
+      - '.github/workflows/fetch-timeline.yml'
+
+# Grant write permissions to the GITHUB_TOKEN
+permissions:
+  contents: write
+
+jobs:
+  fetch-data:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+          cache-dependency-path: 'astro/package-lock.json'
+      
+      - name: Install dependencies
+        working-directory: ./astro
+        run: npm ci
+      
+      - name: Fetch Bluesky posts
+        working-directory: ./astro
+        run: npm run fetch:bluesky
+      
+      - name: Fetch blog posts
+        working-directory: ./astro
+        run: npm run fetch:blog
+      
+      - name: Fetch GitHub releases
+        working-directory: ./astro
+        run: npm run fetch:github
+        env:
+          GITHUB_TOKEN: ${{ secrets.GH_PAT }}
+      
+      - name: Fetch Wikipedia contributions
+        working-directory: ./astro
+        run: npm run fetch:wikipedia
+      
+      - name: Fetch Readwise (optional)
+        working-directory: ./astro
+        run: npm run fetch:readwise || echo "Readwise fetch failed or skipped"
+        env:
+          READWISE_TOKEN: ${{ secrets.READWISE_TOKEN }}
+          READWISE_TAG_FILTER: ${{ vars.READWISE_TAG_FILTER }}
+      
+      - name: Merge sources
+        working-directory: ./astro
+        run: npm run merge
+      
+      - name: Check for data changes
+        id: data_changes
+        run: |
+          git diff --quiet astro/data/sources/ astro/src/data/timeline.json || echo "changed=true" >> $GITHUB_OUTPUT
+      
+      - name: Build Astro site
+        if: steps.data_changes.outputs.changed == 'true'
+        working-directory: ./astro
+        run: npm run build
+      
+      - name: Deploy to docs directory
+        if: steps.data_changes.outputs.changed == 'true'
+        run: |
+          rm -rf docs
+          mkdir -p docs
+          cp -r astro/dist/* docs/
+          cp astro/dist/.nojekyll docs/ 2>/dev/null || true
+      
+      - name: Commit and push all changes
+        if: steps.data_changes.outputs.changed == 'true'
+        run: |
+          git config user.name "GitHub Actions"
+          git config user.email "actions@github.com"
+          git add astro/data/sources/ astro/src/data/timeline.json docs/
+          git commit -m "🤖 Auto-update timeline: fetch data and deploy site"
+          git push
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      
+      - name: No changes detected
+        if: steps.data_changes.outputs.changed != 'true'
+        run: echo "No new timeline data, skipping build and deploy"
+

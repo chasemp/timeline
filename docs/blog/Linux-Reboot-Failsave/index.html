@@ -1,0 +1,45 @@
+<!DOCTYPE html><html lang="en" data-astro-cid-4sn4zg3r> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Linux-Reboot-Failsave — timeline.523.life</title><meta name="description" content="Linux-Reboot-Failsave"><link rel="canonical" href="https://timeline.523.life/blog/Linux-Reboot-Failsave"><style>:root{--bg: #0b0e13;--panel: #11161f;--text: #e7ecf3;--muted: #97a3b6;--accent: #6aa0ff}[data-astro-cid-4sn4zg3r]{box-sizing:border-box}html,body{margin:0;padding:0;background:var(--bg);color:var(--text);font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,Helvetica Neue,Arial,"Apple Color Emoji","Segoe UI Emoji"}main[data-astro-cid-4sn4zg3r]{max-width:720px;margin:0 auto;padding:24px}.header[data-astro-cid-4sn4zg3r]{margin-bottom:40px}.back-link[data-astro-cid-4sn4zg3r]{color:var(--accent);text-decoration:none;font-size:14px}.back-link[data-astro-cid-4sn4zg3r]:hover{text-decoration:underline}.meta[data-astro-cid-4sn4zg3r]{font-size:14px;color:var(--muted);margin:16px 0 8px}.type[data-astro-cid-4sn4zg3r]{text-transform:uppercase;letter-spacing:.06em;font-size:12px}h1[data-astro-cid-4sn4zg3r]{margin:8px 0 24px;font-size:32px;line-height:1.2}.content[data-astro-cid-4sn4zg3r]{margin:32px 0}.content[data-astro-cid-4sn4zg3r] img[data-astro-cid-4sn4zg3r]{max-width:100%;height:auto;border-radius:8px}.content[data-astro-cid-4sn4zg3r] p[data-astro-cid-4sn4zg3r]{margin:16px 0}.content[data-astro-cid-4sn4zg3r] pre[data-astro-cid-4sn4zg3r]{background:#1a1f2e;padding:16px;border-radius:8px;overflow-x:auto}.content[data-astro-cid-4sn4zg3r] code[data-astro-cid-4sn4zg3r]{font-family:Monaco,Courier New,monospace;font-size:14px}.content[data-astro-cid-4sn4zg3r] a[data-astro-cid-4sn4zg3r]{color:var(--accent)}.post-footer[data-astro-cid-4sn4zg3r]{margin-top:48px;padding-top:24px;border-top:1px solid #1f2937;display:flex;justify-content:space-between;flex-wrap:wrap;gap:16px}@media (max-width: 640px){h1[data-astro-cid-4sn4zg3r]{font-size:24px}main[data-astro-cid-4sn4zg3r]{padding:16px}}
+</style></head> <body data-astro-cid-4sn4zg3r> <main data-astro-cid-4sn4zg3r> <header class="header" data-astro-cid-4sn4zg3r> <nav data-astro-cid-4sn4zg3r> <a href="/" class="back-link" data-astro-cid-4sn4zg3r>← Back to timeline</a> </nav> <div class="meta" data-astro-cid-4sn4zg3r> <span class="type" data-astro-cid-4sn4zg3r>blog</span> · <time datetime="2012-09-30T00:00:00.000Z" data-astro-cid-4sn4zg3r>9/29/2012</time> </div> <h1 data-astro-cid-4sn4zg3r>Linux-Reboot-Failsave</h1> </header> <article class="content" data-astro-cid-4sn4zg3r><p>If you are doing iptables maintenance remote I always like to store my rules in a script and run them without saving. With a scheduled reboot pending locking myself out is a recoverable offense.</p>
+<blockquote>
+<p>/usr/local/bin/rsched</p>
+</blockquote>
+<pre><code class="language-bash">#!/bin/bash
+if [ -z &quot;$1&quot; ]
+  then
+    echo &quot;Usage: $0 &quot;
+    exit 1
+fi
+echo &quot;reboot interval $1 minutes&quot;
+now=`date +&quot;%s&quot;`
+#convert seconds to minutes
+future_time=`expr $1 \\* 60`
+rtime=`expr $now + $future_time`
+#convert epoch to shutdown friendly format
+time=`date -d @$rtime +&quot;%H:%M&quot;`
+echo $time
+#issue shutdown
+shutdown -k -r $time
+</code></pre>
+<h3>Looks like</h3>
+<blockquote>
+<p>root@vm:~# rsched 10</p>
+</blockquote>
+<pre><code class="language-plaintext">reboot interval 10 minutes
+Console output `The system is going DOWN for reboot in 10 minutes!/0) (Wed Jul 10 14:01:57 20`
+</code></pre>
+<h3>Scheduling</h3>
+<blockquote>
+<p>root@vm:~# nohup rsched 10 &amp;</p>
+</blockquote>
+<pre><code class="language-plaintext">Broadcast message from root@vm (Wed Jul 10 14:03:02 2013):
+
+The system is going DOWN for reboot in 10 minutes!
+</code></pre>
+<h3>Canceling</h3>
+<pre><code class="language-plaintext">root@vm:~# fg
+nohup rsched 10
+</code></pre>
+<blockquote>
+<p>&lt;cntrl+c&gt;</p>
+</blockquote>
+</article> <footer class="post-footer" data-astro-cid-4sn4zg3r> <a href="/" class="back-link" data-astro-cid-4sn4zg3r>← Back to timeline</a> <a href="/Linux-Reboot-Failsave/" target="_blank" rel="noopener" data-astro-cid-4sn4zg3r>Original post ↗</a> </footer> </main> </body></html>

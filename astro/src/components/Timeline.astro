@@ -1,0 +1,298 @@
+---
+const { items } = Astro.props as { items: any[] };
+
+const sorted = [...items].sort((a, b) => new Date(b.timestamp).getTime() - new Date(a.timestamp).getTime());
+---
+
+<section class="timeline" aria-label="Timeline">
+  <ol class="list" role="list">
+    <!-- Today marker -->
+    <li class="row today-marker">
+      <div class="spine">
+        <span class="dot today-dot" title="Today"></span>
+      </div>
+      <div class="today-label">
+        <span class="today-text">Today</span>
+        <time class="today-date">{new Date().toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}</time>
+      </div>
+    </li>
+    
+    {sorted.map((item) => (
+      <li class={`row type-${item.type}`} data-type={item.type} data-id={item.id}>
+        <div class="spine">
+          <span class="dot" data-dot-type={item.type} data-timestamp={item.timestamp} title={new Date(item.timestamp).toLocaleString()}></span>
+        </div>
+        <button class="card" data-id={item.id} data-type={item.type} data-url={item.type === 'blog' ? `/blog/${item.id.replace('blog:', '')}` : (item.url || '')} aria-haspopup="dialog">
+          <div class="meta">
+            <span class="type">{item.type}</span>
+            <time datetime={item.timestamp}>{new Date(item.timestamp).toLocaleString()}</time>
+            {item.media?.images && item.media.images.length > 0 && (
+              <span class="media-indicator" title={`${item.media.images.length} image${item.media.images.length > 1 ? 's' : ''}`}>📷 {item.media.images.length}</span>
+            )}
+          </div>
+          <div class="title">{item.title}</div>
+          {item.summary && <p class="summary">{item.summary}</p>}
+        </button>
+      </li>
+    ))}
+  </ol>
+
+  <div id="tooltip" role="tooltip" hidden>
+    <div class="tooltip-card">
+      <div class="tooltip-title"></div>
+      <div class="tooltip-meta"></div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .timeline { display: contents; }
+  .list { list-style: none; margin: 0; padding: 0; position: relative; }
+  .row { display: grid; grid-template-columns: 24px 1fr; gap: 12px; align-items: start; margin: 12px 0; }
+  .spine { position: relative; height: 100%; }
+  .spine::before { content: ""; position: absolute; top: 0; bottom: 0; left: 11px; width: 2px; background: var(--spine); }
+  .dot { position: absolute; left: 5px; top: 10px; width: 12px; height: 12px; border-radius: 50%; background: var(--accent); box-shadow: 0 0 0 3px var(--bg); cursor: pointer; transition: transform 0.2s, box-shadow 0.2s; border: 1px solid rgba(0,0,0,0.1); }
+  .dot:hover { transform: scale(1.4); box-shadow: 0 0 0 4px var(--bg), 0 0 16px currentColor; }
+  .dot[data-dot-type="blog"]::after { content: "📝"; position: absolute; top: -2px; left: -2px; font-size: 16px; opacity: 0; transition: opacity 0.2s; pointer-events: none; }
+  .dot[data-dot-type="saved"]::after { content: "🔖"; position: absolute; top: -2px; left: -2px; font-size: 16px; opacity: 0; transition: opacity 0.2s; pointer-events: none; }
+  .dot[data-dot-type="bluesky"]::after { content: "🦋"; position: absolute; top: -2px; left: -2px; font-size: 16px; opacity: 0; transition: opacity 0.2s; pointer-events: none; }
+  .dot[data-dot-type="release"]::after { content: "🏷️"; position: absolute; top: -2px; left: -2px; font-size: 16px; opacity: 0; transition: opacity 0.2s; pointer-events: none; }
+  .dot[data-dot-type="wikipedia"]::after { content: "🌐"; position: absolute; top: -2px; left: -2px; font-size: 16px; opacity: 0; transition: opacity 0.2s; pointer-events: none; }
+  .dot:hover::after { opacity: 1; }
+  .dot[data-dot-type="blog"] { background: #5d4037; color: #5d4037; }
+  .dot[data-dot-type="saved"] { background: #7cb342; color: #7cb342; }
+  .dot[data-dot-type="bluesky"] { background: #1e88e5; color: #1e88e5; }
+  .dot[data-dot-type="release"] { background: #fb8c00; color: #fb8c00; }
+  .dot[data-dot-type="wikipedia"] { background: #636466; color: #636466; }
+  
+  /* Today marker styles */
+  .today-marker { margin-bottom: 24px; }
+  .today-dot { background: var(--accent); cursor: default; animation: pulse 2s ease-in-out infinite; }
+  .today-dot:hover { transform: none; box-shadow: 0 0 0 3px var(--bg); }
+  .today-label { display: flex; align-items: baseline; gap: 8px; }
+  .today-text { font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; font-size: 13px; color: var(--accent); font-family: system-ui, sans-serif; }
+  .today-date { color: var(--muted); font-size: 13px; font-family: system-ui, sans-serif; }
+  @keyframes pulse {
+    0%, 100% { box-shadow: 0 0 0 3px var(--bg), 0 0 0 4px var(--accent); }
+    50% { box-shadow: 0 0 0 3px var(--bg), 0 0 0 6px var(--accent), 0 0 16px var(--accent); }
+  }
+  
+  .card { text-align: left; background: var(--card-bg); color: var(--text); border: 1px solid var(--border); border-radius: 8px; padding: 14px; cursor: pointer; width: 100%; transition: all 0.2s; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
+  .card:hover { border-color: var(--accent); box-shadow: 0 2px 8px rgba(0,0,0,0.1); transform: translateY(-1px); }
+  .card-link { display: block; text-decoration: none; }
+  .meta { display: flex; gap: 10px; font-size: 12px; color: var(--muted); font-family: system-ui, sans-serif; align-items: center; }
+  .type { text-transform: uppercase; letter-spacing: .08em; font-weight: 600; }
+  .media-indicator { background: rgba(193, 122, 79, 0.15); padding: 2px 6px; border-radius: 4px; font-size: 11px; color: var(--accent); white-space: nowrap; }
+  .title { font-weight: 600; margin-top: 6px; color: var(--text); line-height: 1.4; }
+  .summary { margin: 8px 0 0; color: var(--muted); font-size: 14px; line-height: 1.5; }
+
+  #tooltip { position: fixed; z-index: 60; pointer-events: none; }
+  .tooltip-card { background: var(--panel); border: 1px solid var(--border); border-radius: 8px; padding: 10px 12px; box-shadow: 0 4px 16px rgba(0,0,0,0.15); max-width: 360px; }
+  .tooltip-title { font-weight: 600; font-size: 14px; margin-bottom: 3px; color: var(--text); }
+  .tooltip-meta { font-size: 12px; color: var(--muted); font-family: system-ui, sans-serif; }
+ </style>
+
+<script is:inline set:html={`window.__TIMELINE__ = ${JSON.stringify(sorted)};`} />
+
+<script>
+  const params = new URLSearchParams(location.search);
+  const typesParam = (params.get('types') ?? '').split(',').filter(Boolean);
+
+  function applyFilters() {
+    const allowed = new Set(typesParam.length ? typesParam : Array.from(document.querySelectorAll('input[name="type"]')).map(i=>i.value));
+    document.querySelectorAll('.row').forEach((row) => {
+      const t = (row as HTMLElement).dataset.type;
+      (row as HTMLElement).style.display = allowed.has(t!) ? '' : 'none';
+    });
+  }
+  applyFilters();
+  document.addEventListener('filters:changed', (e: any) => {
+    const allowed = new Set(e.detail.types.length ? e.detail.types : []);
+    document.querySelectorAll('.row').forEach((row) => {
+      const t = (row as HTMLElement).dataset.type;
+      // If no filters selected (allowed.size === 0), hide all
+      (row as HTMLElement).style.display = allowed.size === 0 ? 'none' : (allowed.has(t!) ? '' : 'none');
+    });
+  });
+
+  const panel = document.getElementById('detail-panel')!;
+  const panelContent = document.getElementById('panel-content')!;
+  const panelTitleText = document.getElementById('panel-title-text')!;
+  const panelSourceWrapper = document.getElementById('panel-source-wrapper')!;
+  const panelSource = document.getElementById('panel-source')! as HTMLAnchorElement;
+  const closeBtn = document.getElementById('panel-close')!;
+  const backdrop = document.getElementById('panel-backdrop')!;
+  const isMobile = () => window.innerWidth <= 980;
+
+  // Save intro content - ensure it's captured correctly
+  let introHTML = panelContent.innerHTML;
+  if (!introHTML || introHTML.trim() === '') {
+    console.warn('Panel intro content is empty, attempting to restore...');
+    // Fallback to re-reading from DOM
+    setTimeout(() => {
+      introHTML = panelContent.innerHTML;
+    }, 100);
+  }
+
+  function lockScroll(lock = true) {
+    if (lock && isMobile()) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+  }
+
+  async function loadBlogPost(url: string): Promise<string> {
+    try {
+      const response = await fetch(url);
+      const html = await response.text();
+      const parser = new DOMParser();
+      const doc = parser.parseFromString(html, 'text/html');
+      const article = doc.querySelector('article') || doc.querySelector('main') || doc.querySelector('.content');
+      return article ? article.innerHTML : '<p>Unable to load content</p>';
+    } catch {
+      return '<p>Error loading content</p>';
+    }
+  }
+
+  async function openPanelFor(id: string) {
+    const entry = (window as any).__TIMELINE__.find((i: any) => i.id === id);
+    if (!entry) return;
+    
+    // Mobile: show backdrop and lock scroll
+    if (isMobile()) {
+      backdrop.removeAttribute('hidden');
+      panel.classList.add('mobile-open');
+      closeBtn.removeAttribute('hidden');
+      lockScroll(true);
+    } else {
+      closeBtn.setAttribute('hidden', '');
+    }
+
+    // Set title to metadata (type and timestamp)
+    const typeDisplayName = entry.type === 'saved' ? 'ARTICLES' : entry.type.toUpperCase();
+    panelTitleText.textContent = `${typeDisplayName} · ${new Date(entry.timestamp).toLocaleString()}`;
+    
+    // Show/hide and update source link
+    if (entry.url) {
+      panelSource.href = entry.url;
+      panelSourceWrapper.removeAttribute('hidden');
+    } else {
+      panelSourceWrapper.setAttribute('hidden', '');
+    }
+    
+    // Show loading state
+    panelContent.innerHTML = '<p>Loading...</p>';
+    
+    // Load content based on type
+    let content = '';
+    if (entry.type === 'blog') {
+      const blogUrl = `/blog/${entry.id.replace('blog:', '')}`;
+      const blogContent = await loadBlogPost(blogUrl);
+      content = `<h3 class="detail-title">${entry.title || ''}</h3>
+        <div class="detail-content">${blogContent}</div>`;
+    } else {
+      content = `<h3 class="detail-title">${entry.title || ''}</h3>
+        <div class="detail-content">${entry.content_html || `<p>${entry.summary || ''}</p>`}</div>`;
+    }
+    
+    panelContent.innerHTML = content;
+    
+    const p = new URLSearchParams(location.search); 
+    p.set('id', id); 
+    history.replaceState({}, '', `?${p.toString()}`);
+  }
+
+  function closePanel() {
+    if (isMobile()) {
+      backdrop.setAttribute('hidden', '');
+      panel.classList.remove('mobile-open');
+      lockScroll(false);
+    }
+    panelTitleText.textContent = 'About';
+    panelSourceWrapper.setAttribute('hidden', '');
+    panelContent.innerHTML = introHTML;
+    closeBtn.setAttribute('hidden', '');
+    const p = new URLSearchParams(location.search); 
+    p.delete('id'); 
+    history.replaceState({}, '', `?${p.toString()}`);
+  }
+
+  closeBtn.addEventListener('click', closePanel);
+  backdrop.addEventListener('click', closePanel);
+  document.addEventListener('keydown', (e) => { 
+    if (e.key === 'Escape' && (isMobile() ? panel.classList.contains('mobile-open') : panelContent.innerHTML !== introHTML)) {
+      closePanel();
+    }
+  });
+
+  // Add click handlers to all cards
+  document.querySelectorAll('.card').forEach((btn) => {
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      openPanelFor((btn as HTMLElement).dataset.id!);
+    });
+  });
+
+  // Tooltip
+  const tooltip = document.getElementById('tooltip') as HTMLElement;
+  const ttTitle = tooltip.querySelector('.tooltip-title') as HTMLElement;
+  const ttMeta = tooltip.querySelector('.tooltip-meta') as HTMLElement;
+
+  function positionTooltip(rect: DOMRect) {
+    const gap = 10;
+    const top = Math.min(window.innerHeight - 80, Math.max(0, rect.top + window.scrollY + gap));
+    const left = Math.min(window.innerWidth - 380, Math.max(0, rect.left + window.scrollX + gap));
+    tooltip.style.top = `${top}px`;
+    tooltip.style.left = `${left}px`;
+  }
+
+  // Tooltips only for dots (removed from cards)
+  // No tooltip function needed - using native title attribute on dots
+
+  // Enhanced tooltips for dots showing date with emoji
+  function showDotTooltip(dot: HTMLElement) {
+    const timestamp = dot.dataset.timestamp!;
+    const type = dot.dataset.dotType!;
+    const date = new Date(timestamp).toLocaleString('en-US', { 
+      month: 'short', 
+      day: 'numeric', 
+      year: 'numeric',
+      hour: 'numeric',
+      minute: '2-digit',
+      hour12: true
+    });
+    
+    const emojiMap: Record<string, string> = {
+      'blog': '📝',
+      'saved': '🔖',
+      'bluesky': '🦋',
+      'release': '🏷️',
+      'wikipedia': '🌐'
+    };
+    
+    const typeDisplayNames: Record<string, string> = {
+      'saved': 'ARTICLES'
+    };
+    
+    const emoji = emojiMap[type] || '';
+    const displayName = typeDisplayNames[type] || type.toUpperCase();
+    ttTitle.textContent = `${emoji} ${displayName}`;
+    ttMeta.textContent = date;
+    positionTooltip(dot.getBoundingClientRect());
+    tooltip.removeAttribute('hidden');
+  }
+  function hideDotTooltip() {
+    tooltip.setAttribute('hidden', '');
+  }
+
+  document.querySelectorAll('.dot').forEach((dot) => {
+    const d = dot as HTMLElement;
+    d.addEventListener('mouseenter', () => showDotTooltip(d));
+    d.addEventListener('mouseleave', hideDotTooltip);
+  });
+
+  const selectedId = params.get('id');
+  if (selectedId) openPanelFor(selectedId);
+</script>
+

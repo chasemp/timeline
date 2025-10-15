@@ -1,0 +1,479 @@
+[
+  {
+    "id": "blog:newby-voicemail",
+    "type": "blog",
+    "source": "markdown",
+    "timestamp": "2012-02-07T00:00:00.000Z",
+    "title": "Newby Voicemail",
+    "summary": "",
+    "url": "/Blog/newby-voicemail/",
+    "tags": [
+      "voicemail"
+    ],
+    "content_html": "<p>My second day at a job in 2007 I showed up early.  I came in the unlocked front doors and I set off an insane alarm.  <!--more--> Strobe lights were in effect.  I left a voicemail for my boss that has become something of urban legend.  One of my coworkers posted it on his blog Caffeinatedcoder (which is no longer) and it got picked up by someone who blogs regularly at Microsoft.  It was associated with another urban legend story at MS about a new employee dinging the car of someone with the lastname Gates.</p>\n<p>The original CaffeineCoder post:</p>\n<p><img src=\"/assets/images/ione/i1first.png\" alt=\"the post\"></p>\n<p>The traceback from the Microsoft blog:</p>\n<p><img src=\"/assets/images/ione/ione-back2.png\" alt=\"backtrace\"></p>\n<p>I find the whole thing funny.  It is part of my history now.  Someday I may own up my second &#39;Internet Notorious&#39; moment.</p>\n"
+  },
+  {
+    "id": "blog:Proxychains",
+    "type": "blog",
+    "source": "markdown",
+    "timestamp": "2012-02-18T00:00:00.000Z",
+    "title": "Proxychains",
+    "summary": "",
+    "url": "/blog/Proxychains/",
+    "tags": [
+      "Proxychains",
+      "Linux"
+    ],
+    "content_html": "<p>Some commands do not natively support a proxy (RE: telnet).  Other times it is just easier to do a one-off instance rather than mess with environment settings.  A lot of people use this with Tor.</p>\n<h5>ProxyChains</h5>\n<p>Allows you to send traffic through a proxy without the command itself having foreknowledge.</p>\n<p><code>aptitude install proxychains</code></p>\n<h5>Config file options</h5>\n<p>Pick one:</p>\n<ol>\n<li>./proxychains.conf</li>\n<li>$(HOME)/.proxychains/proxychains.conf</li>\n<li>/etc/proxychains.conf</li>\n</ol>\n<h5>/etc/proxychains.conf the global option</h5>\n<pre><code>strict_chain\nquiet_mode\ntcp_read_time_out 15000\ntcp_connect_time_out 8000\n[ProxyList]\n#replace this with your proxy\nhttp    192.168.1.1 8080\n</code></pre>\n<h5>telnet Before Proxychains (behind a proxy)</h5>\n<pre><code>me@vm:~/pkg$ telnet google.com 80\nTrying 2404:6800:4005:806::1006...\nTrying 173.194.127.196...\nTrying 173.194.127.193...\nTrying 173.194.127.200...\nTrying 173.194.127.201...\nTrying 173.194.127.198...\nTrying 173.194.127.199...\nTrying 173.194.127.195...\nTrying 173.194.127.192...\nTrying 173.194.127.206...\nTrying 173.194.127.194...\nTrying 173.194.127.197...\ntelnet: Unable to connect to remote host: Network is unreachable\n</code></pre>\n<h5>telnet after ProxyChains (behind a proxy)</h5>\n<pre><code>me@vm:~/pkg$ proxychains telnet google.com 80\nProxyChains-3.1 (http://proxychains.sf.net)\nTrying 2404:6800:4005:806::1006...\nTrying 173.194.127.196...\nConnected to google.com.\nEscape character is &#39;^]&#39;.\n</code></pre>\n<p>In an environment with heavy automation and numerous service account users it is easy to end up in a situation where compromising one service becomes compromising an entire system.</p>\n<h4>Granting permission to a single command</h4>\n<blockquote>\n<p>vi /etc/sudoers.d/makingpie</p>\n</blockquote>\n<p><code>myuser ALL = NOPASSWD: /usr/local/bin/makepie</code></p>\n<blockquote>\n<p>myuser:#sudo makepie</p>\n</blockquote>\n<p><code>&gt;&gt;&gt;&gt;mmmmm...pie</code></p>\n<h3>What if my user needs to call out to a proxy but &#39;makepie&#39; doesn&#39;t support it?</h3>\n<blockquote>\n<p>sudo LD_PRELOAD=libproxychains.so.3 makepie</p>\n</blockquote>\n<p>Sudo is extra granular and doesn&#39;t like this idea.</p>\n<p><code>sudo: sorry, you are not allowed to set the following environment variables: LD_PRELOAD</code></p>\n<h3>Fixing The heavy handed way</h3>\n<p>Don&#39;t reset user enviroments when using sudo</p>\n<blockquote>\n<p>visudo</p>\n</blockquote>\n<p>Replace: “Defaults env_reset” with: “Defaults !env_reset”</p>\n<h3>Fixing the Piecemeal way</h3>\n<blockquote>\n<p>vi /etc/sudoers.d/ld_preload</p>\n</blockquote>\n<pre><code class=\"language-plaintext\">#allow users to use proxychains env variable (using sudo)\nDefaults env_keep += &quot;LD_PRELOAD&quot;\n</code></pre>\n<h5>Excluding traffic from your proxy</h5>\n<p>In theory you can set the localnet option in your configuration file to exclude the local LAN by default from proxy  behavior.  This has not worked for me with proxychains under Debian 6.0</p>\n<p>In case you are interested though: <a href=\"https://github.com/haad/proxychains/issues/6#issuecomment-4041824\">localnet docs</a></p>\n<h5>Reference</h5>\n<p><a href=\"http://benizi.com/postfix-proxychains\">article one</a> <a href=\"http://www.jameslovecomputers.com/how-to-install-configure-and-use-proxychains/\">article two</a> <a href=\"http://proxychains.sourceforge.net/howto.html\">official howto</a> <a href=\"https://github.com/haad/proxychains\">github</a></p>\n"
+  },
+  {
+    "id": "blog:reading-json-from-bash-with-python",
+    "type": "blog",
+    "source": "markdown",
+    "timestamp": "2012-05-28T00:00:00.000Z",
+    "title": "Read JSON in Bash with Python",
+    "summary": "",
+    "url": "/Blog/reading-json-from-bash-with-python/",
+    "tags": [
+      "JSON",
+      "Bash",
+      "Python"
+    ],
+    "content_html": "<p>Getting JSON from a flat file in a shell script</p>\n<p>JSON is become a defacto serialization standard. Getting at the info in Bash is nice.</p>\n<p><code>cat /var/myfile</code></p>\n<pre><code class=\"language-json\">{&#39;this&#39;: &#39;you&#39;}\n</code></pre>\n<p>Create a script that can access this data</p>\n<pre><code class=\"language-bash\">#!/bin/bash\nset -e\nFILE=&#39;/var/file&#39;\nif [[ ! -a $FILE ]]; then\n    exit 0\nfi\ndict_value=`python -c &#39;import json, os; d=json.loads(open(&quot;/var/file&quot;).read()); print d[&quot;this&quot;]&#39;`\necho $dict_value\n</code></pre>\n<p>Run it as a command <code>./script.sh</code></p>\n<blockquote>\n<p>you</p>\n</blockquote>\n"
+  },
+  {
+    "id": "blog:Cisco-Octets-to-Mbps",
+    "type": "blog",
+    "source": "markdown",
+    "timestamp": "2012-07-12T00:00:00.000Z",
+    "title": "Convert Cisco Octets to Mbps",
+    "summary": "",
+    "url": "/Blog/Cisco-Octets-to-Mbps/",
+    "tags": [
+      "Cisco"
+    ],
+    "content_html": "<p>Depending on the type of counter you want to track you can use one of the two</p>\n<h1>SNMP following OIDs</h1>\n<p>&#39;64&#39; bit counter =&gt; oid =&gt; &#39;.1.3.6.1.2.1.31.1.1.1&#39;\n&#39;32&#39; bit counter =&gt; oid =&gt; &#39;.1.3.6.1.2.1.2.2&#39;</p>\n<h1>Example Readings</h1>\n<p>Sampe 1 Transferred octets; <code>28879519327687</code></p>\n<p>Sampe 2 Transferred octets (10 seconds later) <code>28879428276119</code></p>\n<p>That&#39;s 91051568 octets in 10 seconds.</p>\n<p>Divide by 10 for per second value: 9105156</p>\n<p>Multiply by 8 for bits: 72841248</p>\n<p>Divide by 1048576 for Mbps: 69</p>\n<pre><code class=\"language-python\">&gt;&gt;&gt; 28879519327687 - 28879428276119\n91051568\n&gt;&gt;&gt; 91051568 / 10 \n9105156\n&gt;&gt;&gt; 9105156 * 8\n72841248\n&gt;&gt;&gt; 72841248 / 1048576\n69\n</code></pre>\n<h1>Reference</h1>\n<p><a href=\"https://www.cisco.com/c/en/us/support/docs/ip/simple-network-management-protocol-snmp/8141-calculate-bandwidth-snmp.html\">How To Calculate Bandwidth Utilization Using SNMP</a>\n<a href=\"https://www.cisco.com/c/en/us/support/docs/ip/simple-network-management-protocol-snmp/26007-faq-snmpcounter.html\">Consider SNMP Counters: Frequently Asked Questions</a></p>\n"
+  },
+  {
+    "id": "blog:motd-debian",
+    "type": "blog",
+    "source": "markdown",
+    "timestamp": "2012-07-21T00:00:00.000Z",
+    "title": "Settings a modular MOTD in Debian",
+    "summary": "",
+    "url": "/Blog/motd-debian/",
+    "tags": [
+      "Debian"
+    ],
+    "content_html": "<p>Granular control over Debian MOTDMOTD should be used for more than welcome messages</p>\n<h1>What version am I on?</h1>\n<pre><code>cat /etc/issue\n\nDebian GNU/Linux 6.0 \\n \\l\n</code></pre>\n<h1>PAM has the ability to build a motd on demand</h1>\n<blockquote>\n<p>mkdir /etc/update-motd.d/\nnano /etc/update-motd.d/test</p>\n</blockquote>\n<pre><code class=\"language-bash\">#!/bin/bash\necho &#39;test&#39;\n</code></pre>\n<blockquote>\n<p>logout\nlogin</p>\n</blockquote>\n<pre><code>test\nme@vm:~$ \n</code></pre>\n<p>This way different teams can update the motd, and they can be ordered like 10test, 20test, 30test.</p>\n"
+  },
+  {
+    "id": "blog:Basic-JSON-Python-REST-Client",
+    "type": "blog",
+    "source": "markdown",
+    "timestamp": "2012-07-24T00:00:00.000Z",
+    "title": "Basic Python JSON REST API Client Example",
+    "summary": "",
+    "url": "/Blog/Basic-JSON-Python-REST-Client/",
+    "tags": [
+      "standard"
+    ],
+    "content_html": "<p>JSON REST API&#39;s are increasingly common and useful.</p>\n<p>A basic client example for using something like <a href=\"https://github.com/zorkian/nagios-api\">nagios api</a></p>\n<pre><code class=\"language-Python\">import sys\nimport os\nimport urllib\nimport json\nimport urllib2\n\nclass JSONRestClient(object):\n    def __init__(self, remote):\n        self.url = remote\n\n    def _get(self, trail):\n        getme = self.url + trail\n        req = urllib2.Request(getme)\n        return json.loads(urllib2.urlopen(req, timeout=120).read())\n\n    def _post(self, trail, **kwargs):\n        data = json.dumps(kwargs)\n        req = urllib2.Request(self.url + trail, data, {&#39;Content-Type&#39;: &#39;application/json&#39;})\n        f = urllib2.urlopen(req)\n        response = f.read()\n        f.close()\n        return json.loads(response)\n\n    def state(self):\n        return self._get(&#39;state&#39;)\n</code></pre>\n<h1>Getting state info from nagios api</h1>\n<p>r = JSONRestClient(&#39;<a href=\"http://remotehost:8080\">http://remotehost:8080</a>&#39;)\nprint r.state()</p>\n"
+  },
+  {
+    "id": "blog:Python-Regex",
+    "type": "blog",
+    "source": "markdown",
+    "timestamp": "2012-08-02T00:00:00.000Z",
+    "title": "Basic Python Regex Extraction",
+    "summary": "",
+    "url": "/Blog/Python-Regex/",
+    "tags": [
+      "Python",
+      "Regex"
+    ],
+    "content_html": "<p>When dealing with totally unstructured data sometimes it is necessary to go full regex.</p>\n<p>Extracting values from a string using regex</p>\n<pre><code class=\"language-python\">import re\nstring = &#39;working on X000 for Y1111&#39;\n\ntag_matches = {&#39;x&#39;: &#39;X\\d{1,6}&#39;,\n               &#39;y&#39;: &#39;Y\\d{1,6}&#39;}\n\nfor k, v in tag_matches.iteritems():\n    title_search = re.search(v, string, re.IGNORECASE)\n    if title_search:\n        print k, title_search.group(0)\n</code></pre>\n<h3>Console Output</h3>\n<p><code>y Y1111</code></p>\n<p><code>x X000</code></p>\n<p>One thing I see people do a lot is use regex to replace values in a string. In python this is as easy as.</p>\n<pre><code class=\"language-python\">a = &#39;one two three&#39;\nprint a.replace(&#39;one&#39;, &#39;turtles&#39;)\nturles two three\n</code></pre>\n"
+  },
+  {
+    "id": "blog:deb-from-python",
+    "type": "blog",
+    "source": "markdown",
+    "timestamp": "2012-08-08T00:00:00.000Z",
+    "title": "Debian Package from Python Project using stdeb",
+    "summary": "",
+    "url": "/blog/deb-from-python/",
+    "tags": [
+      "Python",
+      "Debian"
+    ],
+    "content_html": "<p>One of the things I do often is download projects from github. Pypi (py-pee-eye) is nice and so is pip, but I like to have one reference for packages on a host. If at all possible I prefer to make binaries. It is nice for reporting, and because we run our own internal repostories it affords us certain advantages for reporting and dependency handling.</p>\n<h3>Install a few packages</h3>\n<blockquote>\n<p>aptitude install build-essential python-dev python-setuptools python-stdeb python-support</p>\n</blockquote>\n<h3>Download a project: <a href=\"https://github.com/xb95/nagios-api.git\">https://github.com/xb95/nagios-api.git</a></h3>\n<blockquote>\n<p>git clone <a href=\"https://github.com/xb95/nagios-api.git\">https://github.com/xb95/nagios-api.git</a>\ncd nagios-api/</p>\n</blockquote>\n<h3>Making a Deb</h3>\n<p>This where with traditional disutils you would do <code>python setup.py install</code></p>\n<p>But we can also do…</p>\n<blockquote>\n<p>sudo python setup.py --command-packages=stdeb.command bdist_deb</p>\n</blockquote>\n<pre><code class=\"language-plaintext\">running bdist_deb\nrunning sdist_dsc\nworking around Debian #548392, changing XS-Python-Version: to &#39;current&#39;\nCALLING dpkg-source -b nagios-api-1.2.1 nagios-api_1.2.1.orig.tar.gz (in dir deb_dist)\ndpkg-source: info: using source format `1.0&#39;\ndpkg-deb: building package `python-nagios-api&#39; in `../python-nagios-api_1.2.1-1_all.deb&#39;.\ndpkg-deb: warning: ignoring 1 warning about the control file(s)\ndpkg-genchanges -b &gt;../nagios-api_1.2.1-1_amd64.changes\ndpkg-genchanges: binary-only upload - not including any source code\ndpkg-source --after-build nagios-api-1.2.1\ndpkg-buildpackage: binary only upload (no source included)\n&lt;/code&gt;&lt;/pre&gt;\nThat was all it took to create a fully installable binary package:\n\ndpkg -i deb_dist/python-nagios-api_1.2.1-1_all.deb \n\n&lt;pre&gt;&lt;code&gt;\nSelecting previously deselected package python-nagios-api.\n(Reading database ... 38260 files and directories currently installed.)\nUnpacking python-nagios-api (from .../python-nagios-api_1.2.1-1_all.deb) ...\nSetting up python-nagios-api (1.2.1-1) ...\nProcessing triggers for python-support ...\n</code></pre>\n<h3>Changing package particulars</h3>\n<p><code>stdeb</code> allows you to specify many options you would normally need to provide in a debian control file. For example\nin order to change the name of the package we end up with from &#39;python-nagios-api&#39; to just nagios-api we can do\nthe the following.</p>\n<blockquote>\n<p>cd nagios-api/\nnano stdeb.cfg #should be in the same dir as setup.py</p>\n</blockquote>\n<pre><code>[DEFAULT]\nPackage: nagios-api```\n\nSome repositories will have a problem with the lack of changelog file or other particulars. Almost always this can be overcome, but if necessary then you can use:\n\n&gt; python setup.py dh_make\n\n### References\n\n[bdist_deb command for distutils](https://lists.debian.org/debian-python/2004/10/msg00017.html)\n[Nagios API](https://github.com/zorkian/nagios-api)\n[stdeb config](https://pypi.org/project/stdeb/#stdeb-cfg-configuration-file)\n</code></pre>\n"
+  },
+  {
+    "id": "blog:Last-Puppet-Update",
+    "type": "blog",
+    "source": "markdown",
+    "timestamp": "2012-08-16T00:00:00.000Z",
+    "title": "Bash to run for date of lastest Puppet update",
+    "summary": "",
+    "url": "/blog/Last-Puppet-Update/",
+    "tags": [
+      "Puppet",
+      "Bash"
+    ],
+    "content_html": "<h3>When was this host last updated via puppet?</h3>\n<pre><code class=\"language-bash\">#!/bin/bash\n#prints time since last recorded puppet update\n#you know...for debugging\nlast=`grep last_run /var/lib/puppet/state/last_run_summary.yaml | awk {&#39;print $2&#39;}`\nnow=`date +%s`\nSECONDS=`expr $nowa - $last`\nMIN=`expr $SECONDS / 60`\nHOURS=`expr $MIN / 60`\nDAYS=`expr $HOURS / 24`\n\necho &quot;Since last puppet update&quot;\necho &#39;seconds: &#39;$SECONDS\necho &#39;minutes: &#39;$MIN\nif [ $HOURS -gt 0 ]; then\n    echo &#39;hours: &#39;$HOURS\nfi\n\nif [ $HOURS -gt 0 ]; then\n    echo &#39;hours: &#39;$HOURS\nfi\n\nif [ $DAYS -gt 0 ]; then\n    echo &#39;days: &#39;$DAYS\nfi\n</code></pre>\n<pre><code class=\"language-plaintext\">Since last puppet update\nseconds: 1345\nminutes: 22\n</code></pre>\n<p>(Hours and days are only printed if present.)</p>\n"
+  },
+  {
+    "id": "blog:Puppet-Core-Dump-Control",
+    "type": "blog",
+    "source": "markdown",
+    "timestamp": "2012-08-17T00:00:00.000Z",
+    "title": "Puppet-Core-Dump-Control",
+    "summary": "",
+    "url": "/blog/Puppet-Core-Dump-Control/",
+    "tags": [
+      "Puppet",
+      "Linux"
+    ],
+    "content_html": "<h3>If you have crashes you can enable core dumps via Puppet</h3>\n<pre><code class=\"language-puppet\">file { &#39;/var/core&#39;:\n    ensure =&gt; directory,\n    mode   =&gt; &#39;1777&#39;,\n}\n-&gt;\n# %e = executable name\n# %t = timestamp\n# %p = pid\nsysctl { &#39;kernel.core_pattern&#39;: value =&gt; &#39;/var/core/core.%e.%t.%p&#39; }\n</code></pre>\n"
+  },
+  {
+    "id": "blog:Examining-PXE-Boot",
+    "type": "blog",
+    "source": "markdown",
+    "timestamp": "2012-08-29T00:00:00.000Z",
+    "title": "Examining-PXE-Boot",
+    "summary": "",
+    "url": "/blog/Examining-PXE-Boot/",
+    "tags": [
+      "Jekyll",
+      "update"
+    ],
+    "content_html": "<p>I have a host with MAC 00:30:48:60:f3:ca. This host is configured to look for a PXE server, but was not matching the correct profile.</p>\n<h3>Verify my configuration</h3>\n<blockquote>\n<p>cat dhcpd.conf</p>\n</blockquote>\n<pre><code class=\"language-plaintext\">option PXE.mtftp-cport          code 2 = unsigned integer 16;\noption PXE.mtftp-sport          code 3 = unsigned integer 16;\noption PXE.mtftp-tmout          code 4 = unsigned integer 8;\noption PXE.mtftp-delay          code 5 = unsigned integer 8;\noption PXE.discovery-control    code 6 = unsigned integer 8;\noption PXE.discovery-mcast-addr code 7 = ip-address;\n\nauthoritative;\n\nclass &quot;PXEclients&quot; {\n    match if (\n          (substring (option vendor-class-identifier, 0, 9) = &quot;PXEClient&quot;)\n      or  (substring (option vendor-class-identifier, 0, 9) = &quot;Etherboot&quot;));\n    option vendor-class-identifier &quot;PXEClient&quot;;\n    vendor-option-space PXE;\n    option PXE.mtftp-ip 0.0.0.0;\n    filename &quot;PXElinux.0&quot;;\n    next-server ;\n}\n</code></pre>\n<h3>is DHCP serving correctly?</h3>\n<pre><code class=\"language-plaintext\">.da.bootps &gt; .da.bootpc: BOOTP/DHCP, Reply, length 300\n.bootps &gt; .da.bootps: BOOTP/DHCP, Request from 00:30:48:60:f3:ca (oui Unknown), length 548\n.da.bootps &gt; .bootps: BOOTP/DHCP, Reply, length 319\n.bootps &gt; .da.bootps: BOOTP/DHCP, Request from 00:30:48:60:f3:ca (oui Unknown), length 548\n</code></pre>\n<h3>Is TFTP matching correctly?</h3>\n<pre><code class=\"language-plaintext\">@:~# tcpdump port 69\ntcpdump: verbose output suppressed, use -v or -vv for full protocol decode\nlistening on eth0, link-type EN10MB (Ethernet), capture size 65535 bytes\n10.0.254.247.2070 &gt; .da.tftp:  27 RRQ &quot;PXElinux.0&quot; octet tsize 0\n10.0.254.247.2071 &gt; .da.tftp:  32 RRQ &quot;PXElinux.0&quot; octet blksize 1456\n10.0.254.247.49152 &gt; .da.tftp:  79 RRQ &quot;PXElinux.cfg/53d19f64-d663-a017-8922-00304860f3ca&quot; octet tsize 0 blksize 1408\n10.0.254.247.49153 &gt; .da.tftp:  63 RRQ &quot;PXElinux.cfg/01-00-30-48-60-f3-ca&quot; octet tsize 0 blksize 1408\n10.0.254.247.49154 &gt; .da.tftp:  51 RRQ &quot;PXElinux.cfg/0A00FEF7&quot; octet tsize 0 blksize 1408\n10.0.254.247.49155 &gt; .da.tftp:  50 RRQ &quot;PXElinux.cfg/0A00FEF&quot; octet tsize 0 blksize 1408\n10.0.254.247.49156 &gt; .da.tftp:  49 RRQ &quot;PXElinux.cfg/0A00FE&quot; octet tsize 0 blksize 1408\n10.0.254.247.49157 &gt; .da.tftp:  48 RRQ &quot;PXElinux.cfg/0A00F&quot; octet tsize 0 blksize 1408\n10.0.254.247.49158 &gt; .da.tftp:  47 RRQ &quot;PXElinux.cfg/0A00&quot; octet tsize 0 blksize 1408\n10.0.254.247.49159 &gt; .da.tftp:  46 RRQ &quot;PXElinux.cfg/0A0&quot; octet tsize 0 blksize 1408\n10.0.254.247.49160 &gt; .da.tftp:  45 RRQ &quot;PXElinux.cfg/0A&quot; octet tsize 0 blksize 1408\n10.0.254.247.49161 &gt; .da.tftp:  44 RRQ &quot;PXElinux.cfg/0&quot; octet tsize 0 blksize 1408\n10.0.254.247.49162 &gt; .da.tftp:  50 RRQ &quot;PXElinux.cfg/default&quot; octet tsize 0 blksize 1408\n</code></pre>\n<p>PXE is looking for entries that match itself. So PXE thinks it is:</p>\n<pre><code class=\"language-plaintext\">53d19f64-d663-a017-8922-00304860f3ca\n01-00-30-48-60-f3-ca\n0A00FEF7\n0A00FEF\n0A00FE\n0A00F\n0A00\n0A0\n0A\n0\ndefault\n</code></pre>\n<p>If you look in <code>/var/tftp/PXElinux.cfg</code></p>\n<pre><code>&lt;me&gt;@&lt;pxe/tftp/server&gt;:/var/tftp/PXElinux.cfg# ls -al\n-rw-r--r--  1 &lt;me&gt; &lt;me&gt; 1833 May  6 16:58 default\n-rw-r--r--  1 &lt;me&gt; &lt;me&gt; 1833 May  6 16:58 reinstall\n</code></pre>\n<p>This means PXE found the default correctly but I wanted it to find another profile</p>\n<h3>Create a new match</h3>\n<blockquote>\n<p>ln -s reinstall 01-00-30-48-60-f3-ca</p>\n</blockquote>\n<pre><code>&lt;me&gt;@&lt;pxe/tftp/server&gt;:/var/tftp/PXElinux.cfg# ls -al\nlrwxrwxrwx  1 &lt;me&gt; &lt;me&gt;    9 May 24 15:02 01-00-30-48-60-f3-ca -&gt; reinstall\n-rw-r--r--  1 &lt;me&gt; &lt;me&gt;  166 May  6 16:58 unattended\n-rw-r--r--  1 &lt;me&gt; &lt;me&gt; 1833 May  6 16:58 reinstall\n</code></pre>\n<p>Now I have a match for my PXE host to find that has non-default instructions. An unattended install.</p>\n<h3>Verify TFTP got the changes</h3>\n<pre><code>@:~# tcpdump port 69\nlab01.da.2070 &gt; .da.tftp:  27 RRQ &quot;PXElinux.0&quot; octet tsize 0\nlab01.da.2071 &gt; .da.tftp:  32 RRQ &quot;PXElinux.0&quot; octet blksize 1456\nlab01.da.49152 &gt; .da.tftp:  79 RRQ &quot;PXElinux.cfg/53d19f64-d663-a017-8922-00304860f3ca&quot; octet tsize 0 blksize 1408\nlab01.da.49153 &gt; .da.tftp:  63 RRQ &quot;PXElinux.cfg/01-00-30-48-60-f3-ca&quot; octet tsize 0 blksize 1408\nlab01.da.49154 &gt; .da.tftp:  35 RRQ &quot;linux&quot; octet tsize 0 blksize 1408\nIP lab01.da.49155 &gt; .da.tftp:  39 RRQ &quot;initrd.gz&quot; octet tsize 0 blksize 1408\n</code></pre>\n<p>PXE has now matched and my host is reinstalling.</p>\n<h3>Reference</h3>\n<p><a href=\"https://wiki.debian.org/PXEBootInstall\">Debian PXE Boot</a></p>\n"
+  },
+  {
+    "id": "blog:Bash-to-monitor-bits",
+    "type": "blog",
+    "source": "markdown",
+    "timestamp": "2012-09-13T00:00:00.000Z",
+    "title": "Bash-to-monitor-bits",
+    "summary": "",
+    "url": "/Bash-to-monitor-bits/",
+    "tags": [],
+    "content_html": "<p>I like to use utilities like iftop, but sometimes simple is better. I found a small example of this but I believe I have improved the conversions.</p>\n<pre><code class=\"language-bash\">#!/bin/bash\n\nif [ -z &quot;$1&quot; ]; then\n        echo\n        echo usage: $0 network-interface\n        echo\n        echo e.g. $0 eth0\n        echo\n        exit\nfi\n\nIF=$1\n\nfunction bytes2Mbps {\n    Mbps=`expr $1 \\* 8 / 1048576`\n    echo $Mbps\n}\n\nwhile true\ndo\n        R1=`cat /sys/class/net/$1/statistics/rx_bytes`\n        T1=`cat /sys/class/net/$1/statistics/tx_bytes`\n        sleep 1\n        R2=`cat /sys/class/net/$1/statistics/rx_bytes`\n        T2=`cat /sys/class/net/$1/statistics/tx_bytes`\n        TBPS=`expr $T2 - $T1`\n        RBPS=`expr $R2 - $R1`\n\n        TRATE=`bytes2Mbps $TBPS`\n        if [ $TRATE -lt 1 ]\n        then\n            TRATE=`expr $TBPS \\* 8`\n            TRATE=&quot;$TRATE b/s&quot;\n        else\n            TRATE=&quot;$TRATE Mb/s&quot;\n        fi\n\n        RRATE=`bytes2Mbps $RBPS`\n        if [ $RRATE -lt 1 ]\n        then\n            RRATE=`expr $RBPS \\* 8`\n            RRATE=&quot;$RRATE b/s&quot;\n        else\n            RRATE=&quot;$RRATE Mb/s&quot;\n        fi\n\n        echo &quot;tx $1: $TRATE rx $1: $RRATE&quot;\ndone\n</code></pre>\n<blockquote>\n<p>root@<host>:~# ./bw.sh eth0</p>\n</blockquote>\n<p>If throughput is less than 1Mbps you see:</p>\n<p><code>tx eth0: 0 b/s rx eth0: 528 b/s</code></p>\n<p>If greater than you get:</p>\n<p><code>tx eth0: 39 Mb/s rx eth0: 47 Mb/s</code></p>\n"
+  },
+  {
+    "id": "blog:Using-INotify",
+    "type": "blog",
+    "source": "markdown",
+    "timestamp": "2012-09-18T00:00:00.000Z",
+    "title": "Using-INotify",
+    "summary": "",
+    "url": "/Using-INotify/",
+    "tags": [],
+    "content_html": "<p>When you need to watch file system events efficiently.</p>\n<blockquote>\n<p>aptitude install inotify-tools</p>\n</blockquote>\n<h3>Wait for delete</h3>\n<p>This waits for a file to be deleted and then echo&#39;s:</p>\n<pre><code class=\"language-bash\">#!/bin/bash\ninotifywait -e delete_self ./hi/yes  &amp;&amp; echo &quot;gone&quot;\n</code></pre>\n<h3>Waiting for a create</h3>\n<p>This watches for files created in a directory and then echo&#39;s. This is more appropriately done with the -m option in real life.</p>\n<pre><code class=\"language-bash\">#!/bin/bash\nwhile true; do\n\ninotifywait -e create ./hi  &amp;&amp; echo &quot;yo&quot;\ndone\n</code></pre>\n<h3>Watching for changes in <code>/home</code></h3>\n<pre><code class=\"language-bash\">#!/bin/bash\nwhile true; do\n    touch /var/log/changes\n    inotifywait -r -e create &quot;/home&quot; |\n    while read filename eventlist eventfile\n    do\n        echo &quot;see new $eventfile&quot;\n        echo &quot;creation $eventfile&quot; &gt;&gt; /var/log/changes\n    done\ndone\n</code></pre>\n"
+  },
+  {
+    "id": "blog:Linux-Reboot-Failsave",
+    "type": "blog",
+    "source": "markdown",
+    "timestamp": "2012-09-30T00:00:00.000Z",
+    "title": "Linux-Reboot-Failsave",
+    "summary": "",
+    "url": "/Linux-Reboot-Failsave/",
+    "tags": [],
+    "content_html": "<p>If you are doing iptables maintenance remote I always like to store my rules in a script and run them without saving. With a scheduled reboot pending locking myself out is a recoverable offense.</p>\n<blockquote>\n<p>/usr/local/bin/rsched</p>\n</blockquote>\n<pre><code class=\"language-bash\">#!/bin/bash\nif [ -z &quot;$1&quot; ]\n  then\n    echo &quot;Usage: $0 &quot;\n    exit 1\nfi\necho &quot;reboot interval $1 minutes&quot;\nnow=`date +&quot;%s&quot;`\n#convert seconds to minutes\nfuture_time=`expr $1 \\\\* 60`\nrtime=`expr $now + $future_time`\n#convert epoch to shutdown friendly format\ntime=`date -d @$rtime +&quot;%H:%M&quot;`\necho $time\n#issue shutdown\nshutdown -k -r $time\n</code></pre>\n<h3>Looks like</h3>\n<blockquote>\n<p>root@vm:~# rsched 10</p>\n</blockquote>\n<pre><code class=\"language-plaintext\">reboot interval 10 minutes\nConsole output `The system is going DOWN for reboot in 10 minutes!/0) (Wed Jul 10 14:01:57 20`\n</code></pre>\n<h3>Scheduling</h3>\n<blockquote>\n<p>root@vm:~# nohup rsched 10 &amp;</p>\n</blockquote>\n<pre><code class=\"language-plaintext\">Broadcast message from root@vm (Wed Jul 10 14:03:02 2013):\n\nThe system is going DOWN for reboot in 10 minutes!\n</code></pre>\n<h3>Canceling</h3>\n<pre><code class=\"language-plaintext\">root@vm:~# fg\nnohup rsched 10\n</code></pre>\n<blockquote>\n<p>&lt;cntrl+c&gt;</p>\n</blockquote>\n"
+  },
+  {
+    "id": "blog:SNMP-MIB-Basics",
+    "type": "blog",
+    "source": "markdown",
+    "timestamp": "2012-10-29T00:00:00.000Z",
+    "title": "SNMP-MIB-Basics",
+    "summary": "",
+    "url": "/SNMP-MIB-Basics/",
+    "tags": [],
+    "content_html": "<p>SNMP is nice but MIB translations can be a pain. It can also be necessary for figuring out what certain numbers mean in the MIB tree.</p>\n<h3>Where does SNMP look for MIBs?</h3>\n<blockquote>\n<p>net-snmp-config --default-mibdirs</p>\n</blockquote>\n<h3>Make user specific directory (needs to be in above path)</h3>\n<blockquote>\n<p>mkdir -p /home/<me>/.snmp/mibs</p>\n</blockquote>\n<h3>Grab MIB data from Cisco (or wherever)</h3>\n<p>Example MIB for Firewall info: <code>ftp://ftp.cisco.com/pub/mibs/v2/CISCO-UNIFIED-FIREWALL-MIB.my</code></p>\n<p>copy to..</p>\n<p><code>/home/&lt;me&gt;/.snmp/mibs/CISCO-UNIFIED-FIREWALL-MIB</code></p>\n<h3>Enable MIB</h3>\n<p>Find out where SNMP is looking for configuration parameters:</p>\n<blockquote>\n<p>net-snmp-config --snmpconfpath</p>\n</blockquote>\n<p>Edit your user snmp configuration (if path is included in above command)</p>\n<blockquote>\n<p>n /home/<me>/.snmp/snmp.conf\nmib +CISCO-UNIFIED-FIREWALL-MIB</p>\n</blockquote>\n<h3>Try walking the top OID tree</h3>\n<blockquote>\n<p>snmpwalk -v2c <community> <remote_device_ip></p>\n</blockquote>\n<pre><code class=\"language-plaintext\">MIB search path: /home/&lt;me&gt;/.snmp/mibs:/usr/share/mibs/site:/usr/share/snmp/mibs:/usr/share/mibs/iana:/usr/share/mibs/ietf:/usr/share/mibs/netsnmp\nCannot find module (CISCO-SMI): At line 37 in /home/&lt;me&gt;/.snmp/mibs/CISCO-UNIFIED-FIREWALL-MIB\nCannot find module (CISCO-FIREWALL-TC): At line 46 in /home/&lt;me&gt;/.snmp/mibs/CISCO-UNIFIED-FIREWALL-MIB\n</code></pre>\n<h3>What&#39;s with? &#39;Cannot find module&#39;</h3>\n<p>This means there are MIB dependencies. You can probably retrieve these from <code>ftp://ftp.cisco.com/pub/mibs/v2</code>.</p>\n<pre><code class=\"language-plaintext\">/home/&lt;me&gt;/.snmp/mibs/CISCO-SMI\n/home/&lt;me&gt;/.snmp/mibs/CISCO-FIREWALL-TC\n</code></pre>\n<p>Enable these MIBs as well.</p>\n<h3>Walk the tree and enjoy MIB goodness</h3>\n<blockquote>\n<p><me>@<box>:~# snmpwalk -v2c -c <community> <remote_device_ip> &gt;&gt; snmpinfo.txt</p>\n</blockquote>\n<h3>Show me the basic SNMP catagories</h3>\n<blockquote>\n<p>cut -d: -f 1 snmpinfo.txt | uniq | sort</p>\n</blockquote>\n<pre><code class=\"language-plaintext\">SNMPv2-MIB\nTechnical Support\nCopyright (c) 1986-2013 by Cisco Systems, Inc.\nSNMPv2-MIB\nDISMAN-EVENT-MIB\nSNMPv2-MIB\nIF-MIB\nRFC1213-MIB\nIP-MIB\nIP-FORWARD-MIB\nIP-MIB\nTCP-MIB\nUDP-MIB\nSNMPv2-SMI\nSNMPv2-MIB\nSNMPv2-SMI\n</code></pre>\n<p>You can check out DISMAN-EVENT-MIB using grep. If you find a MIB you can use SNMPGET next time.</p>\n<h3>Retrieve Uptime Using MIB&#39;s and SNMPGET</h3>\n<blockquote>\n<p><me>@<box>:~# snmpget -v2c -c <community> <remote_device_ip> DISMAN-EVENT-MIB::sysUpTimeInstance</p>\n</blockquote>\n<p><code>DISMAN-EVENT-MIB::sysUpTimeInstance = Timeticks: (151866995) 17 days, 13:51:09.95</code></p>\n<h3>Reference</h3>\n<p><a href=\"ftp://ftp.cisco.com/pub/mibs/v2/CISCO-SMI.my\">Cisco MIB</a>\n<a href=\"https://www.net-snmp.org/wiki/index.php/TUT:Using_and_loading_MIBS\">NetSNMP</a>\n<a href=\"https://wiki.debian.org/SNMP\">Debian SNMP</a>\n<a href=\"https://www.cisco.com/c/en/us/td/docs/routers/asr1000/mib/guide/asr1kmib/asr1mib2.html#wp1034752\">Cisco ASR MIB</a></p>\n"
+  },
+  {
+    "id": "blog:Asterisk-MP3",
+    "type": "blog",
+    "source": "markdown",
+    "timestamp": "2012-11-24T00:00:00.000Z",
+    "title": "Asterisk-MP3",
+    "summary": "",
+    "url": "/Asterisk-MP3/",
+    "tags": [],
+    "content_html": "<p>I want to use MP3&#39;s for hold music, and for fun, with <a href=\"https://www.asterisk.org/\">Asterisk</a></p>\n<h3>Convert all mp3&#39;s in a directory for use with asterisk.</h3>\n<pre><code class=\"language-bash\">#!/bin/bash\nfor f in `ls *.mp3` ; do FILE=$(basename $f .mp3) ; \\\nffmpeg -i $FILE.mp3 -ar 8000 -ac 1 -ab 64 $FILE.wav -ar 8000 \\\n-ac 1 -ab 64 -f mulaw $FILE.pcm -map 0:0 -map 0:0 ; done\n</code></pre>\n<h3>Asterisk Configuration</h3>\n<blockquote>\n<p>nano extensions.conf</p>\n</blockquote>\n<pre><code class=\"language-plaintext\">; Answer required as Music On Hold does not answer the call\nexten =&gt; 2112,1,Answer\nexten =&gt; 2112,2,MusicOnHold(rush)\n</code></pre>\n<p>I used this to play 2112 whenever you dial extension 2112.</p>\n"
+  },
+  {
+    "id": "blog:Puppet-Tagged-Run",
+    "type": "blog",
+    "source": "markdown",
+    "timestamp": "2012-11-28T00:00:00.000Z",
+    "title": "Puppet-Tagged-Run",
+    "summary": "",
+    "url": "/Puppet-Tagged-Run/",
+    "tags": [],
+    "content_html": "<p>Updating only relevant Puppet configuration sections</p>\n<p>As a puppet installation grows the list of used modules can get large. Especially, if you are pulling from puppetlabs. Testing in its final stages is usually done via puppet to ensure repeatability. The test runs get longer and longer.</p>\n<h3>A full catalog run with no expected changes</h3>\n<blockquote>\n<p>sudo /usr/bin/puppet agent --test --logdest syslog</p>\n</blockquote>\n<pre><code class=\"language-plaintext\">Info: Retrieving plugin\n\nInfo: Caching catalog for \n\nInfo: Applying configuration version &#39;1371116293&#39;\n\nFinished catalog run in 16.35 seconds\n</code></pre>\n<p>If you need to rerun this every time you tweak a config file 16 seconds can be a long time.</p>\n<p>If you are only updating a module called &#39;dhcp&#39; you can do:</p>\n<blockquote>\n<p>sudo /usr/bin/puppet agent --test --logdest syslog --tags dhcp</p>\n</blockquote>\n<pre><code class=\"language-plaintext\">\nInfo: Retrieving plugin\n\nInfo: Caching catalog for \n\nInfo: Applying configuration version &#39;1371116293&#39;\n\nFinished catalog run in 8.46 seconds\n</code></pre>\n<p>This cut the time in half. Doing tagged runs still compiles the entire update. That is to say, Puppet still runs in the usual way figuring out dependencies and such, but when it comes to applicable changes it only looks for changes at the specified tagged resources.</p>\n<p>If you put <code>–debug</code> into the update command you will see a lot of:</p>\n<pre><code class=\"language-plaintext\">Debug: /Stage[main]/Mcollective::Client/Package[mcollective-client]: Not tagged with dhcp\n</code></pre>\n<p>This resource does not match the tag specified, and as such will not be updated.</p>\n<p>Tags can be explicit or implicit. That is to say you can assign them and there are some that are assigned by design. All class/module names are also tags.</p>\n<h3>This automatically creates a tag called <code>hiera</code></h3>\n<pre><code class=\"language-puppet\">class hiera {\n\n}\n</code></pre>\n<h3>Resource types are generally given a tag as well</h3>\n<p>To update file resources only</p>\n<blockquote>\n<p>sudo /usr/bin/puppet agent --test --logdest syslog --tags file</p>\n</blockquote>\n<pre><code class=\"language-plaintext\">Info: Retrieving plugin\n\nInfo: Caching catalog for \n\nInfo: Applying configuration version &#39;1371116293&#39;\n\nFinished catalog run in 12.39 seconds\n</code></pre>\n"
+  },
+  {
+    "id": "blog:MySQL-Cleanup",
+    "type": "blog",
+    "source": "markdown",
+    "timestamp": "2013-01-11T00:00:00.000Z",
+    "title": "MySQL non-default DB cleanup",
+    "summary": "",
+    "url": "/blog/MySQL-Cleanup/",
+    "tags": [
+      "MySQL",
+      "Bash"
+    ],
+    "content_html": "<h3>Show me my non-default databases</h3>\n<pre><code class=\"language-bash\">for d in $(mysql -u root -e &quot;show databases&quot; | \\\n    grep -v &#39;Database\\|mysql\\|performance_schema\\|information_schema&#39;); \\\ndo echo $d; done\n</code></pre>\n<h3>Clean non-default databases</h3>\n<pre><code class=\"language-bash\">for d in $(mysql -u root -e &quot;show databases&quot; | \\\n    grep -v &#39;Database\\|mysql\\|performance_schema\\|information_schema&#39;); \\\ndo echo $d; mysql -u root -e &quot;drop database $d;&quot;; done\n</code></pre>\n"
+  },
+  {
+    "id": "blog:IOS-permissions",
+    "type": "blog",
+    "source": "markdown",
+    "timestamp": "2013-04-03T00:00:00.000Z",
+    "title": "IOS Granular Permissions",
+    "summary": "",
+    "url": "/Blog/IOS-permissions/",
+    "tags": [
+      "IOS",
+      "Cisco",
+      "IAM"
+    ],
+    "content_html": "<p>If you have tiered levels of administrators, or you want to create an account for automation purposes best practice is to define a custom security level in IOS.</p>\n<!--more-->\n\n<p>Levels 1 and 15 are defined by default.</p>\n<h3>Allowing lower levels to see your configuration: IOS</h3>\n<pre><code class=\"language-plaintext\">conf t\nusername backup privilege 3 secret &lt;SECRET&gt;\nprivilege exec level 3 show startup-config\nprivilege exec level 3 show\nwr mem\n</code></pre>\n<h3>Allowing lower levels to see your configuration: FreeRADIUS:</h3>\n<blockquote>\n<p>/etc/freeradius/users</p>\n</blockquote>\n<pre><code class=\"language-plaintext\">backup\n    Service-Type = NAS-Prompt-User,\n    cisco-avpair = &quot;shell:priv-lvl=3&quot;,\n    Auth-Type = System,\n</code></pre>\n<h3>Defining the next user tier for NAT information: IOS</h3>\n<pre><code class=\"language-plaintext\">conf t\nusername natinfo privilege 4 secret &lt;SECRET&gt;\nprivilege exec level 4 show nat64 statistics\nwr mem\n</code></pre>\n<h3>Defining the next user tier for NAT information: FreeRADIUS</h3>\n<pre><code class=\"language-plaintext\">natinfo\n    Service-Type = NAS-Prompt-User,\n    cisco-avpair = &quot;shell:priv-lvl=4&quot;,\n    Auth-Type = System,\n</code></pre>\n<h3>Notes</h3>\n<ul>\n<li>Permissions stack up which means a user at Level 4 can also issue &#39;show startup-configuration&#39;</li>\n<li><code>show running-config</code> command does not work in this way for the IOS devices I have tried.</li>\n</ul>\n"
+  },
+  {
+    "id": "blog:kvm-virsh-halt",
+    "type": "blog",
+    "source": "markdown",
+    "timestamp": "2013-04-10T00:00:00.000Z",
+    "title": "Halting a KVM guest with virsh",
+    "summary": "",
+    "url": "/Blog/kvm-virsh-halt/",
+    "tags": [
+      "KVM",
+      "Linux",
+      "virsh"
+    ],
+    "content_html": "<p>KVM is great but I&#39;m making a note so I remember because this command gives me pause every time.  When a new VM has no OS or doesn&#39;t make it past the bootloader it appears to be non-responsive for the graceful shutdown command.</p>\n<h3>Sometimes <code>shutdown</code> in the virtual shell for KVM fails.</h3>\n<pre><code class=\"language-plaintext\">virsh # shutdown myvm\nDomain myvm is being shutdown\n</code></pre>\n<h4>But...</h4>\n<pre><code>114 myvm            running\n</code></pre>\n<p>In order to shutdown this host I use the &#39;destroy&#39; command. Destroy does not remove any files or otherwise permanently change the host data. Which for me, is unintuitive. It does remove it from the list of hosts shown with the &#39;list&#39; command. Destroy is like pulling the plug.</p>\n<blockquote>\n<p>virsh #destroy myvm</p>\n</blockquote>\n<p>The command that does what I would expect destroy to do is: &#39;undefine&#39;.</p>\n"
+  },
+  {
+    "id": "blog:Beginning-BGP",
+    "type": "blog",
+    "source": "markdown",
+    "timestamp": "2013-04-16T00:00:00.000Z",
+    "title": "Beginning BGP",
+    "summary": "",
+    "url": "/Blog/Beginning-BGP/",
+    "tags": [
+      "BGP",
+      "Cisco"
+    ],
+    "content_html": "<p>I remember hearing a lot of conflicting information about BGP when I first started doing network admin stuff. A lot of time BGP is part of an HA strategy and there are people making business decisions surrounding the protocol itself. This breakdown strives to be accurate and laymen without being misleading.</p>\n<p>Specific misconceptions:</p>\n<ol>\n<li><p>You need a full time admin doing only BGP stuff.</p>\n</li>\n<li><p>You can accidentally take down the Internet if you mess up.</p>\n</li>\n<li><p>BGP is hard.</p>\n</li>\n</ol>\n<p>You do not need a &#39;full time&#39; person thinking about BGP around the clock, although you do need designated contacts for just-in-case scenarios. If your providers are handling their own business you don&#39;t have to worry about taking down the Internet. (Although some small version of this happened to YouTube <a href=\"http://www.macworld.com/article/1132256/networking.html\">http://www.macworld.com/article/1132256/networking.html</a>). BGP is no harder or easier than anything else. I have seen configurations that boggle the mind work for years. Correctly administered BGP does involves some savy.</p>\n<h3>What is BGP?</h3>\n<p>Usually referring to the current version 4. Just read it: <a href=\"https://en.wikipedia.org/wiki/Border_Gateway_Protocol\">https://en.wikipedia.org/wiki/Border_Gateway_Protocol</a></p>\n<h3>Seriously, What is BGP for though?</h3>\n<p>In order to have a service (or anything) available on the Internet it needs to be announced. Usually, your Internet Provider does this announcing for you. If you want to be the master of your own destiny you need to announce yourself. Literally, you say “here I am” to your provider. Your provider talks to other providers and before long everyone knows how to find you. When a user connects to their Internet provider they send a request for your service. Since you have made yourself known they can find you</p>\n<p>BGP is how we find groups of addressed devices on the Internet.</p>\n<h3>How can I start announcing myself?</h3>\n<p>In order to announce that you exist you need to have IP addresses. It&#39;s a non-human way for tracking down a resource; think phone numbers. The gentlemen at ARIN keep a big list of addresses in use. If you want to use BGP; you need addressing. If you want addressing; you talk to ARIN. There are two simultaneous IP address pools. The old is IPv4 and we are scraping the bottom of the bucket. That bucket was large enough to get the Internet this far (4 Billion+ addresses with a large chunk carved out for special reservations). The second bucket is called IPv6. IPv6 is a much deeper bucket, 3.4 x 10 to the 38th power. That is far, far, far more addresses than IPv4 has available. IPv6 has addresses reserved already for the Moon. Seriously.</p>\n<p>To get addresses you apply. It&#39;s that simple. <a href=\"https://www.arin.net/resources/request.html\">https://www.arin.net/resources/request.html</a></p>\n<h3>…almost that simple.</h3>\n<p>IPv4 is a dwindling resource. But it has been one for a long time. In my experience, getting an IPv6 block is very easy. Getting an IPv4 block requires more justification. Scarce resources are more valued. Without a block of my own addresses can I use BGP? Well, maybe. Some providers will allocate you a block of addresses from their pool. You don&#39;t own them. You may be able to advertise them out another provider if both providers agree that is reasonable. BGP is all about relationships. No provider has to allow you to announce your block on their network whether it has been issued to you or them. Thankfully providers are in the business of making money, and the only way to make money for them is to move traffic. If you can get an address block of your very own it is called Provider Independent Address Space. Meaning you can take your addresses and move to any provider that will have you. If you talk a provider into allocating you a block of addresses it is called Provider Dependent Address Space. In order to change providers you have to change IP blocks. It can be done.</p>\n<h3>Understanding Addressing</h3>\n<p>All address space given out is public information.</p>\n<p>Yahoo: <a href=\"http://whois.arin.net/rest/customer/C00146168\">http://whois.arin.net/rest/customer/C00146168</a>\nMozilla: <a href=\"http://whois.arin.net/rest/customer/C01111858\">http://whois.arin.net/rest/customer/C01111858</a></p>\n<h3>Wait…They want my ASN?</h3>\n<p>ASN is automomous system number. It is both a technical and a nontechnical entity. In a non-technical sense it is a number assigned to networks under a singular control. Some companies have multiple ASN&#39;s, but in general you join ARIN and you get an ASN. This ASN is unique to you, and it is how providers will know you.</p>\n<p>BGP thinks in ASN&#39;s.</p>\n<p>It&#39;s like this: You have a 1:1 relationship with your ASN, but a one-to-many relationship with your addressing space.</p>\n<p>Sort of like: You have a 1:1 relationship with your house address, but a one-to-many relationship for your house address\nto phone numbers associated with your address.</p>\n<p>Just Read it: <a href=\"http://en.wikipedia.org/wiki/Autonomous_System_(Internet)\">http://en.wikipedia.org/wiki/Autonomous_System_(Internet)</a></p>\n<h3>Why ASN&#39;s AND IP addresses?</h3>\n<p>When providers talk BGP to each other they refer to you and themselves by ASN number. That&#39;s the short version.</p>\n<p>BGP is a routing protocol. Most routing protocols rely on an addressing hierarchy. Therefore it&#39;s easy to follow the numbers and find your destination. If two roomates live in a house together and use the network 192.168.0.0/16 and they link up with their neighbors who use 172.16.0.0/16. They can point routes at each other and communications happens. If one roomate in the first house wants his own subnet they can break things down. 192.168.0.0/16 becomes 192.168.0.0/24 (first roomate) AND 192.168.1.0/24 (second roomate). But their neighbors still only use 192.168.0.0/16 as it&#39;s &#39;good enough&#39; to get to their house, and their house router knows how to distinguish between their rooms.</p>\n<p>BGP exists on a larger playing field. 10.0.1.0/24 and 10.0.2.0/24 could be assigned to people or companies that have no relationship to each other. Addressing on the Internet is not assigned in a way that makes it contiguous.</p>\n<p>It would be like if the two roomates were still using 192.168.0.0/24 and 192.168.1.0/24 but had now moved to different addresses. We would need to find a way to associate their IP block with their new location. The location would be the ASN and the address block …would be the address block.</p>\n<p>So when two routers talk BGP to each other they say: ASN 1 has 192.168.0.0/24. ASN 2 has 192.168.1.0/24</p>\n<p>So if BGPRouter1 says this to BGPRouter2. BGPRouter1 has to be associated with an ASN too. Let&#39;s say BGPRouter1 has ASN 3. Now BGPRouter2 knows: when I need to get to ASN1 or ASN2 I send things to ASN3. Like, if I need to mail this letter to Les Sauvages, France the first step is getting it to France.</p>\n<h3>Summation</h3>\n<ul>\n<li>BGP is how people find each other on the Internet. Usually providers worry about it.</li>\n<li>BGP is complex, but the basics are very straight forward.</li>\n<li>BGP is fundamental to understanding the Internet.</li>\n<li>ASN&#39;s can be assigned by ARIN. All you need to do is join.</li>\n<li>Addressing can be assigned by ARIN. All you need to do is apply.</li>\n</ul>\n"
+  },
+  {
+    "id": "blog:Beginning-BGP-Configuration",
+    "type": "blog",
+    "source": "markdown",
+    "timestamp": "2013-04-17T00:00:00.000Z",
+    "title": "Beginning IOS BGP Configuration",
+    "summary": "",
+    "url": "/Blog/Beginning-BGP-Configuration/",
+    "tags": [
+      "Cisco",
+      "BGP"
+    ],
+    "content_html": "<p>This configuration is Cisco based but JunOS isn&#39;t too far of a stretch in my experience.</p>\n<p>First off: you need your ASN. You need your address block. Your address block must be at least /24.</p>\n<p>A general rule of thumb for awhile has been 2 GB of memory per full BGP table. Sometimes more is required and sometimes significantly less. The table is still growing and 2 GB is my personal baseline required.</p>\n<h3>Aliases: you will learn to like them</h3>\n<pre><code class=\"language-plaintext\">alias exec sumbgp6 show bgp ipv6 unicast summary\nalias exec sumbgp show ip bgp summary\nalias exec sbgp show run | section bgp\n</code></pre>\n<h4>Basic BGP stanza</h4>\n<pre><code class=\"language-plaintext\">config t\nip bgp-community new-format\n!insert your ASN\nrouter bgp \n !your router id should be set explicitly\n bgp router-id \n no bgp fast-external-fallover\n !notify syslog of bgp changes\n bgp log-neighbor-changes\n bgp graceful-restart restart-time 120\n bgp graceful-restart stalepath-time 360\n bgp graceful-restart\n neighbor  remote-as \n neighbor  description \n neighbor  version 4\n neighbor  activate\n</code></pre>\n<h3>Our First BGP Summary</h3>\n<pre><code class=\"language-plaintext\">RTRME(config-router)####do sumbgp\nBGP router identifier , local AS number \nBGP table version is 464187, main routing table version 464187\n446501 network entries using 66082148 bytes of memory\n446501 path entries using 28576064 bytes of memory\n73561/73558 BGP path/bestpath attribute entries using 9415808 bytes of memory\n69308 BGP AS-PATH entries using 2555070 bytes of memory\n68 BGP community entries using 1904 bytes of memory\n0 BGP route-map cache entries using 0 bytes of memory\n0 BGP filter-list cache entries using 0 bytes of memory\nBGP using 106630994 total bytes of memory\nBGP activity 460823/1679 prefixes, 461759/2621 paths, scan interval 60 secs\n\nNeighbor        V           AS MsgRcvd MsgSent   TblVer  InQ OutQ Up/Down  State/PfxRcd\n  4         2914   79993      80   464166    0    0 01:11:19   446501\n</code></pre>\n<h3>BGP: Why you no work?</h3>\n<pre><code>RTRME(config-router)####do sh ip bgp neighbor  advertised-routes\n\nTotal number of prefixes 0\n</code></pre>\n<h3>To Advertise it: We need to know where it is</h3>\n<pre><code>RTRME(config)####sh ip bgp \n% Network not in table\n\nRTRME(config)####ip route   null 0 200\n\nRTRME(config)####do sh ip bgp \nBGP routing table entry for , version 464822\nPaths: (1 available, best ####1, table default)\nMultipath: eBGP\n  Not advertised to any peer\n  Refresh Epoch 1\n  Local\n    0.0.0.0 from 0.0.0.0 ()\n      Origin IGP, metric 0, localpref 100, weight 32768, valid, sourced, local, best\nRTRME(config)####\n</code></pre>\n<h3>Resetting BGP</h3>\n<p>This is very aggressive and will reset your peering status. Lookup soft in/out if you are alreadying using BGP in production.</p>\n<blockquote>\n<p>RTRME####clear ip bgp *</p>\n</blockquote>\n<h3>Things we know about our neighbor</h3>\n<p>What is their status?</p>\n<blockquote>\n<p>sh ip bgp neighbors</p>\n</blockquote>\n<p>What are we advertising to them?</p>\n<pre><code class=\"language-plaintext\">\nRTRME####sh ip bgp neighbors  advertised-routes \nBGP table version is 447010, local router ID is \nStatus codes: s suppressed, d damped, h history, * valid, &gt; best, i - internal,\n              r RIB-failure, S Stale, m multipath, b backup-path, x best-external, f RT-Filter, a additional-path\nOrigin codes: i - IGP, e - EGP, ? - incomplete\n\n   Network          Next Hop            Metric LocPrf Weight Path\n*&gt;      0.0.0.0                  0         32768 i\n\nTotal number of prefixes 1 \n</code></pre>\n<h3>References</h3>\n<p><a href=\"https://www.cisco.com/c/en/us/support/docs/ip/border-gateway-protocol-bgp/19345-bgp-noad.html\">Troubleshoot Border Gateway Protocol Routes that Do Not Advertise</a>\n<a href=\"https://lg.zayo.com/lg.cgi\">Zayo Looking Glass</a>\n<a href=\"https://www.cisco.com/c/en/us/support/docs/ip/border-gateway-protocol-bgp/16137-cond-adv.html\">Configure and Verify the BGP Conditional Advertisement Feature</a></p>\n"
+  },
+  {
+    "id": "blog:Registrar-Hacked",
+    "type": "blog",
+    "source": "markdown",
+    "timestamp": "2013-05-09T00:00:00.000Z",
+    "title": "deviantART Registrar Name.com Compromised",
+    "summary": "",
+    "url": "/Blog/Registrar-Hacked/",
+    "tags": [
+      "dA"
+    ],
+    "content_html": "<p>So name.com was hacked and deviantart.com was one of the credentials dumped from their DB.</p>\n<p>How do I know? <a href=\"https://news.ycombinator.com/item?id=5676311\">Name.com Tells Customers To Change Password Due To Breach</a></p>\n<p><img src=\"/assets/images/post/namecomhack.png\" alt=\"Name.com letter to customers on comprompise\"></p>\n<p>What&#39;s interesting is that we know our password and we know their hash of it now.</p>\n<p>Even though the site where it was posted has been taken down at this time.</p>\n<p><a href=\"https://news.ycombinator.com/item?id=5677739\"><img src=\"/assets/images/post/namecomhack-hn.png\" alt=\"coworker post\"></a></p>\n<p>Now we know for esure they were/are(?) storing our password using <a href=\"https://dev.mysql.com/doc/refman/4.1/en/encryption-functions.html#function_password\"><code>MySQL PASSWORD()</code></a></p>\n<p>No actual damage was done for us as this point. </p>\n<p>Damn, though, that sucks all around.</p>\n<hr>\n"
+  },
+  {
+    "id": "blog:TimeMachine",
+    "type": "blog",
+    "source": "markdown",
+    "timestamp": "2013-05-16T00:00:00.000Z",
+    "title": "Time Machine?",
+    "summary": "",
+    "url": "/Blog/TimeMachine/",
+    "tags": [
+      "time",
+      "SRE"
+    ],
+    "content_html": "<blockquote>\n<p>SRE: “When does it need to be done?”</p>\n</blockquote>\n<blockquote>\n<p>PM: “Next week at the latest.”</p>\n</blockquote>\n<blockquote>\n<p>SRE: “OK, we spend from now to next week working on a time machine. If we had a time machine it would already be done.”</p>\n</blockquote>\n<blockquote>\n<p>PM: “How so?”</p>\n</blockquote>\n"
+  },
+  {
+    "id": "blog:Syn-Cookies",
+    "type": "blog",
+    "source": "markdown",
+    "timestamp": "2013-05-23T00:00:00.000Z",
+    "title": "Syn-Cookies",
+    "summary": "",
+    "url": "/Syn-Cookies/",
+    "tags": [],
+    "content_html": "<p>When you&#39;re being hit with DDOS of any flavor it sucks mightily. Some of the old school attacks like syn floods have been around so long there are decent defenses. One of the (seemingly) lesser known defenses is syn cookies.</p>\n<h3>Who doesn&#39;t like cookies?</h3>\n<p>SYN cookies are particular choices of initial TCP sequence numbers by TCP servers.</p>\n<h3>Linux</h3>\n<pre><code class=\"language-plaintext\">root@&lt;server&gt;:~# cat /proc/sys/net/ipv4/tcp_syncookies\n0\n\nroot@&lt;server&gt;:~# cat /proc/sys/net/ipv4/tcp_syncookies\n1\n</code></pre>\n<p>Now syn cookies are enabled. This not a foolproof defense but can help. Remember this method of enabling does not persist through a reboot.</p>\n<h3>Cisco IOS Zone Based FW Syn Cookies</h3>\n<p>Global</p>\n<blockquote>\n<p>parameter-map type inspect global tcp syn-flood limit 20000</p>\n</blockquote>\n<p>Zone Specific</p>\n<blockquote>\n<p>parameter-map type inspect-zone ddos-detection tcp syn-flood rate per-destination 20000</p>\n</blockquote>\n<p>SYN cookies are not without problems. They can cause latency, sometimes very noticeable latency.</p>\n<h3>Reference</h3>\n<p><a href=\"https://cr.yp.to/syncookies.html\">D.J. Bernstein</a></p>\n"
+  },
+  {
+    "id": "blog:Syn-Flood-Test",
+    "type": "blog",
+    "source": "markdown",
+    "timestamp": "2013-05-29T00:00:00.000Z",
+    "title": "Syn Flood Testing",
+    "summary": "",
+    "url": "/Blog/Syn-Flood-Test/",
+    "tags": [
+      "Security",
+      "DDOS"
+    ],
+    "content_html": "<p>Launching a SYN flood.</p>\n<p>Everyone know DDOS attacks happen and of these SYN floods may be the simplest to organize for attackers. As a defender you don&#39;t want the first time you see this kind of traffic to be when you are under attack.</p>\n<p>Launching a SYN attack against yourself.</p>\n<ol>\n<li>You can learn some tools of the trade</li>\n<li>You can test the weakness of your services</li>\n<li>You can mitigate those weaknesses</li>\n</ol>\n<p>A tool that is simple to use is <a href=\"https://github.com/foreni-packages/t50\">t50</a></p>\n<h3>Launching a SYN Flood</h3>\n<blockquote>\n<p>./t50 <DEST_IP> --flood -S --turbo</p>\n</blockquote>\n<pre><code>entering in flood mode...\nactivating turbo...\nhit CTRL+C to break.\n...\nT50 5.4.1 successfully launched on May 28th 2013 13:09:24\n</code></pre>\n<h3>On the destination [NOTE: SYN Cookies are enabled]</h3>\n<h4>Traffic</h4>\n<pre><code>    tx eth0: 1168 b/s rx eth0: 528 b/s\n    tx eth0: 1056 b/s rx eth0: 9160 b/s\n    tx eth0: 8616 b/s rx eth0: 528 b/s\n    tx eth0: 4944 b/s rx eth0: 528 b/s\n\n        *syn flood starts**\n\n    tx eth0: 10 Mb/s rx eth0: 12 Mb/s\n    tx eth0: 36 Mb/s rx eth0: 43 Mb/s\n    tx eth0: 38 Mb/s rx eth0: 46 Mb/s\n    tx eth0: 39 Mb/s rx eth0: 47 Mb/s\n    tx eth0: 39 Mb/s rx eth0: 47 Mb/s\n</code></pre>\n<pre><code>    possible SYN flooding on port 5666. Sending cookies.\n    possible SYN flooding on port 5666. Sending cookies.\n</code></pre>\n<h4>Connection Table</h4>\n<pre><code class=\"language-plaintext\">   while true; do netstat -n -p TCP tcp | grep  SYN_RECV | wc -l &gt;&gt; /tmp/syn.log; sleep 2; done\n\n    0\n    5\n    6\n    3\n    2\n    ...\n    **syn flood**\n    ...\n    142\n    140\n    144\n    143\n    142\n    142\n    143\n    142\n    141\n    141\n    140\n    137\n    138\n    140\n    142\n    142\n    142\n    145\n    144\n</code></pre>\n<h4>Effect</h4>\n<ul>\n<li>Massive lag in responsiveness for CLI commands</li>\n<li>Simple web server with (python -m SimpleHTTPServer) crashed</li>\n<li>Top shows ksoftirqd/0 pegging CPU</li>\n</ul>\n<h3>Guidance on size of flood</h3>\n<pre><code class=\"language-plaintext\">./t50 &lt;target&gt; --threshold 10000 -S #4Mbps\n./t50 &lt;target&gt; --threshold 20000 -S #8Mbps\n./t50 &lt;target&gt; --threshold 40000 -S #16Mbps\n\n#more or less consisten 4Mbps flood\nfor i in {1..100}; do ./t50 &lt;target&gt; --threshold 10000 -S; sleep 3; done\n</code></pre>\n<h3>Reference</h3>\n<p><a href=\"https://github.com/foreni-packages/t50\">t50</a></p>\n"
+  },
+  {
+    "id": "blog:Bash-Troubleshooting-Boilerplate",
+    "type": "blog",
+    "source": "markdown",
+    "timestamp": "2013-05-30T00:00:00.000Z",
+    "title": "Bash Troubleshooting Boilerplate",
+    "summary": "",
+    "url": "/Blog/Bash-Troubleshooting-Boilerplate/",
+    "tags": [
+      "Bash",
+      "Linux"
+    ],
+    "content_html": "<p>I have a bash script that is being called multiple times instead of once.  I need to track down where it is being called from.</p>\n<p>Boiler plate that is nice for troubleshooting</p>\n<pre><code class=\"language-bash\">function trouble {\n    echo &quot;--------------------&quot;\n    date\n    echo &quot;whoami: $(whoami)&quot;\n    echo &quot;userid: $(id -u)&quot;\n    echo &quot;My pid is $$&quot;\n    echo &quot;working dir: $(pwd)&quot;\n    echo &quot;Called as: $0&quot;\n    echo &quot;Arguments: $@&quot;\n    echo &quot;user_pstree_begin&quot;\n    pstree $(whoami) -l\n    echo &quot;user_pstree_end&quot;\n    echo &quot;pid_pstree_begin&quot;\n    pstree -np $$\n    echo &quot;pid_pstree_end&quot;\n    echo &quot;--------------------&quot;\n}\n\nset -x\nepochtime=$(date +%s)\nfile=&quot;/tmp/debug-$epochtime.log&quot;\nlogger &quot;Creating: $file&quot;\ntrouble &gt; $file\n</code></pre>\n<h3>Looks like</h3>\n<pre><code class=\"language-plaintext\">\n@:~# cat /tmp/debug-1369940847.log \n--------------------\nThu May 30 12:07:27 PDT 2013\nwhoami: \nuserid: 0\nMy pid is 19891\nps_tree_begin\ntest.sh(19891)---pstree(19896)\nps_tree_end\nworking dir: /home/\nCalled as: ./test.sh\nArguments: \n--------------------\n@:~# \n</code></pre>\n<p>Syslog: <code>&lt;host&gt; &lt;me&gt;: Creating: /tmp/debug-1369940847.log</code></p>\n<p>This is especially helpful for cron jobs or background scripts.</p>\n"
+  },
+  {
+    "id": "blog:Using-SNORT-on-PCAP",
+    "type": "blog",
+    "source": "markdown",
+    "timestamp": "2013-06-03T00:00:00.000Z",
+    "title": "Using Snort on a PCAP file",
+    "summary": "",
+    "url": "/Blog/Using-SNORT-on-PCAP/",
+    "tags": [
+      "Security",
+      "Snort",
+      "PCAP"
+    ],
+    "content_html": "<p>Grabbing tcpdump output during a crisis can be hard to remember. Ideally, snort is running as as service inline or at least continually. Sometimes things happen outside of Snort&#39;s purview or you are testing what Snort picks ups.</p>\n<h3>Install tools</h3>\n<blockquote>\n<p>aptitude install snort snort-rules</p>\n</blockquote>\n<h3>Capture your traffic</h3>\n<blockquote>\n<p>sudo tcpdump -w test</p>\n</blockquote>\n<h3>Generate snort report</h3>\n<blockquote>\n<p>snort -r test -c /etc/snort/snort.conf -l .</p>\n</blockquote>\n<pre><code class=\"language-plaintext\">[**] [1:485:4] ICMP Destination Unreachable Communication Administratively Prohibited [**]\n[Classification: Misc activity] [Priority: 3] \n05/19-01:23:00.201765 74.76.148.114 -&gt; &lt;my_ext_ip&gt;\nICMP TTL:241 TOS:0x0 ID:32480 IpLen:20 DgmLen:56\nType:3  Code:13  DESTINATION UNREACHABLE: ADMINISTRATIVELY PROHIBITED,\nPACKET FILTERED\n** ORIGINAL DATAGRAM DUMP:\n&lt;my_ext_ip&gt;:80 -&gt; 74.76.148.114:25657\nTCP TTL:47 TOS:0x0 ID:22893 IpLen:20 DgmLen:44\nSeq: 0x654B5258\n** END OF DUMP\n</code></pre>\n<p>You can edit your <code>snort.conf</code> for what kinds of signatures to look for. ICMP can be a good indicator of shenanigans but is also very noisy.</p>\n"
+  },
+  {
+    "id": "blog:Simple-Site-Loadtesting",
+    "type": "blog",
+    "source": "markdown",
+    "timestamp": "2013-06-25T00:00:00.000Z",
+    "title": "Simple Site Loadtesting",
+    "summary": "",
+    "url": "/Blog/Simple-Site-Loadtesting/",
+    "tags": [
+      "Security"
+    ],
+    "content_html": "<p>Throwing some load at your setup and seeing how it reacts.</p>\n<p>There is a difference between problem solving, and solving problems <em>at scale</em>.</p>\n<h3>On your user host</h3>\n<blockquote>\n<p>aptitude install httping seige apache2 bc</p>\n</blockquote>\n<h3>On your webserver</h3>\n<blockquote>\n<p>aptitude install htop</p>\n</blockquote>\n<p>Seige is a lowkey load test tool, httping is nice for measuring response times in a consistent way while load testing, and apache is because we want the apache benchmark tool or &#39;ab&#39;.</p>\n<h3>Trying Seige</h3>\n<h4>Launching a test with seige: 3 concurrent users with 3 connections</h4>\n<blockquote>\n<p>siege -b -c 3 -r 3 <webserver>:80</p>\n</blockquote>\n<pre><code class=\"language-plaintext\">** SIEGE 2.70\n** Preparing 3 concurrent users for battle.\nThe server is now under siege...\nHTTP/1.1 200   0.01 secs:     146 bytes ==&gt; /\nHTTP/1.1 200   0.01 secs:     146 bytes ==&gt; /\nHTTP/1.1 200   0.01 secs:     146 bytes ==&gt; /\nHTTP/1.1 200   0.00 secs:     146 bytes ==&gt; /\nHTTP/1.1 200   0.00 secs:     146 bytes ==&gt; /\nHTTP/1.1 200   0.00 secs:     146 bytes ==&gt; /\nHTTP/1.1 200   0.00 secs:     146 bytes ==&gt; /\nHTTP/1.1 200   0.00 secs:     146 bytes ==&gt; /\nHTTP/1.1 200   0.00 secs:     146 bytes ==&gt; /\ndone.\nTransactions:                  9 hits\nAvailability:             100.00 %\nElapsed time:               0.01 secs\nData transferred:           0.00 MB\nResponse time:              0.00 secs\nTransaction rate:         900.00 trans/sec\nThroughput:             0.13 MB/sec\nConcurrency:                3.00\nSuccessful transactions:           9\nFailed transactions:               0\nLongest transaction:            0.01\nShortest transaction:           0.00\n</code></pre>\n<p>This is not a great indicator of performance under load. When I raise it to 3000 users at 10 requests I start seeing:</p>\n<p><code>descriptor table full sock.c:108: Too many open files</code></p>\n<p>So I raise the descriptor limit.</p>\n<blockquote>\n<p>cat /proc/sys/fs/file-max</p>\n</blockquote>\n<p>You can see your limits using</p>\n<blockquote>\n<p>ulimit -Sn\nulimit -Hn</p>\n</blockquote>\n<p>Now I see too much of:</p>\n<pre><code class=\"language-plaintext\">socket: connection timed out\n[error] socket: unable to connect sock.c:222: Operation already in progress\n</code></pre>\n<p>So I&#39;m not too happy with seige. For some tests it seems ok. For large test pools it hasn&#39;t won me over. Then again the launching host isn&#39;t that great so maybe it&#39;s on my side.</p>\n<p>A good compromise I found was</p>\n<blockquote>\n<p>siege -b -c 1000 -r 3 <webserver>:80</p>\n</blockquote>\n<h3>Trying ab.</h3>\n<p>A thousand concurrent threads with a thousand requests.</p>\n<blockquote>\n<p>ab -n 1000 -c 1000 http://<webserver>/</p>\n</blockquote>\n<pre><code class=\"language-plaintext\">This is ApacheBench, Version 2.3 &lt;$Revision: 655654 $&gt;\nCopyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/\nLicensed to The Apache Software Foundation, http://www.apache.org/\n\nBenchmarking  (be patient)\nCompleted 100 requests\nCompleted 200 requests\nCompleted 300 requests\nCompleted 400 requests\nCompleted 500 requests\nCompleted 600 requests\nCompleted 700 requests\nCompleted 800 requests\nCompleted 900 requests\nCompleted 1000 requests\nFinished 1000 requests\n\n\nServer Software:        Apache/2.2.16\nServer Hostname:        \nServer Port:            80\n\nDocument Path:          /\nDocument Length:        177 bytes\n\nConcurrency Level:      1000\nTime taken for tests:   0.656 seconds\nComplete requests:      1000\nFailed requests:        0\nWrite errors:           0\nTotal transferred:      453000 bytes\nHTML transferred:       177000 bytes\nRequests per second:    1523.82 [#/sec] (mean)\nTime per request:       656.246 [ms] (mean)\nTime per request:       0.656 [ms] (mean, across all concurrent requests)\nTransfer rate:          674.11 [Kbytes/sec] received\n\nConnection Times (ms)\n              min  mean[+/-sd] median   max\nConnect:       11   15   2.9     15      21\nProcessing:     6  158 209.8     32     631\nWaiting:        5  158 209.9     32     631\nTotal:         20  174 210.7     53     646\n\nPercentage of the requests served within a certain time (ms)\n  50%     53\n  66%    234\n  75%    237\n  80%    238\n  90%    642\n  95%    645\n  98%    646\n  99%    646\n 100%    646 (longest request)\n</code></pre>\n<p>ab gives great data, and can generate a lot of load with minimal impact on the launching system.</p>\n<p>I eventually settled on <code>ab -k -n 2000000 -c 50 http://&lt;webserver&gt;/</code></p>\n<p>Use http-keepalive (for consistency with production) at 2 million requests making 50 simultaneously. These numbers were hitting a load of 8+ on my test server. Anything averaging over 3.5 in production would be flagged to look at, but load testing is all about pushing limits.</p>\n<p>Getting macro numbers from ab. Run your tests a lot and look at overall numbers.</p>\n<blockquote>\n<p>for i in {1..3}; do ab -n 1000 -c 1000 http://<webserver>/ &gt;&gt; test.txt; done</p>\n</blockquote>\n<p>What is the average response time for request in the 95th percentile?</p>\n<blockquote>\n<p>grep 95% test.txt | awk &#39;{total = total + $2}END{print total}&#39; </p>\n</blockquote>\n<p><code>4556 #&lt;-- total number</code></p>\n<p>I know I made 3 passes so my average 95th percentile response is <code>echo &quot;4556 / 3&quot; | bc</code> = <code>1518 (ms)</code></p>\n<p>This number is of limited value but adding your 95% through 100% and figuring out what your response times are for 95th perctile and above can be useful.</p>\n<blockquote>\n<p>grep -A 3 95% test.txt | awk &#39;{total = total + $2}END{print total}&#39;</p>\n</blockquote>\n<h3>Using httping</h3>\n<p>I like using httping in the background or on another host as a consistent measure of my response times.</p>\n<blockquote>\n<p>httping -c 10 <webserver> </p>\n</blockquote>\n<p>This makes 10 requests that look like:</p>\n<pre><code class=\"language-plaintext\">connected to &lt;webserver&gt;:80, seq=0 time=0.97 ms \n</code></pre>\n<p>I like to flood the host with requests:</p>\n<blockquote>\n<p>httping <webserver>  -f</p>\n</blockquote>\n"
+  },
+  {
+    "id": "blog:Stateless-Sampling",
+    "type": "blog",
+    "source": "markdown",
+    "timestamp": "2013-09-13T00:00:00.000Z",
+    "title": "Stateless-Sampling",
+    "summary": "",
+    "url": "/Stateless-Sampling/",
+    "tags": [],
+    "content_html": "<p>In the devops world there are a lot of reasons to want good stats, but sometimes the load for collecting those stats on every execution of a script or web page is too invasive. A/B testing is another place where we want to select a certain portion of served pages and take appropriate action. The straight forward way to select a subset is a state based system. For every page that executes you can add an id to a set in redis. If you are looking for 5% of pages then look to see if the item count is 20. If you are number 20 you can flush the list and the count starts over. This is not meant for real world usage but that is the basic idea behind selecting a portion of pages by keeping state between all executions.</p>\n<p>If the state based system is too slow, clunky, unreliable or inelegant there has to be an alternative.</p>\n<h3>Modulo Operation</h3>\n<p>The <a href=\"https://en.wikipedia.org/wiki/Modulo\">modulo operation</a> finds the remainder of one number divided by another.</p>\n<pre><code>&gt;&gt;&gt; 1 % 1\n0\n&gt;&gt;&gt; 2 % 1\n0\n&gt;&gt;&gt; 5 % 2\n1\n&gt;&gt;&gt; 9 / 4\n2\n</code></pre>\n<p>So you take all the numbers 1 - 100 the percentage of modulus operations with a remainder of 0 for the number 10 is 10%.</p>\n<h3>Combining stateful tracking of executions and modulus</h3>\n<p>If you want to you can combine these two ideas. In order to sample 5% of executions you could track the execution order of your scripts in redis (or somwhere) looking for a modulus operation remainder of 0 each time to identify an appropriate sample page. Exectuions 1 - 19 will not be sampled, but 20 will. So will 40, 60, 80, and 100. When script 101 queries to see where in the order it is it will be told it is 1 and the cycle starts over. This way each job would have a 5% chance of being selected as a sample.</p>\n<p>This is not any more advantages than the simply having every page know when it&#39;s number 20.</p>\n<h3>Using the law of averages to provide a quick sample determination</h3>\n<p>Let&#39;s say we have a simple query and we want 10% to send a stat to statsd. The pseudo code might look like</p>\n<pre><code class=\"language-python\">import random\nsample_interval = 20\nstart_time = time.time()\nuser_id = execute_mysql_query(&#39;select %s from users&#39; % username)\ntotal_time = time.time() - start_time\nprint user_id\nif random.randint(0, 100) % sample_interal == 0:\n    submit_to_statsd(&#39;time.to.query.userid&#39;, total_time)\n</code></pre>\n<p>Over time this should submit a sample of 5% of all user_id queries to statsd. The first 100 you may get 0, 5, or 8 but with a larger sample you get around 5% and it is much cheaper than trying to have each execution determine where it is in the pecking order for stats submission.</p>\n<h3>Just how accurate is the law of averages here?</h3>\n<p>Here is a snippet to figure out the percentage of matches in a spread for a particular modulus integer. Ideally using the operation &#39;int % 10 == 0&#39; will have a sample rate of 10 percent. The user passes in the top end of the range, we cycle through 10 times. The number of matches in each pass is summed and then used to calculate in the average match percentage across all tries.</p>\n<pre><code class=\"language-python\">import sys\nimport random\ntry_match = []\ntries = 10\n#make 10 passes of user defined range\nwhile tries &gt; 0:\n    match = []\n    #how many times should I try to match my modulus op\n    for i in range(0, int(sys.argv[1])):\n        if random.randint(0, 100) % 10 == 0:\n            match.append(i)\n\n    #append the number of matches\n    try_match.append(len(match))\n    tries -= 1\n\naverage_sampled = sum(try_match) / 10\nprint average_sampled * 100 / int(sys.argv[1]) \n</code></pre>\n<pre><code class=\"language-plaintext\">me@vm:~/php# python modulo.py 10\n10\nme@vm:~/php# python modulo.py 100\n11\nme@vm:~/php# python modulo.py 1000\n10\nme@vm:~/php# python modulo.py 10000\n10\nme@vm:~/php# python modulo.py 100000\n10\nme@vm:~/php# python modulo.py 1000000\n10\nme@vm:~/php# python modulo.py 10000000\n10\nme@vm:~/php# python modulo.py 100000000\n10\n</code></pre>\n<p>This is almost too perfect but the idea is this the accuracy of percentage sampled gets better over the long run. In reality if you run this 10 times it won&#39;t be 10% all of the time, but if you run it against 1000 it will be most of the time.</p>\n<p>Testing against a small range is wildly variable.</p>\n<pre><code class=\"language-plaintext\">me@vm:~/php# python modulo.py 10\n10\nme@vm:~/php# python modulo.py 10\n10\nme@vm:~/php# python modulo.py 10\n10\nme@vm:~/php# python modulo.py 10\n10\nme@vm:~/php# python modulo.py 10\n0\nme@vm:~/php# python modulo.py 10\n0\nme@vm:~/php# python modulo.py 10\n10\n</code></pre>\n<p>Testing against a large range is nicely consistent</p>\n<pre><code class=\"language-plaintext\">\nme@vm:~/php# python modulo.py 1000\n10\nme@vm:~/php# python modulo.py 1000\n11\nme@vm:~/php# python modulo.py 1000\n10\nme@vm:~/php# python modulo.py 1000\n11\nme@vm:~/php# python modulo.py 1000\n10\nme@vm:~/php# python modulo.py 1000\n10\n</code></pre>\n<h3>Using this to match 10% of PHP pages</h3>\n<p>I am going to use the following code to test this principle for PHP.</p>\n<pre><code class=\"language-php\">$sample_rate = 10;\n$total_tries = $argv[1];\n$matches = array();\n$nonmatches = array();\necho &quot;$total_tries \\n&quot;;\nforeach (range(1, $total_tries) as $number) {\n\n    $random_number = rand();\n\n    if ($random_number % $sample_rate === 0) {\n        $matches[] = $random_number;\n        // if this were a real page you would submit your stat here\n        // since it matches your sample rate\n    }\n    else {\n        $nonmatches[] = $random_number;\n    }\n}\n\n$matchcount = count($matches);\n$nonmatchcount = count($nonmatches);\nprint &quot;matches: $matchcount\\n&quot;;\nprint &quot;nonmatches: $nonmatchcount\\n&quot;;\n$dive = $matchcount * 100;\n$prc = $dive / $total_tries;\necho &quot;$prc&quot; . &quot;\\n&quot;\n</code></pre>\n<pre><code class=\"language-plaintext\">me@vm:~/php# php modtest.php 10  \n10 \nmatches: 0\nnonmatches: 10\n0\n\nme@vm:~/php# php modtest.php 100\n100 \nmatches: 9\nnonmatches: 91\n9\n\nme@vm:~/php# php modtest.php 1000\n1000 \nmatches: 104\nnonmatches: 896\n10.4\n\nme@vm:~/php# php modtest.php 10000\n10000 \nmatches: 971\nnonmatches: 9029\n9.71\n\nme@vm:~/php# php modtest.php 100000\n100000 \nmatches: 10114\nnonmatches: 89886\n10.114\n\nme@vm:~/php# php modtest.php 1000000\n1000000 \nmatches: 99407\nnonmatches: 900593\n9.9407\n\nme@vm:~/php# php modtest.php 1000000 \n1000000 \nmatches: 99716\nnonmatches: 900284\n9.9716\n\nme@vm:~/php# php modtest.php 10000000\n10000000 \nmatches: 1001427\nnonmatches: 8998573\n10.01427\n</code></pre>\n<h3>Reference</h3>\n<p><a href=\"https://github.com/chasemp/archive/tree/master/modtest\">code</a>\n<a href=\"https://en.wikipedia.org/wiki/Modulus\">WP Modulus</a>\n<a href=\"https://en.wikipedia.org/wiki/Law_of_averages\">WP Law of Averages</a>\n<a href=\"https://docs.python.org/2/library/random.html\">Python Random</a></p>\n"
+  },
+  {
+    "id": "blog:SUP-devopskc",
+    "type": "blog",
+    "source": "markdown",
+    "timestamp": "2013-09-26T00:00:00.000Z",
+    "title": "SUP Intro DevOpsKC",
+    "summary": "",
+    "url": "/Blog/SUP-devopskc/",
+    "tags": [
+      "SUP",
+      "devops"
+    ],
+    "content_html": "<p>I walked through these slides demonstrating the simple tool <a href=\"https://github.com/chasemp/sup\">sup.py</a> I wrote at the <a href=\"https://www.meetup.com/DevOps-Kansas-City/\">devops kc meetup</a>. Sup can be used in place of ping/tcping/httping on some occasions to great/medium/some success!</p>\n<div id=\"html\" markdown=\"0\">\n<p><center><iframe src=\"http://www.slideshare.net/slideshow/embed_code/26585437\" width=\"476\" height=\"400\" frameborder=\"0\" marginwidth=\"0\" marginheight=\"0\" scrolling=\"no\"></iframe></center></p>\n</div>\n"
+  },
+  {
+    "id": "blog:Python-Diamon-Statsd",
+    "type": "blog",
+    "source": "markdown",
+    "timestamp": "2014-02-07T00:00:00.000Z",
+    "title": "Python monitoring end-to-end with Diamond, Statsd and Graphite",
+    "summary": "",
+    "url": "/Blog/Python-Diamon-Statsd/",
+    "tags": [
+      "Python",
+      "Statsd",
+      "Graphite"
+    ],
+    "content_html": "<p>If you stayed late at the DevOpsKC meetup last night you have may have caught me giving this talk about getting a monitoring system going using python from end-to-end. The meet was at offices of codero who were gracious hosts, and the food was provided by Cerner. Thanks again to the folks put this stuff together.</p>\n<div id=\"html\" markdown=\"0\">\n<p><center><iframe src=\"http://www.slideshare.net/slideshow/embed_code/31729631\" width=\"476\" height=\"400\" frameborder=\"0\" marginwidth=\"0\" marginheight=\"0\" scrolling=\"no\"></iframe></center></p>\n</div>\n\n\n<h3>References</h3>\n<p><a href=\"/assets/slides/python_and_trending_data_ops.pdf\">slides</a></p>\n"
+  },
+  {
+    "id": "blog:Asking-for-help",
+    "type": "blog",
+    "source": "markdown",
+    "timestamp": "2015-04-08T00:00:00.000Z",
+    "title": "Seeking Help On The Internet",
+    "summary": "",
+    "url": "/Blog/Asking-for-help/",
+    "tags": [
+      "Internet",
+      "Security"
+    ],
+    "content_html": "<p>Getting help and soliciting feedback on the Internet essential reading:</p>\n<p>Great presentation directed at tech folks from India primarily looking to enter into an Open Source mentor relationship</p>\n<p><a href=\"http://www.shakthimaan.com/downloads/glv/presentations/i-want-2-do-project-tell-me-wat-2-do.pdf\">i-want-2-do-project-tell-me-wat-2-do</a></p>\n<p><a href=\"https://gitlab.wikimedia.org/epicpupper/phabricator/-/blob/T343258calEvents/src/docs/flavor/please_please_please.diviner\">please please please</a></p>\n<p><a href=\"http://www.catb.org/%7Eesr/faqs/smart-questions.html\">How to ask questions the smart way</a></p>\n"
+  },
+  {
+    "id": "blog:post-mortem-archive",
+    "type": "blog",
+    "source": "markdown",
+    "timestamp": "2015-08-13T00:00:00.000Z",
+    "title": "Post Mortem Archive",
+    "summary": "",
+    "url": "/Blog/post-mortem-archive/",
+    "tags": [
+      "Incident Response",
+      "Security"
+    ],
+    "content_html": "<p>A resource maintained by the fabulous <a href=\"https://danluu.com/postmortem-lessons/\">Dan Luu</a></p>\n"
+  },
+  {
+    "id": "blog:specialty-packet-capture",
+    "type": "blog",
+    "source": "markdown",
+    "timestamp": "2015-09-10T00:00:00.000Z",
+    "title": "Specialty Packet Capture",
+    "summary": "",
+    "url": "/Blog/specialty-packet-capture/",
+    "tags": [
+      "standard"
+    ],
+    "content_html": "<p>Situations where it&#39;s useful to analyze traffic:</p>\n<ul>\n<li>Don&#39;t have access to the logs</li>\n<li>Want to look at traffic somewhere upstream like an LB</li>\n<li>Something is making logs ineffectual</li>\n<li>Other</li>\n</ul>\n<p>Pretty much all roads point to packet sniffing.</p>\n<h2>HTTPRY</h2>\n<p>An efficient packet sniffer aimed at HTTP</p>\n<p>No args output (as oneline but broken down for explanation):</p>\n<pre><code>    2015-10-09 17:46:48         - timestamp\n    10.0.0.1    10.0.0.2        - source-ip/dest-ip or vice versa (depending on arrow)\n    &gt;                   - direction of traffic\n    GET                 - http method\n    foo.com             - http host\n    /myuri              - the URI in question\n    HTTP/1.1                - HTTP version\n    -                   - status code\n    -                   - reason\n</code></pre>\n<p>The output fields are configurable. Say you only serve one site on a box so the host field never changes and the objective is to narrow down a few suspect URI&#39;s.</p>\n<blockquote>\n<p>httpry -f timestamp,source-ip,direction,request-uri</p>\n</blockquote>\n<pre><code>2015-10-09     18:10:43 10.0.0.1    &gt;   /myuri\n</code></pre>\n<p>Since httpry outputs text</p>\n<blockquote>\n<p>httpry -f timestamp,source-ip,request-uri | egrep -i &#39;/myuri/[0-9]&#39;{6}</p>\n</blockquote>\n<p>Other than text munging there are a few native mechanisms for targeting with tcpdump style filters</p>\n<blockquote>\n<p>httpry &#39;host 74.1.1.1 and port 8080&#39;</p>\n</blockquote>\n<p>specifying an HTTP method for collection (along with ability to read/write PCAP)</p>\n<blockquote>\n<p>httpry -m GET,POST</p>\n</blockquote>\n<p>There is also a native statistics mode in <code>httpry -s</code> that by provides meta stats.</p>\n<pre><code class=\"language-plaintext\">2015-10-09 19:20:48 one.myhost.org     147 rps\n2015-10-09 19:20:48 two.myhost.org     2 rps\n2015-10-09 19:20:48 three.myhost.org   9 rps\n2015-10-09 19:20:48 totals  156.46 rps\n</code></pre>\n<p>Show me data aggregated in 30s buckets with a minimum treshold of 10/rps</p>\n<blockquote>\n<p>httpry -s -l 10 -t 30 </p>\n</blockquote>\n<p><code>httpry</code> has the ability to run as a daemon natively as well.</p>\n<h2>ngrep</h2>\n<p>Payload aware network search tool with grep and tcpdump like magic</p>\n<blockquote>\n<p>ngrep port 80 -W single</p>\n</blockquote>\n<pre><code class=\"language-plaintext\">T 10.0.0.1:80 -&gt; 10.0.0.2:65227 [AP] HTTP/1.1 200 OK..\\\nDate: Fri, 09 Oct 2015 21:45:16 GMT..\\\nServer: Apache..Strict-Transport-Security: max-age=31536000..\\\nX-Powered-By: PHP/5.5.9-1ubuntu4.13..X-Frame-Options: Deny..\\\nCache-Control: private, no-cache, no-store, must-revalidate..\nPragma: no-cache..\\\nX-Content-Type-Options: nosniff..\\\nContent-Length: 49..Connection: close..Content-Type: application/json....\\\n{&quot;result&quot;:[],&quot;error_code&quot;:null,&quot;error_info&quot;:null}\n</code></pre>\n<p>So what if we are behind a reverse proxy and the header source IP address is only part of the story. Most likely we want to analyze the X-Forwarded-For field.</p>\n<p>Sample our web traffic honoring embedded linefeeds (newline) looking for X-forwarded-for header fields, extracting the initial IP value, and showing the top 10 IP&#39;s.</p>\n<blockquote>\n<p>ngrep -n 1000 port 80 -W byline | grep -i x-forwarded-for | awk &#39;{print $2}&#39; | cut -d &#39;,&#39; -f 1 | sort | uniq -c | sort -n | tail -n 10</p>\n</blockquote>\n<p>Watching for mail the hard way: <code>ngrep &#39;vacation&#39; port 25</code></p>\n<pre><code class=\"language-plaintext\">T 2620::62748 -&gt; 2620::76:25 [A]\nReturn-Path: no-reply@mail.org..To: foo@mail.org..From: dude &lt;no-reply\n@dude.org&gt;..Reply-to: noway@mail.org..Subject: foo asked for vacation\n</code></pre>\n<p>ngrep is extremely powerful but is vulnerable to packet fragmentation.</p>\n<h2>netsniff-ng</h2>\n<p>A super efficient packet capture tool that is Pcap independent</p>\n<blockquote>\n<p>/usr/sbin/netsniff-ng</p>\n</blockquote>\n<pre><code class=\"language-plaintext\">&lt; 3 66 1444429202.367551\n [ Eth MAC (84:78:ac:5a:19:41 =&gt; f2:3c:91:6e:f6:f5), Proto (0x0800, IPv4) ]\n [ Vendor (Unknown =&gt; Unknown) ]\n [ IPv4 Addr (99.x.x.x =&gt; 74.x.x.x), Proto (6), TTL (53), TOS (0), Ver (4),\n   IHL (5), Tlen (52), ID (48089), Res (0), NoFrag (1), MoreFrag (0), FragOff (0), CS\n   um (0x0daf) is ok ]\n [ TCP Port (62403 =&gt; 22 (ssh)), SN (0xbb019f19), AN (0xf7b8096d), DataOff (8\n   ), Res (0), Flags (ACK ), Window (8189), CSum (0x33aa), UrgPtr (0) ]\n [ chr ....T...M..O ]\n [ hex  01 01 08 0a 54 d4 be f7 4d a3 f6 4f ]\n</code></pre>\n<p>netsniff-ng is interesting for a few reasons:</p>\n<ul>\n<li>It uses a zero-copy mechanism for packet capture (libpcap &gt;1.0 does now too)</li>\n<li>It doesn&#39;t need libpcap</li>\n<li>It can write to libpcap format really efficiently</li>\n</ul>\n<h3>References</h3>\n<p><a href=\"https://dumpsterventures.com/jason/httpry/\">HTTPRY</a></p>\n<p><a href=\"https://taosecurity.blogspot.com/2008/06/logging-web-traffic-with-httpry.html\">Tao Security HTTPRY</a></p>\n<p><a href=\"http://www.stearns.org/doc/ngrep-intro.current.html\">Intro to NGrep</a></p>\n<p><a href=\"https://github.com/netsniff-ng/netsniff-ng\">Netsniff-ng</a></p>\n"
+  },
+  {
+    "id": "blog:21-Incident-Response-Musings",
+    "type": "blog",
+    "source": "markdown",
+    "timestamp": "2022-12-16T00:00:00.000Z",
+    "title": "21 Musings From Incident Response",
+    "summary": "",
+    "url": "/Blog/21-Incident-Response-Musings/",
+    "tags": [
+      "IR"
+    ],
+    "content_html": "<p><img src=\"/assets/images/post/21musingsheader.png\" alt=\"A building with heavy damage in the 2020 Aegean Sea earthquake from https://commons.wikimedia.org\"></p>\n<p>These are my personal anecdotal conclusions and I totally appreciate it may not line up with anyone else&#39;s. This is US centric, as that is my experience, and I learned IR “on the job” over a few decades.  YMMV.</p>\n<!--more-->\n\n<ol>\n<li><p>Operational and security incidents often begin the same way, and may have the same impacts. Sometimes the separation boils down to intent.  That means your infrastructure operations team and your security operations team have to agree on what escalation means, when it matters, and how to document an ongoing investigation. </p>\n</li>\n<li><p>Response to a malicious incident is extremely time consuming. For every hour an adversary spends in control of a sensitive asset your organization may need to commit 3-10x+ in response. This is quarantining, establishing severity, determining depth of compromise, narrative development, investigation, remediation, evidence management, briefing external/in-house counsel, customer notification, high touch marquee customer meetings, law enforcement liaison, and more.</p>\n</li>\n<li><p>Hostile actors are just as likely to be in time zones and on schedules that are not your own.  This will suck. An all hands on deck approach is not sustainable because the responders will be burnt up in 10-12 hours. It takes preparation, discipline and clear leave for folks to stand down during portions so there are hands available when the incident goes real-time beyond initial responder capacity.</p>\n</li>\n<li><p>Boundaries and self-care are of the utmost importance. That said, my personal experience is that cautious bystanders seem to be rarely held to account for inaction. When information is scarce and it looks like a blast radius may be large, self-preservation may tell someone not to associate themselves.  Do not be surprised when folks go dark during triage or show up once the dust is settling and the damage is clearer. An incident will highlight the toxic cultural elements of an organization where blame, scapegoating, and politics rule. Do your best to not take it personally and to maintain your own state of mind.</p>\n</li>\n<li><p>If the impact is serious, expect to need external help. Incident response is not something most in-house information security teams do enough of to avoid common pitfalls. Your lawyer will consult other lawyer&#39;s. Your evidence collection will similarly benefit from the hand of experience. Plus, if you collect in real-time with an external forensics firm they can be the people who have to testify in court.  Waiting until you need this augmentation is too late. </p>\n</li>\n<li><p>Your organization may have a cybersecurity component to their insurance policy.  This is a reactive mitigation (not a preventative control) but this is one of many reasons that cybersecurity needs a seat at the executive table.  There are almost certainly provisions for notification on breach depending on scope and impact.  Insurance makes money by not paying out.  Blend these requirements into your tabletop exercises.</p>\n</li>\n<li><p>Readiness is the word I typically use to describe the extent to which an organization is prepared to handle the technical, legal, PR, and communications challenges of a compromise. This is often the most deficient area of an otherwise mature ISMS. Table tops are essential. Documentation on expected communications and an incident commander role are essential. Designated storage for evidence is essential. It&#39;s difficult to staff and fund these elements in most organizations. Usually you do not know, until you know.</p>\n</li>\n<li><p>Escalating to the authorities is not a solution for immediate impact. Local police seem not to have jurisdiction or incentive. Federal police have significant discretion in what they pursue. Federal agencies will take your report and you may never meaningfully hear from them again. It is not the role of law enforcement officers to make your organization whole. They pursue criminals and sometimes contribute to recovering losses or damages as a result, but it is not their primary function. This does not mean do not involve law enforcement. It means they most likely will not be of immediate tactical assistance.</p>\n</li>\n<li><p>If you do end up on the phone with a three letter agency, walk out the narrative of your evidence through the lens of quantifying impact on U.S. citizens. Generally, that is the narrative of consequence.</p>\n</li>\n<li><p>Information Security is a series of tradeoffs for short-term confidentiality. The odds are overwhelming that encryption today will be trivial to break at some point in the future. Don&#39;t get mired in absolutes because there are few. Making your services and data an impractical and unattractive target (attackers do cost:benefit analysis just like you) is the idea. No defense is hands-off permanent, and no defense is 100% effective. That by itself does not mean it&#39;s a bad idea. Real-time ad hoc incident response mitigation measures can suffer from committee syndrome. No idea is perfect and gridlock ensues, or you end up with holes in your rain boots so your toes can breathe. A collection of hurdles is almost always the most effective defense.</p>\n</li>\n<li><p>Confusion to your enemies! I have used mod_sec and JS fingerprinting to throw targeted HTTP 500&#39;s for endpoints based on prior attack patterns. It was shockingly effective.  A significant talking point opposing these types of measures may sound something like &quot;if we block their known traits we won&#39;t be able to effectively track their behavior&quot; and &quot;that is so easy to overcome it won&#39;t do any good&quot;. Attacker&#39;s cannot be both so sophisticated they are immune to new costs introduced by changes in response tactics AND be so predictable in pattern that they are being reliably monitored. Defense is hard and fatalism is paralyzing. Defense is primarily about dissuasion rather than absolutes.</p>\n</li>\n<li><p>You are more likely to be compromised through an ancillary and/or support service than your primary production endpoints. Financial reimbursement portals, ticketing systems, development platforms, B2B integrations, and data warehouses for BI (this is a pot of gold) are attractive targets. The primary &quot;production&quot; systems probably get basic controls and oversight. Tech on the periphery is often some degree of skunkworks passion project &#39;this isn&#39;t what I was hired for but...&#39;, that had to skirt policy and controls to get rolling.</p>\n</li>\n<li><p>Many companies I have experience with have a pervasive internal story outlining why they are not an attractive target for a cybersecurity attack. I suspect this is partially a coping mechanism, subconscious avoidance and recency bias. It is one of the most pernicious forces working against readiness. FUD is not a counterpoint. A consistent reinforcement of how readiness contributes to resilience and why that matters for the bottom line is all you have. It may not be enough, but that&#39;s the voice which represents systemic change on the wide arc.</p>\n</li>\n<li><p>During response to an incident, from declaration to close, it is vitally important to differentiate three categories of information: assumptions (you have them, you need them, they often must be explicitly acknowledged), opinions (what you think may be happening) and facts (what you can prove to be true). A big part of readiness is learning how to communicate in this way. &quot;How do we know that?&quot; Is the first question out of my mouth when new information lands</p>\n</li>\n<li><p>Incident response is an order of magnitude more effective in high trust teams. Recreating a timeline with overlapping motive and intent is full of speculation. Too much and you will drown in noise, too little and you will stall out into hoping blindly it doesn&#39;t happen again.</p>\n</li>\n<li><p>The most dreaded attacker is not necessarily the most technical. I have seen quite a few incidents where we found ourselves saying &quot;If they only knew to do x that would have been 10 times worse&quot;. The scariest adversary has knowledge of your processes and tools, patience, and enough technical acumen to bridge those assets together.</p>\n</li>\n<li><p>Malicious actors make mistakes. Full stop. Check for the obvious: shell history, sent messages, deleted messages, archive files, tmp, ss (netstat), etc. If you assume every hostile actor is above reproach you won&#39;t get very far.</p>\n</li>\n<li><p>Identifying an attacker with high confidence is very, very difficult. That said, everyone has the tools they use without thinking. Pattern identification is a part of defense. Think in terms of persona rather than identity.  You are mitigating vulnerabilities, not threats.</p>\n</li>\n<li><p>If you are at it long enough, someone will ask you about &quot;hacking back&quot;. They mean attacking the attacker. They will ask in a f2f/video meeting. This is personal liability territory and you would do well to ask for the request in writing from legal. That won&#39;t happen. If it does happen, my advice is don&#39;t do it. </p>\n</li>\n<li><p>There may be pressure to minimize, downplay, spin, and outright lie about impact (or cause). The more toxic the environment, the more likely and insidious the coercion. Integrity is tantamount to credibility.</p>\n</li>\n<li><p>You cannot prove a negative, and so absence of evidence is absence of conclusion. But not necessarily absence of activity. It&#39;s the best we can do. &quot;No evidence of...&quot;. &quot;No indication of...&quot;. This becomes your language when breach and incident disclosure are part of your duties.</p>\n</li>\n</ol>\n"
+  }
+]
