@@ -104,20 +104,9 @@ const allHashtags = Object.entries(hashtagCounts)
     </header>
 
     <section class="controls" aria-label="Filters">
-      <div id="search-container" class="search-container"></div>
-      <div class="filter-actions">
-        <button id="select-all" class="filter-action">All</button>
-        <button id="select-none" class="filter-action">None</button>
-      </div>
-      <div class="filters" role="group" aria-label="Content types">
-        <label title="My Writings"><input type="checkbox" name="type" value="blog" checked> Blog</label>
-        <label title="Reading Material"><input type="checkbox" name="type" value="saved" checked> Articles</label>
-        <label title="My Public Feed"><input type="checkbox" name="type" value="bluesky" checked> Bluesky</label>
-        <label title="Github Releases"><input type="checkbox" name="type" value="release" checked> Releases</label>
-        <label title="Activity on en.wiki.org"><input type="checkbox" name="type" value="wikipedia" checked> Wikipedia</label>
-      </div>
-      {allHashtags.length > 0 && (
-        <div class="hashtag-filters">
+      <div class="search-and-labels">
+        <div id="search-container" class="search-container"></div>
+        {allHashtags.length > 0 && (
           <div class="hashtag-dropdown-wrapper">
             <button class="hashtag-dropdown-button" id="hashtag-dropdown-btn" aria-haspopup="listbox" aria-expanded="false">
               <span class="dropdown-label">Labels</span>
@@ -134,8 +123,19 @@ const allHashtags = Object.entries(hashtagCounts)
               ))}
             </div>
           </div>
-        </div>
-      )}
+        )}
+      </div>
+      <div class="filter-actions">
+        <button id="select-all" class="filter-action">All</button>
+        <button id="select-none" class="filter-action">None</button>
+      </div>
+      <div class="filters" role="group" aria-label="Content types">
+        <label title="My Writings"><input type="checkbox" name="type" value="blog" checked> Blog</label>
+        <label title="Reading Material"><input type="checkbox" name="type" value="saved" checked> Articles</label>
+        <label title="My Public Feed"><input type="checkbox" name="type" value="bluesky" checked> Bluesky</label>
+        <label title="Github Releases"><input type="checkbox" name="type" value="release" checked> Releases</label>
+        <label title="Activity on en.wiki.org"><input type="checkbox" name="type" value="wikipedia" checked> Wikipedia</label>
+      </div>
     </section>
 
     <Timeline items={itemsWithHashtags} />
@@ -217,7 +217,8 @@ const allHashtags = Object.entries(hashtagCounts)
   .home-link { color: inherit; text-decoration: none; transition: opacity 0.2s; }
   .home-link:hover { opacity: 0.7; text-decoration: underline; }
   .controls { position: sticky; top: 0; background: linear-gradient(var(--bg), rgba(244, 236, 216, 0.95)); padding: 12px 0; z-index: 10; backdrop-filter: blur(8px); margin-bottom: 12px; }
-  .search-container { margin-bottom: 12px; max-width: 600px; margin-left: auto; margin-right: auto; }
+  .search-and-labels { display: flex; gap: 12px; align-items: flex-start; margin-bottom: 12px; max-width: 700px; margin-left: auto; margin-right: auto; }
+  .search-container { flex: 1; min-width: 0; }
   .filter-actions { display: flex; gap: 8px; justify-content: center; margin-bottom: 10px; }
   .filter-action { background: var(--card-bg); padding: 6px 16px; border-radius: 999px; border: 1px solid var(--border); color: var(--text); font-size: 13px; cursor: pointer; transition: all 0.2s; font-family: Georgia, "Times New Roman", serif; font-weight: 600; }
   .filter-action:hover { background: var(--accent); color: var(--bg); border-color: var(--accent); }
@@ -226,15 +227,14 @@ const allHashtags = Object.entries(hashtagCounts)
   label:hover { background: var(--panel); border-color: var(--accent); }
   input[type="checkbox"] { vertical-align: middle; margin-right: 6px; accent-color: var(--accent); }
   
-  .hashtag-filters { margin-top: 16px; padding-top: 12px; border-top: 1px solid var(--border); display: flex; justify-content: center; }
-  .hashtag-dropdown-wrapper { position: relative; width: 100%; max-width: 300px; }
-  .hashtag-dropdown-button { width: 100%; background: var(--card-bg); padding: 8px 16px; border-radius: 8px; border: 1px solid var(--border); color: var(--text); font-size: 14px; cursor: pointer; transition: all 0.2s; font-family: Georgia, "Times New Roman", serif; display: flex; align-items: center; gap: 8px; justify-content: space-between; }
+  .hashtag-dropdown-wrapper { position: relative; flex-shrink: 0; width: 140px; }
+  .hashtag-dropdown-button { width: 100%; background: var(--card-bg); padding: 8px 12px; border-radius: 8px; border: 1px solid var(--border); color: var(--text); font-size: 14px; cursor: pointer; transition: all 0.2s; font-family: Georgia, "Times New Roman", serif; display: flex; align-items: center; gap: 6px; justify-content: space-between; }
   .hashtag-dropdown-button:hover { background: var(--panel); border-color: var(--accent); }
   .dropdown-label { font-weight: 600; }
   .selected-count { background: var(--accent); color: var(--bg); padding: 2px 8px; border-radius: 999px; font-size: 12px; font-weight: 600; }
   .dropdown-arrow { font-size: 10px; transition: transform 0.2s; }
   .hashtag-dropdown-button[aria-expanded="true"] .dropdown-arrow { transform: rotate(180deg); }
-  .hashtag-dropdown-menu { position: absolute; top: 100%; left: 0; right: 0; margin-top: 4px; background: var(--panel); border: 1px solid var(--border); border-radius: 8px; box-shadow: 0 4px 16px rgba(0,0,0,0.15); max-height: 300px; overflow-y: auto; z-index: 100; }
+  .hashtag-dropdown-menu { position: absolute; top: 100%; right: 0; margin-top: 4px; background: var(--panel); border: 1px solid var(--border); border-radius: 8px; box-shadow: 0 4px 16px rgba(0,0,0,0.15); max-height: 300px; overflow-y: auto; z-index: 100; min-width: 220px; }
   .hashtag-option { display: flex; align-items: center; gap: 8px; padding: 8px 12px; cursor: pointer; transition: background 0.2s; border-bottom: 1px solid rgba(212, 196, 168, 0.2); }
   .hashtag-option:last-child { border-bottom: none; }
   .hashtag-option:hover { background: rgba(193, 122, 79, 0.1); }
@@ -276,6 +276,12 @@ const allHashtags = Object.entries(hashtagCounts)
     .panel { position: fixed; inset: auto 0 0 0; height: 80dvh; border-radius: 20px 20px 0 0; z-index: 100; transform: translateY(100%); transition: transform 0.3s ease-out; }
     .panel.mobile-open { transform: translateY(0); }
     .backdrop:not([hidden]) { display: block; }
+  }
+  
+  @media (max-width: 640px) {
+    .search-and-labels { flex-direction: column; gap: 8px; }
+    .hashtag-dropdown-wrapper { width: 100%; }
+    .hashtag-dropdown-menu { right: auto; left: 0; }
   }
 </style>
 
