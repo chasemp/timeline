@@ -395,14 +395,21 @@ const allHashtags = Object.entries(hashtagCounts)
     updateFilters();
   });
   
-  // None button - clears both content types AND labels
+  // None button - clears content types, labels, AND search
   document.getElementById('select-none')?.addEventListener('click', () => {
     checkboxes.forEach((input) => input.checked = false);
     
-    // Also clear all selected hashtags
+    // Clear all selected hashtags
     hashtagCheckboxes.forEach((checkbox) => checkbox.checked = false);
     selectedHashtags.clear();
     updateHashtagFilters();
+    
+    // Clear search box
+    const searchInput = document.querySelector('.pagefind-ui__search-input') as HTMLInputElement;
+    if (searchInput) {
+      searchInput.value = '';
+      searchInput.dispatchEvent(new Event('input', { bubbles: true }));
+    }
     
     updateFilters();
   });
