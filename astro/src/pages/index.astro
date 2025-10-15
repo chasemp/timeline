@@ -202,6 +202,8 @@ const allHashtags = Object.entries(hashtagCounts)
     --spine: #d4c4a8;
     --border: #d4c4a8;
     --card-bg: #fdfbf7;
+    --search-highlight-bg: #ffeb3b;
+    --search-highlight-text: #3d2817;
   }
   
   /* Dark theme (darker old book) */
@@ -214,6 +216,23 @@ const allHashtags = Object.entries(hashtagCounts)
     --spine: #4a3f32;
     --border: #4a3f32;
     --card-bg: #3a3228;
+    --search-highlight-bg: #8b6914;
+    --search-highlight-text: #ffffff;
+  }
+  
+  /* Pagefind search result styling for both themes */
+  :root[data-theme="dark"] mark,
+  :root[data-theme="dark"] .pagefind-ui mark {
+    background-color: var(--search-highlight-bg) !important;
+    color: var(--search-highlight-text) !important;
+  }
+  
+  :root[data-theme="light"] mark,
+  :root[data-theme="light"] .pagefind-ui mark,
+  :root:not([data-theme]) mark,
+  :root:not([data-theme]) .pagefind-ui mark {
+    background-color: var(--search-highlight-bg) !important;
+    color: var(--search-highlight-text) !important;
   }
   html, body { margin: 0; padding: 0; background: var(--bg); color: var(--text); font: 16px/1.6 Georgia, "Times New Roman", serif; transition: background-color 0.3s ease, color 0.3s ease; }
   main { max-width: 1200px; margin: 0 auto; padding: 24px; display: grid; grid-template-columns: 1fr minmax(320px, 420px); gap: 24px; }
@@ -231,8 +250,8 @@ const allHashtags = Object.entries(hashtagCounts)
   .theme-icon { display: inline-block; }
   .home-link { color: inherit; text-decoration: none; transition: opacity 0.2s; }
   .home-link:hover { opacity: 0.7; text-decoration: underline; }
-  .controls { position: sticky; top: 0; background: linear-gradient(var(--bg), rgba(244, 236, 216, 0.95)); padding: 12px 0; z-index: 10; backdrop-filter: blur(8px); margin-bottom: 12px; }
-  .search-and-labels { display: flex; gap: 12px; align-items: center; margin-bottom: 12px; max-width: 700px; margin-left: auto; margin-right: auto; }
+  .controls { position: sticky; top: 0; background: var(--bg); padding: 12px 0; z-index: 10; backdrop-filter: blur(8px); margin-bottom: 12px; min-height: 120px; border-bottom: 1px solid transparent; }
+  .search-and-labels { display: flex; gap: 12px; align-items: center; margin-bottom: 12px; max-width: 700px; margin-left: auto; margin-right: auto; min-height: 48px; }
   .search-container { flex: 1; min-width: 0; }
   .filters-wrapper { display: flex; gap: 16px; align-items: center; justify-content: center; flex-wrap: wrap; }
   .filter-actions { display: flex; gap: 8px; align-items: center; }
