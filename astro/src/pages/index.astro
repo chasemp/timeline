@@ -4,7 +4,7 @@ import Timeline from "../components/Timeline.astro";
 import timeline from "../data/timeline.json";
 
 const items = (timeline as any[]);
-const VERSION = "1.2.0"; // Added hashtag labels and filtering
+const VERSION = "1.2.1"; // Changed labels to multi-select dropdown
 
 // Extract hashtags from timeline items
 function extractHashtags(text: string): string[] {
@@ -118,13 +118,21 @@ const allHashtags = Object.entries(hashtagCounts)
       </div>
       {allHashtags.length > 0 && (
         <div class="hashtag-filters">
-          <div class="hashtag-label">Labels:</div>
-          <div class="hashtags" role="group" aria-label="Hashtag filters">
-            {allHashtags.map(({ tag, count }) => (
-              <button class="hashtag-pill" data-hashtag={tag} title={`${count} item${count > 1 ? 's' : ''}`}>
-                {tag} <span class="hashtag-count">{count}</span>
-              </button>
-            ))}
+          <div class="hashtag-dropdown-wrapper">
+            <button class="hashtag-dropdown-button" id="hashtag-dropdown-btn" aria-haspopup="listbox" aria-expanded="false">
+              <span class="dropdown-label">Labels</span>
+              <span class="selected-count" id="selected-hashtag-count" hidden></span>
+              <span class="dropdown-arrow">▼</span>
+            </button>
+            <div class="hashtag-dropdown-menu" id="hashtag-dropdown-menu" hidden role="listbox" aria-label="Select hashtags">
+              {allHashtags.map(({ tag, count }) => (
+                <label class="hashtag-option">
+                  <input type="checkbox" value={tag} data-hashtag={tag} />
+                  <span class="hashtag-text">{tag}</span>
+                  <span class="hashtag-count">{count}</span>
+                </label>
+              ))}
+            </div>
           </div>
         </div>
       )}
@@ -218,13 +226,21 @@ const allHashtags = Object.entries(hashtagCounts)
   label:hover { background: var(--panel); border-color: var(--accent); }
   input[type="checkbox"] { vertical-align: middle; margin-right: 6px; accent-color: var(--accent); }
   
-  .hashtag-filters { margin-top: 16px; padding-top: 12px; border-top: 1px solid var(--border); }
-  .hashtag-label { text-align: center; font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: var(--muted); margin-bottom: 8px; font-family: system-ui, sans-serif; }
-  .hashtags { display: flex; gap: 8px; flex-wrap: wrap; justify-content: center; }
-  .hashtag-pill { background: var(--panel); padding: 4px 10px; border-radius: 999px; border: 1px solid var(--border); color: var(--text); font-size: 12px; cursor: pointer; transition: all 0.2s; font-family: system-ui, sans-serif; display: flex; align-items: center; gap: 4px; }
-  .hashtag-pill:hover { background: var(--accent); color: var(--bg); border-color: var(--accent); transform: translateY(-1px); }
-  .hashtag-pill.active { background: var(--accent); color: var(--bg); border-color: var(--accent); font-weight: 600; }
-  .hashtag-count { opacity: 0.7; font-size: 10px; }
+  .hashtag-filters { margin-top: 16px; padding-top: 12px; border-top: 1px solid var(--border); display: flex; justify-content: center; }
+  .hashtag-dropdown-wrapper { position: relative; width: 100%; max-width: 300px; }
+  .hashtag-dropdown-button { width: 100%; background: var(--card-bg); padding: 8px 16px; border-radius: 8px; border: 1px solid var(--border); color: var(--text); font-size: 14px; cursor: pointer; transition: all 0.2s; font-family: Georgia, "Times New Roman", serif; display: flex; align-items: center; gap: 8px; justify-content: space-between; }
+  .hashtag-dropdown-button:hover { background: var(--panel); border-color: var(--accent); }
+  .dropdown-label { font-weight: 600; }
+  .selected-count { background: var(--accent); color: var(--bg); padding: 2px 8px; border-radius: 999px; font-size: 12px; font-weight: 600; }
+  .dropdown-arrow { font-size: 10px; transition: transform 0.2s; }
+  .hashtag-dropdown-button[aria-expanded="true"] .dropdown-arrow { transform: rotate(180deg); }
+  .hashtag-dropdown-menu { position: absolute; top: 100%; left: 0; right: 0; margin-top: 4px; background: var(--panel); border: 1px solid var(--border); border-radius: 8px; box-shadow: 0 4px 16px rgba(0,0,0,0.15); max-height: 300px; overflow-y: auto; z-index: 100; }
+  .hashtag-option { display: flex; align-items: center; gap: 8px; padding: 8px 12px; cursor: pointer; transition: background 0.2s; border-bottom: 1px solid rgba(212, 196, 168, 0.2); }
+  .hashtag-option:last-child { border-bottom: none; }
+  .hashtag-option:hover { background: rgba(193, 122, 79, 0.1); }
+  .hashtag-option input[type="checkbox"] { margin: 0; accent-color: var(--accent); }
+  .hashtag-option .hashtag-text { flex: 1; font-size: 13px; color: var(--text); font-family: system-ui, sans-serif; }
+  .hashtag-option .hashtag-count { opacity: 0.6; font-size: 11px; color: var(--muted); font-family: system-ui, sans-serif; }
   
   /* Panel styles */
   .panel { position: sticky; top: 12px; align-self: start; height: calc(100dvh - 24px); background: var(--panel); border: 1px solid var(--border); border-radius: 12px; padding: 20px; overflow: auto; box-shadow: 0 2px 12px rgba(0,0,0,0.08); }
@@ -332,30 +348,62 @@ const allHashtags = Object.entries(hashtagCounts)
     updateFilters();
   });
 
-  // Hashtag filtering
+  // Hashtag dropdown filtering
   const selectedHashtags = new Set<string>();
-  const hashtagPills = document.querySelectorAll('.hashtag-pill') as NodeListOf<HTMLElement>;
+  const hashtagDropdownBtn = document.getElementById('hashtag-dropdown-btn');
+  const hashtagDropdownMenu = document.getElementById('hashtag-dropdown-menu');
+  const selectedCountBadge = document.getElementById('selected-hashtag-count');
+  const hashtagCheckboxes = document.querySelectorAll('.hashtag-option input[type="checkbox"]') as NodeListOf<HTMLInputElement>;
 
   function updateHashtagFilters() {
     document.dispatchEvent(new CustomEvent('hashtag:changed', { 
       detail: { hashtags: Array.from(selectedHashtags) } 
     }));
+    
+    // Update count badge
+    if (selectedHashtags.size > 0) {
+      selectedCountBadge!.textContent = selectedHashtags.size.toString();
+      selectedCountBadge!.removeAttribute('hidden');
+    } else {
+      selectedCountBadge!.setAttribute('hidden', '');
+    }
   }
 
-  hashtagPills.forEach((pill) => {
-    pill.addEventListener('click', () => {
-      const hashtag = pill.dataset.hashtag!;
+  // Toggle dropdown
+  hashtagDropdownBtn?.addEventListener('click', (e) => {
+    e.stopPropagation();
+    const isExpanded = hashtagDropdownBtn.getAttribute('aria-expanded') === 'true';
+    
+    if (isExpanded) {
+      hashtagDropdownMenu?.setAttribute('hidden', '');
+      hashtagDropdownBtn.setAttribute('aria-expanded', 'false');
+    } else {
+      hashtagDropdownMenu?.removeAttribute('hidden');
+      hashtagDropdownBtn.setAttribute('aria-expanded', 'true');
+    }
+  });
+
+  // Handle checkbox changes
+  hashtagCheckboxes.forEach((checkbox) => {
+    checkbox.addEventListener('change', () => {
+      const hashtag = checkbox.dataset.hashtag!;
       
-      if (selectedHashtags.has(hashtag)) {
-        selectedHashtags.delete(hashtag);
-        pill.classList.remove('active');
-      } else {
+      if (checkbox.checked) {
         selectedHashtags.add(hashtag);
-        pill.classList.add('active');
+      } else {
+        selectedHashtags.delete(hashtag);
       }
       
       updateHashtagFilters();
     });
+  });
+
+  // Close dropdown when clicking outside
+  document.addEventListener('click', (e) => {
+    if (!hashtagDropdownBtn?.contains(e.target as Node) && !hashtagDropdownMenu?.contains(e.target as Node)) {
+      hashtagDropdownMenu?.setAttribute('hidden', '');
+      hashtagDropdownBtn?.setAttribute('aria-expanded', 'false');
+    }
   });
 </script>
 
