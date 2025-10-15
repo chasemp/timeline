@@ -2,6 +2,18 @@
 const { items } = Astro.props as { items: any[] };
 
 const sorted = [...items].sort((a, b) => new Date(b.timestamp).getTime() - new Date(a.timestamp).getTime());
+
+// Map type to display name for cards
+const typeDisplayName = (type: string) => {
+  const displayNames: Record<string, string> = {
+    'saved': 'Article Read',
+    'blog': 'Blog',
+    'bluesky': 'Bluesky',
+    'release': 'Release',
+    'wikipedia': 'Wikipedia'
+  };
+  return displayNames[type] || type.toUpperCase();
+};
 ---
 
 <section class="timeline" aria-label="Timeline">
@@ -24,7 +36,7 @@ const sorted = [...items].sort((a, b) => new Date(b.timestamp).getTime() - new D
         </div>
         <button class="card" data-id={item.id} data-type={item.type} data-url={item.type === 'blog' ? `/blog/${item.id.replace('blog:', '')}` : (item.url || '')} aria-haspopup="dialog">
           <div class="meta">
-            <span class="type">{item.type}</span>
+            <span class="type">{typeDisplayName(item.type)}</span>
             <time datetime={item.timestamp}>{new Date(item.timestamp).toLocaleString()}</time>
             {item.media?.images && item.media.images.length > 0 && (
               <span class="media-indicator" title={`${item.media.images.length} image${item.media.images.length > 1 ? 's' : ''}`}>📷 {item.media.images.length}</span>
@@ -170,7 +182,7 @@ const sorted = [...items].sort((a, b) => new Date(b.timestamp).getTime() - new D
     }
 
     // Set title to metadata (type and timestamp)
-    const typeDisplayName = entry.type === 'saved' ? 'ARTICLES' : entry.type.toUpperCase();
+    const typeDisplayName = entry.type === 'saved' ? 'Article Read' : entry.type.toUpperCase();
     panelTitleText.textContent = `${typeDisplayName} · ${new Date(entry.timestamp).toLocaleString()}`;
     
     // Show/hide and update source link
@@ -272,7 +284,7 @@ const sorted = [...items].sort((a, b) => new Date(b.timestamp).getTime() - new D
     };
     
     const typeDisplayNames: Record<string, string> = {
-      'saved': 'ARTICLES'
+      'saved': 'Article Read'
     };
     
     const emoji = emojiMap[type] || '';
