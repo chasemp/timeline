@@ -137,16 +137,19 @@ const allHashtags = Object.entries(hashtagCounts)
           </div>
         )}
       </div>
-      <div class="filter-actions">
-        <button id="select-all" class="filter-action">All</button>
-        <button id="select-none" class="filter-action">None</button>
-      </div>
-      <div class="filters" role="group" aria-label="Content types">
-        <label title="My Writings"><input type="checkbox" name="type" value="blog" checked> Blog</label>
-        <label title="Reading Material"><input type="checkbox" name="type" value="saved" checked> Articles</label>
-        <label title="My Public Feed"><input type="checkbox" name="type" value="bluesky" checked> Bluesky</label>
-        <label title="Github Releases"><input type="checkbox" name="type" value="release" checked> Releases</label>
-        <label title="Activity on en.wiki.org"><input type="checkbox" name="type" value="wikipedia" checked> Wikipedia</label>
+      <div class="filters-wrapper">
+        <div class="filter-actions">
+          <button id="select-all" class="filter-action">All</button>
+          <span class="filter-separator">|</span>
+          <button id="select-none" class="filter-action">None</button>
+        </div>
+        <div class="filters" role="group" aria-label="Content types">
+          <label title="My Writings"><input type="checkbox" name="type" value="blog" checked> Blog</label>
+          <label title="Reading Material"><input type="checkbox" name="type" value="saved" checked> Articles</label>
+          <label title="My Public Feed"><input type="checkbox" name="type" value="bluesky" checked> Bluesky</label>
+          <label title="Github Releases"><input type="checkbox" name="type" value="release" checked> Releases</label>
+          <label title="Activity on en.wiki.org"><input type="checkbox" name="type" value="wikipedia" checked> Wikipedia</label>
+        </div>
       </div>
     </section>
 
@@ -231,10 +234,12 @@ const allHashtags = Object.entries(hashtagCounts)
   .controls { position: sticky; top: 0; background: linear-gradient(var(--bg), rgba(244, 236, 216, 0.95)); padding: 12px 0; z-index: 10; backdrop-filter: blur(8px); margin-bottom: 12px; }
   .search-and-labels { display: flex; gap: 12px; align-items: center; margin-bottom: 12px; max-width: 700px; margin-left: auto; margin-right: auto; }
   .search-container { flex: 1; min-width: 0; }
-  .filter-actions { display: flex; gap: 8px; justify-content: center; margin-bottom: 10px; }
-  .filter-action { background: var(--card-bg); padding: 6px 16px; border-radius: 999px; border: 1px solid var(--border); color: var(--text); font-size: 13px; cursor: pointer; transition: all 0.2s; font-family: Georgia, "Times New Roman", serif; font-weight: 600; }
-  .filter-action:hover { background: var(--accent); color: var(--bg); border-color: var(--accent); }
-  .filters { display: flex; gap: 12px; flex-wrap: wrap; justify-content: center; }
+  .filters-wrapper { display: flex; gap: 16px; align-items: center; justify-content: center; flex-wrap: wrap; }
+  .filter-actions { display: flex; gap: 8px; align-items: center; }
+  .filter-separator { color: var(--muted); font-size: 14px; }
+  .filter-action { background: transparent; padding: 0; border: none; color: var(--text); font-size: 14px; cursor: pointer; transition: all 0.2s; font-family: Georgia, "Times New Roman", serif; font-weight: 600; text-decoration: underline; text-decoration-color: transparent; }
+  .filter-action:hover { color: var(--accent); text-decoration-color: var(--accent); }
+  .filters { display: flex; gap: 12px; flex-wrap: wrap; }
   label { background: var(--card-bg); padding: 7px 14px; border-radius: 999px; border: 1px solid var(--border); color: var(--text); font-size: 14px; cursor: pointer; transition: all 0.2s; }
   label:hover { background: var(--panel); border-color: var(--accent); }
   input[type="checkbox"] { vertical-align: middle; margin-right: 6px; accent-color: var(--accent); }
