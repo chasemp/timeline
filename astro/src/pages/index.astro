@@ -46,6 +46,14 @@ function extractHashtags(text: string): string[] {
     });
 }
 
+// Normalize/merge similar tags
+function normalizeTag(tag: string): string {
+  const tagMap: Record<string, string> = {
+    '#incident_response': '#ir',
+  };
+  return tagMap[tag] || tag;
+}
+
 // Add hashtags to each item
 const itemsWithHashtags = items.map(item => {
   // Extract hashtags from content (text-based)
@@ -57,7 +65,11 @@ const itemsWithHashtags = items.map(item => {
   const frontmatterTags = (item.tags || [])
     .map((tag: string) => `#${tag.toLowerCase().replace(/\s+/g, '_')}`);
   
-  const hashtags = [...new Set([...frontmatterTags, ...titleTags, ...summaryTags, ...contentTags])];
+  // Normalize all tags (merge similar ones)
+  const allTags = [...frontmatterTags, ...titleTags, ...summaryTags, ...contentTags]
+    .map(tag => normalizeTag(tag));
+  
+  const hashtags = [...new Set(allTags)];
   return { ...item, hashtags };
 });
 
