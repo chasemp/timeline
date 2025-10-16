@@ -15,9 +15,8 @@ if [ -f .env ]; then
   set +a
 fi
 
-# Use npm run build to include postbuild (pagefind)
-# Note: This will run prebuild (data fetch) - ensure data is current
-npm run build
+# Build only (no data fetch) - use fetch.sh to update data first if needed
+npm run build:only
 
 echo "📦 Deploying to docs directory..."
 cd ..

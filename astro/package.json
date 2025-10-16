@@ -8,6 +8,7 @@
     "dev": "astro dev",
     "prebuild": "npm run generate",
     "build": "astro build",
+    "build:only": "astro build && npx pagefind --site dist",
     "postbuild": "npx pagefind --site dist",
     "preview": "astro preview",
     "fetch:readwise": "node --experimental-strip-types scripts/fetch-readwise-reader.mts",
