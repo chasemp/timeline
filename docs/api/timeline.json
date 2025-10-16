@@ -3,17 +3,39 @@
     "title": "Chase Pettet's Timeline",
     "description": "A timeline of my public online activity",
     "site": "https://timeline.523.life",
-    "total_items": 108,
-    "generated_at": "2025-10-16T17:52:50.591Z",
+    "total_items": 109,
+    "generated_at": "2025-10-16T18:39:38.760Z",
     "types": [
-      "saved",
       "bluesky",
+      "saved",
       "release",
       "wikipedia",
       "blog"
     ]
   },
   "items": [
+    {
+      "id": "bluesky:3m3dez467ek2z",
+      "type": "bluesky",
+      "source": null,
+      "timestamp": "2025-10-16T18:25:33.554Z",
+      "title": "freetofile.com",
+      "summary": "freetofile.com — Free To File – Find out how to file your income taxes for free (like, actually free)",
+      "url": "https://bsky.app/profile/chase523.bsky.social/post/3m3dez467ek2z",
+      "canonical_url": "https://bsky.app/profile/chase523.bsky.social/post/3m3dez467ek2z",
+      "author": null,
+      "tags": [],
+      "media": [],
+      "content_html": "<p>freetofile.com</p>\n          <div style=\"margin: 16px 0; border: 1px solid var(--border, #d4c4a8); border-radius: 8px; overflow: hidden; background: var(--card-bg, #fdfbf7);\">\n            \n            <div style=\"padding: 12px;\">\n              <div style=\"font-weight: 600; margin-bottom: 4px; color: var(--text, #3d2817);\">Free To File – Find out how to file your income taxes for free (like, actually free)</div>\n              \n              <div style=\"font-size: 12px; color: var(--accent, #c17a4f); overflow: hidden; text-overflow: ellipsis; white-space: nowrap;\">🔗 https://freetofile.com/</div>\n            </div>\n          </div>",
+      "content_text": null,
+      "embed_uri": "at://did:plc:7whslkj667kgto2x246o4stl/app.bsky.feed.post/3m3dez467ek2z",
+      "embed_cid": "bafyreidockkrbmbhdwiy2uuzfaxsmfulloopfk672mfnljcx2r7bvvlh6a",
+      "metadata": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 0
+      }
+    },
     {
       "id": "readwise:01k7n46vj342xjq1vazyv5e9gt",
       "type": "saved",
