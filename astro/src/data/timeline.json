@@ -1,5 +1,37 @@
 [
   {
+    "id": "readwise:01k7n46vj342xjq1vazyv5e9gt",
+    "type": "saved",
+    "source": null,
+    "timestamp": "2025-10-15T23:45:11.744000+00:00",
+    "title": "The lethal trifecta for AI agents: private data, untrusted content, and external communication",
+    "summary": "AI agents can be dangerous if they have access to private data, untrusted content, and external communication abilities. Combining these features makes it easy for attackers to trick the AI into stealing your information. Users must be cautious and avoid mixing these risky tools to stay safe.",
+    "url": "https://simonwillison.net/2025/Jun/16/the-lethal-trifecta/",
+    "canonical_url": "https://simonwillison.net/2025/Jun/16/the-lethal-trifecta/",
+    "author": "Simon Willison",
+    "tags": [
+      "ai",
+      "pub",
+      "sec",
+      "tech",
+      "classic",
+      "prodsec",
+      "product"
+    ],
+    "media": [],
+    "content_html": null,
+    "content_text": null,
+    "embed_uri": null,
+    "embed_cid": null,
+    "metadata": {
+      "word_count": 1260,
+      "reading_time": "7 min read",
+      "site_name": "simonwillison.net",
+      "cover_image": "https://static.simonwillison.net/static/2025/lethaltrifecta.jpg",
+      "reading_progress": 1
+    }
+  },
+  {
     "id": "readwise:01k7kza9decakv6hmd6cyghqt0",
     "type": "saved",
     "source": null,
