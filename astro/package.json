@@ -4,8 +4,8 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "predev": "npm run generate",
     "dev": "astro dev",
+    "dev:fetch": "npm run generate && astro dev",
     "prebuild": "npm run generate",
     "build": "astro build",
     "build:only": "astro build && npx pagefind --site dist",
