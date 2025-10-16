@@ -294,6 +294,12 @@ const allHashtags = Object.entries(hashtagCounts)
   .hashtag-dropdown-wrapper { position: relative; flex-shrink: 0; width: 140px; }
   .hashtag-dropdown-button { width: 100%; background: var(--card-bg); padding: 8px 12px; border-radius: 8px; border: 1px solid var(--border); color: var(--text); font-size: 14px; cursor: pointer; transition: all 0.2s; font-family: Georgia, "Times New Roman", serif; display: flex; align-items: center; gap: 6px; justify-content: space-between; }
   .hashtag-dropdown-button:hover { background: var(--panel); border-color: var(--accent); }
+  .hashtag-dropdown-button.flash-notification { animation: flashPulse 0.6s ease-out; }
+  @keyframes flashPulse {
+    0%, 100% { transform: scale(1); box-shadow: 0 0 0 0 var(--accent); }
+    25% { transform: scale(1.05); box-shadow: 0 0 0 4px rgba(193, 122, 79, 0.3); }
+    50% { transform: scale(1); box-shadow: 0 0 0 8px rgba(193, 122, 79, 0.1); }
+  }
   .dropdown-label { font-weight: 600; }
   .selected-count { background: var(--accent); color: var(--bg); padding: 2px 8px; border-radius: 999px; font-size: 12px; font-weight: 600; }
   .dropdown-arrow { font-size: 10px; transition: transform 0.2s; }
@@ -482,8 +488,51 @@ const allHashtags = Object.entries(hashtagCounts)
       }
       
       updateHashtagFilters();
+      updateCardHashtagStyles();
     });
   });
+
+  // Handle hashtag clicks from cards
+  window.addEventListener('hashtag:click', ((e: CustomEvent) => {
+    const hashtag = e.detail.tag;
+    
+    // Toggle the hashtag selection
+    if (selectedHashtags.has(hashtag)) {
+      selectedHashtags.delete(hashtag);
+    } else {
+      selectedHashtags.add(hashtag);
+    }
+    
+    // Update corresponding checkbox in dropdown
+    const checkbox = Array.from(hashtagCheckboxes).find(cb => cb.dataset.hashtag === hashtag);
+    if (checkbox) {
+      checkbox.checked = selectedHashtags.has(hashtag);
+    }
+    
+    updateHashtagFilters();
+    updateCardHashtagStyles();
+    
+    // Briefly flash the dropdown to show something happened
+    if (selectedHashtags.has(hashtag)) {
+      hashtagDropdownBtn?.classList.add('flash-notification');
+      setTimeout(() => hashtagDropdownBtn?.classList.remove('flash-notification'), 600);
+    }
+  }) as EventListener);
+
+  // Update visual state of hashtags on cards
+  function updateCardHashtagStyles() {
+    document.querySelectorAll('.card-hashtag').forEach((hashtag) => {
+      const tag = (hashtag as HTMLElement).dataset.hashtag;
+      if (tag && selectedHashtags.has(tag)) {
+        hashtag.classList.add('hashtag-selected');
+      } else {
+        hashtag.classList.remove('hashtag-selected');
+      }
+    });
+  }
+
+  // Initialize hashtag styles on load
+  updateCardHashtagStyles();
 
   // Close dropdown when clicking outside
   document.addEventListener('click', (e) => {

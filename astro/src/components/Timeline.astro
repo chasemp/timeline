@@ -63,7 +63,7 @@ const typeDisplayName = (type: string) => {
           {item.hashtags && item.hashtags.length > 0 && (
             <div class="card-hashtags">
               {item.hashtags.map((tag: string) => (
-                <span class="card-hashtag">{tag}</span>
+                <button class="card-hashtag" data-hashtag={tag} onclick="event.stopPropagation(); window.dispatchEvent(new CustomEvent('hashtag:click', { detail: { tag: this.dataset.hashtag } }));" type="button">{tag}</button>
               ))}
             </div>
           )}
@@ -132,7 +132,10 @@ const typeDisplayName = (type: string) => {
   .card-metadata { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 8px; padding-top: 8px; border-top: 1px solid var(--border); }
   .metadata-item { font-size: 12px; color: var(--muted); font-family: system-ui, sans-serif; display: flex; align-items: center; gap: 4px; }
   .card-hashtags { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 8px; }
-  .card-hashtag { display: inline-block; padding: 2px 8px; border-radius: 999px; background: rgba(193, 122, 79, 0.15); color: var(--accent); font-size: 11px; font-weight: 600; font-family: system-ui, sans-serif; }
+  .card-hashtag { display: inline-block; padding: 2px 8px; border-radius: 999px; background: rgba(193, 122, 79, 0.15); color: var(--accent); font-size: 11px; font-weight: 600; font-family: system-ui, sans-serif; border: 1px solid transparent; cursor: pointer; transition: all 0.2s; }
+  .card-hashtag:hover { background: rgba(193, 122, 79, 0.25); border-color: var(--accent); transform: scale(1.05); }
+  .card-hashtag:active { transform: scale(0.95); }
+  .card-hashtag.hashtag-selected { background: var(--accent); color: var(--bg); border-color: var(--accent); }
 
   #tooltip { position: fixed; z-index: 60; pointer-events: none; }
   .tooltip-card { background: var(--panel); border: 1px solid var(--border); border-radius: 8px; padding: 10px 12px; box-shadow: 0 4px 16px rgba(0,0,0,0.15); max-width: 360px; }
