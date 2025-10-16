@@ -220,22 +220,8 @@ const allHashtags = Object.entries(hashtagCounts)
 </footer>
 
 <style is:global>
-  /* Light theme (old book - current) */
-  :root[data-theme="light"], :root:not([data-theme]) {
-    --bg: #f4ecd8;
-    --panel: #faf6ed;
-    --text: #3d2817;
-    --muted: #7a6b5d;
-    --accent: #c17a4f;
-    --spine: #d4c4a8;
-    --border: #d4c4a8;
-    --card-bg: #fdfbf7;
-    --search-highlight-bg: #ffeb3b;
-    --search-highlight-text: #3d2817;
-  }
-  
-  /* Dark theme (darker old book) */
-  :root[data-theme="dark"] {
+  /* Dark theme (darker old book - default) */
+  :root[data-theme="dark"], :root:not([data-theme]) {
     --bg: #2a2419;
     --panel: #342d23;
     --text: #e8dcc4;
@@ -248,17 +234,31 @@ const allHashtags = Object.entries(hashtagCounts)
     --search-highlight-text: #ffffff;
   }
   
+  /* Light theme (old book) */
+  :root[data-theme="light"] {
+    --bg: #f4ecd8;
+    --panel: #faf6ed;
+    --text: #3d2817;
+    --muted: #7a6b5d;
+    --accent: #c17a4f;
+    --spine: #d4c4a8;
+    --border: #d4c4a8;
+    --card-bg: #fdfbf7;
+    --search-highlight-bg: #ffeb3b;
+    --search-highlight-text: #3d2817;
+  }
+  
   /* Pagefind search result styling for both themes */
   :root[data-theme="dark"] mark,
-  :root[data-theme="dark"] .pagefind-ui mark {
+  :root[data-theme="dark"] .pagefind-ui mark,
+  :root:not([data-theme]) mark,
+  :root:not([data-theme]) .pagefind-ui mark {
     background-color: var(--search-highlight-bg) !important;
     color: var(--search-highlight-text) !important;
   }
   
   :root[data-theme="light"] mark,
-  :root[data-theme="light"] .pagefind-ui mark,
-  :root:not([data-theme]) mark,
-  :root:not([data-theme]) .pagefind-ui mark {
+  :root[data-theme="light"] .pagefind-ui mark {
     background-color: var(--search-highlight-bg) !important;
     color: var(--search-highlight-text) !important;
   }
@@ -360,13 +360,31 @@ const allHashtags = Object.entries(hashtagCounts)
 </style>
 
 <script>
-  // Theme toggle
+  // Theme toggle with cross-domain cookie support
   const themeToggle = document.getElementById('theme-toggle');
   const themeIcon = themeToggle?.querySelector('.theme-icon');
   const html = document.documentElement;
   
-  // Load saved theme or default to light
-  const savedTheme = localStorage.getItem('theme') || 'light';
+  // Cookie helper functions
+  function setCookie(name, value, days = 365) {
+    const expires = new Date();
+    expires.setTime(expires.getTime() + (days * 24 * 60 * 60 * 1000));
+    document.cookie = `${name}=${value};expires=${expires.toUTCString()};path=/;domain=.523.life`;
+  }
+  
+  function getCookie(name) {
+    const nameEQ = name + "=";
+    const ca = document.cookie.split(';');
+    for (let i = 0; i < ca.length; i++) {
+      let c = ca[i];
+      while (c.charAt(0) === ' ') c = c.substring(1, c.length);
+      if (c.indexOf(nameEQ) === 0) return c.substring(nameEQ.length, c.length);
+    }
+    return null;
+  }
+  
+  // Load saved theme or default to dark (matching 523.life)
+  const savedTheme = getCookie('theme') || 'dark';
   html.setAttribute('data-theme', savedTheme);
   if (themeIcon) themeIcon.textContent = savedTheme === 'dark' ? '☀️' : '🌙';
   
@@ -374,7 +392,7 @@ const allHashtags = Object.entries(hashtagCounts)
     const currentTheme = html.getAttribute('data-theme');
     const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
     html.setAttribute('data-theme', newTheme);
-    localStorage.setItem('theme', newTheme);
+    setCookie('theme', newTheme);
     if (themeIcon) themeIcon.textContent = newTheme === 'dark' ? '☀️' : '🌙';
   });
 
