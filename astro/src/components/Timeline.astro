@@ -55,11 +55,9 @@ const typeDisplayName = (type: string) => {
             <div class="title">{item.title}</div>
           )}
           {item.summary && <p class="summary">{item.summary}</p>}
-          {(item.type === 'saved' && (item.metadata?.site_name || item.author || item.metadata?.reading_time)) && (
+          {(item.type === 'saved' && item.metadata?.site_name) && (
             <div class="card-metadata">
-              {item.metadata?.site_name && <span class="metadata-item">📰 {item.metadata.site_name}</span>}
-              {item.author && <span class="metadata-item">✍️ {item.author}</span>}
-              {item.metadata?.reading_time && <span class="metadata-item">⏱️ {item.metadata.reading_time}</span>}
+              <span class="metadata-item">📰 {item.metadata.site_name}</span>
             </div>
           )}
           {item.hashtags && item.hashtags.length > 0 && (
@@ -293,7 +291,20 @@ const typeDisplayName = (type: string) => {
       content = `<h3 class="detail-title">${entry.title || ''}</h3>
         <div class="detail-content">${blogContent}</div>`;
     } else {
+      // Build metadata string for saved articles
+      let metadataHtml = '';
+      if (entry.type === 'saved') {
+        const metadataParts = [];
+        if (entry.metadata?.site_name) metadataParts.push(`📰 ${entry.metadata.site_name}`);
+        if (entry.author) metadataParts.push(`✍️ ${entry.author}`);
+        if (entry.metadata?.reading_time) metadataParts.push(`⏱️ ${entry.metadata.reading_time}`);
+        if (metadataParts.length > 0) {
+          metadataHtml = `<div class="detail-metadata">${metadataParts.join(' • ')}</div>`;
+        }
+      }
+      
       content = `<h3 class="detail-title">${entry.title || ''}</h3>
+        ${metadataHtml}
         <div class="detail-content">${entry.content_html || `<p>${entry.summary || ''}</p>`}</div>`;
     }
     
