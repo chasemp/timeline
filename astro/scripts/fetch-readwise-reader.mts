@@ -16,6 +16,11 @@ const READWISE_TOKEN = process.env.READWISE_TOKEN;
 const READWISE_TAG_FILTER = process.env.READWISE_TAG_FILTER || ''; // Optional: filter by tag
 const OUTPUT_FILE = join(__dirname, '../data/sources/readwise.json');
 
+// Tags that determine if an article should be included in the timeline
+const INCLUDE_TAGS = ['classic', 'pub'];
+// Tags that should not be displayed on the timeline
+const HIDDEN_TAGS = ['pub'];
+
 if (!READWISE_TOKEN) {
   console.log('READWISE_TOKEN is not set. Skipping.');
   process.exit(0);
@@ -111,6 +116,9 @@ function convertToTimelineEntry(doc: ReaderDocument): TimelineEntry {
   // Extract tag names from the tags object
   const tagNames = Object.keys(doc.tags || {});
   
+  // Filter out hidden tags
+  const visibleTags = tagNames.filter(tag => !HIDDEN_TAGS.includes(tag));
+  
   // Calculate reading time
   const readingTime = doc.word_count ? `${Math.ceil(doc.word_count / 200)} min read` : undefined;
   
@@ -123,7 +131,7 @@ function convertToTimelineEntry(doc: ReaderDocument): TimelineEntry {
     url: doc.source_url,
     canonical_url: doc.source_url || doc.url,
     author: doc.author || undefined,
-    tags: tagNames,
+    tags: visibleTags,
     content_html: doc.notes ? `<div class="notes">${doc.notes.replace(/\n/g, '<br>')}</div>` : undefined,
     metadata: {
       word_count: doc.word_count || undefined,
@@ -137,20 +145,37 @@ function convertToTimelineEntry(doc: ReaderDocument): TimelineEntry {
 
 /**
  * Filter documents by tag if READWISE_TAG_FILTER is set
+ * If not set, filters by INCLUDE_TAGS (classic, pub)
  */
 function filterByTag(documents: ReaderDocument[]): ReaderDocument[] {
-  if (!READWISE_TAG_FILTER) {
-    return documents;
+  // Use READWISE_TAG_FILTER if set (for backward compatibility)
+  if (READWISE_TAG_FILTER) {
+    const filtered = documents.filter(doc => {
+      if (!doc.tags) return false;
+      return Object.keys(doc.tags).some(tag => 
+        tag.toLowerCase() === READWISE_TAG_FILTER.toLowerCase()
+      );
+    });
+    
+    console.log(`✓ Filtered to ${filtered.length} documents with tag "${READWISE_TAG_FILTER}"`);
+    
+    if (filtered.length > 0) {
+      console.log(`  Found documents:`, filtered.slice(0, 10).map(d => d.title.substring(0, 60)));
+    }
+    
+    return filtered;
   }
   
+  // Otherwise, filter by INCLUDE_TAGS
   const filtered = documents.filter(doc => {
     if (!doc.tags) return false;
-    return Object.keys(doc.tags).some(tag => 
-      tag.toLowerCase() === READWISE_TAG_FILTER.toLowerCase()
+    const docTags = Object.keys(doc.tags);
+    return docTags.some(tag => 
+      INCLUDE_TAGS.some(includeTag => tag.toLowerCase() === includeTag.toLowerCase())
     );
   });
   
-  console.log(`✓ Filtered to ${filtered.length} documents with tag "${READWISE_TAG_FILTER}"`);
+  console.log(`✓ Filtered to ${filtered.length} documents with tags: ${INCLUDE_TAGS.join(', ')}`);
   
   if (filtered.length > 0) {
     console.log(`  Found documents:`, filtered.slice(0, 10).map(d => d.title.substring(0, 60)));
@@ -184,6 +209,8 @@ async function main() {
   
   if (READWISE_TAG_FILTER) {
     console.log(`   Filtering by tag: "${READWISE_TAG_FILTER}"`);
+  } else {
+    console.log(`   Filtering by tags: ${INCLUDE_TAGS.join(', ')}`);
   }
   
   try {
