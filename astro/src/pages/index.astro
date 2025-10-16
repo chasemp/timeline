@@ -280,7 +280,7 @@ const allHashtags = Object.entries(hashtagCounts)
   .home-link:hover { opacity: 0.7; text-decoration: underline; }
   .controls { position: sticky; top: 0; background: var(--bg); padding: 12px 0; z-index: 10; backdrop-filter: blur(8px); margin-bottom: 12px; min-height: 120px; border-bottom: 1px solid transparent; }
   .search-and-labels { display: flex; gap: 12px; align-items: center; margin-bottom: 12px; max-width: 700px; margin-left: auto; margin-right: auto; min-height: 48px; }
-  .search-container { flex: 1; min-width: 0; }
+  .search-container { flex: 1; min-width: 200px; min-height: 40px; }
   .filters-wrapper { display: flex; gap: 16px; align-items: center; justify-content: center; flex-wrap: wrap; }
   .filter-actions { display: flex; gap: 8px; align-items: center; }
   .filter-separator { color: var(--muted); font-size: 14px; }
@@ -380,15 +380,24 @@ const allHashtags = Object.entries(hashtagCounts)
 
   // Initialize Pagefind search
   window.addEventListener('DOMContentLoaded', () => {
-    new window.PagefindUI({ 
-      element: "#search-container",
-      showSubResults: true,
-      showImages: false,
-      excerptLength: 15,
-      translations: {
-        placeholder: "Search timeline..."
+    // Only initialize Pagefind if it's available (production builds)
+    if (window.PagefindUI) {
+      new window.PagefindUI({ 
+        element: "#search-container",
+        showSubResults: true,
+        showImages: false,
+        excerptLength: 15,
+        translations: {
+          placeholder: "Search timeline..."
+        }
+      });
+    } else {
+      // In dev mode, show a placeholder message
+      const container = document.getElementById('search-container');
+      if (container) {
+        container.innerHTML = '<div style="padding: 10px; color: var(--muted); font-size: 14px; text-align: center;">Search available in production build</div>';
       }
-    });
+    }
   });
 
   const params = new URLSearchParams(location.search);

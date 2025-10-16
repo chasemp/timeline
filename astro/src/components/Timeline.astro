@@ -59,7 +59,7 @@ const typeDisplayName = (type: string) => {
           {item.hashtags && item.hashtags.length > 0 && (
             <div class="card-hashtags">
               {item.hashtags.map((tag: string) => (
-                <button class="card-hashtag" data-hashtag={tag} onclick="event.stopPropagation(); window.dispatchEvent(new CustomEvent('hashtag:click', { detail: { tag: this.dataset.hashtag } }));" type="button">{tag}</button>
+                <span class="card-hashtag" data-hashtag={tag} onclick="event.stopPropagation(); window.dispatchEvent(new CustomEvent('hashtag:click', { detail: { tag: this.dataset.hashtag } }));" role="button" tabindex="0">{tag}</span>
               ))}
             </div>
           )}
