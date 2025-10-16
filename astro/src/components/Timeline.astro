@@ -49,11 +49,7 @@ const typeDisplayName = (type: string) => {
               <span class="media-indicator" title={`${item.media.images.length} image${item.media.images.length > 1 ? 's' : ''}`}>📷 {item.media.images.length}</span>
             )}
           </div>
-          {(item.url && item.type !== 'blog') ? (
-            <a href={item.url} class="title title-link" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation()">{item.title}</a>
-          ) : (
-            <div class="title">{item.title}</div>
-          )}
+          <div class="title">{item.title}</div>
           {item.summary && <p class="summary">{item.summary}</p>}
           {(item.type === 'saved' && item.metadata?.site_name) && (
             <div class="card-metadata">
