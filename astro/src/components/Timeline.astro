@@ -306,9 +306,9 @@ const typeDisplayName = (type: string) => {
         }
       }
       
+      const mainContent = entry.content_html || `<p>${entry.summary || ''}</p>`;
       content = `<h3 class="detail-title">${entry.title || ''}</h3>
-        ${metadataHtml}
-        <div class="detail-content">${entry.content_html || `<p>${entry.summary || ''}</p>`}</div>`;
+        <div class="detail-content">${mainContent}${metadataHtml}</div>`;
     }
     
     panelContent.innerHTML = content;
