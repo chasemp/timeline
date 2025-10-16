@@ -1,9 +1,9 @@
 name: Fetch Timeline Data
 
 on:
-  # Run every 4 hours
+  # Run once a day at midnight UTC
   schedule:
-    - cron: '0 */4 * * *'
+    - cron: '0 0 * * *'
   
   # Allow manual trigger
   workflow_dispatch:
