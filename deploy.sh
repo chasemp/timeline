@@ -10,7 +10,9 @@ cd astro
 
 # Load environment variables from .env if it exists
 if [ -f .env ]; then
-  export $(cat .env | xargs)
+  set -a
+  source .env
+  set +a
 fi
 
 # Use npm run build to include postbuild (pagefind)
