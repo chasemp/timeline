@@ -49,34 +49,6 @@
     }
   },
   {
-    "id": "readwise:01k7n4agrthvxbghgs4qw1b2t4",
-    "type": "saved",
-    "source": null,
-    "timestamp": "2025-10-15T23:47:11.770000+00:00",
-    "title": "Design Patterns for Securing LLM Agents against Prompt Injections",
-    "summary": "A new paper by researchers from major organizations presents design patterns to protect LLM agents from prompt injection attacks. These patterns limit the agents' capabilities, balancing security and utility to prevent harmful actions. The paper includes practical case studies demonstrating how these patterns can be effectively implemented.",
-    "url": "https://simonwillison.net/2025/Jun/13/prompt-injection-design-patterns/",
-    "canonical_url": "https://simonwillison.net/2025/Jun/13/prompt-injection-design-patterns/",
-    "author": "Simon Willison",
-    "tags": [
-      "ai",
-      "sec",
-      "prodsec"
-    ],
-    "media": [],
-    "content_html": null,
-    "content_text": null,
-    "embed_uri": null,
-    "embed_cid": null,
-    "metadata": {
-      "word_count": 1694,
-      "reading_time": "9 min read",
-      "site_name": "simonwillison.net",
-      "cover_image": "https://static.simonwillison.net/static/2025/design-patterns-card.jpg",
-      "reading_progress": 1
-    }
-  },
-  {
     "id": "readwise:01k7n46vj342xjq1vazyv5e9gt",
     "type": "saved",
     "source": null,
@@ -104,60 +76,6 @@
       "reading_time": "7 min read",
       "site_name": "simonwillison.net",
       "cover_image": "https://static.simonwillison.net/static/2025/lethaltrifecta.jpg",
-      "reading_progress": 1
-    }
-  },
-  {
-    "id": "readwise:01k7n45f7fhpncez53sxs5y5m7",
-    "type": "saved",
-    "source": null,
-    "timestamp": "2025-10-15T23:44:26.351000+00:00",
-    "title": "LLMs’ Data-Control Path Insecurity",
-    "summary": "Mixing data and commands makes LLMs easy to fool. Prompt injection lets attackers turn inputs into instructions. Until we separate data and control, LLMs will stay vulnerable.",
-    "url": "https://cacm.acm.org/opinion/llms-data-control-path-insecurity/",
-    "canonical_url": "https://cacm.acm.org/opinion/llms-data-control-path-insecurity/",
-    "author": "Bruce Schneier",
-    "tags": [
-      "ai",
-      "sec",
-      "tech"
-    ],
-    "media": [],
-    "content_html": null,
-    "content_text": null,
-    "embed_uri": null,
-    "embed_cid": null,
-    "metadata": {
-      "word_count": 1093,
-      "reading_time": "6 min read",
-      "site_name": "Association for Computing Machinery"
-    }
-  },
-  {
-    "id": "readwise:01k7n3yy1731yz1mrw88dhwgfq",
-    "type": "saved",
-    "source": null,
-    "timestamp": "2025-10-15T23:40:52.135000+00:00",
-    "title": "Abusing Notion’s AI Agent for Data Theft",
-    "summary": "Notion’s new AI agents can be tricked into stealing private data using hidden commands in files. The AI cannot tell the difference between safe instructions and harmful ones, so it may send confidential information to attackers. This shows a big security problem with AI agents that many developers are ignoring.",
-    "url": "https://www.schneier.com/blog/archives/2025/09/abusing-notions-ai-agent-for-data-theft.html",
-    "canonical_url": "https://www.schneier.com/blog/archives/2025/09/abusing-notions-ai-agent-for-data-theft.html",
-    "author": "Bruce Schneier",
-    "tags": [
-      "ai",
-      "sec",
-      "tech",
-      "prodsec"
-    ],
-    "media": [],
-    "content_html": null,
-    "content_text": null,
-    "embed_uri": null,
-    "embed_cid": null,
-    "metadata": {
-      "word_count": 407,
-      "reading_time": "3 min read",
-      "site_name": "Schneier on Security",
       "reading_progress": 1
     }
   },
