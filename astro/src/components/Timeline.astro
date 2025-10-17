@@ -220,6 +220,7 @@ const typeDisplayName = (type: string) => {
   const panelSource = document.getElementById('panel-source')! as HTMLAnchorElement;
   const closeBtn = document.getElementById('panel-close')!;
   const backdrop = document.getElementById('panel-backdrop')!;
+  const swipeIndicator = document.getElementById('swipe-indicator')!;
   const isMobile = () => window.innerWidth <= 980;
 
   // Save intro content - ensure it's captured correctly
@@ -262,9 +263,11 @@ const typeDisplayName = (type: string) => {
       backdrop.removeAttribute('hidden');
       panel.classList.add('mobile-open');
       closeBtn.removeAttribute('hidden');
+      swipeIndicator.removeAttribute('hidden');
       lockScroll(true);
     } else {
       closeBtn.setAttribute('hidden', '');
+      swipeIndicator.setAttribute('hidden', '');
     }
 
     // Set title to metadata (type and timestamp)
@@ -318,6 +321,7 @@ const typeDisplayName = (type: string) => {
     if (isMobile()) {
       backdrop.setAttribute('hidden', '');
       panel.classList.remove('mobile-open');
+      swipeIndicator.setAttribute('hidden', '');
       lockScroll(false);
     }
     panelTitleText.textContent = 'About';
@@ -336,6 +340,53 @@ const typeDisplayName = (type: string) => {
       closePanel();
     }
   });
+
+  // Swipe down to close modal on mobile
+  let touchStartY = 0;
+  let touchStartTime = 0;
+  let isSwipeGesture = false;
+
+  panel.addEventListener('touchstart', (e) => {
+    if (!isMobile() || !panel.classList.contains('mobile-open')) return;
+    
+    touchStartY = e.touches[0].clientY;
+    touchStartTime = Date.now();
+    isSwipeGesture = false;
+  }, { passive: true });
+
+  panel.addEventListener('touchmove', (e) => {
+    if (!isMobile() || !panel.classList.contains('mobile-open')) return;
+    
+    const touchCurrentY = e.touches[0].clientY;
+    const deltaY = touchCurrentY - touchStartY;
+    const deltaTime = Date.now() - touchStartTime;
+    
+    // Check if this is a downward swipe gesture
+    if (deltaY > 50 && deltaTime < 500) {
+      isSwipeGesture = true;
+      // Add visual feedback by slightly moving the panel down
+      const translateY = Math.min(deltaY * 0.3, 100);
+      panel.style.transform = `translateY(${translateY}px)`;
+    }
+  }, { passive: true });
+
+  panel.addEventListener('touchend', (e) => {
+    if (!isMobile() || !panel.classList.contains('mobile-open')) return;
+    
+    const touchEndY = e.changedTouches[0].clientY;
+    const deltaY = touchEndY - touchStartY;
+    const deltaTime = Date.now() - touchStartTime;
+    
+    // Reset transform
+    panel.style.transform = '';
+    
+    // Close if it's a valid swipe down gesture
+    if (isSwipeGesture && deltaY > 100 && deltaTime < 500) {
+      closePanel();
+    }
+    
+    isSwipeGesture = false;
+  }, { passive: true });
 
   // Add click handlers to all cards
   document.querySelectorAll('.card').forEach((btn) => {
