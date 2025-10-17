@@ -186,6 +186,7 @@ const allHashtags = Object.entries(hashtagCounts)
 
   <div class="backdrop" id="panel-backdrop" hidden></div>
   <aside class="panel" id="detail-panel" role="complementary" aria-labelledby="panel-title">
+    <div class="swipe-indicator" id="swipe-indicator" hidden></div>
     <header class="panel-header">
       <h2 id="panel-title">
         <span id="panel-title-text">About</span>
@@ -341,6 +342,7 @@ const allHashtags = Object.entries(hashtagCounts)
   .detail-metadata { margin-top: 16px; padding-top: 12px; border-top: 1px solid var(--border); color: var(--muted); font-size: 14px; font-family: system-ui, sans-serif; }
   .detail-content img { max-width: 100%; height: auto; border-radius: 8px; margin: 12px 0; border: 1px solid var(--border); }
   .backdrop { display: none; position: fixed; inset: 0; background: rgba(61, 40, 23, 0.6); backdrop-filter: blur(4px); z-index: 99; }
+  .swipe-indicator { display: none; }
 
   @media (max-width: 980px) {
     main { display: block; }
@@ -348,6 +350,15 @@ const allHashtags = Object.entries(hashtagCounts)
     .panel { position: fixed; inset: auto 0 0 0; height: 80dvh; border-radius: 20px 20px 0 0; z-index: 100; transform: translateY(100%); transition: transform 0.3s ease-out; }
     .panel.mobile-open { transform: translateY(0); }
     .backdrop:not([hidden]) { display: block; }
+    .swipe-indicator { 
+      display: block; 
+      width: 40px; 
+      height: 4px; 
+      background: var(--muted); 
+      border-radius: 2px; 
+      margin: 12px auto 8px; 
+      opacity: 0.6; 
+    }
   }
   
   @media (max-width: 640px) {
