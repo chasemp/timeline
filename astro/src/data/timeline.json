@@ -1,5 +1,64 @@
 [
   {
+    "id": "bluesky:3m3hzvqlsec2y",
+    "type": "bluesky",
+    "source": null,
+    "timestamp": "2025-10-18T14:50:08.258Z",
+    "title": " 📷",
+    "summary": " [1 image]",
+    "url": "https://bsky.app/profile/chase523.bsky.social/post/3m3hzvqlsec2y",
+    "canonical_url": "https://bsky.app/profile/chase523.bsky.social/post/3m3hzvqlsec2y",
+    "author": null,
+    "tags": [],
+    "media": {
+      "type": "image",
+      "images": [
+        "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:7whslkj667kgto2x246o4stl/bafkreifny5p3jdpjgmwj3dun4opvglkwpeczwyw2uvy5h5usgzfnivezjy@jpeg"
+      ],
+      "alt": [
+        ""
+      ]
+    },
+    "content_html": "<p></p><img src=\"https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:7whslkj667kgto2x246o4stl/bafkreifny5p3jdpjgmwj3dun4opvglkwpeczwyw2uvy5h5usgzfnivezjy@jpeg\" alt=\"Image from post\" style=\"max-width: 100%; margin: 12px 0; border-radius: 8px;\">",
+    "content_text": null,
+    "embed_uri": "at://did:plc:7whslkj667kgto2x246o4stl/app.bsky.feed.post/3m3hzvqlsec2y",
+    "embed_cid": "bafyreicvzpho62bembmeyh4sdphv7r3ss53syveadgbhe5igh7uwdoxymy",
+    "metadata": {
+      "likes": 0,
+      "reposts": 0,
+      "replies": 0
+    }
+  },
+  {
+    "id": "readwise:01k7tsqkrr2n56mqwzknzmehdx",
+    "type": "saved",
+    "source": null,
+    "timestamp": "2025-10-18T04:37:33.080000+00:00",
+    "title": "You Cannot Outsource Understanding",
+    "summary": "Businesses cannot remove developers without losing the understanding needed to build and maintain software. Tools like outsourcing, no-code, or AI can speed work but cannot replace comprehension. Design platforms and practices that amplify developers' context and collaboration instead of trying to eliminate them.",
+    "url": "https://russmiles.substack.com/p/you-cannot-outsource-understanding",
+    "canonical_url": "https://russmiles.substack.com/p/you-cannot-outsource-understanding",
+    "author": "Russ Miles",
+    "tags": [
+      "ai",
+      "tech",
+      "classic",
+      "software"
+    ],
+    "media": [],
+    "content_html": null,
+    "content_text": null,
+    "embed_uri": null,
+    "embed_cid": null,
+    "metadata": {
+      "word_count": 1030,
+      "reading_time": "6 min read",
+      "site_name": "A Space to Think: Notes on Software Development",
+      "cover_image": "https://substackcdn.com/image/fetch/$s_!9hR8!,w_1200,h_600,c_fill,f_jpg,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fbaac74c8-e2d3-4d54-8a56-f7b40ddf2cfc_1536x1024.png",
+      "reading_progress": 0.9684378854451415
+    }
+  },
+  {
     "id": "bluesky:3m3dez467ek2z",
     "type": "bluesky",
     "source": null,

@@ -1,5 +1,28 @@
 [
   {
+    "id": "readwise:01k7tsqkrr2n56mqwzknzmehdx",
+    "type": "saved",
+    "timestamp": "2025-10-18T04:37:33.080000+00:00",
+    "title": "You Cannot Outsource Understanding",
+    "summary": "Businesses cannot remove developers without losing the understanding needed to build and maintain software. Tools like outsourcing, no-code, or AI can speed work but cannot replace comprehension. Design platforms and practices that amplify developers' context and collaboration instead of trying to eliminate them.",
+    "url": "https://russmiles.substack.com/p/you-cannot-outsource-understanding",
+    "canonical_url": "https://russmiles.substack.com/p/you-cannot-outsource-understanding",
+    "author": "Russ Miles",
+    "tags": [
+      "ai",
+      "tech",
+      "classic",
+      "software"
+    ],
+    "metadata": {
+      "word_count": 1030,
+      "reading_time": "6 min read",
+      "site_name": "A Space to Think: Notes on Software Development",
+      "cover_image": "https://substackcdn.com/image/fetch/$s_!9hR8!,w_1200,h_600,c_fill,f_jpg,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fbaac74c8-e2d3-4d54-8a56-f7b40ddf2cfc_1536x1024.png",
+      "reading_progress": 0.9684378854451415
+    }
+  },
+  {
     "id": "readwise:01k7q2ny56117c21fvkkrar2zv",
     "type": "saved",
     "timestamp": "2025-10-16T17:56:57.548000+00:00",
