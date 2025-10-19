@@ -1,5 +1,24 @@
 [
   {
+    "id": "readwise:01k7wekn44bq4bjcs47mme7eha",
+    "type": "saved",
+    "timestamp": "2025-10-18T20:01:37.924000+00:00",
+    "title": "New Stuff",
+    "summary": "Gary Larson shares that \"New Stuff\" is not a return to daily cartoons, but rather a new exploration in digital art. After retiring from cartooning, he discovered the joy of drawing again when he tried a digital tablet. This collection reflects his journey of experimenting and having fun without the pressure of deadlines.",
+    "url": "https://www.thefarside.com/new-stuff",
+    "canonical_url": "https://www.thefarside.com/new-stuff",
+    "author": "TheFarSide.com",
+    "tags": [
+      "classic"
+    ],
+    "metadata": {
+      "word_count": 561,
+      "reading_time": "3 min read",
+      "site_name": "TheFarSide.com",
+      "cover_image": "https://assets.thefarside.com/assets/packs/media/images/brand/logo/tfs-share-default-a7b076808488053c10116ff0605a39a1.jpg"
+    }
+  },
+  {
     "id": "readwise:01k7tsqkrr2n56mqwzknzmehdx",
     "type": "saved",
     "timestamp": "2025-10-18T04:37:33.080000+00:00",
