@@ -1,5 +1,85 @@
 [
   {
+    "id": "readwise:01k80xhbfe6sss66gxb8p7ywr2",
+    "type": "saved",
+    "source": null,
+    "timestamp": "2025-10-20T13:39:28.878000+00:00",
+    "title": "Ethereum: A Next-Generation Smart Contract And Decentralized Application Platform",
+    "summary": "Ethereum is a blockchain platform that expands on Bitcoin's decentralized digital currency concept by introducing a proof of work-based blockchain for public transaction agreement. It aims to facilitate smart contracts, digital assets, decentralized exchange, and more through a Turing-complete programming language embedded in the blockchain. Ethereum's system of accounts and code execution enables a wide range of applications, from financial derivatives to decentralized governance. By merging scripting, altcoins, and meta-protocols, Ethereum provides a versatile framework for creating consensus-based applications with enhanced scalability and interoperability.",
+    "url": "https://ethereum.org/content/whitepaper/whitepaper-pdf/Ethereum_Whitepaper_-_Buterin_2014.pdf",
+    "canonical_url": "https://ethereum.org/content/whitepaper/whitepaper-pdf/Ethereum_Whitepaper_-_Buterin_2014.pdf",
+    "author": "Vitalik Buterin",
+    "tags": [
+      "alt",
+      "tech",
+      "web3",
+      "fodder",
+      "classic"
+    ],
+    "media": [],
+    "content_html": null,
+    "content_text": null,
+    "embed_uri": null,
+    "embed_cid": null,
+    "metadata": {
+      "word_count": 13267,
+      "reading_time": "67 min read",
+      "site_name": "readwise-upload-pdf",
+      "cover_image": "https://readwise-assets.s3.amazonaws.com/media/reader/parsed_document_assets/1819822/_ra-ASGi_eUFT_lWZO4jCzF--AAMyiZ7MK3mJ2fkL-0-cover-1819822.png",
+      "reading_progress": 0.027777777777777776
+    }
+  },
+  {
+    "id": "readwise:01k80x1fmq6knbg490f57b52m7",
+    "type": "saved",
+    "source": null,
+    "timestamp": "2025-10-20T13:30:48.854000+00:00",
+    "title": "A Cypherpunk's Manifesto",
+    "summary": "Privacy means choosing what to share and keeping other things hidden. To protect privacy, we need anonymous systems and strong cryptography. Cypherpunks build and share tools to defend privacy because no one else will do it for us.",
+    "url": "https://www.activism.net/cypherpunk/manifesto.html",
+    "canonical_url": "https://www.activism.net/cypherpunk/manifesto.html",
+    "author": "Eric Hughes",
+    "tags": [
+      "sec",
+      "tech",
+      "web3",
+      "classic"
+    ],
+    "media": [],
+    "content_html": null,
+    "content_text": null,
+    "embed_uri": null,
+    "embed_cid": null,
+    "metadata": {
+      "word_count": 863,
+      "reading_time": "5 min read",
+      "site_name": "activism.net",
+      "reading_progress": 1
+    }
+  },
+  {
+    "id": "blog:walden-pond",
+    "type": "blog",
+    "source": "markdown",
+    "timestamp": "2025-10-20T00:00:00.000Z",
+    "title": "Walden Pond",
+    "summary": "",
+    "url": "/Blog/walden-pond/",
+    "canonical_url": "/Blog/walden-pond/",
+    "author": null,
+    "tags": [
+      "Nature",
+      "History",
+      "Literature"
+    ],
+    "media": [],
+    "content_html": "<p><img src=\"https://upload.wikimedia.org/wikipedia/commons/b/bc/Walden_Pond%2C_2010.jpg\" alt=\"Walden Pond, photographed in 2010\"></p>\n<p><a href=\"https://en.wikipedia.org/wiki/File:Walden_Pond,_2010.jpg\">Walden Pond</a> - A tranquil body of water in Concord, Massachusetts, made famous by Henry David Thoreau&#39;s 1854 book &quot;Walden; or, Life in the Woods.&quot; </p>\n<p>Thoreau lived in a small cabin near this pond for two years, two months, and two days, using his time there to reflect on simple living in natural surroundings. The experience became the basis for one of America&#39;s most influential works of literature and philosophy.</p>\n<p>Today, Walden Pond is a National Historic Landmark and a popular destination for those seeking connection with nature and literary history.</p>\n<hr>\n<p><em>Photo: <a href=\"https://commons.wikimedia.org/wiki/File:Walden_Pond,_2010.jpg\">Walden Pond, 2010</a> by <a href=\"https://www.flickr.com/people/31902638@N06\">ptwo</a> from Flickr, licensed under <a href=\"https://creativecommons.org/licenses/by/2.0/\">CC BY 2.0</a></em></p>\n",
+    "content_text": null,
+    "embed_uri": null,
+    "embed_cid": null,
+    "metadata": null
+  },
+  {
     "id": "bluesky:3m3ilfgmjnc23",
     "type": "bluesky",
     "source": null,
