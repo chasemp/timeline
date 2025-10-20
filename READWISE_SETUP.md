@@ -20,6 +20,9 @@ export READWISE_TOKEN="your_token_here"
 # Optional: Filter by tag
 export READWISE_TAG_FILTER="timeline"
 
+# Optional: Force full fetch (fetch all documents instead of delta)
+export READWISE_FULL_FETCH="true"
+
 # Run the fetch
 cd astro
 npm run fetch:readwise
@@ -30,6 +33,17 @@ Or run it inline:
 ```bash
 cd astro
 READWISE_TOKEN="your_token_here" npm run fetch:readwise
+```
+
+### Delta Fetching (Default)
+
+By default, the script performs **delta fetching** - it only fetches documents that have been updated since the last fetch. This significantly reduces API calls and speeds up the process.
+
+To force a full fetch of all documents (useful for initial setup or when troubleshooting):
+
+```bash
+cd astro
+READWISE_TOKEN="your_token_here" READWISE_FULL_FETCH="true" npm run fetch:readwise
 ```
 
 ## GitHub Actions (Automated)
@@ -43,26 +57,35 @@ READWISE_TOKEN="your_token_here" npm run fetch:readwise
 5. Value: Paste your token from https://readwise.io/access_token
 6. Click **Add secret**
 
-### 2. (Optional) Add Tag Filter
+### 2. (Optional) Add Configuration Variables
 
-If you want to only fetch articles with a specific tag:
+If you want to customize the fetch behavior, add repository variables:
 
-1. Same steps as above
-2. Name: `READWISE_TAG_FILTER`
-3. Value: Your tag name (e.g., `timeline`)
+1. Go to your repository settings
+2. Click **Settings** → **Secrets and variables** → **Actions** → **Variables** tab
+3. Add these optional variables:
+   - **`READWISE_TAG_FILTER`**: Only fetch documents with specific tag (e.g., `classic`)
+   - **`READWISE_FULL_FETCH`**: Set to `true` to force full fetch instead of delta (rarely needed)
 
-### 3. Update Workflow (Already Done!)
+### 3. Delta Fetching (Default Behavior)
 
-The workflow in `.github/workflows/fetch-timeline.yml` already references `READWISE_TOKEN`:
+The workflow in `.github/workflows/fetch-timeline.yml` uses delta fetching by default:
 
 ```yaml
-- name: Fetch Readwise (optional)
+- name: Fetch Readwise Reader (optional)
   working-directory: ./astro
   run: npm run fetch:readwise || echo "Readwise fetch failed or skipped"
   env:
     READWISE_TOKEN: ${{ secrets.READWISE_TOKEN }}
-    READWISE_TAG_FILTER: ${{ secrets.READWISE_TAG_FILTER }}
+    READWISE_TAG_FILTER: ${{ vars.READWISE_TAG_FILTER }}
+    # Delta fetching by default (only new/updated docs). Set READWISE_FULL_FETCH=true to fetch all.
+    READWISE_FULL_FETCH: ${{ vars.READWISE_FULL_FETCH }}
 ```
+
+**How it works in GitHub Actions:**
+- By default, only fetches documents updated since the last run (delta fetch)
+- Significantly reduces API calls and execution time
+- To force a full fetch, set the `READWISE_FULL_FETCH` repository variable to `true`
 
 ## Using Tag Filters
 
@@ -99,7 +122,14 @@ The Readwise API has rate limits:
 - **20 requests per minute** for list endpoints
 - The script automatically handles this with delays
 
-For large libraries, the initial fetch may take several minutes.
+### Delta Fetching Optimization
+
+To avoid rate limits and speed up fetches, the script now performs **delta fetching by default**:
+- Only fetches documents updated since the last fetch
+- Drastically reduces API calls (from 1200+ documents to just a handful)
+- Avoids hitting rate limits during regular updates
+
+For the **initial setup** or when you need to rebuild from scratch, set `READWISE_FULL_FETCH=true` to fetch all documents. This may take several minutes for large libraries (100+ documents).
 
 ## Troubleshooting
 
@@ -129,7 +159,24 @@ Fetched documents are stored in:
 - `astro/data/sources/readwise.json` (raw Readwise Reader data)
 - `astro/src/data/timeline.json` (merged timeline data)
 
-The script only fetches NEW or UPDATED documents on subsequent runs (incremental updates).
+### Fetch Modes
+
+**Delta Fetch (Default)**:
+- Only fetches documents updated since the most recent entry in your existing data
+- Preserves all existing entries and merges in new/updated ones
+- Fast and efficient for regular updates
+- Automatically enabled when existing data is found
+
+**Full Fetch**:
+- Fetches ALL documents from your Readwise Reader library
+- Useful for initial setup or troubleshooting
+- Enabled by setting `READWISE_FULL_FETCH=true`
+- Takes longer but ensures complete data sync
+
+The script automatically chooses the appropriate mode:
+- If no existing data exists → Full fetch
+- If `READWISE_FULL_FETCH=true` → Full fetch
+- Otherwise → Delta fetch (recommended)
 
 ## API Differences: Reader vs Classic Readwise
 
