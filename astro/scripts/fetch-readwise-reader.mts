@@ -214,13 +214,14 @@ function loadExistingEntries(): TimelineEntry[] {
 /**
  * Get the latest timestamp from existing entries
  * Returns ISO string or undefined if no entries exist
+ * Caps at 30 days ago maximum to avoid fetching too much history
  */
 function getLatestTimestamp(entries: TimelineEntry[]): string | undefined {
   if (entries.length === 0) {
     return undefined;
   }
   
-  // Find the most recent timestamp
+  // Find the most recent timestamp from existing entries
   const latest = entries.reduce((max, entry) => {
     const entryTime = new Date(entry.timestamp).getTime();
     return entryTime > max ? entryTime : max;
@@ -230,8 +231,18 @@ function getLatestTimestamp(entries: TimelineEntry[]): string | undefined {
     return undefined;
   }
   
+  // Cap at 30 days ago maximum
+  const thirtyDaysAgo = Date.now() - (30 * 24 * 60 * 60 * 1000);
+  const fetchFromTime = Math.max(latest, thirtyDaysAgo);
+  
   // Return ISO string
-  return new Date(latest).toISOString();
+  const fetchDate = new Date(fetchFromTime).toISOString();
+  
+  // Log how far back we're fetching
+  const daysBack = Math.ceil((Date.now() - fetchFromTime) / (24 * 60 * 60 * 1000));
+  console.log(`   Last published article was ${daysBack} day(s) ago`);
+  
+  return fetchDate;
 }
 
 /**
