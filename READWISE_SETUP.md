@@ -37,7 +37,13 @@ READWISE_TOKEN="your_token_here" npm run fetch:readwise
 
 ### Delta Fetching (Default)
 
-By default, the script performs **delta fetching** - it only fetches documents that have been updated since the last fetch. This significantly reduces API calls and speeds up the process.
+By default, the script performs **delta fetching** - it only fetches documents updated since your last **published** Readwise article in the timeline:
+
+- If your last published article was 4 hours ago → fetches the last 4 hours
+- If your last published article was 2 days ago → fetches the last 2 days  
+- Maximum lookback: 30 days (to avoid excessive API calls after long gaps)
+
+This significantly reduces API calls and speeds up the process.
 
 To force a full fetch of all documents (useful for initial setup or when troubleshooting):
 
@@ -83,7 +89,9 @@ The workflow in `.github/workflows/fetch-timeline.yml` uses delta fetching by de
 ```
 
 **How it works in GitHub Actions:**
-- By default, only fetches documents updated since the last run (delta fetch)
+- By default, only fetches documents updated since your last published article (delta fetch)
+- Adapts to your publishing frequency: recent activity = shorter fetch window
+- Capped at 30 days maximum lookback
 - Significantly reduces API calls and execution time
 - To force a full fetch, set the `READWISE_FULL_FETCH` repository variable to `true`
 
@@ -125,7 +133,9 @@ The Readwise API has rate limits:
 ### Delta Fetching Optimization
 
 To avoid rate limits and speed up fetches, the script now performs **delta fetching by default**:
-- Only fetches documents updated since the last fetch
+- Only fetches documents updated since your last **published** Readwise article
+- Automatically adapts: 4 hours old? Fetches 4 hours. 2 days old? Fetches 2 days.
+- Capped at 30 days maximum to prevent excessive fetching after long gaps
 - Drastically reduces API calls (from 1200+ documents to just a handful)
 - Avoids hitting rate limits during regular updates
 
@@ -162,7 +172,9 @@ Fetched documents are stored in:
 ### Fetch Modes
 
 **Delta Fetch (Default)**:
-- Only fetches documents updated since the most recent entry in your existing data
+- Fetches documents updated since your last **published** Readwise article timestamp
+- Example: Last article was 4 hours ago → fetches documents from the last 4 hours
+- Capped at 30 days maximum to avoid excessive fetching after long periods
 - Preserves all existing entries and merges in new/updated ones
 - Fast and efficient for regular updates
 - Automatically enabled when existing data is found
@@ -176,7 +188,7 @@ Fetched documents are stored in:
 The script automatically chooses the appropriate mode:
 - If no existing data exists → Full fetch
 - If `READWISE_FULL_FETCH=true` → Full fetch
-- Otherwise → Delta fetch (recommended)
+- Otherwise → Delta fetch (recommended, based on last published article date)
 
 ## API Differences: Reader vs Classic Readwise
 
