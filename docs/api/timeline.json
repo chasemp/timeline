@@ -3,17 +3,124 @@
     "title": "Chase Pettet's Timeline",
     "description": "A timeline of my public online activity",
     "site": "https://timeline.523.life",
-    "total_items": 117,
-    "generated_at": "2025-10-20T15:26:41.355Z",
+    "total_items": 121,
+    "generated_at": "2025-10-21T12:45:18.244Z",
     "types": [
       "saved",
-      "blog",
       "bluesky",
+      "blog",
       "release",
       "wikipedia"
     ]
   },
   "items": [
+    {
+      "id": "readwise:01k83bajsy1qgtwn244t5bspp0",
+      "type": "saved",
+      "source": null,
+      "timestamp": "2025-10-21T12:18:55.934000+00:00",
+      "title": "Allen Holub’s Post",
+      "summary": "Continuous, in-context code review while writing (pairing or mobbing) beats PR-driven reviews.  \nPR reviews create bottlenecks, miss real issues, and add cost and delay.  \nReviewing as you use code leads to faster delivery, fewer bugs, and ongoing refactoring.",
+      "url": "https://www.linkedin.com/posts/allenholub_last-night-i-was-chatting-in-the-hotel-bar-activity-7380212143343820800-NEU-?utm_source=share&utm_medium=member_android&rcm=ACoAABA7PwgB0iKxrYkDf2yq5phKyiYm5EjipwM",
+      "canonical_url": "https://www.linkedin.com/posts/allenholub_last-night-i-was-chatting-in-the-hotel-bar-activity-7380212143343820800-NEU-?utm_source=share&utm_medium=member_android&rcm=ACoAABA7PwgB0iKxrYkDf2yq5phKyiYm5EjipwM",
+      "author": "Allen Holub",
+      "tags": [
+        "tech",
+        "classic",
+        "prodsec",
+        "software"
+      ],
+      "media": [],
+      "content_html": null,
+      "content_text": null,
+      "embed_uri": null,
+      "embed_cid": null,
+      "metadata": {
+        "word_count": 422,
+        "reading_time": "3 min read",
+        "site_name": "linkedin.com",
+        "cover_image": "https://static.licdn.com/aero-v1/sc/h/c45fy346jw096z9pbphyyhdz7"
+      }
+    },
+    {
+      "id": "bluesky:3m3pbwfguus2g",
+      "type": "bluesky",
+      "source": null,
+      "timestamp": "2025-10-21T12:02:18.225Z",
+      "title": " 📷",
+      "summary": " [1 image]",
+      "url": "https://bsky.app/profile/chase523.bsky.social/post/3m3pbwfguus2g",
+      "canonical_url": "https://bsky.app/profile/chase523.bsky.social/post/3m3pbwfguus2g",
+      "author": null,
+      "tags": [],
+      "media": {
+        "type": "image",
+        "images": [
+          "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:7whslkj667kgto2x246o4stl/bafkreie247bvh5aoggqj6duukgxnban46457sn2efgstmkzkq64yxkhw7e@jpeg"
+        ],
+        "alt": [
+          ""
+        ]
+      },
+      "content_html": "<p></p><img src=\"https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:7whslkj667kgto2x246o4stl/bafkreie247bvh5aoggqj6duukgxnban46457sn2efgstmkzkq64yxkhw7e@jpeg\" alt=\"Image from post\" style=\"max-width: 100%; margin: 12px 0; border-radius: 8px;\">",
+      "content_text": null,
+      "embed_uri": "at://did:plc:7whslkj667kgto2x246o4stl/app.bsky.feed.post/3m3pbwfguus2g",
+      "embed_cid": "bafyreidy6ub22cl2amieuffax6npejfk6fkngc53owbfyllixc4jkflglq",
+      "metadata": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 0
+      }
+    },
+    {
+      "id": "readwise:01k83a8j8n1pps815gq14eg02b",
+      "type": "saved",
+      "source": null,
+      "timestamp": "2025-10-21T12:00:21.270000+00:00",
+      "title": "Old Age Gets Up",
+      "summary": "Old age wakes with tired thoughts and fading memory. It leans on familiar things and moves slowly. It gathers itself to face the coming end.",
+      "url": "https://mypoeticside.com/show-classic-poem-13617",
+      "canonical_url": "https://mypoeticside.com/show-classic-poem-13617",
+      "author": "mypoeticside.com",
+      "tags": [
+        "classic"
+      ],
+      "media": [],
+      "content_html": null,
+      "content_text": null,
+      "embed_uri": null,
+      "embed_cid": null,
+      "metadata": {
+        "word_count": 121,
+        "reading_time": "1 min read",
+        "site_name": "mypoeticside.com",
+        "reading_progress": 1
+      }
+    },
+    {
+      "id": "readwise:01k8390sqfcxsh0xyq5kazdxej",
+      "type": "saved",
+      "source": null,
+      "timestamp": "2025-10-21T11:38:38.116000+00:00",
+      "title": "What I learned from President Obama | Jon Favreau (speechwriter) | UCD Literary & Historical Society",
+      "summary": "Jon Favreau learned from Obama that honest storytelling makes politics feel real and can inspire hope.  \nObama taught him to write with authenticity and to use specific personal stories.  \nThose stories connect people, remind them of progress, and push them to act.",
+      "url": "https://www.youtube.com/watch?si=yH6aBAxIizCpqfaR&v=r3560y2LKMU&feature=youtu.be",
+      "canonical_url": "https://www.youtube.com/watch?si=yH6aBAxIizCpqfaR&v=r3560y2LKMU&feature=youtu.be",
+      "author": "UCD - University College Dublin",
+      "tags": [
+        "watch",
+        "classic"
+      ],
+      "media": [],
+      "content_html": null,
+      "content_text": null,
+      "embed_uri": null,
+      "embed_cid": null,
+      "metadata": {
+        "site_name": "YouTube",
+        "cover_image": "https://i.ytimg.com/vi/r3560y2LKMU/maxresdefault.jpg"
+      }
+    },
     {
       "id": "readwise:01k80xhbfe6sss66gxb8p7ywr2",
       "type": "saved",
