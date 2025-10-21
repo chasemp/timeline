@@ -1,5 +1,64 @@
 [
   {
+    "id": "readwise:01k83bajsy1qgtwn244t5bspp0",
+    "type": "saved",
+    "timestamp": "2025-10-21T12:18:55.934000+00:00",
+    "title": "Allen Holub’s Post",
+    "summary": "Continuous, in-context code review while writing (pairing or mobbing) beats PR-driven reviews.  \nPR reviews create bottlenecks, miss real issues, and add cost and delay.  \nReviewing as you use code leads to faster delivery, fewer bugs, and ongoing refactoring.",
+    "url": "https://www.linkedin.com/posts/allenholub_last-night-i-was-chatting-in-the-hotel-bar-activity-7380212143343820800-NEU-?utm_source=share&utm_medium=member_android&rcm=ACoAABA7PwgB0iKxrYkDf2yq5phKyiYm5EjipwM",
+    "canonical_url": "https://www.linkedin.com/posts/allenholub_last-night-i-was-chatting-in-the-hotel-bar-activity-7380212143343820800-NEU-?utm_source=share&utm_medium=member_android&rcm=ACoAABA7PwgB0iKxrYkDf2yq5phKyiYm5EjipwM",
+    "author": "Allen Holub",
+    "tags": [
+      "tech",
+      "classic",
+      "prodsec",
+      "software"
+    ],
+    "metadata": {
+      "word_count": 422,
+      "reading_time": "3 min read",
+      "site_name": "linkedin.com",
+      "cover_image": "https://static.licdn.com/aero-v1/sc/h/c45fy346jw096z9pbphyyhdz7"
+    }
+  },
+  {
+    "id": "readwise:01k83a8j8n1pps815gq14eg02b",
+    "type": "saved",
+    "timestamp": "2025-10-21T12:00:21.270000+00:00",
+    "title": "Old Age Gets Up",
+    "summary": "Old age wakes with tired thoughts and fading memory. It leans on familiar things and moves slowly. It gathers itself to face the coming end.",
+    "url": "https://mypoeticside.com/show-classic-poem-13617",
+    "canonical_url": "https://mypoeticside.com/show-classic-poem-13617",
+    "author": "mypoeticside.com",
+    "tags": [
+      "classic"
+    ],
+    "metadata": {
+      "word_count": 121,
+      "reading_time": "1 min read",
+      "site_name": "mypoeticside.com",
+      "reading_progress": 1
+    }
+  },
+  {
+    "id": "readwise:01k8390sqfcxsh0xyq5kazdxej",
+    "type": "saved",
+    "timestamp": "2025-10-21T11:38:38.116000+00:00",
+    "title": "What I learned from President Obama | Jon Favreau (speechwriter) | UCD Literary & Historical Society",
+    "summary": "Jon Favreau learned from Obama that honest storytelling makes politics feel real and can inspire hope.  \nObama taught him to write with authenticity and to use specific personal stories.  \nThose stories connect people, remind them of progress, and push them to act.",
+    "url": "https://www.youtube.com/watch?si=yH6aBAxIizCpqfaR&v=r3560y2LKMU&feature=youtu.be",
+    "canonical_url": "https://www.youtube.com/watch?si=yH6aBAxIizCpqfaR&v=r3560y2LKMU&feature=youtu.be",
+    "author": "UCD - University College Dublin",
+    "tags": [
+      "watch",
+      "classic"
+    ],
+    "metadata": {
+      "site_name": "YouTube",
+      "cover_image": "https://i.ytimg.com/vi/r3560y2LKMU/maxresdefault.jpg"
+    }
+  },
+  {
     "id": "readwise:01k80xhbfe6sss66gxb8p7ywr2",
     "type": "saved",
     "timestamp": "2025-10-20T13:39:28.878000+00:00",
