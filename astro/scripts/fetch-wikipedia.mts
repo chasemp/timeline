@@ -7,7 +7,7 @@ const __dirname = dirname(__filename);
 
 interface TimelineEntry {
   id: string;
-  type: 'wikipedia';
+  type: 'contributions';
   timestamp: string;
   title: string;
   summary: string;
@@ -80,7 +80,7 @@ function convertToTimelineEntry(contrib: any): TimelineEntry {
   
   return {
     id: `wikipedia:${contrib.revid}`,
-    type: 'wikipedia',
+    type: 'contributions',
     timestamp: timestamp,
     title: title,
     summary: summary.substring(0, 200),

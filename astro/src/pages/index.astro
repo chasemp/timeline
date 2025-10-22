@@ -4,7 +4,7 @@ import Timeline from "../components/Timeline.astro";
 import timeline from "../data/timeline.json";
 
 const items = (timeline as any[]);
-const VERSION = "1.2.4"; // Removed camera emoji, larger image previews for Bluesky posts
+const VERSION = "1.2.5"; // Renamed Wikipedia to Contributions for broader scope
 
 // Extract hashtags from timeline items
 function extractHashtags(text: string): string[] {
@@ -176,7 +176,7 @@ const allHashtags = Object.entries(hashtagCounts)
           <label title="Bookmarks from Readwise"><input type="checkbox" name="type" value="saved" checked> Read</label>
           <label title="Social media posts and thoughts"><input type="checkbox" name="type" value="bluesky" checked> Bluesky</label>
           <label title="GitHub project releases and tags"><input type="checkbox" name="type" value="release" checked> Releases</label>
-          <label title="Contributions to Wikipedia"><input type="checkbox" name="type" value="wikipedia" checked> Wikipedia</label>
+          <label title="Contributions to Wikipedia and other platforms"><input type="checkbox" name="type" value="wikipedia" checked> Contributions</label>
         </div>
       </div>
     </section>
@@ -204,7 +204,7 @@ const allHashtags = Object.entries(hashtagCounts)
           <li><span class="legend-dot" data-dot-type="saved"></span> <strong>Read</strong> — Bookmarks from Readwise</li>
           <li><span class="legend-dot" data-dot-type="bluesky"></span> <strong>Bluesky</strong> — Social media posts and thoughts</li>
           <li><span class="legend-dot" data-dot-type="release"></span> <strong>Releases</strong> — GitHub project releases and tags</li>
-          <li><span class="legend-dot" data-dot-type="wikipedia"></span> <strong>Wikipedia</strong> — Contributions to Wikipedia</li>
+          <li><span class="legend-dot" data-dot-type="wikipedia"></span> <strong>Contributions</strong> — Wikipedia and other contributions</li>
         </ul>
         
         <h4>How to Use</h4>

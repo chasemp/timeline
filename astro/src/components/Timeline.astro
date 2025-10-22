@@ -10,7 +10,8 @@ const typeDisplayName = (type: string) => {
     'blog': 'Blog',
     'bluesky': 'Bluesky',
     'release': 'Release',
-    'wikipedia': 'Wikipedia'
+    'wikipedia': 'Contributions',
+    'contributions': 'Contributions'
   };
   return displayNames[type] || type.toUpperCase();
 };
@@ -108,12 +109,14 @@ const typeDisplayName = (type: string) => {
   .dot[data-dot-type="bluesky"]::after { content: "🦋"; position: absolute; top: -2px; left: -2px; font-size: 16px; opacity: 0; transition: opacity 0.2s; pointer-events: none; }
   .dot[data-dot-type="release"]::after { content: "🏷️"; position: absolute; top: -2px; left: -2px; font-size: 16px; opacity: 0; transition: opacity 0.2s; pointer-events: none; }
   .dot[data-dot-type="wikipedia"]::after { content: "🌐"; position: absolute; top: -2px; left: -2px; font-size: 16px; opacity: 0; transition: opacity 0.2s; pointer-events: none; }
+  .dot[data-dot-type="contributions"]::after { content: "🌐"; position: absolute; top: -2px; left: -2px; font-size: 16px; opacity: 0; transition: opacity 0.2s; pointer-events: none; }
   .dot:hover::after { opacity: 1; }
   .dot[data-dot-type="blog"] { background: #5d4037; color: #5d4037; }
   .dot[data-dot-type="saved"] { background: #7cb342; color: #7cb342; }
   .dot[data-dot-type="bluesky"] { background: #1e88e5; color: #1e88e5; }
   .dot[data-dot-type="release"] { background: #fb8c00; color: #fb8c00; }
   .dot[data-dot-type="wikipedia"] { background: #636466; color: #636466; }
+  .dot[data-dot-type="contributions"] { background: #636466; color: #636466; }
   
   /* Today marker styles */
   .today-marker { margin-bottom: 24px; }
@@ -446,11 +449,14 @@ const typeDisplayName = (type: string) => {
       'saved': '🔖',
       'bluesky': '🦋',
       'release': '🏷️',
-      'wikipedia': '🌐'
+      'wikipedia': '🌐',
+      'contributions': '🌐'
     };
     
     const typeDisplayNames: Record<string, string> = {
-      'saved': 'Article Read'
+      'saved': 'Article Read',
+      'wikipedia': 'Contributions',
+      'contributions': 'Contributions'
     };
     
     const emoji = emojiMap[type] || '';

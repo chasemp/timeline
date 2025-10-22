@@ -39,3 +39,4 @@ astro/data/sources/linkedin-export/
 # Unlike typical /src → /docs patterns, we commit docs/ because GitHub Pages serves from it
 
 astro/.chrome-profile-linkedin/
+astro/.chrome-profile/
