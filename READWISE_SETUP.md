@@ -108,6 +108,24 @@ Tag filters are useful if you don't want ALL your Readwise articles on your time
 
 If you don't set `READWISE_TAG_FILTER`, all articles will be fetched.
 
+## Full Content Feature
+
+Articles tagged with "full" will have their complete content fetched and displayed instead of just the summary.
+
+### How to Use
+
+1. In Readwise Reader, tag articles you want to display in full with the tag "full"
+2. The script will automatically detect this tag and fetch the full article content
+3. The full content will be used as the summary in your timeline
+
+### Technical Details
+
+- Full content is fetched by making HTTP requests to the original article URLs
+- Content extraction removes HTML tags and scripts for clean text display
+- A 2-second delay is added between full content fetches to be respectful to target websites
+- Content is limited to 50,000 characters to prevent extremely long articles
+- If full content fetching fails, the script falls back to using the summary
+
 ## Testing Locally
 
 ```bash
@@ -162,6 +180,7 @@ You've hit the rate limit. The script should handle this automatically, but if y
 - **Content**: Document title, author, URL, notes, and reading progress
 - **Metadata**: Cover images, word count, reading time, site name
 - **Tags**: All tags are preserved for filtering (stored as objects in Reader API)
+- **Full Content**: Documents tagged with "full" will have their complete article content fetched and used instead of the summary
 
 ## Data Storage
 
