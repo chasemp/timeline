@@ -26,6 +26,7 @@ This project transforms my online history into an interactive timeline, replacin
 - Fetched via Readwise Reader API v3
 - Documents tagged with "classic" from all locations (archive, inbox, later)
 - Includes highlights and reading metadata
+- Documents tagged with "full" display complete article content instead of summary
 - Requires API token
 
 **Total Timeline Items:** 50
