@@ -37,7 +37,7 @@ interface BlueskyPost {
 
 interface TimelineEntry {
   id: string;
-  type: 'bluesky';
+  type: 'posts';
   timestamp: string;
   title: string;
   summary?: string;
@@ -166,7 +166,7 @@ function convertToTimelineEntry(post: BlueskyPost): TimelineEntry {
   
   return {
     id: `bluesky:${postId}`,
-    type: 'bluesky',
+    type: 'posts',
     timestamp: post.record.createdAt,
     title: title || 'Post',
     summary: summary,
