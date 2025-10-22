@@ -129,10 +129,7 @@ function convertToTimelineEntry(post: BlueskyPost): TimelineEntry {
         `<img src="${imgUrl}" alt="${alts[i] || 'Image from post'}" style="max-width: 100%; margin: 12px 0; border-radius: 8px;">`
       ).join('');
       
-      // If text is very short and there's an image, enhance the summary
-      if (text.length < 20 && images.length > 0) {
-        summary = `${text} [${images.length} image${images.length > 1 ? 's' : ''}]`;
-      }
+      // Remove image count text - we'll show the image preview instead
     } else if (embedType === 'app.bsky.embed.external#view') {
       // Extract external link preview
       const external = post.embed.external;
@@ -165,10 +162,7 @@ function convertToTimelineEntry(post: BlueskyPost): TimelineEntry {
   const firstLine = text.split('\n')[0];
   let title = firstLine.length > 60 ? firstLine.substring(0, 57) + '...' : firstLine;
   
-  // If title is very short and there's media, add indicator
-  if (title.length < 20 && media?.images && media.images.length > 0) {
-    title = `${title} 📷`;
-  }
+  // Remove camera emoji - we'll show the image preview instead
   
   return {
     id: `bluesky:${postId}`,
