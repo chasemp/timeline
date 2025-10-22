@@ -47,6 +47,7 @@ interface ReaderDocument {
   notes: string;
   reading_progress: number;
   saved_at: string;
+  content?: string; // Full content when available
 }
 
 interface TimelineEntry {
@@ -120,6 +121,52 @@ async function fetchDocuments(updatedAfter?: string): Promise<ReaderDocument[]> 
 }
 
 /**
+ * Fetch full content of an article from its source URL
+ * This is a simplified implementation that attempts to extract content
+ * For production use, you might want to use a more robust content extraction service
+ */
+async function fetchFullContent(sourceUrl: string): Promise<string | null> {
+  try {
+    console.log(`  Fetching full content from: ${sourceUrl}`);
+    
+    const response = await fetch(sourceUrl, {
+      headers: {
+        'User-Agent': 'Mozilla/5.0 (compatible; Readwise Reader Bot)',
+        'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+        'Accept-Language': 'en-US,en;q=0.5',
+        'Accept-Encoding': 'gzip, deflate',
+        'Connection': 'keep-alive',
+      },
+      timeout: 10000, // 10 second timeout
+    });
+    
+    if (!response.ok) {
+      console.log(`  Failed to fetch content: ${response.status} ${response.statusText}`);
+      return null;
+    }
+    
+    const html = await response.text();
+    
+    // Simple content extraction - remove scripts, styles, and extract text
+    // This is a basic implementation; for production, consider using a library like @mozilla/readability
+    const content = html
+      .replace(/<script[^>]*>[\s\S]*?<\/script>/gi, '')
+      .replace(/<style[^>]*>[\s\S]*?<\/style>/gi, '')
+      .replace(/<[^>]+>/g, ' ')
+      .replace(/\s+/g, ' ')
+      .trim();
+    
+    // Limit content length to avoid extremely long articles
+    const maxLength = 50000; // 50k characters
+    return content.length > maxLength ? content.substring(0, maxLength) + '...' : content;
+    
+  } catch (error) {
+    console.log(`  Error fetching full content: ${error.message}`);
+    return null;
+  }
+}
+
+/**
  * Convert Reader document to timeline entry
  */
 function convertToTimelineEntry(doc: ReaderDocument): TimelineEntry {
@@ -132,12 +179,18 @@ function convertToTimelineEntry(doc: ReaderDocument): TimelineEntry {
   // Calculate reading time
   const readingTime = doc.word_count ? `${Math.ceil(doc.word_count / 200)} min read` : undefined;
   
+  // Check if this document has the "full" tag
+  const hasFullTag = tagNames.some(tag => tag.toLowerCase() === 'full');
+  
+  // Use full content if available and has "full" tag, otherwise use summary
+  const contentToUse = hasFullTag && doc.content ? doc.content : (doc.summary || undefined);
+  
   return {
     id: `readwise:${doc.id}`,
     type: 'saved',
     timestamp: doc.saved_at || doc.created_at,
     title: doc.title,
-    summary: doc.summary || undefined,
+    summary: contentToUse,
     url: doc.source_url,
     canonical_url: doc.source_url || doc.url,
     author: doc.author || undefined,
@@ -291,6 +344,24 @@ async function main() {
     let updatedCount = 0;
     
     for (const doc of filteredDocs) {
+      // Check if this document has the "full" tag and fetch full content if needed
+      const tagNames = Object.keys(doc.tags || {});
+      const hasFullTag = tagNames.some(tag => tag.toLowerCase() === 'full');
+      
+      if (hasFullTag && !doc.content) {
+        console.log(`📄 Fetching full content for: ${doc.title}`);
+        const fullContent = await fetchFullContent(doc.source_url);
+        if (fullContent) {
+          doc.content = fullContent;
+          console.log(`  ✓ Fetched ${fullContent.length} characters of content`);
+        } else {
+          console.log(`  ⚠️ Failed to fetch full content, using summary`);
+        }
+        
+        // Add delay between full content fetches to be respectful to target websites
+        await new Promise(resolve => setTimeout(resolve, 2000)); // 2 second delay
+      }
+      
       const entry = convertToTimelineEntry(doc);
       
       if (existingMap.has(entry.id)) {
