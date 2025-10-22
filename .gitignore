@@ -38,3 +38,4 @@ astro/data/sources/linkedin-export/
 # Note: /docs is committed for GitHub Pages deployment
 # Unlike typical /src → /docs patterns, we commit docs/ because GitHub Pages serves from it
 
+astro/.chrome-profile-linkedin/
