@@ -1,7 +1,7 @@
 [
   {
     "id": "wikipedia:1289332429",
-    "type": "wikipedia",
+    "type": "contributions",
     "timestamp": "2025-05-07T23:18:08Z",
     "title": "edited \"Dropout (streaming service)\"",
     "summary": "Note pay share in 2024 as well (+51 bytes)",
@@ -17,7 +17,7 @@
   },
   {
     "id": "wikipedia:1289331645",
-    "type": "wikipedia",
+    "type": "contributions",
     "timestamp": "2025-05-07T23:10:20Z",
     "title": "edited \"Dropout (streaming service)\"",
     "summary": "Past tense for Vimeo use",
@@ -33,7 +33,7 @@
   },
   {
     "id": "wikipedia:1230993824",
-    "type": "wikipedia",
+    "type": "contributions",
     "timestamp": "2024-06-25T21:14:32Z",
     "title": "edited \"Transformer (deep learning architecture)\"",
     "summary": "move citation required reference to match assertion in comma separated list (-1 bytes)",
@@ -49,7 +49,7 @@
   },
   {
     "id": "wikipedia:1230990283",
-    "type": "wikipedia",
+    "type": "contributions",
     "timestamp": "2024-06-25T20:50:31Z",
     "title": "trimmed \"User talk:Chasemp\"",
     "summary": "[[WP:AES|←]]Replaced content with ' == A kitten for you! ==  [[File:Kitten (06) by Ron.jpg|left|150px]] Thank you for your edits to [[Armpit fart]]  [[User:Hashar|Hashar]] ([[User talk:Hashar|talk]]) ",
@@ -65,7 +65,7 @@
   },
   {
     "id": "wikipedia:1230990037",
-    "type": "wikipedia",
+    "type": "contributions",
     "timestamp": "2024-06-25T20:49:09Z",
     "title": "edited \"Artificial intelligence\"",
     "summary": "It is unclear what \"After the U.S. election in 2016, major technology companies took steps to mitigate the problem\" is referring too.  Marked for needed citation. (+118 bytes)",
@@ -81,7 +81,7 @@
   },
   {
     "id": "wikipedia:1116735851",
-    "type": "wikipedia",
+    "type": "contributions",
     "timestamp": "2022-10-18T02:13:08Z",
     "title": "edited \"Wikipedia:Scripts++/Subscribe\"",
     "summary": "No edit summary (-62 bytes)",
@@ -97,7 +97,7 @@
   },
   {
     "id": "wikipedia:1116110289",
-    "type": "wikipedia",
+    "type": "contributions",
     "timestamp": "2022-10-14T21:26:53Z",
     "title": "edited \"X.509\"",
     "summary": "/* Problems with certification authorities */ update future statement from 2018 with present (-30 bytes)",
@@ -113,7 +113,7 @@
   },
   {
     "id": "wikipedia:1030445861",
-    "type": "wikipedia",
+    "type": "contributions",
     "timestamp": "2021-06-25T23:43:50Z",
     "title": "edited \"List of Scientologists\"",
     "summary": "/* Current Scientologists */ Fixed typo (-1 bytes)",
@@ -129,7 +129,7 @@
   },
   {
     "id": "wikipedia:1016683443",
-    "type": "wikipedia",
+    "type": "contributions",
     "timestamp": "2021-04-08T14:48:21Z",
     "title": "edited \"Tom Everett Scott\"",
     "summary": "/* Tom Everett Scott */ it is cancelled (+2 bytes)",
@@ -145,7 +145,7 @@
   },
   {
     "id": "wikipedia:1016679916",
-    "type": "wikipedia",
+    "type": "contributions",
     "timestamp": "2021-04-08T14:26:19Z",
     "title": "edited \"Tom Everett Scott\"",
     "summary": "/* Tom Everett Scott */ (+21 bytes)",
@@ -161,7 +161,7 @@
   },
   {
     "id": "wikipedia:973843581",
-    "type": "wikipedia",
+    "type": "contributions",
     "timestamp": "2020-08-19T15:05:22Z",
     "title": "edited \"Theodore Roosevelt\"",
     "summary": "Introduce civic offices together and chronologically for lead in paragraph for clarity on arc of service (-16 bytes)",
@@ -177,7 +177,7 @@
   },
   {
     "id": "wikipedia:972629843",
-    "type": "wikipedia",
+    "type": "contributions",
     "timestamp": "2020-08-13T03:08:17Z",
     "title": "edited \"Jack Kornfield\"",
     "summary": "/* Jack Kornfield */ Fixed grammar (+1 bytes)",
@@ -193,7 +193,7 @@
   },
   {
     "id": "wikipedia:972629458",
-    "type": "wikipedia",
+    "type": "contributions",
     "timestamp": "2020-08-13T03:05:58Z",
     "title": "edited \"French cleat\"",
     "summary": "/* French cleat */ later is ill defined, when in use is accurate (+7 bytes)",
@@ -209,7 +209,7 @@
   },
   {
     "id": "wikipedia:972629018",
-    "type": "wikipedia",
+    "type": "contributions",
     "timestamp": "2020-08-13T03:02:55Z",
     "title": "edited \"Secular Buddhism\"",
     "summary": "/* Key concepts and practices */ deploy implies active and even hostile action, impart is more precise.",
@@ -225,7 +225,7 @@
   },
   {
     "id": "wikipedia:972627797",
-    "type": "wikipedia",
+    "type": "contributions",
     "timestamp": "2020-08-13T02:53:44Z",
     "title": "edited \"History of Buddhism\"",
     "summary": "/* South and Southeast Asia */ Fixed typo (-1 bytes)",
@@ -241,7 +241,7 @@
   },
   {
     "id": "wikipedia:972627070",
-    "type": "wikipedia",
+    "type": "contributions",
     "timestamp": "2020-08-13T02:48:22Z",
     "title": "edited \"History of Buddhism\"",
     "summary": "/* Southeast Asian Buddhism */ Fixed grammar",
@@ -257,7 +257,7 @@
   },
   {
     "id": "wikipedia:971339160",
-    "type": "wikipedia",
+    "type": "contributions",
     "timestamp": "2020-08-05T14:17:30Z",
     "title": "edited \"Nicole Galloway\"",
     "summary": "Galloway is the official democratic nominee as of yesterday (+340 bytes)",
@@ -273,7 +273,7 @@
   },
   {
     "id": "wikipedia:957626625",
-    "type": "wikipedia",
+    "type": "contributions",
     "timestamp": "2020-05-19T19:20:22Z",
     "title": "trimmed \"User talk:Chasemp\"",
     "summary": "[[WP:AES|←]]Replaced content with '== Welcome! ==  Hello, Chasemp, and welcome to Wikipedia! Thank you for [[Special:Contributions/Chasemp|your contributions]]. I hope you like the place and d...' (-4",
@@ -289,7 +289,7 @@
   },
   {
     "id": "wikipedia:937604950",
-    "type": "wikipedia",
+    "type": "contributions",
     "timestamp": "2020-01-26T02:21:48Z",
     "title": "edited \"Backward running\"",
     "summary": "change wording for speeding up (+16 bytes)",
@@ -305,7 +305,7 @@
   },
   {
     "id": "wikipedia:937603780",
-    "type": "wikipedia",
+    "type": "contributions",
     "timestamp": "2020-01-26T02:09:56Z",
     "title": "edited \"Waupaca (town), Wisconsin\"",
     "summary": "Typo",
@@ -321,7 +321,7 @@
   },
   {
     "id": "wikipedia:929853585",
-    "type": "wikipedia",
+    "type": "contributions",
     "timestamp": "2019-12-08T17:45:41Z",
     "title": "edited \"Armpit fart\"",
     "summary": "Undid revision 921324748 by [[Special:Contributions/174.89.174.63|174.89.174.63]] ([[User talk:174.89.174.63|talk]]) (+2 bytes)",
@@ -337,7 +337,7 @@
   },
   {
     "id": "wikipedia:887962170",
-    "type": "wikipedia",
+    "type": "contributions",
     "timestamp": "2019-03-16T00:04:56Z",
     "title": "edited \"User:Chasemp\"",
     "summary": "No edit summary (+58 bytes)",
@@ -353,7 +353,7 @@
   },
   {
     "id": "wikipedia:887476434",
-    "type": "wikipedia",
+    "type": "contributions",
     "timestamp": "2019-03-12T22:28:21Z",
     "title": "edited \"User:Chasemp\"",
     "summary": "No edit summary (+12 bytes)",
@@ -369,7 +369,7 @@
   },
   {
     "id": "wikipedia:886228014",
-    "type": "wikipedia",
+    "type": "contributions",
     "timestamp": "2019-03-04T23:23:29Z",
     "title": "edited \"Christopher Award\"",
     "summary": "Ken Burns wins the lifetime achievement award in 2018.  The chrisophers.org site is very difficult to reference as the URLs are reused but for now the 2018 awards are at this generic path. (+109 bytes",
@@ -385,7 +385,7 @@
   },
   {
     "id": "wikipedia:886227144",
-    "type": "wikipedia",
+    "type": "contributions",
     "timestamp": "2019-03-04T23:17:56Z",
     "title": "edited \"Christopher Award\"",
     "summary": "kaffir boy won the christopher award (as noted on its page) in 1987 , difficult to find sources for the exact year though it's reported widely 1986/7. (+283 bytes)",
@@ -401,7 +401,7 @@
   },
   {
     "id": "wikipedia:886222712",
-    "type": "wikipedia",
+    "type": "contributions",
     "timestamp": "2019-03-04T22:41:51Z",
     "title": "edited \"Kaffir Boy\"",
     "summary": "Update content regarding the smiths and how they helped Mark, the book puts emphasis on comic books in this case.  The phrase \"liberal whites\" is also used in the book to describe families such as the",
@@ -417,7 +417,7 @@
   },
   {
     "id": "wikipedia:885725943",
-    "type": "wikipedia",
+    "type": "contributions",
     "timestamp": "2019-03-01T22:27:57Z",
     "title": "edited \"Wikipedia:Mailing lists\"",
     "summary": "nonmembers is non-members (+1 bytes)",
@@ -433,7 +433,7 @@
   },
   {
     "id": "wikipedia:885717842",
-    "type": "wikipedia",
+    "type": "contributions",
     "timestamp": "2019-03-01T21:12:58Z",
     "title": "edited \"Buchi Emecheta\"",
     "summary": "Link to Second Class Citizen article and remove hyphen.  Although generally this would be a compound adjective in this case it is a literal book title and neither the publisher's site (http://www.geor",
@@ -449,7 +449,7 @@
   },
   {
     "id": "wikipedia:885717463",
-    "type": "wikipedia",
+    "type": "contributions",
     "timestamp": "2019-03-01T21:10:34Z",
     "title": "created or expanded \"Second Class Citizen (novel)\"",
     "summary": "initial page with sources (+3007 bytes)",
@@ -465,7 +465,7 @@
   },
   {
     "id": "wikipedia:885717311",
-    "type": "wikipedia",
+    "type": "contributions",
     "timestamp": "2019-03-01T21:09:22Z",
     "title": "edited \"User:Chasemp/Second Class Citizen (Book)\"",
     "summary": "No edit summary (-5 bytes)",
@@ -481,7 +481,7 @@
   },
   {
     "id": "wikipedia:885717092",
-    "type": "wikipedia",
+    "type": "contributions",
     "timestamp": "2019-03-01T21:07:36Z",
     "title": "edited \"User:Chasemp/Second Class Citizen (Book)\"",
     "summary": "No edit summary (-66 bytes)",
@@ -497,7 +497,7 @@
   },
   {
     "id": "wikipedia:885716243",
-    "type": "wikipedia",
+    "type": "contributions",
     "timestamp": "2019-03-01T21:01:04Z",
     "title": "edited \"User:Chasemp/Second Class Citizen (Book)\"",
     "summary": "No edit summary (+357 bytes)",
@@ -513,7 +513,7 @@
   },
   {
     "id": "wikipedia:885715095",
-    "type": "wikipedia",
+    "type": "contributions",
     "timestamp": "2019-03-01T20:51:44Z",
     "title": "edited \"User:Chasemp/Second Class Citizen (Book)\"",
     "summary": "No edit summary (+428 bytes)",
@@ -529,7 +529,7 @@
   },
   {
     "id": "wikipedia:885714043",
-    "type": "wikipedia",
+    "type": "contributions",
     "timestamp": "2019-03-01T20:43:14Z",
     "title": "edited \"User:Chasemp/Second Class Citizen (Book)\"",
     "summary": "No edit summary (-30 bytes)",
@@ -545,7 +545,7 @@
   },
   {
     "id": "wikipedia:885713839",
-    "type": "wikipedia",
+    "type": "contributions",
     "timestamp": "2019-03-01T20:41:54Z",
     "title": "trimmed \"User:Chasemp/Second Class Citizen (Book)\"",
     "summary": "No edit summary (-2005 bytes)",
@@ -561,7 +561,7 @@
   },
   {
     "id": "wikipedia:885711700",
-    "type": "wikipedia",
+    "type": "contributions",
     "timestamp": "2019-03-01T20:25:44Z",
     "title": "trimmed \"User:Chasemp/Second Class Citizen (Book)\"",
     "summary": "No edit summary (-1623 bytes)",
@@ -577,7 +577,7 @@
   },
   {
     "id": "wikipedia:885711428",
-    "type": "wikipedia",
+    "type": "contributions",
     "timestamp": "2019-03-01T20:23:26Z",
     "title": "edited \"User:Chasemp/Second Class Citizen (Book)\"",
     "summary": "No edit summary (-29 bytes)",
@@ -593,7 +593,7 @@
   },
   {
     "id": "wikipedia:885711395",
-    "type": "wikipedia",
+    "type": "contributions",
     "timestamp": "2019-03-01T20:23:09Z",
     "title": "created or expanded \"User:Chasemp/Second Class Citizen (Book)\"",
     "summary": "[[WP:AES|←]]Created page with '{{Refimprove|date=May 2013}} {{infobox book | <!-- See [[Wikipedia:WikiProject Novels]] or [[Wikipedia:WikiProject Books]] --> | name          = The Bride Price...' (+59",
@@ -609,7 +609,7 @@
   },
   {
     "id": "wikipedia:884633978",
-    "type": "wikipedia",
+    "type": "contributions",
     "timestamp": "2019-02-22T22:51:43Z",
     "title": "edited \"Wikipedia:Scripts++/Subscribe\"",
     "summary": "add chasemp for subscription (+62 bytes)",
@@ -625,7 +625,7 @@
   },
   {
     "id": "wikipedia:884633162",
-    "type": "wikipedia",
+    "type": "contributions",
     "timestamp": "2019-02-22T22:43:55Z",
     "title": "edited \"Wikipedia:Wikipedia is a work in progress\"",
     "summary": "Update creation timeline to eighteen years per /wiki/Wikipedia (+1 bytes)",
@@ -641,7 +641,7 @@
   },
   {
     "id": "wikipedia:884622408",
-    "type": "wikipedia",
+    "type": "contributions",
     "timestamp": "2019-02-22T21:07:36Z",
     "title": "edited \"Lee's Summit, Missouri\"",
     "summary": "this closed https://www.bizjournals.com/kansascity/news/2018/03/15/toys-r-us-lees-summit-distribution-center-closing.html (-44 bytes)",
@@ -657,7 +657,7 @@
   },
   {
     "id": "wikipedia:884606852",
-    "type": "wikipedia",
+    "type": "contributions",
     "timestamp": "2019-02-22T19:07:48Z",
     "title": "created or expanded \"Armpit fart\"",
     "summary": "initial article with references (+1649 bytes)",
@@ -673,7 +673,7 @@
   },
   {
     "id": "wikipedia:882073499",
-    "type": "wikipedia",
+    "type": "contributions",
     "timestamp": "2019-02-06T17:31:56Z",
     "title": "edited \"Suelo\"",
     "summary": "Add update that suelo is now using money in some capacity as detailed in Tedx talk (+294 bytes)",
@@ -689,7 +689,7 @@
   },
   {
     "id": "wikipedia:851353930",
-    "type": "wikipedia",
+    "type": "contributions",
     "timestamp": "2018-07-21T18:21:05Z",
     "title": "created \"User:Chasemp/common.js\"",
     "summary": "[[WP:AES|←]]Created page with 'importScript('User:Numbermaniac/goToTop.js'); // [[User:Numbermaniac/goToTop.js]]' (+81 bytes)",
@@ -705,7 +705,7 @@
   },
   {
     "id": "wikipedia:799602676",
-    "type": "wikipedia",
+    "type": "contributions",
     "timestamp": "2017-09-08T18:31:01Z",
     "title": "edited \"Ignite talk\"",
     "summary": "These terms have become synonymous but at the moment \"ignite talk\" is hard to find. (+28 bytes)",
@@ -721,7 +721,7 @@
   },
   {
     "id": "wikipedia:799553402",
-    "type": "wikipedia",
+    "type": "contributions",
     "timestamp": "2017-09-08T12:16:00Z",
     "title": "edited \"Lightning talk\"",
     "summary": "Note lighting talks are often referred to now as just \"ignite talks\" and add ignite karaoke with reference (+416 bytes)",
@@ -737,7 +737,7 @@
   },
   {
     "id": "wikipedia:799552783",
-    "type": "wikipedia",
+    "type": "contributions",
     "timestamp": "2017-09-08T12:10:09Z",
     "title": "created \"User:Chasemp/sandbox\"",
     "summary": "[[WP:AES|←]]Created page with '{{User sandbox}} <!-- EDIT BELOW THIS LINE -->  Netfilter represents a set of [[hooking|hooks]] inside the Linux kernel, allowing specific [[kernel module]]s to...' (+62",
@@ -753,7 +753,7 @@
   },
   {
     "id": "wikipedia:760578340",
-    "type": "wikipedia",
+    "type": "contributions",
     "timestamp": "2017-01-17T21:22:19Z",
     "title": "edited \"Ward Cunningham\"",
     "summary": "No edit summary (+240 bytes)",
@@ -769,7 +769,7 @@
   },
   {
     "id": "wikipedia:758122715",
-    "type": "wikipedia",
+    "type": "contributions",
     "timestamp": "2017-01-03T16:46:57Z",
     "title": "edited \"Douglas Brunt\"",
     "summary": "Make 'bestseller' plural -- https://en.wiktionary.org/wiki/bestsellers#English (+1 bytes)",
@@ -785,7 +785,7 @@
   },
   {
     "id": "wikipedia:684496077",
-    "type": "wikipedia",
+    "type": "contributions",
     "timestamp": "2015-10-07T00:13:07Z",
     "title": "edited \"Netfilter\"",
     "summary": "Grammer update (+4 bytes)",
@@ -801,7 +801,7 @@
   },
   {
     "id": "wikipedia:672942728",
-    "type": "wikipedia",
+    "type": "contributions",
     "timestamp": "2015-07-24T22:50:34Z",
     "title": "created \"User:Chasemp\"",
     "summary": "[[WP:AES|←]]Created page with 'All edits and work done with this account are my personal views and efforts.  I'm trying to figure this out so please be gentle :)' (+130 bytes)",
@@ -817,7 +817,7 @@
   },
   {
     "id": "wikipedia:672942609",
-    "type": "wikipedia",
+    "type": "contributions",
     "timestamp": "2015-07-24T22:49:30Z",
     "title": "edited \"Waupaca (town), Wisconsin\"",
     "summary": "/* Notable people */ (+41 bytes)",
