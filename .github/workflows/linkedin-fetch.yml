@@ -1,10 +1,11 @@
 name: LinkedIn Activity Fetch
 
 on:
-  schedule:
-    # Run daily at 6 AM UTC (adjust timezone as needed)
-    - cron: '0 6 * * *'
-  workflow_dispatch: # Allow manual triggers
+  # DISABLED - LinkedIn workflows temporarily disabled
+  # schedule:
+  #   # Run daily at 6 AM UTC (adjust timezone as needed)
+  #   - cron: '0 6 * * *'
+  workflow_dispatch: false # Disabled
 
 jobs:
   fetch-linkedin:
