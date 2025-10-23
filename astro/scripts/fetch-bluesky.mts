@@ -166,7 +166,7 @@ function convertToTimelineEntry(post: BlueskyPost): TimelineEntry {
   
   return {
     id: `bluesky:${postId}`,
-    type: 'posts',
+    type: 'bluesky',
     timestamp: post.record.createdAt,
     title: title || 'Post',
     summary: summary,

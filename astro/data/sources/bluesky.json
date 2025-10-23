@@ -1,7 +1,7 @@
 [
   {
     "id": "bluesky:3m3sggt5esc2a",
-    "type": "posts",
+    "type": "bluesky",
     "timestamp": "2025-10-22T18:01:03.649Z",
     "title": "Post",
     "summary": "",
@@ -26,7 +26,7 @@
   },
   {
     "id": "bluesky:3m3pbwfguus2g",
-    "type": "posts",
+    "type": "bluesky",
     "timestamp": "2025-10-21T12:02:18.225Z",
     "title": "Post",
     "summary": "",
@@ -51,7 +51,7 @@
   },
   {
     "id": "bluesky:3m3ilfgmjnc23",
-    "type": "posts",
+    "type": "bluesky",
     "timestamp": "2025-10-18T20:03:08.304Z",
     "title": "www.thefarside.com/new-stuff/36...",
     "summary": "www.thefarside.com/new-stuff/36... — The Far Side | TheFarSide.com",
@@ -67,7 +67,7 @@
   },
   {
     "id": "bluesky:3m3hzvqlsec2y",
-    "type": "posts",
+    "type": "bluesky",
     "timestamp": "2025-10-18T14:50:08.258Z",
     "title": "Post",
     "summary": "",
@@ -92,7 +92,7 @@
   },
   {
     "id": "bluesky:3m3dez467ek2z",
-    "type": "posts",
+    "type": "bluesky",
     "timestamp": "2025-10-16T18:25:33.554Z",
     "title": "freetofile.com",
     "summary": "freetofile.com — Free To File – Find out how to file your income taxes for free (like, actually free)",
@@ -108,7 +108,7 @@
   },
   {
     "id": "bluesky:3m37ad5dmvk2l",
-    "type": "posts",
+    "type": "bluesky",
     "timestamp": "2025-10-15T02:51:02.662Z",
     "title": "I scored 300 in Blockdoku (HARD) — Level 3, 42 lines, Max...",
     "summary": "I scored 300 in Blockdoku (HARD) — Level 3, 42 lines, Max Streak 1, Total Combos 2! blockdoku.523.life/index.html — Blockdoku",
@@ -124,7 +124,7 @@
   },
   {
     "id": "bluesky:3m35rtdlryk2q",
-    "type": "posts",
+    "type": "bluesky",
     "timestamp": "2025-10-14T12:59:00.209Z",
     "title": "Yep",
     "summary": "Yep",
@@ -149,7 +149,7 @@
   },
   {
     "id": "bluesky:3m2q36we2xk2l",
-    "type": "posts",
+    "type": "bluesky",
     "timestamp": "2025-10-09T02:09:16.334Z",
     "title": "moxie.org/2022/01/07/w...",
     "summary": "moxie.org/2022/01/07/w... — My first impressions of web3",
@@ -165,7 +165,7 @@
   },
   {
     "id": "bluesky:3m2b2yq3zpc2k",
-    "type": "posts",
+    "type": "bluesky",
     "timestamp": "2025-10-03T02:55:52.377Z",
     "title": "I really laughed at this.",
     "summary": "I really laughed at this.\n\nharper.blog/2025/09/30/a... — We Gave Our AI Agents Twitter and Now They're Demanding Lambos",
@@ -181,7 +181,7 @@
   },
   {
     "id": "bluesky:3lzqkjoycos2z",
-    "type": "posts",
+    "type": "bluesky",
     "timestamp": "2025-09-26T13:18:32.206Z",
     "title": "blog.benjojo.co.uk/post/ixp-bad...",
     "summary": "blog.benjojo.co.uk/post/ixp-bad... — Some interesting stuff I found on IX LANs",
@@ -197,7 +197,7 @@
   },
   {
     "id": "bluesky:3lznyjs4u222e",
-    "type": "posts",
+    "type": "bluesky",
     "timestamp": "2025-09-25T12:51:08.671Z",
     "title": "riskrubric.ai",
     "summary": "riskrubric.ai\n\nInteresting model assessments from CSA — Risk Rubric",
