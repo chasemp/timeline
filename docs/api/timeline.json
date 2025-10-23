@@ -3,17 +3,97 @@
     "title": "Chase Pettet's Timeline",
     "description": "A timeline of my public online activity",
     "site": "https://timeline.523.life",
-    "total_items": 123,
-    "generated_at": "2025-10-23T01:52:10.087Z",
+    "total_items": 128,
+    "generated_at": "2025-10-23T20:22:53.171Z",
     "types": [
-      "posts",
       "saved",
+      "posts",
       "blog",
       "release",
       "contributions"
     ]
   },
   "items": [
+    {
+      "id": "readwise:01k88he48c3cfs5k3qa12payyk",
+      "type": "saved",
+      "source": null,
+      "timestamp": "2025-10-23T12:41:56.095000+00:00",
+      "title": "Why We're Still Talking About \"Human Error\"",
+      "summary": "Human error is often blamed for accidents, but Sidney Dekker argues those errors are symptoms of deeper system problems. Investigations should focus on organizational design, tools, and workflows that shape people's choices, not just punish individuals. Adopting a blameless, systems-first approach helps teams learn and reduce future incidents.",
+      "url": "https://readwise.io/reader/document_raw_content/378761449",
+      "canonical_url": "https://readwise.io/reader/document_raw_content/378761449",
+      "author": "Barbara Tuchman",
+      "tags": [
+        "tech",
+        "fodder",
+        "prodsec"
+      ],
+      "media": [],
+      "content_html": null,
+      "content_text": null,
+      "embed_uri": null,
+      "embed_cid": null,
+      "metadata": {
+        "word_count": 3848,
+        "reading_time": "20 min read",
+        "site_name": "readwise-upload-pdf",
+        "cover_image": "https://readwise-assets.s3.amazonaws.com/media/reader/parsed_document_assets/378761449/1WdzDITgulw1_aiYMoaxjyagIEwZekkRbv0U0LIYqzw-cove_5BbUyHA.png",
+        "reading_progress": 0.5714285714285714
+      }
+    },
+    {
+      "id": "readwise:01k88fdh0rd1gfjbhkxq3r0bxn",
+      "type": "saved",
+      "source": null,
+      "timestamp": "2025-10-23T12:06:38.872000+00:00",
+      "title": "Summary of the Amazon DynamoDB Service Disruption in Northern Virginia (US-EAST-1) Region",
+      "summary": "Between Oct 19 11:48 PM and Oct 20 early morning, DynamoDB in N. Virginia had DNS failures that caused increased API errors and blocked new connections. This broke many AWS services (EC2, Lambda, NLB, ECS/EKS/Fargate, Connect, Redshift, IAM sign-ins) and delayed recoveries. AWS restored DNS and related systems over the day and is investigating fixes to prevent recurrence.",
+      "url": "https://aws.amazon.com/message/101925/",
+      "canonical_url": "https://aws.amazon.com/message/101925/",
+      "author": "Amazon Web Services, Inc.",
+      "tags": [
+        "tech",
+        "prodsec"
+      ],
+      "media": [],
+      "content_html": null,
+      "content_text": null,
+      "embed_uri": null,
+      "embed_cid": null,
+      "metadata": {
+        "word_count": 3617,
+        "reading_time": "19 min read",
+        "site_name": "Amazon Web Services, Inc."
+      }
+    },
+    {
+      "id": "readwise:01k86nhzxfw8tn00pgcw3gddta",
+      "type": "saved",
+      "source": null,
+      "timestamp": "2025-10-22T19:15:27.791000+00:00",
+      "title": "Nag Medida’s Post",
+      "summary": "Every AWS Access Key ID embeds its AWS Account ID.  \nThat means leaked keys reveal their owner even if expired.  \nSee the Adobe Security Blog for details and examples.",
+      "url": "https://www.linkedin.com/posts/nagmedida_aws-cloudsecurity-cloud-activity-7386462947084013569-EtEm?utm_source=share&utm_medium=member_android&rcm=ACoAABA7PwgB0iKxrYkDf2yq5phKyiYm5EjipwM",
+      "canonical_url": "https://www.linkedin.com/posts/nagmedida_aws-cloudsecurity-cloud-activity-7386462947084013569-EtEm?utm_source=share&utm_medium=member_android&rcm=ACoAABA7PwgB0iKxrYkDf2yq5phKyiYm5EjipwM",
+      "author": "Nag Medida",
+      "tags": [
+        "sec",
+        "tech",
+        "prodsec"
+      ],
+      "media": [],
+      "content_html": null,
+      "content_text": null,
+      "embed_uri": null,
+      "embed_cid": null,
+      "metadata": {
+        "word_count": 89,
+        "reading_time": "1 min read",
+        "site_name": "linkedin.com",
+        "cover_image": "https://media.licdn.com/dms/image/v2/D4E22AQGo8ZZuHK2njw/feedshare-shrink_800/B4EZoH86M3GYAo-/0/1761069999450?e=2147483647&v=beta&t=5BCmKV1vljit7wQ94Zu5w4QrVTTkirP2frAbAhcI7mM"
+      }
+    },
     {
       "id": "bluesky:3m3sggt5esc2a",
       "type": "posts",
@@ -175,6 +255,33 @@
       "metadata": {
         "site_name": "YouTube",
         "cover_image": "https://i.ytimg.com/vi/r3560y2LKMU/maxresdefault.jpg"
+      }
+    },
+    {
+      "id": "readwise:01k8165z12jg1bn1hj7m7jgdss",
+      "type": "saved",
+      "source": null,
+      "timestamp": "2025-10-20T16:10:32.866000+00:00",
+      "title": "Thank you for subscribing to haKCer Academy",
+      "summary": "Communities shape your cybersecurity education and career more than formal credentials.  \nhaKCer Academy maps local security groups and gives clear info to help you show up and learn.  \nMixing different communities creates a unique, practical learning path.",
+      "url": "https://www.linkedin.com/pulse/thank-you-subscribing-hakcer-academy-corian-cory-kennedy-sguwc?utm_source=share&utm_medium=member_android&utm_campaign=share_via",
+      "canonical_url": "https://www.linkedin.com/pulse/thank-you-subscribing-hakcer-academy-corian-cory-kennedy-sguwc?utm_source=share&utm_medium=member_android&utm_campaign=share_via",
+      "author": "Corian (Cory) Kennedy",
+      "tags": [
+        "sec",
+        "tech"
+      ],
+      "media": [],
+      "content_html": null,
+      "content_text": null,
+      "embed_uri": null,
+      "embed_cid": null,
+      "metadata": {
+        "word_count": 1186,
+        "reading_time": "6 min read",
+        "site_name": "linkedin.com",
+        "cover_image": "https://media.licdn.com/dms/image/v2/D5612AQFd_lQu2RaFdw/article-cover_image-shrink_600_2000/B56Zn5582PJoAQ-/0/1760834343002?e=2147483647&v=beta&t=NtH2zxQ4JKscwxL5OE_zCPWezWOclLywjQxfCr5sDhM",
+        "reading_progress": 0.9359380552280147
       }
     },
     {
@@ -653,6 +760,33 @@
         "reading_time": "8 min read",
         "site_name": "Signal Messenger",
         "cover_image": "https://signal.org/assets/og/og-image-ff2096df535eee499356de64b19fa8cebb9681ab1e78cca7330e7f8b8d5ec6d5.png"
+      }
+    },
+    {
+      "id": "readwise:01k6td1y27q2x179tsx0ge8b4n",
+      "type": "saved",
+      "source": null,
+      "timestamp": "2025-10-05T14:40:17.954000+00:00",
+      "title": "Thinking Like an Architect - InfoQ",
+      "summary": "An architect's job is to make others smarter so teams can make better decisions.  \nUse metaphors and simple models to explain complexity and handle uncertainty.  \nSee systems at different levels (the Architect Elevator) and sketch solutions to enable action.",
+      "url": "https://www.infoq.com/presentations/architecture-best-practices/?utm_source=linkedin&utm_medium=link&utm_campaign=calendar",
+      "canonical_url": "https://www.infoq.com/presentations/architecture-best-practices/?utm_source=linkedin&utm_medium=link&utm_campaign=calendar",
+      "author": "Gregor Hohpe",
+      "tags": [
+        "tech",
+        "prodsec"
+      ],
+      "media": [],
+      "content_html": null,
+      "content_text": null,
+      "embed_uri": null,
+      "embed_cid": null,
+      "metadata": {
+        "word_count": 7878,
+        "reading_time": "40 min read",
+        "site_name": "InfoQ",
+        "cover_image": "https://res.infoq.com/presentations/architecture-best-practices/en/card_header_image/gregor-hohpe-twitter-card-1756297866716.jpg",
+        "reading_progress": 0.8851978390305657
       }
     },
     {
