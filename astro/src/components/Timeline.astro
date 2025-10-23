@@ -47,22 +47,22 @@ const typeDisplayName = (type: string) => {
           <div class="meta">
             <span class="type">{typeDisplayName(item.type)}</span>
             <time datetime={item.timestamp}>{new Date(item.timestamp).toLocaleString()}</time>
-            {item.media?.images && item.media.images.length > 0 && (
-              <div class="media-preview">
-                {item.media.images.slice(0, 1).map((imageUrl: string, index: number) => (
-                  <img 
-                    src={imageUrl} 
-                    alt={item.media?.alt?.[index] || `Image ${index + 1}`}
-                    class="preview-image"
-                    loading="lazy"
-                  />
-                ))}
-                {item.media.images.length > 1 && (
-                  <span class="image-count">+{item.media.images.length - 1}</span>
-                )}
-              </div>
-            )}
           </div>
+          {item.media?.images && item.media.images.length > 0 && (
+            <div class="media-preview">
+              {item.media.images.slice(0, 1).map((imageUrl: string, index: number) => (
+                <img 
+                  src={imageUrl} 
+                  alt={item.media?.alt?.[index] || `Image ${index + 1}`}
+                  class="preview-image"
+                  loading="lazy"
+                />
+              ))}
+              {item.media.images.length > 1 && (
+                <span class="image-count">+{item.media.images.length - 1}</span>
+              )}
+            </div>
+          )}
           <div class="title">{item.title}</div>
           {item.summary && <p class="summary">{item.summary}</p>}
           {(item.type === 'saved' && item.metadata?.site_name) && (
@@ -139,8 +139,8 @@ const typeDisplayName = (type: string) => {
   .meta { display: flex; gap: 10px; font-size: 12px; color: var(--muted); font-family: system-ui, sans-serif; align-items: center; }
   .type { text-transform: uppercase; letter-spacing: .08em; font-weight: 600; }
   .media-indicator { background: rgba(193, 122, 79, 0.15); padding: 2px 6px; border-radius: 4px; font-size: 11px; color: var(--accent); white-space: nowrap; }
-  .media-preview { position: relative; display: inline-block; margin-left: 8px; }
-  .preview-image { width: 60px; height: 60px; border-radius: 8px; object-fit: cover; border: 1px solid var(--border); transition: transform 0.2s; }
+  .media-preview { position: relative; display: block; margin: 8px 0; }
+  .preview-image { width: 84px; height: 84px; border-radius: 8px; object-fit: cover; border: 1px solid var(--border); transition: transform 0.2s; }
   .preview-image:hover { transform: scale(1.05); }
   .image-count { position: absolute; top: -6px; right: -6px; background: var(--accent); color: var(--bg); font-size: 10px; font-weight: 600; padding: 2px 4px; border-radius: 8px; min-width: 16px; text-align: center; line-height: 1; }
   .title { font-weight: 600; margin-top: 6px; color: var(--text); line-height: 1.4; }
