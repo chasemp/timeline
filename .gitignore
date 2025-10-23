@@ -1,6 +1,7 @@
 # Dependencies
 node_modules/
 astro/node_modules/
+LI/
 
 # Environment
 .env
