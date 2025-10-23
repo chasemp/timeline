@@ -26,19 +26,25 @@ async function readMarkdownFiles(dir: string) {
       const m = basename.match(/^(\d{4})-(\d{2})-(\d{2})-(.+)$/);
       const slug = fm.slug || (m ? m[4] : basename);
       const timestamp = fm.date || (m ? `${m[1]}-${m[2]}-${m[3]}T00:00:00.000Z` : fm.published || fm.created || new Date().toISOString());
-      const url = fm.permalink || `/${(fm.categories && fm.categories[0]) ? fm.categories[0] + '/' : ''}${slug}/`;
-      entries.push({
-        id: `blog:${slug}`,
-        type: 'blog',
-        source: 'markdown',
-        timestamp,
-        title: fm.title || slug,
-        summary: fm.description || '',
-        url,
-        tags: fm.tags || [],
-        content_html: html,
-        author: fm.author ? { name: fm.author } : undefined,
-      });
+      // Only include files that are categorized as blog posts (not LinkedIn posts, recommendations, etc.)
+      const categories = fm.categories || [];
+      const isBlogPost = categories.includes('Blog');
+      
+      if (isBlogPost) {
+        const url = fm.permalink || `/${(fm.categories && fm.categories[0]) ? fm.categories[0] + '/' : ''}${slug}/`;
+        entries.push({
+          id: `blog:${slug}`,
+          type: 'blog',
+          source: 'markdown',
+          timestamp,
+          title: fm.title || slug,
+          summary: fm.description || '',
+          url,
+          tags: fm.tags || [],
+          content_html: html,
+          author: fm.author ? { name: fm.author } : undefined,
+        });
+      }
     }
   } catch (err: any) {
     if (err?.code === 'ENOENT') return entries;
