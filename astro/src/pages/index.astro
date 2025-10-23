@@ -4,7 +4,7 @@ import Timeline from "../components/Timeline.astro";
 import timeline from "../data/timeline.json";
 
 const items = (timeline as any[]);
-const VERSION = "1.2.7"; // Updated filter labels and legend
+const VERSION = "1.2.8"; // Fixed filter labels alignment and hashtag functionality
 
 // Extract hashtags from timeline items
 function extractHashtags(text: string): string[] {
