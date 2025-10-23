@@ -107,9 +107,13 @@ const hashtagCounts = itemsWithHashtags.reduce((acc, item) => {
     acc[tag] = (acc[tag] || 0) + 1;
   });
   
-  // Also add content types as labels
-  const typeLabel = `#${item.type}`;
-  acc[typeLabel] = (acc[typeLabel] || 0) + 1;
+  // Add source as label (extract from ID prefix like "bluesky:", "wikipedia:", etc.)
+  const idParts = item.id.split(':');
+  if (idParts.length > 1) {
+    const source = idParts[0];
+    const sourceLabel = `#${source}`;
+    acc[sourceLabel] = (acc[sourceLabel] || 0) + 1;
+  }
   
   return acc;
 }, {} as Record<string, number>);
