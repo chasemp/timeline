@@ -87,7 +87,7 @@ const itemsWithHashtags = items.map(item => {
   const typeLabels: Record<string, string> = {
     'blog': '#blog',
     'saved': '#article',
-    'bluesky': '#bluesky',
+    'posts': '#bluesky',
     'wikipedia': '#wikipedia',
     'release': '#release'
   };
@@ -183,7 +183,7 @@ const allHashtags = Object.entries(hashtagCounts)
         <div class="filters" role="group" aria-label="Content types">
           <label title="Bookmarks from Readwise"><input type="checkbox" name="type" value="saved" checked> Read</label>
           <label title="Technical writing and essays"><input type="checkbox" name="type" value="blog" checked> Written</label>
-          <label title="Social media posts and thoughts"><input type="checkbox" name="type" value="posts" checked> Posted</label>
+          <label title="Bluesky social media posts"><input type="checkbox" name="type" value="posts" checked> Bluesky</label>
           <label title="GitHub project releases and tags"><input type="checkbox" name="type" value="release" checked> Released</label>
           <label title="Contributions to Wikipedia and other platforms"><input type="checkbox" name="type" value="wikipedia" checked> Wikipedia</label>
         </div>
@@ -439,7 +439,7 @@ const allHashtags = Object.entries(hashtagCounts)
   });
 
   const params = new URLSearchParams(location.search);
-  const selected = new Set((params.get('types') ?? 'blog,saved,bluesky,release,wikipedia').split(',').filter(Boolean));
+  const selected = new Set((params.get('types') ?? 'blog,saved,posts,release,wikipedia').split(',').filter(Boolean));
   
   const checkboxes = document.querySelectorAll('input[name="type"]') as NodeListOf<HTMLInputElement>;
   
