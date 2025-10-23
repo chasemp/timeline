@@ -5,7 +5,7 @@ This directory contains scripts that fetch and process data for the timeline sit
 ## Scripts
 
 ### `fetch-blog.mts`
-Fetches blog posts from the `_posts` directory (Jekyll markdown files), converts them to HTML, and stores them in `data/sources/blog.json`.
+Fetches blog posts from the `markdown` directory (Jekyll markdown files), converts them to HTML, and stores them in `data/sources/blog.json`.
 
 **Usage:**
 ```bash
@@ -71,7 +71,7 @@ npm run generate
 ## Data Flow
 
 ```
-_posts/*.md        ──→  fetch-blog.mts             ──→  data/sources/blog.json
+markdown/*.md        ──→  fetch-blog.mts             ──→  data/sources/blog.json
 Bluesky API        ──→  fetch-bluesky.mts          ──→  data/sources/bluesky.json    ──→  merge-sources.mts  ──→  src/data/timeline.json
 Reader API (v3)    ──→  fetch-readwise-reader.mts  ──→  data/sources/readwise.json
 ```
