@@ -3,17 +3,73 @@
     "title": "Chase Pettet's Timeline",
     "description": "A timeline of my public online activity",
     "site": "https://timeline.523.life",
-    "total_items": 121,
-    "generated_at": "2025-10-22T13:54:23.019Z",
+    "total_items": 123,
+    "generated_at": "2025-10-23T01:52:10.087Z",
     "types": [
+      "posts",
       "saved",
-      "bluesky",
       "blog",
       "release",
-      "wikipedia"
+      "contributions"
     ]
   },
   "items": [
+    {
+      "id": "bluesky:3m3sggt5esc2a",
+      "type": "posts",
+      "source": null,
+      "timestamp": "2025-10-22T18:01:03.649Z",
+      "title": "Post",
+      "summary": "",
+      "url": "https://bsky.app/profile/chase523.bsky.social/post/3m3sggt5esc2a",
+      "canonical_url": "https://bsky.app/profile/chase523.bsky.social/post/3m3sggt5esc2a",
+      "author": null,
+      "tags": [],
+      "media": {
+        "type": "image",
+        "images": [
+          "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:7whslkj667kgto2x246o4stl/bafkreiefgeuhmlh3t73if3l6prriqg3xz24tmcezdl65rhqb7svaps4upa@jpeg"
+        ],
+        "alt": [
+          ""
+        ]
+      },
+      "content_html": "<p></p><img src=\"https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:7whslkj667kgto2x246o4stl/bafkreiefgeuhmlh3t73if3l6prriqg3xz24tmcezdl65rhqb7svaps4upa@jpeg\" alt=\"Image from post\" style=\"max-width: 100%; margin: 12px 0; border-radius: 8px;\">",
+      "content_text": null,
+      "embed_uri": "at://did:plc:7whslkj667kgto2x246o4stl/app.bsky.feed.post/3m3sggt5esc2a",
+      "embed_cid": "bafyreib54anbneaeu275b2vizp5t3ivwhxvo7y6emowtpddag5vitapk74",
+      "metadata": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 0
+      }
+    },
+    {
+      "id": "readwise:01k83m6c8st05r5bt88nq4p2qx",
+      "type": "saved",
+      "source": null,
+      "timestamp": "2025-10-21T14:53:55.354000+00:00",
+      "title": "Death of a Naturalist",
+      "summary": "A boy remembers collecting frogspawn and watching tadpoles hatch by a smelly flax-dam. One summer day the frogs swarm the dam in noisy, threatening numbers. The sight terrifies him and ends his innocent fascination with nature.",
+      "url": "https://www.poetryfoundation.org/poems/57040/death-of-a-naturalist",
+      "canonical_url": "https://www.poetryfoundation.org/poems/57040/death-of-a-naturalist",
+      "author": "Seamus Heaney",
+      "tags": [
+        "classic"
+      ],
+      "media": [],
+      "content_html": null,
+      "content_text": null,
+      "embed_uri": null,
+      "embed_cid": null,
+      "metadata": {
+        "word_count": 331,
+        "reading_time": "2 min read",
+        "site_name": "Poetry Magazine",
+        "cover_image": "https://s3-us-east-2.amazonaws.com/cdn-test.poetryfoundation.org/content/images/8860b89bc1c96d531ea2aad695b8e4b17cb249af.jpeg",
+        "reading_progress": 0.10772043313176767
+      }
+    },
     {
       "id": "readwise:01k83bajsy1qgtwn244t5bspp0",
       "type": "saved",
@@ -44,11 +100,11 @@
     },
     {
       "id": "bluesky:3m3pbwfguus2g",
-      "type": "bluesky",
+      "type": "posts",
       "source": null,
       "timestamp": "2025-10-21T12:02:18.225Z",
-      "title": " 📷",
-      "summary": " [1 image]",
+      "title": "Post",
+      "summary": "",
       "url": "https://bsky.app/profile/chase523.bsky.social/post/3m3pbwfguus2g",
       "canonical_url": "https://bsky.app/profile/chase523.bsky.social/post/3m3pbwfguus2g",
       "author": null,
@@ -203,7 +259,7 @@
     },
     {
       "id": "bluesky:3m3ilfgmjnc23",
-      "type": "bluesky",
+      "type": "posts",
       "source": null,
       "timestamp": "2025-10-18T20:03:08.304Z",
       "title": "www.thefarside.com/new-stuff/36...",
@@ -250,11 +306,11 @@
     },
     {
       "id": "bluesky:3m3hzvqlsec2y",
-      "type": "bluesky",
+      "type": "posts",
       "source": null,
       "timestamp": "2025-10-18T14:50:08.258Z",
-      "title": " 📷",
-      "summary": " [1 image]",
+      "title": "Post",
+      "summary": "",
       "url": "https://bsky.app/profile/chase523.bsky.social/post/3m3hzvqlsec2y",
       "canonical_url": "https://bsky.app/profile/chase523.bsky.social/post/3m3hzvqlsec2y",
       "author": null,
@@ -309,7 +365,7 @@
     },
     {
       "id": "bluesky:3m3dez467ek2z",
-      "type": "bluesky",
+      "type": "posts",
       "source": null,
       "timestamp": "2025-10-16T18:25:33.554Z",
       "title": "freetofile.com",
@@ -416,7 +472,7 @@
     },
     {
       "id": "bluesky:3m37ad5dmvk2l",
-      "type": "bluesky",
+      "type": "posts",
       "source": null,
       "timestamp": "2025-10-15T02:51:02.662Z",
       "title": "I scored 300 in Blockdoku (HARD) — Level 3, 42 lines, Max...",
@@ -464,11 +520,11 @@
     },
     {
       "id": "bluesky:3m35rtdlryk2q",
-      "type": "bluesky",
+      "type": "posts",
       "source": null,
       "timestamp": "2025-10-14T12:59:00.209Z",
-      "title": "Yep 📷",
-      "summary": "Yep [1 image]",
+      "title": "Yep",
+      "summary": "Yep",
       "url": "https://bsky.app/profile/chase523.bsky.social/post/3m35rtdlryk2q",
       "canonical_url": "https://bsky.app/profile/chase523.bsky.social/post/3m35rtdlryk2q",
       "author": null,
@@ -548,7 +604,7 @@
     },
     {
       "id": "bluesky:3m2q36we2xk2l",
-      "type": "bluesky",
+      "type": "posts",
       "source": null,
       "timestamp": "2025-10-09T02:09:16.334Z",
       "title": "moxie.org/2022/01/07/w...",
@@ -627,7 +683,7 @@
     },
     {
       "id": "bluesky:3m2b2yq3zpc2k",
-      "type": "bluesky",
+      "type": "posts",
       "source": null,
       "timestamp": "2025-10-03T02:55:52.377Z",
       "title": "I really laughed at this.",
@@ -667,7 +723,7 @@
     },
     {
       "id": "bluesky:3lzqkjoycos2z",
-      "type": "bluesky",
+      "type": "posts",
       "source": null,
       "timestamp": "2025-09-26T13:18:32.206Z",
       "title": "blog.benjojo.co.uk/post/ixp-bad...",
@@ -689,7 +745,7 @@
     },
     {
       "id": "bluesky:3lznyjs4u222e",
-      "type": "bluesky",
+      "type": "posts",
       "source": null,
       "timestamp": "2025-09-25T12:51:08.671Z",
       "title": "riskrubric.ai",
@@ -788,7 +844,7 @@
     },
     {
       "id": "wikipedia:1289332429",
-      "type": "wikipedia",
+      "type": "contributions",
       "source": null,
       "timestamp": "2025-05-07T23:18:08Z",
       "title": "edited \"Dropout (streaming service)\"",
@@ -812,7 +868,7 @@
     },
     {
       "id": "wikipedia:1289331645",
-      "type": "wikipedia",
+      "type": "contributions",
       "source": null,
       "timestamp": "2025-05-07T23:10:20Z",
       "title": "edited \"Dropout (streaming service)\"",
@@ -920,7 +976,7 @@
     },
     {
       "id": "wikipedia:1230993824",
-      "type": "wikipedia",
+      "type": "contributions",
       "source": null,
       "timestamp": "2024-06-25T21:14:32Z",
       "title": "edited \"Transformer (deep learning architecture)\"",
@@ -944,7 +1000,7 @@
     },
     {
       "id": "wikipedia:1230990283",
-      "type": "wikipedia",
+      "type": "contributions",
       "source": null,
       "timestamp": "2024-06-25T20:50:31Z",
       "title": "trimmed \"User talk:Chasemp\"",
@@ -968,7 +1024,7 @@
     },
     {
       "id": "wikipedia:1230990037",
-      "type": "wikipedia",
+      "type": "contributions",
       "source": null,
       "timestamp": "2024-06-25T20:49:09Z",
       "title": "edited \"Artificial intelligence\"",
@@ -1012,7 +1068,7 @@
     },
     {
       "id": "wikipedia:1116735851",
-      "type": "wikipedia",
+      "type": "contributions",
       "source": null,
       "timestamp": "2022-10-18T02:13:08Z",
       "title": "edited \"Wikipedia:Scripts++/Subscribe\"",
@@ -1036,7 +1092,7 @@
     },
     {
       "id": "wikipedia:1116110289",
-      "type": "wikipedia",
+      "type": "contributions",
       "source": null,
       "timestamp": "2022-10-14T21:26:53Z",
       "title": "edited \"X.509\"",
@@ -1060,7 +1116,7 @@
     },
     {
       "id": "wikipedia:1030445861",
-      "type": "wikipedia",
+      "type": "contributions",
       "source": null,
       "timestamp": "2021-06-25T23:43:50Z",
       "title": "edited \"List of Scientologists\"",
@@ -1084,7 +1140,7 @@
     },
     {
       "id": "wikipedia:1016683443",
-      "type": "wikipedia",
+      "type": "contributions",
       "source": null,
       "timestamp": "2021-04-08T14:48:21Z",
       "title": "edited \"Tom Everett Scott\"",
@@ -1108,7 +1164,7 @@
     },
     {
       "id": "wikipedia:1016679916",
-      "type": "wikipedia",
+      "type": "contributions",
       "source": null,
       "timestamp": "2021-04-08T14:26:19Z",
       "title": "edited \"Tom Everett Scott\"",
@@ -1132,7 +1188,7 @@
     },
     {
       "id": "wikipedia:973843581",
-      "type": "wikipedia",
+      "type": "contributions",
       "source": null,
       "timestamp": "2020-08-19T15:05:22Z",
       "title": "edited \"Theodore Roosevelt\"",
@@ -1156,7 +1212,7 @@
     },
     {
       "id": "wikipedia:972629843",
-      "type": "wikipedia",
+      "type": "contributions",
       "source": null,
       "timestamp": "2020-08-13T03:08:17Z",
       "title": "edited \"Jack Kornfield\"",
@@ -1180,7 +1236,7 @@
     },
     {
       "id": "wikipedia:972629458",
-      "type": "wikipedia",
+      "type": "contributions",
       "source": null,
       "timestamp": "2020-08-13T03:05:58Z",
       "title": "edited \"French cleat\"",
@@ -1204,7 +1260,7 @@
     },
     {
       "id": "wikipedia:972629018",
-      "type": "wikipedia",
+      "type": "contributions",
       "source": null,
       "timestamp": "2020-08-13T03:02:55Z",
       "title": "edited \"Secular Buddhism\"",
@@ -1228,7 +1284,7 @@
     },
     {
       "id": "wikipedia:972627797",
-      "type": "wikipedia",
+      "type": "contributions",
       "source": null,
       "timestamp": "2020-08-13T02:53:44Z",
       "title": "edited \"History of Buddhism\"",
@@ -1252,7 +1308,7 @@
     },
     {
       "id": "wikipedia:972627070",
-      "type": "wikipedia",
+      "type": "contributions",
       "source": null,
       "timestamp": "2020-08-13T02:48:22Z",
       "title": "edited \"History of Buddhism\"",
@@ -1276,7 +1332,7 @@
     },
     {
       "id": "wikipedia:971339160",
-      "type": "wikipedia",
+      "type": "contributions",
       "source": null,
       "timestamp": "2020-08-05T14:17:30Z",
       "title": "edited \"Nicole Galloway\"",
@@ -1300,7 +1356,7 @@
     },
     {
       "id": "wikipedia:957626625",
-      "type": "wikipedia",
+      "type": "contributions",
       "source": null,
       "timestamp": "2020-05-19T19:20:22Z",
       "title": "trimmed \"User talk:Chasemp\"",
@@ -1324,7 +1380,7 @@
     },
     {
       "id": "wikipedia:937604950",
-      "type": "wikipedia",
+      "type": "contributions",
       "source": null,
       "timestamp": "2020-01-26T02:21:48Z",
       "title": "edited \"Backward running\"",
@@ -1348,7 +1404,7 @@
     },
     {
       "id": "wikipedia:937603780",
-      "type": "wikipedia",
+      "type": "contributions",
       "source": null,
       "timestamp": "2020-01-26T02:09:56Z",
       "title": "edited \"Waupaca (town), Wisconsin\"",
@@ -1372,7 +1428,7 @@
     },
     {
       "id": "wikipedia:929853585",
-      "type": "wikipedia",
+      "type": "contributions",
       "source": null,
       "timestamp": "2019-12-08T17:45:41Z",
       "title": "edited \"Armpit fart\"",
@@ -1396,7 +1452,7 @@
     },
     {
       "id": "wikipedia:887962170",
-      "type": "wikipedia",
+      "type": "contributions",
       "source": null,
       "timestamp": "2019-03-16T00:04:56Z",
       "title": "edited \"User:Chasemp\"",
@@ -1420,7 +1476,7 @@
     },
     {
       "id": "wikipedia:887476434",
-      "type": "wikipedia",
+      "type": "contributions",
       "source": null,
       "timestamp": "2019-03-12T22:28:21Z",
       "title": "edited \"User:Chasemp\"",
@@ -1444,7 +1500,7 @@
     },
     {
       "id": "wikipedia:886228014",
-      "type": "wikipedia",
+      "type": "contributions",
       "source": null,
       "timestamp": "2019-03-04T23:23:29Z",
       "title": "edited \"Christopher Award\"",
@@ -1468,7 +1524,7 @@
     },
     {
       "id": "wikipedia:886227144",
-      "type": "wikipedia",
+      "type": "contributions",
       "source": null,
       "timestamp": "2019-03-04T23:17:56Z",
       "title": "edited \"Christopher Award\"",
@@ -1492,7 +1548,7 @@
     },
     {
       "id": "wikipedia:886222712",
-      "type": "wikipedia",
+      "type": "contributions",
       "source": null,
       "timestamp": "2019-03-04T22:41:51Z",
       "title": "edited \"Kaffir Boy\"",
@@ -1516,7 +1572,7 @@
     },
     {
       "id": "wikipedia:885725943",
-      "type": "wikipedia",
+      "type": "contributions",
       "source": null,
       "timestamp": "2019-03-01T22:27:57Z",
       "title": "edited \"Wikipedia:Mailing lists\"",
@@ -1540,7 +1596,7 @@
     },
     {
       "id": "wikipedia:885717842",
-      "type": "wikipedia",
+      "type": "contributions",
       "source": null,
       "timestamp": "2019-03-01T21:12:58Z",
       "title": "edited \"Buchi Emecheta\"",
@@ -1564,7 +1620,7 @@
     },
     {
       "id": "wikipedia:885717463",
-      "type": "wikipedia",
+      "type": "contributions",
       "source": null,
       "timestamp": "2019-03-01T21:10:34Z",
       "title": "created or expanded \"Second Class Citizen (novel)\"",
@@ -1588,7 +1644,7 @@
     },
     {
       "id": "wikipedia:885717311",
-      "type": "wikipedia",
+      "type": "contributions",
       "source": null,
       "timestamp": "2019-03-01T21:09:22Z",
       "title": "edited \"User:Chasemp/Second Class Citizen (Book)\"",
@@ -1612,7 +1668,7 @@
     },
     {
       "id": "wikipedia:885717092",
-      "type": "wikipedia",
+      "type": "contributions",
       "source": null,
       "timestamp": "2019-03-01T21:07:36Z",
       "title": "edited \"User:Chasemp/Second Class Citizen (Book)\"",
@@ -1636,7 +1692,7 @@
     },
     {
       "id": "wikipedia:885716243",
-      "type": "wikipedia",
+      "type": "contributions",
       "source": null,
       "timestamp": "2019-03-01T21:01:04Z",
       "title": "edited \"User:Chasemp/Second Class Citizen (Book)\"",
@@ -1660,7 +1716,7 @@
     },
     {
       "id": "wikipedia:885715095",
-      "type": "wikipedia",
+      "type": "contributions",
       "source": null,
       "timestamp": "2019-03-01T20:51:44Z",
       "title": "edited \"User:Chasemp/Second Class Citizen (Book)\"",
@@ -1684,7 +1740,7 @@
     },
     {
       "id": "wikipedia:885714043",
-      "type": "wikipedia",
+      "type": "contributions",
       "source": null,
       "timestamp": "2019-03-01T20:43:14Z",
       "title": "edited \"User:Chasemp/Second Class Citizen (Book)\"",
@@ -1708,7 +1764,7 @@
     },
     {
       "id": "wikipedia:885713839",
-      "type": "wikipedia",
+      "type": "contributions",
       "source": null,
       "timestamp": "2019-03-01T20:41:54Z",
       "title": "trimmed \"User:Chasemp/Second Class Citizen (Book)\"",
@@ -1732,7 +1788,7 @@
     },
     {
       "id": "wikipedia:885711700",
-      "type": "wikipedia",
+      "type": "contributions",
       "source": null,
       "timestamp": "2019-03-01T20:25:44Z",
       "title": "trimmed \"User:Chasemp/Second Class Citizen (Book)\"",
@@ -1756,7 +1812,7 @@
     },
     {
       "id": "wikipedia:885711428",
-      "type": "wikipedia",
+      "type": "contributions",
       "source": null,
       "timestamp": "2019-03-01T20:23:26Z",
       "title": "edited \"User:Chasemp/Second Class Citizen (Book)\"",
@@ -1780,7 +1836,7 @@
     },
     {
       "id": "wikipedia:885711395",
-      "type": "wikipedia",
+      "type": "contributions",
       "source": null,
       "timestamp": "2019-03-01T20:23:09Z",
       "title": "created or expanded \"User:Chasemp/Second Class Citizen (Book)\"",
@@ -1804,7 +1860,7 @@
     },
     {
       "id": "wikipedia:884633978",
-      "type": "wikipedia",
+      "type": "contributions",
       "source": null,
       "timestamp": "2019-02-22T22:51:43Z",
       "title": "edited \"Wikipedia:Scripts++/Subscribe\"",
@@ -1828,7 +1884,7 @@
     },
     {
       "id": "wikipedia:884633162",
-      "type": "wikipedia",
+      "type": "contributions",
       "source": null,
       "timestamp": "2019-02-22T22:43:55Z",
       "title": "edited \"Wikipedia:Wikipedia is a work in progress\"",
@@ -1852,7 +1908,7 @@
     },
     {
       "id": "wikipedia:884622408",
-      "type": "wikipedia",
+      "type": "contributions",
       "source": null,
       "timestamp": "2019-02-22T21:07:36Z",
       "title": "edited \"Lee's Summit, Missouri\"",
@@ -1876,7 +1932,7 @@
     },
     {
       "id": "wikipedia:884606852",
-      "type": "wikipedia",
+      "type": "contributions",
       "source": null,
       "timestamp": "2019-02-22T19:07:48Z",
       "title": "created or expanded \"Armpit fart\"",
@@ -1900,7 +1956,7 @@
     },
     {
       "id": "wikipedia:882073499",
-      "type": "wikipedia",
+      "type": "contributions",
       "source": null,
       "timestamp": "2019-02-06T17:31:56Z",
       "title": "edited \"Suelo\"",
@@ -1924,7 +1980,7 @@
     },
     {
       "id": "wikipedia:851353930",
-      "type": "wikipedia",
+      "type": "contributions",
       "source": null,
       "timestamp": "2018-07-21T18:21:05Z",
       "title": "created \"User:Chasemp/common.js\"",
@@ -1948,7 +2004,7 @@
     },
     {
       "id": "wikipedia:799602676",
-      "type": "wikipedia",
+      "type": "contributions",
       "source": null,
       "timestamp": "2017-09-08T18:31:01Z",
       "title": "edited \"Ignite talk\"",
@@ -1972,7 +2028,7 @@
     },
     {
       "id": "wikipedia:799553402",
-      "type": "wikipedia",
+      "type": "contributions",
       "source": null,
       "timestamp": "2017-09-08T12:16:00Z",
       "title": "edited \"Lightning talk\"",
@@ -1996,7 +2052,7 @@
     },
     {
       "id": "wikipedia:799552783",
-      "type": "wikipedia",
+      "type": "contributions",
       "source": null,
       "timestamp": "2017-09-08T12:10:09Z",
       "title": "created \"User:Chasemp/sandbox\"",
@@ -2020,7 +2076,7 @@
     },
     {
       "id": "wikipedia:760578340",
-      "type": "wikipedia",
+      "type": "contributions",
       "source": null,
       "timestamp": "2017-01-17T21:22:19Z",
       "title": "edited \"Ward Cunningham\"",
@@ -2044,7 +2100,7 @@
     },
     {
       "id": "wikipedia:758122715",
-      "type": "wikipedia",
+      "type": "contributions",
       "source": null,
       "timestamp": "2017-01-03T16:46:57Z",
       "title": "edited \"Douglas Brunt\"",
@@ -2068,7 +2124,7 @@
     },
     {
       "id": "wikipedia:684496077",
-      "type": "wikipedia",
+      "type": "contributions",
       "source": null,
       "timestamp": "2015-10-07T00:13:07Z",
       "title": "edited \"Netfilter\"",
@@ -2133,7 +2189,7 @@
     },
     {
       "id": "wikipedia:672942728",
-      "type": "wikipedia",
+      "type": "contributions",
       "source": null,
       "timestamp": "2015-07-24T22:50:34Z",
       "title": "created \"User:Chasemp\"",
@@ -2157,7 +2213,7 @@
     },
     {
       "id": "wikipedia:672942609",
-      "type": "wikipedia",
+      "type": "contributions",
       "source": null,
       "timestamp": "2015-07-24T22:49:30Z",
       "title": "edited \"Waupaca (town), Wisconsin\"",

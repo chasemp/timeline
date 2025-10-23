@@ -1,5 +1,25 @@
 [
   {
+    "id": "readwise:01k83m6c8st05r5bt88nq4p2qx",
+    "type": "saved",
+    "timestamp": "2025-10-21T14:53:55.354000+00:00",
+    "title": "Death of a Naturalist",
+    "summary": "A boy remembers collecting frogspawn and watching tadpoles hatch by a smelly flax-dam. One summer day the frogs swarm the dam in noisy, threatening numbers. The sight terrifies him and ends his innocent fascination with nature.",
+    "url": "https://www.poetryfoundation.org/poems/57040/death-of-a-naturalist",
+    "canonical_url": "https://www.poetryfoundation.org/poems/57040/death-of-a-naturalist",
+    "author": "Seamus Heaney",
+    "tags": [
+      "classic"
+    ],
+    "metadata": {
+      "word_count": 331,
+      "reading_time": "2 min read",
+      "site_name": "Poetry Magazine",
+      "cover_image": "https://s3-us-east-2.amazonaws.com/cdn-test.poetryfoundation.org/content/images/8860b89bc1c96d531ea2aad695b8e4b17cb249af.jpeg",
+      "reading_progress": 0.10772043313176767
+    }
+  },
+  {
     "id": "readwise:01k83bajsy1qgtwn244t5bspp0",
     "type": "saved",
     "timestamp": "2025-10-21T12:18:55.934000+00:00",
