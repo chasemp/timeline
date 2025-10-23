@@ -11,7 +11,7 @@ This project transforms my online history into an interactive timeline, replacin
 ## Data Sources
 
 ### 1. **Blog Posts** (36 posts)
-- Sourced from Jekyll markdown files in `_posts/`
+- Sourced from Jekyll markdown files in `markdown/`
 - Converted to HTML via `marked` library
 - Full content available as separate pages
 - Topics: Security, DevOps, Python, Networking
@@ -37,7 +37,7 @@ This project transforms my online history into an interactive timeline, replacin
 ┌─────────────────────────────────────────────────────────────┐
 │                     Data Sources                             │
 ├──────────────┬──────────────────┬───────────────────────────┤
-│ _posts/*.md  │ Bluesky API      │ Readwise Reader API       │
+│ markdown/*.md  │ Bluesky API      │ Readwise Reader API       │
 │              │ (AT Protocol)    │ (v3)                       │
 └──────┬───────┴────────┬─────────┴──────────┬────────────────┘
        │                │                    │
@@ -88,7 +88,7 @@ This project transforms my online history into an interactive timeline, replacin
 
 ```
 .
-├── _posts/                          # Original Jekyll blog posts (markdown)
+├── markdown/                        # Original Jekyll blog posts (markdown)
 ├── astro/                           # Astro application
 │   ├── src/
 │   │   ├── components/
@@ -247,7 +247,7 @@ The workflow has `contents: write` permission configured in `.github/workflows/f
 The workflow (`.github/workflows/fetch-timeline.yml`) runs every 4 hours and:
 
 1. Fetches new Bluesky posts (no auth required)
-2. Fetches new blog posts (from `_posts/` directory)
+2. Fetches new blog posts (from `markdown/` directory)
 3. Fetches new Readwise documents (if `READWISE_TOKEN` provided)
 4. Merges all sources into `timeline.json`
 5. Commits and pushes data changes using `GITHUB_TOKEN`
@@ -335,4 +335,4 @@ Content is © Chase Pettet. Code is MIT licensed.
 
 ---
 
-**Note:** This project replaced a Jekyll-based blog. The original posts are preserved in `_posts/` and rendered through the new timeline interface.
+**Note:** This project replaced a Jekyll-based blog. The original posts are preserved in `markdown/` and rendered through the new timeline interface.

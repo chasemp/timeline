@@ -1,7 +1,7 @@
 # Timeline Site (Astro)
 
 Static, accessible timeline aggregating content from multiple sources:
-- **Blog posts** from legacy Jekyll `_posts/` directory
+- **Blog posts** from legacy Jekyll `markdown/` directory
 - **Bluesky posts** from [@chase523.bsky.social](https://bsky.app/profile/chase523.bsky.social)
 - **Saved articles** from Readwise Reader (tagged "classic")
 
@@ -22,7 +22,7 @@ npm run dev
 ## Data Sources
 
 ### 1. Blog Posts (36 posts)
-- Source: `../_posts/*.md` (Jekyll markdown files)
+- Source: `../markdown/*.md` (Jekyll markdown files)
 - Script: `scripts/fetch-blog.mts`
 - Output: `data/sources/blog.json`
 - Converts markdown to HTML using `marked`
@@ -79,7 +79,7 @@ For GitHub Actions: Set these as repository secrets in GitHub Settings. See [Rep
 | `npm run build` | Build for production |
 | `npm run preview` | Preview production build |
 | `npm run generate` | Fetch all data sources and merge |
-| `npm run fetch:blog` | Fetch blog posts from `_posts/` |
+| `npm run fetch:blog` | Fetch blog posts from `markdown/` |
 | `npm run fetch:bluesky` | Fetch Bluesky posts |
 | `npm run fetch:readwise` | Fetch Readwise Reader documents |
 | `npm run merge` | Merge all sources into `timeline.json` |
@@ -158,7 +158,7 @@ This script:
 ```
 Source Files          Scripts              JSON Files         Astro Pages
 ───────────          ────────              ──────────        ───────────
-_posts/*.md    →  fetch-blog.mts    →  blog.json      ┐
+markdown/*.md    →  fetch-blog.mts    →  blog.json      ┐
 Bluesky API    →  fetch-bluesky.mts →  bluesky.json   ├→ merge-sources → timeline.json → index.astro
 Reader API     →  fetch-readwise    →  readwise.json  ┘                                → blog/[slug].astro
 ```

@@ -2,8 +2,9 @@
 title: "21 Musings From Incident Response"
 excerpt_separator: "<!--more-->"
 categories:
-  - Blog
+  - Written
 tags:
+  - LinkedIn Post
   - IR
 ---
 

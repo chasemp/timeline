@@ -6,7 +6,7 @@ import path from 'path';
 import matter from 'gray-matter';
 import { marked } from 'marked';
 
-const POSTS_DIR = path.resolve(process.cwd(), '../_posts');
+const POSTS_DIR = path.resolve(process.cwd(), '../markdown');
 const OUT_DIR = path.resolve(process.cwd(), 'data/sources');
 
 async function readMarkdownFiles(dir: string) {
