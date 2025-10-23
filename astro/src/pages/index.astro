@@ -470,6 +470,18 @@ const allHashtags = Object.entries(hashtagCounts)
   const selectedCountBadge = document.getElementById('selected-hashtag-count');
   const hashtagCheckboxes = document.querySelectorAll('.hashtag-option input[type="checkbox"]') as NodeListOf<HTMLInputElement>;
 
+  // Helper function to get category type for a hashtag
+  function getCategoryForHashtag(hashtag: string): string | null {
+    const hashtagToCategory: Record<string, string> = {
+      '#blog': 'blog',
+      '#article': 'saved', 
+      '#bluesky': 'posts',
+      '#wikipedia': 'wikipedia',
+      '#release': 'release'
+    };
+    return hashtagToCategory[hashtag] || null;
+  }
+
   // All button
   document.getElementById('select-all')?.addEventListener('click', () => {
     checkboxes.forEach((input) => input.checked = true);
@@ -530,6 +542,16 @@ const allHashtags = Object.entries(hashtagCounts)
       
       if (checkbox.checked) {
         selectedHashtags.add(hashtag);
+        
+        // Auto-check the corresponding category when a hashtag is selected
+        const categoryType = getCategoryForHashtag(hashtag);
+        if (categoryType) {
+          const categoryCheckbox = document.querySelector(`input[name="type"][value="${categoryType}"]`) as HTMLInputElement;
+          if (categoryCheckbox && !categoryCheckbox.checked) {
+            categoryCheckbox.checked = true;
+            updateFilters();
+          }
+        }
       } else {
         selectedHashtags.delete(hashtag);
       }
@@ -548,6 +570,16 @@ const allHashtags = Object.entries(hashtagCounts)
       selectedHashtags.delete(hashtag);
     } else {
       selectedHashtags.add(hashtag);
+      
+      // Auto-check the corresponding category when a hashtag is selected
+      const categoryType = getCategoryForHashtag(hashtag);
+      if (categoryType) {
+        const categoryCheckbox = document.querySelector(`input[name="type"][value="${categoryType}"]`) as HTMLInputElement;
+        if (categoryCheckbox && !categoryCheckbox.checked) {
+          categoryCheckbox.checked = true;
+          updateFilters();
+        }
+      }
     }
     
     // Update corresponding checkbox in dropdown
