@@ -8,13 +8,10 @@ on:
   # Allow manual trigger
   workflow_dispatch:
   
-  # Run when fetch scripts change (for testing)
+  # Run on any push to main branch
   push:
     branches:
-      - master
-    paths:
-      - 'astro/scripts/fetch-*.mts'
-      - '.github/workflows/fetch-timeline.yml'
+      - main
 
 # Grant write permissions to the GITHUB_TOKEN
 permissions:
