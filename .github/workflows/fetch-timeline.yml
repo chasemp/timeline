@@ -69,18 +69,18 @@ jobs:
         working-directory: ./astro
         run: npm run merge
       
-      - name: Check for data changes
-        id: data_changes
+      - name: Check for changes
+        id: changes
         run: |
-          git diff --quiet astro/data/sources/ astro/src/data/timeline.json || echo "changed=true" >> $GITHUB_OUTPUT
+          git diff --quiet astro/data/sources/ astro/src/data/timeline.json astro/src/pages/index.astro astro/src/components/ || echo "changed=true" >> $GITHUB_OUTPUT
       
       - name: Build Astro site
-        if: steps.data_changes.outputs.changed == 'true'
+        if: steps.changes.outputs.changed == 'true'
         working-directory: ./astro
         run: npm run build
       
       - name: Deploy to docs directory
-        if: steps.data_changes.outputs.changed == 'true'
+        if: steps.changes.outputs.changed == 'true'
         run: |
           rm -rf docs
           mkdir -p docs
@@ -88,7 +88,7 @@ jobs:
           cp astro/dist/.nojekyll docs/ 2>/dev/null || true
       
       - name: Commit and push all changes
-        if: steps.data_changes.outputs.changed == 'true'
+        if: steps.changes.outputs.changed == 'true'
         run: |
           git config user.name "GitHub Actions"
           git config user.email "actions@github.com"
@@ -99,6 +99,6 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       
       - name: No changes detected
-        if: steps.data_changes.outputs.changed != 'true'
-        run: echo "No new timeline data, skipping build and deploy"
+        if: steps.changes.outputs.changed != 'true'
+        run: echo "No changes detected, skipping build and deploy"
 
