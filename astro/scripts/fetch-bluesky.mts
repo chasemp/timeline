@@ -7,12 +7,14 @@
 import { writeFileSync, readFileSync, existsSync, mkdirSync } from 'fs';
 import { join, dirname } from 'path';
 import { fileURLToPath } from 'url';
+import { createHash } from 'crypto';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
 const BLUESKY_HANDLE = 'chase523.bsky.social';
 const OUTPUT_FILE = join(__dirname, '../data/sources/bluesky.json');
+const CACHE_DIR = join(__dirname, '../public/assets/cached-images/bluesky');
 
 interface BlueskyPost {
   uri: string;
@@ -96,9 +98,54 @@ async function fetchPosts(did: string, limit = 100, cursor?: string): Promise<{ 
 }
 
 /**
+ * Download and cache an image, return local path
+ */
+async function cacheImage(imageUrl: string): Promise<string> {
+  try {
+    // Create hash of URL for filename
+    const hash = createHash('md5').update(imageUrl).digest('hex');
+    // Extract extension, handling @jpeg format from Bluesky CDN
+    let ext = imageUrl.split('.').pop()?.split('?')[0]?.split('@')[1] || 
+              imageUrl.split('@').pop()?.split('?')[0] || 'jpg';
+    // Ensure ext doesn't contain path separators
+    ext = ext.replace(/[\/\\]/g, '');
+    const filename = `${hash}.${ext}`;
+    const localPath = join(CACHE_DIR, filename);
+    const publicPath = `/assets/cached-images/bluesky/${filename}`;
+    
+    // Check if already cached
+    if (existsSync(localPath)) {
+      return publicPath;
+    }
+    
+    // Download image
+    console.log(`  Caching image: ${imageUrl.substring(0, 60)}...`);
+    const response = await fetch(imageUrl);
+    if (!response.ok) {
+      console.warn(`  Failed to cache image: ${response.status}`);
+      return imageUrl; // Return original URL as fallback
+    }
+    
+    const buffer = Buffer.from(await response.arrayBuffer());
+    
+    // Ensure cache directory exists
+    mkdirSync(CACHE_DIR, { recursive: true });
+    
+    // Write to cache
+    writeFileSync(localPath, buffer);
+    console.log(`  ✓ Cached to ${publicPath}`);
+    
+    return publicPath;
+  } catch (error) {
+    console.warn(`  Error caching image: ${error}`);
+    return imageUrl; // Return original URL as fallback
+  }
+}
+
+/**
  * Convert Bluesky post to timeline entry
  */
-function convertToTimelineEntry(post: BlueskyPost): TimelineEntry {
+async function convertToTimelineEntry(post: BlueskyPost): Promise<TimelineEntry> {
   const postId = post.uri.split('/').pop() || '';
   const url = `https://bsky.app/profile/${post.author.handle}/post/${postId}`;
   
@@ -114,9 +161,14 @@ function convertToTimelineEntry(post: BlueskyPost): TimelineEntry {
     const embedType = post.embed.$type;
     
     if (embedType === 'app.bsky.embed.images#view') {
-      // Extract images
-      const images = post.embed.images?.map((img: any) => img.fullsize || img.thumb) || [];
+      // Extract and cache images
+      const remoteImages = post.embed.images?.map((img: any) => img.fullsize || img.thumb) || [];
       const alts = post.embed.images?.map((img: any) => img.alt || '') || [];
+      
+      // Cache images and get local paths
+      const images = await Promise.all(remoteImages.map(async (imgUrl: string) => {
+        return await cacheImage(imgUrl);
+      }));
       
       media = {
         type: 'image',
@@ -137,7 +189,12 @@ function convertToTimelineEntry(post: BlueskyPost): TimelineEntry {
         const linkTitle = external.title || '';
         const linkDesc = external.description || '';
         const linkUrl = external.uri || '';
-        const linkThumb = external.thumb || '';
+        let linkThumb = external.thumb || '';
+        
+        // Cache thumbnail if present
+        if (linkThumb) {
+          linkThumb = await cacheImage(linkThumb);
+        }
         
         // Add external link card to content
         contentHtml += `
@@ -263,8 +320,9 @@ async function main() {
     
     console.log(`✓ Fetched ${newPostsCount} new posts`);
     
-    // Convert to timeline entries
-    const newEntries = allPosts.map(convertToTimelineEntry);
+    // Convert to timeline entries (with image caching)
+    console.log('Converting posts and caching images...');
+    const newEntries = await Promise.all(allPosts.map(convertToTimelineEntry));
     
     // Merge with existing posts (new posts first)
     const allEntries = [...newEntries, ...existingPosts];

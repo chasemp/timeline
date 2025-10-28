@@ -10,66 +10,85 @@ This project transforms my online history into an interactive timeline, replacin
 
 ## Data Sources
 
-### 1. **Blog Posts** (36 posts)
+### 1. **Blog Posts**
 - Sourced from Jekyll markdown files in `markdown/`
 - Converted to HTML via `marked` library
 - Full content available as separate pages
 - Topics: Security, DevOps, Python, Networking
 
-### 2. **Bluesky Posts** (4 posts)
+### 2. **Bluesky Posts**
 - Fetched via AT Protocol API
 - Handle: [@chase523.bsky.social](https://bsky.app/profile/chase523.bsky.social)
+- **Images automatically cached** to `/assets/cached-images/bluesky/`
 - Incremental updates (only fetches new posts)
 - No authentication required
 
-### 3. **Readwise Reader** (10 documents tagged "classic")
+### 3. **Pixelfed Posts**
+- Fetched via ActivityPub Atom feed
+- Account: [@chase523@gram.social](https://gram.social/chase523)
+- **Images automatically cached** to `/assets/cached-images/pixelfed/`
+- Incremental updates (only fetches new posts)
+- No authentication required
+
+### 4. **Wikipedia Contributions**
+- Fetched via Wikipedia API
+- User: [Chasemp](https://en.wikipedia.org/wiki/User:Chasemp)
+- Shows edits and page creations
+- No authentication required
+
+### 5. **GitHub Releases**
+- Fetched via GitHub API
+- Organization/User: chasemp
+- Shows project releases and tags
+- No authentication required
+
+### 6. **Readwise Reader**
 - Fetched via Readwise Reader API v3
 - Documents tagged with "classic" from all locations (archive, inbox, later)
 - Includes highlights and reading metadata
 - Documents tagged with "full" display complete article content instead of summary
 - Requires API token
 
-**Total Timeline Items:** 50
-
 ## Architecture
 
 ```
-┌─────────────────────────────────────────────────────────────┐
-│                     Data Sources                             │
-├──────────────┬──────────────────┬───────────────────────────┤
-│ markdown/*.md  │ Bluesky API      │ Readwise Reader API       │
-│              │ (AT Protocol)    │ (v3)                       │
-└──────┬───────┴────────┬─────────┴──────────┬────────────────┘
-       │                │                    │
-       ▼                ▼                    ▼
-┌─────────────────────────────────────────────────────────────┐
-│              Data Fetching Scripts (Node.js)                 │
-├──────────────┬──────────────────┬───────────────────────────┤
-│ fetch-blog   │ fetch-bluesky    │ fetch-readwise-reader     │
-│              │                  │                            │
-└──────┬───────┴────────┬─────────┴──────────┬────────────────┘
-       │                │                    │
-       └────────────────┼────────────────────┘
-                        ▼
-              ┌──────────────────┐
-              │   merge-sources  │
-              └────────┬─────────┘
-                       ▼
-              ┌──────────────────┐
-              │  timeline.json   │
-              └────────┬─────────┘
-                       ▼
-              ┌──────────────────┐
-              │   Astro Build    │
-              └────────┬─────────┘
-                       ▼
-              ┌──────────────────┐
-              │   docs/ (deploy) │
-              └────────┬─────────┘
-                       ▼
-              ┌──────────────────┐
-              │  GitHub Pages    │
-              └──────────────────┘
+┌─────────────────────────────────────────────────────────────────┐
+│                         Data Sources                             │
+├────────┬────────┬─────────┬──────────┬──────────┬──────────────┤
+│markdown│Bluesky │Pixelfed │Wikipedia │GitHub    │Readwise      │
+│  .md   │  API   │ Atom    │   API    │  API     │Reader API    │
+└───┬────┴───┬────┴────┬────┴─────┬────┴────┬─────┴──────┬───────┘
+    │        │         │          │         │            │
+    ▼        ▼         ▼          ▼         ▼            ▼
+┌─────────────────────────────────────────────────────────────────┐
+│              Data Fetching Scripts (Node.js + Image Cache)       │
+├────────┬────────┬─────────┬──────────┬──────────┬──────────────┤
+│fetch-  │fetch-  │fetch-   │fetch-    │fetch-    │fetch-readwise│
+│blog    │bluesky │pixelfed │wikipedia │github    │  -reader     │
+│        │ +cache │ +cache  │          │releases  │              │
+└───┬────┴───┬────┴────┬────┴─────┬────┴────┬─────┴──────┬───────┘
+    │        │         │          │         │            │
+    └────────┴─────────┴──────────┴─────────┴────────────┘
+                                ▼
+                     ┌──────────────────┐
+                     │   merge-sources  │
+                     └────────┬─────────┘
+                              ▼
+                     ┌──────────────────┐
+                     │  timeline.json   │
+                     └────────┬─────────┘
+                              ▼
+                     ┌──────────────────┐
+                     │   Astro Build    │
+                     └────────┬─────────┘
+                              ▼
+                     ┌──────────────────┐
+                     │   docs/ (deploy) │
+                     └────────┬─────────┘
+                              ▼
+                     ┌──────────────────┐
+                     │  GitHub Pages    │
+                     └──────────────────┘
 ```
 
 ## Tech Stack
@@ -100,13 +119,23 @@ This project transforms my online history into an interactive timeline, replacin
 │   │       └── timeline.json       # Merged timeline data
 │   ├── scripts/
 │   │   ├── fetch-blog.mts          # Fetch blog posts
-│   │   ├── fetch-bluesky.mts       # Fetch Bluesky posts
+│   │   ├── fetch-bluesky.mts       # Fetch Bluesky posts + cache images
+│   │   ├── fetch-pixelfed.mts      # Fetch Pixelfed posts + cache images
+│   │   ├── fetch-wikipedia.mts     # Fetch Wikipedia contributions
+│   │   ├── fetch-github-releases.mts # Fetch GitHub releases
 │   │   ├── fetch-readwise-reader.mts # Fetch Readwise Reader docs
 │   │   └── merge-sources.mts       # Merge all sources
 │   ├── data/sources/               # Individual source JSON files
 │   │   ├── blog.json
 │   │   ├── bluesky.json
+│   │   ├── pixelfed.json
+│   │   ├── wikipedia.json
+│   │   ├── github-releases.json
 │   │   └── readwise.json
+│   ├── public/
+│   │   └── assets/cached-images/  # Cached images from social media
+│   │       ├── bluesky/            # Cached Bluesky images
+│   │       └── pixelfed/           # Cached Pixelfed images
 │   └── package.json
 ├── docs/                            # Deployed site (GitHub Pages)
 │   ├── index.html
@@ -136,7 +165,7 @@ cd chasemp.github.io
 cd astro
 npm install
 
-# Fetch data (optional - will use existing data if tokens not provided)
+# Fetch data (optional - will use existing data if not fetched)
 npm run generate
 
 # Start dev server
@@ -145,19 +174,41 @@ npm run dev
 
 Visit http://localhost:4321 to see the timeline.
 
+### Available Scripts
+
+- **`npm run dev`** - Start development server (uses existing data)
+- **`npm run dev:fetch`** - Fetch fresh data, then start dev server
+- **`npm run build`** - Build site (uses existing data)
+- **`npm run build:fetch`** - Fetch fresh data, then build site
+- **`npm run preview`** - Preview built site
+- **`npm run generate`** - Fetch all data sources and merge
+- **`npm run fetch:blog`** - Fetch blog posts only
+- **`npm run fetch:bluesky`** - Fetch Bluesky posts (with image caching)
+- **`npm run fetch:pixelfed`** - Fetch Pixelfed posts (with image caching)
+- **`npm run fetch:wikipedia`** - Fetch Wikipedia contributions
+- **`npm run fetch:github`** - Fetch GitHub releases
+- **`npm run fetch:readwise`** - Fetch Readwise documents
+- **`npm run merge`** - Merge source files into timeline.json
+
 ### Environment Variables
 
 Optional environment variables for data fetching:
 
 ```bash
-# Readwise Reader API token
+# Readwise Reader API token (optional)
 export READWISE_TOKEN="your_token_here"
 
-# Filter Readwise by tag (optional)
+# Filter Readwise by tag (optional, defaults to "classic")
 export READWISE_TAG_FILTER="classic"
+
+# GitHub API token (optional, increases rate limits)
+export GITHUB_TOKEN="your_token_here"
 ```
 
-Get your Readwise token: https://readwise.io/access_token
+**Notes:**
+- Get Readwise token: https://readwise.io/access_token
+- GitHub token is optional but recommended to avoid rate limits
+- All other data sources work without authentication
 
 ## Deployment
 
@@ -246,11 +297,14 @@ The workflow has `contents: write` permission configured in `.github/workflows/f
 
 The workflow (`.github/workflows/fetch-timeline.yml`) runs every 4 hours and:
 
-1. Fetches new Bluesky posts (no auth required)
-2. Fetches new blog posts (from `markdown/` directory)
-3. Fetches new Readwise documents (if `READWISE_TOKEN` provided)
-4. Merges all sources into `timeline.json`
-5. Commits and pushes data changes using `GITHUB_TOKEN`
+1. Fetches new blog posts (from `markdown/` directory)
+2. Fetches new Bluesky posts + caches images (no auth required)
+3. Fetches new Pixelfed posts + caches images (no auth required)
+4. Fetches new Wikipedia contributions (no auth required)
+5. Fetches new GitHub releases (optional auth for higher rate limits)
+6. Fetches new Readwise documents (if `READWISE_TOKEN` provided)
+7. Merges all sources into `timeline.json`
+8. Commits and pushes data + cached images using `GITHUB_TOKEN`
 
 **Note:** The workflow **only fetches and commits data**. Building and deploying to `/docs` is done locally via `deploy.sh`.
 
@@ -273,21 +327,35 @@ git push origin master
 
 ### Timeline View
 - **Vertical timeline** with chronological posts
-- **Filter controls** for content types (Blog, Saved, Bluesky)
+- **Filter controls** for content types (Read, Written, Posted, Released, Contributed)
+- **Hashtag filtering** with dropdown selector
+- **Search functionality** via Pagefind (production builds)
 - **Timeline nodes** with color-coded dots by type
 - **Responsive design** optimized for mobile
 
 ### Content Display
 - **Blog posts:** Open as full pages (mobile-friendly, better for long content)
-- **Saved articles & Bluesky:** Open in modal panels (quick preview for short content)
+- **Other content:** Opens in modal panels (quick preview for short content)
+- **Image support:** Photos from Bluesky and Pixelfed display inline
+- **Link previews:** External links show cards with thumbnails
 - **Search params:** Timeline state preserved in URL
 
 ### User Experience
-- Dark theme matching 523.life aesthetic
-- Hover tooltips on timeline nodes
-- Keyboard navigation (ESC to close panels)
-- Scroll lock when panels are open
-- Reading time estimates for articles
+- **Dual themes:** Dark theme (default) and light theme toggle
+- **Theme persistence:** Remembers preference via cookies across 523.life domain
+- **Hover tooltips** on timeline nodes with timestamps
+- **Keyboard navigation** (ESC to close panels)
+- **Scroll lock** when panels are open
+- **Mobile gestures:** Swipe down to close panels on mobile
+- **Comments:** GitHub Discussions integration via giscus
+- **RSS feed:** Available at `/rss.xml`
+
+### Image Caching
+- **Automatic caching:** Bluesky and Pixelfed images cached locally during fetch
+- **Resilient:** Site works even if remote CDNs go down
+- **Fast loading:** Images served from your domain
+- **Cached location:** `public/assets/cached-images/{bluesky,pixelfed}/`
+- **Size:** ~4 MB total (committed to git)
 
 ## Data Format
 
@@ -296,7 +364,7 @@ All timeline entries follow this schema:
 ```typescript
 interface TimelineEntry {
   id: string;                    // Unique ID (e.g., "blog:post-slug")
-  type: 'blog' | 'saved' | 'bluesky';
+  type: 'blog' | 'saved' | 'bluesky' | 'pixelfed' | 'wikipedia' | 'release';
   timestamp: string;             // ISO 8601 date
   title: string;
   summary?: string;
@@ -305,6 +373,11 @@ interface TimelineEntry {
   author?: string;
   tags: string[];
   content_html?: string;
+  media?: {                      // For posts with images
+    type: 'image' | 'video';
+    images?: string[];           // Local or remote URLs
+    alt?: string | string[];
+  };
   metadata?: Record<string, any>;
 }
 ```

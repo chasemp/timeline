@@ -1,5 +1,51 @@
 [
   {
+    "id": "readwise:01k73bfa9y1t3j4aany3fca69t",
+    "type": "saved",
+    "timestamp": "2025-10-27T04:40:14.813000+00:00",
+    "title": "Reflections: The ecosystem is moving",
+    "summary": "Software must constantly change because the technology and user expectations keep evolving. Federated communication protocols are slow to adapt, making centralized services more practical today. Open source centralized networks offer control and flexibility without the drawbacks of federation.",
+    "url": "https://signal.org/blog/the-ecosystem-is-moving/",
+    "canonical_url": "https://signal.org/blog/the-ecosystem-is-moving/",
+    "author": "Signal Messenger",
+    "tags": [
+      "sec",
+      "tech",
+      "fodder",
+      "classic",
+      "prodsec",
+      "software",
+      "shortlist"
+    ],
+    "metadata": {
+      "word_count": 1408,
+      "reading_time": "8 min read",
+      "site_name": "Signal Messenger",
+      "cover_image": "https://signal.org/assets/og/og-image-ff2096df535eee499356de64b19fa8cebb9681ab1e78cca7330e7f8b8d5ec6d5.png"
+    }
+  },
+  {
+    "id": "readwise:01k89ftn6ammz8pqw7j23v6jev",
+    "type": "saved",
+    "timestamp": "2025-10-23T21:33:03.562000+00:00",
+    "title": "Why Up to 70% of Platform Engineering Teams Fail to Deliver Impact",
+    "summary": "Most platform engineering teams fail because they treat platforms as tech projects instead of products and don’t measure business value. Without product focus, clear metrics, and fast feedback, platforms rarely drive adoption or justify investment. Using a maturity model and measuring developer experience helps teams show impact and secure top-down support.",
+    "url": "https://thenewstack.io/why-up-to-70-of-platform-engineering-teams-fail-to-deliver-impact/",
+    "canonical_url": "https://thenewstack.io/why-up-to-70-of-platform-engineering-teams-fail-to-deliver-impact/",
+    "author": "Jennifer Riggins",
+    "tags": [
+      "tech",
+      "fodder",
+      "prodsec"
+    ],
+    "metadata": {
+      "word_count": 1319,
+      "reading_time": "7 min read",
+      "site_name": "The New Stack",
+      "cover_image": "https://cdn.thenewstack.io/media/2025/10/54fc1732-matthew-meckes-2.jpg"
+    }
+  },
+  {
     "id": "readwise:01k88he48c3cfs5k3qa12payyk",
     "type": "saved",
     "timestamp": "2025-10-23T12:41:56.095000+00:00",
@@ -376,31 +422,6 @@
       "reading_time": "2 min read",
       "site_name": "linkedin.com",
       "cover_image": "https://static.licdn.com/aero-v1/sc/h/c45fy346jw096z9pbphyyhdz7"
-    }
-  },
-  {
-    "id": "readwise:01k73bfa9y1t3j4aany3fca69t",
-    "type": "saved",
-    "timestamp": "2025-10-09T02:05:49.244000+00:00",
-    "title": "Reflections: The ecosystem is moving",
-    "summary": "Software must constantly change because the technology and user expectations keep evolving. Federated communication protocols are slow to adapt, making centralized services more practical today. Open source centralized networks offer control and flexibility without the drawbacks of federation.",
-    "url": "https://signal.org/blog/the-ecosystem-is-moving/",
-    "canonical_url": "https://signal.org/blog/the-ecosystem-is-moving/",
-    "author": "Signal Messenger",
-    "tags": [
-      "sec",
-      "tech",
-      "fodder",
-      "classic",
-      "prodsec",
-      "software",
-      "shortlist"
-    ],
-    "metadata": {
-      "word_count": 1408,
-      "reading_time": "8 min read",
-      "site_name": "Signal Messenger",
-      "cover_image": "https://signal.org/assets/og/og-image-ff2096df535eee499356de64b19fa8cebb9681ab1e78cca7330e7f8b8d5ec6d5.png"
     }
   },
   {
