@@ -2,9 +2,11 @@
 import { ViewTransitions } from 'astro:transitions';
 import Timeline from "../components/Timeline.astro";
 import timeline from "../data/timeline.json";
+import { config } from "../config";
 
 const items = (timeline as any[]);
 const VERSION = "1.2.9"; // Force deployment with version update
+const isDev = import.meta.env.DEV;
 
 // Extract hashtags from timeline items
 function extractHashtags(text: string): string[] {
@@ -136,8 +138,12 @@ const allHashtags = Object.entries(hashtagCounts)
   <meta http-equiv="Pragma" content="no-cache">
   <meta http-equiv="Expires" content="0">
   <link rel="alternate" type="application/rss+xml" title="Chase Pettet's Timeline" href="/rss.xml" />
-  <link href="/pagefind/pagefind-ui.css" rel="stylesheet">
-  <script is:inline src="/pagefind/pagefind-ui.js"></script>
+  {!isDev && (
+    <>
+      <link href="/pagefind/pagefind-ui.css" rel="stylesheet">
+      <script is:inline src="/pagefind/pagefind-ui.js"></script>
+    </>
+  )}
   <ViewTransitions />
 </head>
 <body data-version={VERSION}>
@@ -190,7 +196,7 @@ const allHashtags = Object.entries(hashtagCounts)
       </div>
     </section>
 
-    <Timeline items={itemsWithHashtags} />
+    <Timeline items={itemsWithHashtags} config={config} />
   </div>
 
   <div class="backdrop" id="panel-backdrop" hidden></div>
@@ -218,6 +224,9 @@ const allHashtags = Object.entries(hashtagCounts)
         
         <h4>How to Use</h4>
         <p>Click on any item in the timeline to read more. Use the filters above to show or hide different content types. Hover over the colored dots to see timestamps.</p>
+        
+        <h4>Comments</h4>
+        <p>Each timeline item and blog post has its own discussion thread powered by GitHub Discussions. To leave a comment, you'll need to authorize the <a href="https://giscus.app/" target="_blank" rel="noopener">giscus</a> app—this allows it to create and post comments on your behalf within this repository's discussion threads only.</p>
         
         <p class="muted-text">Built with Astro • Data fetched from multiple sources</p>
       </div>
@@ -350,6 +359,7 @@ const allHashtags = Object.entries(hashtagCounts)
   .detail-content { margin: 16px 0; }
   .detail-metadata { margin-top: 16px; padding-top: 12px; border-top: 1px solid var(--border); color: var(--muted); font-size: 14px; font-family: system-ui, sans-serif; }
   .detail-content img { max-width: 100%; height: auto; border-radius: 8px; margin: 12px 0; border: 1px solid var(--border); }
+  .panel-comments { margin-top: 32px; padding-top: 24px; border-top: 1px solid var(--border); }
   .backdrop { display: none; position: fixed; inset: 0; background: rgba(61, 40, 23, 0.6); backdrop-filter: blur(4px); z-index: 99; }
   .swipe-indicator { display: none; }
 

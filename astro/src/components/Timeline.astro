@@ -1,5 +1,5 @@
 ---
-const { items } = Astro.props as { items: any[] };
+const { items, config } = Astro.props as { items: any[], config?: any };
 
 const sorted = [...items].sort((a, b) => new Date(b.timestamp).getTime() - new Date(a.timestamp).getTime());
 
@@ -162,6 +162,7 @@ const typeDisplayName = (type: string) => {
  </style>
 
 <script is:inline set:html={`window.__TIMELINE__ = ${JSON.stringify(sorted)};`} />
+{config && <script is:inline set:html={`window.__CONFIG__ = ${JSON.stringify(config)};`} />}
 
 <script>
   const params = new URLSearchParams(location.search);
@@ -332,11 +333,79 @@ const typeDisplayName = (type: string) => {
         <div class="detail-content">${mainContent}${metadataHtml}</div>`;
     }
     
+    // Check if comments should be disabled for this item
+    const disableComments = checkCommentsDisabled(entry);
+    
+    // Add comments section with giscus for timeline items (if not disabled)
+    if (!disableComments) {
+      content += `
+        <div class="panel-comments">
+          <div class="giscus" id="giscus-${id}"></div>
+        </div>
+      `;
+    }
+    
     panelContent.innerHTML = content;
+    
+    // Load giscus dynamically (if not disabled)
+    if (!disableComments) {
+      loadGiscus(id);
+    }
     
     const p = new URLSearchParams(location.search); 
     p.set('id', id); 
     history.replaceState({}, '', `?${p.toString()}`);
+  }
+
+  function loadGiscus(nodeId: string) {
+    // Remove any existing giscus script
+    const existingScript = document.querySelector('script[src="https://giscus.app/client.js"]');
+    if (existingScript) {
+      existingScript.remove();
+    }
+    
+    // Get the giscus container
+    const container = document.getElementById(`giscus-${nodeId}`);
+    if (!container) return;
+    
+    // Create new script element
+    const script = document.createElement('script');
+    script.src = 'https://giscus.app/client.js';
+    script.setAttribute('data-repo', 'chasemp/timeline');
+    script.setAttribute('data-repo-id', 'R_kgDOQDOMbA');
+    script.setAttribute('data-category', 'Ideas');
+    script.setAttribute('data-category-id', 'DIC_kwDOQDOMbM4CxLZb');
+    script.setAttribute('data-mapping', 'specific');
+    script.setAttribute('data-term', nodeId); // Use the node ID as the unique term
+    script.setAttribute('data-strict', '0');
+    script.setAttribute('data-reactions-enabled', '1');
+    script.setAttribute('data-emit-metadata', '0');
+    script.setAttribute('data-input-position', 'bottom');
+    script.setAttribute('data-theme', '/giscus-custom.css');
+    script.setAttribute('data-lang', 'en');
+    script.setAttribute('crossorigin', 'anonymous');
+    script.async = true;
+    
+    // Add error handling
+    script.onerror = () => {
+      // Hide comments section if script fails to load
+      const commentsSection = container.closest('.panel-comments');
+      if (commentsSection) {
+        (commentsSection as HTMLElement).style.display = 'none';
+      }
+    };
+    
+    document.body.appendChild(script);
+    
+    // Also check after timeout if giscus loaded
+    setTimeout(() => {
+      if (container.innerHTML.trim() === '') {
+        const commentsSection = container.closest('.panel-comments');
+        if (commentsSection) {
+          (commentsSection as HTMLElement).style.display = 'none';
+        }
+      }
+    }, 10000);
   }
 
   function closePanel() {
@@ -346,6 +415,17 @@ const typeDisplayName = (type: string) => {
       swipeIndicator.setAttribute('hidden', '');
       lockScroll(false);
     }
+    
+    // Remove giscus when closing panel
+    const existingScript = document.querySelector('script[src="https://giscus.app/client.js"]');
+    if (existingScript) {
+      existingScript.remove();
+    }
+    
+    // Clear any giscus iframes
+    const giscusElements = panelContent.querySelectorAll('.giscus');
+    giscusElements.forEach(el => el.innerHTML = '');
+    
     panelTitleText.textContent = 'About';
     panelSourceWrapper.setAttribute('hidden', '');
     panelContent.innerHTML = introHTML;
@@ -353,6 +433,31 @@ const typeDisplayName = (type: string) => {
     const p = new URLSearchParams(location.search); 
     p.delete('id'); 
     history.replaceState({}, '', `?${p.toString()}`);
+  }
+
+  function checkCommentsDisabled(entry: any): boolean {
+    // Check global config - would need to be passed from parent
+    const globalConfig = (window as any).__CONFIG__;
+    
+    // If global config disables comments, check that first
+    if (globalConfig?.commentsEnabled === false) {
+      return true;
+    }
+    
+    // Check for #nocomments or #nc hashtag
+    const hashtags = entry.hashtags || [];
+    const hasNoCommentsTag = hashtags.some((tag: string) => 
+      tag.toLowerCase() === '#nocomments' || tag.toLowerCase() === '#nc'
+    );
+    
+    // Check tags array as well (frontmatter tags)
+    const tags = entry.tags || [];
+    const hasNoCommentsInTags = tags.some((tag: string) => {
+      const normalized = tag.toLowerCase().replace(/\s+/g, '_');
+      return normalized === 'nocomments' || normalized === 'nc';
+    });
+    
+    return hasNoCommentsTag || hasNoCommentsInTags;
   }
 
   closeBtn.addEventListener('click', closePanel);
