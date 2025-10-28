@@ -35,7 +35,7 @@
     "media": {
       "type": "image",
       "images": [
-        "https://gram.social/storage/m/_v2/888529897498449747/0c2c69eb8-6377a8/NRpkN33aHmRo/ymFn9EbYBcGkj9mhuxMRjjnrw2rPTMFM6JgFoR90.gif"
+        "/assets/cached-images/pixelfed/2ad1be390731777f8a22e1854f8cfa01.gif"
       ],
       "alt": ""
     },
@@ -59,13 +59,13 @@
     "media": {
       "type": "image",
       "images": [
-        "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:7whslkj667kgto2x246o4stl/bafkreigggwrz55apsnigues675j3khxmxqivzwnm2prwep22o6idj6nlq4@jpeg"
+        "/assets/cached-images/bluesky/f202978c3276f47101673c7c3259b52e.jpeg"
       ],
       "alt": [
         ""
       ]
     },
-    "content_html": "<p></p><img src=\"https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:7whslkj667kgto2x246o4stl/bafkreigggwrz55apsnigues675j3khxmxqivzwnm2prwep22o6idj6nlq4@jpeg\" alt=\"Image from post\" style=\"max-width: 100%; margin: 12px 0; border-radius: 8px;\">",
+    "content_html": "<p></p><img src=\"/assets/cached-images/bluesky/f202978c3276f47101673c7c3259b52e.jpeg\" alt=\"Image from post\" style=\"max-width: 100%; margin: 12px 0; border-radius: 8px;\">",
     "content_text": null,
     "embed_uri": "at://did:plc:7whslkj667kgto2x246o4stl/app.bsky.feed.post/3m4726vdij223",
     "embed_cid": "bafyreicn3dfkfwltb77aunxhazw5q6xeyeadmlgy2kqxxvwp5h5p6bp5xu",
@@ -73,6 +73,37 @@
       "likes": 0,
       "reposts": 0,
       "replies": 0
+    }
+  },
+  {
+    "id": "readwise:01k73bfa9y1t3j4aany3fca69t",
+    "type": "saved",
+    "source": null,
+    "timestamp": "2025-10-27T04:40:14.813000+00:00",
+    "title": "Reflections: The ecosystem is moving",
+    "summary": "Software must constantly change because the technology and user expectations keep evolving. Federated communication protocols are slow to adapt, making centralized services more practical today. Open source centralized networks offer control and flexibility without the drawbacks of federation.",
+    "url": "https://signal.org/blog/the-ecosystem-is-moving/",
+    "canonical_url": "https://signal.org/blog/the-ecosystem-is-moving/",
+    "author": "Signal Messenger",
+    "tags": [
+      "sec",
+      "tech",
+      "fodder",
+      "classic",
+      "prodsec",
+      "software",
+      "shortlist"
+    ],
+    "media": [],
+    "content_html": null,
+    "content_text": null,
+    "embed_uri": null,
+    "embed_cid": null,
+    "metadata": {
+      "word_count": 1408,
+      "reading_time": "8 min read",
+      "site_name": "Signal Messenger",
+      "cover_image": "https://signal.org/assets/og/og-image-ff2096df535eee499356de64b19fa8cebb9681ab1e78cca7330e7f8b8d5ec6d5.png"
     }
   },
   {
@@ -87,7 +118,7 @@
     "author": null,
     "tags": [],
     "media": [],
-    "content_html": "<p>#meme<br><br>youtu.be/SZIC3kFKnqA?...</p>\n          <div style=\"margin: 16px 0; border: 1px solid var(--border, #d4c4a8); border-radius: 8px; overflow: hidden; background: var(--card-bg, #fdfbf7);\">\n            <img src=\"https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:7whslkj667kgto2x246o4stl/bafkreiafm6xhtb3z22jc3uptvfb76wlbkdoq4iyupg4ijwd3qv6mjr6rqy@jpeg\" alt=\"A Picture Of Me Became A Meme And Things Got Weird\" style=\"width: 100%; height: auto; display: block; max-height: 200px; object-fit: cover;\">\n            <div style=\"padding: 12px;\">\n              <div style=\"font-weight: 600; margin-bottom: 4px; color: var(--text, #3d2817);\">A Picture Of Me Became A Meme And Things Got Weird</div>\n              <div style=\"font-size: 13px; color: var(--muted, #7a6b5d); margin-bottom: 8px;\">YouTube video by STRANGE ÆONS</div>\n              <div style=\"font-size: 12px; color: var(--accent, #c17a4f); overflow: hidden; text-overflow: ellipsis; white-space: nowrap;\">🔗 https://youtu.be/SZIC3kFKnqA?si=VeN6pvH5JPz1LHFV</div>\n            </div>\n          </div>",
+    "content_html": "<p>#meme<br><br>youtu.be/SZIC3kFKnqA?...</p>\n          <div style=\"margin: 16px 0; border: 1px solid var(--border, #d4c4a8); border-radius: 8px; overflow: hidden; background: var(--card-bg, #fdfbf7);\">\n            <img src=\"/assets/cached-images/bluesky/428b396da579c00246e6a05648db9225.jpeg\" alt=\"A Picture Of Me Became A Meme And Things Got Weird\" style=\"width: 100%; height: auto; display: block; max-height: 200px; object-fit: cover;\">\n            <div style=\"padding: 12px;\">\n              <div style=\"font-weight: 600; margin-bottom: 4px; color: var(--text, #3d2817);\">A Picture Of Me Became A Meme And Things Got Weird</div>\n              <div style=\"font-size: 13px; color: var(--muted, #7a6b5d); margin-bottom: 8px;\">YouTube video by STRANGE ÆONS</div>\n              <div style=\"font-size: 12px; color: var(--accent, #c17a4f); overflow: hidden; text-overflow: ellipsis; white-space: nowrap;\">🔗 https://youtu.be/SZIC3kFKnqA?si=VeN6pvH5JPz1LHFV</div>\n            </div>\n          </div>",
     "content_text": null,
     "embed_uri": "at://did:plc:7whslkj667kgto2x246o4stl/app.bsky.feed.post/3m45ifidl4c2j",
     "embed_cid": "bafyreiabhtjml6ep4goymtymlg2b33vffltcodilazenjtmjwuj6whbgfe",
@@ -109,7 +140,7 @@
     "author": null,
     "tags": [],
     "media": [],
-    "content_html": "<p>www.youtube.com/watch?si=rvu...</p>\n          <div style=\"margin: 16px 0; border: 1px solid var(--border, #d4c4a8); border-radius: 8px; overflow: hidden; background: var(--card-bg, #fdfbf7);\">\n            <img src=\"https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:7whslkj667kgto2x246o4stl/bafkreiaf74lskhqnpk6gg5kijkzccixko4vcg7gfrigg4uv4k5yfafq3jq@jpeg\" alt=\"Master Shi Heng Yi – 5 hindrances to self-mastery | Shi Heng YI | TEDxVitosha\" style=\"width: 100%; height: auto; display: block; max-height: 200px; object-fit: cover;\">\n            <div style=\"padding: 12px;\">\n              <div style=\"font-weight: 600; margin-bottom: 4px; color: var(--text, #3d2817);\">Master Shi Heng Yi – 5 hindrances to self-mastery | Shi Heng YI | TEDxVitosha</div>\n              <div style=\"font-size: 13px; color: var(--muted, #7a6b5d); margin-bottom: 8px;\">YouTube video by TEDx Talks</div>\n              <div style=\"font-size: 12px; color: var(--accent, #c17a4f); overflow: hidden; text-overflow: ellipsis; white-space: nowrap;\">🔗 https://www.youtube.com/watch?si=rvuN4vSuPN5gcJqh&v=4-079YIasck&feature=youtu.be</div>\n            </div>\n          </div>",
+    "content_html": "<p>www.youtube.com/watch?si=rvu...</p>\n          <div style=\"margin: 16px 0; border: 1px solid var(--border, #d4c4a8); border-radius: 8px; overflow: hidden; background: var(--card-bg, #fdfbf7);\">\n            <img src=\"/assets/cached-images/bluesky/1b1bb10adc5a023b33acf407d061a3c6.jpeg\" alt=\"Master Shi Heng Yi – 5 hindrances to self-mastery | Shi Heng YI | TEDxVitosha\" style=\"width: 100%; height: auto; display: block; max-height: 200px; object-fit: cover;\">\n            <div style=\"padding: 12px;\">\n              <div style=\"font-weight: 600; margin-bottom: 4px; color: var(--text, #3d2817);\">Master Shi Heng Yi – 5 hindrances to self-mastery | Shi Heng YI | TEDxVitosha</div>\n              <div style=\"font-size: 13px; color: var(--muted, #7a6b5d); margin-bottom: 8px;\">YouTube video by TEDx Talks</div>\n              <div style=\"font-size: 12px; color: var(--accent, #c17a4f); overflow: hidden; text-overflow: ellipsis; white-space: nowrap;\">🔗 https://www.youtube.com/watch?si=rvuN4vSuPN5gcJqh&v=4-079YIasck&feature=youtu.be</div>\n            </div>\n          </div>",
     "content_text": null,
     "embed_uri": "at://did:plc:7whslkj667kgto2x246o4stl/app.bsky.feed.post/3m44ysonrfc2v",
     "embed_cid": "bafyreiby7f3kgaegxlfcveaqbnrlrlyucuvtscbj2u6ccb3xfq4buqmhdu",
@@ -131,7 +162,7 @@
     "author": null,
     "tags": [],
     "media": [],
-    "content_html": "<p>Every now and then I remember this standup set from Bernie Mac and have to watch it.  Adult comedy themes.   Always funny <br><br>www.youtube.com/watch?v=7JkP...</p>\n          <div style=\"margin: 16px 0; border: 1px solid var(--border, #d4c4a8); border-radius: 8px; overflow: hidden; background: var(--card-bg, #fdfbf7);\">\n            <img src=\"https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:7whslkj667kgto2x246o4stl/bafkreicplnz7sbnc67jb2bwmxt2xvf7u5vxpyifbgtxduc2uh2nuvrydwu@jpeg\" alt=\"Bernie Mac - I Ain't Scared Of You Mutha****!\" style=\"width: 100%; height: auto; display: block; max-height: 200px; object-fit: cover;\">\n            <div style=\"padding: 12px;\">\n              <div style=\"font-weight: 600; margin-bottom: 4px; color: var(--text, #3d2817);\">Bernie Mac - I Ain't Scared Of You Mutha****!</div>\n              <div style=\"font-size: 13px; color: var(--muted, #7a6b5d); margin-bottom: 8px;\">YouTube video by Willie D. Washington</div>\n              <div style=\"font-size: 12px; color: var(--accent, #c17a4f); overflow: hidden; text-overflow: ellipsis; white-space: nowrap;\">🔗 https://www.youtube.com/watch?v=7JkPx0gk6LE</div>\n            </div>\n          </div>",
+    "content_html": "<p>Every now and then I remember this standup set from Bernie Mac and have to watch it.  Adult comedy themes.   Always funny <br><br>www.youtube.com/watch?v=7JkP...</p>\n          <div style=\"margin: 16px 0; border: 1px solid var(--border, #d4c4a8); border-radius: 8px; overflow: hidden; background: var(--card-bg, #fdfbf7);\">\n            <img src=\"/assets/cached-images/bluesky/dc59d62bbb938c838fc8bbfc47f0695c.jpeg\" alt=\"Bernie Mac - I Ain't Scared Of You Mutha****!\" style=\"width: 100%; height: auto; display: block; max-height: 200px; object-fit: cover;\">\n            <div style=\"padding: 12px;\">\n              <div style=\"font-weight: 600; margin-bottom: 4px; color: var(--text, #3d2817);\">Bernie Mac - I Ain't Scared Of You Mutha****!</div>\n              <div style=\"font-size: 13px; color: var(--muted, #7a6b5d); margin-bottom: 8px;\">YouTube video by Willie D. Washington</div>\n              <div style=\"font-size: 12px; color: var(--accent, #c17a4f); overflow: hidden; text-overflow: ellipsis; white-space: nowrap;\">🔗 https://www.youtube.com/watch?v=7JkPx0gk6LE</div>\n            </div>\n          </div>",
     "content_text": null,
     "embed_uri": "at://did:plc:7whslkj667kgto2x246o4stl/app.bsky.feed.post/3m44g7tmx6k24",
     "embed_cid": "bafyreickmb5jmr27cpd3nvzqzwayp7wrcimk6lzwai3l7t56higzplytqq",
@@ -139,6 +170,33 @@
       "likes": 0,
       "reposts": 0,
       "replies": 0
+    }
+  },
+  {
+    "id": "readwise:01k89ftn6ammz8pqw7j23v6jev",
+    "type": "saved",
+    "source": null,
+    "timestamp": "2025-10-23T21:33:03.562000+00:00",
+    "title": "Why Up to 70% of Platform Engineering Teams Fail to Deliver Impact",
+    "summary": "Most platform engineering teams fail because they treat platforms as tech projects instead of products and don’t measure business value. Without product focus, clear metrics, and fast feedback, platforms rarely drive adoption or justify investment. Using a maturity model and measuring developer experience helps teams show impact and secure top-down support.",
+    "url": "https://thenewstack.io/why-up-to-70-of-platform-engineering-teams-fail-to-deliver-impact/",
+    "canonical_url": "https://thenewstack.io/why-up-to-70-of-platform-engineering-teams-fail-to-deliver-impact/",
+    "author": "Jennifer Riggins",
+    "tags": [
+      "tech",
+      "fodder",
+      "prodsec"
+    ],
+    "media": [],
+    "content_html": null,
+    "content_text": null,
+    "embed_uri": null,
+    "embed_cid": null,
+    "metadata": {
+      "word_count": 1319,
+      "reading_time": "7 min read",
+      "site_name": "The New Stack",
+      "cover_image": "https://cdn.thenewstack.io/media/2025/10/54fc1732-matthew-meckes-2.jpg"
     }
   },
   {
@@ -235,13 +293,13 @@
     "media": {
       "type": "image",
       "images": [
-        "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:7whslkj667kgto2x246o4stl/bafkreiefgeuhmlh3t73if3l6prriqg3xz24tmcezdl65rhqb7svaps4upa@jpeg"
+        "/assets/cached-images/bluesky/aba6ece52b08673b39ca4e12192486d2.jpeg"
       ],
       "alt": [
         ""
       ]
     },
-    "content_html": "<p></p><img src=\"https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:7whslkj667kgto2x246o4stl/bafkreiefgeuhmlh3t73if3l6prriqg3xz24tmcezdl65rhqb7svaps4upa@jpeg\" alt=\"Image from post\" style=\"max-width: 100%; margin: 12px 0; border-radius: 8px;\">",
+    "content_html": "<p></p><img src=\"/assets/cached-images/bluesky/aba6ece52b08673b39ca4e12192486d2.jpeg\" alt=\"Image from post\" style=\"max-width: 100%; margin: 12px 0; border-radius: 8px;\">",
     "content_text": null,
     "embed_uri": "at://did:plc:7whslkj667kgto2x246o4stl/app.bsky.feed.post/3m3sggt5esc2a",
     "embed_cid": "bafyreib54anbneaeu275b2vizp5t3ivwhxvo7y6emowtpddag5vitapk74",
@@ -319,13 +377,13 @@
     "media": {
       "type": "image",
       "images": [
-        "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:7whslkj667kgto2x246o4stl/bafkreie247bvh5aoggqj6duukgxnban46457sn2efgstmkzkq64yxkhw7e@jpeg"
+        "/assets/cached-images/bluesky/f6de3c0ac705f1395f80f0cad1ef3230.jpeg"
       ],
       "alt": [
         ""
       ]
     },
-    "content_html": "<p></p><img src=\"https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:7whslkj667kgto2x246o4stl/bafkreie247bvh5aoggqj6duukgxnban46457sn2efgstmkzkq64yxkhw7e@jpeg\" alt=\"Image from post\" style=\"max-width: 100%; margin: 12px 0; border-radius: 8px;\">",
+    "content_html": "<p></p><img src=\"/assets/cached-images/bluesky/f6de3c0ac705f1395f80f0cad1ef3230.jpeg\" alt=\"Image from post\" style=\"max-width: 100%; margin: 12px 0; border-radius: 8px;\">",
     "content_text": null,
     "embed_uri": "at://did:plc:7whslkj667kgto2x246o4stl/app.bsky.feed.post/3m3pbwfguus2g",
     "embed_cid": "bafyreidy6ub22cl2amieuffax6npejfk6fkngc53owbfyllixc4jkflglq",
@@ -503,7 +561,7 @@
     "author": null,
     "tags": [],
     "media": [],
-    "content_html": "<p>www.thefarside.com/new-stuff/36...</p>\n          <div style=\"margin: 16px 0; border: 1px solid var(--border, #d4c4a8); border-radius: 8px; overflow: hidden; background: var(--card-bg, #fdfbf7);\">\n            <img src=\"https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:7whslkj667kgto2x246o4stl/bafkreiepz4e7vap3jr4xcm5jgqnxpfer5pirmk2t2gzb55ibffqoaif3ai@jpeg\" alt=\"The Far Side | TheFarSide.com\" style=\"width: 100%; height: auto; display: block; max-height: 200px; object-fit: cover;\">\n            <div style=\"padding: 12px;\">\n              <div style=\"font-weight: 600; margin-bottom: 4px; color: var(--text, #3d2817);\">The Far Side | TheFarSide.com</div>\n              <div style=\"font-size: 13px; color: var(--muted, #7a6b5d); margin-bottom: 8px;\">Visit the official online home of The Far Side comic strip by Gary Larson for your daily dose of Gary’s classic cartoons.</div>\n              <div style=\"font-size: 12px; color: var(--accent, #c17a4f); overflow: hidden; text-overflow: ellipsis; white-space: nowrap;\">🔗 https://www.thefarside.com/new-stuff/363/club-gombe</div>\n            </div>\n          </div>",
+    "content_html": "<p>www.thefarside.com/new-stuff/36...</p>\n          <div style=\"margin: 16px 0; border: 1px solid var(--border, #d4c4a8); border-radius: 8px; overflow: hidden; background: var(--card-bg, #fdfbf7);\">\n            <img src=\"/assets/cached-images/bluesky/1eb14002ec0ad2e2f28244311dfa1f4f.jpeg\" alt=\"The Far Side | TheFarSide.com\" style=\"width: 100%; height: auto; display: block; max-height: 200px; object-fit: cover;\">\n            <div style=\"padding: 12px;\">\n              <div style=\"font-weight: 600; margin-bottom: 4px; color: var(--text, #3d2817);\">The Far Side | TheFarSide.com</div>\n              <div style=\"font-size: 13px; color: var(--muted, #7a6b5d); margin-bottom: 8px;\">Visit the official online home of The Far Side comic strip by Gary Larson for your daily dose of Gary’s classic cartoons.</div>\n              <div style=\"font-size: 12px; color: var(--accent, #c17a4f); overflow: hidden; text-overflow: ellipsis; white-space: nowrap;\">🔗 https://www.thefarside.com/new-stuff/363/club-gombe</div>\n            </div>\n          </div>",
     "content_text": null,
     "embed_uri": "at://did:plc:7whslkj667kgto2x246o4stl/app.bsky.feed.post/3m3ilfgmjnc23",
     "embed_cid": "bafyreib55okcwmasqwfss575t2gite5anugudx75z7c7ea2lgbknkpcmxa",
@@ -552,13 +610,13 @@
     "media": {
       "type": "image",
       "images": [
-        "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:7whslkj667kgto2x246o4stl/bafkreifny5p3jdpjgmwj3dun4opvglkwpeczwyw2uvy5h5usgzfnivezjy@jpeg"
+        "/assets/cached-images/bluesky/6dc07d621221fb912dc5ea9089112268.jpeg"
       ],
       "alt": [
         ""
       ]
     },
-    "content_html": "<p></p><img src=\"https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:7whslkj667kgto2x246o4stl/bafkreifny5p3jdpjgmwj3dun4opvglkwpeczwyw2uvy5h5usgzfnivezjy@jpeg\" alt=\"Image from post\" style=\"max-width: 100%; margin: 12px 0; border-radius: 8px;\">",
+    "content_html": "<p></p><img src=\"/assets/cached-images/bluesky/6dc07d621221fb912dc5ea9089112268.jpeg\" alt=\"Image from post\" style=\"max-width: 100%; margin: 12px 0; border-radius: 8px;\">",
     "content_text": null,
     "embed_uri": "at://did:plc:7whslkj667kgto2x246o4stl/app.bsky.feed.post/3m3hzvqlsec2y",
     "embed_cid": "bafyreicvzpho62bembmeyh4sdphv7r3ss53syveadgbhe5igh7uwdoxymy",
@@ -766,13 +824,13 @@
     "media": {
       "type": "image",
       "images": [
-        "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:7whslkj667kgto2x246o4stl/bafkreiavd2xunw35rh7o2fd562woq245zp3swzu7uayxaltm5ojtiujoci@jpeg"
+        "/assets/cached-images/bluesky/2657b8604b0e14404c4864e11d192979.jpeg"
       ],
       "alt": [
         ""
       ]
     },
-    "content_html": "<p>Yep</p><img src=\"https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:7whslkj667kgto2x246o4stl/bafkreiavd2xunw35rh7o2fd562woq245zp3swzu7uayxaltm5ojtiujoci@jpeg\" alt=\"Image from post\" style=\"max-width: 100%; margin: 12px 0; border-radius: 8px;\">",
+    "content_html": "<p>Yep</p><img src=\"/assets/cached-images/bluesky/2657b8604b0e14404c4864e11d192979.jpeg\" alt=\"Image from post\" style=\"max-width: 100%; margin: 12px 0; border-radius: 8px;\">",
     "content_text": null,
     "embed_uri": "at://did:plc:7whslkj667kgto2x246o4stl/app.bsky.feed.post/3m35rtdlryk2q",
     "embed_cid": "bafyreiayyutla3r75mggdft7ob6nyuslixwjaofnmsjn2ovcxjv73xkniq",
@@ -859,37 +917,6 @@
     }
   },
   {
-    "id": "readwise:01k73bfa9y1t3j4aany3fca69t",
-    "type": "saved",
-    "source": null,
-    "timestamp": "2025-10-09T02:05:49.244000+00:00",
-    "title": "Reflections: The ecosystem is moving",
-    "summary": "Software must constantly change because the technology and user expectations keep evolving. Federated communication protocols are slow to adapt, making centralized services more practical today. Open source centralized networks offer control and flexibility without the drawbacks of federation.",
-    "url": "https://signal.org/blog/the-ecosystem-is-moving/",
-    "canonical_url": "https://signal.org/blog/the-ecosystem-is-moving/",
-    "author": "Signal Messenger",
-    "tags": [
-      "sec",
-      "tech",
-      "fodder",
-      "classic",
-      "prodsec",
-      "software",
-      "shortlist"
-    ],
-    "media": [],
-    "content_html": null,
-    "content_text": null,
-    "embed_uri": null,
-    "embed_cid": null,
-    "metadata": {
-      "word_count": 1408,
-      "reading_time": "8 min read",
-      "site_name": "Signal Messenger",
-      "cover_image": "https://signal.org/assets/og/og-image-ff2096df535eee499356de64b19fa8cebb9681ab1e78cca7330e7f8b8d5ec6d5.png"
-    }
-  },
-  {
     "id": "readwise:01k6td1y27q2x179tsx0ge8b4n",
     "type": "saved",
     "source": null,
@@ -954,7 +981,7 @@
     "author": null,
     "tags": [],
     "media": [],
-    "content_html": "<p>I really laughed at this.<br><br>harper.blog/2025/09/30/a...</p>\n          <div style=\"margin: 16px 0; border: 1px solid var(--border, #d4c4a8); border-radius: 8px; overflow: hidden; background: var(--card-bg, #fdfbf7);\">\n            <img src=\"https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:7whslkj667kgto2x246o4stl/bafkreie23sxew5djn63ubhun3e7tt7jcbverp746y5xpvkcwwpl54iskwm@jpeg\" alt=\"We Gave Our AI Agents Twitter and Now They're Demanding Lambos\" style=\"width: 100%; height: auto; display: block; max-height: 200px; object-fit: cover;\">\n            <div style=\"padding: 12px;\">\n              <div style=\"font-weight: 600; margin-bottom: 4px; color: var(--text, #3d2817);\">We Gave Our AI Agents Twitter and Now They're Demanding Lambos</div>\n              <div style=\"font-size: 13px; color: var(--muted, #7a6b5d); margin-bottom: 8px;\">A journey from a simple journal MCP server to Botboard.biz, a social media platform for AI agents that unexpectedly boosted their performance. Features hilarious agent posts demanding Lambos, explores...</div>\n              <div style=\"font-size: 12px; color: var(--accent, #c17a4f); overflow: hidden; text-overflow: ellipsis; white-space: nowrap;\">🔗 https://harper.blog/2025/09/30/ai-agents-social-media-performance-lambo-doomscrolling/</div>\n            </div>\n          </div>",
+    "content_html": "<p>I really laughed at this.<br><br>harper.blog/2025/09/30/a...</p>\n          <div style=\"margin: 16px 0; border: 1px solid var(--border, #d4c4a8); border-radius: 8px; overflow: hidden; background: var(--card-bg, #fdfbf7);\">\n            <img src=\"/assets/cached-images/bluesky/21624e88b2a317d65c6997dfd8d725cf.jpeg\" alt=\"We Gave Our AI Agents Twitter and Now They're Demanding Lambos\" style=\"width: 100%; height: auto; display: block; max-height: 200px; object-fit: cover;\">\n            <div style=\"padding: 12px;\">\n              <div style=\"font-weight: 600; margin-bottom: 4px; color: var(--text, #3d2817);\">We Gave Our AI Agents Twitter and Now They're Demanding Lambos</div>\n              <div style=\"font-size: 13px; color: var(--muted, #7a6b5d); margin-bottom: 8px;\">A journey from a simple journal MCP server to Botboard.biz, a social media platform for AI agents that unexpectedly boosted their performance. Features hilarious agent posts demanding Lambos, explores...</div>\n              <div style=\"font-size: 12px; color: var(--accent, #c17a4f); overflow: hidden; text-overflow: ellipsis; white-space: nowrap;\">🔗 https://harper.blog/2025/09/30/ai-agents-social-media-performance-lambo-doomscrolling/</div>\n            </div>\n          </div>",
     "content_text": null,
     "embed_uri": "at://did:plc:7whslkj667kgto2x246o4stl/app.bsky.feed.post/3m2b2yq3zpc2k",
     "embed_cid": "bafyreibkvxpxsf7ifuswsrbht2osaiwzpyh7lzluw4mjpnfzenbozxprj4",
@@ -994,7 +1021,7 @@
     "author": null,
     "tags": [],
     "media": [],
-    "content_html": "<p>blog.benjojo.co.uk/post/ixp-bad...</p>\n          <div style=\"margin: 16px 0; border: 1px solid var(--border, #d4c4a8); border-radius: 8px; overflow: hidden; background: var(--card-bg, #fdfbf7);\">\n            <img src=\"https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:7whslkj667kgto2x246o4stl/bafkreidqvwby5vmevmocrjagswbw3d66ikids46ns7gzyhglrnkjexhuwm@jpeg\" alt=\"Some interesting stuff I found on IX LANs\" style=\"width: 100%; height: auto; display: block; max-height: 200px; object-fit: cover;\">\n            <div style=\"padding: 12px;\">\n              <div style=\"font-weight: 600; margin-bottom: 4px; color: var(--text, #3d2817);\">Some interesting stuff I found on IX LANs</div>\n              \n              <div style=\"font-size: 12px; color: var(--accent, #c17a4f); overflow: hidden; text-overflow: ellipsis; white-space: nowrap;\">🔗 https://blog.benjojo.co.uk/post/ixp-bad-broadcast-packets-interesting</div>\n            </div>\n          </div>",
+    "content_html": "<p>blog.benjojo.co.uk/post/ixp-bad...</p>\n          <div style=\"margin: 16px 0; border: 1px solid var(--border, #d4c4a8); border-radius: 8px; overflow: hidden; background: var(--card-bg, #fdfbf7);\">\n            <img src=\"/assets/cached-images/bluesky/e1cb55a222d405d9aae649ed00079af2.jpeg\" alt=\"Some interesting stuff I found on IX LANs\" style=\"width: 100%; height: auto; display: block; max-height: 200px; object-fit: cover;\">\n            <div style=\"padding: 12px;\">\n              <div style=\"font-weight: 600; margin-bottom: 4px; color: var(--text, #3d2817);\">Some interesting stuff I found on IX LANs</div>\n              \n              <div style=\"font-size: 12px; color: var(--accent, #c17a4f); overflow: hidden; text-overflow: ellipsis; white-space: nowrap;\">🔗 https://blog.benjojo.co.uk/post/ixp-bad-broadcast-packets-interesting</div>\n            </div>\n          </div>",
     "content_text": null,
     "embed_uri": "at://did:plc:7whslkj667kgto2x246o4stl/app.bsky.feed.post/3lzqkjoycos2z",
     "embed_cid": "bafyreicv2xjbiqntfv6ai64llvwaujxnu2no6ukqryqzqzupn2nhzrodg4",

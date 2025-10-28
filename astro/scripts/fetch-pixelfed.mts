@@ -7,6 +7,7 @@
 import { writeFileSync, readFileSync, existsSync, mkdirSync } from 'fs';
 import { join, dirname } from 'path';
 import { fileURLToPath } from 'url';
+import { createHash } from 'crypto';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
@@ -15,6 +16,7 @@ const PIXELFED_USER = 'chase523';
 const PIXELFED_INSTANCE = 'gram.social';
 const PIXELFED_URL = `https://${PIXELFED_INSTANCE}/users/${PIXELFED_USER}`;
 const OUTPUT_FILE = join(__dirname, '../data/sources/pixelfed.json');
+const CACHE_DIR = join(__dirname, '../public/assets/cached-images/pixelfed');
 
 interface PixelfedEntry {
   id: string;
@@ -36,9 +38,53 @@ interface PixelfedEntry {
 }
 
 /**
+ * Download and cache an image, return local path
+ */
+async function cacheImage(imageUrl: string): Promise<string> {
+  try {
+    // Create hash of URL for filename
+    const hash = createHash('md5').update(imageUrl).digest('hex');
+    // Extract extension safely
+    let ext = imageUrl.split('.').pop()?.split('?')[0] || 'jpg';
+    // Ensure ext doesn't contain path separators
+    ext = ext.replace(/[\/\\]/g, '').substring(0, 10); // limit length
+    const filename = `${hash}.${ext}`;
+    const localPath = join(CACHE_DIR, filename);
+    const publicPath = `/assets/cached-images/pixelfed/${filename}`;
+    
+    // Check if already cached
+    if (existsSync(localPath)) {
+      return publicPath;
+    }
+    
+    // Download image
+    console.log(`  Caching image: ${imageUrl.substring(0, 60)}...`);
+    const response = await fetch(imageUrl);
+    if (!response.ok) {
+      console.warn(`  Failed to cache image: ${response.status}`);
+      return imageUrl; // Return original URL as fallback
+    }
+    
+    const buffer = Buffer.from(await response.arrayBuffer());
+    
+    // Ensure cache directory exists
+    mkdirSync(CACHE_DIR, { recursive: true });
+    
+    // Write to cache
+    writeFileSync(localPath, buffer);
+    console.log(`  ✓ Cached to ${publicPath}`);
+    
+    return publicPath;
+  } catch (error) {
+    console.warn(`  Error caching image: ${error}`);
+    return imageUrl; // Return original URL as fallback
+  }
+}
+
+/**
  * Parse RSS/Atom feed XML and extract entries
  */
-function parseFeed(xml: string): PixelfedEntry[] {
+async function parseFeed(xml: string): Promise<PixelfedEntry[]> {
   const entries: PixelfedEntry[] = [];
   
   // Simple XML parsing for Atom/RSS feed
@@ -80,15 +126,20 @@ function parseFeed(xml: string): PixelfedEntry[] {
                         entryXml.match(/<description[^>]*>(.*?)<\/description>/s);
     let content = contentMatch ? contentMatch[1].replace(/<!\[CDATA\[(.*?)\]\]>/gs, '$1').trim() : '';
     
-    // Extract media/images from content
+    // Extract media/images from content and cache them
     const imageMatches = [...content.matchAll(/<img[^>]*src="([^"]*)"[^>]*alt="([^"]*)"[^>]*>/g)];
-    const images: string[] = [];
+    const remoteImages: string[] = [];
     let alt = '';
     
     for (const imgMatch of imageMatches) {
-      images.push(imgMatch[1]);
+      remoteImages.push(imgMatch[1]);
       alt = imgMatch[2] || alt;
     }
+    
+    // Cache images and get local paths
+    const images = await Promise.all(remoteImages.map(async (imgUrl: string) => {
+      return await cacheImage(imgUrl);
+    }));
     
     // If title is "No caption" or empty, leave it empty for image posts
     if (!title || title.toLowerCase() === 'no caption') {
@@ -135,7 +186,8 @@ async function fetchPosts(): Promise<PixelfedEntry[]> {
   }
   
   const xml = await response.text();
-  const entries = parseFeed(xml);
+  console.log('Parsing feed and caching images...');
+  const entries = await parseFeed(xml);
   
   console.log(`✓ Parsed ${entries.length} entries from feed`);
   
