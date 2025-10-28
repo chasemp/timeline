@@ -225,7 +225,7 @@ async function convertToTimelineEntry(post: BlueskyPost): Promise<TimelineEntry>
     id: `bluesky:${postId}`,
     type: 'bluesky',
     timestamp: post.record.createdAt,
-    title: title || 'Post',
+    title: title || '',
     summary: summary,
     url: url,
     embed_uri: post.uri,
