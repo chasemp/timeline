@@ -17,6 +17,15 @@ const typeDisplayName = (type: string) => {
   };
   return displayNames[type] || type.toUpperCase();
 };
+
+// Format date as YYYY/MM/DD
+const formatShortDate = (timestamp: string) => {
+  const date = new Date(timestamp);
+  const year = date.getFullYear();
+  const month = String(date.getMonth() + 1).padStart(2, '0');
+  const day = String(date.getDate()).padStart(2, '0');
+  return `${year}/${month}/${day}`;
+};
 ---
 
 <section class="timeline" aria-label="Timeline">
@@ -47,7 +56,7 @@ const typeDisplayName = (type: string) => {
         <button class="card" data-id={item.id} data-type={item.type} data-url={item.type === 'blog' ? `/blog/${item.id.replace('blog:', '')}` : (item.url || '')} aria-haspopup="dialog">
           <div class="meta">
             <span class="type">{typeDisplayName(item.type)}</span>
-            <time datetime={item.timestamp}>{new Date(item.timestamp).toLocaleString()}</time>
+            <time datetime={item.timestamp}>{formatShortDate(item.timestamp)}</time>
           </div>
           {item.media?.images && item.media.images.length > 0 && (
             <div class="media-preview">
@@ -192,6 +201,15 @@ const typeDisplayName = (type: string) => {
     window.location.href = window.location.pathname; // Reload without query params
   });
 
+  // Format date as YYYY/MM/DD
+  function formatShortDate(timestamp: string): string {
+    const date = new Date(timestamp);
+    const year = date.getFullYear();
+    const month = String(date.getMonth() + 1).padStart(2, '0');
+    const day = String(date.getDate()).padStart(2, '0');
+    return `${year}/${month}/${day}`;
+  }
+
   function checkIfEmpty() {
     const visibleRows = Array.from(document.querySelectorAll('.row:not(.today-marker)') as NodeListOf<HTMLElement>)
       .filter(row => row.style.display !== 'none');
@@ -249,6 +267,7 @@ const typeDisplayName = (type: string) => {
   const panelSourceWrapper = document.getElementById('panel-source-wrapper')!;
   const panelSource = document.getElementById('panel-source')! as HTMLAnchorElement;
   const closeBtn = document.getElementById('panel-close')!;
+  const closeBtnLeft = document.getElementById('panel-close-left')!;
   const backdrop = document.getElementById('panel-backdrop')!;
   const swipeIndicator = document.getElementById('swipe-indicator')!;
   const isMobile = () => window.innerWidth <= 980;
@@ -302,7 +321,8 @@ const typeDisplayName = (type: string) => {
 
     // Set title to metadata (type and timestamp)
     const typeDisplayName = entry.type === 'saved' ? 'Article Read' : entry.type.toUpperCase();
-    panelTitleText.textContent = `${typeDisplayName} · ${new Date(entry.timestamp).toLocaleString()}`;
+    const shortDate = formatShortDate(entry.timestamp);
+    panelTitleText.textContent = `${typeDisplayName} · ${shortDate}`;
     
     // Show/hide and update source link
     if (entry.url) {
@@ -469,6 +489,7 @@ const typeDisplayName = (type: string) => {
   }
 
   closeBtn.addEventListener('click', closePanel);
+  closeBtnLeft.addEventListener('click', closePanel);
   backdrop.addEventListener('click', closePanel);
   document.addEventListener('keydown', (e) => { 
     if (e.key === 'Escape' && (isMobile() ? panel.classList.contains('mobile-open') : panelContent.innerHTML !== introHTML)) {

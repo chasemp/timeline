@@ -204,11 +204,12 @@ const allHashtags = Object.entries(hashtagCounts)
   <aside class="panel" id="detail-panel" role="complementary" aria-labelledby="panel-title">
     <div class="swipe-indicator" id="swipe-indicator" hidden></div>
     <header class="panel-header">
+      <button id="panel-close-left" class="panel-close-btn" aria-label="Close" title="Close">×</button>
       <h2 id="panel-title">
         <span id="panel-title-text">About</span>
         <span id="panel-source-wrapper" hidden> | <a id="panel-source" href="#" target="_blank" rel="noopener" class="panel-source-link">Source ↗</a></span>
       </h2>
-      <button id="panel-close" aria-label="Close" hidden>×</button>
+      <button id="panel-close" class="panel-close-btn" aria-label="Close" hidden>×</button>
     </header>
     <div id="panel-content">
       <div class="intro">
@@ -340,8 +341,9 @@ const allHashtags = Object.entries(hashtagCounts)
   .panel-header h2 { margin: 0; font-size: 14px; color: var(--muted); font-weight: 600; flex: 1; text-transform: uppercase; letter-spacing: 0.05em; font-family: system-ui, sans-serif; display: flex; align-items: center; flex-wrap: wrap; gap: 8px; justify-content: center; }
   .panel-source-link { color: var(--accent); text-decoration: none; font-size: 13px; font-weight: 600; transition: all 0.2s; white-space: nowrap; font-family: Georgia, "Times New Roman", serif; text-transform: none; letter-spacing: normal; }
   .panel-source-link:hover { text-decoration: underline; }
-  #panel-close { background: var(--card-bg); color: var(--text); border: 1px solid var(--border); border-radius: 6px; padding: 6px 12px; cursor: pointer; font-size: 24px; line-height: 1; transition: all 0.2s; font-weight: 300; }
-  #panel-close:hover { background: var(--bg); border-color: var(--accent); }
+  .panel-close-btn { background: var(--card-bg); color: var(--text); border: 1px solid var(--border); border-radius: 6px; padding: 6px 12px; cursor: pointer; font-size: 24px; line-height: 1; transition: all 0.2s; font-weight: 300; flex-shrink: 0; }
+  .panel-close-btn:hover { background: var(--bg); border-color: var(--accent); color: var(--accent); }
+  #panel-close-left { order: -1; }
   #panel-content { line-height: 1.7; }
   #panel-content h3 { margin: 0 0 14px; font-size: 20px; color: #6d4c41; font-weight: 600; }
   #panel-content h4 { margin: 24px 0 10px; font-size: 13px; text-transform: uppercase; letter-spacing: 0.08em; color: var(--accent); font-weight: 700; font-family: system-ui, sans-serif; }
