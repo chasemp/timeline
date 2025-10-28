@@ -91,7 +91,8 @@ const itemsWithHashtags = items.map(item => {
     'saved': '#article',
     'bluesky': '#bluesky',
     'wikipedia': '#wikipedia',
-    'release': '#release'
+    'release': '#release',
+    'pixelfed': '#pixelfed'
   };
   const typeTag = typeLabels[item.type] ? [typeLabels[item.type]] : [];
   
@@ -189,7 +190,7 @@ const allHashtags = Object.entries(hashtagCounts)
         <div class="filters" role="group" aria-label="Content types">
           <label title="Bookmarks from Readwise"><input type="checkbox" name="type" value="saved" checked> Read</label>
           <label title="Technical writing and essays"><input type="checkbox" name="type" value="blog" checked> Written</label>
-          <label title="Bluesky social media posts"><input type="checkbox" name="type" value="bluesky" checked> Posted</label>
+          <label title="Bluesky and Pixelfed social media posts"><input type="checkbox" name="type" value="bluesky,pixelfed" checked> Posted</label>
           <label title="GitHub project releases and tags"><input type="checkbox" name="type" value="release" checked> Released</label>
           <label title="Contributions to Wikipedia and other platforms"><input type="checkbox" name="type" value="wikipedia" checked> Contributed</label>
         </div>
@@ -217,7 +218,8 @@ const allHashtags = Object.entries(hashtagCounts)
         <ul class="legend">
           <li><span class="legend-dot" data-dot-type="saved"></span> <strong>Read</strong> — Bookmarks from Readwise</li>
           <li><span class="legend-dot" data-dot-type="blog"></span> <strong>Written</strong> — Technical writing and essays</li>
-          <li><span class="legend-dot" data-dot-type="bluesky"></span> <strong>Posted</strong> — Bluesky and other social media</li>
+          <li><span class="legend-dot" data-dot-type="bluesky"></span> <strong>Posted</strong> — Bluesky and Pixelfed social media</li>
+          <li><span class="legend-dot" data-dot-type="pixelfed"></span> <strong>Posted</strong> — Bluesky and Pixelfed social media</li>
           <li><span class="legend-dot" data-dot-type="release"></span> <strong>Released</strong> — GitHub project releases and tags</li>
           <li><span class="legend-dot" data-dot-type="wikipedia"></span> <strong>Contributed</strong> — Wikipedia and other contributions</li>
         </ul>
@@ -353,6 +355,7 @@ const allHashtags = Object.entries(hashtagCounts)
   .legend-dot[data-dot-type="blog"] { background: #5d4037; }
   .legend-dot[data-dot-type="saved"] { background: #7cb342; }
   .legend-dot[data-dot-type="bluesky"] { background: #1e88e5; }
+  .legend-dot[data-dot-type="pixelfed"] { background: #e91e63; }
   .legend-dot[data-dot-type="release"] { background: #fb8c00; }
   .legend-dot[data-dot-type="wikipedia"] { background: #636466; }
   .detail-title { margin: 0 0 16px; font-size: 22px; color: #6d4c41; line-height: 1.3; }
@@ -449,19 +452,37 @@ const allHashtags = Object.entries(hashtagCounts)
   });
 
   const params = new URLSearchParams(location.search);
-  const selected = new Set((params.get('types') ?? 'blog,saved,bluesky,release,wikipedia').split(',').filter(Boolean));
+  const selected = new Set((params.get('types') ?? 'blog,saved,bluesky,pixelfed,release,wikipedia').split(',').filter(Boolean));
   
   const checkboxes = document.querySelectorAll('input[name="type"]') as NodeListOf<HTMLInputElement>;
   
+  // Function to expand checkbox values (e.g., "bluesky,pixelfed" -> ["bluesky", "pixelfed"])
+  function expandCheckboxValue(value: string): string[] {
+    return value.split(',').filter(Boolean);
+  }
+  
+  // Function to check if a checkbox should be checked based on selected types
+  function shouldCheckboxBeChecked(checkboxValue: string): boolean {
+    const expanded = expandCheckboxValue(checkboxValue);
+    return expanded.some(type => selected.has(type));
+  }
+  
   checkboxes.forEach((input) => {
-    input.checked = selected.has(input.value);
+    input.checked = shouldCheckboxBeChecked(input.value);
     input.addEventListener('change', updateFilters);
   });
   
   function updateFilters() {
-    const values = Array.from(checkboxes)
+    const allSelectedTypes = new Set<string>();
+    
+    // Expand all checked checkbox values and add to set
+    Array.from(checkboxes)
       .filter((i) => i.checked)
-      .map((i) => i.value);
+      .forEach((i) => {
+        expandCheckboxValue(i.value).forEach(type => allSelectedTypes.add(type));
+      });
+    
+    const values = Array.from(allSelectedTypes);
     
     if (values.length === 0) {
       params.delete('types');
@@ -480,16 +501,17 @@ const allHashtags = Object.entries(hashtagCounts)
   const selectedCountBadge = document.getElementById('selected-hashtag-count');
   const hashtagCheckboxes = document.querySelectorAll('.hashtag-option input[type="checkbox"]') as NodeListOf<HTMLInputElement>;
 
-  // Helper function to get category type for a hashtag
-  function getCategoryForHashtag(hashtag: string): string | null {
-    const hashtagToCategory: Record<string, string> = {
-      '#blog': 'blog',
-      '#article': 'saved', 
-      '#bluesky': 'bluesky',
-      '#wikipedia': 'wikipedia',
-      '#release': 'release'
+  // Helper function to get checkbox value(s) for a hashtag
+  function getCheckboxValuesForHashtag(hashtag: string): string[] {
+    const hashtagToTypes: Record<string, string[]> = {
+      '#blog': ['blog'],
+      '#article': ['saved'], 
+      '#bluesky': ['bluesky', 'pixelfed'],  // Posted category includes both
+      '#pixelfed': ['bluesky', 'pixelfed'], // Posted category includes both
+      '#wikipedia': ['wikipedia'],
+      '#release': ['release']
     };
-    return hashtagToCategory[hashtag] || null;
+    return hashtagToTypes[hashtag] || [];
   }
 
   // All button
@@ -553,12 +575,19 @@ const allHashtags = Object.entries(hashtagCounts)
       if (checkbox.checked) {
         selectedHashtags.add(hashtag);
         
-        // Auto-check the corresponding category when a hashtag is selected
-        const categoryType = getCategoryForHashtag(hashtag);
-        if (categoryType) {
-          const categoryCheckbox = document.querySelector(`input[name="type"][value="${categoryType}"]`) as HTMLInputElement;
-          if (categoryCheckbox && !categoryCheckbox.checked) {
-            categoryCheckbox.checked = true;
+        // Auto-check the corresponding categories when a hashtag is selected
+        const requiredTypes = getCheckboxValuesForHashtag(hashtag);
+        if (requiredTypes.length > 0) {
+          let needsUpdate = false;
+          checkboxes.forEach((categoryCheckbox) => {
+            const categoryTypes = expandCheckboxValue(categoryCheckbox.value);
+            // Check if this category checkbox includes any of the required types
+            if (categoryTypes.some(type => requiredTypes.includes(type)) && !categoryCheckbox.checked) {
+              categoryCheckbox.checked = true;
+              needsUpdate = true;
+            }
+          });
+          if (needsUpdate) {
             updateFilters();
           }
         }
@@ -581,12 +610,19 @@ const allHashtags = Object.entries(hashtagCounts)
     } else {
       selectedHashtags.add(hashtag);
       
-      // Auto-check the corresponding category when a hashtag is selected
-      const categoryType = getCategoryForHashtag(hashtag);
-      if (categoryType) {
-        const categoryCheckbox = document.querySelector(`input[name="type"][value="${categoryType}"]`) as HTMLInputElement;
-        if (categoryCheckbox && !categoryCheckbox.checked) {
-          categoryCheckbox.checked = true;
+      // Auto-check the corresponding categories when a hashtag is selected
+      const requiredTypes = getCheckboxValuesForHashtag(hashtag);
+      if (requiredTypes.length > 0) {
+        let needsUpdate = false;
+        checkboxes.forEach((categoryCheckbox) => {
+          const categoryTypes = expandCheckboxValue(categoryCheckbox.value);
+          // Check if this category checkbox includes any of the required types
+          if (categoryTypes.some(type => requiredTypes.includes(type)) && !categoryCheckbox.checked) {
+            categoryCheckbox.checked = true;
+            needsUpdate = true;
+          }
+        });
+        if (needsUpdate) {
           updateFilters();
         }
       }
