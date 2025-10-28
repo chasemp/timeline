@@ -1,0 +1,36 @@
+/* Custom Giscus theme to move sign-in button to the top, centered */
+
+/* Target the main giscus container */
+.gsc-main {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Move sign-in button/prompt to appear first (before reactions) */
+.gsc-signin-prompt,
+.gsc-signin-button {
+  order: -1;
+  display: block !important;
+  margin: 0 auto 16px auto !important;
+  text-align: center !important;
+  width: fit-content !important;
+}
+
+/* Ensure the button itself is centered */
+.gsc-signin-button button,
+.gsc-signin-prompt button {
+  display: block;
+  margin: 0 auto !important;
+}
+
+/* Position the sign-in area just below the separator and above reactions */
+.gsc-reactions,
+.gsc-comments {
+  order: 0;
+}
+
+/* Additional targeting for iframe content */
+iframe[name="giscus-frame"] {
+  /* Iframe-specific styles if needed */
+}
+
