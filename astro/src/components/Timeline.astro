@@ -9,6 +9,7 @@ const typeDisplayName = (type: string) => {
     'saved': 'Article Read',
     'blog': 'Blog',
     'bluesky': 'Bluesky',
+    'pixelfed': 'Pixelfed',
     'posts': 'Posts',
     'release': 'Release',
     'wikipedia': 'Contributions',
@@ -63,7 +64,7 @@ const typeDisplayName = (type: string) => {
               )}
             </div>
           )}
-          <div class="title">{item.title}</div>
+          {item.title && <div class="title">{item.title}</div>}
           {item.summary && <p class="summary">{item.summary}</p>}
           {(item.type === 'saved' && item.metadata?.site_name) && (
             <div class="card-metadata">
@@ -108,6 +109,7 @@ const typeDisplayName = (type: string) => {
   .dot[data-dot-type="blog"]::after { content: "📝"; position: absolute; top: -2px; left: -2px; font-size: 16px; opacity: 0; transition: opacity 0.2s; pointer-events: none; }
   .dot[data-dot-type="saved"]::after { content: "🔖"; position: absolute; top: -2px; left: -2px; font-size: 16px; opacity: 0; transition: opacity 0.2s; pointer-events: none; }
   .dot[data-dot-type="bluesky"]::after { content: "🦋"; position: absolute; top: -2px; left: -2px; font-size: 16px; opacity: 0; transition: opacity 0.2s; pointer-events: none; }
+  .dot[data-dot-type="pixelfed"]::after { content: "📷"; position: absolute; top: -2px; left: -2px; font-size: 16px; opacity: 0; transition: opacity 0.2s; pointer-events: none; }
   .dot[data-dot-type="posts"]::after { content: "🦋"; position: absolute; top: -2px; left: -2px; font-size: 16px; opacity: 0; transition: opacity 0.2s; pointer-events: none; }
   .dot[data-dot-type="release"]::after { content: "🏷️"; position: absolute; top: -2px; left: -2px; font-size: 16px; opacity: 0; transition: opacity 0.2s; pointer-events: none; }
   .dot[data-dot-type="wikipedia"]::after { content: "🌐"; position: absolute; top: -2px; left: -2px; font-size: 16px; opacity: 0; transition: opacity 0.2s; pointer-events: none; }
@@ -116,6 +118,7 @@ const typeDisplayName = (type: string) => {
   .dot[data-dot-type="blog"] { background: #5d4037; color: #5d4037; }
   .dot[data-dot-type="saved"] { background: #7cb342; color: #7cb342; }
   .dot[data-dot-type="bluesky"] { background: #1e88e5; color: #1e88e5; }
+  .dot[data-dot-type="pixelfed"] { background: #e91e63; color: #e91e63; }
   .dot[data-dot-type="posts"] { background: #42a5f5; color: #42a5f5; }
   .dot[data-dot-type="release"] { background: #fb8c00; color: #fb8c00; }
   .dot[data-dot-type="wikipedia"] { background: #636466; color: #636466; }
@@ -328,8 +331,9 @@ const typeDisplayName = (type: string) => {
         }
       }
       
-      const mainContent = entry.content_html || `<p>${entry.summary || ''}</p>`;
-      content = `<h3 class="detail-title">${entry.title || ''}</h3>
+      const mainContent = entry.content_html || (entry.summary ? `<p>${entry.summary}</p>` : '');
+      const titleHtml = entry.title ? `<h3 class="detail-title">${entry.title}</h3>` : '';
+      content = `${titleHtml}
         <div class="detail-content">${mainContent}${metadataHtml}</div>`;
     }
     
@@ -556,6 +560,7 @@ const typeDisplayName = (type: string) => {
       'blog': '📝',
       'saved': '🔖',
       'bluesky': '🦋',
+      'pixelfed': '📷',
       'posts': '🦋',
       'release': '🏷️',
       'wikipedia': '🌐',
@@ -565,6 +570,7 @@ const typeDisplayName = (type: string) => {
     const typeDisplayNames: Record<string, string> = {
       'saved': 'Article Read',
       'bluesky': 'Posts',
+      'pixelfed': 'Photo',
       'posts': 'Posts',
       'wikipedia': 'Contributions',
       'contributions': 'Contributions'

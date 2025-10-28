@@ -58,7 +58,7 @@ function parseFeed(xml: string): PixelfedEntry[] {
     
     // Extract title
     const titleMatch = entryXml.match(/<title[^>]*>(.*?)<\/title>/s);
-    const title = titleMatch ? titleMatch[1].replace(/<!\[CDATA\[(.*?)\]\]>/gs, '$1').trim() : 'Untitled';
+    let title = titleMatch ? titleMatch[1].replace(/<!\[CDATA\[(.*?)\]\]>/gs, '$1').trim() : '';
     
     // Extract link
     const linkMatch = entryXml.match(/<link[^>]*href="([^"]*)"|href="([^"]*)"/);
@@ -90,8 +90,13 @@ function parseFeed(xml: string): PixelfedEntry[] {
       alt = imgMatch[2] || alt;
     }
     
+    // If title is "No caption" or empty, leave it empty for image posts
+    if (!title || title.toLowerCase() === 'no caption') {
+      title = '';
+    }
+    
     // Generate unique ID
-    const postId = entryId || link || `${title}_${pubDate}`;
+    const postId = entryId || link || `untitled_${pubDate}`;
     const id = `pixelfed:${postId}`;
     
     // Create timeline entry
@@ -100,9 +105,9 @@ function parseFeed(xml: string): PixelfedEntry[] {
       type: 'pixelfed',
       timestamp: new Date(pubDate).toISOString(),
       title,
-      summary: title.length > 150 ? title.substring(0, 147) + '...' : title,
+      summary: title && title.length > 150 ? title.substring(0, 147) + '...' : title,
       url: link || PIXELFED_URL,
-      content_html: content || `<p>${title}</p>`,
+      content_html: content || undefined,
       media: images.length > 0 ? {
         type: 'image',
         images,
