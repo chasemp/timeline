@@ -206,7 +206,11 @@ const typeDisplayName = (type: string) => {
   }
 
   function applyFilters() {
-    const allowed = new Set(typesParam.length ? typesParam : Array.from(document.querySelectorAll('input[name="type"]')).map(i=>i.value));
+    // Expand comma-separated checkbox values into individual types
+    const checkboxValues = Array.from(document.querySelectorAll('input[name="type"]') as NodeListOf<HTMLInputElement>).map(i=>i.value);
+    const expandedDefaults = checkboxValues.flatMap(v => v.split(',').filter(Boolean));
+    const allowed = new Set(typesParam.length ? typesParam : expandedDefaults);
+    
     document.querySelectorAll('.row').forEach((row) => {
       const t = (row as HTMLElement).dataset.type;
       const hashtags = (row as HTMLElement).dataset.hashtags?.split(',').filter(Boolean) || [];
