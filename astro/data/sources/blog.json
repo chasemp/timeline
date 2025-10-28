@@ -305,5 +305,20 @@
       "Literature"
     ],
     "content_html": "<p><img src=\"https://upload.wikimedia.org/wikipedia/commons/b/bc/Walden_Pond%2C_2010.jpg\" alt=\"Walden Pond, photographed in 2010\"></p>\n<p><a href=\"https://en.wikipedia.org/wiki/File:Walden_Pond,_2010.jpg\">Walden Pond</a> - A tranquil body of water in Concord, Massachusetts, made famous by Henry David Thoreau&#39;s 1854 book &quot;Walden; or, Life in the Woods.&quot; </p>\n<p>Thoreau lived in a small cabin near this pond for two years, two months, and two days, using his time there to reflect on simple living in natural surroundings. The experience became the basis for one of America&#39;s most influential works of literature and philosophy.</p>\n<p>Today, Walden Pond is a National Historic Landmark and a popular destination for those seeking connection with nature and literary history.</p>\n<hr>\n<p><em>Photo: <a href=\"https://commons.wikimedia.org/wiki/File:Walden_Pond,_2010.jpg\">Walden Pond, 2010</a> by <a href=\"https://www.flickr.com/people/31902638@N06\">ptwo</a> from Flickr, licensed under <a href=\"https://creativecommons.org/licenses/by/2.0/\">CC BY 2.0</a></em></p>\n"
+  },
+  {
+    "id": "blog:giscus-comments-integration",
+    "type": "blog",
+    "source": "markdown",
+    "timestamp": "2025-10-28T00:00:00.000Z",
+    "title": "Giscus comments integration",
+    "summary": "",
+    "url": "/Blog/giscus-comments-integration/",
+    "tags": [
+      "Giscus",
+      "Comments",
+      "GitHub Discussions"
+    ],
+    "content_html": "<p>I added comment functionality to the timeline site using Giscus, a comments system powered by GitHub Discussions.</p>\n<h2>Why Giscus</h2>\n<p>Requirements for a comments system were simple: no database, minimal maintenance, and direct moderation within the existing workflow. Giscus fits these constraints by using GitHub Discussions as the backend. Comments appear on timeline items and blog posts, stored as GitHub Discussions and manageable within the repository.</p>\n<h2>Implementation</h2>\n<p>The integration has three components: global configuration, per-item control, and rendering.</p>\n<h3>Global Configuration</h3>\n<p>Comments can be disabled site-wide via <code>config.ts</code>:</p>\n<pre><code class=\"language-typescript\">export const config = {\n  commentsEnabled: true,\n} as const;\n</code></pre>\n<p>When set to false, comments are hidden everywhere. Individual items can still disable comments via hashtags.</p>\n<h3>Per-Item Control</h3>\n<p>Specific items can disable comments using the <code>#nocomments</code> or <code>#nc</code> hashtag. This works across content types:</p>\n<ul>\n<li>Blog posts: add the tag to markdown frontmatter</li>\n<li>Timeline items: add the hashtag in content text or as a tag</li>\n</ul>\n<h3>Rendering</h3>\n<p>For blog posts, Giscus loads with a pathname mapping strategy. Each post gets its own discussion thread. The script loads when the page loads and renders below the content.</p>\n<p>For timeline items, Giscus loads dynamically when opening an item. The script is removed when closing the panel to avoid conflicts. This keeps the timeline responsive.</p>\n<h2>Technical Details</h2>\n<h3>Configuration</h3>\n<p>Giscus connects to the <code>chasemp/timeline</code> repository with the category &quot;Ideas&quot; (category ID <code>DIC_kwDOQDOMbM4CxLZb</code>). The mapping strategy is &quot;specific&quot; for timeline items, using the item ID as the discussion term. Blog posts use pathname mapping.</p>\n<p>A custom theme in <code>giscus-custom.css</code> centers the sign-in button and positions it at the top of the comments section.</p>\n<h3>Error Handling</h3>\n<p>If Giscus fails to load, the comments section hides after a 10-second timeout. This prevents displaying empty sections and keeps the interface clean.</p>\n<h3>References</h3>\n<ul>\n<li><a href=\"https://giscus.app/\">Giscus documentation</a></li>\n<li><a href=\"https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/enabling-features-for-your-repository/enabling-or-disabling-github-discussions-for-a-repository\">GitHub Discussions configuration</a></li>\n</ul>\n"
   }
 ]

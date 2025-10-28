@@ -1,6 +1,7 @@
 ---
 import { ViewTransitions } from 'astro:transitions';
 import timeline from "../../data/timeline.json";
+import { config } from "../../config";
 
 export function getStaticPaths() {
   const blogPosts = (timeline as any[]).filter(item => item.type === 'blog');
@@ -11,6 +12,24 @@ export function getStaticPaths() {
 }
 
 const { post } = Astro.props;
+
+// Helper function to check if comments should be disabled for this post
+function shouldDisableComments(post: any): boolean {
+  // Check for #nocomments or #nc hashtag
+  const hashtags = post.hashtags || [];
+  const hasNoCommentsTag = hashtags.some((tag: string) => 
+    tag.toLowerCase() === '#nocomments' || tag.toLowerCase() === '#nc'
+  );
+  
+  // Check tags array as well (frontmatter tags)
+  const tags = post.tags || [];
+  const hasNoCommentsInTags = tags.some((tag: string) => {
+    const normalized = tag.toLowerCase().replace(/\s+/g, '_');
+    return normalized === 'nocomments' || normalized === 'nc';
+  });
+  
+  return hasNoCommentsTag || hasNoCommentsInTags;
+}
 ---
 
 <!DOCTYPE html>
@@ -38,12 +57,76 @@ const { post } = Astro.props;
 
   <article class="content" set:html={post.content_html} />
 
+  {!(config.commentsEnabled === false || shouldDisableComments(post)) && (
+    <div class="comments-section" id="comments-section">
+      <div class="giscus" id="giscus-container"></div>
+    </div>
+  )}
+
   <footer class="post-footer">
     <a href="/" class="back-link">← Back to timeline</a>
     {post.url && <a href={post.url} target="_blank" rel="noopener">Original post ↗</a>}
   </footer>
 </main>
 
+{!(config.commentsEnabled === false || shouldDisableComments(post)) && (
+  <>
+    <script src="https://giscus.app/client.js"
+            data-repo="chasemp/timeline"
+            data-repo-id="R_kgDOQDOMbA"
+            data-category="Ideas"
+            data-category-id="DIC_kwDOQDOMbM4CxLZb"
+            data-mapping="pathname"
+            data-strict="0"
+            data-reactions-enabled="1"
+            data-emit-metadata="0"
+            data-input-position="bottom"
+            data-theme="/giscus-custom.css"
+            data-lang="en"
+            crossorigin="anonymous"
+            async>
+    </script>
+
+    <script>
+      // Hide comments section if giscus fails to load after timeout
+      window.addEventListener('load', () => {
+        const container = document.getElementById('giscus-container');
+        const commentsSection = document.getElementById('comments-section');
+        
+        // Set timeout to check if giscus loaded (10 seconds)
+        setTimeout(() => {
+          if (container && commentsSection) {
+            // Check if giscus actually rendered content
+            const hasContent = container.innerHTML.trim() !== '';
+            
+            if (!hasContent) {
+              // Giscus failed to load - hide the comments section
+              commentsSection.style.display = 'none';
+            }
+          }
+        }, 10000);
+        
+      });
+    </script>
+  </>
+)}
+
+<style>
+  .comments-section {
+    margin-top: 48px;
+    padding-top: 24px;
+    border-top: 1px solid #1f2937;
+  }
+  
+  .giscus {
+    margin-top: 16px;
+    position: relative;
+  }
+  
+  .giscus iframe {
+    min-height: 300px;
+  }
+</style>
 </body>
 </html>
 
