@@ -65,6 +65,10 @@ jobs:
           # Delta fetching by default (only new/updated docs). Set READWISE_FULL_FETCH=true to fetch all.
           READWISE_FULL_FETCH: ${{ vars.READWISE_FULL_FETCH }}
       
+      - name: Fetch Pixelfed posts
+        working-directory: ./astro
+        run: npm run fetch:pixelfed
+      
       - name: Merge sources
         working-directory: ./astro
         run: npm run merge
@@ -72,7 +76,7 @@ jobs:
       - name: Check for changes
         id: changes
         run: |
-          git diff --quiet astro/data/sources/ astro/src/data/timeline.json astro/src/pages/index.astro astro/src/components/ || echo "changed=true" >> $GITHUB_OUTPUT
+          git diff --quiet astro/data/sources/ astro/src/data/timeline.json astro/public/assets/cached-images/ astro/src/pages/index.astro astro/src/components/ || echo "changed=true" >> $GITHUB_OUTPUT
       
       - name: Build Astro site
         if: steps.changes.outputs.changed == 'true'
@@ -92,7 +96,7 @@ jobs:
         run: |
           git config user.name "GitHub Actions"
           git config user.email "actions@github.com"
-          git add astro/data/sources/ astro/src/data/timeline.json docs/
+          git add astro/data/sources/ astro/src/data/timeline.json astro/public/assets/cached-images/ docs/
           git commit -m "🤖 Auto-update timeline: fetch data and deploy site"
           git push
         env:
