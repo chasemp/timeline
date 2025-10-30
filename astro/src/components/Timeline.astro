@@ -317,7 +317,8 @@ const formatShortDate = (timestamp: string) => {
       swipeIndicator.removeAttribute('hidden');
       lockScroll(true);
     } else {
-      closeBtn.setAttribute('hidden', '');
+      // Desktop: show close button for detail content
+      closeBtn.removeAttribute('hidden');
       swipeIndicator.setAttribute('hidden', '');
     }
 

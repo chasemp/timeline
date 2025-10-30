@@ -337,6 +337,13 @@ const allHashtags = Object.entries(hashtagCounts)
   .panel-close-btn { background: var(--card-bg); color: var(--text); border: 1px solid var(--border); border-radius: 6px; padding: 6px 12px; cursor: pointer; font-size: 24px; line-height: 1; transition: all 0.2s; font-weight: 300; flex-shrink: 0; }
   .panel-close-btn:hover { background: var(--bg); border-color: var(--accent); color: var(--accent); }
   #panel-close-left { order: -1; }
+  
+  /* Show close button on desktop when viewing detail content (not intro) */
+  @media (min-width: 981px) {
+    #panel-close-left:not([hidden]) {
+      display: block;
+    }
+  }
   #panel-content { line-height: 1.7; }
   #panel-content h3 { margin: 0 0 14px; font-size: 20px; color: #6d4c41; font-weight: 600; }
   #panel-content h4 { margin: 24px 0 10px; font-size: 13px; text-transform: uppercase; letter-spacing: 0.08em; color: var(--accent); font-weight: 700; font-family: system-ui, sans-serif; }
