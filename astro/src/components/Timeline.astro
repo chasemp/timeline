@@ -358,10 +358,43 @@ const formatShortDate = (timestamp: string) => {
         }
       }
       
-      const mainContent = entry.content_html || (entry.summary ? `<p>${entry.summary}</p>` : '');
+      // YouTube embed detection
+      let youtubeEmbed = '';
+      if (entry.url && (entry.url.includes('youtube.com/watch') || entry.url.includes('youtu.be/'))) {
+        const videoId = entry.url.match(/(?:youtube\.com\/watch\?v=|youtu\.be\/)([^&?/]+)/)?.[1];
+        if (videoId) {
+          youtubeEmbed = `<div class="video-embed"><iframe width="560" height="315" src="https://www.youtube.com/embed/${videoId}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>`;
+        }
+      }
+      
+      // Parse content_html for notes and highlights
+      let notesHtml = '';
+      let highlightsHtml = '';
+      if (entry.content_html) {
+        const parser = new DOMParser();
+        const doc = parser.parseFromString(entry.content_html, 'text/html');
+        
+        // Extract notes
+        const notesDiv = doc.querySelector('.notes');
+        if (notesDiv && notesDiv.textContent?.trim()) {
+          notesHtml = `<h4>Notes</h4><div class="notes-content">${notesDiv.innerHTML}</div>`;
+        }
+        
+        // Extract highlights
+        const highlightsDiv = doc.querySelector('.highlights');
+        if (highlightsDiv) {
+          const highlights = Array.from(highlightsDiv.querySelectorAll('li')).map(li => li.innerHTML);
+          if (highlights.length > 0) {
+            highlightsHtml = `<h4>Highlights</h4><ul class="highlights-list">${highlights.map(h => `<li>${h}</li>`).join('')}</ul>`;
+          }
+        }
+      }
+      
+      const mainContent = entry.summary ? `<p>${entry.summary}</p>` : '';
       const titleHtml = entry.title ? `<h3 class="detail-title">${entry.title}</h3>` : '';
       content = `${titleHtml}
-        <div class="detail-content">${mainContent}${metadataHtml}</div>`;
+        ${youtubeEmbed}
+        <div class="detail-content">${mainContent}${metadataHtml}${notesHtml}${highlightsHtml}</div>`;
     }
     
     // Check if comments should be disabled for this item
@@ -704,5 +737,14 @@ const formatShortDate = (timestamp: string) => {
   .tooltip-card { background: var(--panel); border: 1px solid var(--border); border-radius: 8px; padding: 10px 12px; box-shadow: 0 4px 16px rgba(0,0,0,0.15); max-width: 360px; }
   .tooltip-title { font-weight: 600; font-size: 14px; margin-bottom: 3px; color: var(--text); }
   .tooltip-meta { font-size: 12px; color: var(--muted); font-family: system-ui, sans-serif; }
+  
+  /* YouTube video embed */
+  .video-embed { margin: 20px 0; }
+  .video-embed iframe { width: 100%; max-width: 100%; height: auto; aspect-ratio: 16 / 9; border-radius: 8px; }
+  
+  /* Notes and highlights sections */
+  .notes-content { margin: 16px 0; padding: 16px; background: rgba(193, 122, 79, 0.1); border-left: 3px solid var(--accent); border-radius: 4px; font-style: italic; color: var(--text); }
+  .highlights-list { margin: 16px 0; padding-left: 24px; list-style: disc; }
+  .highlights-list li { margin: 12px 0; color: var(--text); line-height: 1.6; }
 </style>
 

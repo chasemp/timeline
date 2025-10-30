@@ -179,7 +179,53 @@ async function fetchFullContent(sourceUrl: string): Promise<string | null> {
 /**
  * Convert Reader document to timeline entry
  */
-function convertToTimelineEntry(doc: ReaderDocument): TimelineEntry {
+/**
+ * Fetch highlights for a specific document
+ */
+async function fetchHighlights(documentId: string): Promise<string[]> {
+  try {
+    const response = await fetch(`https://readwise.io/api/v3/highlights?document_id=${documentId}`, {
+      headers: {
+        'Authorization': `Token ${READWISE_TOKEN}`,
+        'Content-Type': 'application/json'
+      }
+    });
+
+    if (!response.ok) {
+      return [];
+    }
+
+    const data = await response.json();
+    // Extract highlight text from results
+    return data.results?.map((h: any) => h.text).filter(Boolean) || [];
+  } catch (error) {
+    console.error(`Error fetching highlights for ${documentId}:`, error);
+    return [];
+  }
+}
+
+/**
+ * Build content HTML with notes and highlights
+ */
+async function buildContentHtml(doc: ReaderDocument): Promise<string | undefined> {
+  const parts: string[] = [];
+  
+  // Add notes if present
+  if (doc.notes) {
+    parts.push(`<div class="notes">${doc.notes.replace(/\n/g, '<br>')}</div>`);
+  }
+  
+  // Fetch and add highlights
+  const highlights = await fetchHighlights(doc.id);
+  if (highlights.length > 0) {
+    const highlightsList = highlights.map(h => `<li>${h}</li>`).join('');
+    parts.push(`<div class="highlights"><ul>${highlightsList}</ul></div>`);
+  }
+  
+  return parts.length > 0 ? parts.join('') : undefined;
+}
+
+async function convertToTimelineEntry(doc: ReaderDocument): Promise<TimelineEntry> {
   // Extract tag names from the tags object
   const tagNames = Object.keys(doc.tags || {});
   
@@ -205,7 +251,7 @@ function convertToTimelineEntry(doc: ReaderDocument): TimelineEntry {
     canonical_url: doc.source_url || doc.url,
     author: doc.author || undefined,
     tags: visibleTags,
-    content_html: doc.notes ? `<div class="notes">${doc.notes.replace(/\n/g, '<br>')}</div>` : undefined,
+    content_html: await buildContentHtml(doc),
     metadata: {
       word_count: doc.word_count || undefined,
       reading_time: readingTime,
@@ -395,7 +441,7 @@ async function main() {
         await new Promise(resolve => setTimeout(resolve, 2000)); // 2 second delay
       }
       
-      const entry = convertToTimelineEntry(doc);
+      const entry = await convertToTimelineEntry(doc);
       
       // Add last_fetched timestamp to track when we last saw this entry
       if (!entry.metadata) {
