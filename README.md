@@ -44,9 +44,11 @@ This project transforms my online history into an interactive timeline, replacin
 
 ### 6. **Readwise Reader**
 - Fetched via Readwise Reader API v3
-- Documents tagged with "classic" from all locations (archive, inbox, later)
+- **⚠️ Tag Filtering Required**: Only articles tagged with `classic` OR `pub` will appear on the timeline
+  - This is intentional curation - tag articles in Readwise Reader to make them visible
+  - Articles without these tags are ignored (by design)
+- Documents tagged with `full` display complete article content instead of summary
 - Includes highlights and reading metadata
-- Documents tagged with "full" display complete article content instead of summary
 - Requires API token
 
 ## Architecture
@@ -198,7 +200,8 @@ Optional environment variables for data fetching:
 # Readwise Reader API token (optional)
 export READWISE_TOKEN="your_token_here"
 
-# Filter Readwise by tag (optional, defaults to "classic")
+# Filter Readwise by tag (optional, overrides default tags: 'classic' OR 'pub')
+# If not set, only articles tagged with 'classic' OR 'pub' will appear on timeline
 export READWISE_TAG_FILTER="classic"
 
 # GitHub API token (optional, increases rate limits)
