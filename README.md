@@ -398,6 +398,29 @@ interface TimelineEntry {
 
 ## Configuration
 
+### Site Configuration (`astro/src/config.ts`)
+
+The site behavior can be customized via `config.ts`:
+
+```typescript
+export const config = {
+  // Enable/disable giscus comments site-wide
+  commentsEnabled: true,
+  
+  // Disable comments for specific content types
+  // HackerNews entries are comments themselves, so no meta-comments needed
+  disableCommentsForTypes: ['hackernews'],
+} as const;
+```
+
+**Comment Control Options:**
+1. **Global disable**: Set `commentsEnabled: false` to disable all comments site-wide
+2. **Per-type disable**: Add content types to `disableCommentsForTypes` array (e.g., `['hackernews', 'release']`)
+3. **Per-item disable**: Add `#nocomments` or `#nc` hashtag to any individual timeline item
+
+**Why disable comments for HackerNews?**  
+HackerNews entries are themselves comments on other discussions. Adding a comment box to discuss a comment creates unnecessary meta-commentary. The "Direct link to comment" provides access to the original HN discussion thread.
+
 ### Astro Configuration
 - Build output: `static` (pre-rendered HTML)
 - Build directory: `dist/`

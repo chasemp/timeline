@@ -511,11 +511,17 @@ const formatShortDate = (timestamp: string) => {
   }
 
   function checkCommentsDisabled(entry: any): boolean {
-    // Check global config - would need to be passed from parent
+    // Check global config
     const globalConfig = (window as any).__CONFIG__;
     
-    // If global config disables comments, check that first
+    // If global config disables comments site-wide, respect that
     if (globalConfig?.commentsEnabled === false) {
+      return true;
+    }
+    
+    // Check if comments are disabled for this content type (e.g., 'hackernews')
+    // HackerNews entries are comments themselves, so no meta-comments needed
+    if (globalConfig?.disableCommentsForTypes?.includes(entry.type)) {
       return true;
     }
     
