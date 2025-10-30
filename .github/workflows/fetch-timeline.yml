@@ -69,6 +69,10 @@ jobs:
         working-directory: ./astro
         run: npm run fetch:pixelfed
       
+      - name: Fetch HackerNews comments
+        working-directory: ./astro
+        run: npm run fetch:hackernews
+      
       - name: Merge sources
         working-directory: ./astro
         run: npm run merge

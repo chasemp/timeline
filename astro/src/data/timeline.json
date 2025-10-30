@@ -53,6 +53,29 @@
     }
   },
   {
+    "id": "hackernews:45755826",
+    "type": "hackernews",
+    "source": null,
+    "timestamp": "2025-10-30T02:38:34.000Z",
+    "title": "I had not thought of it this way, but interesting point. ...",
+    "summary": "I had not thought of it this way, but interesting point. I have seen this as well.",
+    "url": "https://news.ycombinator.com/item?id=45755826",
+    "canonical_url": "https://news.ycombinator.com/item?id=45755826",
+    "author": null,
+    "tags": [],
+    "media": [],
+    "content_html": "I had not thought of it this way, but interesting point.  I have seen this as well.",
+    "content_text": null,
+    "embed_uri": null,
+    "embed_cid": null,
+    "metadata": {
+      "parent_id": 45747167,
+      "story_id": 45745281,
+      "story_title": "AWS to bare metal two years later: Answering your questions about leaving AWS",
+      "story_url": "https://oneuptime.com/blog/post/2025-10-29-aws-to-bare-metal-two-years-later/view"
+    }
+  },
+  {
     "id": "readwise:01k8seg6450cbharf7zcmzz2mt",
     "type": "saved",
     "source": null,
@@ -1839,6 +1862,52 @@
     }
   },
   {
+    "id": "hackernews:43545870",
+    "type": "hackernews",
+    "source": null,
+    "timestamp": "2025-04-01T12:20:47.000Z",
+    "title": "Insightful yet frightening.",
+    "summary": "Insightful yet frightening.",
+    "url": "https://news.ycombinator.com/item?id=43545870",
+    "canonical_url": "https://news.ycombinator.com/item?id=43545870",
+    "author": null,
+    "tags": [],
+    "media": [],
+    "content_html": "Insightful yet frightening.",
+    "content_text": null,
+    "embed_uri": null,
+    "embed_cid": null,
+    "metadata": {
+      "parent_id": 43545790,
+      "story_id": 43544657,
+      "story_title": "White House says it's 'case closed' on the Signal group chat review",
+      "story_url": "https://www.npr.org/2025/03/31/nx-s1-5345865/white-house-signal-group-chat-review"
+    }
+  },
+  {
+    "id": "hackernews:43435361",
+    "type": "hackernews",
+    "source": null,
+    "timestamp": "2025-03-21T13:23:14.000Z",
+    "title": "This is it to me as well",
+    "summary": "This is it to me as well",
+    "url": "https://news.ycombinator.com/item?id=43435361",
+    "canonical_url": "https://news.ycombinator.com/item?id=43435361",
+    "author": null,
+    "tags": [],
+    "media": [],
+    "content_html": "This is it to me as well",
+    "content_text": null,
+    "embed_uri": null,
+    "embed_cid": null,
+    "metadata": {
+      "parent_id": 43432888,
+      "story_id": 43427002,
+      "story_title": "The Burnout Machine",
+      "story_url": "https://unionize.fyi"
+    }
+  },
+  {
     "id": "readwise:01jptj5x6phws8r1f495av8jhc",
     "type": "saved",
     "source": null,
@@ -1869,6 +1938,29 @@
     }
   },
   {
+    "id": "hackernews:43407699",
+    "type": "hackernews",
+    "source": null,
+    "timestamp": "2025-03-19T02:22:39.000Z",
+    "title": "Hear, hear",
+    "summary": "Hear, hear",
+    "url": "https://news.ycombinator.com/item?id=43407699",
+    "canonical_url": "https://news.ycombinator.com/item?id=43407699",
+    "author": null,
+    "tags": [],
+    "media": [],
+    "content_html": "Hear, hear",
+    "content_text": null,
+    "embed_uri": null,
+    "embed_cid": null,
+    "metadata": {
+      "parent_id": 43403838,
+      "story_id": 43400989,
+      "story_title": "Two new PebbleOS watches",
+      "story_url": "https://ericmigi.com/blog/introducing-two-new-pebbleos-watches/"
+    }
+  },
+  {
     "id": "readwise:01jp612nbq4eg8byshz834anb2",
     "type": "saved",
     "source": null,
@@ -1893,6 +1985,54 @@
       "site_name": "wikipedia.org",
       "reading_progress": 0.6118895963758029,
       "last_fetched": "2025-10-30T14:18:56.895Z"
+    }
+  },
+  {
+    "id": "hackernews:43250066",
+    "type": "hackernews",
+    "source": null,
+    "timestamp": "2025-03-04T03:51:20.000Z",
+    "title": "I was thinking something very similar. Once you&#x27;ve a...",
+    "summary": "I was thinking something very similar. Once you&#x27;ve accepted any need at all for global state the next move is to reorient to minimizing it with horizontally scalable point local state and a small",
+    "url": "https://news.ycombinator.com/item?id=43250066",
+    "canonical_url": "https://news.ycombinator.com/item?id=43250066",
+    "author": null,
+    "tags": [
+      "#x27"
+    ],
+    "media": [],
+    "content_html": "I was thinking something very similar.  Once you&#x27;ve accepted any need at all for global state the next move is to reorient to minimizing it with horizontally scalable point local state and a small targeting dataset and tiered caching system.",
+    "content_text": null,
+    "embed_uri": null,
+    "embed_cid": null,
+    "metadata": {
+      "parent_id": 43249675,
+      "story_id": 43244307,
+      "story_title": "SQLite-on-the-server is misunderstood: Better at hyper-scale than micro-scale",
+      "story_url": "https://rivet.gg/blog/2025-02-16-sqlite-on-the-server-is-misunderstood"
+    }
+  },
+  {
+    "id": "hackernews:42988833",
+    "type": "hackernews",
+    "source": null,
+    "timestamp": "2025-02-09T06:09:27.000Z",
+    "title": "Insightful, thank you.",
+    "summary": "Insightful, thank you.",
+    "url": "https://news.ycombinator.com/item?id=42988833",
+    "canonical_url": "https://news.ycombinator.com/item?id=42988833",
+    "author": null,
+    "tags": [],
+    "media": [],
+    "content_html": "Insightful, thank you.",
+    "content_text": null,
+    "embed_uri": null,
+    "embed_cid": null,
+    "metadata": {
+      "parent_id": 42985808,
+      "story_id": 42984996,
+      "story_title": "Ask HN: Finding interesting work if disenchanted with \"big tech\" & \"VC-backed\"",
+      "story_url": "https://news.ycombinator.com/item?id=42984996"
     }
   },
   {
@@ -3003,6 +3143,35 @@
       "oldid": 0,
       "size_delta": 628,
       "comment": "[[WP:AES|←]]Created page with '{{User sandbox}} <!-- EDIT BELOW THIS LINE -->  Netfilter represents a set of [[hooking|hooks]] inside the Linux kernel, allowing specific [[kernel module]]s to...'"
+    }
+  },
+  {
+    "id": "hackernews:14023878",
+    "type": "hackernews",
+    "source": null,
+    "timestamp": "2017-04-03T16:02:03.000Z",
+    "title": "Wikimedia Foundation | Operations Engineer (Cloud Service...",
+    "summary": "Wikimedia Foundation | Operations Engineer (Cloud Services) | SF | Remote I am an engineer with the team. We run a niche hosting operation directed at the Wikimedia community tooling and ecosystem. We",
+    "url": "https://news.ycombinator.com/item?id=14023878",
+    "canonical_url": "https://news.ycombinator.com/item?id=14023878",
+    "author": null,
+    "tags": [
+      "#x2f",
+      "#x2f",
+      "#x2f",
+      "#x2f",
+      "#x2f"
+    ],
+    "media": [],
+    "content_html": "Wikimedia Foundation | Operations Engineer (Cloud Services) | SF | Remote<br>I am an engineer with the team.  We run a niche hosting operation directed at the Wikimedia community tooling and ecosystem.  We are migrating some of our workload to Kubernetes slowly (from an aging Grid Engine setup), and maintain our own OpenStack cloud.  We use a lot of Python, Puppet, and debug wherever problems take us.<br>We do a round of interviews starting with HR, hiring manager, and team members.  All interviewing and hiring can be done remote.  Some regular overlap with east coast US (UTC-7) hours is expected to coordinate.<br><a href=\"http:&#x2F;&#x2F;stackoverflow.com&#x2F;jobs&#x2F;136920&#x2F;operations-engineer-cloud-services-wikimedia-foundation?offset=0&amp;q=wikimedia+foundation\" rel=\"nofollow\">http:&#x2F;&#x2F;stackoverflow.com&#x2F;jobs&#x2F;136920&#x2F;operations-engineer-clo...</a><br>drop me a note if you have questions :)",
+    "content_text": null,
+    "embed_uri": null,
+    "embed_cid": null,
+    "metadata": {
+      "parent_id": 14023198,
+      "story_id": 14023198,
+      "story_title": "Ask HN: Who is hiring? (April 2017)",
+      "story_url": "https://news.ycombinator.com/item?id=14023198"
     }
   },
   {
