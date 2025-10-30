@@ -3,8 +3,8 @@
     "title": "Chase Pettet's Timeline",
     "description": "A timeline of my public online activity",
     "site": "https://timeline.523.life",
-    "total_items": 150,
-    "generated_at": "2025-10-30T14:26:58.496Z",
+    "total_items": 151,
+    "generated_at": "2025-10-30T15:47:02.354Z",
     "types": [
       "saved",
       "hackernews",
@@ -16,6 +16,32 @@
     ]
   },
   "items": [
+    {
+      "id": "readwise:01k8tsyvcjyg82bpnsxy68625p",
+      "type": "saved",
+      "source": null,
+      "timestamp": "2025-10-30T14:57:12.082000+00:00",
+      "title": "How many pillars of observability can you fit on the head of a pin?",
+      "summary": "The author argues that the “three pillars” of observability are a marketing myth, not a technical truth. Treating signals (logs, metrics, traces, profiles) as separate pillars creates costly silos and poor UX. Better is unified, structured telemetry so engineers can query the same data without vendor-driven duplication.",
+      "url": "https://charity.wtf/2025/10/30/the-pillar-is-a-lie/",
+      "canonical_url": "https://charity.wtf/2025/10/30/the-pillar-is-a-lie/",
+      "author": "mipsytipsy",
+      "tags": [
+        "classic"
+      ],
+      "media": [],
+      "content_html": null,
+      "content_text": null,
+      "embed_uri": null,
+      "embed_cid": null,
+      "metadata": {
+        "word_count": 2002,
+        "reading_time": "11 min read",
+        "site_name": "charity.wtf",
+        "cover_image": "https://i0.wp.com/charity.wtf/wp-content/uploads/2025/10/srebunny.png?fit=800%2C1200&ssl=1",
+        "last_fetched": "2025-10-30T15:46:47.030Z"
+      }
+    },
     {
       "id": "readwise:01k8tpdkza3dv0g997tjed238p",
       "type": "saved",
