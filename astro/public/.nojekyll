@@ -1,0 +1,15 @@
+# ⚠️ CRITICAL: DO NOT DELETE THIS FILE ⚠️
+#
+# This file is REQUIRED for GitHub Pages to work correctly.
+#
+# WHY: GitHub Pages uses Jekyll by default, which ignores directories
+# starting with underscores (like _astro/). Without this file, all
+# CSS and JS files in _astro/ will return 404 errors, causing the
+# site to load without any styling.
+#
+# SYMPTOM: If this file is missing, the site will appear broken with
+# no CSS styling - cards will be plain, no timeline dots/spine, etc.
+#
+# This file tells GitHub Pages to skip Jekyll processing and serve
+# all files directly, including _astro/*.css and _astro/*.js files.
+
