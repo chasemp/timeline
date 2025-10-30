@@ -76,6 +76,7 @@ interface TimelineEntry {
     site_name?: string;
     cover_image?: string;
     reading_progress?: number;
+    last_fetched?: string; // ISO timestamp of when this entry was last fetched/updated
   };
 }
 
@@ -281,13 +282,29 @@ function loadExistingEntries(): TimelineEntry[] {
  * Get the latest timestamp from existing entries
  * Returns ISO string or undefined if no entries exist
  * Caps at 30 days ago maximum to avoid fetching too much history
+ * 
+ * IMPORTANT: We need to track when we last checked, not when articles were saved.
+ * Articles can be tagged with 'classic'/'pub' long after they were saved, so we
+ * need to check for updates since our last fetch, not since the last saved_at date.
  */
 function getLatestTimestamp(entries: TimelineEntry[]): string | undefined {
   if (entries.length === 0) {
     return undefined;
   }
   
-  // Find the most recent timestamp from existing entries
+  // Use the timestamp from when we last fetched, which we'll store in metadata
+  // For backward compatibility, check if any entry has last_fetched metadata
+  const lastFetched = entries.find(e => e.metadata?.last_fetched)?.metadata?.last_fetched;
+  
+  if (lastFetched) {
+    const fetchDate = new Date(lastFetched).toISOString();
+    const daysBack = Math.ceil((Date.now() - new Date(lastFetched).getTime()) / (24 * 60 * 60 * 1000));
+    console.log(`   Last fetch was ${daysBack} day(s) ago`);
+    return fetchDate;
+  }
+  
+  // Fallback: Find the most recent saved_at timestamp from existing entries
+  // This ensures we don't miss articles on the first run after this fix
   const latest = entries.reduce((max, entry) => {
     const entryTime = new Date(entry.timestamp).getTime();
     return entryTime > max ? entryTime : max;
@@ -297,7 +314,7 @@ function getLatestTimestamp(entries: TimelineEntry[]): string | undefined {
     return undefined;
   }
   
-  // Cap at 30 days ago maximum
+  // Cap at 30 days ago maximum to avoid fetching too much on first run
   const thirtyDaysAgo = Date.now() - (30 * 24 * 60 * 60 * 1000);
   const fetchFromTime = Math.max(latest, thirtyDaysAgo);
   
@@ -306,7 +323,7 @@ function getLatestTimestamp(entries: TimelineEntry[]): string | undefined {
   
   // Log how far back we're fetching
   const daysBack = Math.ceil((Date.now() - fetchFromTime) / (24 * 60 * 60 * 1000));
-  console.log(`   Last published article was ${daysBack} day(s) ago`);
+  console.log(`   Last fetch was ${daysBack} day(s) ago (estimated from last saved article)`);
   
   return fetchDate;
 }
@@ -352,6 +369,9 @@ async function main() {
     // Create a map of existing entries by ID for easy lookup
     const existingMap = new Map(existing.map(e => [e.id, e]));
     
+    // Store the current fetch time - this will be saved with each entry
+    const currentFetchTime = new Date().toISOString();
+    
     // Convert fetched documents to timeline entries
     let newCount = 0;
     let updatedCount = 0;
@@ -376,6 +396,12 @@ async function main() {
       }
       
       const entry = convertToTimelineEntry(doc);
+      
+      // Add last_fetched timestamp to track when we last saw this entry
+      if (!entry.metadata) {
+        entry.metadata = {};
+      }
+      entry.metadata.last_fetched = currentFetchTime;
       
       if (existingMap.has(entry.id)) {
         // Update existing entry
