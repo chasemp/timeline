@@ -138,10 +138,18 @@ async function convertToTimelineEntry(item: HNItem): Promise<TimelineEntry | nul
   // Get the parent story
   const story = await getParentStory(item);
   
-  // Create a title from the first line or first 60 chars of the comment
+  // Extract comment text for summary and hashtags
   const textContent = item.text.replace(/<[^>]*>/g, ' ').replace(/\s+/g, ' ').trim();
-  const firstLine = textContent.split('\n')[0];
-  const title = firstLine.length > 60 ? firstLine.substring(0, 57) + '...' : firstLine;
+  
+  // Use the story title as the entry title (or fallback to comment excerpt)
+  let title: string;
+  if (story && story.title) {
+    title = story.title;
+  } else {
+    // Fallback: create a title from the first line or first 60 chars of the comment
+    const firstLine = textContent.split('\n')[0];
+    title = firstLine.length > 60 ? firstLine.substring(0, 57) + '...' : firstLine;
+  }
   
   // Build the HN URL
   const commentUrl = `https://news.ycombinator.com/item?id=${item.id}`;
