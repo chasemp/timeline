@@ -511,9 +511,15 @@ const allHashtags = Object.entries(hashtagCounts)
     return hashtagToTypes[hashtag] || [];
   }
 
-  // All button
+  // All button - checks all content types AND clears label filters
   document.getElementById('select-all')?.addEventListener('click', () => {
     checkboxes.forEach((input) => input.checked = true);
+    
+    // Clear all selected hashtags
+    hashtagCheckboxes.forEach((checkbox) => checkbox.checked = false);
+    selectedHashtags.clear();
+    updateHashtagFilters();
+    
     updateFilters();
   });
   
