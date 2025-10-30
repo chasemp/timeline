@@ -50,6 +50,7 @@ interface TimelineEntry {
     story_title?: string;
     story_url?: string;
     parent_id?: number;
+    comment_url?: string;
   };
 }
 
@@ -151,8 +152,9 @@ async function convertToTimelineEntry(item: HNItem): Promise<TimelineEntry | nul
     title = firstLine.length > 60 ? firstLine.substring(0, 57) + '...' : firstLine;
   }
   
-  // Build the HN URL
+  // Build the HN URLs
   const commentUrl = `https://news.ycombinator.com/item?id=${item.id}`;
+  const storyUrl = story ? (story.url || `https://news.ycombinator.com/item?id=${story.id}`) : commentUrl;
   
   // Extract hashtags from comment text (if any)
   const hashtagMatches = textContent.match(/#\w+/g) || [];
@@ -164,12 +166,13 @@ async function convertToTimelineEntry(item: HNItem): Promise<TimelineEntry | nul
     timestamp: new Date(item.time * 1000).toISOString(),
     title: title || 'Comment',
     summary: textContent.substring(0, 200),
-    url: commentUrl,
-    canonical_url: commentUrl,
+    url: storyUrl, // Main link goes to story thread
+    canonical_url: commentUrl, // Canonical is the specific comment
     tags: hashtags,
     content_html: cleanHNHTML(item.text),
     metadata: {
-      parent_id: item.parent
+      parent_id: item.parent,
+      comment_url: commentUrl // Store direct comment link
     }
   };
   

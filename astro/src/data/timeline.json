@@ -85,7 +85,7 @@
     "timestamp": "2025-10-30T02:38:34.000Z",
     "title": "AWS to bare metal two years later: Answering your questions about leaving AWS",
     "summary": "I had not thought of it this way, but interesting point. I have seen this as well.",
-    "url": "https://news.ycombinator.com/item?id=45755826",
+    "url": "https://oneuptime.com/blog/post/2025-10-29-aws-to-bare-metal-two-years-later/view",
     "canonical_url": "https://news.ycombinator.com/item?id=45755826",
     "author": null,
     "tags": [],
@@ -96,6 +96,7 @@
     "embed_cid": null,
     "metadata": {
       "parent_id": 45747167,
+      "comment_url": "https://news.ycombinator.com/item?id=45755826",
       "story_id": 45745281,
       "story_title": "AWS to bare metal two years later: Answering your questions about leaving AWS",
       "story_url": "https://oneuptime.com/blog/post/2025-10-29-aws-to-bare-metal-two-years-later/view"
@@ -1894,7 +1895,7 @@
     "timestamp": "2025-04-01T12:20:47.000Z",
     "title": "White House says it's 'case closed' on the Signal group chat review",
     "summary": "Insightful yet frightening.",
-    "url": "https://news.ycombinator.com/item?id=43545870",
+    "url": "https://www.npr.org/2025/03/31/nx-s1-5345865/white-house-signal-group-chat-review",
     "canonical_url": "https://news.ycombinator.com/item?id=43545870",
     "author": null,
     "tags": [],
@@ -1905,6 +1906,7 @@
     "embed_cid": null,
     "metadata": {
       "parent_id": 43545790,
+      "comment_url": "https://news.ycombinator.com/item?id=43545870",
       "story_id": 43544657,
       "story_title": "White House says it's 'case closed' on the Signal group chat review",
       "story_url": "https://www.npr.org/2025/03/31/nx-s1-5345865/white-house-signal-group-chat-review"
@@ -1917,7 +1919,7 @@
     "timestamp": "2025-03-21T13:23:14.000Z",
     "title": "The Burnout Machine",
     "summary": "This is it to me as well",
-    "url": "https://news.ycombinator.com/item?id=43435361",
+    "url": "https://unionize.fyi",
     "canonical_url": "https://news.ycombinator.com/item?id=43435361",
     "author": null,
     "tags": [],
@@ -1928,6 +1930,7 @@
     "embed_cid": null,
     "metadata": {
       "parent_id": 43432888,
+      "comment_url": "https://news.ycombinator.com/item?id=43435361",
       "story_id": 43427002,
       "story_title": "The Burnout Machine",
       "story_url": "https://unionize.fyi"
@@ -1970,7 +1973,7 @@
     "timestamp": "2025-03-19T02:22:39.000Z",
     "title": "Two new PebbleOS watches",
     "summary": "Hear, hear",
-    "url": "https://news.ycombinator.com/item?id=43407699",
+    "url": "https://ericmigi.com/blog/introducing-two-new-pebbleos-watches/",
     "canonical_url": "https://news.ycombinator.com/item?id=43407699",
     "author": null,
     "tags": [],
@@ -1981,6 +1984,7 @@
     "embed_cid": null,
     "metadata": {
       "parent_id": 43403838,
+      "comment_url": "https://news.ycombinator.com/item?id=43407699",
       "story_id": 43400989,
       "story_title": "Two new PebbleOS watches",
       "story_url": "https://ericmigi.com/blog/introducing-two-new-pebbleos-watches/"
@@ -2020,7 +2024,7 @@
     "timestamp": "2025-03-04T03:51:20.000Z",
     "title": "SQLite-on-the-server is misunderstood: Better at hyper-scale than micro-scale",
     "summary": "I was thinking something very similar. Once you&#x27;ve accepted any need at all for global state the next move is to reorient to minimizing it with horizontally scalable point local state and a small",
-    "url": "https://news.ycombinator.com/item?id=43250066",
+    "url": "https://rivet.gg/blog/2025-02-16-sqlite-on-the-server-is-misunderstood",
     "canonical_url": "https://news.ycombinator.com/item?id=43250066",
     "author": null,
     "tags": [
@@ -2033,6 +2037,7 @@
     "embed_cid": null,
     "metadata": {
       "parent_id": 43249675,
+      "comment_url": "https://news.ycombinator.com/item?id=43250066",
       "story_id": 43244307,
       "story_title": "SQLite-on-the-server is misunderstood: Better at hyper-scale than micro-scale",
       "story_url": "https://rivet.gg/blog/2025-02-16-sqlite-on-the-server-is-misunderstood"
@@ -2045,7 +2050,7 @@
     "timestamp": "2025-02-09T06:09:27.000Z",
     "title": "Ask HN: Finding interesting work if disenchanted with \"big tech\" & \"VC-backed\"",
     "summary": "Insightful, thank you.",
-    "url": "https://news.ycombinator.com/item?id=42988833",
+    "url": "https://news.ycombinator.com/item?id=42984996",
     "canonical_url": "https://news.ycombinator.com/item?id=42988833",
     "author": null,
     "tags": [],
@@ -2056,6 +2061,7 @@
     "embed_cid": null,
     "metadata": {
       "parent_id": 42985808,
+      "comment_url": "https://news.ycombinator.com/item?id=42988833",
       "story_id": 42984996,
       "story_title": "Ask HN: Finding interesting work if disenchanted with \"big tech\" & \"VC-backed\"",
       "story_url": "https://news.ycombinator.com/item?id=42984996"
@@ -3178,7 +3184,7 @@
     "timestamp": "2017-04-03T16:02:03.000Z",
     "title": "Ask HN: Who is hiring? (April 2017)",
     "summary": "Wikimedia Foundation | Operations Engineer (Cloud Services) | SF | Remote I am an engineer with the team. We run a niche hosting operation directed at the Wikimedia community tooling and ecosystem. We",
-    "url": "https://news.ycombinator.com/item?id=14023878",
+    "url": "https://news.ycombinator.com/item?id=14023198",
     "canonical_url": "https://news.ycombinator.com/item?id=14023878",
     "author": null,
     "tags": [
@@ -3195,6 +3201,7 @@
     "embed_cid": null,
     "metadata": {
       "parent_id": 14023198,
+      "comment_url": "https://news.ycombinator.com/item?id=14023878",
       "story_id": 14023198,
       "story_title": "Ask HN: Who is hiring? (April 2017)",
       "story_url": "https://news.ycombinator.com/item?id=14023198"
