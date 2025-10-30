@@ -269,8 +269,7 @@ const formatShortDate = (timestamp: string) => {
   const panelTitleText = document.getElementById('panel-title-text')!;
   const panelSourceWrapper = document.getElementById('panel-source-wrapper')!;
   const panelSource = document.getElementById('panel-source')! as HTMLAnchorElement;
-  const closeBtn = document.getElementById('panel-close')!;
-  const closeBtnLeft = document.getElementById('panel-close-left')!;
+  const closeBtn = document.getElementById('panel-close-left')!;
   const backdrop = document.getElementById('panel-backdrop')!;
   const swipeIndicator = document.getElementById('swipe-indicator')!;
   const isMobile = () => window.innerWidth <= 980;
@@ -535,7 +534,6 @@ const formatShortDate = (timestamp: string) => {
   }
 
   closeBtn.addEventListener('click', closePanel);
-  closeBtnLeft.addEventListener('click', closePanel);
   backdrop.addEventListener('click', closePanel);
   document.addEventListener('keydown', (e) => { 
     if (e.key === 'Escape' && (isMobile() ? panel.classList.contains('mobile-open') : panelContent.innerHTML !== introHTML)) {
