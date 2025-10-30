@@ -424,6 +424,15 @@ const allHashtags = Object.entries(hashtagCounts)
     html.setAttribute('data-theme', newTheme);
     setCookie('theme', newTheme);
     if (themeIcon) themeIcon.textContent = newTheme === 'dark' ? '☀️' : '🌙';
+    
+    // Update Giscus theme if it's loaded
+    const giscusFrame = document.querySelector('iframe.giscus-frame') as HTMLIFrameElement;
+    if (giscusFrame) {
+      giscusFrame.contentWindow?.postMessage(
+        { giscus: { setConfig: { theme: newTheme } } },
+        'https://giscus.app'
+      );
+    }
   });
 
   // Initialize Pagefind search

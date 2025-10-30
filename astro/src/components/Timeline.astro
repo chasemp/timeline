@@ -412,7 +412,11 @@ const formatShortDate = (timestamp: string) => {
     script.setAttribute('data-reactions-enabled', '1');
     script.setAttribute('data-emit-metadata', '0');
     script.setAttribute('data-input-position', 'bottom');
-    script.setAttribute('data-theme', '/giscus-custom.css');
+    
+    // Use appropriate theme based on current site theme
+    const currentTheme = document.documentElement.getAttribute('data-theme') || 'dark';
+    script.setAttribute('data-theme', currentTheme === 'light' ? 'light' : 'dark');
+    
     script.setAttribute('data-lang', 'en');
     script.setAttribute('crossorigin', 'anonymous');
     script.async = true;
