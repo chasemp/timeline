@@ -3,8 +3,8 @@
     "title": "Chase Pettet's Timeline",
     "description": "A timeline of my public online activity",
     "site": "https://timeline.523.life",
-    "total_items": 130,
-    "generated_at": "2025-10-30T14:15:23.008Z",
+    "total_items": 143,
+    "generated_at": "2025-10-30T14:19:06.636Z",
     "types": [
       "saved",
       "pixelfed",
@@ -40,7 +40,8 @@
         "word_count": 346,
         "reading_time": "2 min read",
         "site_name": "Geoffrey Huntley",
-        "cover_image": "https://ghuntley.com/content/images/size/w1200/2025/06/3ea367ed-cae3-454a-840f-134531dea1fd.jpg"
+        "cover_image": "https://ghuntley.com/content/images/size/w1200/2025/06/3ea367ed-cae3-454a-840f-134531dea1fd.jpg",
+        "last_fetched": "2025-10-30T14:18:56.895Z"
       }
     },
     {
@@ -63,7 +64,8 @@
       "embed_cid": null,
       "metadata": {
         "site_name": "YouTube",
-        "cover_image": "https://i.ytimg.com/vi/GaoLU6zKaws/maxresdefault.jpg?sqp=-oaymwEmCIAKENAF8quKqQMa8AEB-AH-CYAC0AWKAgwIABABGHIgXig8MA8=&rs=AOn4CLCKStWVT21BP5p1tmla_jf5mKAAsg"
+        "cover_image": "https://i.ytimg.com/vi/GaoLU6zKaws/maxresdefault.jpg?sqp=-oaymwEmCIAKENAF8quKqQMa8AEB-AH-CYAC0AWKAgwIABABGHIgXig8MA8=&rs=AOn4CLCKStWVT21BP5p1tmla_jf5mKAAsg",
+        "last_fetched": "2025-10-30T14:18:56.895Z"
       }
     },
     {
@@ -87,7 +89,8 @@
         "reading_time": "50 min read",
         "site_name": "readwise-upload-pdf",
         "cover_image": "https://readwise-assets.s3.amazonaws.com/media/reader/parsed_document_assets/182351867/4vEmTQVboZoyDgNLyrDhOyyh_GHf7VfKLF2BbicAYSo-cove_OC4apiS.png",
-        "reading_progress": 0.14285714285714285
+        "reading_progress": 0.14285714285714285,
+        "last_fetched": "2025-10-30T14:18:56.895Z"
       }
     },
     {
@@ -139,7 +142,8 @@
         "reading_time": "6 min read",
         "site_name": "mit.edu",
         "cover_image": "https://readwise-assets.s3.amazonaws.com/media/reader/parsed_document_assets/381278089/IbjsyTHH3cEMIruS5Fy75Zu7z8opHnHIDp7XEK1Pw4c-cove_IjHUkO6.png",
-        "reading_progress": 0.9545454545454546
+        "reading_progress": 0.9545454545454546,
+        "last_fetched": "2025-10-30T14:18:56.895Z"
       }
     },
     {
@@ -166,7 +170,8 @@
       "metadata": {
         "word_count": 1755,
         "reading_time": "9 min read",
-        "site_name": "swarthmore.edu"
+        "site_name": "swarthmore.edu",
+        "last_fetched": "2025-10-30T14:18:56.895Z"
       }
     },
     {
@@ -191,7 +196,8 @@
       "metadata": {
         "word_count": 592,
         "reading_time": "3 min read",
-        "site_name": "Elon University"
+        "site_name": "Elon University",
+        "last_fetched": "2025-10-30T14:18:56.895Z"
       }
     },
     {
@@ -219,7 +225,8 @@
         "reading_time": "18 min read",
         "site_name": "The Cloudflare Blog",
         "cover_image": "https://cf-assets.www.cloudflare.com/zkvhlag99gkb/1jrfu33HdXerVZwRnD2cRj/8c93d0f47c32635fb98e28d64cd10364/Keeping_the_Internet_fast_and_secure-_introducing_Merkle_Tree_Certificates-OG.png",
-        "reading_progress": 1
+        "reading_progress": 1,
+        "last_fetched": "2025-10-30T14:18:56.895Z"
       }
     },
     {
@@ -246,7 +253,8 @@
         "word_count": 222,
         "reading_time": "2 min read",
         "site_name": "consensus.app",
-        "cover_image": "https://consensus.app/api/og/threads/eyJ0aXRsZSI6IkxvbmcgSG91cnMgSW1wYWN0IERldmVsb3BlciBQcm9kdWN0aXZpdHkiLCJ0aHJlYWRJZCI6InRsTHZpTjVkUVBDcnRrVFRHaVVNdXciLCJzZWFyY2hJZCI6ImxYelFzcHRmU0hXYW1GemtzT2VmZkEifQ%3D%3D"
+        "cover_image": "https://consensus.app/api/og/threads/eyJ0aXRsZSI6IkxvbmcgSG91cnMgSW1wYWN0IERldmVsb3BlciBQcm9kdWN0aXZpdHkiLCJ0aHJlYWRJZCI6InRsTHZpTjVkUVBDcnRrVFRHaVVNdXciLCJzZWFyY2hJZCI6ImxYelFzcHRmU0hXYW1GemtzT2VmZkEifQ%3D%3D",
+        "last_fetched": "2025-10-30T14:18:56.895Z"
       }
     },
     {
@@ -378,7 +386,8 @@
         "reading_time": "8 min read",
         "site_name": "Signal Messenger",
         "cover_image": "https://signal.org/assets/og/og-image-ff2096df535eee499356de64b19fa8cebb9681ab1e78cca7330e7f8b8d5ec6d5.png",
-        "reading_progress": 1
+        "reading_progress": 1,
+        "last_fetched": "2025-10-30T14:18:56.895Z"
       }
     },
     {
@@ -471,7 +480,8 @@
         "word_count": 1319,
         "reading_time": "7 min read",
         "site_name": "The New Stack",
-        "cover_image": "https://cdn.thenewstack.io/media/2025/10/54fc1732-matthew-meckes-2.jpg"
+        "cover_image": "https://cdn.thenewstack.io/media/2025/10/54fc1732-matthew-meckes-2.jpg",
+        "last_fetched": "2025-10-30T14:18:56.895Z"
       }
     },
     {
@@ -499,7 +509,8 @@
         "reading_time": "20 min read",
         "site_name": "readwise-upload-pdf",
         "cover_image": "https://readwise-assets.s3.amazonaws.com/media/reader/parsed_document_assets/378761449/1WdzDITgulw1_aiYMoaxjyagIEwZekkRbv0U0LIYqzw-cove_5BbUyHA.png",
-        "reading_progress": 0.5714285714285714
+        "reading_progress": 0.5714285714285714,
+        "last_fetched": "2025-10-30T14:18:56.895Z"
       }
     },
     {
@@ -524,7 +535,8 @@
       "metadata": {
         "word_count": 3617,
         "reading_time": "19 min read",
-        "site_name": "Amazon Web Services, Inc."
+        "site_name": "Amazon Web Services, Inc.",
+        "last_fetched": "2025-10-30T14:18:56.895Z"
       }
     },
     {
@@ -551,7 +563,8 @@
         "word_count": 89,
         "reading_time": "1 min read",
         "site_name": "linkedin.com",
-        "cover_image": "https://media.licdn.com/dms/image/v2/D4E22AQGo8ZZuHK2njw/feedshare-shrink_800/B4EZoH86M3GYAo-/0/1761069999450?e=2147483647&v=beta&t=5BCmKV1vljit7wQ94Zu5w4QrVTTkirP2frAbAhcI7mM"
+        "cover_image": "https://media.licdn.com/dms/image/v2/D4E22AQGo8ZZuHK2njw/feedshare-shrink_800/B4EZoH86M3GYAo-/0/1761069999450?e=2147483647&v=beta&t=5BCmKV1vljit7wQ94Zu5w4QrVTTkirP2frAbAhcI7mM",
+        "last_fetched": "2025-10-30T14:18:56.895Z"
       }
     },
     {
@@ -607,7 +620,8 @@
         "reading_time": "2 min read",
         "site_name": "Poetry Magazine",
         "cover_image": "https://s3-us-east-2.amazonaws.com/cdn-test.poetryfoundation.org/content/images/8860b89bc1c96d531ea2aad695b8e4b17cb249af.jpeg",
-        "reading_progress": 0.10772043313176767
+        "reading_progress": 0.10772043313176767,
+        "last_fetched": "2025-10-30T14:18:56.895Z"
       }
     },
     {
@@ -635,7 +649,8 @@
         "word_count": 422,
         "reading_time": "3 min read",
         "site_name": "linkedin.com",
-        "cover_image": "https://static.licdn.com/aero-v1/sc/h/c45fy346jw096z9pbphyyhdz7"
+        "cover_image": "https://static.licdn.com/aero-v1/sc/h/c45fy346jw096z9pbphyyhdz7",
+        "last_fetched": "2025-10-30T14:18:56.895Z"
       }
     },
     {
@@ -690,7 +705,8 @@
         "word_count": 121,
         "reading_time": "1 min read",
         "site_name": "mypoeticside.com",
-        "reading_progress": 1
+        "reading_progress": 1,
+        "last_fetched": "2025-10-30T14:18:56.895Z"
       }
     },
     {
@@ -714,7 +730,8 @@
       "embed_cid": null,
       "metadata": {
         "site_name": "YouTube",
-        "cover_image": "https://i.ytimg.com/vi/r3560y2LKMU/maxresdefault.jpg"
+        "cover_image": "https://i.ytimg.com/vi/r3560y2LKMU/maxresdefault.jpg",
+        "last_fetched": "2025-10-30T14:18:56.895Z"
       }
     },
     {
@@ -741,7 +758,35 @@
         "reading_time": "6 min read",
         "site_name": "linkedin.com",
         "cover_image": "https://media.licdn.com/dms/image/v2/D5612AQFd_lQu2RaFdw/article-cover_image-shrink_600_2000/B56Zn5582PJoAQ-/0/1760834343002?e=2147483647&v=beta&t=NtH2zxQ4JKscwxL5OE_zCPWezWOclLywjQxfCr5sDhM",
-        "reading_progress": 0.9359380552280147
+        "reading_progress": 0.9359380552280147,
+        "last_fetched": "2025-10-30T14:18:56.895Z"
+      }
+    },
+    {
+      "id": "readwise:01k6qm1983a2acew6wvcmw7w9e",
+      "type": "saved",
+      "source": null,
+      "timestamp": "2025-10-20T13:54:58.187000+00:00",
+      "title": "Richard Seiersen’s Post",
+      "summary": "Richard Seiersen warns that security scores are often ordinal, not true numbers, so averaging them hides important information. Proper use of scores requires drilling into underlying states and measuring rates and change. He urges cyber education to teach principled measurement and decision thinking, not just fleeting tools.",
+      "url": "https://www.linkedin.com/posts/richardseiersen_what-are-scores-good-for-ugcPost-7375314429611220992-LTvX?utm_source=share&utm_medium=member_android&rcm=ACoAABA7PwgB0iKxrYkDf2yq5phKyiYm5EjipwM",
+      "canonical_url": "https://www.linkedin.com/posts/richardseiersen_what-are-scores-good-for-ugcPost-7375314429611220992-LTvX?utm_source=share&utm_medium=member_android&rcm=ACoAABA7PwgB0iKxrYkDf2yq5phKyiYm5EjipwM",
+      "author": "Richard Seiersen",
+      "tags": [
+        "sec",
+        "prodsec"
+      ],
+      "media": [],
+      "content_html": null,
+      "content_text": null,
+      "embed_uri": null,
+      "embed_cid": null,
+      "metadata": {
+        "word_count": 510,
+        "reading_time": "3 min read",
+        "site_name": "linkedin.com",
+        "cover_image": "https://static.licdn.com/aero-v1/sc/h/c45fy346jw096z9pbphyyhdz7",
+        "last_fetched": "2025-10-30T14:18:56.895Z"
       }
     },
     {
@@ -771,7 +816,8 @@
         "reading_time": "67 min read",
         "site_name": "readwise-upload-pdf",
         "cover_image": "https://readwise-assets.s3.amazonaws.com/media/reader/parsed_document_assets/1819822/_ra-ASGi_eUFT_lWZO4jCzF--AAMyiZ7MK3mJ2fkL-0-cover-1819822.png",
-        "reading_progress": 0.027777777777777776
+        "reading_progress": 0.027777777777777776,
+        "last_fetched": "2025-10-30T14:18:56.895Z"
       }
     },
     {
@@ -799,7 +845,8 @@
         "word_count": 863,
         "reading_time": "5 min read",
         "site_name": "activism.net",
-        "reading_progress": 1
+        "reading_progress": 1,
+        "last_fetched": "2025-10-30T14:18:56.895Z"
       }
     },
     {
@@ -823,6 +870,63 @@
       "embed_uri": null,
       "embed_cid": null,
       "metadata": null
+    },
+    {
+      "id": "readwise:01k7yh4ccs8b6ec93s6gk8hezk",
+      "type": "saved",
+      "source": null,
+      "timestamp": "2025-10-19T15:24:12.057000+00:00",
+      "title": "Portals and Pipelines Aren’t Enough: Avoiding the Platform Façade",
+      "summary": "Many teams mistake portals and CI/CD pipelines for a full platform.  \nA real platform must orchestrate state, enforce policy, and manage lifecycle over time.  \nBuild platforms as products with clear contracts, shared ownership, and Day 2 operations.",
+      "url": "https://platformengineering.com/features/portals-and-pipelines-arent-enough-avoiding-the-platform-facade/",
+      "canonical_url": "https://platformengineering.com/features/portals-and-pipelines-arent-enough-avoiding-the-platform-facade/",
+      "author": "Daniel Bryant",
+      "tags": [
+        "tech",
+        "prodsec",
+        "product",
+        "software"
+      ],
+      "media": [],
+      "content_html": null,
+      "content_text": null,
+      "embed_uri": null,
+      "embed_cid": null,
+      "metadata": {
+        "word_count": 757,
+        "reading_time": "4 min read",
+        "site_name": "Platform Engineering",
+        "cover_image": "https://platformengineering.com/wp-content/uploads/2025/05/How-Platform-Engineering-is-Redefining-DevOps-in-2025_resized.jpg",
+        "last_fetched": "2025-10-30T14:18:56.895Z"
+      }
+    },
+    {
+      "id": "readwise:01k7yfqfkmvdzdfz6zzfy612c3",
+      "type": "saved",
+      "source": null,
+      "timestamp": "2025-10-19T14:59:40.788000+00:00",
+      "title": "Bryon Kroger’s Post",
+      "summary": "He stopped blaming culture and owned the problem.  \nGive teams something real and useful fast, show the end-to-end flow, and make security and outcomes continuous.  \nIf stakeholders won't listen, ask whether you've given them anything worth listening to.",
+      "url": "https://www.linkedin.com/posts/bryon-kroger_i-used-to-blame-culture-when-teams-didn-activity-7379502696346730496-r5Qw?utm_source=share&utm_medium=member_android&rcm=ACoAABA7PwgB0iKxrYkDf2yq5phKyiYm5EjipwM",
+      "canonical_url": "https://www.linkedin.com/posts/bryon-kroger_i-used-to-blame-culture-when-teams-didn-activity-7379502696346730496-r5Qw?utm_source=share&utm_medium=member_android&rcm=ACoAABA7PwgB0iKxrYkDf2yq5phKyiYm5EjipwM",
+      "author": "Bryon Kroger",
+      "tags": [
+        "sec",
+        "tech",
+        "prodsec"
+      ],
+      "media": [],
+      "content_html": null,
+      "content_text": null,
+      "embed_uri": null,
+      "embed_cid": null,
+      "metadata": {
+        "word_count": 182,
+        "reading_time": "1 min read",
+        "site_name": "linkedin.com",
+        "cover_image": "https://static.licdn.com/aero-v1/sc/h/c45fy346jw096z9pbphyyhdz7",
+        "last_fetched": "2025-10-30T14:18:56.895Z"
+      }
     },
     {
       "id": "bluesky:3m3ilfgmjnc23",
@@ -868,7 +972,8 @@
         "word_count": 561,
         "reading_time": "3 min read",
         "site_name": "TheFarSide.com",
-        "cover_image": "https://assets.thefarside.com/assets/packs/media/images/brand/logo/tfs-share-default-a7b076808488053c10116ff0605a39a1.jpg"
+        "cover_image": "https://assets.thefarside.com/assets/packs/media/images/brand/logo/tfs-share-default-a7b076808488053c10116ff0605a39a1.jpg",
+        "last_fetched": "2025-10-30T14:18:56.895Z"
       }
     },
     {
@@ -927,7 +1032,207 @@
         "reading_time": "6 min read",
         "site_name": "A Space to Think: Notes on Software Development",
         "cover_image": "https://substackcdn.com/image/fetch/$s_!9hR8!,w_1200,h_600,c_fill,f_jpg,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fbaac74c8-e2d3-4d54-8a56-f7b40ddf2cfc_1536x1024.png",
-        "reading_progress": 0.9684378854451415
+        "reading_progress": 0.9684378854451415,
+        "last_fetched": "2025-10-30T14:18:56.895Z"
+      }
+    },
+    {
+      "id": "readwise:01k7trxrfm2j659kkjv6yvvg51",
+      "type": "saved",
+      "source": null,
+      "timestamp": "2025-10-18T04:23:25.940000+00:00",
+      "title": "Holochain",
+      "summary": "Holochain allows agents to interact with a distributed network by sharing and validating their local state changes, creating a decentralized database called a Graphing Distributed Hash Table (DHT). Each agent's actions are recorded in a secure, append-only chain, ensuring accountability and data integrity within applications. Users trigger state changes through permissioned calls, allowing safe interactions across different services in the Holochain ecosystem.",
+      "url": "https://www.holochain.org/documents/holochain-white-paper-2.0.pdf",
+      "canonical_url": "https://www.holochain.org/documents/holochain-white-paper-2.0.pdf",
+      "author": "Eric Harris-Braun, Arthur Brock, Paul d'Aoust",
+      "tags": [
+        "alt",
+        "sec"
+      ],
+      "media": [],
+      "content_html": null,
+      "content_text": null,
+      "embed_uri": null,
+      "embed_cid": null,
+      "metadata": {
+        "word_count": 40883,
+        "reading_time": "205 min read",
+        "site_name": "holochain.org",
+        "cover_image": "https://readwise-assets.s3.amazonaws.com/media/reader/parsed_document_assets/239255881/RS0AqMiBzpVPv7fZwI9CLNwK0FwI7nKvTLa_O1G11js-cove_5RRsiwg.png",
+        "reading_progress": 0.02247191011235955,
+        "last_fetched": "2025-10-30T14:18:56.895Z"
+      }
+    },
+    {
+      "id": "readwise:01k7trsx4zdqqqzc2hmxqanfze",
+      "type": "saved",
+      "source": null,
+      "timestamp": "2025-10-18T04:21:19.647000+00:00",
+      "title": "Beyond Byzantium: The Players of Ludos",
+      "summary": "The article discusses the challenges of coordinating distributed systems, often framed by the Byzantine Generals Problem, which assumes consensus must be reached first. It introduces a new approach through a story about the Players of Ludos, who found that starting with common ground rules allowed for better coordination without the need for a single agreed-upon state. The author argues for moving from seeking global consensus to scaling consent, enabling efficient collaboration in dynamic environments.",
+      "url": "https://www.holochain.org/documents/holochain-players-of-ludos.pdf",
+      "canonical_url": "https://www.holochain.org/documents/holochain-players-of-ludos.pdf",
+      "author": "Eric Harris-Braun",
+      "tags": [
+        "alt",
+        "sec",
+        "tech",
+        "prodsec",
+        "shortlist"
+      ],
+      "media": [],
+      "content_html": null,
+      "content_text": null,
+      "embed_uri": null,
+      "embed_cid": null,
+      "metadata": {
+        "word_count": 3406,
+        "reading_time": "18 min read",
+        "site_name": "holochain.org",
+        "cover_image": "https://readwise-assets.s3.amazonaws.com/media/reader/parsed_document_assets/239255899/19RzeKXLhZ0sOYXmRt6PkkwXNwSFa1dFGbr-7TG2GnU-cove_GBYGMKP.png",
+        "reading_progress": 0.25,
+        "last_fetched": "2025-10-30T14:18:56.895Z"
+      }
+    },
+    {
+      "id": "readwise:01k7tqz5v1sx61t5q7ezek1a1s",
+      "type": "saved",
+      "source": null,
+      "timestamp": "2025-10-18T04:06:43.719000+00:00",
+      "title": "A More Human Internet with Mary Camacho | Femme Futurists Society",
+      "summary": "The internet can be redesigned to better serve people, not just businesses. Decentralized and transparent technologies can give users control of their data and privacy. Social and technical change together can create a more humane, inclusive digital world.",
+      "url": "https://www.youtube.com/watch?si=6SyCxQ6xXO1poaNL&v=JZiXsMBcV-E&feature=youtu.be",
+      "canonical_url": "https://www.youtube.com/watch?si=6SyCxQ6xXO1poaNL&v=JZiXsMBcV-E&feature=youtu.be",
+      "author": "Femme Futurists Society",
+      "tags": [
+        "ai",
+        "alt",
+        "sec",
+        "tech",
+        "prodsec"
+      ],
+      "media": [],
+      "content_html": null,
+      "content_text": null,
+      "embed_uri": null,
+      "embed_cid": null,
+      "metadata": {
+        "site_name": "YouTube",
+        "cover_image": "https://i.ytimg.com/vi/JZiXsMBcV-E/maxresdefault.jpg",
+        "last_fetched": "2025-10-30T14:18:56.895Z"
+      }
+    },
+    {
+      "id": "readwise:01k7tqsza7hpxp330krb20em41",
+      "type": "saved",
+      "source": null,
+      "timestamp": "2025-10-18T04:03:53.287000+00:00",
+      "title": "Holo Delivery Brief No 10 with Mary Camacho",
+      "summary": "Enjoy the videos and music you love, upload original content, and share it all with friends, family, and the world on YouTube.",
+      "url": "https://share.google/cVOBo0CRTxCHJGru8",
+      "canonical_url": "https://share.google/cVOBo0CRTxCHJGru8",
+      "author": "youtube.com",
+      "tags": [
+        "alt",
+        "sec",
+        "tech",
+        "prodsec",
+        "software"
+      ],
+      "media": [],
+      "content_html": null,
+      "content_text": null,
+      "embed_uri": null,
+      "embed_cid": null,
+      "metadata": {
+        "word_count": 29,
+        "reading_time": "1 min read",
+        "site_name": "Forbes.com",
+        "last_fetched": "2025-10-30T14:18:56.895Z"
+      }
+    },
+    {
+      "id": "readwise:01k7tqj8vyfq7dfvagrkzg5e4x",
+      "type": "saved",
+      "source": null,
+      "timestamp": "2025-10-18T03:59:40.926000+00:00",
+      "title": "Arshan Dabirsiaghi’s Post",
+      "summary": "Arshan says traditional graph-based SAST/IAST is still essential for finding how code changes create vulnerabilities. LLMs alone are poor at graph inspection, but AI can triage SAST output, reduce noise, and add actionable evidence. The future is SAST plus AI-first triage, not replacing SAST.",
+      "url": "https://www.linkedin.com/posts/arshan-dabirsiaghi_sorry-to-the-haters-but-in-the-new-world-activity-7384963890322804736-EAMy?utm_source=share&utm_medium=member_android&rcm=ACoAABA7PwgB0iKxrYkDf2yq5phKyiYm5EjipwM",
+      "canonical_url": "https://www.linkedin.com/posts/arshan-dabirsiaghi_sorry-to-the-haters-but-in-the-new-world-activity-7384963890322804736-EAMy?utm_source=share&utm_medium=member_android&rcm=ACoAABA7PwgB0iKxrYkDf2yq5phKyiYm5EjipwM",
+      "author": "Arshan Dabirsiaghi",
+      "tags": [
+        "ai",
+        "sec",
+        "tech",
+        "prodsec"
+      ],
+      "media": [],
+      "content_html": null,
+      "content_text": null,
+      "embed_uri": null,
+      "embed_cid": null,
+      "metadata": {
+        "word_count": 207,
+        "reading_time": "2 min read",
+        "site_name": "linkedin.com",
+        "cover_image": "https://static.licdn.com/aero-v1/sc/h/c45fy346jw096z9pbphyyhdz7",
+        "last_fetched": "2025-10-30T14:18:56.895Z"
+      }
+    },
+    {
+      "id": "readwise:01k7s7yrfw93fqc5za84mgfw91",
+      "type": "saved",
+      "source": null,
+      "timestamp": "2025-10-17T14:07:38.491000+00:00",
+      "title": "Gaia-X",
+      "summary": "Gaia-X is a federated, decentralised European data infrastructure that gives users control over their data and supports GDPR compliance. It helps companies, especially SMEs, share data and build new data-driven services using common standards for security, privacy, and interoperability. National hubs and open-source federation services coordinate development and connect providers, users, and policymakers.",
+      "url": "https://gaia-x-hub.de/en/gaia-x-explained/?hl=en-US#:~:text=Therefore%2C%20Gaia%2DX%20does%20not,the%20basis%20of%20common%20standards.",
+      "canonical_url": "https://gaia-x-hub.de/en/gaia-x-explained/?hl=en-US#:~:text=Therefore%2C%20Gaia%2DX%20does%20not,the%20basis%20of%20common%20standards.",
+      "author": "gaia-x-hub.de",
+      "tags": [
+        "alt",
+        "sec",
+        "tech",
+        "prodsec"
+      ],
+      "media": [],
+      "content_html": null,
+      "content_text": null,
+      "embed_uri": null,
+      "embed_cid": null,
+      "metadata": {
+        "word_count": 515,
+        "reading_time": "3 min read",
+        "site_name": "Gaia-X Hub Germany",
+        "last_fetched": "2025-10-30T14:18:56.895Z"
+      }
+    },
+    {
+      "id": "readwise:01k7qmph3tc3ttj54zejxedd17",
+      "type": "saved",
+      "source": null,
+      "timestamp": "2025-10-16T23:11:51.417000+00:00",
+      "title": "Oxide and Friends",
+      "summary": "They talk about how blogging changed their careers and helped preserve early tech history. Writing long-form forced reflection and showed personal moments like births, deaths, launches, and endings. Their advice: know your audience and just start writing.",
+      "url": "https://oxide-and-friends.transistor.fm/episodes/technical-blogging/transcript",
+      "canonical_url": "https://oxide-and-friends.transistor.fm/episodes/technical-blogging/transcript",
+      "author": "transistor.fm",
+      "tags": [
+        "tech"
+      ],
+      "media": [],
+      "content_html": null,
+      "content_text": null,
+      "embed_uri": null,
+      "embed_cid": null,
+      "metadata": {
+        "word_count": 22338,
+        "reading_time": "112 min read",
+        "site_name": "Oxide and Friends",
+        "cover_image": "https://img.transistor.fm/4eSrii-l0zYfhuwNC5cfYd8f69OrSYgO5YGFbWC0S3c/rs:fill:0:0:1/w:800/h:800/q:60/mb:500000/aHR0cHM6Ly9pbWct/dXBsb2FkLXByb2R1/Y3Rpb24udHJhbnNp/c3Rvci5mbS9hNmU0/YWYyMjU4NmRjMmRi/YTczMmZjYzI0NmMx/N2YwNy5wbmc.webp",
+        "last_fetched": "2025-10-30T14:18:56.895Z"
       }
     },
     {
@@ -976,7 +1281,37 @@
       "embed_cid": null,
       "metadata": {
         "site_name": "YouTube",
-        "cover_image": "https://i.ytimg.com/vi/5Ai8UGx7QvQ/maxresdefault.jpg"
+        "cover_image": "https://i.ytimg.com/vi/5Ai8UGx7QvQ/maxresdefault.jpg",
+        "last_fetched": "2025-10-30T14:18:56.895Z"
+      }
+    },
+    {
+      "id": "readwise:01k7n4agrthvxbghgs4qw1b2t4",
+      "type": "saved",
+      "source": null,
+      "timestamp": "2025-10-15T23:47:11.770000+00:00",
+      "title": "Design Patterns for Securing LLM Agents against Prompt Injections",
+      "summary": "A new paper by researchers from major organizations presents design patterns to protect LLM agents from prompt injection attacks. These patterns limit the agents' capabilities, balancing security and utility to prevent harmful actions. The paper includes practical case studies demonstrating how these patterns can be effectively implemented.",
+      "url": "https://simonwillison.net/2025/Jun/13/prompt-injection-design-patterns/",
+      "canonical_url": "https://simonwillison.net/2025/Jun/13/prompt-injection-design-patterns/",
+      "author": "Simon Willison",
+      "tags": [
+        "ai",
+        "sec",
+        "prodsec"
+      ],
+      "media": [],
+      "content_html": null,
+      "content_text": null,
+      "embed_uri": null,
+      "embed_cid": null,
+      "metadata": {
+        "word_count": 1694,
+        "reading_time": "9 min read",
+        "site_name": "simonwillison.net",
+        "cover_image": "https://static.simonwillison.net/static/2025/design-patterns-card.jpg",
+        "reading_progress": 1,
+        "last_fetched": "2025-10-30T14:18:56.895Z"
       }
     },
     {
@@ -1007,7 +1342,64 @@
         "reading_time": "7 min read",
         "site_name": "simonwillison.net",
         "cover_image": "https://static.simonwillison.net/static/2025/lethaltrifecta.jpg",
-        "reading_progress": 1
+        "reading_progress": 1,
+        "last_fetched": "2025-10-30T14:18:56.895Z"
+      }
+    },
+    {
+      "id": "readwise:01k7n45f7fhpncez53sxs5y5m7",
+      "type": "saved",
+      "source": null,
+      "timestamp": "2025-10-15T23:44:26.351000+00:00",
+      "title": "LLMs’ Data-Control Path Insecurity",
+      "summary": "Mixing data and commands makes LLMs easy to fool. Prompt injection lets attackers turn inputs into instructions. Until we separate data and control, LLMs will stay vulnerable.",
+      "url": "https://cacm.acm.org/opinion/llms-data-control-path-insecurity/",
+      "canonical_url": "https://cacm.acm.org/opinion/llms-data-control-path-insecurity/",
+      "author": "Bruce Schneier",
+      "tags": [
+        "ai",
+        "sec",
+        "tech"
+      ],
+      "media": [],
+      "content_html": null,
+      "content_text": null,
+      "embed_uri": null,
+      "embed_cid": null,
+      "metadata": {
+        "word_count": 1093,
+        "reading_time": "6 min read",
+        "site_name": "Association for Computing Machinery",
+        "last_fetched": "2025-10-30T14:18:56.895Z"
+      }
+    },
+    {
+      "id": "readwise:01k7n3yy1731yz1mrw88dhwgfq",
+      "type": "saved",
+      "source": null,
+      "timestamp": "2025-10-15T23:40:52.135000+00:00",
+      "title": "Abusing Notion’s AI Agent for Data Theft",
+      "summary": "Notion’s new AI agents can be tricked into stealing private data using hidden commands in files. The AI cannot tell the difference between safe instructions and harmful ones, so it may send confidential information to attackers. This shows a big security problem with AI agents that many developers are ignoring.",
+      "url": "https://www.schneier.com/blog/archives/2025/09/abusing-notions-ai-agent-for-data-theft.html",
+      "canonical_url": "https://www.schneier.com/blog/archives/2025/09/abusing-notions-ai-agent-for-data-theft.html",
+      "author": "Bruce Schneier",
+      "tags": [
+        "ai",
+        "sec",
+        "tech",
+        "prodsec"
+      ],
+      "media": [],
+      "content_html": null,
+      "content_text": null,
+      "embed_uri": null,
+      "embed_cid": null,
+      "metadata": {
+        "word_count": 407,
+        "reading_time": "3 min read",
+        "site_name": "Schneier on Security",
+        "reading_progress": 1,
+        "last_fetched": "2025-10-30T14:18:56.895Z"
       }
     },
     {
@@ -1034,7 +1426,8 @@
         "reading_time": "30 min read",
         "site_name": "readwise-upload-pdf",
         "cover_image": "https://readwise-assets.s3.amazonaws.com/media/reader/parsed_document_assets/315506754/1r8aYQgJpPfIm5Cf4G0Y9_ECnrNP8LzLIb6TWJmGrAI-cove_RqFspfs.png",
-        "reading_progress": 0.14285714285714285
+        "reading_progress": 0.14285714285714285,
+        "last_fetched": "2025-10-30T14:18:56.895Z"
       }
     },
     {
@@ -1082,7 +1475,8 @@
         "word_count": 292,
         "reading_time": "2 min read",
         "site_name": "linkedin.com",
-        "cover_image": "https://static.licdn.com/aero-v1/sc/h/c45fy346jw096z9pbphyyhdz7"
+        "cover_image": "https://static.licdn.com/aero-v1/sc/h/c45fy346jw096z9pbphyyhdz7",
+        "last_fetched": "2025-10-30T14:18:56.895Z"
       }
     },
     {
@@ -1140,7 +1534,8 @@
         "reading_time": "31 min read",
         "site_name": "Lars Lofgren",
         "cover_image": "http://larslofgren.com/wp-content/uploads/2025/10/rcoding-bootcamp-homepage.png",
-        "reading_progress": 0.22763577437793495
+        "reading_progress": 0.22763577437793495,
+        "last_fetched": "2025-10-30T14:18:56.895Z"
       }
     },
     {
@@ -1166,7 +1561,8 @@
         "word_count": 355,
         "reading_time": "2 min read",
         "site_name": "linkedin.com",
-        "cover_image": "https://static.licdn.com/aero-v1/sc/h/c45fy346jw096z9pbphyyhdz7"
+        "cover_image": "https://static.licdn.com/aero-v1/sc/h/c45fy346jw096z9pbphyyhdz7",
+        "last_fetched": "2025-10-30T14:18:56.895Z"
       }
     },
     {
@@ -1215,7 +1611,8 @@
         "reading_time": "40 min read",
         "site_name": "InfoQ",
         "cover_image": "https://res.infoq.com/presentations/architecture-best-practices/en/card_header_image/gregor-hohpe-twitter-card-1756297866716.jpg",
-        "reading_progress": 0.8851978390305657
+        "reading_progress": 0.8851978390305657,
+        "last_fetched": "2025-10-30T14:18:56.895Z"
       }
     },
     {
@@ -1241,7 +1638,8 @@
       "metadata": {
         "word_count": 1036,
         "reading_time": "6 min read",
-        "site_name": "Risk and Cyber "
+        "site_name": "Risk and Cyber ",
+        "last_fetched": "2025-10-30T14:18:56.895Z"
       }
     },
     {
@@ -1350,7 +1748,8 @@
         "word_count": 696,
         "reading_time": "4 min read",
         "site_name": "linkedin.com",
-        "cover_image": "https://media.licdn.com/dms/image/v2/C4E12AQHGRSFeqxtNtg/article-cover_image-shrink_720_1280/article-cover_image-shrink_720_1280/0/1612593515816?e=2147483647&v=beta&t=Vdlpzj6xZde92P5tPZElLEzf5Ivigw6ffc3kMlnFH7I"
+        "cover_image": "https://media.licdn.com/dms/image/v2/C4E12AQHGRSFeqxtNtg/article-cover_image-shrink_720_1280/article-cover_image-shrink_720_1280/0/1612593515816?e=2147483647&v=beta&t=Vdlpzj6xZde92P5tPZElLEzf5Ivigw6ffc3kMlnFH7I",
+        "last_fetched": "2025-10-30T14:18:56.895Z"
       }
     },
     {
@@ -1377,7 +1776,8 @@
       "metadata": {
         "word_count": 172,
         "reading_time": "1 min read",
-        "site_name": "Risk and Cyber "
+        "site_name": "Risk and Cyber ",
+        "last_fetched": "2025-10-30T14:18:56.895Z"
       }
     },
     {
@@ -1402,7 +1802,8 @@
       "metadata": {
         "word_count": 367,
         "reading_time": "2 min read",
-        "site_name": "brooker.co.za"
+        "site_name": "brooker.co.za",
+        "last_fetched": "2025-10-30T14:18:56.895Z"
       }
     },
     {
@@ -1479,7 +1880,8 @@
         "word_count": 117,
         "reading_time": "1 min read",
         "site_name": "chrispiech.github.io",
-        "reading_progress": 1
+        "reading_progress": 1,
+        "last_fetched": "2025-10-30T14:18:56.895Z"
       }
     },
     {
@@ -1505,7 +1907,8 @@
         "word_count": 1332,
         "reading_time": "7 min read",
         "site_name": "wikipedia.org",
-        "reading_progress": 0.6118895963758029
+        "reading_progress": 0.6118895963758029,
+        "last_fetched": "2025-10-30T14:18:56.895Z"
       }
     },
     {
@@ -1534,7 +1937,8 @@
         "reading_time": "8 min read",
         "site_name": "Joel on Software",
         "cover_image": "https://i0.wp.com/www.joelonsoftware.com/wp-content/uploads/2016/12/11969842.jpg?fit=400%2C400&ssl=1",
-        "reading_progress": 1
+        "reading_progress": 1,
+        "last_fetched": "2025-10-30T14:18:56.895Z"
       }
     },
     {
