@@ -407,6 +407,31 @@ interface TimelineEntry {
 - Custom domain: `timeline.523.life`
 - CNAME: Managed via `astro/public/CNAME`
 
+## Troubleshooting
+
+### Site loads but has no CSS styling (cards are plain, no timeline dots)
+
+**Symptom:** The site appears broken - no colors, no timeline dots/spine, plain white cards.
+
+**Cause:** The `docs/.nojekyll` file is missing. GitHub Pages uses Jekyll by default, which ignores directories starting with underscores (like `_astro/`). This causes all CSS/JS files to return 404 errors.
+
+**Fix:**
+```bash
+touch docs/.nojekyll
+git add docs/.nojekyll
+git commit -m "Add .nojekyll for GitHub Pages"
+git push
+```
+
+**Prevention:** The `docs/.nojekyll` file contains a warning comment explaining why it's critical. **DO NOT DELETE IT!**
+
+### GitHub Pages not updating after push
+
+GitHub Pages can take 2-10 minutes to deploy changes. Check:
+1. The Actions tab in GitHub to see deployment status
+2. Try a hard refresh in your browser (Cmd+Shift+R / Ctrl+Shift+R)
+3. Check the commit history to ensure changes were pushed
+
 ## Contributing
 
 This is a personal project, but feel free to fork it for your own timeline!
