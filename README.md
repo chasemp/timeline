@@ -30,19 +30,26 @@ This project transforms my online history into an interactive timeline, replacin
 - Incremental updates (only fetches new posts)
 - No authentication required
 
-### 4. **Wikipedia Contributions**
+### 4. **HackerNews Comments**
+- Fetched via HackerNews Firebase API
+- User: [chasemp](https://news.ycombinator.com/user?id=chasemp)
+- Incremental updates (only fetches new comments)
+- Includes parent story context and links
+- No authentication required
+
+### 5. **Wikipedia Contributions**
 - Fetched via Wikipedia API
 - User: [Chasemp](https://en.wikipedia.org/wiki/User:Chasemp)
 - Shows edits and page creations
 - No authentication required
 
-### 5. **GitHub Releases**
+### 6. **GitHub Releases**
 - Fetched via GitHub API
 - Organization/User: chasemp
 - Shows project releases and tags
 - No authentication required
 
-### 6. **Readwise Reader**
+### 7. **Readwise Reader**
 - Fetched via Readwise Reader API v3
 - **⚠️ Tag Filtering Required**: Only articles tagged with `classic` OR `pub` will appear on the timeline
   - This is intentional curation - tag articles in Readwise Reader to make them visible
@@ -54,21 +61,21 @@ This project transforms my online history into an interactive timeline, replacin
 ## Architecture
 
 ```
-┌─────────────────────────────────────────────────────────────────┐
-│                         Data Sources                             │
-├────────┬────────┬─────────┬──────────┬──────────┬──────────────┤
-│markdown│Bluesky │Pixelfed │Wikipedia │GitHub    │Readwise      │
-│  .md   │  API   │ Atom    │   API    │  API     │Reader API    │
-└───┬────┴───┬────┴────┬────┴─────┬────┴────┬─────┴──────┬───────┘
-    │        │         │          │         │            │
-    ▼        ▼         ▼          ▼         ▼            ▼
-┌─────────────────────────────────────────────────────────────────┐
-│              Data Fetching Scripts (Node.js + Image Cache)       │
-├────────┬────────┬─────────┬──────────┬──────────┬──────────────┤
-│fetch-  │fetch-  │fetch-   │fetch-    │fetch-    │fetch-readwise│
-│blog    │bluesky │pixelfed │wikipedia │github    │  -reader     │
-│        │ +cache │ +cache  │          │releases  │              │
-└───┬────┴───┬────┴────┬────┴─────┬────┴────┬─────┴──────┬───────┘
+┌───────────────────────────────────────────────────────────────────────┐
+│                           Data Sources                                 │
+├────────┬────────┬─────────┬──────────┬──────────┬──────────┬─────────┤
+│markdown│Bluesky │Pixelfed │HackerNews│Wikipedia │GitHub    │Readwise │
+│  .md   │  API   │ Atom    │   API    │   API    │  API     │Reader   │
+└───┬────┴───┬────┴────┬────┴─────┬────┴─────┬────┴────┬─────┴────┬────┘
+    │        │         │          │          │         │          │
+    ▼        ▼         ▼          ▼          ▼         ▼          ▼
+┌───────────────────────────────────────────────────────────────────────┐
+│               Data Fetching Scripts (Node.js + Image Cache)            │
+├────────┬────────┬─────────┬──────────┬──────────┬──────────┬─────────┤
+│fetch-  │fetch-  │fetch-   │fetch-    │fetch-    │fetch-    │fetch-   │
+│blog    │bluesky │pixelfed │hackernews│wikipedia │github    │readwise │
+│        │ +cache │ +cache  │          │          │releases  │-reader  │
+└───┬────┴───┬────┴────┬────┴─────┬────┴─────┬────┴────┬─────┴────┬────┘
     │        │         │          │         │            │
     └────────┴─────────┴──────────┴─────────┴────────────┘
                                 ▼
@@ -123,6 +130,7 @@ This project transforms my online history into an interactive timeline, replacin
 │   │   ├── fetch-blog.mts          # Fetch blog posts
 │   │   ├── fetch-bluesky.mts       # Fetch Bluesky posts + cache images
 │   │   ├── fetch-pixelfed.mts      # Fetch Pixelfed posts + cache images
+│   │   ├── fetch-hackernews.mts    # Fetch HackerNews comments
 │   │   ├── fetch-wikipedia.mts     # Fetch Wikipedia contributions
 │   │   ├── fetch-github-releases.mts # Fetch GitHub releases
 │   │   ├── fetch-readwise-reader.mts # Fetch Readwise Reader docs
@@ -131,6 +139,7 @@ This project transforms my online history into an interactive timeline, replacin
 │   │   ├── blog.json
 │   │   ├── bluesky.json
 │   │   ├── pixelfed.json
+│   │   ├── hackernews.json
 │   │   ├── wikipedia.json
 │   │   ├── github-releases.json
 │   │   └── readwise.json
@@ -187,6 +196,7 @@ Visit http://localhost:4321 to see the timeline.
 - **`npm run fetch:blog`** - Fetch blog posts only
 - **`npm run fetch:bluesky`** - Fetch Bluesky posts (with image caching)
 - **`npm run fetch:pixelfed`** - Fetch Pixelfed posts (with image caching)
+- **`npm run fetch:hackernews`** - Fetch HackerNews comments
 - **`npm run fetch:wikipedia`** - Fetch Wikipedia contributions
 - **`npm run fetch:github`** - Fetch GitHub releases
 - **`npm run fetch:readwise`** - Fetch Readwise documents
@@ -303,11 +313,12 @@ The workflow (`.github/workflows/fetch-timeline.yml`) runs every 4 hours and:
 1. Fetches new blog posts (from `markdown/` directory)
 2. Fetches new Bluesky posts + caches images (no auth required)
 3. Fetches new Pixelfed posts + caches images (no auth required)
-4. Fetches new Wikipedia contributions (no auth required)
-5. Fetches new GitHub releases (optional auth for higher rate limits)
-6. Fetches new Readwise documents (if `READWISE_TOKEN` provided)
-7. Merges all sources into `timeline.json`
-8. Commits and pushes data + cached images using `GITHUB_TOKEN`
+4. Fetches new HackerNews comments (no auth required)
+5. Fetches new Wikipedia contributions (no auth required)
+6. Fetches new GitHub releases (optional auth for higher rate limits)
+7. Fetches new Readwise documents (if `READWISE_TOKEN` provided)
+8. Merges all sources into `timeline.json`
+9. Commits and pushes data + cached images using `GITHUB_TOKEN`
 
 **Note:** The workflow **only fetches and commits data**. Building and deploying to `/docs` is done locally via `deploy.sh`.
 

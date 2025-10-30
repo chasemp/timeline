@@ -10,6 +10,7 @@ const typeDisplayName = (type: string) => {
     'blog': 'Blog',
     'bluesky': 'Bluesky',
     'pixelfed': 'Pixelfed',
+    'hackernews': 'HackerNews',
     'posts': 'Posts',
     'release': 'Release',
     'wikipedia': 'Contributions',
@@ -119,6 +120,7 @@ const formatShortDate = (timestamp: string) => {
   .dot[data-dot-type="saved"]::after { content: "🔖"; position: absolute; top: -2px; left: -2px; font-size: 16px; opacity: 0; transition: opacity 0.2s; pointer-events: none; }
   .dot[data-dot-type="bluesky"]::after { content: "🦋"; position: absolute; top: -2px; left: -2px; font-size: 16px; opacity: 0; transition: opacity 0.2s; pointer-events: none; }
   .dot[data-dot-type="pixelfed"]::after { content: "📷"; position: absolute; top: -2px; left: -2px; font-size: 16px; opacity: 0; transition: opacity 0.2s; pointer-events: none; }
+  .dot[data-dot-type="hackernews"]::after { content: "💬"; position: absolute; top: -2px; left: -2px; font-size: 16px; opacity: 0; transition: opacity 0.2s; pointer-events: none; }
   .dot[data-dot-type="posts"]::after { content: "🦋"; position: absolute; top: -2px; left: -2px; font-size: 16px; opacity: 0; transition: opacity 0.2s; pointer-events: none; }
   .dot[data-dot-type="release"]::after { content: "🏷️"; position: absolute; top: -2px; left: -2px; font-size: 16px; opacity: 0; transition: opacity 0.2s; pointer-events: none; }
   .dot[data-dot-type="wikipedia"]::after { content: "🌐"; position: absolute; top: -2px; left: -2px; font-size: 16px; opacity: 0; transition: opacity 0.2s; pointer-events: none; }
@@ -128,6 +130,7 @@ const formatShortDate = (timestamp: string) => {
   .dot[data-dot-type="saved"] { background: #7cb342; color: #7cb342; }
   .dot[data-dot-type="bluesky"] { background: #1e88e5; color: #1e88e5; }
   .dot[data-dot-type="pixelfed"] { background: #e91e63; color: #e91e63; }
+  .dot[data-dot-type="hackernews"] { background: #ff6600; color: #ff6600; }
   .dot[data-dot-type="posts"] { background: #42a5f5; color: #42a5f5; }
   .dot[data-dot-type="release"] { background: #fb8c00; color: #fb8c00; }
   .dot[data-dot-type="wikipedia"] { background: #636466; color: #636466; }
@@ -586,6 +589,7 @@ const formatShortDate = (timestamp: string) => {
       'saved': '🔖',
       'bluesky': '🦋',
       'pixelfed': '📷',
+      'hackernews': '💬',
       'posts': '🦋',
       'release': '🏷️',
       'wikipedia': '🌐',
@@ -596,6 +600,7 @@ const formatShortDate = (timestamp: string) => {
       'saved': 'Article Read',
       'bluesky': 'Posts',
       'pixelfed': 'Photo',
+      'hackernews': 'Comment',
       'posts': 'Posts',
       'wikipedia': 'Contributions',
       'contributions': 'Contributions'
