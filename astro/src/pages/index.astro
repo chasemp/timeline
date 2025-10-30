@@ -365,10 +365,51 @@ const allHashtags = Object.entries(hashtagCounts)
   @media (max-width: 980px) {
     main { display: block; }
     .timeline-content { grid-column: auto; }
-    .panel { position: fixed; inset: auto 0 0 0; height: 80dvh; border-radius: 20px 20px 0 0; z-index: 100; transform: translateY(100%); transition: transform 0.3s ease-out; }
-    .panel.mobile-open { transform: translateY(0); }
+    
+    /* On mobile, show the panel at top with intro visible by default */
+    .panel { 
+      position: static; 
+      height: auto; 
+      margin-bottom: 24px;
+      border-radius: 12px;
+      max-width: 100%;
+      box-sizing: border-box;
+    }
+    
+    /* When opening detail content, use fixed drawer */
+    .panel.mobile-detail-open { 
+      position: fixed; 
+      inset: auto 0 0 0; 
+      height: 80dvh; 
+      border-radius: 20px 20px 0 0; 
+      z-index: 100; 
+      margin-bottom: 0;
+      overflow-y: auto;
+      width: 100%;
+      box-sizing: border-box;
+    }
+    
+    /* Ensure panel content doesn't overflow on mobile */
+    #panel-content {
+      max-width: 100%;
+      overflow-wrap: break-word;
+      word-wrap: break-word;
+    }
+    
+    #panel-content img,
+    #panel-content iframe,
+    #panel-content video {
+      max-width: 100% !important;
+      height: auto !important;
+    }
+    
     .backdrop:not([hidden]) { display: block; }
     .swipe-indicator { 
+      display: none; /* Hidden by default */
+    }
+    
+    /* Only show swipe indicator when detail is open */
+    .panel.mobile-detail-open .swipe-indicator {
       display: block; 
       width: 40px; 
       height: 4px; 
@@ -376,6 +417,11 @@ const allHashtags = Object.entries(hashtagCounts)
       border-radius: 2px; 
       margin: 12px auto 8px; 
       opacity: 0.6; 
+    }
+    
+    /* Hide close button until detail is opened */
+    .panel:not(.mobile-detail-open) #panel-close-left {
+      display: none;
     }
   }
   

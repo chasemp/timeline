@@ -309,10 +309,10 @@ const formatShortDate = (timestamp: string) => {
     const entry = (window as any).__TIMELINE__.find((i: any) => i.id === id);
     if (!entry) return;
     
-    // Mobile: show backdrop and lock scroll
+    // Mobile: show backdrop and lock scroll, switch to drawer mode
     if (isMobile()) {
       backdrop.removeAttribute('hidden');
-      panel.classList.add('mobile-open');
+      panel.classList.add('mobile-detail-open');
       closeBtn.removeAttribute('hidden');
       swipeIndicator.removeAttribute('hidden');
       lockScroll(true);
@@ -484,8 +484,9 @@ const formatShortDate = (timestamp: string) => {
   function closePanel() {
     if (isMobile()) {
       backdrop.setAttribute('hidden', '');
-      panel.classList.remove('mobile-open');
+      panel.classList.remove('mobile-detail-open');
       swipeIndicator.setAttribute('hidden', '');
+      closeBtn.setAttribute('hidden', '');
       lockScroll(false);
     }
     
@@ -536,7 +537,7 @@ const formatShortDate = (timestamp: string) => {
   closeBtn.addEventListener('click', closePanel);
   backdrop.addEventListener('click', closePanel);
   document.addEventListener('keydown', (e) => { 
-    if (e.key === 'Escape' && (isMobile() ? panel.classList.contains('mobile-open') : panelContent.innerHTML !== introHTML)) {
+    if (e.key === 'Escape' && (isMobile() ? panel.classList.contains('mobile-detail-open') : panelContent.innerHTML !== introHTML)) {
       closePanel();
     }
   });
@@ -547,7 +548,7 @@ const formatShortDate = (timestamp: string) => {
   let isSwipeGesture = false;
 
   panel.addEventListener('touchstart', (e) => {
-    if (!isMobile() || !panel.classList.contains('mobile-open')) return;
+    if (!isMobile() || !panel.classList.contains('mobile-detail-open')) return;
     
     touchStartY = e.touches[0].clientY;
     touchStartTime = Date.now();
@@ -555,7 +556,7 @@ const formatShortDate = (timestamp: string) => {
   }, { passive: true });
 
   panel.addEventListener('touchmove', (e) => {
-    if (!isMobile() || !panel.classList.contains('mobile-open')) return;
+    if (!isMobile() || !panel.classList.contains('mobile-detail-open')) return;
     
     const touchCurrentY = e.touches[0].clientY;
     const deltaY = touchCurrentY - touchStartY;
@@ -571,7 +572,7 @@ const formatShortDate = (timestamp: string) => {
   }, { passive: true });
 
   panel.addEventListener('touchend', (e) => {
-    if (!isMobile() || !panel.classList.contains('mobile-open')) return;
+    if (!isMobile() || !panel.classList.contains('mobile-detail-open')) return;
     
     const touchEndY = e.changedTouches[0].clientY;
     const deltaY = touchEndY - touchStartY;
