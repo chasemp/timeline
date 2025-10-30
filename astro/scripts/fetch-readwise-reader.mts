@@ -21,9 +21,14 @@ const READWISE_TAG_FILTER = process.env.READWISE_TAG_FILTER || ''; // Optional: 
 const READWISE_FULL_FETCH = process.env.READWISE_FULL_FETCH === 'true'; // Set to 'true' to fetch all history
 const OUTPUT_FILE = join(__dirname, '../data/sources/readwise.json');
 
-// Tags that determine if an article should be included in the timeline
+// ⚠️ INTENTIONAL TAG FILTERING - DO NOT REMOVE ⚠️
+// Only articles tagged with 'classic' or 'pub' in Readwise Reader will appear on the timeline.
+// This is by design to curate which saved articles are publicly visible.
+// 
+// INCLUDE_TAGS: Articles MUST have one of these tags to be fetched and added to timeline
 const INCLUDE_TAGS = ['classic', 'pub'];
-// Tags that should not be displayed on the timeline
+// HIDDEN_TAGS: These tags are used for filtering but won't be displayed as hashtags on timeline cards
+// (e.g., 'pub' is used to mark articles for publishing but doesn't need to be shown)
 const HIDDEN_TAGS = ['pub'];
 
 if (!READWISE_TOKEN) {
@@ -213,6 +218,10 @@ function convertToTimelineEntry(doc: ReaderDocument): TimelineEntry {
 /**
  * Filter documents by tag if READWISE_TAG_FILTER is set
  * If not set, filters by INCLUDE_TAGS (classic, pub)
+ * 
+ * ⚠️ INTENTIONAL BEHAVIOR: Only articles with specific tags appear on the timeline.
+ * This is NOT a bug - it's a curation feature to control what's publicly visible.
+ * To add an article to the timeline, tag it with 'classic' or 'pub' in Readwise Reader.
  */
 function filterByTag(documents: ReaderDocument[]): ReaderDocument[] {
   // Use READWISE_TAG_FILTER if set (for backward compatibility)
