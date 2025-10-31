@@ -14,7 +14,8 @@ const typeDisplayName = (type: string) => {
     'posts': 'Posts',
     'release': 'Release',
     'wikipedia': 'Contributions',
-    'contributions': 'Contributions'
+    'contributions': 'Contributions',
+    'linkedin': 'LinkedIn'
   };
   return displayNames[type] || type.toUpperCase();
 };
@@ -76,7 +77,7 @@ const formatShortDate = (timestamp: string) => {
           )}
           {item.title && <div class="title">{item.title}</div>}
           {item.summary && <p class="summary">{item.summary}</p>}
-          {(item.type === 'saved' && item.metadata?.site_name) && (
+          {(['saved', 'linkedin'].includes(item.type) && item.metadata?.site_name) && (
             <div class="card-metadata">
               <span class="metadata-item">📰 {item.metadata.site_name}</span>
             </div>
@@ -125,6 +126,7 @@ const formatShortDate = (timestamp: string) => {
   .dot[data-dot-type="release"]::after { content: "🏷️"; position: absolute; top: -2px; left: -2px; font-size: 16px; opacity: 0; transition: opacity 0.2s; pointer-events: none; }
   .dot[data-dot-type="wikipedia"]::after { content: "🌐"; position: absolute; top: -2px; left: -2px; font-size: 16px; opacity: 0; transition: opacity 0.2s; pointer-events: none; }
   .dot[data-dot-type="contributions"]::after { content: "🌐"; position: absolute; top: -2px; left: -2px; font-size: 16px; opacity: 0; transition: opacity 0.2s; pointer-events: none; }
+  .dot[data-dot-type="linkedin"]::after { content: "💼"; position: absolute; top: -2px; left: -2px; font-size: 16px; opacity: 0; transition: opacity 0.2s; pointer-events: none; }
   .dot:hover::after { opacity: 1; }
   .dot[data-dot-type="blog"] { background: #5d4037; color: #5d4037; }
   .dot[data-dot-type="saved"] { background: #7cb342; color: #7cb342; }
@@ -135,6 +137,7 @@ const formatShortDate = (timestamp: string) => {
   .dot[data-dot-type="release"] { background: #fb8c00; color: #fb8c00; }
   .dot[data-dot-type="wikipedia"] { background: #636466; color: #636466; }
   .dot[data-dot-type="contributions"] { background: #9c27b0; color: #9c27b0; }
+  .dot[data-dot-type="linkedin"] { background: #0a66c2; color: #0a66c2; }
   
   /* Today marker styles */
   .today-marker { margin-bottom: 24px; }
@@ -323,7 +326,16 @@ const formatShortDate = (timestamp: string) => {
     }
 
     // Set title to metadata (type and timestamp)
-    const typeDisplayName = entry.type === 'saved' ? 'Article Read' : entry.type.toUpperCase();
+    const panelTypeDisplay: Record<string, string> = {
+      'saved': 'Article Read',
+      'linkedin': 'LinkedIn',
+      'bluesky': 'Posts',
+      'pixelfed': 'Photo',
+      'hackernews': 'Comment',
+      'wikipedia': 'Contributions',
+      'contributions': 'Contributions'
+    };
+    const typeDisplayName = panelTypeDisplay[entry.type] || entry.type.toUpperCase();
     const shortDate = formatShortDate(entry.timestamp);
     panelTitleText.textContent = `${typeDisplayName} · ${shortDate}`;
     
@@ -348,7 +360,7 @@ const formatShortDate = (timestamp: string) => {
     } else {
       // Build metadata string for saved articles
       let metadataHtml = '';
-      if (entry.type === 'saved') {
+      if (entry.type === 'saved' || entry.type === 'linkedin') {
         const metadataParts = [];
         if (entry.metadata?.site_name) metadataParts.push(`📰 ${entry.metadata.site_name}`);
         if (entry.author) metadataParts.push(`✍️ ${entry.author}`);
@@ -642,7 +654,8 @@ const formatShortDate = (timestamp: string) => {
       'posts': '🦋',
       'release': '🏷️',
       'wikipedia': '🌐',
-      'contributions': '🌐'
+      'contributions': '🌐',
+      'linkedin': '💼'
     };
     
     const typeDisplayNames: Record<string, string> = {
@@ -652,7 +665,8 @@ const formatShortDate = (timestamp: string) => {
       'hackernews': 'Comment',
       'posts': 'Posts',
       'wikipedia': 'Contributions',
-      'contributions': 'Contributions'
+      'contributions': 'Contributions',
+      'linkedin': 'LinkedIn'
     };
     
     const emoji = emojiMap[type] || '';
@@ -700,6 +714,7 @@ const formatShortDate = (timestamp: string) => {
   .dot[data-dot-type="release"]::after { content: "🏷️"; position: absolute; top: -2px; left: -2px; font-size: 16px; opacity: 0; transition: opacity 0.2s; pointer-events: none; }
   .dot[data-dot-type="wikipedia"]::after { content: "🌐"; position: absolute; top: -2px; left: -2px; font-size: 16px; opacity: 0; transition: opacity 0.2s; pointer-events: none; }
   .dot[data-dot-type="contributions"]::after { content: "🌐"; position: absolute; top: -2px; left: -2px; font-size: 16px; opacity: 0; transition: opacity 0.2s; pointer-events: none; }
+  .dot[data-dot-type="linkedin"]::after { content: "💼"; position: absolute; top: -2px; left: -2px; font-size: 16px; opacity: 0; transition: opacity 0.2s; pointer-events: none; }
   .dot:hover::after { opacity: 1; }
   .dot[data-dot-type="blog"] { background: #5d4037; color: #5d4037; }
   .dot[data-dot-type="saved"] { background: #7cb342; color: #7cb342; }
@@ -710,6 +725,7 @@ const formatShortDate = (timestamp: string) => {
   .dot[data-dot-type="release"] { background: #fb8c00; color: #fb8c00; }
   .dot[data-dot-type="wikipedia"] { background: #636466; color: #636466; }
   .dot[data-dot-type="contributions"] { background: #9c27b0; color: #9c27b0; }
+  .dot[data-dot-type="linkedin"] { background: #0a66c2; color: #0a66c2; }
   
   /* Today marker styles */
   .today-marker { margin-bottom: 24px; }
