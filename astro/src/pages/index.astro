@@ -93,7 +93,8 @@ const itemsWithHashtags = items.map(item => {
     'wikipedia': '#wikipedia',
     'release': '#release',
     'pixelfed': '#pixelfed',
-    'hackernews': '#hackernews'
+    'hackernews': '#hackernews',
+    'linkedin': '#linkedin'
   };
   const typeTag = typeLabels[item.type] ? [typeLabels[item.type]] : [];
   
@@ -182,6 +183,7 @@ const allHashtags = Object.entries(hashtagCounts)
         </div>
         <div class="filters" role="group" aria-label="Content types">
           <label title="Bookmarks from Readwise"><input type="checkbox" name="type" value="saved" checked> Read</label>
+          <label title="LinkedIn posts and shares"><input type="checkbox" name="type" value="linkedin" checked> LinkedIn</label>
           <label title="Technical writing and essays"><input type="checkbox" name="type" value="blog" checked> Written</label>
           <label title="Bluesky, Pixelfed, and HackerNews posts/comments"><input type="checkbox" name="type" value="bluesky,pixelfed,hackernews" checked> Posted</label>
           <label title="GitHub project releases and tags"><input type="checkbox" name="type" value="release" checked> Released</label>
@@ -210,6 +212,7 @@ const allHashtags = Object.entries(hashtagCounts)
         <h4>Content Types</h4>
         <ul class="legend">
           <li><span class="legend-dot" data-dot-type="saved"></span> <strong>Read</strong> — Bookmarks from Readwise</li>
+          <li><span class="legend-dot" data-dot-type="linkedin"></span> <strong>LinkedIn</strong> — LinkedIn posts and articles</li>
           <li><span class="legend-dot" data-dot-type="blog"></span> <strong>Written</strong> — Technical writing and essays</li>
           <li><span class="legend-dot" data-dot-type="bluesky"></span> <strong>Posted</strong> — Bluesky, Pixelfed, HackerNews</li>
           <li><span class="legend-dot" data-dot-type="pixelfed"></span> <strong>Posted</strong> — Bluesky, Pixelfed, HackerNews</li>
@@ -356,6 +359,7 @@ const allHashtags = Object.entries(hashtagCounts)
   .legend-dot { width: 12px; height: 12px; border-radius: 50%; border: 1px solid rgba(0,0,0,0.1); flex-shrink: 0; }
   .legend-dot[data-dot-type="blog"] { background: #5d4037; }
   .legend-dot[data-dot-type="saved"] { background: #7cb342; }
+  .legend-dot[data-dot-type="linkedin"] { background: #0a66c2; }
   .legend-dot[data-dot-type="bluesky"] { background: #1e88e5; }
   .legend-dot[data-dot-type="pixelfed"] { background: #e91e63; }
   .legend-dot[data-dot-type="hackernews"] { background: #ff6600; }
