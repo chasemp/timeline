@@ -17,10 +17,27 @@ function canonical(entry: any) {
   return entry.canonical_url || entry.url || entry.id;
 }
 
+function detectType(entry: any) {
+  const baseType = entry.type || 'item';
+  const rawSiteName = entry.metadata?.site_name;
+  const rawUrl = entry.url || entry.canonical_url || entry.id || '';
+  const siteName = typeof rawSiteName === 'string' ? rawSiteName.toLowerCase() : '';
+  const url = typeof rawUrl === 'string' ? rawUrl.toLowerCase() : '';
+
+  if (baseType === 'saved') {
+    const isLinkedIn = siteName.includes('linkedin') || url.includes('linkedin.com') || url.includes('lnkd.in');
+    if (isLinkedIn) {
+      return 'linkedin';
+    }
+  }
+
+  return baseType;
+}
+
 function normalize(entry: any) {
   return {
     id: stableId(entry),
-    type: entry.type || 'item',
+    type: detectType(entry),
     source: entry.source || null,
     timestamp: entry.timestamp || entry.date || new Date().toISOString(),
     title: entry.title || '',
