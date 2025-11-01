@@ -3,19 +3,44 @@
     "title": "Chase Pettet's Timeline",
     "description": "A timeline of my public online activity",
     "site": "https://timeline.523.life",
-    "total_items": 151,
-    "generated_at": "2025-10-30T15:50:44.462Z",
+    "total_items": 152,
+    "generated_at": "2025-11-01T01:58:31.265Z",
     "types": [
+      "pixelfed",
       "saved",
       "hackernews",
-      "pixelfed",
       "blog",
       "bluesky",
+      "linkedin",
       "release",
       "wikipedia"
     ]
   },
   "items": [
+    {
+      "id": "pixelfed:https://gram.social/p/chase523/889725078347773584",
+      "type": "pixelfed",
+      "source": null,
+      "timestamp": "2025-10-31T04:09:48.000Z",
+      "title": "",
+      "summary": "",
+      "url": "https://gram.social/p/chase523/889725078347773584",
+      "canonical_url": "https://gram.social/p/chase523/889725078347773584",
+      "author": null,
+      "tags": [],
+      "media": {
+        "type": "image",
+        "images": [
+          "/assets/cached-images/pixelfed/e015c4aaaa67ed046e5277557b49c85f.png"
+        ],
+        "alt": ""
+      },
+      "content_html": "<div class=\"media-gallery\">\n                                                    <img class=\"media-item\" src=\"https://gram.social/storage/m/_v2/888529897498449747/0c2c69eb8-6377a8/e7qAqM8g85Fe/Y5WNm5P6MHz5GOfquqrG4Lh7i1RaABi00upy3g9h.png\" alt=\"\">\n                                            </div>\n                    <p style=\"padding:10px;\"></p>",
+      "content_text": null,
+      "embed_uri": null,
+      "embed_cid": null,
+      "metadata": null
+    },
     {
       "id": "readwise:01k8tsyvcjyg82bpnsxy68625p",
       "type": "saved",
@@ -592,7 +617,7 @@
     },
     {
       "id": "readwise:01k86nhzxfw8tn00pgcw3gddta",
-      "type": "saved",
+      "type": "linkedin",
       "source": null,
       "timestamp": "2025-10-22T19:15:27.791000+00:00",
       "title": "Nag Medida’s Post",
@@ -677,7 +702,7 @@
     },
     {
       "id": "readwise:01k83bajsy1qgtwn244t5bspp0",
-      "type": "saved",
+      "type": "linkedin",
       "source": null,
       "timestamp": "2025-10-21T12:18:55.934000+00:00",
       "title": "Allen Holub’s Post",
@@ -787,7 +812,7 @@
     },
     {
       "id": "readwise:01k8165z12jg1bn1hj7m7jgdss",
-      "type": "saved",
+      "type": "linkedin",
       "source": null,
       "timestamp": "2025-10-20T16:10:32.866000+00:00",
       "title": "Thank you for subscribing to haKCer Academy",
@@ -815,7 +840,7 @@
     },
     {
       "id": "readwise:01k6qm1983a2acew6wvcmw7w9e",
-      "type": "saved",
+      "type": "linkedin",
       "source": null,
       "timestamp": "2025-10-20T13:54:58.187000+00:00",
       "title": "Richard Seiersen’s Post",
@@ -953,7 +978,7 @@
     },
     {
       "id": "readwise:01k7yfqfkmvdzdfz6zzfy612c3",
-      "type": "saved",
+      "type": "linkedin",
       "source": null,
       "timestamp": "2025-10-19T14:59:40.788000+00:00",
       "title": "Bryon Kroger’s Post",
@@ -1205,7 +1230,7 @@
     },
     {
       "id": "readwise:01k7tqj8vyfq7dfvagrkzg5e4x",
-      "type": "saved",
+      "type": "linkedin",
       "source": null,
       "timestamp": "2025-10-18T03:59:40.926000+00:00",
       "title": "Arshan Dabirsiaghi’s Post",
@@ -1505,7 +1530,7 @@
     },
     {
       "id": "readwise:01k7hdeehswdthftnt017pa55k",
-      "type": "saved",
+      "type": "linkedin",
       "source": null,
       "timestamp": "2025-10-14T13:09:40.025000+00:00",
       "title": "Brandon Wiseman’s Post",
@@ -1591,7 +1616,7 @@
     },
     {
       "id": "readwise:01k74n7cmjg3tyst02ek3wdypp",
-      "type": "saved",
+      "type": "linkedin",
       "source": null,
       "timestamp": "2025-10-09T14:15:29.682000+00:00",
       "title": "John Cutler’s Post",
@@ -1779,7 +1804,7 @@
     },
     {
       "id": "readwise:01jxth32m8s6prktn2rsewfm3v",
-      "type": "saved",
+      "type": "linkedin",
       "source": null,
       "timestamp": "2025-06-15T19:29:33.318000+00:00",
       "title": "Activity isn’t the same as progress",
