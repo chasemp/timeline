@@ -1,5 +1,283 @@
 [
   {
+    "id": "readwise:01k935nbf21051p9ywkhkpvhp8",
+    "type": "saved",
+    "timestamp": "2025-11-02T20:55:39.234000+00:00",
+    "title": "Festina lente: A Roman emperor’s guide to getting stuff done",
+    "summary": "The article explores how the Roman emperor Augustus practiced \"festina lente,\" meaning \"make haste slowly,\" to achieve success through thoughtful diligence and balance. By avoiding procrastination, setting reasonable deadlines, and making time for creativity, individuals can apply this principle to improve decision-making and problem-solving in their personal and professional lives. Augustus' approach of balancing speed with careful planning serves as a timeless strategy for achieving goals effectively.",
+    "url": "https://bigthink.com/the-learning-curve/festina-lente/",
+    "canonical_url": "https://bigthink.com/the-learning-curve/festina-lente/",
+    "author": "Kevin Dickinson",
+    "tags": [
+      "classic"
+    ],
+    "metadata": {
+      "word_count": 1762,
+      "reading_time": "9 min read",
+      "site_name": "Big Think",
+      "cover_image": "https://bigthink.com/wp-content/uploads/2022/11/BT_thumb_template-54.jpg?resize=1200,630",
+      "reading_progress": 0.43471706882996286,
+      "last_fetched": "2025-11-03T22:54:21.635Z"
+    }
+  },
+  {
+    "id": "readwise:01k9350m954rgnhwm8xp7q82vd",
+    "type": "saved",
+    "timestamp": "2025-11-02T20:44:20.133000+00:00",
+    "title": null,
+    "url": null,
+    "canonical_url": "https://read.readwise.io/read/01k9350m954rgnhwm8xp7q82vd",
+    "tags": [
+      "fodder",
+      "classic"
+    ],
+    "metadata": {
+      "last_fetched": "2025-11-03T22:54:21.635Z"
+    }
+  },
+  {
+    "id": "readwise:01k933c5qgbc84653n33vjzjx9",
+    "type": "saved",
+    "timestamp": "2025-11-02T20:15:41.296000+00:00",
+    "title": "Autodesk’s John Walker explained HP and IBM in 1991",
+    "summary": "Big companies like HP and IBM focus on short-term margins and cut investment when profits dip. Cutting R&D and marketing to please Wall Street leaves firms vulnerable to smarter, risk-taking competitors. Autodesk warns that obsessing over accounting metrics can kill future growth and innovation.",
+    "url": "https://www.cringely.com/2015/06/03/autodesks-john-walker-explained-hp-and-ibm-in-1991/",
+    "canonical_url": "https://www.cringely.com/2015/06/03/autodesks-john-walker-explained-hp-and-ibm-in-1991/",
+    "author": "Robert X. Cringely",
+    "tags": [
+      "tech",
+      "fodder",
+      "classic"
+    ],
+    "metadata": {
+      "word_count": 3073,
+      "reading_time": "16 min read",
+      "site_name": "I, Cringely - on technology",
+      "reading_progress": 1,
+      "last_fetched": "2025-11-03T22:54:21.635Z"
+    }
+  },
+  {
+    "id": "readwise:01k932xt6t7ae3bs54a31jwqyr",
+    "type": "saved",
+    "timestamp": "2025-11-02T20:07:50.744000+00:00",
+    "title": "The Hacker's Diet",
+    "summary": "The Hacker's Diet is a practical guide for losing weight and maintaining it, aimed at busy professionals like engineers and programmers. It offers both computer-based tools and paper alternatives to help users track their weight and diet effectively. The book is available in multiple formats, including EPUB and PDF, making it accessible for various reading devices.",
+    "url": "https://www.fourmilab.ch/hackdiet/",
+    "canonical_url": "https://www.fourmilab.ch/hackdiet/",
+    "author": "John Walker",
+    "tags": [
+      "fodder",
+      "classic"
+    ],
+    "metadata": {
+      "word_count": 1263,
+      "reading_time": "7 min read",
+      "site_name": "fourmilab.ch",
+      "last_fetched": "2025-11-03T22:54:21.635Z"
+    }
+  },
+  {
+    "id": "readwise:01k928wmbrh6faj21xdfng39y7",
+    "type": "saved",
+    "timestamp": "2025-11-02T12:32:49.016000+00:00",
+    "title": "The New Calculus of AI-based Coding",
+    "summary": "The author’s team uses AI agents to write most code, with humans reviewing every line.  \nTo keep quality at 10x velocity they must speed up testing, deployment, and coordination to catch and revert bugs quickly.  \nAgentic development can lower costs for stronger infrastructure, but the whole development lifecycle must be redesigned to succeed.",
+    "url": "https://blog.joemag.dev/2025/10/the-new-calculus-of-ai-based-coding.html?m=1",
+    "canonical_url": "https://blog.joemag.dev/2025/10/the-new-calculus-of-ai-based-coding.html?m=1",
+    "author": "joemag.dev",
+    "tags": [
+      "fodder",
+      "software"
+    ],
+    "metadata": {
+      "word_count": 2184,
+      "reading_time": "11 min read",
+      "site_name": "joemag.dev",
+      "cover_image": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg0Ko_HfgsgHZCIIbQddBTTVrGcFC2QEu7h8UJDmFaGqhFQ_qJzIQivqwT5RwSHKehkNkRwqpCbgPcPJFYDhoasKRlgO7ulFZfqFM9mXIjdqHyYjc7Z4A9NsA6rE735nuWbVpi192DzFcJqK92sHVHptZHh36-KxbO8yPUSA2E9KA9sjR-DgaRzypvZqQ0/w1200-h630-p-k-no-nu/Screenshot%202025-10-22%20at%206.38.56%E2%80%AFPM.png",
+      "reading_progress": 0.9815895131844721,
+      "last_fetched": "2025-11-03T22:54:21.635Z"
+    }
+  },
+  {
+    "id": "readwise:01k8tyy44d5scbebjbbn9c6w97",
+    "type": "saved",
+    "timestamp": "2025-11-01T21:43:44.198000+00:00",
+    "title": "In Praise of Slow Software Engineering",
+    "summary": "Software should be built at the right tempo, not the fastest possible pace. Slow engineering means patience, clarity, and care so systems and teams stay reliable and humane. Rushing trades long-term safety and understanding for short-term output.",
+    "url": "https://russmiles.substack.com/p/in-praise-of-slow-software-engineering",
+    "canonical_url": "https://russmiles.substack.com/p/in-praise-of-slow-software-engineering",
+    "author": "Russ Miles",
+    "tags": [
+      "fodder",
+      "software"
+    ],
+    "metadata": {
+      "word_count": 1688,
+      "reading_time": "9 min read",
+      "site_name": "A Space to Think: Notes on Software Development",
+      "cover_image": "https://substackcdn.com/image/fetch/$s_!DSuu!,w_1200,h_600,c_fill,f_jpg,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F386428a1-9461-4e8f-979a-ad01557460fb_1024x1024.png",
+      "reading_progress": 0.979453900899685,
+      "last_fetched": "2025-11-03T22:54:21.635Z"
+    }
+  },
+  {
+    "id": "readwise:01k905qtnxhjqgngvspsp8vh77",
+    "type": "saved",
+    "timestamp": "2025-11-01T16:59:17.054000+00:00",
+    "title": "Security Brutalism Fundamental Controls",
+    "summary": "Security Brutalism focuses on simple, practical controls that make systems resilient. Strong identity, data protection, asset visibility, patching, segmentation, zero trust, monitoring, and rehearsed response keep attackers out and operations running. The aim is not perfection but readiness to survive, adapt, and continue after failures.",
+    "url": "https://securitybrutalist.com/fundamental",
+    "canonical_url": "https://securitybrutalist.com/fundamental",
+    "author": "THE SECURITY BRUTALIST",
+    "tags": [
+      "sec",
+      "tech",
+      "fodder",
+      "prodsec"
+    ],
+    "metadata": {
+      "word_count": 419,
+      "reading_time": "3 min read",
+      "site_name": "The Security Brutalist",
+      "cover_image": "http://securitybrutalist.com/brutalist-black.png",
+      "reading_progress": 1,
+      "last_fetched": "2025-11-03T22:54:21.635Z"
+    }
+  },
+  {
+    "id": "readwise:01k8w7ctxgxsx1f1q08qb2hcn4",
+    "type": "saved",
+    "timestamp": "2025-10-31T04:11:16.272000+00:00",
+    "title": null,
+    "url": null,
+    "canonical_url": "https://read.readwise.io/read/01k8w7ctxgxsx1f1q08qb2hcn4",
+    "tags": [
+      "sec",
+      "tech",
+      "prodsec"
+    ],
+    "metadata": {
+      "last_fetched": "2025-11-03T22:54:21.635Z"
+    }
+  },
+  {
+    "id": "readwise:01k8vpqznxz3rz4vkahjye5yr7",
+    "type": "saved",
+    "timestamp": "2025-10-30T23:20:15.805000+00:00",
+    "title": "How do we tell truths that might hurt?",
+    "summary": "Sometimes we discover uncomfortable truths that we must tell even though doing so brings personal and professional risk. Computing science often stays silent and avoids hard truths, harming its integrity and progress. Many common tools and languages and sloppy practices cripple thinking and endanger reliable software.",
+    "url": "https://www.cs.virginia.edu/~evans/cs655/readings/ewd498.html?utm_source=tldrsec.com&utm_medium=newsletter&utm_campaign=tl-dr-sec-270-apt-attack-simulation-aws-phishing-7-security-flywheels&_bhlid=799473cc3c4e3722f2581752c0b6ecd88ed12c41",
+    "canonical_url": "https://www.cs.virginia.edu/~evans/cs655/readings/ewd498.html?utm_source=tldrsec.com&utm_medium=newsletter&utm_campaign=tl-dr-sec-270-apt-attack-simulation-aws-phishing-7-security-flywheels&_bhlid=799473cc3c4e3722f2581752c0b6ecd88ed12c41",
+    "author": "virginia.edu",
+    "tags": [
+      "fodder",
+      "classic",
+      "software"
+    ],
+    "metadata": {
+      "word_count": 729,
+      "reading_time": "4 min read",
+      "site_name": "virginia.edu",
+      "reading_progress": 1,
+      "last_fetched": "2025-11-03T22:54:21.635Z"
+    }
+  },
+  {
+    "id": "readwise:01k8vpj37kemeht1qfnadevk1w",
+    "type": "saved",
+    "timestamp": "2025-10-30T23:17:02.835000+00:00",
+    "title": null,
+    "url": null,
+    "canonical_url": "https://read.readwise.io/read/01k8vpj37kemeht1qfnadevk1w",
+    "tags": [
+      "sec",
+      "tool"
+    ],
+    "metadata": {
+      "last_fetched": "2025-11-03T22:54:21.635Z"
+    }
+  },
+  {
+    "id": "readwise:01k8vpgh1ek7cv03r6rpsw2gwx",
+    "type": "saved",
+    "timestamp": "2025-10-30T23:16:11.438000+00:00",
+    "title": null,
+    "url": null,
+    "canonical_url": "https://read.readwise.io/read/01k8vpgh1ek7cv03r6rpsw2gwx",
+    "tags": [
+      "sec",
+      "tool"
+    ],
+    "metadata": {
+      "last_fetched": "2025-11-03T22:54:21.635Z"
+    }
+  },
+  {
+    "id": "readwise:01k8vp4bgh98es8whdnmtd2zys",
+    "type": "saved",
+    "timestamp": "2025-10-30T23:09:32.561000+00:00",
+    "title": "Investigation Updates and Community Call to Action",
+    "summary": "Safe{Wallet} is investigating a sophisticated state-sponsored cyber attack that occurred on February 21, 2025, with help from Mandiant, a cybersecurity firm. The attack compromised a developer's laptop, allowing the attackers to bypass security measures and access sensitive information. The Safe{Wallet} team is working to restore services and enhance security, while urging the community to improve transaction verification processes to prevent future incidents.",
+    "url": "https://x.com/safe/status/1897663514975649938/?rw_tt_thread=True",
+    "canonical_url": "https://x.com/safe/status/1897663514975649938/?rw_tt_thread=True",
+    "author": "Safe.eth",
+    "tags": [
+      "sec",
+      "web3"
+    ],
+    "metadata": {
+      "word_count": 991,
+      "reading_time": "5 min read",
+      "site_name": "X (formerly Twitter)",
+      "cover_image": "https://pbs.twimg.com/profile_images/1643941027898613760/gyhYEOCE.jpg",
+      "reading_progress": 0.9541502489036752,
+      "last_fetched": "2025-11-03T22:54:21.635Z"
+    }
+  },
+  {
+    "id": "readwise:01k8vnxt94203dqymsbqqtjtgs",
+    "type": "saved",
+    "timestamp": "2025-10-30T23:05:58.308000+00:00",
+    "title": "Turning the Security Flywheel",
+    "summary": "The text discusses how to enhance security programs using a flywheel approach, focusing on reducing control costs and embedding effective controls into business systems. It emphasizes the importance of using threat intelligence to drive security improvements and create demand for targeted information within the organization. Finally, it highlights the need for continuous monitoring and collaboration across teams to sustain effective controls and foster a culture of security.",
+    "url": "https://www.philvenables.com/post/turning-the-security-flywheel?utm_source=tldrsec.com&utm_medium=newsletter&utm_campaign=tl-dr-sec-270-apt-attack-simulation-aws-phishing-7-security-flywheels&_bhlid=42232c4164ecc667febcaa76c7fc34d6d7887110",
+    "canonical_url": "https://www.philvenables.com/post/turning-the-security-flywheel?utm_source=tldrsec.com&utm_medium=newsletter&utm_campaign=tl-dr-sec-270-apt-attack-simulation-aws-phishing-7-security-flywheels&_bhlid=42232c4164ecc667febcaa76c7fc34d6d7887110",
+    "author": "Phil Venables",
+    "tags": [
+      "sec",
+      "fodder",
+      "classic"
+    ],
+    "metadata": {
+      "word_count": 2424,
+      "reading_time": "13 min read",
+      "site_name": "Risk and Cyber ",
+      "last_fetched": "2025-11-03T22:54:21.635Z"
+    }
+  },
+  {
+    "id": "readwise:01k8vmkyy81x1c5cc9j8dpcwvg",
+    "type": "saved",
+    "timestamp": "2025-10-30T22:43:06.824000+00:00",
+    "title": "What is Web5?",
+    "summary": "Web5 is about giving people autonomous control of authentic data and relationships. Authentic means verifiable provenance and integrity. A set of decentralized technologies (DIDs, VCs, DWNs, ZKPs, etc.) enable this goal.",
+    "url": "https://rufftimo.medium.com/what-is-web5-fb34f48d0b1b",
+    "canonical_url": "https://rufftimo.medium.com/what-is-web5-fb34f48d0b1b",
+    "author": "Timothy Ruff",
+    "tags": [
+      "web5"
+    ],
+    "metadata": {
+      "word_count": 1384,
+      "reading_time": "7 min read",
+      "site_name": "Medium",
+      "cover_image": "https://miro.medium.com/v2/1*kFrc4tBFM_tCis-2Ic87WA.png",
+      "reading_progress": 1,
+      "last_fetched": "2025-11-03T22:54:21.635Z"
+    }
+  },
+  {
     "id": "readwise:01k8tsyvcjyg82bpnsxy68625p",
     "type": "saved",
     "timestamp": "2025-10-30T14:57:12.082000+00:00",
@@ -16,7 +294,7 @@
       "reading_time": "11 min read",
       "site_name": "charity.wtf",
       "cover_image": "https://i0.wp.com/charity.wtf/wp-content/uploads/2025/10/srebunny.png?fit=800%2C1200&ssl=1",
-      "last_fetched": "2025-10-30T15:46:47.030Z"
+      "last_fetched": "2025-11-03T22:54:21.635Z"
     }
   },
   {
@@ -40,7 +318,7 @@
       "reading_time": "2 min read",
       "site_name": "Geoffrey Huntley",
       "cover_image": "https://ghuntley.com/content/images/size/w1200/2025/06/3ea367ed-cae3-454a-840f-134531dea1fd.jpg",
-      "last_fetched": "2025-10-30T14:18:56.895Z"
+      "last_fetched": "2025-11-03T22:54:21.635Z"
     }
   },
   {
@@ -59,7 +337,7 @@
     "metadata": {
       "site_name": "YouTube",
       "cover_image": "https://i.ytimg.com/vi/GaoLU6zKaws/maxresdefault.jpg?sqp=-oaymwEmCIAKENAF8quKqQMa8AEB-AH-CYAC0AWKAgwIABABGHIgXig8MA8=&rs=AOn4CLCKStWVT21BP5p1tmla_jf5mKAAsg",
-      "last_fetched": "2025-10-30T14:18:56.895Z"
+      "last_fetched": "2025-11-03T22:54:21.635Z"
     }
   },
   {
@@ -78,7 +356,7 @@
       "site_name": "readwise-upload-pdf",
       "cover_image": "https://readwise-assets.s3.amazonaws.com/media/reader/parsed_document_assets/182351867/4vEmTQVboZoyDgNLyrDhOyyh_GHf7VfKLF2BbicAYSo-cove_OC4apiS.png",
       "reading_progress": 0.14285714285714285,
-      "last_fetched": "2025-10-30T14:18:56.895Z"
+      "last_fetched": "2025-11-03T22:54:21.635Z"
     }
   },
   {
@@ -100,7 +378,7 @@
       "site_name": "mit.edu",
       "cover_image": "https://readwise-assets.s3.amazonaws.com/media/reader/parsed_document_assets/381278089/IbjsyTHH3cEMIruS5Fy75Zu7z8opHnHIDp7XEK1Pw4c-cove_IjHUkO6.png",
       "reading_progress": 0.9545454545454546,
-      "last_fetched": "2025-10-30T14:18:56.895Z"
+      "last_fetched": "2025-11-03T22:54:21.635Z"
     }
   },
   {
@@ -122,7 +400,7 @@
       "word_count": 1755,
       "reading_time": "9 min read",
       "site_name": "swarthmore.edu",
-      "last_fetched": "2025-10-30T14:18:56.895Z"
+      "last_fetched": "2025-11-03T22:54:21.635Z"
     }
   },
   {
@@ -142,7 +420,7 @@
       "word_count": 592,
       "reading_time": "3 min read",
       "site_name": "Elon University",
-      "last_fetched": "2025-10-30T14:18:56.895Z"
+      "last_fetched": "2025-11-03T22:54:21.635Z"
     }
   },
   {
@@ -165,7 +443,7 @@
       "site_name": "The Cloudflare Blog",
       "cover_image": "https://cf-assets.www.cloudflare.com/zkvhlag99gkb/1jrfu33HdXerVZwRnD2cRj/8c93d0f47c32635fb98e28d64cd10364/Keeping_the_Internet_fast_and_secure-_introducing_Merkle_Tree_Certificates-OG.png",
       "reading_progress": 1,
-      "last_fetched": "2025-10-30T14:18:56.895Z"
+      "last_fetched": "2025-11-03T22:54:21.635Z"
     }
   },
   {
@@ -187,7 +465,7 @@
       "reading_time": "2 min read",
       "site_name": "consensus.app",
       "cover_image": "https://consensus.app/api/og/threads/eyJ0aXRsZSI6IkxvbmcgSG91cnMgSW1wYWN0IERldmVsb3BlciBQcm9kdWN0aXZpdHkiLCJ0aHJlYWRJZCI6InRsTHZpTjVkUVBDcnRrVFRHaVVNdXciLCJzZWFyY2hJZCI6ImxYelFzcHRmU0hXYW1GemtzT2VmZkEifQ%3D%3D",
-      "last_fetched": "2025-10-30T14:18:56.895Z"
+      "last_fetched": "2025-11-03T22:54:21.635Z"
     }
   },
   {
@@ -214,7 +492,7 @@
       "site_name": "Signal Messenger",
       "cover_image": "https://signal.org/assets/og/og-image-ff2096df535eee499356de64b19fa8cebb9681ab1e78cca7330e7f8b8d5ec6d5.png",
       "reading_progress": 1,
-      "last_fetched": "2025-10-30T14:18:56.895Z"
+      "last_fetched": "2025-11-03T22:54:21.635Z"
     }
   },
   {
@@ -236,7 +514,7 @@
       "reading_time": "7 min read",
       "site_name": "The New Stack",
       "cover_image": "https://cdn.thenewstack.io/media/2025/10/54fc1732-matthew-meckes-2.jpg",
-      "last_fetched": "2025-10-30T14:18:56.895Z"
+      "last_fetched": "2025-11-03T22:54:21.635Z"
     }
   },
   {
@@ -259,7 +537,7 @@
       "site_name": "readwise-upload-pdf",
       "cover_image": "https://readwise-assets.s3.amazonaws.com/media/reader/parsed_document_assets/378761449/1WdzDITgulw1_aiYMoaxjyagIEwZekkRbv0U0LIYqzw-cove_5BbUyHA.png",
       "reading_progress": 0.5714285714285714,
-      "last_fetched": "2025-10-30T14:18:56.895Z"
+      "last_fetched": "2025-11-03T22:54:21.635Z"
     }
   },
   {
@@ -279,7 +557,7 @@
       "word_count": 3617,
       "reading_time": "19 min read",
       "site_name": "Amazon Web Services, Inc.",
-      "last_fetched": "2025-10-30T14:18:56.895Z"
+      "last_fetched": "2025-11-03T22:54:21.635Z"
     }
   },
   {
@@ -301,7 +579,7 @@
       "reading_time": "1 min read",
       "site_name": "linkedin.com",
       "cover_image": "https://media.licdn.com/dms/image/v2/D4E22AQGo8ZZuHK2njw/feedshare-shrink_800/B4EZoH86M3GYAo-/0/1761069999450?e=2147483647&v=beta&t=5BCmKV1vljit7wQ94Zu5w4QrVTTkirP2frAbAhcI7mM",
-      "last_fetched": "2025-10-30T14:18:56.895Z"
+      "last_fetched": "2025-11-03T22:54:21.635Z"
     }
   },
   {
@@ -322,7 +600,7 @@
       "site_name": "Poetry Magazine",
       "cover_image": "https://s3-us-east-2.amazonaws.com/cdn-test.poetryfoundation.org/content/images/8860b89bc1c96d531ea2aad695b8e4b17cb249af.jpeg",
       "reading_progress": 0.10772043313176767,
-      "last_fetched": "2025-10-30T14:18:56.895Z"
+      "last_fetched": "2025-11-03T22:54:21.635Z"
     }
   },
   {
@@ -345,7 +623,7 @@
       "reading_time": "3 min read",
       "site_name": "linkedin.com",
       "cover_image": "https://static.licdn.com/aero-v1/sc/h/c45fy346jw096z9pbphyyhdz7",
-      "last_fetched": "2025-10-30T14:18:56.895Z"
+      "last_fetched": "2025-11-03T22:54:21.635Z"
     }
   },
   {
@@ -365,7 +643,7 @@
       "reading_time": "1 min read",
       "site_name": "mypoeticside.com",
       "reading_progress": 1,
-      "last_fetched": "2025-10-30T14:18:56.895Z"
+      "last_fetched": "2025-11-03T22:54:21.635Z"
     }
   },
   {
@@ -384,7 +662,7 @@
     "metadata": {
       "site_name": "YouTube",
       "cover_image": "https://i.ytimg.com/vi/r3560y2LKMU/maxresdefault.jpg",
-      "last_fetched": "2025-10-30T14:18:56.895Z"
+      "last_fetched": "2025-11-03T22:54:21.635Z"
     }
   },
   {
@@ -406,7 +684,7 @@
       "site_name": "linkedin.com",
       "cover_image": "https://media.licdn.com/dms/image/v2/D5612AQFd_lQu2RaFdw/article-cover_image-shrink_600_2000/B56Zn5582PJoAQ-/0/1760834343002?e=2147483647&v=beta&t=NtH2zxQ4JKscwxL5OE_zCPWezWOclLywjQxfCr5sDhM",
       "reading_progress": 0.9359380552280147,
-      "last_fetched": "2025-10-30T14:18:56.895Z"
+      "last_fetched": "2025-11-03T22:54:21.635Z"
     }
   },
   {
@@ -427,7 +705,7 @@
       "reading_time": "3 min read",
       "site_name": "linkedin.com",
       "cover_image": "https://static.licdn.com/aero-v1/sc/h/c45fy346jw096z9pbphyyhdz7",
-      "last_fetched": "2025-10-30T14:18:56.895Z"
+      "last_fetched": "2025-11-03T22:54:21.635Z"
     }
   },
   {
@@ -452,7 +730,7 @@
       "site_name": "readwise-upload-pdf",
       "cover_image": "https://readwise-assets.s3.amazonaws.com/media/reader/parsed_document_assets/1819822/_ra-ASGi_eUFT_lWZO4jCzF--AAMyiZ7MK3mJ2fkL-0-cover-1819822.png",
       "reading_progress": 0.027777777777777776,
-      "last_fetched": "2025-10-30T14:18:56.895Z"
+      "last_fetched": "2025-11-03T22:54:21.635Z"
     }
   },
   {
@@ -475,7 +753,7 @@
       "reading_time": "5 min read",
       "site_name": "activism.net",
       "reading_progress": 1,
-      "last_fetched": "2025-10-30T14:18:56.895Z"
+      "last_fetched": "2025-11-03T22:54:21.635Z"
     }
   },
   {
@@ -498,7 +776,7 @@
       "reading_time": "4 min read",
       "site_name": "Platform Engineering",
       "cover_image": "https://platformengineering.com/wp-content/uploads/2025/05/How-Platform-Engineering-is-Redefining-DevOps-in-2025_resized.jpg",
-      "last_fetched": "2025-10-30T14:18:56.895Z"
+      "last_fetched": "2025-11-03T22:54:21.635Z"
     }
   },
   {
@@ -520,7 +798,7 @@
       "reading_time": "1 min read",
       "site_name": "linkedin.com",
       "cover_image": "https://static.licdn.com/aero-v1/sc/h/c45fy346jw096z9pbphyyhdz7",
-      "last_fetched": "2025-10-30T14:18:56.895Z"
+      "last_fetched": "2025-11-03T22:54:21.635Z"
     }
   },
   {
@@ -540,7 +818,7 @@
       "reading_time": "3 min read",
       "site_name": "TheFarSide.com",
       "cover_image": "https://assets.thefarside.com/assets/packs/media/images/brand/logo/tfs-share-default-a7b076808488053c10116ff0605a39a1.jpg",
-      "last_fetched": "2025-10-30T14:18:56.895Z"
+      "last_fetched": "2025-11-03T22:54:21.635Z"
     }
   },
   {
@@ -564,7 +842,7 @@
       "site_name": "A Space to Think: Notes on Software Development",
       "cover_image": "https://substackcdn.com/image/fetch/$s_!9hR8!,w_1200,h_600,c_fill,f_jpg,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fbaac74c8-e2d3-4d54-8a56-f7b40ddf2cfc_1536x1024.png",
       "reading_progress": 0.9684378854451415,
-      "last_fetched": "2025-10-30T14:18:56.895Z"
+      "last_fetched": "2025-11-03T22:54:21.635Z"
     }
   },
   {
@@ -586,7 +864,7 @@
       "site_name": "holochain.org",
       "cover_image": "https://readwise-assets.s3.amazonaws.com/media/reader/parsed_document_assets/239255881/RS0AqMiBzpVPv7fZwI9CLNwK0FwI7nKvTLa_O1G11js-cove_5RRsiwg.png",
       "reading_progress": 0.02247191011235955,
-      "last_fetched": "2025-10-30T14:18:56.895Z"
+      "last_fetched": "2025-11-03T22:54:21.635Z"
     }
   },
   {
@@ -611,7 +889,7 @@
       "site_name": "holochain.org",
       "cover_image": "https://readwise-assets.s3.amazonaws.com/media/reader/parsed_document_assets/239255899/19RzeKXLhZ0sOYXmRt6PkkwXNwSFa1dFGbr-7TG2GnU-cove_GBYGMKP.png",
       "reading_progress": 0.25,
-      "last_fetched": "2025-10-30T14:18:56.895Z"
+      "last_fetched": "2025-11-03T22:54:21.635Z"
     }
   },
   {
@@ -633,7 +911,7 @@
     "metadata": {
       "site_name": "YouTube",
       "cover_image": "https://i.ytimg.com/vi/JZiXsMBcV-E/maxresdefault.jpg",
-      "last_fetched": "2025-10-30T14:18:56.895Z"
+      "last_fetched": "2025-11-03T22:54:21.635Z"
     }
   },
   {
@@ -656,7 +934,7 @@
       "word_count": 29,
       "reading_time": "1 min read",
       "site_name": "Forbes.com",
-      "last_fetched": "2025-10-30T14:18:56.895Z"
+      "last_fetched": "2025-11-03T22:54:21.635Z"
     }
   },
   {
@@ -679,7 +957,7 @@
       "reading_time": "2 min read",
       "site_name": "linkedin.com",
       "cover_image": "https://static.licdn.com/aero-v1/sc/h/c45fy346jw096z9pbphyyhdz7",
-      "last_fetched": "2025-10-30T14:18:56.895Z"
+      "last_fetched": "2025-11-03T22:54:21.635Z"
     }
   },
   {
@@ -701,7 +979,7 @@
       "word_count": 515,
       "reading_time": "3 min read",
       "site_name": "Gaia-X Hub Germany",
-      "last_fetched": "2025-10-30T14:18:56.895Z"
+      "last_fetched": "2025-11-03T22:54:21.635Z"
     }
   },
   {
@@ -721,7 +999,7 @@
       "reading_time": "112 min read",
       "site_name": "Oxide and Friends",
       "cover_image": "https://img.transistor.fm/4eSrii-l0zYfhuwNC5cfYd8f69OrSYgO5YGFbWC0S3c/rs:fill:0:0:1/w:800/h:800/q:60/mb:500000/aHR0cHM6Ly9pbWct/dXBsb2FkLXByb2R1/Y3Rpb24udHJhbnNp/c3Rvci5mbS9hNmU0/YWYyMjU4NmRjMmRi/YTczMmZjYzI0NmMx/N2YwNy5wbmc.webp",
-      "last_fetched": "2025-10-30T14:18:56.895Z"
+      "last_fetched": "2025-11-03T22:54:21.635Z"
     }
   },
   {
@@ -743,7 +1021,7 @@
     "metadata": {
       "site_name": "YouTube",
       "cover_image": "https://i.ytimg.com/vi/5Ai8UGx7QvQ/maxresdefault.jpg",
-      "last_fetched": "2025-10-30T14:18:56.895Z"
+      "last_fetched": "2025-11-03T22:54:21.635Z"
     }
   },
   {
@@ -766,7 +1044,7 @@
       "site_name": "simonwillison.net",
       "cover_image": "https://static.simonwillison.net/static/2025/design-patterns-card.jpg",
       "reading_progress": 1,
-      "last_fetched": "2025-10-30T14:18:56.895Z"
+      "last_fetched": "2025-11-03T22:54:21.635Z"
     }
   },
   {
@@ -792,7 +1070,7 @@
       "site_name": "simonwillison.net",
       "cover_image": "https://static.simonwillison.net/static/2025/lethaltrifecta.jpg",
       "reading_progress": 1,
-      "last_fetched": "2025-10-30T14:18:56.895Z"
+      "last_fetched": "2025-11-03T22:54:21.635Z"
     }
   },
   {
@@ -813,7 +1091,7 @@
       "word_count": 1093,
       "reading_time": "6 min read",
       "site_name": "Association for Computing Machinery",
-      "last_fetched": "2025-10-30T14:18:56.895Z"
+      "last_fetched": "2025-11-03T22:54:21.635Z"
     }
   },
   {
@@ -836,7 +1114,7 @@
       "reading_time": "3 min read",
       "site_name": "Schneier on Security",
       "reading_progress": 1,
-      "last_fetched": "2025-10-30T14:18:56.895Z"
+      "last_fetched": "2025-11-03T22:54:21.635Z"
     }
   },
   {
@@ -858,7 +1136,7 @@
       "site_name": "readwise-upload-pdf",
       "cover_image": "https://readwise-assets.s3.amazonaws.com/media/reader/parsed_document_assets/315506754/1r8aYQgJpPfIm5Cf4G0Y9_ECnrNP8LzLIb6TWJmGrAI-cove_RqFspfs.png",
       "reading_progress": 0.14285714285714285,
-      "last_fetched": "2025-10-30T14:18:56.895Z"
+      "last_fetched": "2025-11-03T22:54:21.635Z"
     }
   },
   {
@@ -879,7 +1157,7 @@
       "reading_time": "2 min read",
       "site_name": "linkedin.com",
       "cover_image": "https://static.licdn.com/aero-v1/sc/h/c45fy346jw096z9pbphyyhdz7",
-      "last_fetched": "2025-10-30T14:18:56.895Z"
+      "last_fetched": "2025-11-03T22:54:21.635Z"
     }
   },
   {
@@ -902,7 +1180,7 @@
       "site_name": "Lars Lofgren",
       "cover_image": "http://larslofgren.com/wp-content/uploads/2025/10/rcoding-bootcamp-homepage.png",
       "reading_progress": 0.22763577437793495,
-      "last_fetched": "2025-10-30T14:18:56.895Z"
+      "last_fetched": "2025-11-03T22:54:21.635Z"
     }
   },
   {
@@ -923,7 +1201,7 @@
       "reading_time": "2 min read",
       "site_name": "linkedin.com",
       "cover_image": "https://static.licdn.com/aero-v1/sc/h/c45fy346jw096z9pbphyyhdz7",
-      "last_fetched": "2025-10-30T14:18:56.895Z"
+      "last_fetched": "2025-11-03T22:54:21.635Z"
     }
   },
   {
@@ -945,7 +1223,7 @@
       "site_name": "InfoQ",
       "cover_image": "https://res.infoq.com/presentations/architecture-best-practices/en/card_header_image/gregor-hohpe-twitter-card-1756297866716.jpg",
       "reading_progress": 0.8851978390305657,
-      "last_fetched": "2025-10-30T14:18:56.895Z"
+      "last_fetched": "2025-11-03T22:54:21.635Z"
     }
   },
   {
@@ -966,7 +1244,7 @@
       "word_count": 1036,
       "reading_time": "6 min read",
       "site_name": "Risk and Cyber ",
-      "last_fetched": "2025-10-30T14:18:56.895Z"
+      "last_fetched": "2025-11-03T22:54:21.635Z"
     }
   },
   {
@@ -986,7 +1264,7 @@
       "reading_time": "4 min read",
       "site_name": "linkedin.com",
       "cover_image": "https://media.licdn.com/dms/image/v2/C4E12AQHGRSFeqxtNtg/article-cover_image-shrink_720_1280/article-cover_image-shrink_720_1280/0/1612593515816?e=2147483647&v=beta&t=Vdlpzj6xZde92P5tPZElLEzf5Ivigw6ffc3kMlnFH7I",
-      "last_fetched": "2025-10-30T14:18:56.895Z"
+      "last_fetched": "2025-11-03T22:54:21.635Z"
     }
   },
   {
@@ -1008,7 +1286,7 @@
       "word_count": 172,
       "reading_time": "1 min read",
       "site_name": "Risk and Cyber ",
-      "last_fetched": "2025-10-30T14:18:56.895Z"
+      "last_fetched": "2025-11-03T22:54:21.635Z"
     }
   },
   {
@@ -1028,7 +1306,7 @@
       "word_count": 367,
       "reading_time": "2 min read",
       "site_name": "brooker.co.za",
-      "last_fetched": "2025-10-30T14:18:56.895Z"
+      "last_fetched": "2025-11-03T22:54:21.635Z"
     }
   },
   {
@@ -1052,7 +1330,7 @@
       "reading_time": "1 min read",
       "site_name": "chrispiech.github.io",
       "reading_progress": 1,
-      "last_fetched": "2025-10-30T14:18:56.895Z"
+      "last_fetched": "2025-11-03T22:54:21.635Z"
     }
   },
   {
@@ -1073,7 +1351,7 @@
       "reading_time": "7 min read",
       "site_name": "wikipedia.org",
       "reading_progress": 0.6118895963758029,
-      "last_fetched": "2025-10-30T14:18:56.895Z"
+      "last_fetched": "2025-11-03T22:54:21.635Z"
     }
   },
   {
@@ -1097,7 +1375,7 @@
       "site_name": "Joel on Software",
       "cover_image": "https://i0.wp.com/www.joelonsoftware.com/wp-content/uploads/2016/12/11969842.jpg?fit=400%2C400&ssl=1",
       "reading_progress": 1,
-      "last_fetched": "2025-10-30T14:18:56.895Z"
+      "last_fetched": "2025-11-03T22:54:21.635Z"
     }
   }
 ]
