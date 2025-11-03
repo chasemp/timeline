@@ -1,5 +1,51 @@
 [
   {
+    "id": "bluesky:3m4ql24azbk2f",
+    "type": "bluesky",
+    "source": null,
+    "timestamp": "2025-11-03T17:43:17.878Z",
+    "title": "#classic",
+    "summary": "#classic\n\nwww.youtube.com/watch?v=ZSFD... — How Open Source Projects Survive Poisonous People (And...",
+    "url": "https://bsky.app/profile/chase523.bsky.social/post/3m4ql24azbk2f",
+    "canonical_url": "https://bsky.app/profile/chase523.bsky.social/post/3m4ql24azbk2f",
+    "author": null,
+    "tags": [],
+    "media": [],
+    "content_html": "<p>#classic<br><br>www.youtube.com/watch?v=ZSFD...</p>\n          <div style=\"margin: 16px 0; border: 1px solid var(--border, #d4c4a8); border-radius: 8px; overflow: hidden; background: var(--card-bg, #fdfbf7);\">\n            <img src=\"/assets/cached-images/bluesky/147fd1fa89a69deab6d0086d4c5dea3f.jpeg\" alt=\"How Open Source Projects Survive Poisonous People (And...\" style=\"width: 100%; height: auto; display: block; max-height: 200px; object-fit: cover;\">\n            <div style=\"padding: 12px;\">\n              <div style=\"font-weight: 600; margin-bottom: 4px; color: var(--text, #3d2817);\">How Open Source Projects Survive Poisonous People (And...</div>\n              <div style=\"font-size: 13px; color: var(--muted, #7a6b5d); margin-bottom: 8px;\">YouTube video by Google TechTalks</div>\n              <div style=\"font-size: 12px; color: var(--accent, #c17a4f); overflow: hidden; text-overflow: ellipsis; white-space: nowrap;\">🔗 https://www.youtube.com/watch?v=ZSFDm3UYkeE</div>\n            </div>\n          </div>",
+    "content_text": null,
+    "embed_uri": "at://did:plc:7whslkj667kgto2x246o4stl/app.bsky.feed.post/3m4ql24azbk2f",
+    "embed_cid": "bafyreihm7d3qdw3dr6s3xwlz5hxzm4mg6qu744c6jda2ap5tjq56giucxu",
+    "metadata": {
+      "likes": 0,
+      "reposts": 0,
+      "replies": 0
+    }
+  },
+  {
+    "id": "pixelfed:https://gram.social/p/chase523/891015947394175184",
+    "type": "pixelfed",
+    "source": null,
+    "timestamp": "2025-11-03T17:39:16.000Z",
+    "title": "",
+    "summary": "",
+    "url": "https://gram.social/p/chase523/891015947394175184",
+    "canonical_url": "https://gram.social/p/chase523/891015947394175184",
+    "author": null,
+    "tags": [],
+    "media": {
+      "type": "image",
+      "images": [
+        "/assets/cached-images/pixelfed/00ef9dc11ea0dc308dffef306eae24fb.jpg"
+      ],
+      "alt": ""
+    },
+    "content_html": "<div class=\"media-gallery\">\n                                                    <img class=\"media-item\" src=\"https://gram.social/storage/m/_v2/888529897498449747/3dc769ff5-aadbb1/U6sA3Wne7PYd/X8rPYNtRJyGVetrZTXfSyteCHQi2Md11EnwncDws.jpg\" alt=\"\">\n                                            </div>\n                    <p style=\"padding:10px;\"></p>",
+    "content_text": null,
+    "embed_uri": null,
+    "embed_cid": null,
+    "metadata": null
+  },
+  {
     "id": "pixelfed:https://gram.social/p/chase523/890690489351587496",
     "type": "pixelfed",
     "source": null,
