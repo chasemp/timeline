@@ -274,6 +274,7 @@ const formatShortDate = (timestamp: string) => {
   const panelSourceWrapper = document.getElementById('panel-source-wrapper')!;
   const panelSource = document.getElementById('panel-source')! as HTMLAnchorElement;
   const closeBtn = document.getElementById('panel-close-left')!;
+  const copyLinkBtn = document.getElementById('panel-copy-link')!;
   const backdrop = document.getElementById('panel-backdrop')!;
   const swipeIndicator = document.getElementById('swipe-indicator')!;
   const isMobile = () => window.innerWidth <= 980;
@@ -318,11 +319,13 @@ const formatShortDate = (timestamp: string) => {
       backdrop.removeAttribute('hidden');
       panel.classList.add('mobile-detail-open');
       closeBtn.removeAttribute('hidden');
+      copyLinkBtn.removeAttribute('hidden');
       swipeIndicator.removeAttribute('hidden');
       lockScroll(true);
     } else {
-      // Desktop: show close button for detail content
+      // Desktop: show close button and copy link for detail content
       closeBtn.removeAttribute('hidden');
+      copyLinkBtn.removeAttribute('hidden');
       swipeIndicator.setAttribute('hidden', '');
     }
 
@@ -557,6 +560,7 @@ const formatShortDate = (timestamp: string) => {
       panel.classList.remove('mobile-detail-open');
       swipeIndicator.setAttribute('hidden', '');
       closeBtn.setAttribute('hidden', '');
+      copyLinkBtn.setAttribute('hidden', '');
       lockScroll(false);
     }
     
@@ -574,12 +578,52 @@ const formatShortDate = (timestamp: string) => {
     panelSourceWrapper.setAttribute('hidden', '');
     panelContent.innerHTML = introHTML;
     closeBtn.setAttribute('hidden', '');
+    copyLinkBtn.setAttribute('hidden', '');
     
     // Remove hash from URL (preserve query params)
     const p = new URLSearchParams(location.search);
     const newUrl = p.toString() ? `?${p.toString()}` : location.pathname;
     history.replaceState({}, '', newUrl);
   }
+  
+  // Copy link functionality
+  copyLinkBtn.addEventListener('click', async () => {
+    // Get the current URL including hash and query params
+    const fullUrl = window.location.href;
+    
+    try {
+      await navigator.clipboard.writeText(fullUrl);
+      // Visual feedback
+      const originalText = copyLinkBtn.textContent;
+      copyLinkBtn.textContent = '✓';
+      copyLinkBtn.classList.add('copied');
+      setTimeout(() => {
+        copyLinkBtn.textContent = originalText;
+        copyLinkBtn.classList.remove('copied');
+      }, 2000);
+    } catch (err) {
+      // Fallback for older browsers
+      const textArea = document.createElement('textarea');
+      textArea.value = fullUrl;
+      textArea.style.position = 'fixed';
+      textArea.style.opacity = '0';
+      document.body.appendChild(textArea);
+      textArea.select();
+      try {
+        document.execCommand('copy');
+        const originalText = copyLinkBtn.textContent;
+        copyLinkBtn.textContent = '✓';
+        copyLinkBtn.classList.add('copied');
+        setTimeout(() => {
+          copyLinkBtn.textContent = originalText;
+          copyLinkBtn.classList.remove('copied');
+        }, 2000);
+      } catch (fallbackErr) {
+        console.error('Failed to copy link:', fallbackErr);
+      }
+      document.body.removeChild(textArea);
+    }
+  });
 
   function checkCommentsDisabled(entry: any): boolean {
     // Check global config
