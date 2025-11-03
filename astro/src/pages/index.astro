@@ -183,9 +183,8 @@ const allHashtags = Object.entries(hashtagCounts)
         </div>
         <div class="filters" role="group" aria-label="Content types">
           <label title="Bookmarks from Readwise"><input type="checkbox" name="type" value="saved" checked> Read</label>
-          <label title="LinkedIn posts and shares"><input type="checkbox" name="type" value="linkedin" checked> LinkedIn</label>
           <label title="Technical writing and essays"><input type="checkbox" name="type" value="blog" checked> Written</label>
-          <label title="Bluesky, Pixelfed, and HackerNews posts/comments"><input type="checkbox" name="type" value="bluesky,pixelfed,hackernews" checked> Posted</label>
+          <label title="Bluesky, Pixelfed, HackerNews, and LinkedIn posts/comments"><input type="checkbox" name="type" value="bluesky,pixelfed,hackernews,linkedin" checked> Posted</label>
           <label title="GitHub project releases and tags"><input type="checkbox" name="type" value="release" checked> Released</label>
           <label title="Contributions to Wikipedia and other platforms"><input type="checkbox" name="type" value="wikipedia" checked> Contributed</label>
         </div>
@@ -212,9 +211,8 @@ const allHashtags = Object.entries(hashtagCounts)
         <h4>Content Types</h4>
         <ul class="legend">
           <li><span class="legend-dot" data-dot-type="saved"></span> <strong>Read</strong> — Bookmarks from Readwise</li>
-          <li><span class="legend-dot" data-dot-type="linkedin"></span> <strong>LinkedIn</strong> — LinkedIn posts and articles</li>
           <li><span class="legend-dot" data-dot-type="blog"></span> <strong>Written</strong> — Technical writing and essays</li>
-          <li><span class="legend-dot" data-dot-type="bluesky"></span> <strong>Posted</strong> — Bluesky, Pixelfed, HackerNews</li>
+          <li><span class="legend-dot" data-dot-type="bluesky"></span> <strong>Posted</strong> — Bluesky, Pixelfed, HackerNews, LinkedIn</li>
           <li><span class="legend-dot" data-dot-type="release"></span> <strong>Released</strong> — GitHub project releases and tags</li>
           <li><span class="legend-dot" data-dot-type="wikipedia"></span> <strong>Contributed</strong> — Wikipedia and other contributions</li>
         </ul>
@@ -512,7 +510,7 @@ const allHashtags = Object.entries(hashtagCounts)
   });
 
   const params = new URLSearchParams(location.search);
-  const selected = new Set((params.get('types') ?? 'blog,saved,bluesky,pixelfed,hackernews,release,wikipedia').split(',').filter(Boolean));
+  const selected = new Set((params.get('types') ?? 'blog,saved,bluesky,pixelfed,hackernews,linkedin,release,wikipedia').split(',').filter(Boolean));
   
   const checkboxes = document.querySelectorAll('input[name="type"]') as NodeListOf<HTMLInputElement>;
   
@@ -566,8 +564,10 @@ const allHashtags = Object.entries(hashtagCounts)
     const hashtagToTypes: Record<string, string[]> = {
       '#blog': ['blog'],
       '#article': ['saved'], 
-      '#bluesky': ['bluesky', 'pixelfed'],  // Posted category includes both
-      '#pixelfed': ['bluesky', 'pixelfed'], // Posted category includes both
+      '#bluesky': ['bluesky', 'pixelfed', 'hackernews', 'linkedin'],  // Posted category includes all
+      '#pixelfed': ['bluesky', 'pixelfed', 'hackernews', 'linkedin'], // Posted category includes all
+      '#hackernews': ['bluesky', 'pixelfed', 'hackernews', 'linkedin'], // Posted category includes all
+      '#linkedin': ['blog', 'saved', 'bluesky', 'pixelfed', 'hackernews', 'linkedin'], // LinkedIn can be in Written, Read, or Posted
       '#wikipedia': ['wikipedia'],
       '#release': ['release']
     };

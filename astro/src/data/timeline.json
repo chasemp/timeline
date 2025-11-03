@@ -717,7 +717,7 @@
   },
   {
     "id": "readwise:01k86nhzxfw8tn00pgcw3gddta",
-    "type": "linkedin",
+    "type": "blog",
     "source": null,
     "timestamp": "2025-10-22T19:15:27.791000+00:00",
     "title": "Nag Medida’s Post",
@@ -728,7 +728,8 @@
     "tags": [
       "sec",
       "tech",
-      "prodsec"
+      "prodsec",
+      "LinkedIn"
     ],
     "media": [],
     "content_html": null,
@@ -802,7 +803,7 @@
   },
   {
     "id": "readwise:01k83bajsy1qgtwn244t5bspp0",
-    "type": "linkedin",
+    "type": "blog",
     "source": null,
     "timestamp": "2025-10-21T12:18:55.934000+00:00",
     "title": "Allen Holub’s Post",
@@ -814,7 +815,8 @@
       "tech",
       "classic",
       "prodsec",
-      "software"
+      "software",
+      "LinkedIn"
     ],
     "media": [],
     "content_html": null,
@@ -912,7 +914,7 @@
   },
   {
     "id": "readwise:01k8165z12jg1bn1hj7m7jgdss",
-    "type": "linkedin",
+    "type": "blog",
     "source": null,
     "timestamp": "2025-10-20T16:10:32.866000+00:00",
     "title": "Thank you for subscribing to haKCer Academy",
@@ -922,7 +924,8 @@
     "author": "Corian (Cory) Kennedy",
     "tags": [
       "sec",
-      "tech"
+      "tech",
+      "LinkedIn"
     ],
     "media": [],
     "content_html": null,
@@ -940,7 +943,7 @@
   },
   {
     "id": "readwise:01k6qm1983a2acew6wvcmw7w9e",
-    "type": "linkedin",
+    "type": "blog",
     "source": null,
     "timestamp": "2025-10-20T13:54:58.187000+00:00",
     "title": "Richard Seiersen’s Post",
@@ -950,7 +953,8 @@
     "author": "Richard Seiersen",
     "tags": [
       "sec",
-      "prodsec"
+      "prodsec",
+      "LinkedIn"
     ],
     "media": [],
     "content_html": null,
@@ -1078,7 +1082,7 @@
   },
   {
     "id": "readwise:01k7yfqfkmvdzdfz6zzfy612c3",
-    "type": "linkedin",
+    "type": "blog",
     "source": null,
     "timestamp": "2025-10-19T14:59:40.788000+00:00",
     "title": "Bryon Kroger’s Post",
@@ -1089,7 +1093,8 @@
     "tags": [
       "sec",
       "tech",
-      "prodsec"
+      "prodsec",
+      "LinkedIn"
     ],
     "media": [],
     "content_html": null,
@@ -1330,7 +1335,7 @@
   },
   {
     "id": "readwise:01k7tqj8vyfq7dfvagrkzg5e4x",
-    "type": "linkedin",
+    "type": "blog",
     "source": null,
     "timestamp": "2025-10-18T03:59:40.926000+00:00",
     "title": "Arshan Dabirsiaghi’s Post",
@@ -1342,7 +1347,8 @@
       "ai",
       "sec",
       "tech",
-      "prodsec"
+      "prodsec",
+      "LinkedIn"
     ],
     "media": [],
     "content_html": null,
@@ -1630,7 +1636,7 @@
   },
   {
     "id": "readwise:01k7hdeehswdthftnt017pa55k",
-    "type": "linkedin",
+    "type": "blog",
     "source": null,
     "timestamp": "2025-10-14T13:09:40.025000+00:00",
     "title": "Brandon Wiseman’s Post",
@@ -1640,7 +1646,8 @@
     "author": "Brandon Wiseman",
     "tags": [
       "fodder",
-      "classic"
+      "classic",
+      "LinkedIn"
     ],
     "media": [],
     "content_html": null,
@@ -1716,7 +1723,7 @@
   },
   {
     "id": "readwise:01k74n7cmjg3tyst02ek3wdypp",
-    "type": "linkedin",
+    "type": "blog",
     "source": null,
     "timestamp": "2025-10-09T14:15:29.682000+00:00",
     "title": "John Cutler’s Post",
@@ -1726,7 +1733,8 @@
     "author": "John Cutler",
     "tags": [
       "classic",
-      "shortlist"
+      "shortlist",
+      "LinkedIn"
     ],
     "media": [],
     "content_html": null,
@@ -1904,7 +1912,7 @@
   },
   {
     "id": "readwise:01jxth32m8s6prktn2rsewfm3v",
-    "type": "linkedin",
+    "type": "blog",
     "source": null,
     "timestamp": "2025-06-15T19:29:33.318000+00:00",
     "title": "Activity isn’t the same as progress",
@@ -1913,7 +1921,8 @@
     "canonical_url": "https://www.linkedin.com/pulse/activity-isnt-same-progress-jan-bosch?utm_source=share&utm_medium=member_android&utm_campaign=share_via",
     "author": "Jan Bosch",
     "tags": [
-      "classic"
+      "classic",
+      "LinkedIn"
     ],
     "media": [],
     "content_html": null,

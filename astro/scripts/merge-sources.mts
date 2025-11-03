@@ -23,10 +23,29 @@ function detectType(entry: any) {
   const rawUrl = entry.url || entry.canonical_url || entry.id || '';
   const siteName = typeof rawSiteName === 'string' ? rawSiteName.toLowerCase() : '';
   const url = typeof rawUrl === 'string' ? rawUrl.toLowerCase() : '';
+  const title = (entry.title || '').toLowerCase();
+  const tags = (entry.tags || []).map((t: string) => t.toLowerCase());
 
   if (baseType === 'saved') {
     const isLinkedIn = siteName.includes('linkedin') || url.includes('linkedin.com') || url.includes('lnkd.in');
     if (isLinkedIn) {
+      // Check if it's a recommendation (received)
+      const isRecommendation = title.includes('recommend') || 
+                               tags.some((t: string) => t.includes('recommend'));
+      
+      if (isRecommendation) {
+        // Recommendations stay as 'saved' (Read category)
+        return 'saved';
+      }
+      
+      // Check if it's a post/article (should be Written category)
+      const isPostOrArticle = url.includes('/posts/') || url.includes('/pulse/');
+      if (isPostOrArticle) {
+        // LinkedIn posts/articles go to 'blog' type (Written category)
+        return 'blog';
+      }
+      
+      // Other LinkedIn activity goes to 'linkedin' type (Posted category)
       return 'linkedin';
     }
   }
@@ -35,9 +54,22 @@ function detectType(entry: any) {
 }
 
 function normalize(entry: any) {
+  const normalizedType = detectType(entry);
+  const rawSiteName = entry.metadata?.site_name || '';
+  const rawUrl = entry.url || entry.canonical_url || entry.id || '';
+  const siteName = typeof rawSiteName === 'string' ? rawSiteName.toLowerCase() : '';
+  const url = typeof rawUrl === 'string' ? rawUrl.toLowerCase() : '';
+  const isLinkedIn = siteName.includes('linkedin') || url.includes('linkedin.com') || url.includes('lnkd.in');
+  
+  // Ensure LinkedIn content always has #linkedin tag
+  let tags = Array.isArray(entry.tags) ? [...entry.tags] : [];
+  if (isLinkedIn && !tags.some((t: string) => t.toLowerCase().includes('linkedin'))) {
+    tags.push('LinkedIn');
+  }
+  
   return {
     id: stableId(entry),
-    type: detectType(entry),
+    type: normalizedType,
     source: entry.source || null,
     timestamp: entry.timestamp || entry.date || new Date().toISOString(),
     title: entry.title || '',
@@ -45,7 +77,7 @@ function normalize(entry: any) {
     url: entry.url || null,
     canonical_url: canonical(entry),
     author: entry.author || null,
-    tags: entry.tags || [],
+    tags: tags,
     media: entry.media || [],
     content_html: entry.content_html || null,
     content_text: entry.content_text || null,
