@@ -203,6 +203,7 @@ const allHashtags = Object.entries(hashtagCounts)
         <span id="panel-title-text">About</span>
         <span id="panel-source-wrapper" hidden> | <a id="panel-source" href="#" target="_blank" rel="noopener" class="panel-source-link">Source ↗</a></span>
       </h2>
+      <button id="panel-copy-link" class="panel-copy-btn" aria-label="Copy link" title="Copy link to this timeline entry" hidden>🔗</button>
     </header>
     <div id="panel-content">
       <div class="intro">
@@ -335,7 +336,11 @@ const allHashtags = Object.entries(hashtagCounts)
   .panel-source-link:hover { text-decoration: underline; }
   .panel-close-btn { background: var(--card-bg); color: var(--text); border: 1px solid var(--border); border-radius: 6px; padding: 6px 12px; cursor: pointer; font-size: 24px; line-height: 1; transition: all 0.2s; font-weight: 300; flex-shrink: 0; }
   .panel-close-btn:hover { background: var(--bg); border-color: var(--accent); color: var(--accent); }
+  .panel-copy-btn { background: var(--card-bg); color: var(--text); border: 1px solid var(--border); border-radius: 6px; padding: 6px 12px; cursor: pointer; font-size: 18px; line-height: 1; transition: all 0.2s; flex-shrink: 0; }
+  .panel-copy-btn:hover { background: var(--bg); border-color: var(--accent); color: var(--accent); }
+  .panel-copy-btn.copied { background: var(--accent); color: var(--bg); border-color: var(--accent); }
   #panel-close-left { order: -1; }
+  #panel-copy-link { order: 1; }
   
   /* Show close button on desktop when viewing detail content (not intro) */
   @media (min-width: 981px) {
