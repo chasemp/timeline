@@ -1,5 +1,21 @@
 [
   {
+    "id": "bluesky:3m4ql24azbk2f",
+    "type": "bluesky",
+    "timestamp": "2025-11-03T17:43:17.878Z",
+    "title": "#classic",
+    "summary": "#classic\n\nwww.youtube.com/watch?v=ZSFD... — How Open Source Projects Survive Poisonous People (And...",
+    "url": "https://bsky.app/profile/chase523.bsky.social/post/3m4ql24azbk2f",
+    "embed_uri": "at://did:plc:7whslkj667kgto2x246o4stl/app.bsky.feed.post/3m4ql24azbk2f",
+    "embed_cid": "bafyreihm7d3qdw3dr6s3xwlz5hxzm4mg6qu744c6jda2ap5tjq56giucxu",
+    "content_html": "<p>#classic<br><br>www.youtube.com/watch?v=ZSFD...</p>\n          <div style=\"margin: 16px 0; border: 1px solid var(--border, #d4c4a8); border-radius: 8px; overflow: hidden; background: var(--card-bg, #fdfbf7);\">\n            <img src=\"/assets/cached-images/bluesky/147fd1fa89a69deab6d0086d4c5dea3f.jpeg\" alt=\"How Open Source Projects Survive Poisonous People (And...\" style=\"width: 100%; height: auto; display: block; max-height: 200px; object-fit: cover;\">\n            <div style=\"padding: 12px;\">\n              <div style=\"font-weight: 600; margin-bottom: 4px; color: var(--text, #3d2817);\">How Open Source Projects Survive Poisonous People (And...</div>\n              <div style=\"font-size: 13px; color: var(--muted, #7a6b5d); margin-bottom: 8px;\">YouTube video by Google TechTalks</div>\n              <div style=\"font-size: 12px; color: var(--accent, #c17a4f); overflow: hidden; text-overflow: ellipsis; white-space: nowrap;\">🔗 https://www.youtube.com/watch?v=ZSFDm3UYkeE</div>\n            </div>\n          </div>",
+    "metadata": {
+      "likes": 0,
+      "reposts": 0,
+      "replies": 0
+    }
+  },
+  {
     "id": "bluesky:3m4726vdij223",
     "type": "bluesky",
     "timestamp": "2025-10-27T18:26:29.206Z",
