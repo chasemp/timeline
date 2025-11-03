@@ -370,13 +370,42 @@ const formatShortDate = (timestamp: string) => {
         }
       }
       
-      // YouTube embed detection
+      // YouTube embed detection - check url, summary, and content_html
       let youtubeEmbed = '';
+      // Match YouTube URLs with or without protocol, including truncated ones
+      const youtubeUrlPattern = /(?:https?:\/\/)?(?:www\.)?(?:youtube\.com\/watch\?v=|youtu\.be\/)([a-zA-Z0-9_-]+)/i;
+      let videoId = null;
+      
+      // Check entry.url first
       if (entry.url && (entry.url.includes('youtube.com/watch') || entry.url.includes('youtu.be/'))) {
-        const videoId = entry.url.match(/(?:youtube\.com\/watch\?v=|youtu\.be\/)([^&?/]+)/)?.[1];
-        if (videoId) {
-          youtubeEmbed = `<div class="video-embed"><iframe width="560" height="315" src="https://www.youtube.com/embed/${videoId}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>`;
-        }
+        const match = entry.url.match(youtubeUrlPattern);
+        if (match) videoId = match[1];
+      }
+      
+      // Check summary if no video ID found
+      if (!videoId && entry.summary) {
+        const match = entry.summary.match(youtubeUrlPattern);
+        if (match) videoId = match[1];
+      }
+      
+      // Check content_html if still no video ID found
+      if (!videoId && entry.content_html) {
+        const match = entry.content_html.match(youtubeUrlPattern);
+        if (match) videoId = match[1];
+      }
+      
+      if (videoId) {
+        youtubeEmbed = `<div class="video-embed"><iframe width="560" height="315" src="https://www.youtube.com/embed/${videoId}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>`;
+      }
+      
+      // Display images for Pixelfed and Bluesky posts
+      let mediaHtml = '';
+      if (entry.media?.images && entry.media.images.length > 0) {
+        const imagesHtml = entry.media.images.map((imgUrl: string, index: number) => {
+          const alt = Array.isArray(entry.media.alt) ? entry.media.alt[index] || entry.media.alt[0] : (entry.media.alt || '');
+          return `<img src="${imgUrl}" alt="${alt || 'Image'}" loading="lazy">`;
+        }).join('');
+        mediaHtml = `<div class="detail-media">${imagesHtml}</div>`;
       }
       
       // Parse content_html for notes and highlights
@@ -412,6 +441,7 @@ const formatShortDate = (timestamp: string) => {
       const titleHtml = entry.title ? `<h3 class="detail-title">${entry.title}</h3>` : '';
       content = `${titleHtml}
         ${youtubeEmbed}
+        ${mediaHtml}
         <div class="detail-content">${mainContent}${commentLinkHtml}${metadataHtml}${notesHtml}${highlightsHtml}</div>`;
     }
     
@@ -769,6 +799,12 @@ const formatShortDate = (timestamp: string) => {
   /* YouTube video embed */
   .video-embed { margin: 20px 0; }
   .video-embed iframe { width: 100%; max-width: 100%; height: auto; aspect-ratio: 16 / 9; border-radius: 8px; }
+  
+  /* Detail media (images from Pixelfed/Bluesky) */
+  .detail-media { margin: 20px 0; }
+  .detail-media img { width: 100%; max-width: 100%; height: auto; border-radius: 8px; margin: 12px 0; border: 1px solid var(--border); display: block; }
+  .detail-media img:first-child { margin-top: 0; }
+  .detail-media img:last-child { margin-bottom: 0; }
   
   /* Notes and highlights sections */
   .notes-content { margin: 16px 0; padding: 16px; background: rgba(193, 122, 79, 0.1); border-left: 3px solid var(--accent); border-radius: 4px; font-style: italic; color: var(--text); }
