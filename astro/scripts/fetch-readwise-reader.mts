@@ -102,14 +102,42 @@ async function fetchDocuments(updatedAfter?: string): Promise<ReaderDocument[]> 
       url += `&updatedAfter=${encodeURIComponent(updatedAfter)}`;
     }
     
-    const response = await fetch(url, {
-      headers: {
-        'Authorization': `Token ${READWISE_TOKEN}`
-      }
-    });
+    // Retry logic with exponential backoff for rate limiting
+    let response;
+    let retries = 0;
+    const maxRetries = 5;
     
-    if (!response.ok) {
-      throw new Error(`Failed to fetch documents: ${response.status} ${response.statusText}`);
+    while (retries < maxRetries) {
+      try {
+        response = await fetch(url, {
+          headers: {
+            'Authorization': `Token ${READWISE_TOKEN}`
+          }
+        });
+        
+        if (response.status === 429) {
+          // Rate limited - wait and retry
+          const waitTime = Math.pow(2, retries) * 1000; // Exponential backoff: 1s, 2s, 4s, 8s, 16s
+          console.log(`  Rate limited (429). Waiting ${waitTime/1000}s before retry ${retries + 1}/${maxRetries}...`);
+          await new Promise(resolve => setTimeout(resolve, waitTime));
+          retries++;
+          continue;
+        }
+        
+        if (!response.ok) {
+          throw new Error(`Failed to fetch documents: ${response.status} ${response.statusText}`);
+        }
+        
+        break; // Success, exit retry loop
+      } catch (error) {
+        if (retries === maxRetries - 1) {
+          throw error;
+        }
+        retries++;
+        const waitTime = Math.pow(2, retries) * 1000;
+        console.log(`  Request failed. Waiting ${waitTime/1000}s before retry ${retries + 1}/${maxRetries}...`);
+        await new Promise(resolve => setTimeout(resolve, waitTime));
+      }
     }
     
     const data = await response.json();
@@ -121,9 +149,9 @@ async function fetchDocuments(updatedAfter?: string): Promise<ReaderDocument[]> 
     pageCursor = data.nextPageCursor;
     hasMore = !!pageCursor;
     
-    // Rate limiting
+    // Rate limiting: add delay between requests to avoid 429 errors
     if (hasMore) {
-      await new Promise(resolve => setTimeout(resolve, 1000));
+      await new Promise(resolve => setTimeout(resolve, 1500)); // 1.5s delay between pages
     }
   }
   
@@ -283,7 +311,7 @@ function filterByTag(documents: ReaderDocument[]): ReaderDocument[] {
     console.log(`✓ Filtered to ${filtered.length} documents with tag "${READWISE_TAG_FILTER}"`);
     
     if (filtered.length > 0) {
-      console.log(`  Found documents:`, filtered.slice(0, 10).map(d => d.title.substring(0, 60)));
+      console.log(`  Found documents:`, filtered.slice(0, 10).map(d => (d.title || 'Untitled').substring(0, 60)));
     }
     
     return filtered;
@@ -301,7 +329,7 @@ function filterByTag(documents: ReaderDocument[]): ReaderDocument[] {
   console.log(`✓ Filtered to ${filtered.length} documents with tags: ${INCLUDE_TAGS.join(', ')}`);
   
   if (filtered.length > 0) {
-    console.log(`  Found documents:`, filtered.slice(0, 10).map(d => d.title.substring(0, 60)));
+    console.log(`  Found documents:`, filtered.slice(0, 10).map(d => (d.title || 'Untitled').substring(0, 60)));
   }
   
   return filtered;
