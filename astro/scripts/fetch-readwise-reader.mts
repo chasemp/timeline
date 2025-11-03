@@ -367,18 +367,22 @@ function getLatestTimestamp(entries: TimelineEntry[]): string | undefined {
   }
   
   // Use the timestamp from when we last fetched, which we'll store in metadata
-  // For backward compatibility, check if any entry has last_fetched metadata
-  const lastFetched = entries.find(e => e.metadata?.last_fetched)?.metadata?.last_fetched;
+  // Find the MOST RECENT last_fetched timestamp (not just the first one found)
+  const entriesWithLastFetched = entries
+    .filter(e => e.metadata?.last_fetched)
+    .map(e => new Date(e.metadata!.last_fetched!).getTime());
   
-  if (lastFetched) {
-    const fetchDate = new Date(lastFetched).toISOString();
-    const daysBack = Math.ceil((Date.now() - new Date(lastFetched).getTime()) / (24 * 60 * 60 * 1000));
+  if (entriesWithLastFetched.length > 0) {
+    const maxLastFetched = Math.max(...entriesWithLastFetched);
+    const fetchDate = new Date(maxLastFetched).toISOString();
+    const daysBack = Math.ceil((Date.now() - maxLastFetched) / (24 * 60 * 60 * 1000));
     console.log(`   Last fetch was ${daysBack} day(s) ago`);
     return fetchDate;
   }
   
   // Fallback: Find the most recent saved_at timestamp from existing entries
   // This ensures we don't miss articles on the first run after this fix
+  // BUT: We don't cap at 30 days here because we want to catch old articles that were recently tagged
   const latest = entries.reduce((max, entry) => {
     const entryTime = new Date(entry.timestamp).getTime();
     return entryTime > max ? entryTime : max;
@@ -388,9 +392,10 @@ function getLatestTimestamp(entries: TimelineEntry[]): string | undefined {
     return undefined;
   }
   
-  // Cap at 30 days ago maximum to avoid fetching too much on first run
-  const thirtyDaysAgo = Date.now() - (30 * 24 * 60 * 60 * 1000);
-  const fetchFromTime = Math.max(latest, thirtyDaysAgo);
+  // Use the latest entry timestamp, but go back a bit more to catch recently tagged articles
+  // We'll fetch from 90 days before the latest entry to catch articles tagged retroactively
+  const ninetyDaysAgo = Date.now() - (90 * 24 * 60 * 60 * 1000);
+  const fetchFromTime = Math.max(latest - (7 * 24 * 60 * 60 * 1000), ninetyDaysAgo); // Go back 7 days from latest OR 90 days ago, whichever is more recent
   
   // Return ISO string
   const fetchDate = new Date(fetchFromTime).toISOString();
@@ -398,6 +403,7 @@ function getLatestTimestamp(entries: TimelineEntry[]): string | undefined {
   // Log how far back we're fetching
   const daysBack = Math.ceil((Date.now() - fetchFromTime) / (24 * 60 * 60 * 1000));
   console.log(`   Last fetch was ${daysBack} day(s) ago (estimated from last saved article)`);
+  console.log(`   ⚠️  Note: This is a fallback - entries should have last_fetched metadata for accurate delta fetches`);
   
   return fetchDate;
 }
@@ -423,9 +429,19 @@ async function main() {
     let updatedAfter: string | undefined = undefined;
     
     if (!READWISE_FULL_FETCH && existing.length > 0) {
-      updatedAfter = getLatestTimestamp(existing);
-      if (updatedAfter) {
-        console.log(`🔄 Delta fetch mode: fetching documents updated after ${updatedAfter}`);
+      const lastFetchedTime = getLatestTimestamp(existing);
+      if (lastFetchedTime) {
+        // When filtering by tags, we need to fetch a wider window because:
+        // 1. Articles can be tagged with 'classic'/'pub' long after they were saved
+        // 2. Tag changes might not update the document's 'updated' timestamp in Readwise
+        // So we fetch from 90 days before last_fetched to catch recently-tagged articles
+        const ninetyDaysAgo = Date.now() - (90 * 24 * 60 * 60 * 1000);
+        const lastFetchedDate = new Date(lastFetchedTime);
+        const fetchFromDate = new Date(Math.min(lastFetchedDate.getTime(), ninetyDaysAgo));
+        
+        updatedAfter = fetchFromDate.toISOString();
+        const daysWindow = Math.ceil((Date.now() - fetchFromDate.getTime()) / (24 * 60 * 60 * 1000));
+        console.log(`🔄 Delta fetch mode: fetching documents updated after ${updatedAfter} (${daysWindow} day window to catch recently-tagged articles)`);
       }
     } else if (READWISE_FULL_FETCH) {
       console.log(`🔄 Full fetch mode: fetching ALL documents (READWISE_FULL_FETCH=true)`);
