@@ -51,7 +51,7 @@ const formatShortDate = (timestamp: string) => {
     </li>
     
     {sorted.map((item) => (
-      <li class={`row type-${item.type}`} data-type={item.type} data-id={item.id} data-hashtags={item.hashtags?.join(',') || ''}>
+      <li id={`node-${item.id.replace(/[^a-zA-Z0-9-]/g, '-')}`} class={`row type-${item.type}`} data-type={item.type} data-id={item.id} data-hashtags={item.hashtags?.join(',') || ''}>
         <div class="spine">
           <span class="dot" data-dot-type={item.type} data-timestamp={item.timestamp} title={new Date(item.timestamp).toLocaleString()}></span>
         </div>
@@ -112,7 +112,8 @@ const formatShortDate = (timestamp: string) => {
   .reset-link { color: var(--accent); text-decoration: underline; cursor: pointer; font-weight: 600; }
   .reset-link:hover { opacity: 0.8; }
   .list { list-style: none; margin: 0; padding: 0; position: relative; }
-  .row { display: grid; grid-template-columns: 24px 1fr; gap: 12px; align-items: start; margin: 12px 0; }
+  .row { display: grid; grid-template-columns: 24px 1fr; gap: 12px; align-items: start; margin: 12px 0; transition: background-color 0.3s ease; }
+  .row.node-highlighted { background-color: rgba(193, 122, 79, 0.15); border-radius: 8px; padding: 8px; margin: 4px 0; }
   .spine { position: relative; height: 100%; }
   .spine::before { content: ""; position: absolute; top: 0; bottom: 0; left: 11px; width: 2px; background: var(--spine); }
   .dot { position: absolute; left: 5px; top: 10px; width: 12px; height: 12px; border-radius: 50%; background: var(--accent); box-shadow: 0 0 0 3px var(--bg); cursor: pointer; transition: transform 0.2s, box-shadow 0.2s; border: 1px solid rgba(0,0,0,0.1); }
@@ -464,9 +465,35 @@ const formatShortDate = (timestamp: string) => {
       loadGiscus(id);
     }
     
-    const p = new URLSearchParams(location.search); 
-    p.set('id', id); 
-    history.replaceState({}, '', `?${p.toString()}`);
+    // Scroll to the node and update URL with hash
+    const nodeId = `node-${id.replace(/[^a-zA-Z0-9-]/g, '-')}`;
+    const nodeElement = document.getElementById(nodeId);
+    if (nodeElement) {
+      // Wait a bit for panel to open, then scroll
+      setTimeout(() => {
+        // Calculate offset for sticky header (if exists)
+        const headerOffset = 150; // Approximate height of sticky controls
+        const elementPosition = nodeElement.getBoundingClientRect().top;
+        const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+        
+        window.scrollTo({
+          top: offsetPosition,
+          behavior: 'smooth'
+        });
+        
+        // Add a visual highlight temporarily
+        nodeElement.classList.add('node-highlighted');
+        setTimeout(() => {
+          nodeElement.classList.remove('node-highlighted');
+        }, 2000);
+      }, 300);
+    }
+    
+    // Update URL with hash anchor (preserve query params)
+    const p = new URLSearchParams(location.search);
+    const hash = `#${nodeId}`;
+    const newUrl = p.toString() ? `?${p.toString()}${hash}` : hash;
+    history.replaceState({}, '', newUrl);
   }
 
   function loadGiscus(nodeId: string) {
@@ -547,9 +574,11 @@ const formatShortDate = (timestamp: string) => {
     panelSourceWrapper.setAttribute('hidden', '');
     panelContent.innerHTML = introHTML;
     closeBtn.setAttribute('hidden', '');
-    const p = new URLSearchParams(location.search); 
-    p.delete('id'); 
-    history.replaceState({}, '', `?${p.toString()}`);
+    
+    // Remove hash from URL (preserve query params)
+    const p = new URLSearchParams(location.search);
+    const newUrl = p.toString() ? `?${p.toString()}` : location.pathname;
+    history.replaceState({}, '', newUrl);
   }
 
   function checkCommentsDisabled(entry: any): boolean {
@@ -716,8 +745,38 @@ const formatShortDate = (timestamp: string) => {
     d.addEventListener('mouseleave', hideDotTooltip);
   });
 
-  const selectedId = params.get('id');
-  if (selectedId) openPanelFor(selectedId);
+  // Handle hash navigation (anchor links)
+  function handleHashNavigation() {
+    const hash = location.hash;
+    if (hash && hash.startsWith('#node-')) {
+      // Find the node element directly by ID
+      const nodeElement = document.querySelector(hash);
+      if (nodeElement) {
+        const rowId = (nodeElement as HTMLElement).dataset.id;
+        if (rowId) {
+          // Small delay to ensure DOM is ready
+          setTimeout(() => {
+            openPanelFor(rowId);
+          }, 100);
+          return;
+        }
+      }
+    }
+    
+    // Fallback to query param for backwards compatibility
+    const selectedId = params.get('id');
+    if (selectedId) {
+      setTimeout(() => {
+        openPanelFor(selectedId);
+      }, 100);
+    }
+  }
+  
+  // Handle hash changes
+  window.addEventListener('hashchange', handleHashNavigation);
+  
+  // Handle initial load
+  handleHashNavigation();
 </script>
 
 <style>
@@ -730,7 +789,8 @@ const formatShortDate = (timestamp: string) => {
   .reset-link { color: var(--accent); text-decoration: underline; cursor: pointer; font-weight: 600; }
   .reset-link:hover { opacity: 0.8; }
   .list { list-style: none; margin: 0; padding: 0; position: relative; }
-  .row { display: grid; grid-template-columns: 24px 1fr; gap: 12px; align-items: start; margin: 12px 0; }
+  .row { display: grid; grid-template-columns: 24px 1fr; gap: 12px; align-items: start; margin: 12px 0; transition: background-color 0.3s ease; }
+  .row.node-highlighted { background-color: rgba(193, 122, 79, 0.15); border-radius: 8px; padding: 8px; margin: 4px 0; }
   .spine { position: relative; height: 100%; }
   .spine::before { content: ""; position: absolute; top: 0; bottom: 0; left: 11px; width: 2px; background: var(--spine); }
   .dot { position: absolute; left: 5px; top: 10px; width: 12px; height: 12px; border-radius: 50%; background: var(--accent); box-shadow: 0 0 0 3px var(--bg); cursor: pointer; transition: transform 0.2s, box-shadow 0.2s; border: 1px solid rgba(0,0,0,0.1); }
