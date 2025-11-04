@@ -3,8 +3,8 @@
     "title": "Chase Pettet's Timeline",
     "description": "A timeline of my public online activity",
     "site": "https://timeline.523.life",
-    "total_items": 175,
-    "generated_at": "2025-11-04T02:54:58.295Z",
+    "total_items": 178,
+    "generated_at": "2025-11-04T02:57:31.638Z",
     "types": [
       "bluesky",
       "pixelfed",
@@ -2298,6 +2298,29 @@
       }
     },
     {
+      "id": "blog:aivss-scoring-system-for-owasp-agentic-ai-core-security-risks-v05",
+      "type": "blog",
+      "source": "markdown",
+      "timestamp": "2025-07-28T00:00:00.000Z",
+      "title": "AIVSS Scoring System For OWASP Agentic AI Core Security Risks v0.5",
+      "summary": "",
+      "url": "/Blog/aivss-scoring-system-for-owasp-agentic-ai-core-security-risks-v05/",
+      "canonical_url": "/Blog/aivss-scoring-system-for-owasp-agentic-ai-core-security-risks-v05/",
+      "author": null,
+      "tags": [
+        "Publications",
+        "OWASP",
+        "AI",
+        "Security"
+      ],
+      "media": [],
+      "content_html": "<p>This foundational document introduces the OWASP AI Vulnerability Scoring System (AIVSS), a standardized framework for assessing and quantifying security risks in AI systems, with a specific focus on agentic AI architectures. Version 0.5 represents the initial release of our comprehensive scoring methodology.  Chase Pettet | Life360 | Key Contributor/Reviewer</p>\n<p><a href=\"https://aivss.owasp.org/\">Read the publication →</a></p>\n",
+      "content_text": null,
+      "embed_uri": null,
+      "embed_cid": null,
+      "metadata": null
+    },
+    {
       "id": "readwise:01jxth32m8s6prktn2rsewfm3v",
       "type": "saved",
       "source": null,
@@ -2860,6 +2883,28 @@
       }
     },
     {
+      "id": "blog:97-things-every-information-security-professional-should-know-its-not-about-the-tools",
+      "type": "blog",
+      "source": "markdown",
+      "timestamp": "2021-05-18T00:00:00.000Z",
+      "title": "97 Things Every Information Security Professional Should Know -- It's Not About The Tools",
+      "summary": "",
+      "url": "/Blog/97-things-every-information-security-professional-should-know-its-not-about-the-tools/",
+      "canonical_url": "/Blog/97-things-every-information-security-professional-should-know-its-not-about-the-tools/",
+      "author": null,
+      "tags": [
+        "Publications",
+        "O'Reilly",
+        "Security"
+      ],
+      "media": [],
+      "content_html": "<p>Essay in the 97 Things O&#39;Reilly series for Information Security professionals.  Topic is the importance of shared objectives between security and the business aligned with risk oriented decision making.</p>\n<p><a href=\"https://www.oreilly.com/library/view/97-things-every/9781098101381/#toc\">Read the publication →</a></p>\n",
+      "content_text": null,
+      "embed_uri": null,
+      "embed_cid": null,
+      "metadata": null
+    },
+    {
       "id": "wikipedia:1016683443",
       "type": "wikipedia",
       "source": null,
@@ -2906,6 +2951,29 @@
         "size_delta": 21,
         "comment": "/* Tom Everett Scott */"
       }
+    },
+    {
+      "id": "blog:cncf-cloud-native-security-whitepaper-10",
+      "type": "blog",
+      "source": "markdown",
+      "timestamp": "2020-11-18T00:00:00.000Z",
+      "title": "CNCF Cloud Native Security Whitepaper (1.0)",
+      "summary": "",
+      "url": "/Blog/cncf-cloud-native-security-whitepaper-10/",
+      "canonical_url": "/Blog/cncf-cloud-native-security-whitepaper-10/",
+      "author": null,
+      "tags": [
+        "Publications",
+        "CNCF",
+        "Cloud Native",
+        "Security"
+      ],
+      "media": [],
+      "content_html": "<p>The CNCF Security Special Interest Group (SIG) has just released a new Cloud Native Security Whitepaper to help educate the community about best practices for securing cloud native deployments. The whitepaper intends to provide organizations and their technical leadership with a clear understanding of cloud native security, its incorporation in lifecycle processes, and considerations for determining the most appropriate application thereof.</p>\n<p><a href=\"https://github.com/cncf/sig-security/blob/master/security-whitepaper/CNCF_cloud-native-security-whitepaper-Nov2020.pdf\">Read the publication →</a></p>\n",
+      "content_text": null,
+      "embed_uri": null,
+      "embed_cid": null,
+      "metadata": null
     },
     {
       "id": "wikipedia:973843581",
