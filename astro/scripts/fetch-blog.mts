@@ -31,7 +31,11 @@ async function readMarkdownFiles(dir: string) {
       const isBlogPost = categories.includes('Blog');
       
       if (isBlogPost) {
+        // Local blog URL for navigation
         const url = fm.permalink || `/${(fm.categories && fm.categories[0]) ? fm.categories[0] + '/' : ''}${slug}/`;
+        // Original source URL (LinkedIn, etc.) - preserve if present
+        const canonicalUrl = fm.url || fm.canonical_url || url;
+        
         entries.push({
           id: `blog:${slug}`,
           type: 'blog',
@@ -40,6 +44,7 @@ async function readMarkdownFiles(dir: string) {
           title: fm.title || slug,
           summary: fm.description || '',
           url,
+          canonical_url: canonicalUrl,
           tags: fm.tags || [],
           content_html: html,
           author: fm.author ? { name: fm.author } : undefined,

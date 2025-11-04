@@ -51,6 +51,9 @@ function shouldDisableComments(post: any): boolean {
     </nav>
     <div class="meta">
       <span class="type">{post.type}</span> · <time datetime={post.timestamp}>{new Date(post.timestamp).toLocaleDateString()}</time>
+      {post.canonical_url && !post.canonical_url.startsWith('/') && (
+        <> | <a href={post.canonical_url} target="_blank" rel="noopener">Source ↗</a></>
+      )}
     </div>
     <h1>{post.title}</h1>
   </header>
@@ -65,7 +68,9 @@ function shouldDisableComments(post: any): boolean {
 
   <footer class="post-footer">
     <a href="/" class="back-link">← Back to timeline</a>
-    {post.url && <a href={post.url} target="_blank" rel="noopener">Original post ↗</a>}
+    {post.canonical_url && !post.canonical_url.startsWith('/') && (
+      <a href={post.canonical_url} target="_blank" rel="noopener">Original post ↗</a>
+    )}
   </footer>
 </main>
 
