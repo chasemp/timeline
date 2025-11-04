@@ -156,6 +156,10 @@ const allHashtags = Object.entries(hashtagCounts)
     <section class="controls" aria-label="Filters">
       <div class="search-and-labels">
         <div id="search-container" class="search-container"></div>
+        <div class="results-count" id="results-count" hidden>
+          <span class="results-count-number" id="results-count-number">0</span>
+          <span class="results-count-label">results</span>
+        </div>
         {allHashtags.length > 0 && (
           <div class="hashtag-dropdown-wrapper">
             <button class="hashtag-dropdown-button" id="hashtag-dropdown-btn" aria-haspopup="listbox" aria-expanded="false">
@@ -295,7 +299,10 @@ const allHashtags = Object.entries(hashtagCounts)
   .home-link:hover { opacity: 0.7; text-decoration: underline; }
   .controls { position: sticky; top: 0; background: var(--bg); padding: 12px 0; z-index: 10; backdrop-filter: blur(8px); margin-bottom: 12px; min-height: 120px; border-bottom: 1px solid transparent; }
   .search-and-labels { display: flex; gap: 12px; align-items: center; margin-bottom: 12px; max-width: 700px; margin-left: auto; margin-right: auto; min-height: 48px; }
-  .search-container { flex: 1; min-width: 200px; min-height: 40px; }
+  .search-container { flex: 1; min-width: 200px; max-width: 450px; min-height: 40px; }
+  .results-count { display: flex; align-items: center; gap: 4px; color: var(--muted); font-size: 14px; font-family: system-ui, sans-serif; white-space: nowrap; }
+  .results-count-number { font-weight: 600; color: var(--accent); }
+  .results-count-label { opacity: 0.8; }
   .filters-wrapper { display: flex; gap: 16px; align-items: center; justify-content: center; flex-wrap: wrap; }
   .filter-actions { display: flex; gap: 8px; align-items: center; }
   .filter-separator { color: var(--muted); font-size: 14px; }
