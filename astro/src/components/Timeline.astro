@@ -921,12 +921,39 @@ const formatShortDate = (timestamp: string) => {
   .tooltip-meta { font-size: 12px; color: var(--muted); font-family: system-ui, sans-serif; }
   
   /* YouTube video embed */
-  .video-embed { margin: 20px 0; }
-  .video-embed iframe { width: 100%; max-width: 100%; height: auto; aspect-ratio: 16 / 9; border-radius: 8px; }
+  .video-embed { 
+    margin: 20px 0; 
+    max-width: 100%;
+    overflow: hidden;
+    box-sizing: border-box;
+  }
+  .video-embed iframe { 
+    width: 100% !important; 
+    max-width: 100% !important; 
+    height: auto !important; 
+    aspect-ratio: 16 / 9; 
+    border-radius: 8px;
+    box-sizing: border-box;
+  }
   
   /* Detail media (images from Pixelfed/Bluesky) */
-  .detail-media { margin: 20px 0; }
-  .detail-media img { width: 100%; max-width: 100%; height: auto; border-radius: 8px; margin: 12px 0; border: 1px solid var(--border); display: block; }
+  .detail-media { 
+    margin: 20px 0; 
+    max-width: 100%;
+    overflow: hidden;
+    box-sizing: border-box;
+  }
+  .detail-media img { 
+    width: 100% !important; 
+    max-width: 100% !important; 
+    height: auto !important; 
+    border-radius: 8px; 
+    margin: 12px 0; 
+    border: 1px solid var(--border); 
+    display: block; 
+    object-fit: contain;
+    box-sizing: border-box;
+  }
   .detail-media img:first-child { margin-top: 0; }
   .detail-media img:last-child { margin-bottom: 0; }
   
