@@ -221,6 +221,19 @@ const formatShortDate = (timestamp: string) => {
     const visibleRows = Array.from(document.querySelectorAll('.row:not(.today-marker)') as NodeListOf<HTMLElement>)
       .filter(row => row.style.display !== 'none');
     
+    // Update results count
+    const resultsCountEl = document.getElementById('results-count');
+    const resultsCountNumber = document.getElementById('results-count-number');
+    if (resultsCountEl && resultsCountNumber) {
+      const count = visibleRows.length;
+      resultsCountNumber.textContent = count.toString();
+      if (count > 0) {
+        resultsCountEl.removeAttribute('hidden');
+      } else {
+        resultsCountEl.setAttribute('hidden', '');
+      }
+    }
+    
     if (visibleRows.length === 0) {
       emptyState?.removeAttribute('hidden');
       timelineList?.setAttribute('hidden', '');
