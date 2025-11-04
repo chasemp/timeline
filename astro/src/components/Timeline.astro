@@ -344,8 +344,13 @@ const formatShortDate = (timestamp: string) => {
     panelTitleText.textContent = `${typeDisplayName} · ${shortDate}`;
     
     // Show/hide and update source link
-    if (entry.url) {
-      panelSource.href = entry.url;
+    // Use canonical_url for external sources (LinkedIn, etc.), fallback to url if external
+    const sourceUrl = entry.canonical_url && !entry.canonical_url.startsWith('/') 
+      ? entry.canonical_url 
+      : (entry.url && !entry.url.startsWith('/') ? entry.url : null);
+    
+    if (sourceUrl) {
+      panelSource.href = sourceUrl;
       panelSourceWrapper.removeAttribute('hidden');
     } else {
       panelSourceWrapper.setAttribute('hidden', '');

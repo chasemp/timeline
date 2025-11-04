@@ -7,6 +7,7 @@
     "title": "Newby Voicemail",
     "summary": "",
     "url": "/Blog/newby-voicemail/",
+    "canonical_url": "/Blog/newby-voicemail/",
     "tags": [
       "voicemail"
     ],
@@ -20,6 +21,7 @@
     "title": "Read JSON in Bash with Python",
     "summary": "",
     "url": "/Blog/reading-json-from-bash-with-python/",
+    "canonical_url": "/Blog/reading-json-from-bash-with-python/",
     "tags": [
       "JSON",
       "Bash",
@@ -35,6 +37,7 @@
     "title": "Convert Cisco Octets to Mbps",
     "summary": "",
     "url": "/Blog/Cisco-Octets-to-Mbps/",
+    "canonical_url": "/Blog/Cisco-Octets-to-Mbps/",
     "tags": [
       "Cisco"
     ],
@@ -48,6 +51,7 @@
     "title": "Settings a modular MOTD in Debian",
     "summary": "",
     "url": "/Blog/motd-debian/",
+    "canonical_url": "/Blog/motd-debian/",
     "tags": [
       "Debian"
     ],
@@ -61,6 +65,7 @@
     "title": "Basic Python JSON REST API Client Example",
     "summary": "",
     "url": "/Blog/Basic-JSON-Python-REST-Client/",
+    "canonical_url": "/Blog/Basic-JSON-Python-REST-Client/",
     "tags": [
       "standard"
     ],
@@ -74,6 +79,7 @@
     "title": "Basic Python Regex Extraction",
     "summary": "",
     "url": "/Blog/Python-Regex/",
+    "canonical_url": "/Blog/Python-Regex/",
     "tags": [
       "Python",
       "Regex"
@@ -88,6 +94,7 @@
     "title": "IOS Granular Permissions",
     "summary": "",
     "url": "/Blog/IOS-permissions/",
+    "canonical_url": "/Blog/IOS-permissions/",
     "tags": [
       "IOS",
       "Cisco",
@@ -103,6 +110,7 @@
     "title": "Halting a KVM guest with virsh",
     "summary": "",
     "url": "/Blog/kvm-virsh-halt/",
+    "canonical_url": "/Blog/kvm-virsh-halt/",
     "tags": [
       "KVM",
       "Linux",
@@ -118,6 +126,7 @@
     "title": "Beginning BGP",
     "summary": "",
     "url": "/Blog/Beginning-BGP/",
+    "canonical_url": "/Blog/Beginning-BGP/",
     "tags": [
       "BGP",
       "Cisco"
@@ -132,6 +141,7 @@
     "title": "Beginning IOS BGP Configuration",
     "summary": "",
     "url": "/Blog/Beginning-BGP-Configuration/",
+    "canonical_url": "/Blog/Beginning-BGP-Configuration/",
     "tags": [
       "Cisco",
       "BGP"
@@ -146,6 +156,7 @@
     "title": "deviantART Registrar Name.com Compromised",
     "summary": "",
     "url": "/Blog/Registrar-Hacked/",
+    "canonical_url": "/Blog/Registrar-Hacked/",
     "tags": [
       "dA"
     ],
@@ -159,6 +170,7 @@
     "title": "Time Machine?",
     "summary": "",
     "url": "/Blog/TimeMachine/",
+    "canonical_url": "/Blog/TimeMachine/",
     "tags": [
       "time",
       "SRE"
@@ -173,6 +185,7 @@
     "title": "Syn Flood Testing",
     "summary": "",
     "url": "/Blog/Syn-Flood-Test/",
+    "canonical_url": "/Blog/Syn-Flood-Test/",
     "tags": [
       "Security",
       "DDOS"
@@ -187,6 +200,7 @@
     "title": "Bash Troubleshooting Boilerplate",
     "summary": "",
     "url": "/Blog/Bash-Troubleshooting-Boilerplate/",
+    "canonical_url": "/Blog/Bash-Troubleshooting-Boilerplate/",
     "tags": [
       "Bash",
       "Linux"
@@ -201,6 +215,7 @@
     "title": "Using Snort on a PCAP file",
     "summary": "",
     "url": "/Blog/Using-SNORT-on-PCAP/",
+    "canonical_url": "/Blog/Using-SNORT-on-PCAP/",
     "tags": [
       "Security",
       "Snort",
@@ -216,6 +231,7 @@
     "title": "Simple Site Loadtesting",
     "summary": "",
     "url": "/Blog/Simple-Site-Loadtesting/",
+    "canonical_url": "/Blog/Simple-Site-Loadtesting/",
     "tags": [
       "Security"
     ],
@@ -229,6 +245,7 @@
     "title": "SUP Intro DevOpsKC",
     "summary": "",
     "url": "/Blog/SUP-devopskc/",
+    "canonical_url": "/Blog/SUP-devopskc/",
     "tags": [
       "SUP",
       "devops"
@@ -243,6 +260,7 @@
     "title": "Python monitoring end-to-end with Diamond, Statsd and Graphite",
     "summary": "",
     "url": "/Blog/Python-Diamon-Statsd/",
+    "canonical_url": "/Blog/Python-Diamon-Statsd/",
     "tags": [
       "Python",
       "Statsd",
@@ -258,6 +276,7 @@
     "title": "Seeking Help On The Internet",
     "summary": "",
     "url": "/Blog/Asking-for-help/",
+    "canonical_url": "/Blog/Asking-for-help/",
     "tags": [
       "Internet",
       "Security"
@@ -272,6 +291,7 @@
     "title": "Post Mortem Archive",
     "summary": "",
     "url": "/Blog/post-mortem-archive/",
+    "canonical_url": "/Blog/post-mortem-archive/",
     "tags": [
       "Incident Response",
       "Security"
@@ -286,6 +306,7 @@
     "title": "Specialty Packet Capture",
     "summary": "",
     "url": "/Blog/specialty-packet-capture/",
+    "canonical_url": "/Blog/specialty-packet-capture/",
     "tags": [
       "standard"
     ],
@@ -299,6 +320,7 @@
     "title": "Recommendation for Aaron Blythe",
     "summary": "",
     "url": "/Blog/recommendation-for-aaron-blythe/",
+    "canonical_url": "/Blog/recommendation-for-aaron-blythe/",
     "tags": [
       "Recommendations",
       "LinkedIn"
@@ -313,6 +335,7 @@
     "title": "Recommendation for Chris Stein",
     "summary": "",
     "url": "/Blog/recommendation-for-chris-stein/",
+    "canonical_url": "/Blog/recommendation-for-chris-stein/",
     "tags": [
       "Recommendations",
       "LinkedIn"
@@ -327,6 +350,7 @@
     "title": "DevOpsDays KC 2017 is in 2 weeks.  2016 was great.",
     "summary": "",
     "url": "/Blog/linkedin-post-devopsdays-kc-2017-is-in-2-weeks-2016-was-great/",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn%3Ali%3Ashare%3A6311891655834288128",
     "tags": [
       "LinkedIn",
       "Posts"
@@ -341,6 +365,7 @@
     "title": "DevOpsDays KC 2018 is in 5 weeks.  2016 and 2017 were amazing.",
     "summary": "",
     "url": "/Blog/linkedin-post-devopsdays-kc-2018-is-in-5-weeks-2016-and-2017-w/",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn%3Ali%3Ashare%3A6445001499415232512",
     "tags": [
       "LinkedIn",
       "Posts"
@@ -355,6 +380,7 @@
     "title": "Risk treatment and cloud provider relationships is such an interesting area of ERM practice.",
     "summary": "",
     "url": "/Blog/linkedin-post-risk-treatment-and-cloud-provider-relationships-is/",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn%3Ali%3Ashare%3A6592425927962095617",
     "tags": [
       "LinkedIn",
       "Posts"
@@ -369,6 +395,7 @@
     "title": "John is a great person to work with.",
     "summary": "",
     "url": "/Blog/linkedin-post-john-is-a-great-person-to-work-with/",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn%3Ali%3Ashare%3A6596457074798977024",
     "tags": [
       "LinkedIn",
       "Posts"
@@ -383,6 +410,7 @@
     "title": "This is important.",
     "summary": "",
     "url": "/Blog/linkedin-post-this-is-important/",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn%3Ali%3Ashare%3A6621420765239738368",
     "tags": [
       "LinkedIn",
       "Posts"
@@ -397,6 +425,7 @@
     "title": "#transparency",
     "summary": "",
     "url": "/Blog/linkedin-post-transparency/",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn%3Ali%3Ashare%3A6666394772648837120",
     "tags": [
       "LinkedIn",
       "Posts"
@@ -411,6 +440,7 @@
     "title": "A great read.",
     "summary": "",
     "url": "/Blog/linkedin-post-a-great-read/",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn%3Ali%3Ashare%3A6678673311209152512",
     "tags": [
       "LinkedIn",
       "Posts"
@@ -425,6 +455,7 @@
     "title": "I had the pleasure of speaking with the folks at The New Stack recently about Cloud Native and related topics.",
     "summary": "",
     "url": "/Blog/linkedin-post-i-had-the-pleasure-of-speaking-with-the-folks-at-t/",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn%3Ali%3Ashare%3A6684141656867946496",
     "tags": [
       "LinkedIn",
       "Posts"
@@ -439,6 +470,7 @@
     "title": "https://lnkd.",
     "summary": "",
     "url": "/Blog/linkedin-post-httpslnkd/",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn%3Ali%3Ashare%3A6689209806244446209",
     "tags": [
       "LinkedIn",
       "Posts"
@@ -453,6 +485,7 @@
     "title": "This is one of the most gracious and ambitious teams at one of the most interesting places you can work.",
     "summary": "",
     "url": "/Blog/linkedin-post-this-is-one-of-the-most-gracious-and-ambitious-tea/",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn%3Ali%3Ashare%3A6697319287138455552",
     "tags": [
       "LinkedIn",
       "Posts"
@@ -467,6 +500,7 @@
     "title": "This has been my experience, but it's valuable to have some objective data.",
     "summary": "",
     "url": "/Blog/linkedin-post-this-has-been-my-experience-but-its-valuable-to-/",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn%3Ali%3Ashare%3A6714377194443030528",
     "tags": [
       "LinkedIn",
       "Posts"
@@ -481,6 +515,7 @@
     "title": "The list of Kubernetes things.  Shoutout to Lens especially.",
     "summary": "",
     "url": "/Blog/linkedin-post-the-list-of-kubernetes-things-shoutout-to-lens-e/",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn%3Ali%3Ashare%3A6721579201234915328",
     "tags": [
       "LinkedIn",
       "Posts"
@@ -495,6 +530,7 @@
     "title": "https://lnkd.",
     "summary": "",
     "url": "/Blog/linkedin-post-httpslnkd/",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn%3Ali%3AgroupPost%3A8978770-6731658506807730176",
     "tags": [
       "LinkedIn",
       "Posts"
@@ -509,6 +545,7 @@
     "title": "#kubernetes",
     "summary": "",
     "url": "/Blog/linkedin-post-kubernetes/",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn%3Ali%3Ashare%3A6732810457582841856",
     "tags": [
       "LinkedIn",
       "Posts"
@@ -523,6 +560,7 @@
     "title": "#databreach #privacy \"\nGizmodo: Ticketmaster Fined More Than $1.6 Million Following 2018 Data Breach. \"https://lnkd.in/gKJBAQz",
     "summary": "",
     "url": "/Blog/linkedin-post-databreach-privacy-gizmodo-ticketmaster-fine/",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn%3Ali%3Ashare%3A6733723538336944128",
     "tags": [
       "LinkedIn",
       "Posts"
@@ -537,6 +575,7 @@
     "title": "CNCF Cloud Native Security Whitepaper (1.0)",
     "summary": "",
     "url": "/Blog/cncf-cloud-native-security-whitepaper-10/",
+    "canonical_url": "https://github.com/cncf/sig-security/blob/master/security-whitepaper/CNCF_cloud-native-security-whitepaper-Nov2020.pdf",
     "tags": [
       "Publications",
       "CNCF",
@@ -553,6 +592,7 @@
     "title": "The CKS finally landed :)  A really neat and valuable experience working with the Linux Foundation staff.",
     "summary": "",
     "url": "/Blog/linkedin-post-the-cks-finally-landed-a-really-neat-and-valua/",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn%3Ali%3Ashare%3A6735669379712872448",
     "tags": [
       "LinkedIn",
       "Posts"
@@ -567,6 +607,7 @@
     "title": "I really think Aqua's Starboard is awesome, and the integration here with Lens is sweet.  FLOSS love.",
     "summary": "",
     "url": "/Blog/linkedin-post-i-really-think-aquas-starboard-is-awesome-and-th/",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn%3Ali%3Ashare%3A6740334201750609920",
     "tags": [
       "LinkedIn",
       "Posts"
@@ -581,6 +622,7 @@
     "title": "I swear I have no affiliation with Aqua :D. Second share of their stuff of the day.  But this is slick and scary.",
     "summary": "",
     "url": "/Blog/linkedin-post-i-swear-i-have-no-affiliation-with-aqua-d-second/",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn%3Ali%3Ashare%3A6740337228486189056",
     "tags": [
       "LinkedIn",
       "Posts"
@@ -595,6 +637,7 @@
     "title": "I'm interested in the framing of start left vs shift left.",
     "summary": "",
     "url": "/Blog/linkedin-post-im-interested-in-the-framing-of-start-left-vs-shi/",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn%3Ali%3Ashare%3A6744356149040181248",
     "tags": [
       "LinkedIn",
       "Posts"
@@ -609,6 +652,7 @@
     "title": "I found a lot of value in the description here.",
     "summary": "",
     "url": "/Blog/linkedin-post-i-found-a-lot-of-value-in-the-description-here/",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn%3Ali%3AugcPost%3A6744630497852452864",
     "tags": [
       "LinkedIn",
       "Posts"
@@ -623,6 +667,7 @@
     "title": "Here's to focusing on the fundamentals in a new year.",
     "summary": "",
     "url": "/Blog/linkedin-post-heres-to-focusing-on-the-fundamentals-in-a-new-ye/",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn%3Ali%3Ashare%3A6750873756236947456",
     "tags": [
       "LinkedIn",
       "Posts"
@@ -637,6 +682,7 @@
     "title": "Recommended by Adrian Ionel.   An extremely interesting breakdown on thinking about products, growth, and innovation.",
     "summary": "",
     "url": "/Blog/linkedin-post-recommended-by-adrian-ionel-an-extremely-intere/",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn%3Ali%3Ashare%3A6751920932811608064",
     "tags": [
       "LinkedIn",
       "Posts"
@@ -651,6 +697,7 @@
     "title": "Second NIST OSCAL workshop today and tomorrow.https://lnkd.",
     "summary": "",
     "url": "/Blog/linkedin-post-second-nist-oscal-workshop-today-and-tomorrowhttp/",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn%3Ali%3Ashare%3A6762402063163912192",
     "tags": [
       "LinkedIn",
       "Posts"
@@ -665,6 +712,7 @@
     "title": "I'm attending 2021 Q1 Chapter Meeting - FAIR Institute Kansas City Chapter. Would you like to attend?",
     "summary": "",
     "url": "/Blog/linkedin-post-im-attending-2021-q1-chapter-meeting-fair-insti/",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn%3Ali%3AugcPost%3A6764601069315198976",
     "tags": [
       "LinkedIn",
       "Posts"
@@ -679,6 +727,7 @@
     "title": "Google’s CISO’s Guide to Cloud Security Transformation\"\nI liked the walk out of the consolidated vs federated vs hybrid...",
     "summary": "",
     "url": "/Blog/linkedin-post-googles-cisos-guide-to-cloud-security-transforma/",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn%3Ali%3Ashare%3A6767572121016262657",
     "tags": [
       "LinkedIn",
       "Posts"
@@ -693,6 +742,7 @@
     "title": "This looks really cool. ZAP is an invaluable tool in the industry.",
     "summary": "",
     "url": "/Blog/linkedin-post-this-looks-really-cool-zap-is-an-invaluable-tool-/",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn%3Ali%3Ashare%3A6773342939654569984",
     "tags": [
       "LinkedIn",
       "Posts"
@@ -707,6 +757,7 @@
     "title": "Not too many phishing attempts make it through my filters these days, but this one did.",
     "summary": "",
     "url": "/Blog/linkedin-post-not-too-many-phishing-attempts-make-it-through-my-/",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn%3Ali%3Ashare%3A6782311574255341568",
     "tags": [
       "LinkedIn",
       "Posts"
@@ -721,6 +772,7 @@
     "title": "#surveying #kansascitymo",
     "summary": "",
     "url": "/Blog/linkedin-post-surveying-kansascitymo/",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn%3Ali%3Ashare%3A6786307399729983488",
     "tags": [
       "LinkedIn",
       "Posts"
@@ -735,6 +787,7 @@
     "title": "If I click 'unsubscribe' in your email and it does anything other than its namesake I file your company or project away...",
     "summary": "",
     "url": "/Blog/linkedin-post-if-i-click-unsubscribe-in-your-email-and-it-does/",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn%3Ali%3Ashare%3A6793200110064013312",
     "tags": [
       "LinkedIn",
       "Posts"
@@ -749,6 +802,7 @@
     "title": "I learned about https://www.fedtech.",
     "summary": "",
     "url": "/Blog/linkedin-post-i-learned-about-httpswwwfedtech/",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn%3Ali%3Ashare%3A6797954554966237185",
     "tags": [
       "LinkedIn",
       "Posts"
@@ -763,6 +817,7 @@
     "title": "97 Things Every Information Security Professional Should Know -- It's Not About The Tools",
     "summary": "",
     "url": "/Blog/97-things-every-information-security-professional-should-know-its-not-about-the-tools/",
+    "canonical_url": "https://www.oreilly.com/library/view/97-things-every/9781098101381/#toc",
     "tags": [
       "Publications",
       "O'Reilly",
@@ -778,6 +833,7 @@
     "title": "It is ransomware all the way down.",
     "summary": "",
     "url": "/Blog/linkedin-post-it-is-ransomware-all-the-way-down/",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn%3Ali%3Ashare%3A6800398597776121856",
     "tags": [
       "LinkedIn",
       "Posts"
@@ -792,6 +848,7 @@
     "title": "I'm grateful today for the engaging and thoughtful conversation yesterday oriented around Dare To Lead.",
     "summary": "",
     "url": "/Blog/linkedin-post-im-grateful-today-for-the-engaging-and-thoughtful/",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn%3Ali%3AugcPost%3A6800805364817367040",
     "tags": [
       "LinkedIn",
       "Posts"
@@ -806,6 +863,7 @@
     "title": "I was recently sent a role by a recruiter with a novel component.",
     "summary": "",
     "url": "/Blog/linkedin-post-i-was-recently-sent-a-role-by-a-recruiter-with-a-n/",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn%3Ali%3Ashare%3A6803389191628701696",
     "tags": [
       "LinkedIn",
       "Posts"
@@ -820,6 +878,7 @@
     "title": "I have been wondering if there is appetite for putting a new book on the agenda.",
     "summary": "",
     "url": "/Blog/linkedin-post-i-have-been-wondering-if-there-is-appetite-for-put/",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn%3Ali%3AugcPost%3A6810358935732801536",
     "tags": [
       "LinkedIn",
       "Posts"
@@ -834,6 +893,7 @@
     "title": "10 days to submit a CFP for the Cloud Native Security Con :)\"\n\"#security #cloudnative #cloudnativesecurity",
     "summary": "",
     "url": "/Blog/linkedin-post-10-days-to-submit-a-cfp-for-the-cloud-native-secur/",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn%3Ali%3Ashare%3A6821469144509247488",
     "tags": [
       "LinkedIn",
       "Posts"
@@ -848,6 +908,7 @@
     "title": "These interactive video chats are always a blast.",
     "summary": "",
     "url": "/Blog/linkedin-post-these-interactive-video-chats-are-always-a-blast/",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn%3Ali%3AugcPost%3A6821428783044788224",
     "tags": [
       "LinkedIn",
       "Posts"
@@ -862,6 +923,7 @@
     "title": "Ideas on a book for August?  Julie Lavergne you're good at making a final pick.",
     "summary": "",
     "url": "/Blog/linkedin-post-ideas-on-a-book-for-august-julie-lavergne-youre/",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn%3Ali%3AgroupPost%3A13966837-6823651379983343616",
     "tags": [
       "LinkedIn",
       "Posts"
@@ -876,6 +938,7 @@
     "title": "#cloudnativesecurity",
     "summary": "",
     "url": "/Blog/linkedin-post-cloudnativesecurity/",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn%3Ali%3Ashare%3A6825940762585387008",
     "tags": [
       "LinkedIn",
       "Posts"
@@ -890,6 +953,7 @@
     "title": "This book club continues to be insightful and fun.",
     "summary": "",
     "url": "/Blog/linkedin-post-this-book-club-continues-to-be-insightful-and-fun/",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn%3Ali%3AgroupPost%3A13966837-6836002410192875520",
     "tags": [
       "LinkedIn",
       "Posts"
@@ -904,6 +968,7 @@
     "title": "2022 advice",
     "summary": "",
     "url": "/Blog/linkedin-post-2022-advice/",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn%3Ali%3Ashare%3A6884687615765864448",
     "tags": [
       "LinkedIn",
       "Posts"
@@ -918,6 +983,7 @@
     "title": "Cloud Native SecurityCon EU CFP is still open\"\n#CNCF #cloudnativesecurity\n\"https://lnkd.in/da8eXp98",
     "summary": "",
     "url": "/Blog/linkedin-post-cloud-native-securitycon-eu-cfp-is-still-open-c/",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn%3Ali%3Ashare%3A6892178342892957696",
     "tags": [
       "LinkedIn",
       "Posts"
@@ -932,6 +998,7 @@
     "title": "Kubernetes: The Documentary Part 1\"\n\"https://lnkd.in/dfskVhtg",
     "summary": "",
     "url": "/Blog/linkedin-post-kubernetes-the-documentary-part-1-httpslnkd/",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn%3Ali%3Ashare%3A6892868775319072768",
     "tags": [
       "LinkedIn",
       "Posts"
@@ -946,6 +1013,7 @@
     "title": "Hello friends,  are we up for the first meeting of 2022 sometime in March possibly?",
     "summary": "",
     "url": "/Blog/linkedin-post-hello-friends-are-we-up-for-the-first-meeting-of/",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn%3Ali%3AgroupPost%3A13966837-6896832035806167040",
     "tags": [
       "LinkedIn",
       "Posts"
@@ -960,6 +1028,7 @@
     "title": "Our internal GRC(P) team started down the path of introducing https://www.rfpio.com a few months ago.",
     "summary": "",
     "url": "/Blog/linkedin-post-our-internal-grcp-team-started-down-the-path-of-/",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn%3Ali%3Ashare%3A6948299434615083008",
     "tags": [
       "LinkedIn",
       "Posts"
@@ -974,6 +1043,7 @@
     "title": "A annual reflective Labor Day reading.",
     "summary": "",
     "url": "/Blog/linkedin-post-a-annual-reflective-labor-day-reading/",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn%3Ali%3Ashare%3A6972566369670225920",
     "tags": [
       "LinkedIn",
       "Posts"
@@ -988,6 +1058,7 @@
     "title": "Recommendation for Kyle Burk",
     "summary": "",
     "url": "/Blog/recommendation-for-kyle-burk/",
+    "canonical_url": "/Blog/recommendation-for-kyle-burk/",
     "tags": [
       "Recommendations",
       "LinkedIn"
@@ -1002,6 +1073,7 @@
     "title": "I have been thinking a lot about the term \"dogfooding\".  A short hand for the idiom 'Eating your own dogfood'.",
     "summary": "",
     "url": "/Blog/linkedin-post-i-have-been-thinking-a-lot-about-the-term-dogfood/",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn%3Ali%3Ashare%3A6981666689977384960",
     "tags": [
       "LinkedIn",
       "Posts"
@@ -1016,6 +1088,7 @@
     "title": "technical debt: analogies and meanderings",
     "summary": "",
     "url": "/Blog/technical-debt-analogies-and-meanderings/",
+    "canonical_url": "/Blog/technical-debt-analogies-and-meanderings/",
     "tags": [
       "LinkedIn"
     ],
@@ -1029,6 +1102,7 @@
     "title": "Is access to email \"something you have\"​?",
     "summary": "",
     "url": "/Blog/is-access-to-email-something-you-have/",
+    "canonical_url": "/Blog/is-access-to-email-something-you-have/",
     "tags": [
       "LinkedIn"
     ],
@@ -1042,6 +1116,7 @@
     "title": "Pondering email and MFA",
     "summary": "",
     "url": "/Blog/linkedin-post-pondering-email-and-mfa/",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn%3Ali%3AugcPost%3A6991387329357651968",
     "tags": [
       "LinkedIn",
       "Posts"
@@ -1056,6 +1131,7 @@
     "title": "I have no opinion on Elon Musk and Twitter that I want to share, other than I hope the folks laid off find better footin...",
     "summary": "",
     "url": "/Blog/linkedin-post-i-have-no-opinion-on-elon-musk-and-twitter-that-i-/",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn%3Ali%3Ashare%3A6996513060534300672",
     "tags": [
       "LinkedIn",
       "Posts"
@@ -1070,6 +1146,7 @@
     "title": "21 musings from incident response (IR) in my career in infrastructure and security operations",
     "summary": "",
     "url": "/Blog/21-musings-from-incident-response-ir-in-my-career-in-infrastructure-and-security-operations/",
+    "canonical_url": "/Blog/21-musings-from-incident-response-ir-in-my-career-in-infrastructure-and-security-operations/",
     "tags": [
       "LinkedIn"
     ],
@@ -1083,6 +1160,7 @@
     "title": "I started jotting these down and decided to share.",
     "summary": "",
     "url": "/Blog/linkedin-post-i-started-jotting-these-down-and-decided-to-share/",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn%3Ali%3AugcPost%3A7009561557248401408",
     "tags": [
       "LinkedIn",
       "Posts"
@@ -1097,6 +1175,7 @@
     "title": "End of the year reflections are joyous and mournful.  This poem \"Risk\" has me coming back to it today.",
     "summary": "",
     "url": "/Blog/linkedin-post-end-of-the-year-reflections-are-joyous-and-mournfu/",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn%3Ali%3Ashare%3A7013884867968995328",
     "tags": [
       "LinkedIn",
       "Posts"
@@ -1111,6 +1190,7 @@
     "title": "Code generation and open source stricture.",
     "summary": "",
     "url": "/Blog/code-generation-and-open-source-stricture/",
+    "canonical_url": "/Blog/code-generation-and-open-source-stricture/",
     "tags": [
       "LinkedIn"
     ],
@@ -1124,6 +1204,7 @@
     "title": "#codegeneration #opensource #openapi",
     "summary": "",
     "url": "/Blog/linkedin-post-codegeneration-opensource-openapi/",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn%3Ali%3AugcPost%3A7019392696561668096",
     "tags": [
       "LinkedIn",
       "Posts"
@@ -1138,6 +1219,7 @@
     "title": "My daughter of 12 has played soccer, softball, basketball, and now volleyball.",
     "summary": "",
     "url": "/Blog/linkedin-post-my-daughter-of-12-has-played-soccer-softball-bas/",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn%3Ali%3Ashare%3A7109203566766026753",
     "tags": [
       "LinkedIn",
       "Posts"
@@ -1152,6 +1234,7 @@
     "title": "I have had How HTTPS Works in my Omnivore (which I am loving) reading list for awhile now, and it did not disappoint.",
     "summary": "",
     "url": "/Blog/linkedin-post-i-have-had-how-https-works-in-my-omnivore-which-i/",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn%3Ali%3AugcPost%3A7126580114947010560",
     "tags": [
       "LinkedIn",
       "Posts"
@@ -1166,6 +1249,7 @@
     "title": "I'm wondering if the threshold for changes in a mature and stable UI should be:\"\n1) I am sure I am making it better in...",
     "summary": "",
     "url": "/Blog/linkedin-post-im-wondering-if-the-threshold-for-changes-in-a-ma/",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn%3Ali%3Ashare%3A7127143646067400704",
     "tags": [
       "LinkedIn",
       "Posts"
@@ -1180,6 +1264,7 @@
     "title": "I really think it's less about giving 100% than it is giving 100% of what I have to give.",
     "summary": "",
     "url": "/Blog/linkedin-post-i-really-think-its-less-about-giving-100-than-it/",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn%3Ali%3Ashare%3A7132234824911626240",
     "tags": [
       "LinkedIn",
       "Posts"
@@ -1194,6 +1279,7 @@
     "title": "I'm interested in this and it could be a new territory for discussion for a future meeting.",
     "summary": "",
     "url": "/Blog/linkedin-post-im-interested-in-this-and-it-could-be-a-new-terri/",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn%3Ali%3AgroupPost%3A13966837-7138534312827637760",
     "tags": [
       "LinkedIn",
       "Posts"
@@ -1208,6 +1294,7 @@
     "title": "This is my favorite Dr.",
     "summary": "",
     "url": "/Blog/linkedin-post-this-is-my-favorite-dr/",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn%3Ali%3Ashare%3A7152750766925955072",
     "tags": [
       "LinkedIn",
       "Posts"
@@ -1222,6 +1309,7 @@
     "title": "I have no stake in this product or company.",
     "summary": "",
     "url": "/Blog/linkedin-post-i-have-no-stake-in-this-product-or-company/",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn%3Ali%3Ashare%3A7171538990616043520",
     "tags": [
       "LinkedIn",
       "Posts"
@@ -1236,6 +1324,7 @@
     "title": "I wonder if this would be too far outside of this club's scope for a future read?",
     "summary": "",
     "url": "/Blog/linkedin-post-i-wonder-if-this-would-be-too-far-outside-of-this-/",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn%3Ali%3AgroupPost%3A13966837-7190744145299193856",
     "tags": [
       "LinkedIn",
       "Posts"
@@ -1250,6 +1339,7 @@
     "title": "I was at an orchestra performance recently and the conductor paused to acknowledge a colleague who is moving on to other...",
     "summary": "",
     "url": "/Blog/linkedin-post-i-was-at-an-orchestra-performance-recently-and-the/",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn%3Ali%3Ashare%3A7194529362539397122",
     "tags": [
       "LinkedIn",
       "Posts"
@@ -1264,6 +1354,7 @@
     "title": "Kayla is an empathetic, curious and exceedingly competent technical leader.",
     "summary": "",
     "url": "/Blog/linkedin-post-kayla-is-an-empathetic-curious-and-exceedingly-co/",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn%3Ali%3Ashare%3A7206051791384240128",
     "tags": [
       "LinkedIn",
       "Posts"
@@ -1278,6 +1369,7 @@
     "title": "[NO LONGER ACTIVE]\"\nI have a part-time internship opening in the platform/appsec space.  It may be a good opportunity t...",
     "summary": "",
     "url": "/Blog/linkedin-post-no-longer-active-i-have-a-part-time-internship/",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn%3Ali%3Ashare%3A7212163410665299968",
     "tags": [
       "LinkedIn",
       "Posts"
@@ -1292,6 +1384,7 @@
     "title": "There are a few passages in the first address of Abraham Lincoln that warrant reflection on Labor Day.",
     "summary": "",
     "url": "/Blog/linkedin-post-there-are-a-few-passages-in-the-first-address-of-a/",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn%3Ali%3Ashare%3A7236508051820703744",
     "tags": [
       "LinkedIn",
       "Posts"
@@ -1306,6 +1399,7 @@
     "title": "Julie is one of my favorite people.",
     "summary": "",
     "url": "/Blog/linkedin-post-julie-is-one-of-my-favorite-people/",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn%3Ali%3Ashare%3A7263980107172585472",
     "tags": [
       "LinkedIn",
       "Posts"
@@ -1320,6 +1414,7 @@
     "title": "It's tough for me to gauge what content makes sense for Linkedin.",
     "summary": "",
     "url": "/Blog/linkedin-post-its-tough-for-me-to-gauge-what-content-makes-sens/",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn%3Ali%3Ashare%3A7290763704558612480",
     "tags": [
       "LinkedIn",
       "Posts"
@@ -1334,6 +1429,7 @@
     "title": "I don't know how else to explain it, but Discord has the most 90s/early 00s energy of anything new I've encountered in m...",
     "summary": "",
     "url": "/Blog/linkedin-post-i-dont-know-how-else-to-explain-it-but-discord-h/",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn%3Ali%3Ashare%3A7291105651437580289",
     "tags": [
       "LinkedIn",
       "Posts"
@@ -1348,6 +1444,7 @@
     "title": "This is one of those people who will make the difference.",
     "summary": "",
     "url": "/Blog/linkedin-post-this-is-one-of-those-people-who-will-make-the-diff/",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn%3Ali%3Ashare%3A7323923305730605056",
     "tags": [
       "LinkedIn",
       "Posts"
@@ -1362,6 +1459,7 @@
     "title": "Recommendation for Elsa Dubil",
     "summary": "",
     "url": "/Blog/recommendation-for-elsa-dubil/",
+    "canonical_url": "/Blog/recommendation-for-elsa-dubil/",
     "tags": [
       "Recommendations",
       "LinkedIn"
@@ -1376,6 +1474,7 @@
     "title": "AIVSS Scoring System For OWASP Agentic AI Core Security Risks v0.5",
     "summary": "",
     "url": "/Blog/aivss-scoring-system-for-owasp-agentic-ai-core-security-risks-v05/",
+    "canonical_url": "https://aivss.owasp.org/",
     "tags": [
       "Publications",
       "OWASP",
@@ -1392,6 +1491,7 @@
     "title": "If you're in security and working with AI, this document introduces the OWASP AI Vulnerability Scoring System (AIVSS).",
     "summary": "",
     "url": "/Blog/linkedin-post-if-youre-in-security-and-working-with-ai-this-do/",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn%3Ali%3Ashare%3A7355722264547352576",
     "tags": [
       "LinkedIn",
       "Posts"
@@ -1406,6 +1506,7 @@
     "title": "I'm a fan of the work done by the creator behind Woodworking for Mere Mortals.",
     "summary": "",
     "url": "/Blog/linkedin-post-im-a-fan-of-the-work-done-by-the-creator-behind-w/",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn%3Ali%3Ashare%3A7358170907850272769",
     "tags": [
       "LinkedIn",
       "Posts"
@@ -1420,6 +1521,7 @@
     "title": "AI sure does love its emojis.",
     "summary": "",
     "url": "/Blog/linkedin-post-ai-sure-does-love-its-emojis/",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn%3Ali%3Ashare%3A7359350100407566336",
     "tags": [
       "LinkedIn",
       "Posts"
@@ -1434,6 +1536,7 @@
     "title": "The hiring manager for this role is a peer and great to work with.",
     "summary": "",
     "url": "/Blog/linkedin-post-the-hiring-manager-for-this-role-is-a-peer-and-gre/",
+    "canonical_url": "https://www.linkedin.com/feed/update/urn%3Ali%3Ashare%3A7368756279915249666",
     "tags": [
       "LinkedIn",
       "Posts"
@@ -1448,6 +1551,7 @@
     "title": "Walden Pond",
     "summary": "",
     "url": "/Blog/walden-pond/",
+    "canonical_url": "/Blog/walden-pond/",
     "tags": [
       "Nature",
       "History",
@@ -1463,6 +1567,7 @@
     "title": "Giscus comments integration",
     "summary": "",
     "url": "/Blog/giscus-comments-integration/",
+    "canonical_url": "/Blog/giscus-comments-integration/",
     "tags": [
       "Giscus",
       "Comments",
