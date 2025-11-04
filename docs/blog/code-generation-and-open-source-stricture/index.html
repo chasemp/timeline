@@ -1,0 +1,118 @@
+<!DOCTYPE html><html lang="en" data-astro-cid-4sn4zg3r> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Code generation and open source stricture. — timeline.523.life</title><meta name="description" content="Code generation and open source stricture."><link rel="canonical" href="https://timeline.523.life/blog/code-generation-and-open-source-stricture"><meta name="astro-view-transitions-enabled" content="true"><meta name="astro-view-transitions-fallback" content="animate"><style>.astro-route-announcer{position:absolute;left:0;top:0;clip:rect(0 0 0 0);clip-path:inset(50%);overflow:hidden;white-space:nowrap;width:1px;height:1px}
+:root{--bg: #0b0e13;--panel: #11161f;--text: #e7ecf3;--muted: #97a3b6;--accent: #6aa0ff}[data-astro-cid-4sn4zg3r]{box-sizing:border-box}html,body{margin:0;padding:0;background:var(--bg);color:var(--text);font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,Helvetica Neue,Arial,"Apple Color Emoji","Segoe UI Emoji"}main[data-astro-cid-4sn4zg3r]{max-width:720px;margin:0 auto;padding:24px}.header[data-astro-cid-4sn4zg3r]{margin-bottom:40px}.back-link[data-astro-cid-4sn4zg3r]{color:var(--accent);text-decoration:none;font-size:14px}.back-link[data-astro-cid-4sn4zg3r]:hover{text-decoration:underline}.meta[data-astro-cid-4sn4zg3r]{font-size:14px;color:var(--muted);margin:16px 0 8px}.type[data-astro-cid-4sn4zg3r]{text-transform:uppercase;letter-spacing:.06em;font-size:12px}h1[data-astro-cid-4sn4zg3r]{margin:8px 0 24px;font-size:32px;line-height:1.2}.content[data-astro-cid-4sn4zg3r]{margin:32px 0}.content[data-astro-cid-4sn4zg3r] img[data-astro-cid-4sn4zg3r]{max-width:100%;height:auto;border-radius:8px}.content[data-astro-cid-4sn4zg3r] p[data-astro-cid-4sn4zg3r]{margin:16px 0}.content[data-astro-cid-4sn4zg3r] pre[data-astro-cid-4sn4zg3r]{background:#1a1f2e;padding:16px;border-radius:8px;overflow-x:auto}.content[data-astro-cid-4sn4zg3r] code[data-astro-cid-4sn4zg3r]{font-family:Monaco,Courier New,monospace;font-size:14px}.content[data-astro-cid-4sn4zg3r] a[data-astro-cid-4sn4zg3r]{color:var(--accent)}.post-footer[data-astro-cid-4sn4zg3r]{margin-top:48px;padding-top:24px;border-top:1px solid #1f2937;display:flex;justify-content:space-between;flex-wrap:wrap;gap:16px}@media (max-width: 640px){h1[data-astro-cid-4sn4zg3r]{font-size:24px}main[data-astro-cid-4sn4zg3r]{padding:16px}}.comments-section[data-astro-cid-4sn4zg3r]{margin-top:48px;padding-top:24px;border-top:1px solid #1f2937}.giscus[data-astro-cid-4sn4zg3r]{margin-top:16px;position:relative}.giscus[data-astro-cid-4sn4zg3r] iframe[data-astro-cid-4sn4zg3r]{min-height:300px}
+</style><script type="module" src="/_astro/hoisted.BScVxmeO.js"></script></head> <body data-astro-cid-4sn4zg3r> <main data-astro-cid-4sn4zg3r> <header class="header" data-astro-cid-4sn4zg3r> <nav data-astro-cid-4sn4zg3r> <a href="/" class="back-link" data-astro-cid-4sn4zg3r>← Back to timeline</a> </nav> <div class="meta" data-astro-cid-4sn4zg3r> <span class="type" data-astro-cid-4sn4zg3r>blog</span> · <time datetime="2023-01-12T00:00:00.000Z" data-astro-cid-4sn4zg3r>1/11/2023</time> </div> <h1 data-astro-cid-4sn4zg3r>Code generation and open source stricture.</h1> </header> <article class="content" data-astro-cid-4sn4zg3r><p>I&#39;m using a <a href="https://github.com/onelogin/onelogin-python-sdk">Python library</a> that has a public repository and an <a href="https://opensource.org/licenses">OSI</a> friendly license, but I cannot meaningfully contribute to the project to fix bugs I am encountering. This is fascinating and cumbersome. It&#39;s not unusual to find useful <a href="https://en.wikipedia.org/w/index.php?title=Free_and_open-source_software&redirect=yes">FLOSS</a> code that is <a href="https://en.wikipedia.org/wiki/Abandonware">abandonware</a>, but it is a relatively new phenomenon for the code itself to be programmatically generated.</p>
+<p>Enter <a href="https://openapi-generator.tech/">OpenAPI Generator</a> (you are more likely to be familiar with <a href="https://swagger.io/blog/api-strategy/difference-between-swagger-and-openapi/">Swagger</a>)</p>
+<p>Here&#39;s my understanding of the value proposition, you&#39;ve written a server with a <a href="https://en.wikipedia.org/wiki/Representational_state_transfer">RESTful</a> API interface. Historically, it&#39;s been common practice to stub out some examples in documentation using <a href="https://curl.se/">curl</a>. The mental leap to implementation of a client side library in a language of choice is fairly small, but it is not nonexistent. Folks come along and write idiomatic code to create a basic <a href="https://en.wikipedia.org/wiki/Software_development_kit">SDK</a> in their preferred language (example: <a href="https://redis.io/">Redis</a> client libraries for <a href="https://github.com/redis/redis-py">Python</a>, <a href="https://github.com/redis/jedis">Java</a>, and .<a href="https://github.com/redis/NRedisStack">NET</a>). These language specific libraries can be of varying quality and completeness depending on the author, original needs, etc. Changes to how a server side endpoint behaves has to matriculate out to all the various client side libraries. It takes time, it&#39;s messy, and it&#39;s human maintenance.</p>
+<p>Queue the next evolution, you&#39;ve written a server with a RESTful API. You write a schema definition file that describes in declarative terms the semantics of the API. This <a href="https://yaml.org/">YAML</a> file conforms to the <a href="https://spec.openapis.org/oas/v3.1.0">OpenAPI Specification (OAS)</a>. Now you can run one of 60+ generators to create consistent client side libraries to allow consumption of your API resources without a human writing novel code for this purpose. When you update your YAML schema you can similarly regenerate your client side code in every language. This is amazing.</p>
+<p><a href="https://raw.githubusercontent.com/openapitools/openapi-generator/master/modules/openapi-generator/src/test/resources/3_0/petstore.yaml">Example</a> of an OpenAPI YAML schema:</p>
+<p>openapi: 3.0
+servers:
+  - url: &#39;<a href="http://petstore.swagger.io/v2">http://petstore.swagger.io/v2</a>&#39;
+info:
+  description: &gt;-
+    This is a sample server Petstore server. For this sample, you can use the api key
+    `special-key` to test the authorization filters.
+  version: 1.0.0
+  title: OpenAPI Petstore
+  license:
+    name: Apache-2.0
+    url: &#39;<a href="https://www.apache.org/licenses/LICENSE-2.0.html">https://www.apache.org/licenses/LICENSE-2.0.html</a>&#39;
+tags:
+  - name: pet
+    description: Everything about your Pets
+  - name: store
+    description: Access to Petstore orders
+  - name: user
+    description: Operations about user
+paths:
+  /pet:
+    post:
+      tags:
+        - pet
+      summary: Add a new pet to the store
+      description: &#39;&#39;
+      operationId: addPet
+      responses:
+        &#39;200&#39;:
+          description: successful operation
+          content:
+            application/xml:
+              schema:
+                $ref: &#39;#/components/schemas/Pet&#39;
+            application/json:
+              schema:
+                $ref: &#39;#/components/schemas/Pet&#39;0
+...</p>
+<p>Now imagine you write the YAML schema first and the code for the server side endpoint is generated (or more likely has the structure stubbed out), the client side libraries are generated in 60 languages, and the documentation portal to inform humans on the use case and particulars of consumption are consistent and published alongside both. This is even more amazing.</p>
+<p>Even though this is a glimpse of the future (opinion) it is not a panacea. The end result server side behavior has to match in exactitude to the description in the schema used to generate downstream artifacts. If not, something will be broken. I am experiencing exactly this issue.</p>
+<p><a href="https://www.onelogin.com/">Onelogin</a> is an identity and access management provider. I am attempting to use their <a href="https://github.com/onelogin/onelogin-python-sdk">client library for Python</a> that is generated using the OpenAPI specification described above.</p>
+<p><a href="https://github.com/onelogin/onelogin-python-sdk/"><img src="https://media.licdn.com/dms/image/v2/D5612AQFELQB8GKMFAA/article-inline_image-shrink_1500_2232/article-inline_image-shrink_1500_2232/0/1673551169109?e=1762387200&v=beta&t=pX8pHPYq0cvGcHO6iBEb61t2HqqmC2YdHsY3dQVwMLs" alt="No alt text provided for this image"></a></p>
+<p>OpenAPI README header</p>
+<p>So, what is the bug?</p>
+<p>I believe I&#39;m seeing the same behavior in a few cases. Let&#39;s take the <a href="https://github.com/onelogin/onelogin-python-sdk#getting-started">getting started code</a> for generating a token and combine it with the <a href="https://github.com/onelogin/onelogin-python-sdk/blob/master/docs/DefaultApi.md#get_user">get_user</a> or the <a href="https://github.com/onelogin/onelogin-python-sdk/blob/master/docs/DefaultApi.md#list_users">list_users(app_id)</a> example.</p>
+<p>...
+user = api_instance.get_user(user_id_int)</p>
+<p>users = api_instance.list_users(app_id_int)
+...</p>
+<p>These can result in some version of the following:</p>
+<p>onelogin.exceptions.ApiTypeError: Invalid type for variable &#39;preferred_locale_code&#39;. Required value type is str and passed type was NoneType at [&#39;received_data&#39;][&#39;preferred_locale_code&#39;]</p>
+<p>onelogin.exceptions.ApiTypeError: Invalid type for variable &#39;locked_until&#39;. Required value type is str and passed type was NoneType at [&#39;received_data&#39;][&#39;locked_until&#39;]</p>
+<p>onelogin.exceptions.ApiTypeError: Invalid type for variable &#39;trusted_idp_id&#39;. Required value type is int and passed type was NoneType at [&#39;received_data&#39;][&#39;trusted_idp_id&#39;]</p>
+<p>This is a classic mismatch in expected behavior between a client and server.</p>
+<p>What seem to be happening is the client side code is including the full list of possible params in the query, but in cases where a value is not specified explicitly in the code <a href="https://www.w3schools.com/python/ref_keyword_none.asp">None</a> is used as the value. The client is assuming with None being a <a href="https://www.pythonmorsels.com/truthiness/">falsey</a> value it will be non-impacting. The server looks at the full request and recognizes parameters that are NoneType value but have another valid type required (int, str). It returns a status interpreted as an exception (error) by the client code. The server is assuming that any specified value is meaningful and seeking to validate adherence of expected object type.</p>
+<p>I can validate the server side is capable of fulfilling the request by using <a href="https://pypi.org/project/requests/">python-requests</a> to make the same inquiries (including using the same generated token):</p>
+<p>import request</p>
+<p>class BearerAuth(requests.auth.AuthBase):
+    def __init__(self, token):
+        self.token = token
+    def __call__(self, r):
+        r.headers[&quot;authorization&quot;] = &quot;Bearer &quot; + self.token
+        return rs</p>
+<h1>Get users for APP <MYAPP> (int)</h1>
+<p>response = requests.get(&#39;<a href="https://api.us.onelogin.com/api/2/apps/">https://api.us.onelogin.com/api/2/apps/</a><MYAPP>/users&#39;, auth=BearerAuth(token[&#39;access_token&#39;]))</p>
+<p>print(response.status_code)</p>
+<h1>Get details for user <MYUSER> (int)</h1>
+<p>user_details = requests.get(&#39;<a href="https://api.us.onelogin.com/api/2/users/">https://api.us.onelogin.com/api/2/users/</a><MYUSER>&#39;, auth=BearerAuth(token[&#39;access_token&#39;]))</p>
+<p>print(user_details.status_code)</p>
+<p>Both queries return valid content and 200 status codes.</p>
+<p>At this point we have:</p>
+<ul>
+<li>Server side code we cannot see but which we can demonstrate functions using primitive requests</li>
+<li>Client side code that is generated by an OpenAPI schema licensed with <a href="https://github.com/onelogin/onelogin-python-sdk/blob/master/LICENSE">MIT</a></li>
+<li>Client side behavior that is errant</li>
+</ul>
+<p>Normally I would attempt to diagnose and search for an existing known issue to discuss, and, if possible, open a <a href="https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/incorporating-changes-from-a-pull-request/merging-a-pull-request">pull request</a> to address. In this case, the code itself is generated. Fixing it in place is not very useful. Any fix will be overwritten with the next generated version. The only real fix is addressing the OpenAPI schema document or the server side validation that is conflicting.</p>
+<p>While I have the code and rights to it the OpenAPI schema is not included.</p>
+<p><strong>This project is open source but still a walled garden.</strong></p>
+<p>Interestingly, the project itself has been updated relatively recently.</p>
+<p><img src="https://media.licdn.com/dms/image/v2/D5612AQGAy5aAx3MukQ/article-inline_image-shrink_1000_1488/article-inline_image-shrink_1000_1488/0/1673552291803?e=1762387200&v=beta&t=796NJe7cVPvMhThohAFIXTslYLUglia5GmsARmqO9UU" alt="No alt text provided for this image"></p>
+<p>Updates happening for OneLogin Python SDK</p>
+<p>But issues seem to be stale with the last closed issue approximately a year ago.</p>
+<p><img src="https://media.licdn.com/dms/image/v2/D5612AQFlikv-HDaXlg/article-inline_image-shrink_1500_2232/article-inline_image-shrink_1500_2232/0/1673552399989?e=1762387200&v=beta&t=9JSiuFY2zqTyORGb65zssfuhoSpD1e2Xs7UW21m1obY" alt="No alt text provided for this image"></p>
+<p>Activity in issues for OneLogin Python SDK</p>
+<p>The last comment on an open issue is:</p>
+<p><a href="https://github.com/onelogin/onelogin-python-sdk/issues/70"><img src="https://media.licdn.com/dms/image/v2/D5612AQEtQIkEAP4Wrw/article-inline_image-shrink_1000_1488/article-inline_image-shrink_1000_1488/0/1673552610769?e=1762387200&v=beta&t=Bur1sfQT4Fhw58Rk04K-Gu6PvVzRQjyFx5IN6OrW1yM" alt="No alt text provided for this image"></a></p>
+<p>OneLogin Python SDK issue #70 comment</p>
+<p>I&#39;m not writing this to take a shot at OneLogin. As the landscape of software development changes, there are interesting circumstances where the letter of the law and the intent of what it means to be open source may diverge. As humans create these technologies that allows us to be further removed from certain outcomes (a good thing), it seems we need to be careful about enabling the same social outcomes (a great thing) to preserve a collaborative future.</p>
+</article> <div class="comments-section" id="comments-section" data-astro-cid-4sn4zg3r> <div class="giscus" id="giscus-container" data-astro-cid-4sn4zg3r></div> </div> <footer class="post-footer" data-astro-cid-4sn4zg3r> <a href="/" class="back-link" data-astro-cid-4sn4zg3r>← Back to timeline</a> <a href="/Blog/code-generation-and-open-source-stricture/" target="_blank" rel="noopener" data-astro-cid-4sn4zg3r>Original post ↗</a> </footer> </main>  <script src="https://giscus.app/client.js" data-repo="chasemp/timeline" data-repo-id="R_kgDOQDOMbA" data-category="Ideas" data-category-id="DIC_kwDOQDOMbM4CxLZb" data-mapping="pathname" data-strict="0" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="bottom" data-theme="/giscus-custom.css" data-lang="en" crossorigin="anonymous" async>
+    </script> <script>
+      // Hide comments section if giscus fails to load after timeout
+      window.addEventListener('load', () => {
+        const container = document.getElementById('giscus-container');
+        const commentsSection = document.getElementById('comments-section');
+        
+        // Set timeout to check if giscus loaded (10 seconds)
+        setTimeout(() => {
+          if (container && commentsSection) {
+            // Check if giscus actually rendered content
+            const hasContent = container.innerHTML.trim() !== '';
+            
+            if (!hasContent) {
+              // Giscus failed to load - hide the comments section
+              commentsSection.style.display = 'none';
+            }
+          }
+        }, 10000);
+        
+      });
+    </script>   </body> </html> 
