@@ -25,29 +25,24 @@ function detectType(entry: any) {
   const url = typeof rawUrl === 'string' ? rawUrl.toLowerCase() : '';
   const title = (entry.title || '').toLowerCase();
   const tags = (entry.tags || []).map((t: string) => t.toLowerCase());
+  const source = entry.source || '';
 
+  // LinkedIn content from Readwise (saved articles) should stay as 'saved' (Read category)
+  // These are OTHER people's posts that you read, not your own posts
+  // Your own LinkedIn posts would come from a different source (e.g., markdown files)
   if (baseType === 'saved') {
     const isLinkedIn = siteName.includes('linkedin') || url.includes('linkedin.com') || url.includes('lnkd.in');
     if (isLinkedIn) {
-      // Check if it's a recommendation (received)
-      const isRecommendation = title.includes('recommend') || 
-                               tags.some((t: string) => t.includes('recommend'));
-      
-      if (isRecommendation) {
-        // Recommendations stay as 'saved' (Read category)
-        return 'saved';
-      }
-      
-      // Check if it's a post/article (should be Written category)
-      const isPostOrArticle = url.includes('/posts/') || url.includes('/pulse/');
-      if (isPostOrArticle) {
-        // LinkedIn posts/articles go to 'blog' type (Written category)
-        return 'blog';
-      }
-      
-      // Other LinkedIn activity goes to 'linkedin' type (Posted category)
-      return 'linkedin';
+      // All LinkedIn content from Readwise stays as 'saved' (Read category)
+      // This includes posts, articles, recommendations, etc. that you saved/read
+      return 'saved';
     }
+  }
+
+  // If entry is already type 'blog' and from markdown (your own content), keep it as blog
+  // This handles your own LinkedIn posts that you've manually added to markdown files
+  if (baseType === 'blog' && source === 'markdown') {
+    return 'blog';
   }
 
   return baseType;
