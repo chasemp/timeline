@@ -19,4 +19,4 @@ love as a business strategy (anwar, danna)
 
 I am open but wanted to put something out there.
 
-"Julie Lavergne thoughts?
+Julie Lavergne thoughts?

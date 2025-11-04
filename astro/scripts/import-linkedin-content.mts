@@ -341,9 +341,15 @@ function cleanLinkedInText(text: string): string {
   // Remove quotes that wrap sentences at the start of lines
   cleaned = cleaned.replace(/^"\s*([^"]+?)\s*"\s*$/gm, '$1');
   
+  // Remove leading quotes at start of lines (but preserve quotes in quotes)
+  cleaned = cleaned.replace(/^"\s+([^"])/gm, '$1');
+  
   // Remove trailing quote artifacts
   cleaned = cleaned.replace(/\n"\s*$/m, '');
   cleaned = cleaned.replace(/"\s*$/, '');
+  
+  // Remove quotes that are just at the start of a line (but keep quotes in content)
+  cleaned = cleaned.replace(/^"\s*([A-Z])/gm, '$1');
   
   // Clean up linkedin short URLs - extract them for better formatting
   const lnkdMatch = cleaned.match(/"https?:\/\/lnkd\.in\/[a-zA-Z0-9]+"/gi);
@@ -491,11 +497,17 @@ async function convertPosts(sharesCsv: string): Promise<void> {
     // Remove standalone quotes at end of lines
     finalContent = finalContent.replace(/"\s*$/gm, '').trim();
     
+    // Remove leading quotes at start of lines (preserve intentional quotes in content)
+    finalContent = finalContent.replace(/^"\s*([A-Z])/gm, '$1');
+    
     // Remove empty lines and normalize
     finalContent = finalContent.replace(/\n{3,}/g, '\n\n').trim();
     
     // Clean up any lines that are just a quote mark
     finalContent = finalContent.split('\n').filter(line => line.trim() !== '"').join('\n');
+    
+    // Final pass: remove any remaining quote artifacts at line boundaries
+    finalContent = finalContent.replace(/\n"\s*\n/g, '\n\n');
     
     let markdownContent = `---
 title: "${title.replace(/"/g, '\\"').substring(0, 200)}"

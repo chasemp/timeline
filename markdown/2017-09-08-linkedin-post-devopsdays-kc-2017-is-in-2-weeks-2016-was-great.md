@@ -14,4 +14,4 @@ Chef wrote about it
 
 We have 2 days of conference at the historic Uptown Theater.  An after event is on Thursday at Hamburger Mary's.  The program is set  and tickets are still available 
 
-"If you have never seen ignite karaoke in action you should come out.
+If you have never seen ignite karaoke in action you should come out.

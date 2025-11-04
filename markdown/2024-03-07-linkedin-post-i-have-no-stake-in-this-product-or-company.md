@@ -10,4 +10,4 @@ url: "https://www.linkedin.com/feed/update/urn%3Ali%3Ashare%3A717153899061604352
 ---
 
 I have no stake in this product or company.
-"If you are modernizing a "monolith" and/or doing significant refactor CAST Software's imaging is pretty special.  I was skeptical, and nothing is a panacea, but all be darned if it's not a useful tool.  I don't know of a true competitor, but I'm curious if they exist.://
+If you are modernizing a "monolith" and/or doing significant refactor CAST Software's imaging is pretty special.  I was skeptical, and nothing is a panacea, but all be darned if it's not a useful tool.  I don't know of a true competitor, but I'm curious if they exist.://

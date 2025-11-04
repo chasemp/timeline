@@ -10,4 +10,4 @@ url: "https://www.linkedin.com/feed/update/urn%3Ali%3Ashare%3A659242592796209561
 ---
 
 Risk treatment and cloud provider relationships is such an interesting area of ERM practice.  This is relevant to my current day-to-day so wanted to reshare.
-" #risk  #cloudproviders
+#risk  #cloudproviders

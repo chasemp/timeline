@@ -22,4 +22,4 @@ I'm wondering if the threshold for changes in a mature and stable UI should be:
 
 Imagine if the locks on your windows moved periodically or the location of doors in your rooms every few years.
 
-"Ok, now let's have a conversation.
+Ok, now let's have a conversation.

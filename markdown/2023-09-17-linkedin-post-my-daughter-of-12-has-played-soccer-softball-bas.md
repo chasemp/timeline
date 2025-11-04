@@ -14,7 +14,7 @@ In each new sport she tries there are teams in the respective league who have st
 
 These teams tend to dominate.
 
-"Her volleyball team lost with 8 girls against a team of 5 who were on the average shorter and younger.  Without fail, parents on our side noted "that team has been playing together for 3 years.
+Her volleyball team lost with 8 girls against a team of 5 who were on the average shorter and younger.  Without fail, parents on our side noted "that team has been playing together for 3 years.
 This is considered a complete explanation.  The subtexts are a coach who inspires loyalty, and players who choose to play together season after season.
 
 It strikes me that team cohesion, comraderie and continuity are an accepted winning strategy across youth sports but the same is so rarely prioritized in the adult corporate work place.
