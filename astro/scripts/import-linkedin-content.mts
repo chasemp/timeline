@@ -324,35 +324,59 @@ function cleanLinkedInText(text: string): string {
   if (!text) return '';
   // Remove escaped quotes ("" becomes ")
   let cleaned = text.replace(/""/g, '"');
-  // Remove leading/trailing quotes
+  
+  // Remove all quote marks that wrap individual lines (common CSV formatting issue)
+  // Pattern: "text" on its own line becomes text
+  cleaned = cleaned.replace(/^"\s*([^"]*?)\s*"$/gm, '$1');
+  
+  // Remove standalone quote marks on their own lines
+  cleaned = cleaned.replace(/^"\s*$/gm, '');
+  
+  // Remove leading/trailing quotes from entire text
   cleaned = cleaned.trim();
   if (cleaned.startsWith('"') && cleaned.endsWith('"')) {
     cleaned = cleaned.slice(1, -1);
   }
-  // Remove standalone quote marks on their own lines (from CSV formatting)
-  cleaned = cleaned.replace(/^"\s*$/gm, '');
-  // Remove quote marks that are just wrapping a single line
-  cleaned = cleaned.replace(/^"([^"]+)"$/gm, '$1');
-  // Remove trailing quote at end of text (including newlines before it)
+  
+  // Remove quotes that wrap sentences at the start of lines
+  cleaned = cleaned.replace(/^"\s*([^"]+?)\s*"\s*$/gm, '$1');
+  
+  // Remove trailing quote artifacts
   cleaned = cleaned.replace(/\n"\s*$/m, '');
   cleaned = cleaned.replace(/"\s*$/, '');
+  
+  // Clean up linkedin short URLs - extract them for better formatting
+  const lnkdMatch = cleaned.match(/"https?:\/\/lnkd\.in\/[a-zA-Z0-9]+"/gi);
+  
   // Normalize whitespace and line breaks
   cleaned = cleaned.replace(/\n{3,}/g, '\n\n');
-  // Clean up any remaining quote artifacts
   cleaned = cleaned.replace(/\n"\s*\n/g, '\n\n');
+  
+  // Remove any remaining quote wrapping around URLs
+  cleaned = cleaned.replace(/"\s*(https?:\/\/[^\s"]+)\s*"/g, '$1');
+  
   return cleaned.trim();
 }
 
-// Extract title from post content (first sentence or first 100 chars)
+// Extract title from post content (first sentence or first 120 chars)
 function extractPostTitle(content: string): string {
   if (!content) return 'LinkedIn Post';
-  // Try to get first sentence (up to 100 chars or first period/question/exclamation)
-  const firstSentence = content.match(/^.{1,100}[.!?]/);
+  // Clean up content first to remove quote artifacts
+  let cleanContent = content.trim();
+  
+  // Try to get first sentence (up to 120 chars ending with period/question/exclamation)
+  const firstSentence = cleanContent.match(/^.{1,120}[.!?]/);
   if (firstSentence) {
-    return firstSentence[0].trim();
+    let title = firstSentence[0].trim();
+    // Remove any trailing quotes
+    title = title.replace(/"\s*$/, '').trim();
+    return title;
   }
-  // Fallback to first 100 chars
-  return content.substring(0, 100).trim() + (content.length > 100 ? '...' : '');
+  // Fallback to first 120 chars, but don't truncate if it's close
+  if (cleanContent.length <= 130) {
+    return cleanContent.replace(/"\s*$/, '').trim();
+  }
+  return cleanContent.substring(0, 120).trim() + '...';
 }
 
 // Convert LinkedIn posts from Shares.csv
@@ -450,6 +474,29 @@ async function convertPosts(sharesCsv: string): Promise<void> {
       // File doesn't exist, proceed
     }
     
+    // Clean up content - extract and format shared URLs properly
+    let finalContent = content;
+    const sharedUrl = entry.sharedUrl && entry.sharedUrl.trim() && entry.sharedUrl !== 'null' ? entry.sharedUrl.trim() : null;
+    
+    // Remove lnkd.in URLs from content body if they appear inline (we'll add them at the end)
+    finalContent = finalContent.replace(/https?:\/\/lnkd\.in\/[a-zA-Z0-9]+/gi, '');
+    finalContent = finalContent.replace(/lnkd\.in\/[a-zA-Z0-9]+/gi, '');
+    
+    // Clean up any remaining quote artifacts around URLs
+    finalContent = finalContent.replace(/"\s*(https?:\/\/[^\s"]+)\s*"/g, '$1');
+    
+    // Remove trailing quote marks - handle various cases
+    // Remove quote after period at end of line
+    finalContent = finalContent.replace(/([^"])\.\s*"\s*$/m, '$1.');
+    // Remove standalone quotes at end of lines
+    finalContent = finalContent.replace(/"\s*$/gm, '').trim();
+    
+    // Remove empty lines and normalize
+    finalContent = finalContent.replace(/\n{3,}/g, '\n\n').trim();
+    
+    // Clean up any lines that are just a quote mark
+    finalContent = finalContent.split('\n').filter(line => line.trim() !== '"').join('\n');
+    
     let markdownContent = `---
 title: "${title.replace(/"/g, '\\"').substring(0, 200)}"
 categories:
@@ -461,10 +508,11 @@ date: ${date}T00:00:00.000Z
 url: "${entry.shareLink.replace(/"/g, '\\"')}"
 ---`;
     
-    markdownContent += `\n\n${content}\n`;
+    markdownContent += `\n\n${finalContent}\n`;
     
-    if (entry.sharedUrl && entry.sharedUrl.trim() && entry.sharedUrl !== 'null') {
-      markdownContent += `\n\n[View shared link →](${entry.sharedUrl})\n`;
+    // Add shared URL at the end if present, formatted nicely
+    if (sharedUrl) {
+      markdownContent += `\n\n[View shared link →](${sharedUrl})\n`;
     }
     
     await fs.writeFile(outputPath, markdownContent, 'utf8');

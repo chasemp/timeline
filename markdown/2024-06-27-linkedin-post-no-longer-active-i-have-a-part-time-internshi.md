@@ -1,7 +1,7 @@
 ---
 title: "[NO LONGER ACTIVE]\"
 
-\"I have a part-time internship opening in the platform/appsec space.  It may be..."
+\"I have a part-time internship opening in the platform/appsec space.  It may be a good opportunity..."
 categories:
   - Blog
 tags:
@@ -11,8 +11,7 @@ date: 2024-06-27T00:00:00.000Z
 url: "https://www.linkedin.com/feed/update/urn%3Ali%3Ashare%3A7212163410665299968"
 ---
 
-[NO LONGER ACTIVE]"
-
+[NO LONGER ACTIVE]
 "I have a part-time internship opening in the platform/appsec space.  It may be a good opportunity to build out a resume while in school.  It is paid and it is remote.
 
 
