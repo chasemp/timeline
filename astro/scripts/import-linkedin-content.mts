@@ -9,7 +9,9 @@
  * This script:
  * - Extracts articles from LI/Articles/Articles/*.html
  * - Extracts publications from LI/Publications.csv
- * - Converts both to markdown files in markdown/ directory
+ * - Extracts recommendations given from LI/Recommendations_Given.csv
+ * - Extracts recommendations received from LI/Recommendations_Received.csv
+ * - Converts all to markdown files in markdown/ directory
  * - Skips files that already exist
  * - Handles both root LI/ and archive zip structure LI/Complete_LinkedInDataExport_* directories
  */
@@ -101,11 +103,26 @@ function parseDate(dateStr: string): string {
     'Sep': '09', 'Oct': '10', 'Nov': '11', 'Dec': '12'
   };
   
+  // Try "Nov 18, 2020" format first
   const match = dateStr.match(/(\w+)\s+(\d+),\s+(\d+)/);
   if (match) {
     const month = months[match[1]] || '01';
     const day = match[2].padStart(2, '0');
     const year = match[3];
+    return `${year}-${month}-${day}`;
+  }
+  
+  // Try "05/15/25, 04:57 PM" format (MM/DD/YY)
+  const dateMatch = dateStr.match(/(\d{1,2})\/(\d{1,2})\/(\d{2,4})/);
+  if (dateMatch) {
+    const month = dateMatch[1].padStart(2, '0');
+    const day = dateMatch[2].padStart(2, '0');
+    let year = dateMatch[3];
+    // Handle 2-digit years (assume 20xx for years < 50, 19xx for >= 50)
+    if (year.length === 2) {
+      const yearNum = parseInt(year);
+      year = yearNum < 50 ? `20${year}` : `19${year}`;
+    }
     return `${year}-${month}-${day}`;
   }
   
@@ -245,6 +262,123 @@ date: ${dateStr}T00:00:00.000Z
   console.log(`✅ Converted article: ${filename}`);
 }
 
+// Convert recommendations given from CSV
+async function convertRecommendationsGiven(recommendationsCsv: string): Promise<void> {
+  const csvContent = await fs.readFile(recommendationsCsv, 'utf8');
+  const lines = csvContent.split('\n').filter(line => line.trim());
+  const dataLines = lines.slice(1); // Skip header
+  
+  for (const line of dataLines) {
+    if (!line.trim()) continue;
+    
+    const [firstName, lastName, company, jobTitle, text, creationDate, status] = parseCSVLine(line);
+    
+    if (!firstName || !lastName || !text || !creationDate) {
+      console.warn(`⚠️  Skipping invalid recommendation line: ${line.substring(0, 50)}...`);
+      continue;
+    }
+    
+    const personName = `${firstName} ${lastName}`.trim();
+    const date = parseDate(creationDate);
+    const slug = slugify(`recommendation-for-${firstName}-${lastName}`);
+    const filename = `${date}-${slug}.md`;
+    const outputPath = path.join(MARKDOWN_DIR, filename);
+    
+    // Check if file already exists
+    try {
+      await fs.access(outputPath);
+      console.log(`⏭️  Skipping recommendation given: ${filename} (already exists)`);
+      continue;
+    } catch {
+      // File doesn't exist, proceed
+    }
+    
+    const title = `Recommendation for ${personName}`;
+    const jobInfo = jobTitle ? `${jobTitle}${company ? ` at ${company}` : ''}` : company || '';
+    
+    let content = `---
+title: "${title.replace(/"/g, '\\"')}"
+categories:
+  - Blog
+tags:
+  - Recommendations
+  - LinkedIn
+date: ${date}T00:00:00.000Z
+---
+`;
+    
+    if (jobInfo) {
+      content += `\n**${jobInfo}**\n\n`;
+    }
+    
+    content += `${text}\n`;
+    
+    await fs.writeFile(outputPath, content, 'utf8');
+    console.log(`✅ Converted recommendation given: ${filename}`);
+  }
+}
+
+// Convert recommendations received from CSV
+async function convertRecommendationsReceived(recommendationsCsv: string): Promise<void> {
+  const csvContent = await fs.readFile(recommendationsCsv, 'utf8');
+  const lines = csvContent.split('\n').filter(line => line.trim());
+  const dataLines = lines.slice(1); // Skip header
+  
+  for (const line of dataLines) {
+    if (!line.trim()) continue;
+    
+    const [firstName, lastName, company, jobTitle, text, creationDate, status] = parseCSVLine(line);
+    
+    if (!firstName || !lastName || !text || !creationDate) {
+      console.warn(`⚠️  Skipping invalid recommendation line: ${line.substring(0, 50)}...`);
+      continue;
+    }
+    
+    // Only process VISIBLE recommendations
+    if (status && status.trim() !== 'VISIBLE') {
+      continue;
+    }
+    
+    const personName = `${firstName} ${lastName}`.trim();
+    const date = parseDate(creationDate);
+    const slug = slugify(`recommendation-from-${firstName}-${lastName}`);
+    const filename = `${date}-${slug}.md`;
+    const outputPath = path.join(MARKDOWN_DIR, filename);
+    
+    // Check if file already exists
+    try {
+      await fs.access(outputPath);
+      console.log(`⏭️  Skipping recommendation received: ${filename} (already exists)`);
+      continue;
+    } catch {
+      // File doesn't exist, proceed
+    }
+    
+    const title = `Recommendation from ${personName}`;
+    const jobInfo = jobTitle ? `${jobTitle}${company ? ` at ${company}` : ''}` : company || '';
+    
+    let content = `---
+title: "${title.replace(/"/g, '\\"')}"
+categories:
+  - Blog
+tags:
+  - Recommendations
+  - LinkedIn
+date: ${date}T00:00:00.000Z
+---
+`;
+    
+    if (jobInfo) {
+      content += `\n**${jobInfo}**\n\n`;
+    }
+    
+    content += `${text}\n`;
+    
+    await fs.writeFile(outputPath, content, 'utf8');
+    console.log(`✅ Converted recommendation received: ${filename}`);
+  }
+}
+
 // Convert publications from CSV
 async function convertPublications(publicationsCsv: string): Promise<void> {
   const csvContent = await fs.readFile(publicationsCsv, 'utf8');
@@ -343,6 +477,34 @@ async function main() {
       console.log('ℹ️  Publications.csv not found, skipping publications\n');
     } else {
       console.error('❌ Error processing publications:', error.message);
+    }
+  }
+  
+  // Process recommendations given
+  const recommendationsGivenCsv = path.join(linkedInDir, 'Recommendations_Given.csv');
+  try {
+    await fs.access(recommendationsGivenCsv);
+    console.log('✍️  Processing recommendations given...\n');
+    await convertRecommendationsGiven(recommendationsGivenCsv);
+  } catch (error: any) {
+    if (error.code === 'ENOENT') {
+      console.log('ℹ️  Recommendations_Given.csv not found, skipping recommendations given\n');
+    } else {
+      console.error('❌ Error processing recommendations given:', error.message);
+    }
+  }
+  
+  // Process recommendations received
+  const recommendationsReceivedCsv = path.join(linkedInDir, 'Recommendations_Received.csv');
+  try {
+    await fs.access(recommendationsReceivedCsv);
+    console.log('📖 Processing recommendations received...\n');
+    await convertRecommendationsReceived(recommendationsReceivedCsv);
+  } catch (error: any) {
+    if (error.code === 'ENOENT') {
+      console.log('ℹ️  Recommendations_Received.csv not found, skipping recommendations received\n');
+    } else {
+      console.error('❌ Error processing recommendations received:', error.message);
     }
   }
   
