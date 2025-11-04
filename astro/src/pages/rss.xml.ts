@@ -14,6 +14,7 @@ export async function GET(context: APIContext) {
   const typeDisplayName = (type: string) => {
     const names: Record<string, string> = {
       'saved': 'Article Read',
+      'primer': 'AI Topic Primer',
       'blog': 'Blog Post',
       'bluesky': 'Bluesky',
       'release': 'GitHub Release',

@@ -89,6 +89,7 @@ const itemsWithHashtags = items.map(item => {
   const typeLabels: Record<string, string> = {
     'blog': '#blog',
     'saved': '#article',
+    'primer': '#primer',
     'bluesky': '#bluesky',
     'wikipedia': '#wikipedia',
     'release': '#release',
@@ -188,7 +189,7 @@ const allHashtags = Object.entries(hashtagCounts)
         <div class="filters" role="group" aria-label="Content types">
           <label title="Bookmarks from Readwise"><input type="checkbox" name="type" value="saved" checked> Read</label>
           <label title="Technical writing and essays"><input type="checkbox" name="type" value="blog" checked> Written</label>
-          <label title="Bluesky, Pixelfed, HackerNews, and LinkedIn posts/comments"><input type="checkbox" name="type" value="bluesky,pixelfed,hackernews,linkedin" checked> Posted</label>
+            <label title="Bluesky, Pixelfed, HackerNews, LinkedIn posts/comments, and Primers"><input type="checkbox" name="type" value="bluesky,pixelfed,hackernews,linkedin,primer" checked> Posted</label>
           <label title="GitHub project releases and tags"><input type="checkbox" name="type" value="release" checked> Released</label>
           <label title="Contributions to Wikipedia and other platforms"><input type="checkbox" name="type" value="wikipedia" checked> Contributed</label>
         </div>
@@ -217,7 +218,7 @@ const allHashtags = Object.entries(hashtagCounts)
         <ul class="legend">
           <li><span class="legend-dot" data-dot-type="saved"></span> <strong>Read</strong> — Bookmarks from Readwise</li>
           <li><span class="legend-dot" data-dot-type="blog"></span> <strong>Written</strong> — Technical writing and essays</li>
-          <li><span class="legend-dot" data-dot-type="bluesky"></span> <strong>Posted</strong> — Bluesky, Pixelfed, HackerNews, LinkedIn</li>
+            <li><span class="legend-dot" data-dot-type="bluesky"></span> <strong>Posted</strong> — Bluesky, Pixelfed, HackerNews, LinkedIn, Primers</li>
           <li><span class="legend-dot" data-dot-type="release"></span> <strong>Released</strong> — GitHub project releases and tags</li>
           <li><span class="legend-dot" data-dot-type="wikipedia"></span> <strong>Contributed</strong> — Wikipedia and other contributions</li>
         </ul>

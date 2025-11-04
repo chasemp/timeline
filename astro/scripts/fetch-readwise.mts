@@ -136,10 +136,12 @@ function convertToTimelineEntry(book: ReadwiseBook, highlights: ReadwiseHighligh
     .join('\n');
   
   const tagNames = book.tags.map(t => t.name);
+  const hasPrimerTag = tagNames.some(tag => tag?.toLowerCase() === 'primer');
+  const entryType = hasPrimerTag ? 'primer' : 'saved';
   
   return {
     id: `readwise:${book.id}`,
-    type: 'saved',
+    type: entryType,
     timestamp: book.last_highlight_at || book.updated,
     title: book.title,
     summary: highlights.length > 0 ? highlights[0].text.substring(0, 200) + (highlights[0].text.length > 200 ? '...' : '') : undefined,
