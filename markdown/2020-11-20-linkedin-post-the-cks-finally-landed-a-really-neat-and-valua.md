@@ -1,5 +1,5 @@
 ---
-title: "The CKS finally landed :)  A really neat and valuable experience working with the Linux Foundation s..."
+title: "The CKS finally landed :)  A really neat and valuable experience working with the Linux Foundation staff."
 categories:
   - Blog
 tags:
