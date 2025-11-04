@@ -10,4 +10,4 @@ url: "https://www.linkedin.com/feed/update/urn%3Ali%3Ashare%3A729110565143758028
 ---
 
 I don't know how else to explain it, but Discord has the most 90s/early 00s energy of anything new I've encountered in many years.
-"It's a controlled chaos where you might make a life long friend, and being silly is expected.  Nostalgic and uncannily welcoming.
+It's a controlled chaos where you might make a life long friend, and being silly is expected.  Nostalgic and uncannily welcoming.

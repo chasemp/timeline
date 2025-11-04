@@ -20,4 +20,4 @@ Someone somewhere is under the impression these tactics add up to value.  By the
 
 I feel like I need a Chris Roberts level rant about this.
 
-"It irks me every time.
+It irks me every time.
