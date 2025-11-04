@@ -333,7 +333,8 @@ function cleanLinkedInText(text: string): string {
   cleaned = cleaned.replace(/^"\s*$/gm, '');
   // Remove quote marks that are just wrapping a single line
   cleaned = cleaned.replace(/^"([^"]+)"$/gm, '$1');
-  // Remove trailing quote at end of text
+  // Remove trailing quote at end of text (including newlines before it)
+  cleaned = cleaned.replace(/\n"\s*$/m, '');
   cleaned = cleaned.replace(/"\s*$/, '');
   // Normalize whitespace and line breaks
   cleaned = cleaned.replace(/\n{3,}/g, '\n\n');
