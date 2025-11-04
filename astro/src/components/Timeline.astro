@@ -227,11 +227,7 @@ const formatShortDate = (timestamp: string) => {
     if (resultsCountEl && resultsCountNumber) {
       const count = visibleRows.length;
       resultsCountNumber.textContent = count.toString();
-      if (count > 0) {
-        resultsCountEl.removeAttribute('hidden');
-      } else {
-        resultsCountEl.setAttribute('hidden', '');
-      }
+      resultsCountEl.removeAttribute('hidden');
     }
     
     if (visibleRows.length === 0) {
