@@ -11,6 +11,7 @@
  * - Extracts publications from LI/Publications.csv
  * - Extracts recommendations given from LI/Recommendations_Given.csv
  * - Extracts recommendations received from LI/Recommendations_Received.csv
+ * - Extracts posts from LI/Shares.csv
  * - Converts all to markdown files in markdown/ directory
  * - Skips files that already exist
  * - Handles both root LI/ and archive zip structure LI/Complete_LinkedInDataExport_* directories
@@ -318,6 +319,158 @@ date: ${date}T00:00:00.000Z
   }
 }
 
+// Clean up LinkedIn CSV escaped quotes and newlines
+function cleanLinkedInText(text: string): string {
+  if (!text) return '';
+  // Remove escaped quotes ("" becomes ")
+  let cleaned = text.replace(/""/g, '"');
+  // Remove leading/trailing quotes
+  cleaned = cleaned.trim();
+  if (cleaned.startsWith('"') && cleaned.endsWith('"')) {
+    cleaned = cleaned.slice(1, -1);
+  }
+  // Remove standalone quote marks on their own lines (from CSV formatting)
+  cleaned = cleaned.replace(/^"\s*$/gm, '');
+  // Remove quote marks that are just wrapping a single line
+  cleaned = cleaned.replace(/^"([^"]+)"$/gm, '$1');
+  // Remove trailing quote at end of text
+  cleaned = cleaned.replace(/"\s*$/, '');
+  // Normalize whitespace and line breaks
+  cleaned = cleaned.replace(/\n{3,}/g, '\n\n');
+  // Clean up any remaining quote artifacts
+  cleaned = cleaned.replace(/\n"\s*\n/g, '\n\n');
+  return cleaned.trim();
+}
+
+// Extract title from post content (first sentence or first 100 chars)
+function extractPostTitle(content: string): string {
+  if (!content) return 'LinkedIn Post';
+  // Try to get first sentence (up to 100 chars or first period/question/exclamation)
+  const firstSentence = content.match(/^.{1,100}[.!?]/);
+  if (firstSentence) {
+    return firstSentence[0].trim();
+  }
+  // Fallback to first 100 chars
+  return content.substring(0, 100).trim() + (content.length > 100 ? '...' : '');
+}
+
+// Convert LinkedIn posts from Shares.csv
+async function convertPosts(sharesCsv: string): Promise<void> {
+  const csvContent = await fs.readFile(sharesCsv, 'utf8');
+  const lines = csvContent.split('\n');
+  
+  // Parse CSV - handling multi-line entries
+  const entries: any[] = [];
+  let currentEntry: string[] = [];
+  let inQuotes = false;
+  let currentLine = '';
+  
+  // Start from line 2 (skip header)
+  for (let i = 1; i < lines.length; i++) {
+    const line = lines[i];
+    if (!line.trim()) continue;
+    
+    currentLine += (currentLine ? '\n' : '') + line;
+    
+    // Count quotes to determine if we're still in a quoted field
+    const quoteCount = (currentLine.match(/"/g) || []).length;
+    inQuotes = quoteCount % 2 !== 0;
+    
+    // If we're not in quotes and line ends, process the entry
+    if (!inQuotes && currentLine.trim()) {
+      const fields = parseCSVLine(currentLine);
+      if (fields.length >= 3) {
+        entries.push({
+          date: fields[0],
+          shareLink: fields[1],
+          shareCommentary: fields[2],
+          sharedUrl: fields[3] || '',
+          mediaUrl: fields[4] || '',
+          visibility: fields[5] || ''
+        });
+      }
+      currentLine = '';
+    }
+  }
+  
+  // Process remaining if any
+  if (currentLine.trim()) {
+    const fields = parseCSVLine(currentLine);
+    if (fields.length >= 3) {
+      entries.push({
+        date: fields[0],
+        shareLink: fields[1],
+        shareCommentary: fields[2],
+        sharedUrl: fields[3] || '',
+        mediaUrl: fields[4] || '',
+        visibility: fields[5] || ''
+      });
+    }
+  }
+  
+  for (const entry of entries) {
+    if (!entry.date || !entry.shareCommentary) {
+      continue;
+    }
+    
+    // Parse date (format: "2025-01-30 16:12:03")
+    const dateMatch = entry.date.match(/(\d{4})-(\d{2})-(\d{2})/);
+    if (!dateMatch) continue;
+    
+    const date = `${dateMatch[1]}-${dateMatch[2]}-${dateMatch[3]}`;
+    
+    // Clean up the commentary text
+    let content = cleanLinkedInText(entry.shareCommentary);
+    
+    // Skip reposts (posts with SharedUrl but no meaningful original commentary)
+    // If there's a SharedUrl but content is very short or just a link, it's a repost
+    if (entry.sharedUrl && entry.sharedUrl.trim() && entry.sharedUrl !== 'null') {
+      // If content is very short (less than 50 chars) or just contains a link, skip it
+      if (!content || content.length < 50 || content.toLowerCase().includes('http') && content.length < 100) {
+        continue; // This is just a repost, skip it
+      }
+    }
+    
+    if (!content || content.length < 10) {
+      continue; // Skip very short posts
+    }
+    
+    const title = extractPostTitle(content);
+    const slug = slugify(title.substring(0, 50)); // Limit slug length
+    const filename = `${date}-linkedin-post-${slug}.md`;
+    const outputPath = path.join(MARKDOWN_DIR, filename);
+    
+    // Check if file already exists
+    try {
+      await fs.access(outputPath);
+      console.log(`⏭️  Skipping post: ${filename} (already exists)`);
+      continue;
+    } catch {
+      // File doesn't exist, proceed
+    }
+    
+    let markdownContent = `---
+title: "${title.replace(/"/g, '\\"').substring(0, 200)}"
+categories:
+  - Blog
+tags:
+  - LinkedIn
+  - Posts
+date: ${date}T00:00:00.000Z
+url: "${entry.shareLink.replace(/"/g, '\\"')}"
+---`;
+    
+    markdownContent += `\n\n${content}\n`;
+    
+    if (entry.sharedUrl && entry.sharedUrl.trim() && entry.sharedUrl !== 'null') {
+      markdownContent += `\n\n[View shared link →](${entry.sharedUrl})\n`;
+    }
+    
+    await fs.writeFile(outputPath, markdownContent, 'utf8');
+    console.log(`✅ Converted post: ${filename}`);
+  }
+}
+
 // Convert recommendations received from CSV
 async function convertRecommendationsReceived(recommendationsCsv: string): Promise<void> {
   const csvContent = await fs.readFile(recommendationsCsv, 'utf8');
@@ -506,6 +659,51 @@ async function main() {
     } else {
       console.error('❌ Error processing recommendations received:', error.message);
     }
+  }
+  
+  // Process posts (Shares.csv) - check both root and archive
+  let sharesCsv = path.join(linkedInDir, 'Shares.csv');
+  let foundShares = false;
+  
+  try {
+    await fs.access(sharesCsv);
+    foundShares = true;
+  } catch {
+    // Try archive directory
+    const archiveShares = path.resolve(BASE_DIR, 'LI', 'Complete_LinkedInDataExport_10-23-2025', 'Shares.csv');
+    try {
+      await fs.access(archiveShares);
+      sharesCsv = archiveShares;
+      foundShares = true;
+    } catch {
+      // Try to find any Complete_LinkedInDataExport_* directory
+      try {
+        const liDir = path.resolve(BASE_DIR, 'LI');
+        const entries = await fs.readdir(liDir);
+        for (const entry of entries) {
+          if (entry.startsWith('Complete_LinkedInDataExport_')) {
+            const archivePath = path.join(liDir, entry, 'Shares.csv');
+            try {
+              await fs.access(archivePath);
+              sharesCsv = archivePath;
+              foundShares = true;
+              break;
+            } catch {
+              // Continue
+            }
+          }
+        }
+      } catch {
+        // Continue
+      }
+    }
+  }
+  
+  if (foundShares) {
+    console.log('📱 Processing LinkedIn posts...\n');
+    await convertPosts(sharesCsv);
+  } else {
+    console.log('ℹ️  Shares.csv not found, skipping posts\n');
   }
   
   console.log('\n✨ Import complete!');
