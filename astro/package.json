@@ -17,6 +17,7 @@
     "fetch:wikipedia": "node --experimental-strip-types scripts/fetch-wikipedia.mts",
     "fetch:pixelfed": "node --experimental-strip-types scripts/fetch-pixelfed.mts",
     "fetch:hackernews": "node --experimental-strip-types scripts/fetch-hackernews.mts",
+    "import:linkedin": "node --experimental-strip-types scripts/import-linkedin-content.mts",
     "merge": "node --experimental-strip-types scripts/merge-sources.mts",
     "generate": "npm run fetch:readwise && npm run fetch:blog && npm run fetch:bluesky && npm run fetch:github && npm run fetch:wikipedia && npm run fetch:pixelfed && npm run fetch:hackernews && npm run merge"
   },
