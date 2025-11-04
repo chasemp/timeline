@@ -16,7 +16,7 @@ if [ -f .env ]; then
 fi
 
 # Build only (no data fetch) - use fetch.sh to update data first if needed
-npm run build:only
+npm run build
 
 echo "📦 Deploying to docs directory..."
 cd ..
