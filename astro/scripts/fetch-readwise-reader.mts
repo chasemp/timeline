@@ -438,12 +438,19 @@ async function main() {
         // 1. Articles can be tagged with 'classic'/'pub' long after they were saved
         // 2. Tag changes might not update the document's 'updated' timestamp in Readwise
         // 3. If it's been more than 180 days since last fetch, do a full fetch to catch all recently-tagged articles
+        // 4. Do a full fetch once per week to ensure we catch articles that were saved >180 days ago but recently tagged
         const MAX_DAYS_FOR_DELTA = 180; // 6 months
         const LOOKBACK_DAYS = 180; // Look back 6 months to catch recently-tagged articles
+        const FULL_FETCH_INTERVAL_DAYS = 7; // Do a full fetch once per week to catch old articles that were recently tagged
         
         if (daysSinceLastFetch > MAX_DAYS_FOR_DELTA) {
           // Too long since last fetch - do a full fetch to ensure we catch everything
           console.log(`🔄 Full fetch mode: last fetch was ${daysSinceLastFetch} days ago (exceeds ${MAX_DAYS_FOR_DELTA} day limit)`);
+          updatedAfter = undefined; // Full fetch
+        } else if (daysSinceLastFetch >= FULL_FETCH_INTERVAL_DAYS) {
+          // Periodic full fetch (once per week) to catch articles saved >180 days ago but recently tagged
+          // This ensures we don't miss articles where updated_at didn't change when tags were added
+          console.log(`🔄 Full fetch mode: periodic full fetch (every ${FULL_FETCH_INTERVAL_DAYS} days) to catch old articles that were recently tagged`);
           updatedAfter = undefined; // Full fetch
         } else {
           // Delta fetch with extended lookback to catch recently-tagged articles
