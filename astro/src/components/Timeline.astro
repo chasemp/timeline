@@ -375,8 +375,19 @@ const formatShortDate = (timestamp: string) => {
     if (entry.type === 'blog') {
       const blogUrl = `/blog/${entry.id.replace('blog:', '')}`;
       const blogContent = await loadBlogPost(blogUrl);
+      
+      // Build hashtags display for blog posts too
+      let hashtagsHtml = '';
+      if (entry.hashtags && entry.hashtags.length > 0) {
+        const hashtagTags = entry.hashtags.map((tag: string) => 
+          `<span class="detail-hashtag" data-hashtag="${tag}" role="button" tabindex="0">${tag}</span>`
+        ).join('');
+        hashtagsHtml = `<div class="detail-hashtags">${hashtagTags}</div>`;
+      }
+      
       content = `<h3 class="detail-title">${entry.title || ''}</h3>
-        <div class="detail-content">${blogContent}</div>`;
+        <div class="detail-content">${blogContent}</div>
+        ${hashtagsHtml}`;
     } else {
       // Build metadata string for saved articles
       let metadataHtml = '';
@@ -459,10 +470,21 @@ const formatShortDate = (timestamp: string) => {
       
       const mainContent = entry.summary ? `<p>${entry.summary}</p>` : '';
       const titleHtml = entry.title ? `<h3 class="detail-title">${entry.title}</h3>` : '';
+      
+      // Build hashtags display
+      let hashtagsHtml = '';
+      if (entry.hashtags && entry.hashtags.length > 0) {
+        const hashtagTags = entry.hashtags.map((tag: string) => 
+          `<span class="detail-hashtag" data-hashtag="${tag}" role="button" tabindex="0">${tag}</span>`
+        ).join('');
+        hashtagsHtml = `<div class="detail-hashtags">${hashtagTags}</div>`;
+      }
+      
       content = `${titleHtml}
         ${youtubeEmbed}
         ${mediaHtml}
-        <div class="detail-content">${mainContent}${commentLinkHtml}${metadataHtml}${notesHtml}${highlightsHtml}</div>`;
+        <div class="detail-content">${mainContent}${commentLinkHtml}${metadataHtml}${notesHtml}${highlightsHtml}</div>
+        ${hashtagsHtml}`;
     }
     
     // Check if comments should be disabled for this item
@@ -478,6 +500,17 @@ const formatShortDate = (timestamp: string) => {
     }
     
     panelContent.innerHTML = content;
+    
+    // Add click handlers to detail hashtags
+    panelContent.querySelectorAll('.detail-hashtag').forEach((tagEl) => {
+      tagEl.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const hashtag = (tagEl as HTMLElement).dataset.hashtag;
+        if (hashtag) {
+          window.dispatchEvent(new CustomEvent('hashtag:click', { detail: { tag: hashtag } }));
+        }
+      });
+    });
     
     // Load giscus dynamically (if not disabled)
     if (!disableComments) {
@@ -966,5 +999,38 @@ const formatShortDate = (timestamp: string) => {
   .comment-direct-link { margin: 16px 0; padding: 12px; background: rgba(255, 102, 0, 0.1); border-left: 3px solid #ff6600; border-radius: 4px; }
   .comment-direct-link a { color: #ff6600; font-weight: 600; text-decoration: none; font-size: 14px; }
   .comment-direct-link a:hover { text-decoration: underline; }
+  
+  /* Detail page hashtags - centered below content */
+  .detail-hashtags {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 24px 0;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+  }
+  .detail-hashtag {
+    display: inline-block;
+    padding: 4px 12px;
+    border-radius: 999px;
+    background: rgba(193, 122, 79, 0.15);
+    color: var(--accent);
+    font-size: 12px;
+    font-weight: 600;
+    font-family: system-ui, sans-serif;
+    border: 1px solid transparent;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  .detail-hashtag:hover {
+    background: rgba(193, 122, 79, 0.25);
+    border-color: var(--accent);
+    transform: scale(1.05);
+  }
+  .detail-hashtag:active {
+    transform: scale(0.95);
+  }
 </style>
 

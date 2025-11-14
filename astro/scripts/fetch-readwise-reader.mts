@@ -431,17 +431,29 @@ async function main() {
     if (!READWISE_FULL_FETCH && existing.length > 0) {
       const lastFetchedTime = getLatestTimestamp(existing);
       if (lastFetchedTime) {
+        const lastFetchedDate = new Date(lastFetchedTime);
+        const daysSinceLastFetch = Math.ceil((Date.now() - lastFetchedDate.getTime()) / (24 * 60 * 60 * 1000));
+        
         // When filtering by tags, we need to fetch a wider window because:
         // 1. Articles can be tagged with 'classic'/'pub' long after they were saved
         // 2. Tag changes might not update the document's 'updated' timestamp in Readwise
-        // So we fetch from 90 days before last_fetched to catch recently-tagged articles
-        const ninetyDaysAgo = Date.now() - (90 * 24 * 60 * 60 * 1000);
-        const lastFetchedDate = new Date(lastFetchedTime);
-        const fetchFromDate = new Date(Math.min(lastFetchedDate.getTime(), ninetyDaysAgo));
+        // 3. If it's been more than 180 days since last fetch, do a full fetch to catch all recently-tagged articles
+        const MAX_DAYS_FOR_DELTA = 180; // 6 months
+        const LOOKBACK_DAYS = 180; // Look back 6 months to catch recently-tagged articles
         
-        updatedAfter = fetchFromDate.toISOString();
-        const daysWindow = Math.ceil((Date.now() - fetchFromDate.getTime()) / (24 * 60 * 60 * 1000));
-        console.log(`🔄 Delta fetch mode: fetching documents updated after ${updatedAfter} (${daysWindow} day window to catch recently-tagged articles)`);
+        if (daysSinceLastFetch > MAX_DAYS_FOR_DELTA) {
+          // Too long since last fetch - do a full fetch to ensure we catch everything
+          console.log(`🔄 Full fetch mode: last fetch was ${daysSinceLastFetch} days ago (exceeds ${MAX_DAYS_FOR_DELTA} day limit)`);
+          updatedAfter = undefined; // Full fetch
+        } else {
+          // Delta fetch with extended lookback to catch recently-tagged articles
+          const lookbackTime = Date.now() - (LOOKBACK_DAYS * 24 * 60 * 60 * 1000);
+          const fetchFromDate = new Date(Math.min(lastFetchedDate.getTime(), lookbackTime));
+          
+          updatedAfter = fetchFromDate.toISOString();
+          const daysWindow = Math.ceil((Date.now() - fetchFromDate.getTime()) / (24 * 60 * 60 * 1000));
+          console.log(`🔄 Delta fetch mode: fetching documents updated after ${updatedAfter} (${daysWindow} day window to catch recently-tagged articles)`);
+        }
       }
     } else if (READWISE_FULL_FETCH) {
       console.log(`🔄 Full fetch mode: fetching ALL documents (READWISE_FULL_FETCH=true)`);
