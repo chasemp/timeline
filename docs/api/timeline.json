@@ -3,12 +3,12 @@
     "title": "Chase Pettet's Timeline",
     "description": "A timeline of my public online activity",
     "site": "https://timeline.523.life",
-    "total_items": 286,
-    "generated_at": "2025-11-18T01:57:13.982Z",
+    "total_items": 285,
+    "generated_at": "2025-11-18T15:24:15.247Z",
     "types": [
-      "bluesky",
       "saved",
       "pixelfed",
+      "bluesky",
       "hackernews",
       "blog",
       "release",
@@ -16,28 +16,6 @@
     ]
   },
   "items": [
-    {
-      "id": "bluesky:3m5th5qzj2s2n",
-      "type": "bluesky",
-      "source": null,
-      "timestamp": "2025-11-17T14:36:56.190Z",
-      "title": "www.youtube.com/watch?v=4__g...",
-      "summary": "www.youtube.com/watch?v=4__g... — Yann LeCun: We Won't Reach AGI By Scaling Up LLMS",
-      "url": "https://bsky.app/profile/chase523.bsky.social/post/3m5th5qzj2s2n",
-      "canonical_url": "https://bsky.app/profile/chase523.bsky.social/post/3m5th5qzj2s2n",
-      "author": null,
-      "tags": [],
-      "media": [],
-      "content_html": "<p>www.youtube.com/watch?v=4__g...</p>\n          <div style=\"margin: 16px 0; border: 1px solid var(--border, #d4c4a8); border-radius: 8px; overflow: hidden; background: var(--card-bg, #fdfbf7);\">\n            <img src=\"/assets/cached-images/bluesky/55e27cc5b22da63a76c71df17b603b9c.jpeg\" alt=\"Yann LeCun: We Won't Reach AGI By Scaling Up LLMS\" style=\"width: 100%; height: auto; display: block; max-height: 200px; object-fit: cover;\">\n            <div style=\"padding: 12px;\">\n              <div style=\"font-weight: 600; margin-bottom: 4px; color: var(--text, #3d2817);\">Yann LeCun: We Won't Reach AGI By Scaling Up LLMS</div>\n              <div style=\"font-size: 13px; color: var(--muted, #7a6b5d); margin-bottom: 8px;\">YouTube video by Alex Kantrowitz</div>\n              <div style=\"font-size: 12px; color: var(--accent, #c17a4f); overflow: hidden; text-overflow: ellipsis; white-space: nowrap;\">🔗 https://www.youtube.com/watch?v=4__gg83s_Do</div>\n            </div>\n          </div>",
-      "content_text": null,
-      "embed_uri": "at://did:plc:7whslkj667kgto2x246o4stl/app.bsky.feed.post/3m5th5qzj2s2n",
-      "embed_cid": "bafyreifqdpvu4ku3oiog7zfbzbwvykvemiu2fdli43bz6drkkekq24a6qq",
-      "metadata": {
-        "likes": 0,
-        "reposts": 0,
-        "replies": 0
-      }
-    },
     {
       "id": "readwise:01ka272xkbgw66d9wj5nf1jjej",
       "type": "saved",
