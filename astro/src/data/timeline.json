@@ -1,5 +1,27 @@
 [
   {
+    "id": "bluesky:3m6ft75tgck27",
+    "type": "bluesky",
+    "source": null,
+    "timestamp": "2025-11-24T22:00:23.370Z",
+    "title": "www.hacklore.org",
+    "summary": "www.hacklore.org — Stop Hacklore!",
+    "url": "https://bsky.app/profile/chase523.bsky.social/post/3m6ft75tgck27",
+    "canonical_url": "https://bsky.app/profile/chase523.bsky.social/post/3m6ft75tgck27",
+    "author": null,
+    "tags": [],
+    "media": [],
+    "content_html": "<p>www.hacklore.org</p>\n          <div style=\"margin: 16px 0; border: 1px solid var(--border, #d4c4a8); border-radius: 8px; overflow: hidden; background: var(--card-bg, #fdfbf7);\">\n            \n            <div style=\"padding: 12px;\">\n              <div style=\"font-weight: 600; margin-bottom: 4px; color: var(--text, #3d2817);\">Stop Hacklore!</div>\n              \n              <div style=\"font-size: 12px; color: var(--accent, #c17a4f); overflow: hidden; text-overflow: ellipsis; white-space: nowrap;\">🔗 https://www.hacklore.org/</div>\n            </div>\n          </div>",
+    "content_text": null,
+    "embed_uri": "at://did:plc:7whslkj667kgto2x246o4stl/app.bsky.feed.post/3m6ft75tgck27",
+    "embed_cid": "bafyreickvr3yhuayordwx7xvvu7sjodilduefh3rgidvr5qes6pgtfizcy",
+    "metadata": {
+      "likes": 0,
+      "reposts": 0,
+      "replies": 0
+    }
+  },
+  {
     "id": "bluesky:3m5th5qzj2s2n",
     "type": "bluesky",
     "source": null,
