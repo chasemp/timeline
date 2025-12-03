@@ -19,6 +19,7 @@
     "fetch:hackernews": "node --experimental-strip-types scripts/fetch-hackernews.mts",
     "import:linkedin": "node --experimental-strip-types scripts/import-linkedin-content.mts",
     "merge": "node --experimental-strip-types scripts/merge-sources.mts",
+    "test:readwise": "bash scripts/test-readwise-fetch.sh",
     "generate": "npm run fetch:readwise && npm run fetch:blog && npm run fetch:bluesky && npm run fetch:github && npm run fetch:wikipedia && npm run fetch:pixelfed && npm run fetch:hackernews && npm run merge"
   },
   "dependencies": {

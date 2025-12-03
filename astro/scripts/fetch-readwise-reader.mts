@@ -17,7 +17,7 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
 const READWISE_TOKEN = process.env.READWISE_TOKEN;
-const READWISE_TAG_FILTER = process.env.READWISE_TAG_FILTER || ''; // Optional: filter by tag
+const READWISE_TAG_FILTER = process.env.READWISE_TAG_FILTER || ''; // Optional: filter by tag (comma-separated for multiple tags)
 const READWISE_FULL_FETCH = process.env.READWISE_FULL_FETCH === 'true'; // Set to 'true' to fetch all history
 const OUTPUT_FILE = join(__dirname, '../data/sources/readwise.json');
 
@@ -300,18 +300,33 @@ async function convertToTimelineEntry(doc: ReaderDocument): Promise<TimelineEntr
  */
 function filterByTag(documents: ReaderDocument[]): ReaderDocument[] {
   // Use READWISE_TAG_FILTER if set (for backward compatibility)
+  // Support comma-separated tags like "classic,pub"
   if (READWISE_TAG_FILTER) {
+    // Parse comma-separated tags
+    const filterTags = READWISE_TAG_FILTER.split(',').map(t => t.trim().toLowerCase()).filter(Boolean);
+    
     const filtered = documents.filter(doc => {
       if (!doc.tags) return false;
-      return Object.keys(doc.tags).some(tag => 
-        tag.toLowerCase() === READWISE_TAG_FILTER.toLowerCase()
-      );
+      const docTags = Object.keys(doc.tags).map(t => t.toLowerCase());
+      // Document must have at least one of the filter tags
+      return filterTags.some(filterTag => docTags.includes(filterTag));
     });
     
-    console.log(`✓ Filtered to ${filtered.length} documents with tag "${READWISE_TAG_FILTER}"`);
+    console.log(`✓ Filtered to ${filtered.length} documents with tag(s) "${READWISE_TAG_FILTER}"`);
     
     if (filtered.length > 0) {
       console.log(`  Found documents:`, filtered.slice(0, 10).map(d => (d.title || 'Untitled').substring(0, 60)));
+    } else {
+      // Debug: show sample tags from first few documents
+      const sampleDocs = documents.slice(0, 5).filter(d => d.tags && Object.keys(d.tags).length > 0);
+      if (sampleDocs.length > 0) {
+        console.log(`  ⚠️  No documents matched. Sample tags from fetched documents:`, 
+          sampleDocs.map(d => ({
+            title: (d.title || 'Untitled').substring(0, 40),
+            tags: Object.keys(d.tags)
+          }))
+        );
+      }
     }
     
     return filtered;
@@ -415,7 +430,8 @@ async function main() {
   console.log('📖 Fetching Readwise Reader documents...');
   
   if (READWISE_TAG_FILTER) {
-    console.log(`   Filtering by tag: "${READWISE_TAG_FILTER}"`);
+    const filterTags = READWISE_TAG_FILTER.split(',').map(t => t.trim()).filter(Boolean);
+    console.log(`   Filtering by tag(s): "${filterTags.join('", "')}"`);
   } else {
     console.log(`   Filtering by tags: ${INCLUDE_TAGS.join(', ')}`);
   }
