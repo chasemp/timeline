@@ -212,22 +212,62 @@ const allHashtags = Object.entries(hashtagCounts)
     </header>
     <div id="panel-content">
       <div class="intro">
-        <p>This is a chronological archive of my online presence, bringing together different content streams into a single unified view.</p>
+        <p class="intro-description">This is a chronological archive of my online presence, bringing together different content streams into a single unified view.</p>
         
-        <h4>Content Types</h4>
-        <ul class="legend">
-          <li><span class="legend-dot" data-dot-type="saved"></span> <strong>Read</strong> — Bookmarks from Readwise</li>
-          <li><span class="legend-dot" data-dot-type="blog"></span> <strong>Written</strong> — Technical writing and essays</li>
-            <li><span class="legend-dot" data-dot-type="bluesky"></span> <strong>Posted</strong> — Bluesky, Pixelfed, HackerNews, LinkedIn, Primers</li>
-          <li><span class="legend-dot" data-dot-type="release"></span> <strong>Released</strong> — GitHub project releases and tags</li>
-          <li><span class="legend-dot" data-dot-type="wikipedia"></span> <strong>Contributed</strong> — Wikipedia and other contributions</li>
-        </ul>
+        <div class="about-section">
+          <h4>Content Types</h4>
+          <ul class="legend">
+            <li>
+              <span class="legend-dot" data-dot-type="saved"></span>
+              <span class="legend-text">
+                <strong>Read</strong>
+                <span class="legend-description">— Bookmarks from Readwise</span>
+              </span>
+            </li>
+            <li>
+              <span class="legend-dot" data-dot-type="blog"></span>
+              <span class="legend-text">
+                <strong>Written</strong>
+                <span class="legend-description">— Technical writing and essays</span>
+              </span>
+            </li>
+            <li>
+              <span class="legend-dot" data-dot-type="bluesky"></span>
+              <span class="legend-text">
+                <strong>Posted</strong>
+                <span class="legend-description">— Bluesky, Pixelfed, HackerNews, LinkedIn, Primers</span>
+              </span>
+            </li>
+            <li>
+              <span class="legend-dot" data-dot-type="release"></span>
+              <span class="legend-text">
+                <strong>Released</strong>
+                <span class="legend-description">— GitHub project releases and tags</span>
+              </span>
+            </li>
+            <li>
+              <span class="legend-dot" data-dot-type="wikipedia"></span>
+              <span class="legend-text">
+                <strong>Contributed</strong>
+                <span class="legend-description">— Wikipedia and other contributions</span>
+              </span>
+            </li>
+          </ul>
+        </div>
         
-        <h4>How to Use</h4>
-        <p>Click on any item in the timeline to read more. Use the filters above to show or hide different content types. Hover over the colored dots to see timestamps.</p>
+        <div class="about-section">
+          <h4>How to Use</h4>
+          <ul class="how-to-use">
+            <li>Click on any item in the timeline to read more.</li>
+            <li>Use the filters above to show or hide different content types.</li>
+            <li>Hover over the colored dots to see timestamps.</li>
+          </ul>
+        </div>
         
-        <h4>Comments</h4>
-        <p>Each timeline item and blog post has its own discussion thread powered by GitHub Discussions. To leave a comment, you'll need to authorize the <a href="https://giscus.app/" target="_blank" rel="noopener">giscus</a> app—this allows it to create and post comments on your behalf within this repository's discussion threads only.</p>
+        <div class="about-section">
+          <h4>Comments</h4>
+          <p>Each timeline item and blog post has its own discussion thread powered by GitHub Discussions. To leave a comment, you'll need to authorize the <a href="https://giscus.app/" target="_blank" rel="noopener">giscus</a> app—this allows it to create and post comments on your behalf within this repository's discussion threads only.</p>
+        </div>
         
         <p class="muted-text">Built with Astro • Data fetched from multiple sources</p>
       </div>
@@ -377,15 +417,55 @@ const allHashtags = Object.entries(hashtagCounts)
     word-break: break-word;
     box-sizing: border-box;
   }
+  .intro { margin: 0; }
+  .intro-description { margin: 0 0 32px 0; color: var(--text); line-height: 1.7; }
+  .about-section { margin: 0 0 32px 0; }
+  .about-section:last-of-type { margin-bottom: 0; }
   #panel-content h3 { margin: 0 0 14px; font-size: 20px; color: #6d4c41; font-weight: 600; word-wrap: break-word; }
-  #panel-content h4 { margin: 24px 0 10px; font-size: 13px; text-transform: uppercase; letter-spacing: 0.08em; color: var(--accent); font-weight: 700; font-family: system-ui, sans-serif; }
-  #panel-content p { margin: 10px 0; color: var(--text); word-wrap: break-word; overflow-wrap: break-word; }
+  #panel-content h4 { margin: 0 0 16px 0; font-size: 13px; text-transform: uppercase; letter-spacing: 0.08em; color: var(--accent); font-weight: 700; font-family: system-ui, sans-serif; }
+  #panel-content p { margin: 0 0 12px 0; color: var(--text); word-wrap: break-word; overflow-wrap: break-word; line-height: 1.7; }
+  #panel-content p:last-child { margin-bottom: 0; }
   #panel-content a { color: #c17a4f; text-decoration: underline; text-decoration-color: rgba(193, 122, 79, 0.3); text-decoration-thickness: 1px; word-break: break-all; }
   #panel-content a:hover { text-decoration-color: var(--accent); }
-  .muted-text { color: var(--muted); font-size: 13px; font-style: italic; }
-  .legend { list-style: none; padding: 0; margin: 12px 0; }
-  .legend li { display: flex; align-items: center; gap: 12px; margin: 10px 0; line-height: 1.5; }
-  .legend-dot { width: 12px; height: 12px; border-radius: 50%; border: 1px solid rgba(0,0,0,0.1); flex-shrink: 0; }
+  .muted-text { color: var(--muted); font-size: 13px; font-style: italic; margin-top: 32px; margin-bottom: 0; }
+  .legend { list-style: none; padding: 0; margin: 0; }
+  .legend li { display: grid; grid-template-columns: 12px 1fr; gap: 12px; margin: 0 0 16px 0; line-height: 1.6; align-items: start; }
+  .legend li:last-child { margin-bottom: 0; }
+  .legend-dot { width: 12px; height: 12px; border-radius: 50%; border: 1px solid rgba(0,0,0,0.1); margin-top: 2px; }
+  .legend-text { 
+    color: var(--text); 
+    word-break: normal !important; 
+    overflow-wrap: normal !important; 
+    hyphens: none !important;
+  }
+  .legend-text strong {
+    display: block;
+    margin-bottom: 4px;
+  }
+  .legend-description {
+    display: block;
+  }
+  .how-to-use { list-style: none; padding: 0; margin: 0; }
+  .how-to-use li { 
+    margin: 0 0 12px 0; 
+    padding-left: 22px; 
+    position: relative; 
+    line-height: 1.6; 
+    color: var(--text);
+    word-break: normal;
+    overflow-wrap: break-word;
+  }
+  .how-to-use li:last-child { margin-bottom: 0; }
+  .how-to-use li::before { 
+    content: "•"; 
+    position: absolute; 
+    left: 0; 
+    top: 0;
+    color: var(--accent); 
+    font-weight: 900; 
+    font-size: 20px; 
+    line-height: 1.6;
+  }
   .legend-dot[data-dot-type="blog"] { background: #5d4037; }
   .legend-dot[data-dot-type="saved"] { background: #7cb342; }
   .legend-dot[data-dot-type="linkedin"] { background: #0a66c2; }
