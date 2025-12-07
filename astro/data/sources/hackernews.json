@@ -1,5 +1,23 @@
 [
   {
+    "id": "hackernews:46174399",
+    "type": "hackernews",
+    "timestamp": "2025-12-06T16:10:58.000Z",
+    "title": "Influential study on glyphosate safety retracted 25 years after publication",
+    "summary": "This is a really interesting point that I cannot help but equate to Phillip-Morris understanding tobacco better than anyone in 1975.",
+    "url": "https://www.lemonde.fr/en/environment/article/2025/12/03/influential-study-on-glyphosate-safety-retracted-25-years-after-publication_6748114_114.html",
+    "canonical_url": "https://news.ycombinator.com/item?id=46174399",
+    "tags": [],
+    "content_html": "This is a really interesting point that I cannot help but equate to Phillip-Morris understanding tobacco better than anyone in 1975.",
+    "metadata": {
+      "parent_id": 46163265,
+      "comment_url": "https://news.ycombinator.com/item?id=46174399",
+      "story_id": 46161125,
+      "story_title": "Influential study on glyphosate safety retracted 25 years after publication",
+      "story_url": "https://www.lemonde.fr/en/environment/article/2025/12/03/influential-study-on-glyphosate-safety-retracted-25-years-after-publication_6748114_114.html"
+    }
+  },
+  {
     "id": "hackernews:45755826",
     "type": "hackernews",
     "timestamp": "2025-10-30T02:38:34.000Z",
