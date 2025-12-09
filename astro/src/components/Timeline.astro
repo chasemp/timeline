@@ -77,7 +77,7 @@ const formatShortDate = (timestamp: string) => {
             </div>
           )}
           {item.title && <div class="title">{item.title}</div>}
-          {item.summary && <p class="summary">{item.summary}</p>}
+          {item.summary && !(item.type === 'pixelfed' && item.summary === item.title) && <p class="summary">{item.summary}</p>}
             {(['saved', 'linkedin', 'primer'].includes(item.type) && item.metadata?.site_name) && (
             <div class="card-metadata">
               <span class="metadata-item">📰 {item.metadata.site_name}</span>
