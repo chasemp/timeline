@@ -1001,7 +1001,8 @@ const formatShortDate = (timestamp: string) => {
   .comment-direct-link a:hover { text-decoration: underline; }
   
   /* Detail page hashtags - centered below content */
-  .detail-hashtags {
+  /* Using :global() because these are dynamically injected via JS */
+  :global(.detail-hashtags) {
     display: flex;
     gap: 8px;
     flex-wrap: wrap;
@@ -1011,7 +1012,7 @@ const formatShortDate = (timestamp: string) => {
     padding-top: 20px;
     border-top: 1px solid var(--border);
   }
-  .detail-hashtag {
+  :global(.detail-hashtag) {
     display: inline-block;
     padding: 4px 12px;
     border-radius: 999px;
@@ -1024,12 +1025,12 @@ const formatShortDate = (timestamp: string) => {
     cursor: pointer;
     transition: all 0.2s;
   }
-  .detail-hashtag:hover {
+  :global(.detail-hashtag:hover) {
     background: rgba(193, 122, 79, 0.25);
     border-color: var(--accent);
     transform: scale(1.05);
   }
-  .detail-hashtag:active {
+  :global(.detail-hashtag:active) {
     transform: scale(0.95);
   }
 </style>
