@@ -13,7 +13,7 @@ export async function GET(context: APIContext) {
   // Map type to friendly display name
   const typeDisplayName = (type: string) => {
     const names: Record<string, string> = {
-      'saved': 'Article Read',
+      'saved': 'Article Shared',
       'primer': 'AI Topic Primer',
       'blog': 'Blog Post',
       'bluesky': 'Bluesky',
