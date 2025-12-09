@@ -323,6 +323,31 @@ const allHashtags = Object.entries(hashtagCounts)
     background-color: var(--search-highlight-bg) !important;
     color: var(--search-highlight-text) !important;
   }
+  
+  /* Pagefind search results text styling for dark mode */
+  :root[data-theme="dark"] .pagefind-ui__result-title,
+  :root:not([data-theme]) .pagefind-ui__result-title {
+    color: var(--accent) !important;
+  }
+  :root[data-theme="dark"] .pagefind-ui__result-excerpt,
+  :root:not([data-theme]) .pagefind-ui__result-excerpt {
+    color: var(--text) !important;
+  }
+  :root[data-theme="dark"] .pagefind-ui__result-link,
+  :root:not([data-theme]) .pagefind-ui__result-link {
+    color: var(--text) !important;
+  }
+  :root[data-theme="dark"] .pagefind-ui__message,
+  :root:not([data-theme]) .pagefind-ui__message {
+    color: var(--muted) !important;
+  }
+  :root[data-theme="dark"] .pagefind-ui,
+  :root:not([data-theme]) .pagefind-ui {
+    --pagefind-ui-text: var(--text);
+    --pagefind-ui-background: var(--bg);
+    --pagefind-ui-border: var(--border);
+    --pagefind-ui-primary: var(--accent);
+  }
   html, body { margin: 0; padding: 0; background: var(--bg); color: var(--text); font: 16px/1.6 Georgia, "Times New Roman", serif; transition: background-color 0.3s ease, color 0.3s ease; }
   main { max-width: 1200px; margin: 0 auto; padding: 24px; display: grid; grid-template-columns: 1fr minmax(320px, 420px); gap: 24px; }
   footer { max-width: 1200px; margin: 0 auto; padding: 24px 24px 32px; text-align: center; }
