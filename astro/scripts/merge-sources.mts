@@ -27,6 +27,12 @@ function detectType(entry: any) {
   const tags = (entry.tags || []).map((t: string) => t.toLowerCase());
   const source = entry.source || '';
 
+  // Check for primers first (items with "primer" tag should be type "primer")
+  // Primers get their own standalone pages like blog posts
+  if (baseType === 'saved' && tags.includes('primer')) {
+    return 'primer';
+  }
+
   // LinkedIn content from Readwise (saved articles) should stay as 'saved' (Read category)
   // These are OTHER people's posts that you read, not your own posts
   // Your own LinkedIn posts would come from a different source (e.g., markdown files)

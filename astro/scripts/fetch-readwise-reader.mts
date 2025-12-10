@@ -57,6 +57,7 @@ interface ReaderDocument {
   reading_progress: number;
   saved_at: string;
   content?: string; // Full content when available
+  html_content?: string; // Full HTML content from Readwise API (when withHtmlContent=true)
 }
 
 interface TimelineEntry {
@@ -97,6 +98,8 @@ async function fetchDocuments(updatedAfter?: string): Promise<ReaderDocument[]> 
   
   while (hasMore) {
     // Build URL with optional updatedAfter parameter
+    // Note: withHtmlContent is NOT used here to keep initial fetch fast
+    // We fetch HTML content separately for primer/full tagged items
     let url = `https://readwise.io/api/v3/list/?pageCursor=${pageCursor}`;
     if (updatedAfter) {
       url += `&updatedAfter=${encodeURIComponent(updatedAfter)}`;
@@ -156,6 +159,60 @@ async function fetchDocuments(updatedAfter?: string): Promise<ReaderDocument[]> 
   }
   
   return documents;
+}
+
+/**
+ * Fetch documents with full HTML content from Readwise for specific tags
+ * Returns a map of document ID to html_content
+ */
+async function fetchDocumentsWithHtmlByTag(tags: string[]): Promise<Map<string, string>> {
+  console.log(`📄 Fetching HTML content for documents with tags: ${tags.join(', ')}...`);
+  const htmlContentMap = new Map<string, string>();
+  
+  for (const tag of tags) {
+    let pageCursor = '';
+    let hasMore = true;
+    
+    while (hasMore) {
+      const url = `https://readwise.io/api/v3/list/?pageCursor=${pageCursor}&withHtmlContent=true`;
+      
+      try {
+        const response = await fetch(url, {
+          headers: {
+            'Authorization': `Token ${READWISE_TOKEN}`
+          }
+        });
+        
+        if (!response.ok) {
+          console.log(`  Failed to fetch documents with HTML: ${response.status} ${response.statusText}`);
+          break;
+        }
+        
+        const data = await response.json();
+        
+        // Filter for documents with this tag and extract html_content
+        for (const doc of (data.results || [])) {
+          const docTags = Object.keys(doc.tags || {}).map((t: string) => t.toLowerCase());
+          if (docTags.includes(tag.toLowerCase()) && doc.html_content) {
+            htmlContentMap.set(doc.id, doc.html_content);
+          }
+        }
+        
+        pageCursor = data.nextPageCursor;
+        hasMore = !!pageCursor;
+        
+        if (hasMore) {
+          await new Promise(resolve => setTimeout(resolve, 1500));
+        }
+      } catch (error: any) {
+        console.log(`  Error fetching documents with HTML: ${error.message}`);
+        break;
+      }
+    }
+  }
+  
+  console.log(`  ✓ Got HTML content for ${htmlContentMap.size} documents`);
+  return htmlContentMap;
 }
 
 /**
@@ -234,9 +291,23 @@ async function fetchHighlights(documentId: string): Promise<string[]> {
 
 /**
  * Build content HTML with notes and highlights
+ * For primers and full-tagged items, includes the full document HTML content from Readwise
  */
 async function buildContentHtml(doc: ReaderDocument): Promise<string | undefined> {
   const parts: string[] = [];
+  const tagNames = Object.keys(doc.tags || {});
+  const isPrimer = tagNames.some(tag => tag.toLowerCase() === 'primer');
+  const hasFullTag = tagNames.some(tag => tag.toLowerCase() === 'full');
+  
+  // For primers and full-tagged items, include full HTML content if available
+  if ((isPrimer || hasFullTag) && doc.html_content) {
+    parts.push(`<div class="full-content">${doc.html_content}</div>`);
+  } else if ((isPrimer || hasFullTag) && doc.content) {
+    // Fallback to plain text content if html_content not available
+    const paragraphs = doc.content.split(/\n\n+/).filter(p => p.trim());
+    const htmlContent = paragraphs.map(p => `<p>${p.replace(/\n/g, '<br>')}</p>`).join('\n');
+    parts.push(`<div class="full-content">${htmlContent}</div>`);
+  }
   
   // Add notes if present
   if (doc.notes) {
@@ -501,24 +572,30 @@ async function main() {
     let newCount = 0;
     let updatedCount = 0;
     
-    for (const doc of filteredDocs) {
-      // Check if this document has the "full" tag and fetch full content if needed
+    // Check if any documents need HTML content (primer or full tagged)
+    const docsNeedingHtml = filteredDocs.filter(doc => {
       const tagNames = Object.keys(doc.tags || {});
-      const hasFullTag = tagNames.some(tag => tag.toLowerCase() === 'full');
+      return tagNames.some(tag => ['primer', 'full'].includes(tag.toLowerCase()));
+    });
+    
+    // Fetch HTML content for primer/full tagged items in one batch
+    let htmlContentMap = new Map<string, string>();
+    if (docsNeedingHtml.length > 0) {
+      htmlContentMap = await fetchDocumentsWithHtmlByTag(['primer', 'full']);
       
-      if (hasFullTag && !doc.content) {
-        console.log(`📄 Fetching full content for: ${doc.title}`);
-        const fullContent = await fetchFullContent(doc.source_url);
-        if (fullContent) {
-          doc.content = fullContent;
-          console.log(`  ✓ Fetched ${fullContent.length} characters of content`);
+      // Apply HTML content to documents
+      for (const doc of docsNeedingHtml) {
+        const htmlContent = htmlContentMap.get(doc.id);
+        if (htmlContent) {
+          doc.html_content = htmlContent;
+          console.log(`  ✓ Applied HTML content to: ${doc.title.substring(0, 50)}...`);
         } else {
-          console.log(`  ⚠️ Failed to fetch full content, using summary`);
+          console.log(`  ⚠️ No HTML content available for: ${doc.title.substring(0, 50)}...`);
         }
-        
-        // Add delay between full content fetches to be respectful to target websites
-        await new Promise(resolve => setTimeout(resolve, 2000)); // 2 second delay
       }
+    }
+    
+    for (const doc of filteredDocs) {
       
       const entry = await convertToTimelineEntry(doc);
       
