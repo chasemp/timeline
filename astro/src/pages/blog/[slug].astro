@@ -15,13 +15,11 @@ const { post } = Astro.props;
 
 // Helper function to check if comments should be disabled for this post
 function shouldDisableComments(post: any): boolean {
-  // Check for #nocomments or #nc hashtag
   const hashtags = post.hashtags || [];
   const hasNoCommentsTag = hashtags.some((tag: string) => 
     tag.toLowerCase() === '#nocomments' || tag.toLowerCase() === '#nc'
   );
   
-  // Check tags array as well (frontmatter tags)
   const tags = post.tags || [];
   const hasNoCommentsInTags = tags.some((tag: string) => {
     const normalized = tag.toLowerCase().replace(/\s+/g, '_');
@@ -41,22 +39,42 @@ function shouldDisableComments(post: any): boolean {
   <meta name="description" content={post.summary || post.title}>
   <link rel="canonical" href={`https://timeline.523.life/blog/${post.id.replace('blog:', '')}`}>
   <ViewTransitions />
+  <!-- Theme initialization script - runs before page renders to prevent flash -->
+  <script is:inline>
+    (function() {
+      const stored = localStorage.getItem('theme');
+      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      const theme = stored || (prefersDark ? 'dark' : 'light');
+      document.documentElement.setAttribute('data-theme', theme);
+    })();
+  </script>
 </head>
 <body>
 
 <main>
   <header class="header">
-    <nav>
-      <a href="/" class="back-link">← Back to timeline</a>
+    <nav class="header-nav">
+      <a href="/" class="back-link">← Go to timeline</a>
+      <span class="about-header">This is content from <a href="https://523.life">Chase Pettet</a> and part of my public timeline</span>
+      <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+        <span class="sun-icon">☀️</span>
+        <span class="moon-icon">🌙</span>
+      </button>
     </nav>
     <div class="meta">
       <span class="type">{post.type}</span> · <time datetime={post.timestamp}>{new Date(post.timestamp).toLocaleDateString()}</time>
-      {post.canonical_url && !post.canonical_url.startsWith('/') && (
-        <> | <a href={post.canonical_url} target="_blank" rel="noopener">Source ↗</a></>
+      {post.metadata?.word_count && (
+        <> · 🕐 {Math.ceil(post.metadata.word_count / 200)} min read</>
       )}
     </div>
     <h1>{post.title}</h1>
   </header>
+
+  {post.summary && (
+    <div class="summary">
+      <p>{post.summary}</p>
+    </div>
+  )}
 
   <article class="content" set:html={post.content_html} />
 
@@ -67,12 +85,27 @@ function shouldDisableComments(post: any): boolean {
   )}
 
   <footer class="post-footer">
-    <a href="/" class="back-link">← Back to timeline</a>
+    <a href="/" class="back-link">← Go to timeline</a>
     {post.canonical_url && !post.canonical_url.startsWith('/') && (
       <a href={post.canonical_url} target="_blank" rel="noopener">Original post ↗</a>
     )}
   </footer>
 </main>
+
+<script>
+  // Theme toggle functionality
+  const toggle = document.getElementById('theme-toggle');
+  
+  function updateTheme(theme: string) {
+    document.documentElement.setAttribute('data-theme', theme);
+    localStorage.setItem('theme', theme);
+  }
+  
+  toggle?.addEventListener('click', () => {
+    const current = document.documentElement.getAttribute('data-theme') || 'dark';
+    updateTheme(current === 'dark' ? 'light' : 'dark');
+  });
+</script>
 
 {!(config.commentsEnabled === false || shouldDisableComments(post)) && (
   <>
@@ -93,55 +126,42 @@ function shouldDisableComments(post: any): boolean {
     </script>
 
     <script>
-      // Hide comments section if giscus fails to load after timeout
       window.addEventListener('load', () => {
         const container = document.getElementById('giscus-container');
         const commentsSection = document.getElementById('comments-section');
         
-        // Set timeout to check if giscus loaded (10 seconds)
         setTimeout(() => {
           if (container && commentsSection) {
-            // Check if giscus actually rendered content
             const hasContent = container.innerHTML.trim() !== '';
-            
             if (!hasContent) {
-              // Giscus failed to load - hide the comments section
               commentsSection.style.display = 'none';
             }
           }
         }, 10000);
-        
       });
     </script>
   </>
 )}
 
 <style>
-  .comments-section {
-    margin-top: 48px;
-    padding-top: 24px;
-    border-top: 1px solid #1f2937;
+  :root[data-theme="dark"], :root:not([data-theme]) {
+    --bg: #2a2419;
+    --panel: #342d23;
+    --text: #e8dcc4;
+    --muted: #a89a84;
+    --accent: #d4956f;
+    --border: #4a3f32;
+    --card-bg: #3d3528;
   }
   
-  .giscus {
-    margin-top: 16px;
-    position: relative;
-  }
-  
-  .giscus iframe {
-    min-height: 300px;
-  }
-</style>
-</body>
-</html>
-
-<style>
-  :root {
-    --bg: #0b0e13;
-    --panel: #11161f;
-    --text: #e7ecf3;
-    --muted: #97a3b6;
-    --accent: #6aa0ff;
+  :root[data-theme="light"] {
+    --bg: #fdfbf7;
+    --panel: #f5f1e8;
+    --text: #3d3527;
+    --muted: #7a6f5f;
+    --accent: #c17a4f;
+    --border: #e0d8c8;
+    --card-bg: #ffffff;
   }
   
   * { box-sizing: border-box; }
@@ -151,7 +171,8 @@ function shouldDisableComments(post: any): boolean {
     padding: 0; 
     background: var(--bg); 
     color: var(--text); 
-    font: 16px/1.6 system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Helvetica Neue, Arial, "Apple Color Emoji", "Segoe UI Emoji"; 
+    font: 16px/1.7 Georgia, "Times New Roman", serif;
+    transition: background-color 0.3s ease, color 0.3s ease;
   }
   
   main { 
@@ -164,32 +185,103 @@ function shouldDisableComments(post: any): boolean {
     margin-bottom: 40px; 
   }
   
+  .header-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-bottom: 24px;
+  }
+  
   .back-link { 
     color: var(--accent); 
     text-decoration: none; 
-    font-size: 14px; 
+    font-size: 14px;
+    font-family: system-ui, sans-serif;
   }
   
   .back-link:hover { 
     text-decoration: underline; 
   }
   
+  .about-header {
+    font-size: 13px;
+    color: var(--muted);
+    font-family: system-ui, sans-serif;
+    flex: 1;
+    text-align: center;
+  }
+  
+  .about-header a {
+    color: var(--accent);
+    text-decoration: none;
+    font-weight: 600;
+  }
+  
+  .about-header a:hover {
+    text-decoration: underline;
+  }
+  
+  .theme-toggle {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 6px 10px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: all 0.2s;
+  }
+  
+  .theme-toggle:hover {
+    background: var(--card-bg);
+    border-color: var(--accent);
+  }
+  
+  :root[data-theme="dark"] .sun-icon,
+  :root:not([data-theme]) .sun-icon {
+    display: none;
+  }
+  
+  :root[data-theme="light"] .moon-icon {
+    display: none;
+  }
+  
   .meta { 
     font-size: 14px; 
     color: var(--muted); 
-    margin: 16px 0 8px; 
+    margin: 16px 0 8px;
+    font-family: system-ui, sans-serif;
   }
   
   .type { 
     text-transform: uppercase; 
     letter-spacing: 0.06em; 
-    font-size: 12px; 
+    font-size: 12px;
+    color: var(--accent);
+    font-weight: 600;
   }
   
   h1 { 
-    margin: 8px 0 24px; 
+    margin: 16px 0 24px; 
     font-size: 32px; 
-    line-height: 1.2; 
+    line-height: 1.2;
+    color: var(--accent);
+  }
+  
+  .summary {
+    margin: 24px 0 32px;
+    padding: 20px;
+    background: var(--panel);
+    border-left: 3px solid var(--accent);
+    border-radius: 4px;
+  }
+  
+  .summary p {
+    margin: 0;
+    color: var(--text);
+    font-style: italic;
+    line-height: 1.7;
   }
   
   .content { 
@@ -197,9 +289,15 @@ function shouldDisableComments(post: any): boolean {
   }
   
   .content img { 
-    max-width: 100%; 
-    height: auto; 
-    border-radius: 8px; 
+    max-width: 100%;
+    max-height: 600px;
+    width: auto;
+    height: auto;
+    display: block;
+    margin: 24px auto;
+    object-fit: contain;
+    border-radius: 8px;
+    border: 1px solid var(--border);
   }
   
   .content p { 
@@ -207,10 +305,11 @@ function shouldDisableComments(post: any): boolean {
   }
   
   .content pre { 
-    background: #1a1f2e; 
+    background: var(--panel); 
     padding: 16px; 
     border-radius: 8px; 
-    overflow-x: auto; 
+    overflow-x: auto;
+    border: 1px solid var(--border);
   }
   
   .content code { 
@@ -218,18 +317,112 @@ function shouldDisableComments(post: any): boolean {
     font-size: 14px; 
   }
   
-  .content a { 
-    color: var(--accent); 
+  /* Force all links to use accent color */
+  a, a:link, a:visited, a:hover, a:active,
+  .content a, .content a:link, .content a:visited, .content a:hover, .content a:active {
+    color: var(--accent) !important;
+    text-decoration-color: rgba(212, 149, 111, 0.3);
+  }
+  
+  a:hover, .content a:hover {
+    text-decoration: underline;
+  }
+  
+  .content h1, .content h2, .content h3, .content h4, .content h5, .content h6 {
+    color: var(--text);
+    margin-top: 32px;
+    margin-bottom: 16px;
+  }
+  
+  .content ul, .content ol {
+    margin: 16px 0;
+    padding-left: 24px;
+  }
+  
+  .content li {
+    margin: 8px 0;
+  }
+  
+  .content blockquote {
+    border-left: 3px solid var(--accent);
+    margin: 24px 0;
+    padding: 12px 20px;
+    background: var(--panel);
+    border-radius: 0 4px 4px 0;
+  }
+  
+  .content blockquote p {
+    margin: 0;
+    font-style: italic;
+  }
+  
+  /* Table styling */
+  .content table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 24px 0;
+    font-size: 14px;
+    background: var(--card-bg);
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid var(--border);
+  }
+  
+  .content thead {
+    background: var(--panel);
+  }
+  
+  .content th {
+    padding: 12px 16px;
+    text-align: left;
+    font-weight: 600;
+    color: var(--accent);
+    border-bottom: 2px solid var(--border);
+    font-family: system-ui, sans-serif;
+    font-size: 13px;
+  }
+  
+  .content td {
+    padding: 12px 16px;
+    border-bottom: 1px solid var(--border);
+    vertical-align: top;
+  }
+  
+  .content tr:last-child td {
+    border-bottom: none;
+  }
+  
+  .content tbody tr:nth-child(even) {
+    background: rgba(255, 255, 255, 0.03);
+  }
+  
+  :root[data-theme="light"] .content tbody tr:nth-child(even) {
+    background: rgba(0, 0, 0, 0.02);
   }
   
   .post-footer { 
     margin-top: 48px; 
     padding-top: 24px; 
-    border-top: 1px solid #1f2937; 
+    border-top: 1px solid var(--border); 
     display: flex; 
     justify-content: space-between; 
     flex-wrap: wrap; 
     gap: 16px; 
+  }
+  
+  .comments-section {
+    margin-top: 48px;
+    padding-top: 24px;
+    border-top: 1px solid var(--border);
+  }
+  
+  .giscus {
+    margin-top: 16px;
+    position: relative;
+  }
+  
+  .giscus iframe {
+    min-height: 300px;
   }
   
   @media (max-width: 640px) {
@@ -240,6 +433,18 @@ function shouldDisableComments(post: any): boolean {
     main { 
       padding: 16px; 
     }
+    
+    .header-nav {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 8px;
+    }
+    
+    .about-header {
+      text-align: left;
+    }
   }
 </style>
 
+</body>
+</html>
