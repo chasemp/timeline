@@ -28,6 +28,92 @@ function shouldDisableComments(item: any): boolean {
   
   return hasNoCommentsTag || hasNoCommentsInTags;
 }
+
+// Extract headings from content_html for TOC
+interface TocEntry {
+  level: number;
+  text: string;
+  id: string;
+  originalMatch: string;
+}
+
+function extractToc(html: string): TocEntry[] {
+  const toc: TocEntry[] = [];
+  // Match h1, h2, h3 tags - handle nested tags like <h1><b>Text</b></h1> with newlines
+  const headingRegex = /<h([1-3])([^>]*)>([\s\S]*?)<\/h\1>/gi;
+  let match;
+  
+  while ((match = headingRegex.exec(html)) !== null) {
+    const level = parseInt(match[1]);
+    const fullMatch = match[0];
+    // Extract text content, stripping any nested tags
+    let text = match[3]
+      .replace(/<[^>]+>/g, '') // Remove HTML tags
+      .replace(/\s+/g, ' ')    // Normalize whitespace
+      .trim();
+    
+    // Only include headings that look like chapters or sections
+    if (text && (text.includes('Chapter') || text.includes('Section') || level <= 2)) {
+      // Create a URL-friendly ID
+      const id = text
+        .toLowerCase()
+        .replace(/[^a-z0-9\s-]/g, '')
+        .replace(/\s+/g, '-')
+        .substring(0, 60);
+      
+      if (id) {
+        toc.push({ level, text, id, originalMatch: fullMatch });
+      }
+    }
+  }
+  
+  return toc;
+}
+
+// Add IDs to headings in the content HTML
+function addHeadingIds(html: string, toc: TocEntry[]): string {
+  let result = html;
+  
+  for (const entry of toc) {
+    // Replace the original match with an enhanced version
+    const escapedMatch = entry.originalMatch.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+    const regex = new RegExp(escapedMatch.replace(/\s+/g, '\\s*'), 'i');
+    
+    result = result.replace(regex, (match) => {
+      // Extract the opening tag
+      const openTagMatch = match.match(/<h([1-3])([^>]*)>/i);
+      if (!openTagMatch) return match;
+      
+      const level = openTagMatch[1];
+      const attrs = openTagMatch[2];
+      
+      // Check if it already has an id
+      if (attrs.includes('id=')) {
+        return match;
+      }
+      
+      // Get the inner content (everything between opening and closing tags)
+      const innerContent = match.replace(/<h[1-3][^>]*>/i, '').replace(/<\/h[1-3]>/i, '');
+      
+      return `<h${level}${attrs} id="${entry.id}" class="section-heading">
+        <a href="#${entry.id}" class="heading-anchor" title="Link to this section">#</a>
+        ${innerContent}
+        <button class="copy-link-btn" data-link="#${entry.id}" title="Copy link to section">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/>
+            <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/>
+          </svg>
+        </button>
+      </h${level}>`;
+    });
+  }
+  
+  return result;
+}
+
+const rawContent = primer.content_html || '<p>Full content not available.</p>';
+const toc = extractToc(rawContent);
+const processedContent = addHeadingIds(rawContent, toc);
 ---
 
 <!DOCTYPE html>
@@ -69,9 +155,22 @@ function shouldDisableComments(item: any): boolean {
     </div>
   )}
 
+  {toc.length > 0 && (
+    <nav class="toc">
+      <h3 class="toc-title">Table of Contents</h3>
+      <ul class="toc-list">
+        {toc.map((entry) => (
+          <li class={`toc-item toc-level-${entry.level}`}>
+            <a href={`#${entry.id}`}>{entry.text}</a>
+          </li>
+        ))}
+      </ul>
+    </nav>
+  )}
+
   <hr class="content-divider">
 
-  <article class="content" set:html={primer.content_html || '<p>Full content not available.</p>'} />
+  <article class="content" set:html={processedContent} />
 
   {!(config.commentsEnabled === false || shouldDisableComments(primer)) && (
     <div class="comments-section" id="comments-section">
@@ -83,6 +182,35 @@ function shouldDisableComments(item: any): boolean {
     <a href="/" class="back-link">← Go to timeline</a>
   </footer>
 </main>
+
+<script>
+  // Copy link functionality
+  document.addEventListener('click', (e) => {
+    const btn = (e.target as HTMLElement).closest('.copy-link-btn');
+    if (btn) {
+      e.preventDefault();
+      const link = btn.getAttribute('data-link');
+      if (link) {
+        const fullUrl = window.location.origin + window.location.pathname + link;
+        navigator.clipboard.writeText(fullUrl).then(() => {
+          // Visual feedback
+          btn.classList.add('copied');
+          setTimeout(() => btn.classList.remove('copied'), 2000);
+        });
+      }
+    }
+  });
+  
+  // Smooth scroll to anchor on page load if hash is present
+  if (window.location.hash) {
+    const target = document.querySelector(window.location.hash);
+    if (target) {
+      setTimeout(() => {
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }, 100);
+    }
+  }
+</script>
 
 {!(config.commentsEnabled === false || shouldDisableComments(primer)) && (
   <>
@@ -129,6 +257,8 @@ function shouldDisableComments(item: any): boolean {
     --accent: #d4956f;
     --border: #4a3f32;
     --card-bg: #3d3528;
+    --table-header-bg: #3d3528;
+    --table-row-alt: rgba(255, 255, 255, 0.03);
   }
   
   :root[data-theme="light"] {
@@ -139,6 +269,8 @@ function shouldDisableComments(item: any): boolean {
     --accent: #c17a4f;
     --border: #e0d8c8;
     --card-bg: #ffffff;
+    --table-header-bg: #f0ebe0;
+    --table-row-alt: rgba(0, 0, 0, 0.02);
   }
   
   * { box-sizing: border-box; }
@@ -150,10 +282,11 @@ function shouldDisableComments(item: any): boolean {
     color: var(--text); 
     font: 16px/1.7 Georgia, "Times New Roman", serif;
     transition: background-color 0.3s ease, color 0.3s ease;
+    scroll-behavior: smooth;
   }
   
   main { 
-    max-width: 720px; 
+    max-width: 800px; 
     margin: 0 auto; 
     padding: 24px; 
   }
@@ -205,15 +338,6 @@ function shouldDisableComments(item: any): boolean {
     font-family: system-ui, sans-serif;
   }
   
-  .meta a {
-    color: var(--accent);
-    text-decoration: none;
-  }
-  
-  .meta a:hover {
-    text-decoration: underline;
-  }
-  
   .type { 
     text-transform: uppercase; 
     letter-spacing: 0.06em; 
@@ -244,6 +368,61 @@ function shouldDisableComments(item: any): boolean {
     line-height: 1.7;
   }
   
+  /* Table of Contents */
+  .toc {
+    margin: 32px 0;
+    padding: 24px;
+    background: var(--panel);
+    border-radius: 8px;
+    border: 1px solid var(--border);
+  }
+  
+  .toc-title {
+    margin: 0 0 16px 0;
+    font-size: 14px;
+    font-family: system-ui, sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--accent);
+    font-weight: 600;
+  }
+  
+  .toc-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  
+  .toc-item {
+    margin: 8px 0;
+    line-height: 1.4;
+  }
+  
+  .toc-item a {
+    color: var(--text);
+    text-decoration: none;
+    font-size: 15px;
+    transition: color 0.2s;
+  }
+  
+  .toc-item a:hover {
+    color: var(--accent);
+  }
+  
+  .toc-level-1 {
+    font-weight: 600;
+  }
+  
+  .toc-level-2 {
+    padding-left: 16px;
+  }
+  
+  .toc-level-3 {
+    padding-left: 32px;
+    font-size: 14px;
+    color: var(--muted);
+  }
+  
   .content-divider {
     border: none;
     border-top: 1px solid var(--border);
@@ -252,6 +431,128 @@ function shouldDisableComments(item: any): boolean {
   
   .content { 
     margin: 32px 0; 
+  }
+  
+  /* Section headings with anchor links */
+  .content :global(.section-heading) {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+  
+  .content :global(.heading-anchor) {
+    color: var(--muted) !important;
+    text-decoration: none !important;
+    font-size: 0.8em;
+    opacity: 0.5;
+    transition: opacity 0.2s, color 0.2s;
+  }
+  
+  .content :global(.section-heading:hover .heading-anchor) {
+    opacity: 1;
+    color: var(--accent) !important;
+  }
+  
+  .content :global(.copy-link-btn) {
+    background: none;
+    border: none;
+    padding: 4px 8px;
+    cursor: pointer;
+    color: var(--muted);
+    opacity: 0;
+    transition: opacity 0.2s, color 0.2s, background 0.2s;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .content :global(.section-heading:hover .copy-link-btn) {
+    opacity: 1;
+  }
+  
+  .content :global(.copy-link-btn:hover) {
+    color: var(--accent);
+    background: var(--panel);
+  }
+  
+  .content :global(.copy-link-btn.copied) {
+    color: #4ade80;
+  }
+  
+  .content :global(.copy-link-btn.copied::after) {
+    content: 'Copied!';
+    position: absolute;
+    right: 100%;
+    margin-right: 8px;
+    font-size: 12px;
+    white-space: nowrap;
+    color: #4ade80;
+    font-family: system-ui, sans-serif;
+  }
+  
+  /* Table styling */
+  .content :global(table) {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 24px 0;
+    font-size: 14px;
+    background: var(--card-bg);
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid var(--border);
+  }
+  
+  .content :global(thead) {
+    background: var(--table-header-bg);
+  }
+  
+  .content :global(th) {
+    padding: 12px 16px;
+    text-align: left;
+    font-weight: 600;
+    color: var(--accent);
+    border-bottom: 2px solid var(--border);
+    font-family: system-ui, sans-serif;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+  }
+  
+  .content :global(td) {
+    padding: 12px 16px;
+    border-bottom: 1px solid var(--border);
+    vertical-align: top;
+    line-height: 1.5;
+  }
+  
+  .content :global(tr:last-child td) {
+    border-bottom: none;
+  }
+  
+  .content :global(tbody tr:nth-child(even)) {
+    background: var(--table-row-alt);
+  }
+  
+  .content :global(tbody tr:hover) {
+    background: rgba(212, 149, 111, 0.08);
+  }
+  
+  /* Responsive table */
+  @media (max-width: 640px) {
+    .content :global(table) {
+      display: block;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+    }
+    
+    .content :global(th),
+    .content :global(td) {
+      padding: 10px 12px;
+      min-width: 120px;
+    }
   }
   
   .content img { 
@@ -283,40 +584,51 @@ function shouldDisableComments(item: any): boolean {
     font-size: 14px; 
   }
   
-  /* Force all links in content to use accent color */
-  .content a:link,
-  .content a:visited,
-  .content a:hover,
-  .content a:active,
-  .meta a:link,
-  .meta a:visited,
-  .meta a:hover,
-  .meta a:active {
+  /* Force ALL links to use accent color - more aggressive selectors */
+  a, a:link, a:visited, a:hover, a:active,
+  .content a, .content a:link, .content a:visited, .content a:hover, .content a:active,
+  .content :global(a), .content :global(a:link), .content :global(a:visited), .content :global(a:hover), .content :global(a:active) {
     color: var(--accent) !important;
     text-decoration-color: rgba(212, 149, 111, 0.3);
   }
   
-  .content a:hover,
-  .meta a:hover {
+  a:hover, .content a:hover, .content :global(a:hover) {
     text-decoration: underline;
   }
   
-  .content h1, .content h2, .content h3, .content h4, .content h5, .content h6 {
-    color: var(--text);
-    margin-top: 32px;
-    margin-bottom: 16px;
+  /* Specific override for anchor links */
+  .content :global(.heading-anchor) {
+    text-decoration: none !important;
   }
   
-  .content ul, .content ol {
+  .content h1, .content h2, .content h3, .content h4, .content h5, .content h6,
+  .content :global(h1), .content :global(h2), .content :global(h3), 
+  .content :global(h4), .content :global(h5), .content :global(h6) {
+    color: var(--text);
+    margin-top: 40px;
+    margin-bottom: 16px;
+    padding-top: 16px;
+    border-top: 1px solid var(--border);
+  }
+  
+  .content h1:first-child, .content :global(h1:first-child),
+  .content h2:first-child, .content :global(h2:first-child) {
+    margin-top: 0;
+    border-top: none;
+    padding-top: 0;
+  }
+  
+  .content ul, .content ol,
+  .content :global(ul), .content :global(ol) {
     margin: 16px 0;
     padding-left: 24px;
   }
   
-  .content li {
+  .content li, .content :global(li) {
     margin: 8px 0;
   }
   
-  .content blockquote {
+  .content blockquote, .content :global(blockquote) {
     border-left: 3px solid var(--accent);
     margin: 24px 0;
     padding: 12px 20px;
@@ -324,9 +636,16 @@ function shouldDisableComments(item: any): boolean {
     border-radius: 0 4px 4px 0;
   }
   
-  .content blockquote p {
+  .content blockquote p, .content :global(blockquote p) {
     margin: 0;
     font-style: italic;
+  }
+  
+  /* Strong/bold text styling */
+  .content strong, .content :global(strong),
+  .content b, .content :global(b) {
+    color: var(--text);
+    font-weight: 700;
   }
   
   .post-footer { 
@@ -368,9 +687,22 @@ function shouldDisableComments(item: any): boolean {
       align-items: flex-start;
       gap: 8px;
     }
+    
+    .toc {
+      padding: 16px;
+    }
+    
+    .content :global(.section-heading) {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 4px;
+    }
+    
+    .content :global(.copy-link-btn) {
+      opacity: 1;
+    }
   }
 </style>
 
 </body>
 </html>
-
