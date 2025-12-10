@@ -56,7 +56,7 @@ const formatShortDate = (timestamp: string) => {
         <div class="spine">
           <span class="dot" data-dot-type={item.type} data-timestamp={item.timestamp} title={new Date(item.timestamp).toLocaleString()}></span>
         </div>
-        <button class="card" data-id={item.id} data-type={item.type} data-url={item.type === 'blog' ? `/blog/${item.id.replace('blog:', '')}` : (item.url || '')} aria-haspopup="dialog">
+        <button class="card" data-id={item.id} data-type={item.type} data-url={item.type === 'blog' ? `/blog/${item.id.replace('blog:', '')}` : (item.type === 'primer' ? `/primer/${item.id.replace('readwise:', '')}` : (item.url || ''))} aria-haspopup="dialog">
           <div class="meta">
             <span class="type">{typeDisplayName(item.type)}</span>
             <time datetime={item.timestamp}>{formatShortDate(item.timestamp)}</time>
@@ -360,10 +360,18 @@ const formatShortDate = (timestamp: string) => {
     panelTitleText.textContent = `${typeDisplayName} · ${shortDate}`;
     
     // Show/hide and update source link
-    // Use canonical_url for external sources (LinkedIn, etc.), fallback to url if external
-    const sourceUrl = entry.canonical_url && !entry.canonical_url.startsWith('/') 
-      ? entry.canonical_url 
-      : (entry.url && !entry.url.startsWith('/') ? entry.url : null);
+    // For blog and primer types, link to their standalone pages
+    // For external sources, use canonical_url or url
+    let sourceUrl: string | null = null;
+    if (entry.type === 'blog') {
+      sourceUrl = `/blog/${entry.id.replace('blog:', '')}`;
+    } else if (entry.type === 'primer') {
+      sourceUrl = `/primer/${entry.id.replace('readwise:', '')}`;
+    } else {
+      sourceUrl = entry.canonical_url && !entry.canonical_url.startsWith('/') 
+        ? entry.canonical_url 
+        : (entry.url && !entry.url.startsWith('/') ? entry.url : null);
+    }
     
     if (sourceUrl) {
       panelSource.href = sourceUrl;

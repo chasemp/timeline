@@ -1,0 +1,376 @@
+---
+import { ViewTransitions } from 'astro:transitions';
+import timeline from "../../data/timeline.json";
+import { config } from "../../config";
+
+export function getStaticPaths() {
+  const primers = (timeline as any[]).filter(item => item.type === 'primer');
+  return primers.map(primer => ({
+    params: { id: primer.id.replace('readwise:', '') },
+    props: { primer }
+  }));
+}
+
+const { primer } = Astro.props;
+
+// Helper function to check if comments should be disabled
+function shouldDisableComments(item: any): boolean {
+  const hashtags = item.hashtags || [];
+  const hasNoCommentsTag = hashtags.some((tag: string) => 
+    tag.toLowerCase() === '#nocomments' || tag.toLowerCase() === '#nc'
+  );
+  
+  const tags = item.tags || [];
+  const hasNoCommentsInTags = tags.some((tag: string) => {
+    const normalized = tag.toLowerCase().replace(/\s+/g, '_');
+    return normalized === 'nocomments' || normalized === 'nc';
+  });
+  
+  return hasNoCommentsTag || hasNoCommentsInTags;
+}
+---
+
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{primer.title} — timeline.523.life</title>
+  <meta name="description" content={primer.summary || primer.title}>
+  <link rel="canonical" href={`https://timeline.523.life/primer/${primer.id.replace('readwise:', '')}`}>
+  <ViewTransitions />
+</head>
+<body>
+
+<main>
+  <header class="header">
+    <nav class="header-nav">
+      <a href="/" class="back-link">← Go to timeline</a>
+      <span class="about-header">This is content from <a href="https://523.life">Chase Pettet</a> and part of my public timeline</span>
+    </nav>
+    <div class="meta">
+      <span class="type">AI Topic Primer</span> · <time datetime={primer.timestamp}>{new Date(primer.timestamp).toLocaleDateString()}</time>
+      {primer.metadata?.site_name && (
+        <> · 📰 {primer.metadata.site_name}</>
+      )}
+      {primer.author && (
+        <> · ✍️ {primer.author}</>
+      )}
+      {primer.metadata?.word_count && (
+        <> · 🕐 {Math.ceil(primer.metadata.word_count / 200)} min read</>
+      )}
+    </div>
+    <h1>{primer.title}</h1>
+  </header>
+
+  {primer.summary && (
+    <div class="summary">
+      <p>{primer.summary}</p>
+    </div>
+  )}
+
+  <hr class="content-divider">
+
+  <article class="content" set:html={primer.content_html || '<p>Full content not available.</p>'} />
+
+  {!(config.commentsEnabled === false || shouldDisableComments(primer)) && (
+    <div class="comments-section" id="comments-section">
+      <div class="giscus" id="giscus-container"></div>
+    </div>
+  )}
+
+  <footer class="post-footer">
+    <a href="/" class="back-link">← Go to timeline</a>
+  </footer>
+</main>
+
+{!(config.commentsEnabled === false || shouldDisableComments(primer)) && (
+  <>
+    <script src="https://giscus.app/client.js"
+            data-repo="chasemp/timeline"
+            data-repo-id="R_kgDOQDOMbA"
+            data-category="Ideas"
+            data-category-id="DIC_kwDOQDOMbM4CxLZb"
+            data-mapping="pathname"
+            data-strict="0"
+            data-reactions-enabled="1"
+            data-emit-metadata="0"
+            data-input-position="bottom"
+            data-theme="/giscus-custom.css"
+            data-lang="en"
+            crossorigin="anonymous"
+            async>
+    </script>
+
+    <script>
+      window.addEventListener('load', () => {
+        const container = document.getElementById('giscus-container');
+        const commentsSection = document.getElementById('comments-section');
+        
+        setTimeout(() => {
+          if (container && commentsSection) {
+            const hasContent = container.innerHTML.trim() !== '';
+            if (!hasContent) {
+              commentsSection.style.display = 'none';
+            }
+          }
+        }, 10000);
+      });
+    </script>
+  </>
+)}
+
+<style>
+  :root[data-theme="dark"], :root:not([data-theme]) {
+    --bg: #2a2419;
+    --panel: #342d23;
+    --text: #e8dcc4;
+    --muted: #a89a84;
+    --accent: #d4956f;
+    --border: #4a3f32;
+    --card-bg: #3d3528;
+  }
+  
+  :root[data-theme="light"] {
+    --bg: #fdfbf7;
+    --panel: #f5f1e8;
+    --text: #3d3527;
+    --muted: #7a6f5f;
+    --accent: #c17a4f;
+    --border: #e0d8c8;
+    --card-bg: #ffffff;
+  }
+  
+  * { box-sizing: border-box; }
+  
+  html, body { 
+    margin: 0; 
+    padding: 0; 
+    background: var(--bg); 
+    color: var(--text); 
+    font: 16px/1.7 Georgia, "Times New Roman", serif;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  main { 
+    max-width: 720px; 
+    margin: 0 auto; 
+    padding: 24px; 
+  }
+  
+  .header { 
+    margin-bottom: 40px; 
+  }
+  
+  .header-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-bottom: 24px;
+  }
+  
+  .back-link { 
+    color: var(--accent); 
+    text-decoration: none; 
+    font-size: 14px;
+    font-family: system-ui, sans-serif;
+  }
+  
+  .back-link:hover { 
+    text-decoration: underline; 
+  }
+  
+  .about-header {
+    font-size: 13px;
+    color: var(--muted);
+    font-family: system-ui, sans-serif;
+  }
+  
+  .about-header a {
+    color: var(--accent);
+    text-decoration: none;
+    font-weight: 600;
+  }
+  
+  .about-header a:hover {
+    text-decoration: underline;
+  }
+  
+  .meta { 
+    font-size: 14px; 
+    color: var(--muted); 
+    margin: 16px 0 8px;
+    font-family: system-ui, sans-serif;
+  }
+  
+  .meta a {
+    color: var(--accent);
+    text-decoration: none;
+  }
+  
+  .meta a:hover {
+    text-decoration: underline;
+  }
+  
+  .type { 
+    text-transform: uppercase; 
+    letter-spacing: 0.06em; 
+    font-size: 12px;
+    color: var(--accent);
+    font-weight: 600;
+  }
+  
+  h1 { 
+    margin: 16px 0 24px; 
+    font-size: 32px; 
+    line-height: 1.2;
+    color: var(--accent);
+  }
+  
+  .summary {
+    margin: 24px 0 32px;
+    padding: 20px;
+    background: var(--panel);
+    border-left: 3px solid var(--accent);
+    border-radius: 4px;
+  }
+  
+  .summary p {
+    margin: 0;
+    color: var(--text);
+    font-style: italic;
+    line-height: 1.7;
+  }
+  
+  .content-divider {
+    border: none;
+    border-top: 1px solid var(--border);
+    margin: 48px 0;
+  }
+  
+  .content { 
+    margin: 32px 0; 
+  }
+  
+  .content img { 
+    max-width: 100%;
+    max-height: 600px;
+    width: auto;
+    height: auto;
+    display: block;
+    margin: 24px auto;
+    object-fit: contain;
+    border-radius: 8px;
+    border: 1px solid var(--border);
+  }
+  
+  .content p { 
+    margin: 16px 0; 
+  }
+  
+  .content pre { 
+    background: var(--panel); 
+    padding: 16px; 
+    border-radius: 8px; 
+    overflow-x: auto;
+    border: 1px solid var(--border);
+  }
+  
+  .content code { 
+    font-family: 'Monaco', 'Courier New', monospace; 
+    font-size: 14px; 
+  }
+  
+  /* Force all links in content to use accent color */
+  .content a:link,
+  .content a:visited,
+  .content a:hover,
+  .content a:active,
+  .meta a:link,
+  .meta a:visited,
+  .meta a:hover,
+  .meta a:active {
+    color: var(--accent) !important;
+    text-decoration-color: rgba(212, 149, 111, 0.3);
+  }
+  
+  .content a:hover,
+  .meta a:hover {
+    text-decoration: underline;
+  }
+  
+  .content h1, .content h2, .content h3, .content h4, .content h5, .content h6 {
+    color: var(--text);
+    margin-top: 32px;
+    margin-bottom: 16px;
+  }
+  
+  .content ul, .content ol {
+    margin: 16px 0;
+    padding-left: 24px;
+  }
+  
+  .content li {
+    margin: 8px 0;
+  }
+  
+  .content blockquote {
+    border-left: 3px solid var(--accent);
+    margin: 24px 0;
+    padding: 12px 20px;
+    background: var(--panel);
+    border-radius: 0 4px 4px 0;
+  }
+  
+  .content blockquote p {
+    margin: 0;
+    font-style: italic;
+  }
+  
+  .post-footer { 
+    margin-top: 48px; 
+    padding-top: 24px; 
+    border-top: 1px solid var(--border); 
+    display: flex; 
+    justify-content: space-between; 
+    flex-wrap: wrap; 
+    gap: 16px; 
+  }
+  
+  .comments-section {
+    margin-top: 48px;
+    padding-top: 24px;
+    border-top: 1px solid var(--border);
+  }
+  
+  .giscus {
+    margin-top: 16px;
+    position: relative;
+  }
+  
+  .giscus iframe {
+    min-height: 300px;
+  }
+  
+  @media (max-width: 640px) {
+    h1 { 
+      font-size: 24px; 
+    }
+    
+    main { 
+      padding: 16px; 
+    }
+    
+    .header-nav {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 8px;
+    }
+  }
+</style>
+
+</body>
+</html>
+
