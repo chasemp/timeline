@@ -1,5 +1,116 @@
 [
   {
+    "id": "readwise:01kcc8cjrgqmt9be29k89ek27m",
+    "type": "saved",
+    "source": null,
+    "timestamp": "2025-12-13T16:23:32.880000+00:00",
+    "title": "Story Points Revisited",
+    "summary": "The article explores the author's current thinking on story points and highlights their misuse. The author argues that using story points to predict project timelines is a weak idea and tracking actuals compared to estimates is at best wasteful. Managers' pressure to deliver more and comparing teams are potential issues that arise with the use of story points. The author suggests slicing stories into smaller ones of high value requiring little time to do as slicing offers better value compared to story estimates.",
+    "url": "https://ronjeffries.com/articles/019-01ff/story-points/Index.html",
+    "canonical_url": "https://ronjeffries.com/articles/019-01ff/story-points/Index.html",
+    "author": "ronjeffries.com",
+    "tags": [
+      "tdd",
+      "tech",
+      "classic",
+      "prodsec"
+    ],
+    "media": [],
+    "content_html": null,
+    "content_text": null,
+    "embed_uri": null,
+    "embed_cid": null,
+    "metadata": {
+      "word_count": 1822,
+      "reading_time": "10 min read",
+      "site_name": "ronjeffries.com",
+      "reading_progress": 1,
+      "last_fetched": "2025-12-14T02:11:12.224Z"
+    }
+  },
+  {
+    "id": "readwise:01kcc7a27y1z50z4cgpph456bz",
+    "type": "saved",
+    "source": null,
+    "timestamp": "2025-12-13T16:04:41.853000+00:00",
+    "title": "AWS Re:invent",
+    "summary": "AWS re:Invent keynote was mostly dull until the last ten minutes of rapid product announcements. Some releases were genuinely useful, like long-awaited database savings plans and huge S3 objects. Other launches felt confusing or niche, but a few stood out as impressive.",
+    "url": "https://www.theregister.com/2025/12/08/aws_reinvent_keynote_recap_corey_quinn/",
+    "canonical_url": "https://www.theregister.com/2025/12/08/aws_reinvent_keynote_recap_corey_quinn/",
+    "author": "Corey Quinn",
+    "tags": [
+      "sec",
+      "tech",
+      "software"
+    ],
+    "media": [],
+    "content_html": null,
+    "content_text": null,
+    "embed_uri": null,
+    "embed_cid": null,
+    "metadata": {
+      "word_count": 794,
+      "reading_time": "4 min read",
+      "site_name": "theregister.com",
+      "cover_image": "https://regmedia.co.uk/2016/07/13/shutterstock_dj_mixing_deck.jpg",
+      "last_fetched": "2025-12-14T02:11:12.224Z"
+    }
+  },
+  {
+    "id": "readwise:01kcac45pp8zwgw8bn8pwnk2am",
+    "type": "primer",
+    "source": null,
+    "timestamp": "2025-12-12T22:50:22.828000+00:00",
+    "title": "Understanding Agile, Scrum, and Kanban",
+    "summary": "Agile arose to replace rigid, document-heavy project methods with adaptive, customer-focused ways of working. Scrum uses fixed, time-boxed sprints and defined roles to force regular inspection and adaptation. Kanban optimizes continuous flow by visualizing work and limiting work-in-progress; many teams blend both approaches to scale agility.",
+    "url": "private://read/01kcac45pp8zwgw8bn8pwnk2am",
+    "canonical_url": "private://read/01kcac45pp8zwgw8bn8pwnk2am",
+    "author": null,
+    "tags": [
+      "primer",
+      "prodsec"
+    ],
+    "media": [],
+    "content_html": "<div class=\"full-content\"><div><style></style><h1 class=\"c2\" data-rw-epub-toc=\"rw-epub-toc-1\"><span class=\"c9 c22\">The Adaptive Enterprise: A Primer on Agile, Scrum, Kanban, and the Cultural Transformation of Work</span>\n</h1><h2 class=\"c2\"><span class=\"c19 c9\">Section 1: The Necessity of Adaptability: From Predictability to Flexibility</span>\n</h2><p class=\"c12\"><span class=\"c7 c10\">The fundamental shift in modern project delivery, particularly within the technology sector, was born out of a critical failure of traditional methods to handle complexity and constant change. To understand the motivations behind frameworks like Scrum and Kanban, it is essential to first analyze the environment they sought to replace.</span>\n</p><h3 class=\"c2\"><span class=\"c15 c9\">1.1 The Illusion of Predictability: Introducing Waterfall Methodology</span>\n</h3><p class=\"c12\"><span class=\"c10\">Before the rise of adaptive approaches, the dominant method for large-scale projects was the </span><span class=\"c1\">Waterfall Methodology (W.M.)</span><span class=\"c10\">. This model is characterized by its linear, sequential nature, where a project progresses through distinct, fixed phases. These phases typically include Initiation, Planning, Requirements Gathering, Design, Implementation (Coding), Testing, and final Deployment, following each other in strict succession.</span><span class=\"c0\">1</span>\n</p><p class=\"c12\"><span class=\"c10\">This approach is best suited for environments where the requirements are entirely stable, well-understood, and unlikely to change, such as in certain civil engineering or manufacturing projects. One effective analogy is the construction of a major piece of infrastructure, like a large bridge or a power plant. The foundational design must be finalized, approved, and immutable before construction (the implementation phase) can begin, because structural changes midway through construction are prohibitively costly, risky, and often physically impossible. The emphasis is placed heavily on extensive upfront planning and comprehensive documentation.</span><span class=\"c0\">1</span>\n</p><h3 class=\"c2\"><span class=\"c15 c9\">1.2 The Crisis of Complexity: Why Sequential Models Failed in Technology</span>\n</h3><p class=\"c12\"><span class=\"c7 c10\">The highly structured nature of Waterfall, which was its strength in stable domains, became its fatal flaw in the dynamic world of software development. As market demands and user needs rapidly evolved, the sequential nature of Waterfall proved disastrously inflexible.</span>\n</p><p class=\"c12\"><span class=\"c10\">The primary systemic flaw of this methodology was its rigidity, often described as a \"one-way street\".</span><span class=\"c6\">2</span><span class=\"c10\"> Once a team completed a phase, such as design, and moved on to the next phase, there was typically no mechanism to easily or naturally loop back to the previous phase to make corrections or accommodate new information.</span><span class=\"c6\">2</span><span class=\"c10\"> This inherent lack of feedback pathways meant that change requests, which are inevitable in complex technology projects, became extremely difficult to accommodate, especially if they arrived late in the development cycle.</span><span class=\"c0\">2</span>\n</p><p class=\"c12\"><span class=\"c10\">This rigidity created the </span><span class=\"c1\">Delayed Feedback Trap</span><span class=\"c10\">. Because testing and client review often occurred only near the end of the project, feedback arrived far too late to make meaningful adjustments without triggering massive rework.</span><span class=\"c6\">3</span><span class=\"c10\"> In one documented case, a healthcare company developing a patient management system using Waterfall encountered new regulatory requirements midway through the project. The rigid structure made adaptation impossible, leading to a project delay of six months and costs exceeding the original budget by 40%.</span><span class=\"c6\">3</span><span class=\"c7 c10\"> This demonstrates a crucial disconnect: Waterfall measured progress by the completion of documentation and signed-off phases, allowing teams to believe they were 90% complete based on paper, only to discover a catastrophic failure point during the final 10% of testing. The delayed feedback path allowed minor initial errors to grow into major financial crises.</span>\n</p><p class=\"c12\"><span class=\"c10\">Furthermore, traditional models prioritized generating hundreds of pages of technical specifications and requirements—a focus on comprehensive documentation—over delivering usable, functional value.</span><span class=\"c6\">1</span><span class=\"c10\"> They lacked the capability to deliver the final system in smaller, functional pieces for early review and continuous feedback.</span><span class=\"c6\">2</span><span class=\"c7 c10\"> The system was geared toward executing a fixed plan, rather than optimizing the delivery engine itself to handle uncertainty and evolving requirements. This systemic flaw necessitated a philosophical and procedural overhaul.</span>\n</p><hr/><p class=\"c18\"><span class=\"c7 c10\"></span>\n</p><table class=\"c27\">\n<tr class=\"c24\">\n<td class=\"c13\" colspan=\"1\" rowspan=\"1\">\n<p class=\"c14\"><span class=\"c7 c1\">Traditional Project Management</span>\n</p>\n</td>\n<td class=\"c13\" colspan=\"1\" rowspan=\"1\">\n<p class=\"c14\"><span class=\"c7 c1\">Adaptive Project Management</span>\n</p>\n</td>\n</tr>\n<tr class=\"c24\">\n<td class=\"c13\" colspan=\"1\" rowspan=\"1\">\n<p class=\"c4\"><span class=\"c10\">Rigid, sequential phases (One Way Street) </span><span class=\"c0\">2</span>\n</p>\n</td>\n<td class=\"c13\" colspan=\"1\" rowspan=\"1\">\n<p class=\"c4\"><span class=\"c10\">Iterative, cyclical development </span><span class=\"c0\">5</span>\n</p>\n</td>\n</tr>\n<tr class=\"c24\">\n<td class=\"c13\" colspan=\"1\" rowspan=\"1\">\n<p class=\"c4\"><span class=\"c10\">Extensive upfront planning/documentation </span><span class=\"c0\">1</span>\n</p>\n</td>\n<td class=\"c13\" colspan=\"1\" rowspan=\"1\">\n<p class=\"c4\"><span class=\"c10\">Working software prioritized over documentation </span><span class=\"c0\">4</span>\n</p>\n</td>\n</tr>\n<tr class=\"c24\">\n<td class=\"c13\" colspan=\"1\" rowspan=\"1\">\n<p class=\"c4\"><span class=\"c10\">Difficult to accommodate change late </span><span class=\"c0\">3</span>\n</p>\n</td>\n<td class=\"c13\" colspan=\"1\" rowspan=\"1\">\n<p class=\"c4\"><span class=\"c10\">Welcomes changing requirements </span><span class=\"c0\">6</span>\n</p>\n</td>\n</tr>\n<tr class=\"c24\">\n<td class=\"c13\" colspan=\"1\" rowspan=\"1\">\n<p class=\"c4\"><span class=\"c10\">Feedback received too late (Delayed) </span><span class=\"c0\">3</span>\n</p>\n</td>\n<td class=\"c13\" colspan=\"1\" rowspan=\"1\">\n<p class=\"c4\"><span class=\"c10\">Continuous, early customer collaboration </span><span class=\"c0\">7</span>\n</p>\n</td>\n</tr>\n</table><hr/><h2 class=\"c14\"><span class=\"c9 c19\">Section 2: The Agile Revolution: A Philosophy, Not a Procedure</span>\n</h2><p class=\"c12\"><span class=\"c7 c10\">The response to the widespread failures of traditional project methods was the emergence of a collection of practitioners who recognized the need for adaptive approaches. This realization culminated in a fundamental philosophical shift captured by the Agile movement.</span>\n</p><h3 class=\"c2\"><span class=\"c15 c9\">2.1 The Summit at Snowbird: Birth of the Manifesto</span>\n</h3><p class=\"c12\"><span class=\"c10\">In February 2001, seventeen influential practitioners and thinkers in software development—representing various existing \"light methodologies\" such as Extreme Programming (XP), SCRUM, and Dynamic Systems Development Method (DSDM)—met at the Snowbird Ski Resort in Utah.</span><span class=\"c0\">8</span>\n</p><p class=\"c12\"><span class=\"c10\">Their shared motivation was clear: the prevailing heavyweight, document-driven approach was failing their organizations and clients.</span><span class=\"c6\">9</span><span class=\"c10\"> Companies were losing sight of the ultimate goal—delivering valuable products and \"delighting customers\"—in favor of bureaucracy, excessive planning, and documentation.</span><span class=\"c6\">9</span><span class=\"c10\"> They aimed not to be \"anti-methodology,\" but to restore credibility and balance to methodology by recognizing the limitations of rigid planning in a turbulent environment.</span><span class=\"c0\">8</span>\n</p><p class=\"c12\"><span class=\"c10\">The outcome of this meeting was the </span><span class=\"c1\">Manifesto for Agile Software Development</span><span class=\"c10\">, a concise, 68-word document that established the core values of an adaptive way of working.</span><span class=\"c0\">7</span>\n</p><h3 class=\"c2\"><span class=\"c15 c9\">2.2 The Four Pillars: Understanding Agile’s Core Values</span>\n</h3><p class=\"c2\"><span class=\"c10\">The Manifesto established four statements of priority, asserting that practitioners had come to value items on the left side </span><span class=\"c10 c11\">over</span><span class=\"c10\"> the items on the right side. This is a nuanced preference, emphasizing a strategic focus rather than the absolute exclusion of the right-side item (e.g., some documentation is still necessary).</span><span class=\"c0\">4</span>\n</p><ol class=\"c23 lst-kix_list_1-0 start\" start=\"1\">\n<li class=\"c2 c26 li-bullet-0\"><span class=\"c1\">Individuals and interactions over processes and tools:</span><span class=\"c10\"> The highest priority is placed on fostering effective communication, collaboration, and trust among motivated team members.</span><span class=\"c6\">4</span><span class=\"c10\"> The most effective method for information sharing is face-to-face conversation.</span><span class=\"c0\">7</span>\n</li>\n<li class=\"c5 li-bullet-0\"><span class=\"c1\">Working software over comprehensive documentation:</span><span class=\"c10\"> The ultimate measure of progress is functional, usable software delivered frequently, not the volume of technical specifications or exhaustive planning documents.</span><span class=\"c6\">4</span><span class=\"c10\"> This approach minimizes the waste associated with producing never-maintained or rarely-used tomes.</span><span class=\"c0\">8</span>\n</li>\n<li class=\"c5 li-bullet-0\"><span class=\"c1\">Customer collaboration over contract negotiation:</span><span class=\"c10\"> Instead of maintaining a strict distance defined only by a contract, Agile values continuous, active partnership with the customer to ensure the product aligns with evolving needs throughout the project lifecycle.</span><span class=\"c0\">4</span>\n</li>\n<li class=\"c5 li-bullet-0\"><span class=\"c1\">Responding to change over following a plan:</span><span class=\"c10\"> Agile embraces the reality of complex projects: requirements will change. Teams welcome these changes, even late in development, viewing adaptability as a source of competitive advantage.</span><span class=\"c0\">4</span>\n</li>\n</ol><h3 class=\"c21\"><span class=\"c15 c9\">2.3 The Twelve Guiding Principles: Translating Values into Action</span>\n</h3><p class=\"c12\"><span class=\"c10\">The four values are supported by twelve principles that provide the behavioral guidelines for teams.</span><span class=\"c6\">6</span><span class=\"c7 c10\"> These principles translate the core beliefs into practical, daily actions.</span>\n</p><p class=\"c12\"><span class=\"c10\">Key among these principles is the commitment to </span><span class=\"c1\">early and continuous delivery</span><span class=\"c10\"> of valuable software.</span><span class=\"c6\">6</span><span class=\"c10\"> This focus means features should be shipped in weeks, not months, enabling faster time-to-market and reduced project risk via frequent feedback loops.</span><span class=\"c0\">6</span>\n</p><p class=\"c12\"><span class=\"c10\">Another crucial element is </span><span class=\"c1\">empowerment and trust</span><span class=\"c10\">. The Manifesto asserts that the best architectures, requirements, and designs emerge from </span><span class=\"c1\">self-organizing teams</span><span class=\"c10\">.</span><span class=\"c6\">4</span><span class=\"c10\"> This shifts accountability and decision-making authority away from centralized management and places it directly within the motivated teams doing the work.</span><span class=\"c6\">7</span><span class=\"c10\"> This demand for decentralized decision-making represents a significant cultural challenge to organizations with deeply ingrained hierarchical structures, which often harbor the bias that \"only leadership should have control\".</span><span class=\"c6\">11</span><span class=\"c7 c10\"> This explains why cultural resistance is frequently cited as the biggest obstacle to transformation.</span>\n</p><p class=\"c12\"><span class=\"c10\">Finally, the principles insist on </span><span class=\"c1\">sustainable development</span><span class=\"c10\"> at a constant pace, </span><span class=\"c1\">continuous attention to technical excellence</span><span class=\"c10\"> and good design, and </span><span class=\"c1\">simplicity</span><span class=\"c10\">, defined as \"the art of maximizing the amount of work not done\".</span><span class=\"c6\">7</span><span class=\"c10\"> Most critically, teams must </span><span class=\"c1\">regularly reflect</span><span class=\"c10\"> on how to become more effective, institutionalizing a culture of continuous improvement.</span><span class=\"c0\">4</span>\n</p><h3 class=\"c2\"><span class=\"c15 c9\">2.4 The Difference That Matters: Iteration and Increment</span>\n</h3><p class=\"c2\"><span class=\"c7 c10\">Agile development relies fundamentally on two concepts that work in tandem:</span>\n</p><ul class=\"c23 lst-kix_list_2-0 start\">\n<li class=\"c2 c17 li-bullet-0\"><span class=\"c1\">Iterative Development:</span><span class=\"c10\"> This refers to the cyclical nature of work, where the process of planning, building, testing, and reviewing is repeated over and over.</span><span class=\"c6\">5</span><span class=\"c7 c10\"> This repetition allows for frequent opportunities to inspect the progress and adapt the course based on new feedback.</span>\n</li>\n<li class=\"c14 c17 li-bullet-0\"><span class=\"c1\">Incremental Development:</span><span class=\"c10\"> This refers to the delivery of the product in small, functional pieces (increments), where each piece adds value to the previously delivered product.</span><span class=\"c0\">13</span>\n</li>\n</ul><p class=\"c25\"><span class=\"c10\">An analogy often used to illustrate this is the production of specialized bakery items. If a company sets out to produce a custom, complex pastry, the first iteration should produce a </span><span class=\"c1\">Minimum Viable Product (MVP)</span><span class=\"c10\">—perhaps just a plain doughnut.</span><span class=\"c6\">13</span><span class=\"c10\"> This MVP is usable and provides value. Subsequent iterations, such as adding glaze, then filling, and then toppings, incrementally build upon that base, creating continuous value for the customer at the end of every short cycle.</span><span class=\"c6\">13</span><span class=\"c7 c10\"> If the process were purely incremental without iteration, the team might simply start over with a new product each time, sacrificing the learning and continuous refinement needed to develop a single, complex system.</span>\n</p><hr/><h2 class=\"c14\"><span class=\"c19 c9\">Section 3: Scrum: The Framework for Time-Boxed Iteration</span>\n</h2><p class=\"c12\"><span class=\"c10\">Agile is a philosophy, but successful implementation requires structured approaches. </span><span class=\"c1\">Scrum</span><span class=\"c10\"> is the most widely adopted framework designed to operationalize the core values and principles of Agile development, helping teams tackle complex problems.</span><span class=\"c0\">14</span>\n</p><h3 class=\"c2\"><span class=\"c15 c9\">3.1 Scrum: An Empirical Process Control System</span>\n</h3><p class=\"c2\"><span class=\"c10\">Scrum functions as an </span><span class=\"c1\">empirical process framework</span><span class=\"c10\">, meaning that progress is based on observable reality and experience rather than detailed, predictive planning. This framework is grounded in three foundational pillars that ensure the system remains self-correcting and adaptive </span><span class=\"c6\">15</span><span class=\"c7 c10\">:</span>\n</p><ol class=\"c23 lst-kix_list_3-0 start\" start=\"1\">\n<li class=\"c2 c26 li-bullet-0\"><span class=\"c1\">Transparency:</span><span class=\"c10\"> All aspects of the work, the process, and the necessary definitions must be visible and understood by everyone involved. This includes open communication and unobstructed information sharing across all stakeholders.</span><span class=\"c0\">15</span>\n</li>\n<li class=\"c5 li-bullet-0\"><span class=\"c1\">Inspection:</span><span class=\"c7 c10\"> The progress toward the product goal must be inspected frequently to detect undesirable variances or problems. This is achieved through formal events like reviews and daily coordination.</span>\n</li>\n<li class=\"c5 li-bullet-0\"><span class=\"c1\">Adaptation:</span><span class=\"c7 c10\"> If an inspection reveals that one or more aspects of the process are deviating unacceptably, the team must adjust the process or the product accordingly. Scrum’s structure provides specific events designed for these moments of adaptation.</span>\n</li>\n</ol><h3 class=\"c21\"><span class=\"c15 c9\">3.2 The Structure of Accountability: Scrum’s Roles</span>\n</h3><p class=\"c12\"><span class=\"c10\">Scrum mandates three specific roles, which ensure clear accountability and support the framework’s self-management ethos.</span><span class=\"c0\">16</span>\n</p><p class=\"c4 c31\"><span class=\"c0\"></span>\n</p><table class=\"c27\">\n<tr class=\"c24\">\n<td class=\"c13\" colspan=\"1\" rowspan=\"1\">\n<p class=\"c14\"><span class=\"c7 c1\">Scrum Role</span>\n</p>\n</td>\n<td class=\"c13\" colspan=\"1\" rowspan=\"1\">\n<p class=\"c14\"><span class=\"c7 c1\">Core Accountability</span>\n</p>\n</td>\n</tr>\n<tr class=\"c24\">\n<td class=\"c13\" colspan=\"1\" rowspan=\"1\">\n<p class=\"c14\"><span class=\"c7 c1\">Product Owner (PO)</span>\n</p>\n</td>\n<td class=\"c13\" colspan=\"1\" rowspan=\"1\">\n<p class=\"c4\"><span class=\"c10\">Maximizing the value of the product </span><span class=\"c0\">17</span>\n</p>\n</td>\n</tr>\n<tr class=\"c24\">\n<td class=\"c13\" colspan=\"1\" rowspan=\"1\">\n<p class=\"c14\"><span class=\"c7 c1\">Development Team</span>\n</p>\n</td>\n<td class=\"c13\" colspan=\"1\" rowspan=\"1\">\n<p class=\"c4\"><span class=\"c10\">Creating the usable Increment each Sprint </span><span class=\"c0\">16</span>\n</p>\n</td>\n</tr>\n<tr class=\"c24\">\n<td class=\"c13\" colspan=\"1\" rowspan=\"1\">\n<p class=\"c14\"><span class=\"c1 c7\">Scrum Master (SM)</span>\n</p>\n</td>\n<td class=\"c13\" colspan=\"1\" rowspan=\"1\">\n<p class=\"c4\"><span class=\"c10\">Coaching the team and removing organizational impediments </span><span class=\"c0\">16</span>\n</p>\n</td>\n</tr>\n</table><p class=\"c12\"><span class=\"c10\">The </span><span class=\"c1\">Product Owner (PO)</span><span class=\"c10\"> must possess deep customer-centricity, market understanding, and strong prioritization skills.</span><span class=\"c6\">17</span><span class=\"c10\"> The PO is responsible for managing the Product Backlog (the list of all work needed) and ensuring that the Development Team always works on the highest-value items.</span><span class=\"c0\">18</span>\n</p><p class=\"c12\"><span class=\"c10\">The </span><span class=\"c1\">Development Team</span><span class=\"c10\"> is composed of cross-functional individuals who are empowered and self-managing, collectively determining how the work is best accomplished.</span><span class=\"c6\">16</span><span class=\"c10\"> This self-organization is highly effective, but it creates a potential failure point: if the Product Owner is forced to act as the sole mediator between developers and outside stakeholders, they become a communication bottleneck.</span><span class=\"c6\">19</span><span class=\"c10\"> For optimal flow and quality, developers need to talk directly to stakeholders to understand technical feasibility and context, keeping the PO informed, thus minimizing communication latency and misunderstanding.</span><span class=\"c0\">19</span>\n</p><p class=\"c12\"><span class=\"c10\">The </span><span class=\"c1\">Scrum Master (SM)</span><span class=\"c10\"> is not a traditional manager but a servant leader. Their primary job is to ensure the team and the organization adhere to Scrum values and practices, facilitate the removal of internal and external obstacles, and foster a productive environment.</span><span class=\"c0\">16</span>\n</p><h3 class=\"c2\"><span class=\"c15 c9\">3.3 The Rhythm of Delivery: The Sprint Cycle</span>\n</h3><p class=\"c12\"><span class=\"c10\">The </span><span class=\"c1\">Sprint</span><span class=\"c10\"> is the heartbeat of Scrum. It is a fixed-length time-box, typically lasting between one and four weeks, which acts as a container for all development work and other prescribed events.</span><span class=\"c6\">12</span><span class=\"c10\"> This fixed cadence provides a predictable rhythm for delivery and institutionalizes frequent opportunities for feedback and learning.</span><span class=\"c0\">12</span>\n</p><p class=\"c2\"><span class=\"c10\">Within the Sprint, five formal events provide specific opportunities for the team to inspect and adapt </span><span class=\"c6\">16</span><span class=\"c7 c10\">:</span>\n</p><ol class=\"c23 lst-kix_list_4-0 start\" start=\"1\">\n<li class=\"c2 c26 li-bullet-0\"><span class=\"c1\">Sprint Planning:</span><span class=\"c10\"> The entire team collaborates to define the </span><span class=\"c1\">Sprint Goal</span><span class=\"c10\"> (the specific objective) and selects items from the Product Backlog to form the </span><span class=\"c1\">Sprint Backlog</span><span class=\"c7 c10\"> (the plan for the Sprint).</span>\n</li>\n<li class=\"c5 li-bullet-0\"><span class=\"c1\">Daily Scrum:</span><span class=\"c7 c10\"> A 15-minute coordination meeting for the Development Team, held at the same time and place each day, focused on inspecting progress toward the Sprint Goal and planning the next 24 hours of work.</span>\n</li>\n<li class=\"c5 li-bullet-0\"><span class=\"c1\">The Development Work:</span><span class=\"c7 c10\"> The effort expended by the Development Team to create the usable Increment.</span>\n</li>\n<li class=\"c5 li-bullet-0\"><span class=\"c1\">Sprint Review:</span><span class=\"c7 c10\"> An informal session where the Development Team presents the completed Increment to stakeholders, who then collaborate on adjusting the Product Backlog for future sprints (product inspection).</span>\n</li>\n<li class=\"c5 li-bullet-0\"><span class=\"c1\">Sprint Retrospective:</span><span class=\"c10\"> A dedicated time for the Scrum Team to inspect their own process, collaboration, and environment, determining specific actions they can take to improve effectiveness in the next Sprint (process inspection).</span><span class=\"c0\">21</span>\n</li>\n</ol><h3 class=\"c21\"><span class=\"c15 c9\">3.4 Defining the Boundaries: Artifacts and Commitments</span>\n</h3><p class=\"c2\"><span class=\"c10\">Scrum uses three artifacts to maximize transparency regarding work and value </span><span class=\"c6\">22</span><span class=\"c7 c10\">:</span>\n</p><ol class=\"c23 lst-kix_list_5-0 start\" start=\"1\">\n<li class=\"c2 c26 li-bullet-0\"><span class=\"c1\">Product Backlog (Commitment: Product Goal):</span><span class=\"c7 c10\"> An ordered list of everything that might be needed in the product.</span>\n</li>\n<li class=\"c5 li-bullet-0\"><span class=\"c1\">Sprint Backlog (Commitment: Sprint Goal):</span><span class=\"c7 c10\"> The specific subset of work selected for the current Sprint, along with the plan for delivering it.</span>\n</li>\n<li class=\"c5 li-bullet-0\"><span class=\"c1\">Increment (Commitment: Definition of Done):</span><span class=\"c7 c10\"> The usable, potentially shippable product resulting from the Sprint.</span>\n</li>\n</ol><p class=\"c25\"><span class=\"c10\">The </span><span class=\"c1\">Definition of Done (DoD)</span><span class=\"c10\"> is a critical quality commitment.</span><span class=\"c6\">22</span><span class=\"c10\"> It is a shared understanding of what it means for work to be truly finished, ensuring the Increment meets organizational quality standards (e.g., tested, documented, peer-reviewed) and is potentially releasable.</span><span class=\"c6\">23</span><span class=\"c10\"> The DoD is crucial for transparency and ensuring that the Increment is genuinely valuable.</span><span class=\"c0\">23</span>\n</p><p class=\"c12\"><span class=\"c10\">A complementary, though optional, concept is the </span><span class=\"c1\">Definition of Ready (DoR)</span><span class=\"c10\">. This is a checklist of criteria that a Product Backlog item must meet (e.g., clear acceptance criteria, designs completed) before the team can pull it into a Sprint.</span><span class=\"c6\">24</span><span class=\"c10\"> While the DoR aims to prevent the team from starting poorly prepared work, the official Scrum Guide does not mandate its use, as it can sometimes lead to harmful practices like \"gatekeeping\" if applied too rigidly.</span><span class=\"c6\">23</span><span class=\"c10\"> The difference in status emphasizes that the framework prioritizes ensuring quality at the </span><span class=\"c10 c11\">end</span><span class=\"c10\"> (DoD) over imposing preparation constraints at the </span><span class=\"c10 c11\">beginning</span><span class=\"c7 c10\"> (DoR).</span>\n</p><hr/><h2 class=\"c14\"><span class=\"c19 c9\">Section 4: Kanban: The Flow Optimization System</span>\n</h2><p class=\"c12\"><span class=\"c10\">While Scrum provides structure through time-boxed iterations, </span><span class=\"c1\">Kanban</span><span class=\"c10\"> offers an alternative framework focused entirely on continuous flow and optimizing system efficiency. Kanban is often utilized for ongoing maintenance, support, or projects characterized by constantly fluctuating priorities and request volumes.</span><span class=\"c0\">25</span>\n</p><h3 class=\"c2\"><span class=\"c15 c9\">4.1 Kanban’s Manufacturing Roots: Just-In-Time and Lean</span>\n</h3><p class=\"c12\"><span class=\"c10\">The Kanban method has its origin not in software, but in </span><span class=\"c1\">lean manufacturing</span><span class=\"c10\">, stemming directly from the </span><span class=\"c1\">Toyota Production System (TPS)</span><span class=\"c10\"> in the late 1940s.</span><span class=\"c6\">26</span><span class=\"c10\"> Toyota sought to implement a \"just-in-time\" (JIT) production model to produce only what the customer demanded, thereby minimizing inventory and waste.</span><span class=\"c0\">27</span>\n</p><p class=\"c12\"><span class=\"c10\">Kanban itself translates roughly to \"visual signal\" or \"card.\" It is a signaling device that instructs the movement of parts in a </span><span class=\"c1\">pull</span><span class=\"c10\"> system.</span><span class=\"c6\">26</span><span class=\"c10\"> In a pull system, work is started upstream only when there is confirmed capacity or demand downstream. This contrasts with a \"push\" system (like Waterfall), where work is started based on a fixed schedule, regardless of whether the next stage is ready to receive it. The core aim of this mechanism is to reduce idle inventory, or </span><span class=\"c1\">Work-In-Progress (WIP)</span><span class=\"c10\">, between processes, thus accelerating the realization of business value.</span><span class=\"c0\">26</span>\n</p><h3 class=\"c2\"><span class=\"c15 c9\">4.2 Principles of Evolutionary Change</span>\n</h3><p class=\"c12\"><span class=\"c10\">Kanban is primarily a method for evolutionary change, stressing continuous, incremental improvement (often referred to as </span><span class=\"c10 c11\">Kaizen</span><span class=\"c10\"> in Lean principles).</span><span class=\"c0\">28</span>\n</p><p class=\"c2\"><span class=\"c10\">The method is based on four key principles </span><span class=\"c6\">26</span><span class=\"c7 c10\">:</span>\n</p><ol class=\"c23 lst-kix_list_6-0 start\" start=\"1\">\n<li class=\"c2 c26 li-bullet-0\"><span class=\"c1\">Start with the existing process:</span><span class=\"c7 c10\"> Kanban is designed to be overlayed onto current operations rather than requiring an immediate, disruptive overhaul.</span>\n</li>\n<li class=\"c5 li-bullet-0\"><span class=\"c1\">Agree to continue evolutionary and incremental changes:</span><span class=\"c7 c10\"> Change must be continuous, gradual, and built upon consensus.</span>\n</li>\n<li class=\"c5 li-bullet-0\"><span class=\"c1\">Admire current roles, processes, responsibilities, and titles:</span><span class=\"c10\"> Kanban respects the existing organizational structure. It aims to improve the </span><span class=\"c10 c11\">workflow</span><span class=\"c10\"> itself, not necessarily replace the </span><span class=\"c10 c11\">roles</span><span class=\"c10\"> or </span><span class=\"c10 c11\">job titles</span><span class=\"c10\">, making initial adoption often less culturally jarring than Scrum.</span><span class=\"c0\">26</span>\n</li>\n</ol><h3 class=\"c21\"><span class=\"c15 c9\">4.3 Visualizing Work: The Kanban Board</span>\n</h3><p class=\"c12\"><span class=\"c10\">The core tool in Kanban is the </span><span class=\"c1\">Kanban Board</span><span class=\"c10\">, which serves to visualize the workflow—the sequence of steps required to deliver value.</span><span class=\"c0\">26</span>\n</p><p class=\"c12\"><span class=\"c10\">The board must explicitly define the workflow, the individual units of value (tasks or items), and the specific states (columns) they flow through from \"Started\" to \"Finished\".</span><span class=\"c6\">27</span><span class=\"c10\"> By visualizing every stage, teams gain immediate transparency into where work is located and, more importantly, where it is accumulating.</span><span class=\"c6\">27</span><span class=\"c10\"> This visual clarity is critical for identifying </span><span class=\"c1\">bottlenecks</span><span class=\"c7 c10\">—stages where work piles up faster than it can be processed.</span>\n</p><p class=\"c12\"><span class=\"c10\">For example, using specialized horizontal lanes called </span><span class=\"c10 c11\">swimlanes</span><span class=\"c10\"> on the board, a team might separate testing tasks from development tasks.</span><span class=\"c6\">27</span><span class=\"c10\"> If the Testing swimlane shows many items waiting, the team immediately knows that testing capacity is the current bottleneck, signaling where attention (and potentially resources) should be redirected.</span><span class=\"c0\">27</span>\n</p><h3 class=\"c2\"><span class=\"c15 c9\">4.4 The Power of Constraint: Limiting Work In Progress (WIP)</span>\n</h3><p class=\"c12\"><span class=\"c10\">The defining discipline of the Kanban method is the explicit use of </span><span class=\"c1\">Work-In-Progress (WIP) limits</span><span class=\"c10\">.</span><span class=\"c6\">25</span><span class=\"c10\"> These are numerical constraints placed on the number of items allowed to be in process (e.g., in a specific column or across the entire board) at any given time.</span><span class=\"c0\">27</span>\n</p><p class=\"c12\"><span class=\"c10\">The primary purpose of limiting WIP is to enforce focus. When a limit is hit, the team cannot pull new work into that stage until an existing item is completed and moved downstream. This compulsory focus minimizes context switching, exposes system saturation </span><span class=\"c6\">30</span><span class=\"c10\">, and accelerates the speed at which items move to completion.</span><span class=\"c0\">26</span>\n</p><p class=\"c12\"><span class=\"c10\">Limiting WIP fundamentally shifts the team’s priority from </span><span class=\"c10 c11\">starting work</span><span class=\"c10\"> to </span><span class=\"c10 c11\">finishing work</span><span class=\"c7 c10\">. Consider the analogy of traffic flow: if a highway allows unlimited vehicles (high WIP), traffic jams occur, and nothing moves efficiently. By limiting the number of cars allowed to enter the highway (low WIP), steady, consistent throughput is maintained, even if the flow appears slower initially. By forcing the system to operate below its maximum theoretical capacity, Kanban ensures a higher rate of predictable delivery.</span>\n</p><h3 class=\"c2\"><span class=\"c15 c9\">4.5 Measuring Efficiency: Lead Time vs. Cycle Time</span>\n</h3><p class=\"c2\"><span class=\"c10\">Unlike Scrum, which uses Velocity (amount of work completed per Sprint) as a key metric, Kanban measures success based on the efficiency and speed of flow.</span><span class=\"c0\">31</span>\n</p><ul class=\"c23 lst-kix_list_7-0 start\">\n<li class=\"c2 c17 li-bullet-0\"><span class=\"c1\">Lead Time:</span><span class=\"c10\"> This metric measures the total time from the moment a customer or stakeholder makes a request (when it enters the backlog) until the resulting item is delivered.</span><span class=\"c6\">31</span><span class=\"c7 c10\"> Lead time represents the customer’s total waiting time, including time spent waiting in queues for prioritization.</span>\n</li>\n<li class=\"c14 c17 li-bullet-0\"><span class=\"c1\">Cycle Time:</span><span class=\"c10\"> This metric measures the time from when the team actively begins working on an item until it is completed.</span><span class=\"c6\">31</span><span class=\"c7 c10\"> Cycle time reflects the team’s actual production speed.</span>\n</li>\n</ul><p class=\"c25\"><span class=\"c10\">Kanban teams continuously track and optimize these metrics, particularly Lead Time, with the goal of achieving a continuous, predictable, and accelerated flow of value to their customers.</span><span class=\"c0\">33</span>\n</p><hr/><p class=\"c18\"><span class=\"c0\"></span>\n</p><table class=\"c27\">\n<tr class=\"c24\">\n<td class=\"c13\" colspan=\"1\" rowspan=\"1\">\n<p class=\"c14\"><span class=\"c7 c1\">Scrum Fundamentals</span>\n</p>\n</td>\n<td class=\"c13\" colspan=\"1\" rowspan=\"1\">\n<p class=\"c14\"><span class=\"c7 c1\">Kanban Fundamentals</span>\n</p>\n</td>\n</tr>\n<tr class=\"c24\">\n<td class=\"c13\" colspan=\"1\" rowspan=\"1\">\n<p class=\"c4\"><span class=\"c10\">Focus on fixed-length, iterative cycles (Sprints) </span><span class=\"c0\">5</span>\n</p>\n</td>\n<td class=\"c13\" colspan=\"1\" rowspan=\"1\">\n<p class=\"c4\"><span class=\"c10\">Focus on continuous flow, flexibility, and throughput </span><span class=\"c0\">25</span>\n</p>\n</td>\n</tr>\n<tr class=\"c24\">\n<td class=\"c13\" colspan=\"1\" rowspan=\"1\">\n<p class=\"c4\"><span class=\"c10\">Defined roles (PO, Dev Team, SM) are mandatory </span><span class=\"c0\">16</span>\n</p>\n</td>\n<td class=\"c13\" colspan=\"1\" rowspan=\"1\">\n<p class=\"c4\"><span class=\"c10\">Respects existing roles and hierarchy </span><span class=\"c0\">26</span>\n</p>\n</td>\n</tr>\n<tr class=\"c24\">\n<td class=\"c13\" colspan=\"1\" rowspan=\"1\">\n<p class=\"c4\"><span class=\"c10\">Work commitment is protected by the fixed Sprint Goal </span><span class=\"c0\">29</span>\n</p>\n</td>\n<td class=\"c13\" colspan=\"1\" rowspan=\"1\">\n<p class=\"c4\"><span class=\"c10\">Work commitment is protected by limiting Work-In-Progress (WIP) </span><span class=\"c0\">27</span>\n</p>\n</td>\n</tr>\n<tr class=\"c24\">\n<td class=\"c13\" colspan=\"1\" rowspan=\"1\">\n<p class=\"c4\"><span class=\"c10\">Metrics focus on Velocity (how much work per cycle) </span><span class=\"c0\">34</span>\n</p>\n</td>\n<td class=\"c13\" colspan=\"1\" rowspan=\"1\">\n<p class=\"c4\"><span class=\"c10\">Metrics focus on Lead Time and Cycle Time (speed of flow) </span><span class=\"c0\">31</span>\n</p>\n</td>\n</tr>\n</table><hr/><h2 class=\"c14\"><span class=\"c19 c9\">Section 5: Blends and Complexity: Scaling Agile for the Enterprise</span>\n</h2><p class=\"c12\"><span class=\"c7 c10\">As Agile proved effective for small, single teams, organizations faced the inevitable challenge: how to maintain agility when thousands of people across dozens of interdependent teams must coordinate their efforts to build one massive product or service.</span>\n</p><h3 class=\"c2\"><span class=\"c15 c9\">5.1 Combining Cycles and Flow: The Scrumban Hybrid</span>\n</h3><p class=\"c12\"><span class=\"c10\">The adoption of either Scrum or Kanban does not preclude the use of the other. Many teams use a hybrid approach known as </span><span class=\"c1\">Scrumban</span><span class=\"c10\">, which aims to combine the structural discipline of Scrum with the flow optimization of Kanban.</span><span class=\"c0\">33</span>\n</p><p class=\"c12\"><span class=\"c10\">Scrumban retains the time-boxed events and iterative rhythm of Scrum—specifically the regular Iteration Planning, Review, and Retrospective meetings.</span><span class=\"c6\">33</span><span class=\"c10\"> However, it incorporates the tools of Kanban, such as the visual board, the pull-based system (where work is \"pulled\" into development only when capacity exists) </span><span class=\"c6\">28</span><span class=\"c10\">, and, most critically, explicit WIP limits.</span><span class=\"c6\">33</span><span class=\"c10\"> Scrumban is a highly versatile approach, often serving as a transitional pathway for Scrum teams seeking to learn and adopt flow optimization practices without abandoning their familiar iterative structure.</span><span class=\"c0\">33</span>\n</p><h3 class=\"c2\"><span class=\"c15 c9\">5.2 The Problem of Scale: Coordinating Massive Efforts</span>\n</h3><p class=\"c12\"><span class=\"c10\">Applying Agile principles across large organizations—often referred to as </span><span class=\"c1\">Scaling Agile</span><span class=\"c10\">—introduces immense challenges. The traditional organizational structure, characterized by functional silos (e.g., a silo for architects, one for database specialists, one for testers) and hierarchical, top-down management, directly conflicts with Agile’s values of cross-functionality, transparency, and shared decision-making.</span><span class=\"c0\">35</span>\n</p><p class=\"c12\"><span class=\"c10\">The core issue is </span><span class=\"c1\">Coordination Chaos</span><span class=\"c10\">. When dozens of specialized teams are required to deliver a single integrated product, the dependencies between them multiply exponentially.</span><span class=\"c6\">35</span><span class=\"c10\"> This results in communication bottlenecks, misaligned priorities, and system-level friction. Overcoming this requires more than just training teams; it necessitates a significant cultural transformation and a radical redesign of the organizational structure itself.</span><span class=\"c0\">35</span>\n</p><h3 class=\"c2\"><span class=\"c9 c15\">5.3 Scaling Frameworks: Structure vs. Simplicity (The Trade-Off)</span>\n</h3><p class=\"c12\"><span class=\"c10\">To address enterprise complexity, specialized frameworks have been developed. These offer two contrasting philosophical solutions for managing scale </span><span class=\"c6\">38</span><span class=\"c7 c10\">: introducing more structure, or radically simplifying the system.</span>\n</p><h4 class=\"c2\"><span class=\"c29 c9\">A. SAFe (Scaled Agile Framework)</span>\n</h4><p class=\"c12\"><span class=\"c10\">SAFe, developed by Dean Leffingwell, is the most widely adopted framework globally.</span><span class=\"c6\">39</span><span class=\"c10\"> It approaches complexity by creating layers of additional structure, governance, and centralized planning.</span><span class=\"c0\">38</span>\n</p><p class=\"c12\"><span class=\"c10\">SAFe aims to provide a comprehensive, detailed blueprint for aligning large numbers of teams (up to hundreds or thousands) around shared goals, typically through events like Program Increment planning (a synchronized planning session for all teams).</span><span class=\"c6\">40</span><span class=\"c10\"> SAFe’s biggest strengths are its visibility and structure, which make it appealing to large, complex organizations that require compliance and a thorough, disciplined investment in change management training.</span><span class=\"c6\">38</span><span class=\"c10\"> Historically, this model has been favored by organizations prioritizing control and compliance, helping them integrate Agile practices while preserving elements of existing hierarchy.</span><span class=\"c0\">39</span>\n</p><h4 class=\"c2\"><span class=\"c9 c29\">B. LeSS (Large-Scale Scrum)</span>\n</h4><p class=\"c12\"><span class=\"c10\">LeSS, co-founded by Craig Larman and Bas Vodde, takes a deliberately minimalist approach, encapsulated by the principle of </span><span class=\"c1\">“More with LeSS”</span><span class=\"c10\">.</span><span class=\"c0\">38</span>\n</p><p class=\"c12\"><span class=\"c10\">LeSS aims to manage complexity by </span><span class=\"c1\">eliminating</span><span class=\"c10\"> it. Instead of adding new layers, LeSS focuses on simplifying the organization by removing unnecessary management layers and deepening the application of core Scrum principles across multiple teams.</span><span class=\"c6\">38</span><span class=\"c10\"> LeSS mandates a high level of cultural maturity and organizational redesign, often requiring the transformation of specialized component teams into cross-functional feature teams to eliminate dependencies and coordination waste.</span><span class=\"c6\">37</span><span class=\"c10\"> LeSS is a lightweight, principle-driven model that prioritizes maximum adaptability and customer focus.</span><span class=\"c0\">38</span>\n</p><p class=\"c12\"><span class=\"c10\">The choice between these frameworks reflects a core strategic decision for executive leadership: does the organization prioritize </span><span class=\"c1\">control</span><span class=\"c10\"> (managed through SAFe's extensive structure) or </span><span class=\"c1\">adaptability</span><span class=\"c10\"> (achieved through LeSS’s radical simplification)?</span><span class=\"c6\">38</span><span class=\"c10\"> Evidence shows that the difficulty in scaling Agile is rooted in organizational design (component teams and external coordination).</span><span class=\"c6\">37</span><span class=\"c7 c10\"> Therefore, the path chosen indicates whether the organization is willing to undertake significant cultural and structural transformation (LeSS) or mitigate cultural resistance through added governance layers (SAFe).</span>\n</p><hr/><p class=\"c18\"><span class=\"c7 c10\"></span>\n</p><table class=\"c27\">\n<tr class=\"c24\">\n<td class=\"c13\" colspan=\"1\" rowspan=\"1\">\n<p class=\"c14\"><span class=\"c7 c1\">LeSS (Large-Scale Scrum)</span>\n</p>\n</td>\n<td class=\"c13\" colspan=\"1\" rowspan=\"1\">\n<p class=\"c14\"><span class=\"c7 c1\">SAFe (Scaled Agile Framework)</span>\n</p>\n</td>\n</tr>\n<tr class=\"c24\">\n<td class=\"c13\" colspan=\"1\" rowspan=\"1\">\n<p class=\"c4\"><span class=\"c10\">Strategy: Simplification (More with LeSS) </span><span class=\"c0\">38</span>\n</p>\n</td>\n<td class=\"c13\" colspan=\"1\" rowspan=\"1\">\n<p class=\"c4\"><span class=\"c10\">Strategy: Manages complexity through layered structure </span><span class=\"c0\">38</span>\n</p>\n</td>\n</tr>\n<tr class=\"c24\">\n<td class=\"c13\" colspan=\"1\" rowspan=\"1\">\n<p class=\"c4\"><span class=\"c10\">Organizational Focus: Deepening core Scrum principles </span><span class=\"c0\">38</span>\n</p>\n</td>\n<td class=\"c13\" colspan=\"1\" rowspan=\"1\">\n<p class=\"c4\"><span class=\"c10\">Organizational Focus: Adding governance and coordination roles </span><span class=\"c0\">40</span>\n</p>\n</td>\n</tr>\n<tr class=\"c24\">\n<td class=\"c13\" colspan=\"1\" rowspan=\"1\">\n<p class=\"c4\"><span class=\"c10\">Prerequisite: Mature Agile teams, high cultural trust </span><span class=\"c0\">38</span>\n</p>\n</td>\n<td class=\"c13\" colspan=\"1\" rowspan=\"1\">\n<p class=\"c4\"><span class=\"c10\">Prerequisite: High compliance needs, centralized control preference </span><span class=\"c0\">38</span>\n</p>\n</td>\n</tr>\n</table><hr/><h2 class=\"c14\"><span class=\"c19 c9\">Section 6: Strategy, Culture, and the Real Agile Transformation</span>\n</h2><p class=\"c12\"><span class=\"c7 c10\">Ultimately, the success or failure of Agile adoption hinges on cultural dynamics, the alignment of stakeholder motivations, and the avoidance of superficial adoption practices.</span>\n</p><h3 class=\"c2\"><span class=\"c15 c9\">6.1 Stakeholder Perspectives on Value and Success</span>\n</h3><p class=\"c2\"><span class=\"c7 c10\">A successful Agile transformation requires understanding how value is defined by the key players in the ecosystem:</span>\n</p><ul class=\"c23 lst-kix_list_8-0 start\">\n<li class=\"c2 c17 li-bullet-0\"><span class=\"c1\">The Executive/Sponsor View:</span><span class=\"c10\"> For executive leadership, the value of Agile lies in accelerating Return on Investment (ROI) and reducing risk.</span><span class=\"c6\">41</span><span class=\"c10\"> This often translates to a need for transparency and agility at the portfolio level, characterized by approving \"smaller bets\"—projects limited in scope (e.g., less than three months)—to avoid large, high-risk commitments.</span><span class=\"c6\">41</span><span class=\"c10\"> Critically, leaders must drive and sustain the necessary organizational change by empowering teams and defending early failures as crucial learning opportunities. Organizations lacking leadership buy-in cannot sustain the organizational shift required for long-term success.</span><span class=\"c0\">42</span>\n</li>\n<li class=\"c14 c17 li-bullet-0\"><span class=\"c1\">The Product Owner View:</span><span class=\"c10\"> The PO measures success through product metrics that reflect customer and business value delivered.</span><span class=\"c6\">18</span><span class=\"c10\"> Their focus is on ensuring the product aligns with market demand and strategic business objectives.</span><span class=\"c6\">17</span><span class=\"c10\"> The PO's biggest challenge is the continuous management and alignment of often-conflicting expectations from various stakeholders.</span><span class=\"c0\">17</span>\n</li>\n<li class=\"c14 c17 li-bullet-0\"><span class=\"c1\">The Development Team View:</span><span class=\"c10\"> Developers focus on technical excellence, flow efficiency, and continuous delivery. Metrics like </span><span class=\"c1\">Velocity</span><span class=\"c10\"> (the amount of work completed in a fixed period) and </span><span class=\"c1\">Throughput</span><span class=\"c10\"> (the volume of work successfully moved through the system) are important measures of team capability, but they must always correlate with the delivery of tangible value to the end user.</span><span class=\"c0\">34</span>\n</li>\n</ul><h3 class=\"c21\"><span class=\"c15 c9\">6.2 The Pitfalls of Adoption: Critics and Cultural Barriers</span>\n</h3><p class=\"c12\"><span class=\"c7 c10\">Despite its popularity, Agile implementation frequently faces significant challenges, often rooted in an organization’s inability to fully embrace the philosophical transformation.</span>\n</p><p class=\"c2\"><span class=\"c7 c10\">Common criticisms include:</span>\n</p><ol class=\"c23 lst-kix_list_9-0 start\" start=\"1\">\n<li class=\"c2 c26 li-bullet-0\"><span class=\"c1\">Low Predictability:</span><span class=\"c10\"> The flexibility to change requirements is a core strength, but it is simultaneously perceived as a weakness, as it limits the ability to predict precise long-term delivery dates far in advance, which can cause discomfort for financial planning.</span><span class=\"c0\">44</span>\n</li>\n<li class=\"c5 li-bullet-0\"><span class=\"c1\">Insufficient Design and Documentation:</span><span class=\"c10\"> Critics argue that the emphasis on speed and working software often leads to inadequate attention to large-scale architecture, foundational design, and data management issues.</span><span class=\"c6\">45</span><span class=\"c10\"> While this criticism is often valid in practice, it signals a failure to adhere to the principle of \"continuous attention to technical excellence and good design\".</span><span class=\"c6\">10</span><span class=\"c7 c10\"> True Agile demands continuous refinement of design, not its omission.</span>\n</li>\n</ol><p class=\"c25\"><span class=\"c10\">However, the most pervasive barriers are cultural. Major organizations cite their existing </span><span class=\"c1\">organizational culture</span><span class=\"c10\"> (53%) and </span><span class=\"c1\">general resistance to change</span><span class=\"c10\"> (46%) as the top obstacles to successful adoption.</span><span class=\"c6\">43</span><span class=\"c10\"> This resistance often manifests as management reluctance to cede control, preferring hierarchy and centralized decision-making over the principles of self-organizing teams and decentralized autonomy.</span><span class=\"c0\">11</span>\n</p><h3 class=\"c2\"><span class=\"c15 c9\">6.3 Avoiding the Cargo Cult: The Difference Between Ritual and Value</span>\n</h3><p class=\"c12\"><span class=\"c10\">The failure to bridge the gap between adopting Agile practices and embracing Agile philosophy often leads to the phenomenon known as </span><span class=\"c1\">Cargo Cult Agile</span><span class=\"c10\">.</span><span class=\"c6\">46</span><span class=\"c10\"> This concept is drawn from the historical observation of Pacific tribes who, after World War II, attempted to bring back cargo planes by building rudimentary runways and imitating the rituals of soldiers, believing the outward forms would summon the desired goods.</span><span class=\"c0\">47</span>\n</p><p class=\"c12\"><span class=\"c10\">In the organizational context, Cargo Cult Agile occurs when companies adopt the visible </span><span class=\"c1\">rituals</span><span class=\"c10\">—holding Daily Stand-ups, using Kanban boards, conducting Sprints—</span><span class=\"c1\">without truly integrating the underlying philosophy</span><span class=\"c10\"> of collaboration, adaptability, and continuous improvement.</span><span class=\"c0\">46</span>\n</p><p class=\"c2\"><span class=\"c7 c1\">Symptoms of Cargo Cult Agile:</span>\n</p><ul class=\"c23 lst-kix_list_a-0 start\">\n<li class=\"c2 c17 li-bullet-0\"><span class=\"c10\">Daily Stand-ups become mandated status reports </span><span class=\"c10 c11\">to</span><span class=\"c10\"> management, violating the spirit of self-management and peer coordination.</span><span class=\"c0\">47</span>\n</li>\n<li class=\"c14 c17 li-bullet-0\"><span class=\"c7 c10\">Teams use digital boards but ignore crucial practices like respecting Work-In-Progress (WIP) limits, thus failing to expose and resolve system bottlenecks.</span>\n</li>\n<li class=\"c14 c17 li-bullet-0\"><span class=\"c10\">Retrospectives are performed as mandatory rituals but result in no meaningful process changes or behavioral adjustments.</span><span class=\"c0\">46</span>\n</li>\n</ul><p class=\"c25\"><span class=\"c10\">The root cause is a lack of trust and authenticity. If leadership does not empower teams or defend the necessary right to experiment and fail, the system collapses into superficial compliance.</span><span class=\"c6\">11</span><span class=\"c10\"> Agile is built on trust and autonomy; absent these, the practices become empty constraints and bureaucratic overhead, delivering the </span><span class=\"c10 c11\">appearance</span><span class=\"c10\"> of agility without the promised benefits.</span><span class=\"c6\">47</span><span class=\"c7 c10\"> The goal, therefore, is to view the adoption not merely as a process change, but as an organizational and cultural transformation focused on continuous learning.</span>\n</p><h3 class=\"c2\"><span class=\"c15 c9\">6.4 Beyond Software: Agile in Non-Technology Domains</span>\n</h3><p class=\"c2\"><span class=\"c10\">Although originally developed for software, the core principles of iterative development and flow optimization are universally applicable to managing complex, uncertain work.</span><span class=\"c0\">48</span>\n</p><ul class=\"c23 lst-kix_list_b-0 start\">\n<li class=\"c2 c17 li-bullet-0\"><span class=\"c1\">Legal Departments:</span><span class=\"c10\"> Non-software teams, such as legal groups, have successfully implemented Kanban boards to visualize their intake queue, establish transparent priorities, and enforce WIP limits on legal reviews. This shift to flow management, often implemented over approximately 100 days, has demonstrably improved productivity.</span><span class=\"c0\">49</span>\n</li>\n<li class=\"c14 c17 li-bullet-0\"><span class=\"c1\">Media and Content Creation:</span><span class=\"c10\"> Media organizations, such as NPR, utilize iterative approaches by creating small pilot shows with minimal staff (an MVP approach). They gather rapid feedback from local program directors and social media listeners before wide distribution.</span><span class=\"c6\">49</span><span class=\"c7 c10\"> This iterative approach significantly reduces financial risk and ensures continuous alignment with listener needs, proving that delivering value in small, tested increments is strategically sound across multiple industries.</span>\n</li>\n</ul><hr/><h2 class=\"c14\"><span class=\"c19 c9\">Suggested Resources for Deeper Exploration</span>\n</h2><p class=\"c12\"><span class=\"c7 c10\">For readers seeking to build upon this foundational understanding, the following resources are recommended for in-depth study of the key concepts and foundational texts:</span>\n</p><p class=\"c4 c31\"><span class=\"c7 c10\"></span>\n</p><table class=\"c27\">\n<tr class=\"c24\">\n<td class=\"c13\" colspan=\"1\" rowspan=\"1\">\n<p class=\"c14\"><span class=\"c7 c1\">Topic</span>\n</p>\n</td>\n<td class=\"c13\" colspan=\"1\" rowspan=\"1\">\n<p class=\"c14\"><span class=\"c7 c1\">Resource Type and Focus</span>\n</p>\n</td>\n</tr>\n<tr class=\"c24\">\n<td class=\"c13\" colspan=\"1\" rowspan=\"1\">\n<p class=\"c14\"><span class=\"c7 c1\">Agile Philosophy</span>\n</p>\n</td>\n<td class=\"c13\" colspan=\"1\" rowspan=\"1\">\n<p class=\"c4\"><span class=\"c10\">The original </span><span class=\"c10 c11\">Manifesto for Agile Software Development</span><span class=\"c10\"> </span><span class=\"c0\">50</span>\n</p>\n</td>\n</tr>\n<tr class=\"c24\">\n<td class=\"c13\" colspan=\"1\" rowspan=\"1\">\n<p class=\"c14\"><span class=\"c7 c1\">Scrum Framework</span>\n</p>\n</td>\n<td class=\"c13\" colspan=\"1\" rowspan=\"1\">\n<p class=\"c14\"><span class=\"c10\">The official </span><span class=\"c10 c11\">Scrum Guide</span><span class=\"c7 c10\"> (latest version)</span>\n</p>\n</td>\n</tr>\n<tr class=\"c24\">\n<td class=\"c13\" colspan=\"1\" rowspan=\"1\">\n<p class=\"c14\"><span class=\"c7 c1\">Foundational Context</span>\n</p>\n</td>\n<td class=\"c13\" colspan=\"1\" rowspan=\"1\">\n<p class=\"c4\"><span class=\"c10\">Works by Manifesto signatories, e.g., Ken Schwaber or Jeff Sutherland </span><span class=\"c0\">50</span>\n</p>\n</td>\n</tr>\n<tr class=\"c24\">\n<td class=\"c13\" colspan=\"1\" rowspan=\"1\">\n<p class=\"c14\"><span class=\"c7 c1\">Flow Management</span>\n</p>\n</td>\n<td class=\"c13\" colspan=\"1\" rowspan=\"1\">\n<p class=\"c14\"><span class=\"c7 c10\">Foundational literature on the Kanban Method and Lean principles</span>\n</p>\n</td>\n</tr>\n<tr class=\"c24\">\n<td class=\"c13\" colspan=\"1\" rowspan=\"1\">\n<p class=\"c14\"><span class=\"c7 c1\">Scaling Dynamics</span>\n</p>\n</td>\n<td class=\"c13\" colspan=\"1\" rowspan=\"1\">\n<p class=\"c4\"><span class=\"c10\">Comparative studies and official guides for SAFe and LeSS </span><span class=\"c0\">37</span>\n</p>\n</td>\n</tr>\n</table><h2 class=\"c2\"><span class=\"c19 c9\">Conclusions</span>\n</h2><p class=\"c12\"><span class=\"c7 c10\">Agile is not a fixed package of tools, but a foundational shift in organizational philosophy that prioritizes human interaction, responsiveness to change, and the continuous delivery of value over rigid planning and exhaustive documentation.</span>\n</p><p class=\"c12\"><span class=\"c7 c10\">The transition from Waterfall to adaptive methodologies was necessitated by economic reality: complexity in the modern market renders large, upfront plans obsolete, creating a high risk of costly, late-stage failures. Frameworks like Scrum and Kanban serve as structured mechanisms to implement this philosophical shift. Scrum enforces adaptation through fixed, time-boxed cycles (Sprints) and mandatory inspection points, while Kanban optimizes flow efficiency by visualizing the value stream and strictly limiting the amount of work in progress (WIP). Hybrid approaches, like Scrumban, demonstrate that adaptation itself is continuous.</span>\n</p><p class=\"c33\"><span class=\"c7 c10\">The principal challenge in adopting these practices is not technical but cultural. Scaling Agile requires organizations to fundamentally redesign their structure and management mindset, moving from centralized control to decentralized empowerment. When organizations fail to make this cultural transition, Agile practices risk collapsing into \"Cargo Cult\" rituals—superficial compliance that mimics the external form of success without generating the actual benefits of adaptability and continuous improvement. True organizational agility is realized only when leadership commits to fostering a culture of trust, self-management, and continuous learning.</span>\n</p><h4 class=\"c32\"><span class=\"c9 c30\">Works cited</span>\n</h4><ol class=\"c23 lst-kix_list_c-0 start\" start=\"1\">\n<li class=\"c20 li-bullet-0\"><span class=\"c3\">Agile vs Traditional Project Management: A Guide for Modern Leaders - SixSigma.us, accessed December 12, 2025, </span><span class=\"c8 c3\">\n<a class=\"c16\" href=\"https://www.google.com/url?q=https://www.6sigma.us/project-management/agile-vs-traditional-project-management/&amp;sa=D&amp;source=editors&amp;ust=1765583406856738&amp;usg=AOvVaw2dak7qF5FCG1YjoQUhdwKt\">https://www.6sigma.us/project-management/agile-vs-traditional-project-management/</a>\n</span>\n</li>\n<li class=\"c20 li-bullet-0\"><span class=\"c3\">Failure of Waterfall model - Software Engineering - GeeksforGeeks, accessed December 12, 2025, </span><span class=\"c8 c3\">\n<a class=\"c16\" href=\"https://www.google.com/url?q=https://www.geeksforgeeks.org/software-engineering/software-engineering-failure-of-waterfall-model/&amp;sa=D&amp;source=editors&amp;ust=1765583406857237&amp;usg=AOvVaw0NDqB7LcUGe-9TFRfLpfm5\">https://www.geeksforgeeks.org/software-engineering/software-engineering-failure-of-waterfall-model/</a>\n</span>\n</li>\n<li class=\"c20 li-bullet-0\"><span class=\"c3\">Waterfall Methodology Failures - Meegle, accessed December 12, 2025, </span><span class=\"c8 c3\">\n<a class=\"c16\" href=\"https://www.google.com/url?q=https://www.meegle.com/en_us/topics/waterfall-methodology/waterfall-methodology-failures&amp;sa=D&amp;source=editors&amp;ust=1765583406857586&amp;usg=AOvVaw2-yoB0QiIHg1C2wTttPjI6\">https://www.meegle.com/en_us/topics/waterfall-methodology/waterfall-methodology-failures</a>\n</span>\n</li>\n<li class=\"c20 li-bullet-0\"><span class=\"c3\">What Is the Agile Manifesto? | Wrike Agile Guide, accessed December 12, 2025, </span><span class=\"c8 c3\">\n<a class=\"c16\" href=\"https://www.google.com/url?q=https://www.wrike.com/agile-guide/agile-manifesto/&amp;sa=D&amp;source=editors&amp;ust=1765583406857925&amp;usg=AOvVaw25MdyumXdPXa5K2GRdSAlH\">https://www.wrike.com/agile-guide/agile-manifesto/</a>\n</span>\n</li>\n<li class=\"c20 li-bullet-0\"><span class=\"c3\">Agile vs Traditional Project Management [Top Differences] - KnowledgeHut, accessed December 12, 2025, </span><span class=\"c8 c3\">\n<a class=\"c16\" href=\"https://www.google.com/url?q=https://www.knowledgehut.com/blog/agile/agile-project-management-vs-traditional-project-management&amp;sa=D&amp;source=editors&amp;ust=1765583406858336&amp;usg=AOvVaw3Q1h_-EdWBeMlRsvMymxiH\">https://www.knowledgehut.com/blog/agile/agile-project-management-vs-traditional-project-management</a>\n</span>\n</li>\n<li class=\"c20 li-bullet-0\"><span class=\"c3\">Agile Principles: The Complete Guide To All 12 Principles For 2025 - Monday.com, accessed December 12, 2025, </span><span class=\"c8 c3\">\n<a class=\"c16\" href=\"https://www.google.com/url?q=https://monday.com/blog/rnd/agile-principles/&amp;sa=D&amp;source=editors&amp;ust=1765583406858720&amp;usg=AOvVaw00xYi2hKQG9jB_qR0mfRTA\">https://monday.com/blog/rnd/agile-principles/</a>\n</span>\n</li>\n<li class=\"c20 li-bullet-0\"><span class=\"c3\">Agile Manifesto: Values, principles and benefits - Adobe for Business, accessed December 12, 2025, </span><span class=\"c8 c3\">\n<a class=\"c16\" href=\"https://www.google.com/url?q=https://business.adobe.com/blog/basics/agile-manifesto&amp;sa=D&amp;source=editors&amp;ust=1765583406859051&amp;usg=AOvVaw1CxkQoRDxWizhm9bHe8xaY\">https://business.adobe.com/blog/basics/agile-manifesto</a>\n</span>\n</li>\n<li class=\"c20 li-bullet-0\"><span class=\"c3\">History: The Agile Manifesto, accessed December 12, 2025, </span><span class=\"c8 c3\">\n<a class=\"c16\" href=\"https://www.google.com/url?q=https://agilemanifesto.org/history.html&amp;sa=D&amp;source=editors&amp;ust=1765583406859292&amp;usg=AOvVaw2i-2t4xruGHxOLWDARQN04\">https://agilemanifesto.org/history.html</a>\n</span>\n</li>\n<li class=\"c20 li-bullet-0\"><span class=\"c3\">The Agile Manifesto - PMI, accessed December 12, 2025, </span><span class=\"c8 c3\">\n<a class=\"c16\" href=\"https://www.google.com/url?q=https://www.pmi.org/disciplined-agile/agile/theagilemanifesto&amp;sa=D&amp;source=editors&amp;ust=1765583406859544&amp;usg=AOvVaw3941VXnuEbMV_F3AW_1WGq\">https://www.pmi.org/disciplined-agile/agile/theagilemanifesto</a>\n</span>\n</li>\n<li class=\"c20 li-bullet-0\"><span class=\"c3\">Agile Manifesto Values and Principles - Scrum Alliance resources, accessed December 12, 2025, </span><span class=\"c8 c3\">\n<a class=\"c16\" href=\"https://www.google.com/url?q=https://resources.scrumalliance.org/Article/key-values-principles-agile-manifesto&amp;sa=D&amp;source=editors&amp;ust=1765583406859891&amp;usg=AOvVaw0xaDRgpYSF4ryhZb2w-5lA\">https://resources.scrumalliance.org/Article/key-values-principles-agile-manifesto</a>\n</span>\n</li>\n<li class=\"c20 li-bullet-0\"><span class=\"c3\">The six biases that hold back traditional companies from embracing agile. - ADAPTOVATE, accessed December 12, 2025, </span><span class=\"c8 c3\">\n<a class=\"c16\" href=\"https://www.google.com/url?q=https://www.adaptovate.com/agile/the-six-biases-that-hold-back-traditional-companies-from-embracing-agile/&amp;sa=D&amp;source=editors&amp;ust=1765583406860360&amp;usg=AOvVaw1fYGBxp9KLk0dvSGssNcGL\">https://www.adaptovate.com/agile/the-six-biases-that-hold-back-traditional-companies-from-embracing-agile/</a>\n</span>\n</li>\n<li class=\"c20 li-bullet-0\"><span class=\"c3\">Agile Project Management Sprint | APMG International, accessed December 12, 2025, </span><span class=\"c8 c3\">\n<a class=\"c16\" href=\"https://www.google.com/url?q=https://apmg-international.com/article/agile-project-management-sprint&amp;sa=D&amp;source=editors&amp;ust=1765583406860715&amp;usg=AOvVaw1ZXY5zf9RP3MRAQYb0vlVZ\">https://apmg-international.com/article/agile-project-management-sprint</a>\n</span>\n</li>\n<li class=\"c20 li-bullet-0\"><span class=\"c3\">The greatest example ever of MVP and iterative, incremental development | by Gert Erasmus, accessed December 12, 2025, </span><span class=\"c8 c3\">\n<a class=\"c16\" href=\"https://www.google.com/url?q=https://medium.com/@gerterasmus23/the-greatest-example-ever-of-mvp-and-iterative-incremental-development-41fd718ece06&amp;sa=D&amp;source=editors&amp;ust=1765583406868856&amp;usg=AOvVaw1vrblLM-lGQJDO50AHeLNq\">https://medium.com/@gerterasmus23/the-greatest-example-ever-of-mvp-and-iterative-incremental-development-41fd718ece06</a>\n</span>\n</li>\n<li class=\"c20 li-bullet-0\"><span class=\"c3\">What is Scrum? A Guide to the Agile Framework - Atlassian, accessed December 12, 2025, </span><span class=\"c8 c3\">\n<a class=\"c16\" href=\"https://www.google.com/url?q=https://www.atlassian.com/agile/scrum&amp;sa=D&amp;source=editors&amp;ust=1765583406869347&amp;usg=AOvVaw2ykgkGMBAHdBAcDMO8GWxY\">https://www.atlassian.com/agile/scrum</a>\n</span>\n</li>\n<li class=\"c20 li-bullet-0\"><span class=\"c3\">Three Pillars of Scrum: Understanding Scrum's Core Principles - Atlassian, accessed December 12, 2025, </span><span class=\"c8 c3\">\n<a class=\"c16\" href=\"https://www.google.com/url?q=https://www.atlassian.com/agile/project-management/3-pillars-scrum&amp;sa=D&amp;source=editors&amp;ust=1765583406869720&amp;usg=AOvVaw3r96sqoM-SpJ9eP53hj7J4\">https://www.atlassian.com/agile/project-management/3-pillars-scrum</a>\n</span>\n</li>\n<li class=\"c20 li-bullet-0\"><span class=\"c3\">What is Agile Scrum Methodology? Learn Roles, Events &amp; Artifacts. - Agilemania, accessed December 12, 2025, </span><span class=\"c8 c3\">\n<a class=\"c16\" href=\"https://www.google.com/url?q=https://agilemania.com/what-is-scrum-methodology&amp;sa=D&amp;source=editors&amp;ust=1765583406870096&amp;usg=AOvVaw32lqt9SlaDD7To4OK_TSU6\">https://agilemania.com/what-is-scrum-methodology</a>\n</span>\n</li>\n<li class=\"c20 li-bullet-0\"><span class=\"c3\">Scrum Product Owner Roles: Responsibilities &amp; Metrics - Echometer, accessed December 12, 2025, </span><span class=\"c8 c3\">\n<a class=\"c16\" href=\"https://www.google.com/url?q=https://echometerapp.com/en/scrum-product-owner-roles-responsibilities/&amp;sa=D&amp;source=editors&amp;ust=1765583406870486&amp;usg=AOvVaw1hUAWfQXXHURyEspd7PKET\">https://echometerapp.com/en/scrum-product-owner-roles-responsibilities/</a>\n</span>\n</li>\n<li class=\"c20 li-bullet-0\"><span class=\"c3\">Resources for Product Owners | Scrum.org, accessed December 12, 2025, </span><span class=\"c8 c3\">\n<a class=\"c16\" href=\"https://www.google.com/url?q=https://www.scrum.org/resources-product-owners&amp;sa=D&amp;source=editors&amp;ust=1765583406870807&amp;usg=AOvVaw3gKfNsC5rtIXWl3sJu9g6x\">https://www.scrum.org/resources-product-owners</a>\n</span>\n</li>\n<li class=\"c20 li-bullet-0\"><span class=\"c3\">Antipattern - Product Owner as the mediator between Developers and Stakeholders, accessed December 12, 2025, </span><span class=\"c8 c3\">\n<a class=\"c16\" href=\"https://www.google.com/url?q=https://worldofagile.com/blog/antipattern-product-owner-as-the-mediator-between-developers-and-stakeholders/&amp;sa=D&amp;source=editors&amp;ust=1765583406871551&amp;usg=AOvVaw1mlZAu4tk1u_62_6ytOKFx\">https://worldofagile.com/blog/antipattern-product-owner-as-the-mediator-between-developers-and-stakeholders/</a>\n</span>\n</li>\n<li class=\"c20 li-bullet-0\"><span class=\"c3\">Sprint project management: Your complete guide - Wrike, accessed December 12, 2025, </span><span class=\"c8 c3\">\n<a class=\"c16\" href=\"https://www.google.com/url?q=https://www.wrike.com/blog/sprint-project-management/&amp;sa=D&amp;source=editors&amp;ust=1765583406873193&amp;usg=AOvVaw1PdLMJQF2pLL0_whCEieTv\">https://www.wrike.com/blog/sprint-project-management/</a>\n</span>\n</li>\n<li class=\"c20 li-bullet-0\"><span class=\"c3\">Practice: Iteration Retrospective - PMI, accessed December 12, 2025, </span><span class=\"c8 c3\">\n<a class=\"c16\" href=\"https://www.google.com/url?q=https://www.pmi.org/disciplined-agile/product-owner/practice-iteration-retrospective&amp;sa=D&amp;source=editors&amp;ust=1765583406873769&amp;usg=AOvVaw2eDHH5tobOwl2Fdd0t9S11\">https://www.pmi.org/disciplined-agile/product-owner/practice-iteration-retrospective</a>\n</span>\n</li>\n<li class=\"c20 li-bullet-0\"><span class=\"c3\">The 2020 Scrum Guide TM, accessed December 12, 2025, </span><span class=\"c8 c3\">\n<a class=\"c16\" href=\"https://www.google.com/url?q=https://scrumguides.org/scrum-guide.html&amp;sa=D&amp;source=editors&amp;ust=1765583406874071&amp;usg=AOvVaw1lvmERtPcXDDwESFUddrmZ\">https://scrumguides.org/scrum-guide.html</a>\n</span>\n</li>\n<li class=\"c20 li-bullet-0\"><span class=\"c3\">What Is the Difference Between the Definition of Done (DoD) and the Definition of Ready (DoR)? | Scrum.org, accessed December 12, 2025, </span><span class=\"c8 c3\">\n<a class=\"c16\" href=\"https://www.google.com/url?q=https://www.scrum.org/resources/blog/what-difference-between-definition-done-dod-and-definition-ready-dor&amp;sa=D&amp;source=editors&amp;ust=1765583406874562&amp;usg=AOvVaw2jWLXgIlZuLpU5ljbYeDNZ\">https://www.scrum.org/resources/blog/what-difference-between-definition-done-dod-and-definition-ready-dor</a>\n</span>\n</li>\n<li class=\"c20 li-bullet-0\"><span class=\"c3\">What is the Definition of Done (DoD) in Agile? - Atlassian, accessed December 12, 2025, </span><span class=\"c8 c3\">\n<a class=\"c16\" href=\"https://www.google.com/url?q=https://www.atlassian.com/agile/project-management/definition-of-done&amp;sa=D&amp;source=editors&amp;ust=1765583406876970&amp;usg=AOvVaw3gl3Y_kCfN0b780ziHQlZS\">https://www.atlassian.com/agile/project-management/definition-of-done</a>\n</span>\n</li>\n<li class=\"c20 li-bullet-0\"><span class=\"c3\">Kanban vs. scrum: Which agile are you? - Atlassian, accessed December 12, 2025, </span><span class=\"c8 c3\">\n<a class=\"c16\" href=\"https://www.google.com/url?q=https://www.atlassian.com/agile/kanban/kanban-vs-scrum&amp;sa=D&amp;source=editors&amp;ust=1765583406877517&amp;usg=AOvVaw0zzl2-5PmVhqLhUWLaKaYj\">https://www.atlassian.com/agile/kanban/kanban-vs-scrum</a>\n</span>\n</li>\n<li class=\"c20 li-bullet-0\"><span class=\"c3\">Kanban - Agile Methodology - GeeksforGeeks, accessed December 12, 2025, </span><span class=\"c8 c3\">\n<a class=\"c16\" href=\"https://www.google.com/url?q=https://www.geeksforgeeks.org/software-engineering/kanban-agile-methodology/&amp;sa=D&amp;source=editors&amp;ust=1765583406878236&amp;usg=AOvVaw2C60fZsiZma4dU0k3oalQA\">https://www.geeksforgeeks.org/software-engineering/kanban-agile-methodology/</a>\n</span>\n</li>\n<li class=\"c20 li-bullet-0\"><span class=\"c3\">Kanban (development) - Wikipedia, accessed December 12, 2025, </span><span class=\"c8 c3\">\n<a class=\"c16\" href=\"https://www.google.com/url?q=https://en.wikipedia.org/wiki/Kanban_(development)&amp;sa=D&amp;source=editors&amp;ust=1765583406878861&amp;usg=AOvVaw3xeVflkFQWLhAgsKDuBNGt\">https://en.wikipedia.org/wiki/Kanban_(development)</a>\n</span>\n</li>\n<li class=\"c20 li-bullet-0\"><span class=\"c3\">Scrumban: The Hybrid Framework for Agile Teams - Miro, accessed December 12, 2025, </span><span class=\"c8 c3\">\n<a class=\"c16\" href=\"https://www.google.com/url?q=https://miro.com/agile/what-is-scrumban/&amp;sa=D&amp;source=editors&amp;ust=1765583406879451&amp;usg=AOvVaw12toUZEKAvsSScQH5pokS1\">https://miro.com/agile/what-is-scrumban/</a>\n</span>\n</li>\n<li class=\"c20 li-bullet-0\"><span class=\"c3\">Scrum vs Kanban: 5 Differences Between Sprints and Flow | Parabol, accessed December 12, 2025, </span><span class=\"c8 c3\">\n<a class=\"c16\" href=\"https://www.google.com/url?q=https://www.parabol.co/blog/kanban-vs-scrum/&amp;sa=D&amp;source=editors&amp;ust=1765583406879954&amp;usg=AOvVaw3DM8xmKcKjqx_7QJgdeAPC\">https://www.parabol.co/blog/kanban-vs-scrum/</a>\n</span>\n</li>\n<li class=\"c20 li-bullet-0\"><span class=\"c3\">Case Study of a WIP Limit Implementation: Why, When and How to use WIP Limits - Medium, accessed December 12, 2025, </span><span class=\"c8 c3\">\n<a class=\"c16\" href=\"https://www.google.com/url?q=https://medium.com/@lucasrcolucci/case-study-of-a-wip-limit-implementation-why-when-and-how-to-use-wip-limits-6eed10f92209&amp;sa=D&amp;source=editors&amp;ust=1765583406880402&amp;usg=AOvVaw2nG0PjSlqWaLe90FlJz0L_\">https://medium.com/@lucasrcolucci/case-study-of-a-wip-limit-implementation-why-when-and-how-to-use-wip-limits-6eed10f92209</a>\n</span>\n</li>\n<li class=\"c20 li-bullet-0\"><span class=\"c3\">Lead Time and Cycle Time – How to Use the Kanban Metrics - Teamhood, accessed December 12, 2025, </span><span class=\"c8 c3\">\n<a class=\"c16\" href=\"https://www.google.com/url?q=https://teamhood.com/kanban/lead-and-cycle-time-kanban-metrics/&amp;sa=D&amp;source=editors&amp;ust=1765583406880817&amp;usg=AOvVaw05Zx8gE28UYEgv0HiP_fHK\">https://teamhood.com/kanban/lead-and-cycle-time-kanban-metrics/</a>\n</span>\n</li>\n<li class=\"c20 li-bullet-0\"><span class=\"c3\">Lead Time vs. Cycle Time - Agile Academy, accessed December 12, 2025, </span><span class=\"c8 c3\">\n<a class=\"c16\" href=\"https://www.google.com/url?q=https://www.agile-academy.com/en/agile-dictionary/lead-time-vs-cycle-time/&amp;sa=D&amp;source=editors&amp;ust=1765583406881171&amp;usg=AOvVaw0zvVHWw_dpgi8Mdjfzz5CP\">https://www.agile-academy.com/en/agile-dictionary/lead-time-vs-cycle-time/</a>\n</span>\n</li>\n<li class=\"c20 li-bullet-0\"><span class=\"c3\">What is Scrumban? - Planview, accessed December 12, 2025, </span><span class=\"c8 c3\">\n<a class=\"c16\" href=\"https://www.google.com/url?q=https://www.planview.com/resources/guide/what-is-scrum/lkdc-what-is-scrumban/&amp;sa=D&amp;source=editors&amp;ust=1765583406882421&amp;usg=AOvVaw0NvA-vH2rMrXP-L7lJs73S\">https://www.planview.com/resources/guide/what-is-scrum/lkdc-what-is-scrumban/</a>\n</span>\n</li>\n<li class=\"c20 li-bullet-0\"><span class=\"c3\">A Comprehensive Guide to Agile Metrics | Hubstaff Tasks, accessed December 12, 2025, </span><span class=\"c8 c3\">\n<a class=\"c16\" href=\"https://www.google.com/url?q=https://hubstaff.com/tasks/agile-metrics&amp;sa=D&amp;source=editors&amp;ust=1765583406883031&amp;usg=AOvVaw2yznJypdMl8ok1YKmdLW57\">https://hubstaff.com/tasks/agile-metrics</a>\n</span>\n</li>\n<li class=\"c20 li-bullet-0\"><span class=\"c3\">Conquering the Hurdles of Scaling Agile in Large Organizations - Maven, accessed December 12, 2025, </span><span class=\"c3 c8\">\n<a class=\"c16\" href=\"https://www.google.com/url?q=https://maven.com/articles/challenges-scaling-agile-large-organizations&amp;sa=D&amp;source=editors&amp;ust=1765583406883360&amp;usg=AOvVaw3MXrNm0Coc7-T7KoqxfciV\">https://maven.com/articles/challenges-scaling-agile-large-organizations</a>\n</span>\n</li>\n<li class=\"c20 li-bullet-0\"><span class=\"c3\">Challenges of Scaling Agile and How to Overcome Them - Target Agility, accessed December 12, 2025, </span><span class=\"c8 c3\">\n<a class=\"c16\" href=\"https://www.google.com/url?q=https://targetagility.com/challenges-of-scaling-agile-and-how-to-overcome-them/&amp;sa=D&amp;source=editors&amp;ust=1765583406883849&amp;usg=AOvVaw3DVPgOIPeG8X870Iu86Cft\">https://targetagility.com/challenges-of-scaling-agile-and-how-to-overcome-them/</a>\n</span>\n</li>\n<li class=\"c20 li-bullet-0\"><span class=\"c3\">Comparing LeSS and SAFe - Part 1, accessed December 12, 2025, </span><span class=\"c8 c3\">\n<a class=\"c16\" href=\"https://www.google.com/url?q=https://less.works/blog/courses/2015/03/25/less-vs-safe&amp;sa=D&amp;source=editors&amp;ust=1765583406884300&amp;usg=AOvVaw2DFd8HLgnGt3DAI1yhlaTA\">https://less.works/blog/courses/2015/03/25/less-vs-safe</a>\n</span>\n</li>\n<li class=\"c20 li-bullet-0\"><span class=\"c3\">SAFe vs LeSS: Comprehensive Comparison of Agile Scaling Frameworks - KnowledgeHut, accessed December 12, 2025, </span><span class=\"c8 c3\">\n<a class=\"c16\" href=\"https://www.google.com/url?q=https://www.knowledgehut.com/blog/agile/safe-vs-less-frameworks&amp;sa=D&amp;source=editors&amp;ust=1765583406884691&amp;usg=AOvVaw1fgBhC1H-LAtigDPyOZhJj\">https://www.knowledgehut.com/blog/agile/safe-vs-less-frameworks</a>\n</span>\n</li>\n<li class=\"c20 li-bullet-0\"><span class=\"c3\">SAFe vs LeSS: Understanding the Difference, accessed December 12, 2025, </span><span class=\"c8 c3\">\n<a class=\"c16\" href=\"https://www.google.com/url?q=https://resources.scrumalliance.org/Article/safe-vs-less-understanding-difference-2&amp;sa=D&amp;source=editors&amp;ust=1765583406885049&amp;usg=AOvVaw0sXnmr7PJhTEEfPOSBQs87\">https://resources.scrumalliance.org/Article/safe-vs-less-understanding-difference-2</a>\n</span>\n</li>\n<li class=\"c20 li-bullet-0\"><span class=\"c3\">Scaled Agile Framework (SAFe) Values &amp; Principles - Atlassian, accessed December 12, 2025, </span><span class=\"c8 c3\">\n<a class=\"c16\" href=\"https://www.google.com/url?q=https://www.atlassian.com/agile/agile-at-scale/what-is-safe&amp;sa=D&amp;source=editors&amp;ust=1765583406885482&amp;usg=AOvVaw0cCMV3UeFkutGzyDEcjQS-\">https://www.atlassian.com/agile/agile-at-scale/what-is-safe</a>\n</span>\n</li>\n<li class=\"c20 li-bullet-0\"><span class=\"c3\">Building An Agile Operating Model That Accelerates ROI - LiminalArc, accessed December 12, 2025, </span><span class=\"c8 c3\">\n<a class=\"c16\" href=\"https://www.google.com/url?q=https://www.leadingagile.com/2020/11/building-an-agile-operating-model-that-accelerates-roi/&amp;sa=D&amp;source=editors&amp;ust=1765583406885905&amp;usg=AOvVaw0AmUgEgqLsC6vWIHqgx8QN\">https://www.leadingagile.com/2020/11/building-an-agile-operating-model-that-accelerates-roi/</a>\n</span>\n</li>\n<li class=\"c20 li-bullet-0\"><span class=\"c3\">Top 3 challenges in Agile transformations, accessed December 12, 2025, </span><span class=\"c8 c3\">\n<a class=\"c16\" href=\"https://www.google.com/url?q=https://agilealliance.org/top-3-challenges-in-agile-transformations/&amp;sa=D&amp;source=editors&amp;ust=1765583406886263&amp;usg=AOvVaw1bknBTaNFkaBIdWlXfSxXG\">https://agilealliance.org/top-3-challenges-in-agile-transformations/</a>\n</span>\n</li>\n<li class=\"c20 li-bullet-0\"><span class=\"c3\">Greatest Agile Adoption Challenges - PMI, accessed December 12, 2025, </span><span class=\"c8 c3\">\n<a class=\"c16\" href=\"https://www.google.com/url?q=https://www.pmi.org/learning/library/greatest-agile-adoption-challenges-11331&amp;sa=D&amp;source=editors&amp;ust=1765583406886626&amp;usg=AOvVaw2YrXabHvbMmPUzhyPHuC6N\">https://www.pmi.org/learning/library/greatest-agile-adoption-challenges-11331</a>\n</span>\n</li>\n<li class=\"c20 li-bullet-0\"><span class=\"c3\">Agile Methodology: Advantages and Disadvantages - College of Continuing and Professional Studies, accessed December 12, 2025, </span><span class=\"c8 c3\">\n<a class=\"c16\" href=\"https://www.google.com/url?q=https://ccaps.umn.edu/story/agile-methodology-advantages-and-disadvantages&amp;sa=D&amp;source=editors&amp;ust=1765583406887007&amp;usg=AOvVaw0x2b6sc8PHhHFeIy4WjRyM\">https://ccaps.umn.edu/story/agile-methodology-advantages-and-disadvantages</a>\n</span>\n</li>\n<li class=\"c20 li-bullet-0\"><span class=\"c3\">The End of Agile – Part 2 (Critiques of Agile) - TDAN.com, accessed December 12, 2025, </span><span class=\"c8 c3\">\n<a class=\"c16\" href=\"https://www.google.com/url?q=https://tdan.com/the-end-of-agile-part-2-critiques-of-agile/31699&amp;sa=D&amp;source=editors&amp;ust=1765583406887394&amp;usg=AOvVaw1unYmdoIgIZVic98Q-zJr9\">https://tdan.com/the-end-of-agile-part-2-critiques-of-agile/31699</a>\n</span>\n</li>\n<li class=\"c20 li-bullet-0\"><span class=\"c3\">accessed December 12, 2025, </span><span class=\"c8 c3\">\n<a class=\"c16\" href=\"https://www.google.com/url?q=https://sensiolabs.com/blog/2025/agility-and-the-cargo-cult-part-1%23:~:text%3DThe%2520parallel%2520to%2520Agility%2520at%2520work%26text%3DUnfortunately%252C%2520many%2520fall%2520into%2520the,than%2520the%2520essence%2520of%2520Agile.&amp;sa=D&amp;source=editors&amp;ust=1765583406887829&amp;usg=AOvVaw1bnEraS7rR0c46lgZSXmJi\">https://sensiolabs.com/blog/2025/agility-and-the-cargo-cult-part-1#:~:text=The%20parallel%20to%20Agility%20at%20work&amp;text=Unfortunately%2C%20many%20fall%20into%20the,than%20the%20essence%20of%20Agile.</a>\n</span>\n</li>\n<li class=\"c20 li-bullet-0\"><span class=\"c3\">Agility and the Cargo Cult - Part 1 | SensioLabs, accessed December 12, 2025, </span><span class=\"c8 c3\">\n<a class=\"c16\" href=\"https://www.google.com/url?q=https://sensiolabs.com/blog/2025/agility-and-the-cargo-cult-part-1&amp;sa=D&amp;source=editors&amp;ust=1765583406888188&amp;usg=AOvVaw1Zev7iwx3mdtK1JRMXZkj-\">https://sensiolabs.com/blog/2025/agility-and-the-cargo-cult-part-1</a>\n</span>\n</li>\n<li class=\"c20 li-bullet-0\"><span class=\"c3\">Adopting Agile Project Management Practices in Non-Software SMEs: A Case Study of a Slovenian Medium-Sized Manufacturing Company - MDPI, accessed December 12, 2025, </span><span class=\"c8 c3\">\n<a class=\"c16\" href=\"https://www.google.com/url?q=https://www.mdpi.com/2071-1050/12/21/9245&amp;sa=D&amp;source=editors&amp;ust=1765583406888544&amp;usg=AOvVaw18PO-LSIieX0l2SRxTgA-2\">https://www.mdpi.com/2071-1050/12/21/9245</a>\n</span>\n</li>\n<li class=\"c20 li-bullet-0\"><span class=\"c3\">4 Examples of Agile in Non-technology Businesses - Encora, accessed December 12, 2025, </span><span class=\"c8 c3\">\n<a class=\"c16\" href=\"https://www.google.com/url?q=https://www.encora.com/en-US/insights/4-examples-of-agile-in-non-technology-businesses&amp;sa=D&amp;source=editors&amp;ust=1765583406888876&amp;usg=AOvVaw3w19Ukb3gEE3VbVA_KtPOo\">https://www.encora.com/en-US/insights/4-examples-of-agile-in-non-technology-businesses</a>\n</span>\n</li>\n<li class=\"c20 li-bullet-0\"><span class=\"c3\">Books Written by the Authors of the Agile Manifesto | Erdem Seherler, accessed December 12, 2025, </span><span class=\"c8 c3\">\n<a class=\"c16\" href=\"https://www.google.com/url?q=https://www.erdemseherler.com/pages-in-english/books-written-by-the-authors-of-the-agile-manifesto/&amp;sa=D&amp;source=editors&amp;ust=1765583406889258&amp;usg=AOvVaw1GRwWgsbaJwhiUezftVfh4\">https://www.erdemseherler.com/pages-in-english/books-written-by-the-authors-of-the-agile-manifesto/</a>\n</span>\n</li>\n</ol></div></div>",
+    "content_text": null,
+    "embed_uri": null,
+    "embed_cid": null,
+    "metadata": {
+      "word_count": 6264,
+      "reading_time": "32 min read",
+      "site_name": "readwise-upload-epub",
+      "reading_progress": 0.7086404210912518,
+      "last_fetched": "2025-12-14T02:11:12.224Z"
+    }
+  },
+  {
+    "id": "readwise:01kc9wx740hszy0x9ba02025e2",
+    "type": "saved",
+    "source": null,
+    "timestamp": "2025-12-12T18:24:26.238000+00:00",
+    "title": "AI Magnifies Your Clarity...or Confusion",
+    "summary": "Your company's success with AI may not happen how you think. It will merely amplify the culture that already exists. Less about tech, more about clarity and empathy.",
+    "url": "https://people-work.io/blog/ai-magnifies-clarity",
+    "canonical_url": "https://people-work.io/blog/ai-magnifies-clarity",
+    "author": "Annie Hedgpeth",
+    "tags": [
+      "ai",
+      "prodsec"
+    ],
+    "media": [],
+    "content_html": null,
+    "content_text": null,
+    "embed_uri": null,
+    "embed_cid": null,
+    "metadata": {
+      "word_count": 40,
+      "reading_time": "1 min read",
+      "site_name": "People Work",
+      "cover_image": "https://people-work.io/cdn-cgi/image/format=auto,width=1200,height=630,fit=crop/assets/blog/ai-magnifies-clarity.webp",
+      "last_fetched": "2025-12-14T02:11:12.224Z"
+    }
+  },
+  {
     "id": "readwise:01kc70rwvh4b1005v3ssnzhxnb",
     "type": "saved",
     "source": null,
@@ -26,7 +137,7 @@
       "site_name": "readwise-upload-pdf",
       "cover_image": "https://readwise-assets.s3.amazonaws.com/media/reader/parsed_document_assets/397261313/JfcaUZbHr6ZLFQtDJGEPfQMTrdBm2iJ3Ua7U6QuU2QQ-cove_QYy7Zru.png",
       "reading_progress": 0.6666666666666666,
-      "last_fetched": "2025-12-12T02:04:30.208Z"
+      "last_fetched": "2025-12-14T02:11:12.224Z"
     }
   },
   {
@@ -102,7 +213,7 @@
       "reading_time": "1 min read",
       "site_name": "linkedin.com",
       "cover_image": "https://media.licdn.com/dms/image/v2/D5622AQEZvuI5mCxICQ/feedshare-shrink_2048_1536/B56ZsJ_Hn2LMAk-/0/1765399100174?e=2147483647&v=beta&t=Nb4n2NMlAni_klfUgan8l6n3pOyd2yuu-t-CsdRxNQQ",
-      "last_fetched": "2025-12-12T02:04:30.208Z"
+      "last_fetched": "2025-12-14T02:11:12.224Z"
     }
   },
   {
@@ -179,7 +290,7 @@
       "reading_time": "35 min read",
       "site_name": "readwise-upload-epub",
       "reading_progress": 0.14697549946265312,
-      "last_fetched": "2025-12-12T02:04:30.208Z"
+      "last_fetched": "2025-12-14T02:11:12.224Z"
     }
   },
   {
@@ -208,7 +319,7 @@
       "site_name": "Internet Archive",
       "cover_image": "https://archive.org/services/img/bstj62-7-2365",
       "reading_progress": 0.7738597302521241,
-      "last_fetched": "2025-12-12T02:04:30.208Z"
+      "last_fetched": "2025-12-14T02:11:12.224Z"
     }
   },
   {
@@ -235,7 +346,7 @@
       "word_count": 790,
       "reading_time": "4 min read",
       "site_name": "rlancemartin.github.io",
-      "last_fetched": "2025-12-12T02:04:30.208Z"
+      "last_fetched": "2025-12-14T02:11:12.224Z"
     }
   },
   {
@@ -287,7 +398,7 @@
       "word_count": 4643,
       "reading_time": "24 min read",
       "site_name": "beatworm.co.uk",
-      "last_fetched": "2025-12-12T02:04:30.208Z"
+      "last_fetched": "2025-12-14T02:11:12.224Z"
     }
   },
   {
@@ -313,7 +424,7 @@
       "word_count": 4334,
       "reading_time": "22 min read",
       "site_name": "Board of Governors of the Federal Reserve System",
-      "last_fetched": "2025-12-12T02:04:30.208Z"
+      "last_fetched": "2025-12-14T02:11:12.224Z"
     }
   },
   {
@@ -365,7 +476,7 @@
       "site_name": "slideshare.net",
       "cover_image": "https://cdn.slidesharecdn.com/ss_thumbnails/gforces-091124112052-phpapp01-thumbnail.jpg?width=640&height=640&fit=bounds",
       "reading_progress": 0.15310451332830388,
-      "last_fetched": "2025-12-12T02:04:30.208Z"
+      "last_fetched": "2025-12-14T02:11:12.224Z"
     }
   },
   {
@@ -393,7 +504,7 @@
       "site_name": "cleancommit.io",
       "cover_image": "https://cdn.cleancommit.io/blog/2022/12/test-driven-development-feature-image.jpg",
       "reading_progress": 0.8723944213630094,
-      "last_fetched": "2025-12-12T02:04:30.208Z"
+      "last_fetched": "2025-12-14T02:11:12.224Z"
     }
   },
   {
@@ -419,7 +530,7 @@
       "word_count": 328,
       "reading_time": "2 min read",
       "site_name": "nickvsnetworking.com",
-      "last_fetched": "2025-12-12T02:04:30.208Z"
+      "last_fetched": "2025-12-14T02:11:12.224Z"
     }
   },
   {
@@ -500,7 +611,7 @@
       "reading_time": "1 min read",
       "site_name": "linkedin.com",
       "cover_image": "https://media.licdn.com/dms/image/v2/D5622AQEUTtCNmIX_4Q/feedshare-shrink_800/B56ZqykDKvIcAg-/0/1763932386839?e=2147483647&v=beta&t=Ehz66Mx_BgfakT1SjTwVlv-GOsWKzGy_aBt1zhIaOg8",
-      "last_fetched": "2025-12-12T02:04:30.208Z"
+      "last_fetched": "2025-12-14T02:11:12.224Z"
     }
   },
   {
@@ -527,7 +638,7 @@
       "reading_time": "3 min read",
       "site_name": "the Guardian",
       "cover_image": "https://i.guim.co.uk/img/media/d5aa5e7f4e8c7722aa8a3071c786fdcc22b816d4/329_59_2710_2169/master/2710.jpg?width=1200&height=630&quality=85&auto=format&fit=crop&precrop=40:21,offset-x50,offset-y0&overlay-align=bottom%2Cleft&overlay-width=100p&overlay-base64=L2ltZy9zdGF0aWMvb3ZlcmxheXMvdGctZGVmYXVsdC5wbmc&enable=upscale&s=a201426a52d06bcd4591edaadd678b1f",
-      "last_fetched": "2025-12-12T02:04:30.208Z"
+      "last_fetched": "2025-12-14T02:11:12.224Z"
     }
   },
   {
@@ -591,7 +702,7 @@
       "site_name": "substack.com",
       "cover_image": "https://substackcdn.com/image/fetch/$s_!Flcw!,w_1200,h_600,c_fill,f_jpg,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fdb33bd01-e089-461c-8f09-4eb9a423429c_1024x675.jpeg",
       "reading_progress": 0.9513237990824569,
-      "last_fetched": "2025-12-12T02:04:30.208Z"
+      "last_fetched": "2025-12-14T02:11:12.224Z"
     }
   },
   {
@@ -620,7 +731,7 @@
       "reading_time": "12 min read",
       "site_name": "Pharmaceutical Online",
       "cover_image": "https://vertassets.blob.core.windows.net/image/167e6a0d/167e6a0d-8f59-4965-ac82-3e23311728d5/team_of_professionals_gettyimages_511917982.jpg",
-      "last_fetched": "2025-12-12T02:04:30.208Z"
+      "last_fetched": "2025-12-14T02:11:12.224Z"
     }
   },
   {
@@ -649,7 +760,7 @@
       "reading_time": "9 min read",
       "site_name": "eng-leadership.com",
       "cover_image": "https://substackcdn.com/image/fetch/$s_!5VXq!,w_1200,h_600,c_fill,f_jpg,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F95b8eac4-caf2-47d4-8f71-025ff7214d69_2000x788.jpeg",
-      "last_fetched": "2025-12-12T02:04:30.208Z"
+      "last_fetched": "2025-12-14T02:11:12.224Z"
     }
   },
   {
@@ -680,7 +791,7 @@
       "reading_time": "2 min read",
       "site_name": "linkedin.com",
       "cover_image": "https://media.licdn.com/dms/image/v2/C5612AQEawDFensNZ0Q/article-cover_image-shrink_600_2000/article-cover_image-shrink_600_2000/0/1520177921782?e=2147483647&v=beta&t=mcwk7DIULgWJSTZkwKmTBGIySYTEKJBdSYFwz0ltXrw",
-      "last_fetched": "2025-12-12T02:04:30.208Z"
+      "last_fetched": "2025-12-14T02:11:12.224Z"
     }
   },
   {
@@ -756,7 +867,7 @@
       "reading_time": "1 min read",
       "site_name": "David Jasso",
       "cover_image": "https://i0.wp.com/david-jasso.com/wp-content/uploads/2024/04/shutterstock_1666821223.jpg?fit=1200%2C896&ssl=1",
-      "last_fetched": "2025-12-12T02:04:30.208Z"
+      "last_fetched": "2025-12-14T02:11:12.224Z"
     }
   },
   {
@@ -784,7 +895,7 @@
       "word_count": 2984,
       "reading_time": "15 min read",
       "site_name": "htmx.org",
-      "last_fetched": "2025-12-12T02:04:30.208Z"
+      "last_fetched": "2025-12-14T02:11:12.224Z"
     }
   },
   {
@@ -810,7 +921,7 @@
       "reading_time": "3 min read",
       "site_name": "Federal Reserve Bank of Richmond",
       "cover_image": "https://www.richmondfed.org/-/media/RichmondFedOrg/assets/images/standard/2021/piggybank_surplus_pisi.jpg",
-      "last_fetched": "2025-12-12T02:04:30.208Z"
+      "last_fetched": "2025-12-14T02:11:12.224Z"
     }
   },
   {
@@ -839,7 +950,7 @@
       "reading_time": "3 min read",
       "site_name": "linkedin.com",
       "cover_image": "https://static.licdn.com/aero-v1/sc/h/c45fy346jw096z9pbphyyhdz7",
-      "last_fetched": "2025-12-12T02:04:30.208Z"
+      "last_fetched": "2025-12-14T02:11:12.224Z"
     }
   },
   {
@@ -890,7 +1001,7 @@
       "reading_time": "10 min read",
       "site_name": "oneusefulthing.org",
       "cover_image": "https://substackcdn.com/image/fetch/$s_!f-5x!,w_1200,h_600,c_fill,f_jpg,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fe20744fc-7146-409d-8eff-519e9a2d13d7_2181x1296.png",
-      "last_fetched": "2025-12-12T02:04:30.208Z"
+      "last_fetched": "2025-12-14T02:11:12.224Z"
     }
   },
   {
@@ -940,7 +1051,7 @@
       "reading_time": "1 min read",
       "site_name": "linkedin.com",
       "cover_image": "https://static.licdn.com/aero-v1/sc/h/c45fy346jw096z9pbphyyhdz7",
-      "last_fetched": "2025-12-12T02:04:30.208Z"
+      "last_fetched": "2025-12-14T02:11:12.224Z"
     }
   },
   {
@@ -965,7 +1076,7 @@
       "site_name": "ScreenRant",
       "cover_image": "https://static1.srcdn.com/wordpress/wp-content/uploads/2023/07/mark-brooks-hox-pox-featured-image.jpg",
       "reading_progress": 0.9608092809525349,
-      "last_fetched": "2025-12-12T02:04:30.208Z"
+      "last_fetched": "2025-12-14T02:11:12.224Z"
     }
   },
   {
@@ -995,7 +1106,7 @@
       "site_name": "Unsupervised Learning",
       "cover_image": "https://danielmiessler.com/images/ai-influence-level-ail-miessler-1.0.png",
       "reading_progress": 0.7163966941653189,
-      "last_fetched": "2025-12-12T02:04:30.208Z"
+      "last_fetched": "2025-12-14T02:11:12.224Z"
     }
   },
   {
@@ -1023,7 +1134,7 @@
       "site_name": "A Space to Think: Notes on Software Development",
       "cover_image": "https://substackcdn.com/image/fetch/$s_!AKkU!,w_1200,h_600,c_fill,f_jpg,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fbf84de55-1778-4fa6-98fc-32a1b47bd061_1536x1024.png",
       "reading_progress": 0.9514073060851241,
-      "last_fetched": "2025-12-12T02:04:30.208Z"
+      "last_fetched": "2025-12-14T02:11:12.224Z"
     }
   },
   {
@@ -1047,7 +1158,7 @@
     "embed_uri": null,
     "embed_cid": null,
     "metadata": {
-      "last_fetched": "2025-12-12T02:04:30.208Z"
+      "last_fetched": "2025-12-14T02:11:12.224Z"
     }
   },
   {
@@ -1076,7 +1187,7 @@
       "site_name": "Harvard Business Review",
       "cover_image": "https://hbr.org/resources/images/article_assets/2017/12/R1801L_BURTON.png",
       "reading_progress": 1,
-      "last_fetched": "2025-12-12T02:04:30.208Z"
+      "last_fetched": "2025-12-14T02:11:12.224Z"
     }
   },
   {
@@ -1126,7 +1237,7 @@
       "site_name": "Maria Sukhareva",
       "cover_image": "https://substackcdn.com/image/fetch/$s_!RigY!,w_1200,h_600,c_fill,f_jpg,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F13dd12e8-71f9-4212-aaf7-df707edde887_1920x1080.png",
       "reading_progress": 1,
-      "last_fetched": "2025-12-12T02:04:30.208Z"
+      "last_fetched": "2025-12-14T02:11:12.224Z"
     }
   },
   {
@@ -1153,7 +1264,7 @@
       "site_name": "The Atlantic",
       "cover_image": "https://cdn.theatlantic.com/thumbor/i3iaOWNqVZz1utMLPF8FjZS7EeA=/0x0:2169x1220/960x540/media/img/mt/2022/05/GettyImages_499067060/original.jpg",
       "reading_progress": 1,
-      "last_fetched": "2025-12-12T02:04:30.208Z"
+      "last_fetched": "2025-12-14T02:11:12.224Z"
     }
   },
   {
@@ -1182,7 +1293,7 @@
       "site_name": "readwise-upload-pdf",
       "cover_image": "https://readwise-assets.s3.amazonaws.com/media/reader/parsed_document_assets/387584459/kbsnxKPhDtQ1-FRYVyziyCxUDMP3IrAy570oOv-Xvio-cove_tS70Js6.png",
       "reading_progress": 0.039336187417899404,
-      "last_fetched": "2025-12-12T02:04:30.208Z"
+      "last_fetched": "2025-12-14T02:11:12.224Z"
     }
   },
   {
@@ -1211,7 +1322,7 @@
       "reading_time": "2 min read",
       "site_name": "simonwillison.net",
       "cover_image": "https://static.simonwillison.net/static/2025/gpt-5-pelican.png",
-      "last_fetched": "2025-12-12T02:04:30.208Z"
+      "last_fetched": "2025-12-14T02:11:12.224Z"
     }
   },
   {
@@ -1238,7 +1349,7 @@
       "reading_time": "4 min read",
       "site_name": "McSweeney's Internet Tendency",
       "cover_image": "http://tendency-prod.nyc3.cdn.digitaloceanspaces.com/eax6aqylo1aeta3aemdazof1d76m",
-      "last_fetched": "2025-12-12T02:04:30.208Z"
+      "last_fetched": "2025-12-14T02:11:12.224Z"
     }
   },
   {
@@ -1265,7 +1376,7 @@
       "reading_time": "18 min read",
       "site_name": "readwise-upload-pdf",
       "cover_image": "https://readwise-assets.s3.amazonaws.com/media/reader/parsed_document_assets/385805432/wemsjIOjjtFV_Eho5JLN_ZV2LUpGA9jfXDldeewPpgA-cove_KuOyRnB.png",
-      "last_fetched": "2025-12-12T02:04:30.208Z"
+      "last_fetched": "2025-12-14T02:11:12.224Z"
     }
   },
   {
@@ -1291,7 +1402,7 @@
       "word_count": 22,
       "reading_time": "1 min read",
       "site_name": "Medium",
-      "last_fetched": "2025-12-12T02:04:30.208Z"
+      "last_fetched": "2025-12-14T02:11:12.224Z"
     }
   },
   {
@@ -1318,7 +1429,7 @@
       "word_count": 737,
       "reading_time": "4 min read",
       "site_name": "bollier.org",
-      "last_fetched": "2025-12-12T02:04:30.208Z"
+      "last_fetched": "2025-12-14T02:11:12.224Z"
     }
   },
   {
@@ -1344,7 +1455,7 @@
       "reading_time": "4 min read",
       "site_name": "justice.gov",
       "cover_image": "https://www.justice.gov/themes/custom/usdoj_uswds/images/metatag-image--press-release.png",
-      "last_fetched": "2025-12-12T02:04:30.208Z"
+      "last_fetched": "2025-12-14T02:11:12.224Z"
     }
   },
   {
@@ -1372,7 +1483,7 @@
       "word_count": 1300,
       "reading_time": "7 min read",
       "site_name": "EngSec Labs",
-      "last_fetched": "2025-12-12T02:04:30.208Z"
+      "last_fetched": "2025-12-14T02:11:12.224Z"
     }
   },
   {
@@ -1401,7 +1512,7 @@
       "site_name": "Anchore",
       "cover_image": "https://anchore.com/wp-content/uploads/2023/03/image7.png",
       "reading_progress": 0.841794613445493,
-      "last_fetched": "2025-12-12T02:04:30.208Z"
+      "last_fetched": "2025-12-14T02:11:12.224Z"
     }
   },
   {
@@ -1430,7 +1541,7 @@
       "site_name": "resilientcyber.io",
       "cover_image": "https://substackcdn.com/image/fetch/w_1200,h_600,c_fill,f_jpg,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F8d539da4-c808-4b5d-a2e0-84bd88b7c2cd_1220x1368.png",
       "reading_progress": 1,
-      "last_fetched": "2025-12-12T02:04:30.208Z"
+      "last_fetched": "2025-12-14T02:11:12.224Z"
     }
   },
   {
@@ -1483,7 +1594,7 @@
       "site_name": "New York Times",
       "cover_image": "https://static01.nyt.com/newsgraphics/images/icons/defaultPromoCrop.png?year=2001",
       "reading_progress": 1,
-      "last_fetched": "2025-12-12T02:04:30.208Z"
+      "last_fetched": "2025-12-14T02:11:12.224Z"
     }
   },
   {
@@ -1512,7 +1623,7 @@
       "site_name": "Check Point Research",
       "cover_image": "https://research.checkpoint.com/wp-content/uploads/2025/02/bybit-1092x624px.jpg",
       "reading_progress": 1,
-      "last_fetched": "2025-12-12T02:04:30.208Z"
+      "last_fetched": "2025-12-14T02:11:12.224Z"
     }
   },
   {
@@ -1539,7 +1650,7 @@
       "reading_time": "23 min read",
       "site_name": "codegood.co",
       "reading_progress": 0.9956414588973693,
-      "last_fetched": "2025-12-12T02:04:30.208Z"
+      "last_fetched": "2025-12-14T02:11:12.224Z"
     }
   },
   {
@@ -1567,7 +1678,7 @@
       "reading_time": "22 min read",
       "site_name": "codegood.co",
       "reading_progress": 0.9925275321316551,
-      "last_fetched": "2025-12-12T02:04:30.208Z"
+      "last_fetched": "2025-12-14T02:11:12.224Z"
     }
   },
   {
@@ -1591,7 +1702,7 @@
       "reading_time": "14 min read",
       "site_name": "The Atlantic",
       "cover_image": "https://cdn.theatlantic.com/thumbor/iNkQfPvzvk5IDIM5Txol81mAoJk=/440x0:1562x1403/648x810/media/img/2023/09/28/CC_Kirsch_VonNeumannHP/original.jpg",
-      "last_fetched": "2025-12-12T02:04:30.208Z"
+      "last_fetched": "2025-12-14T02:11:12.224Z"
     }
   },
   {
@@ -1618,7 +1729,7 @@
       "site_name": "The Spectator",
       "cover_image": "https://www.spectator.co.uk/wp-content/uploads/2021/10/Von-Neumann.jpg",
       "reading_progress": 1,
-      "last_fetched": "2025-12-12T02:04:30.208Z"
+      "last_fetched": "2025-12-14T02:11:12.224Z"
     }
   },
   {
@@ -1645,7 +1756,7 @@
       "reading_time": "89 min read",
       "site_name": "sofiatopia.org",
       "reading_progress": 0.9990946879554785,
-      "last_fetched": "2025-12-12T02:04:30.208Z"
+      "last_fetched": "2025-12-14T02:11:12.224Z"
     }
   },
   {
@@ -1672,7 +1783,7 @@
       "reading_time": "32 min read",
       "site_name": "Colossus - Business Podcasts",
       "cover_image": "https://joincolossus.com/wp-content/uploads/2025/11/Cursor-preview-card.jpg",
-      "last_fetched": "2025-12-12T02:04:30.208Z"
+      "last_fetched": "2025-12-14T02:11:12.224Z"
     }
   },
   {
@@ -1701,7 +1812,7 @@
       "site_name": "matthew-shaw.github.io",
       "cover_image": "https://matthew-shaw.github.io/assets/images/social/blog/posts/lean-wastes.png",
       "reading_progress": 0.6811887835968172,
-      "last_fetched": "2025-12-12T02:04:30.208Z"
+      "last_fetched": "2025-12-14T02:11:12.224Z"
     }
   },
   {
@@ -1777,7 +1888,7 @@
       "site_name": "whitney.org",
       "cover_image": "https://whitneymedia.org/assets/image/830136/large_holly_herndon.jpg",
       "reading_progress": 1,
-      "last_fetched": "2025-12-12T02:04:30.208Z"
+      "last_fetched": "2025-12-14T02:11:12.224Z"
     }
   },
   {
@@ -1807,7 +1918,7 @@
       "site_name": "substack.com",
       "cover_image": "https://substackcdn.com/image/fetch/$s_!9QZn!,w_1200,h_600,c_fill,f_jpg,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F5109c958-0b2d-4ca3-9aa0-a87b80f422dd_1956x1592.png",
       "reading_progress": 0.9310575031661938,
-      "last_fetched": "2025-12-12T02:04:30.208Z"
+      "last_fetched": "2025-12-14T02:11:12.224Z"
     }
   },
   {
@@ -1836,7 +1947,7 @@
       "reading_time": "28 min read",
       "site_name": "frankchimero.com",
       "reading_progress": 0.02308370125386589,
-      "last_fetched": "2025-12-12T02:04:30.208Z"
+      "last_fetched": "2025-12-14T02:11:12.224Z"
     }
   },
   {
@@ -1887,7 +1998,7 @@
       "site_name": "Medium",
       "cover_image": "https://miro.medium.com/v2/resize:fit:1200/1*eFcWkhqwW4tlCux10hD3gw.png",
       "reading_progress": 0.9081500505968515,
-      "last_fetched": "2025-12-12T02:04:30.208Z"
+      "last_fetched": "2025-12-14T02:11:12.224Z"
     }
   },
   {
@@ -1918,7 +2029,7 @@
       "site_name": "linkedin.com",
       "cover_image": "https://media.licdn.com/dms/image/sync/v2/D4E27AQE33_aGxur2FQ/articleshare-shrink_1280_800/B4EZpIiDD_IUAQ-/0/1762153478278?e=2147483647&v=beta&t=Dej-O_Hu1KRAMchccb4WlIX57Gp6o2GKwe4wSgwI7ow",
       "reading_progress": 0.869256154830599,
-      "last_fetched": "2025-12-12T02:04:30.208Z"
+      "last_fetched": "2025-12-14T02:11:12.224Z"
     }
   },
   {
@@ -1970,7 +2081,7 @@
       "site_name": "linkedin.com",
       "cover_image": "https://media.licdn.com/dms/image/v2/D4E22AQFi1r1TdOdpkQ/feedshare-shrink_2048_1536/B4EZoGmQFXKsAw-/0/1761047283005?e=2147483647&v=beta&t=nqsE2YVVRJYYe1kUWcoFWCP5AwnziGXVdYw6PDDlRTg",
       "reading_progress": 1,
-      "last_fetched": "2025-12-12T02:04:30.208Z"
+      "last_fetched": "2025-12-14T02:11:12.224Z"
     }
   },
   {
@@ -1998,7 +2109,7 @@
       "reading_time": "24 min read",
       "site_name": "readwise-upload-epub",
       "reading_progress": 0.6786467654230761,
-      "last_fetched": "2025-12-12T02:04:30.208Z"
+      "last_fetched": "2025-12-14T02:11:12.224Z"
     }
   },
   {
@@ -2071,7 +2182,7 @@
       "site_name": "Big Think",
       "cover_image": "https://bigthink.com/wp-content/uploads/2022/11/BT_thumb_template-54.jpg?resize=1200,630",
       "reading_progress": 0.43471706882996286,
-      "last_fetched": "2025-12-12T02:04:30.208Z"
+      "last_fetched": "2025-12-14T02:11:12.224Z"
     }
   },
   {
@@ -2094,7 +2205,7 @@
     "embed_uri": null,
     "embed_cid": null,
     "metadata": {
-      "last_fetched": "2025-12-12T02:04:30.208Z"
+      "last_fetched": "2025-12-14T02:11:12.224Z"
     }
   },
   {
@@ -2122,7 +2233,7 @@
       "reading_time": "16 min read",
       "site_name": "I, Cringely - on technology",
       "reading_progress": 1,
-      "last_fetched": "2025-12-12T02:04:30.208Z"
+      "last_fetched": "2025-12-14T02:11:12.224Z"
     }
   },
   {
@@ -2148,7 +2259,7 @@
       "word_count": 1263,
       "reading_time": "7 min read",
       "site_name": "fourmilab.ch",
-      "last_fetched": "2025-12-12T02:04:30.208Z"
+      "last_fetched": "2025-12-14T02:11:12.224Z"
     }
   },
   {
@@ -2200,7 +2311,7 @@
       "site_name": "joemag.dev",
       "cover_image": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg0Ko_HfgsgHZCIIbQddBTTVrGcFC2QEu7h8UJDmFaGqhFQ_qJzIQivqwT5RwSHKehkNkRwqpCbgPcPJFYDhoasKRlgO7ulFZfqFM9mXIjdqHyYjc7Z4A9NsA6rE735nuWbVpi192DzFcJqK92sHVHptZHh36-KxbO8yPUSA2E9KA9sjR-DgaRzypvZqQ0/w1200-h630-p-k-no-nu/Screenshot%202025-10-22%20at%206.38.56%E2%80%AFPM.png",
       "reading_progress": 0.9815895131844721,
-      "last_fetched": "2025-12-12T02:04:30.208Z"
+      "last_fetched": "2025-12-14T02:11:12.224Z"
     }
   },
   {
@@ -2228,7 +2339,7 @@
       "site_name": "A Space to Think: Notes on Software Development",
       "cover_image": "https://substackcdn.com/image/fetch/$s_!DSuu!,w_1200,h_600,c_fill,f_jpg,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F386428a1-9461-4e8f-979a-ad01557460fb_1024x1024.png",
       "reading_progress": 0.979453900899685,
-      "last_fetched": "2025-12-12T02:04:30.208Z"
+      "last_fetched": "2025-12-14T02:11:12.224Z"
     }
   },
   {
@@ -2258,7 +2369,7 @@
       "site_name": "The Security Brutalist",
       "cover_image": "http://securitybrutalist.com/brutalist-black.png",
       "reading_progress": 1,
-      "last_fetched": "2025-12-12T02:04:30.208Z"
+      "last_fetched": "2025-12-14T02:11:12.224Z"
     }
   },
   {
@@ -2330,7 +2441,7 @@
     "embed_uri": null,
     "embed_cid": null,
     "metadata": {
-      "last_fetched": "2025-12-12T02:04:30.208Z"
+      "last_fetched": "2025-12-14T02:11:12.224Z"
     }
   },
   {
@@ -2382,7 +2493,7 @@
       "reading_time": "4 min read",
       "site_name": "virginia.edu",
       "reading_progress": 1,
-      "last_fetched": "2025-12-12T02:04:30.208Z"
+      "last_fetched": "2025-12-14T02:11:12.224Z"
     }
   },
   {
@@ -2405,7 +2516,7 @@
     "embed_uri": null,
     "embed_cid": null,
     "metadata": {
-      "last_fetched": "2025-12-12T02:04:30.208Z"
+      "last_fetched": "2025-12-14T02:11:12.224Z"
     }
   },
   {
@@ -2428,7 +2539,7 @@
     "embed_uri": null,
     "embed_cid": null,
     "metadata": {
-      "last_fetched": "2025-12-12T02:04:30.208Z"
+      "last_fetched": "2025-12-14T02:11:12.224Z"
     }
   },
   {
@@ -2456,7 +2567,7 @@
       "site_name": "X (formerly Twitter)",
       "cover_image": "https://pbs.twimg.com/profile_images/1643941027898613760/gyhYEOCE.jpg",
       "reading_progress": 0.9541502489036752,
-      "last_fetched": "2025-12-12T02:04:30.208Z"
+      "last_fetched": "2025-12-14T02:11:12.224Z"
     }
   },
   {
@@ -2483,7 +2594,7 @@
       "word_count": 2424,
       "reading_time": "13 min read",
       "site_name": "Risk and Cyber ",
-      "last_fetched": "2025-12-12T02:04:30.208Z"
+      "last_fetched": "2025-12-14T02:11:12.224Z"
     }
   },
   {
@@ -2510,7 +2621,7 @@
       "site_name": "Medium",
       "cover_image": "https://miro.medium.com/v2/1*kFrc4tBFM_tCis-2Ic87WA.png",
       "reading_progress": 1,
-      "last_fetched": "2025-12-12T02:04:30.208Z"
+      "last_fetched": "2025-12-14T02:11:12.224Z"
     }
   },
   {
@@ -2536,7 +2647,7 @@
       "reading_time": "11 min read",
       "site_name": "charity.wtf",
       "cover_image": "https://i0.wp.com/charity.wtf/wp-content/uploads/2025/10/srebunny.png?fit=800%2C1200&ssl=1",
-      "last_fetched": "2025-12-12T02:04:30.208Z"
+      "last_fetched": "2025-12-14T02:11:12.224Z"
     }
   },
   {
@@ -2565,7 +2676,7 @@
       "reading_time": "2 min read",
       "site_name": "Geoffrey Huntley",
       "cover_image": "https://ghuntley.com/content/images/size/w1200/2025/06/3ea367ed-cae3-454a-840f-134531dea1fd.jpg",
-      "last_fetched": "2025-12-12T02:04:30.208Z"
+      "last_fetched": "2025-12-14T02:11:12.224Z"
     }
   },
   {
@@ -2589,7 +2700,7 @@
     "metadata": {
       "site_name": "YouTube",
       "cover_image": "https://i.ytimg.com/vi/GaoLU6zKaws/maxresdefault.jpg?sqp=-oaymwEmCIAKENAF8quKqQMa8AEB-AH-CYAC0AWKAgwIABABGHIgXig8MA8=&rs=AOn4CLCKStWVT21BP5p1tmla_jf5mKAAsg",
-      "last_fetched": "2025-12-12T02:04:30.208Z"
+      "last_fetched": "2025-12-14T02:11:12.224Z"
     }
   },
   {
@@ -2638,7 +2749,7 @@
       "site_name": "readwise-upload-pdf",
       "cover_image": "https://readwise-assets.s3.amazonaws.com/media/reader/parsed_document_assets/182351867/4vEmTQVboZoyDgNLyrDhOyyh_GHf7VfKLF2BbicAYSo-cove_OC4apiS.png",
       "reading_progress": 0.14285714285714285,
-      "last_fetched": "2025-12-12T02:04:30.208Z"
+      "last_fetched": "2025-12-14T02:11:12.224Z"
     }
   },
   {
@@ -2691,7 +2802,7 @@
       "site_name": "mit.edu",
       "cover_image": "https://readwise-assets.s3.amazonaws.com/media/reader/parsed_document_assets/381278089/IbjsyTHH3cEMIruS5Fy75Zu7z8opHnHIDp7XEK1Pw4c-cove_IjHUkO6.png",
       "reading_progress": 0.9545454545454546,
-      "last_fetched": "2025-12-12T02:04:30.208Z"
+      "last_fetched": "2025-12-14T02:11:12.224Z"
     }
   },
   {
@@ -2719,7 +2830,7 @@
       "word_count": 1755,
       "reading_time": "9 min read",
       "site_name": "swarthmore.edu",
-      "last_fetched": "2025-12-12T02:04:30.208Z"
+      "last_fetched": "2025-12-14T02:11:12.224Z"
     }
   },
   {
@@ -2745,7 +2856,7 @@
       "word_count": 592,
       "reading_time": "3 min read",
       "site_name": "Elon University",
-      "last_fetched": "2025-12-12T02:04:30.208Z"
+      "last_fetched": "2025-12-14T02:11:12.224Z"
     }
   },
   {
@@ -2774,7 +2885,7 @@
       "site_name": "The Cloudflare Blog",
       "cover_image": "https://cf-assets.www.cloudflare.com/zkvhlag99gkb/1jrfu33HdXerVZwRnD2cRj/8c93d0f47c32635fb98e28d64cd10364/Keeping_the_Internet_fast_and_secure-_introducing_Merkle_Tree_Certificates-OG.png",
       "reading_progress": 1,
-      "last_fetched": "2025-12-12T02:04:30.208Z"
+      "last_fetched": "2025-12-14T02:11:12.224Z"
     }
   },
   {
@@ -2802,7 +2913,7 @@
       "reading_time": "2 min read",
       "site_name": "consensus.app",
       "cover_image": "https://consensus.app/api/og/threads/eyJ0aXRsZSI6IkxvbmcgSG91cnMgSW1wYWN0IERldmVsb3BlciBQcm9kdWN0aXZpdHkiLCJ0aHJlYWRJZCI6InRsTHZpTjVkUVBDcnRrVFRHaVVNdXciLCJzZWFyY2hJZCI6ImxYelFzcHRmU0hXYW1GemtzT2VmZkEifQ%3D%3D",
-      "last_fetched": "2025-12-12T02:04:30.208Z"
+      "last_fetched": "2025-12-14T02:11:12.224Z"
     }
   },
   {
@@ -2935,7 +3046,7 @@
       "site_name": "Signal Messenger",
       "cover_image": "https://signal.org/assets/og/og-image-ff2096df535eee499356de64b19fa8cebb9681ab1e78cca7330e7f8b8d5ec6d5.png",
       "reading_progress": 1,
-      "last_fetched": "2025-12-12T02:04:30.208Z"
+      "last_fetched": "2025-12-14T02:11:12.224Z"
     }
   },
   {
@@ -3029,7 +3140,7 @@
       "reading_time": "7 min read",
       "site_name": "The New Stack",
       "cover_image": "https://cdn.thenewstack.io/media/2025/10/54fc1732-matthew-meckes-2.jpg",
-      "last_fetched": "2025-12-12T02:04:30.208Z"
+      "last_fetched": "2025-12-14T02:11:12.224Z"
     }
   },
   {
@@ -3058,7 +3169,7 @@
       "site_name": "readwise-upload-pdf",
       "cover_image": "https://readwise-assets.s3.amazonaws.com/media/reader/parsed_document_assets/378761449/1WdzDITgulw1_aiYMoaxjyagIEwZekkRbv0U0LIYqzw-cove_5BbUyHA.png",
       "reading_progress": 0.5714285714285714,
-      "last_fetched": "2025-12-12T02:04:30.208Z"
+      "last_fetched": "2025-12-14T02:11:12.224Z"
     }
   },
   {
@@ -3084,7 +3195,7 @@
       "word_count": 3617,
       "reading_time": "19 min read",
       "site_name": "Amazon Web Services, Inc.",
-      "last_fetched": "2025-12-12T02:04:30.208Z"
+      "last_fetched": "2025-12-14T02:11:12.224Z"
     }
   },
   {
@@ -3113,7 +3224,7 @@
       "reading_time": "1 min read",
       "site_name": "linkedin.com",
       "cover_image": "https://media.licdn.com/dms/image/v2/D4E22AQGo8ZZuHK2njw/feedshare-shrink_800/B4EZoH86M3GYAo-/0/1761069999450?e=2147483647&v=beta&t=5BCmKV1vljit7wQ94Zu5w4QrVTTkirP2frAbAhcI7mM",
-      "last_fetched": "2025-12-12T02:04:30.208Z"
+      "last_fetched": "2025-12-14T02:11:12.224Z"
     }
   },
   {
@@ -3170,7 +3281,7 @@
       "site_name": "Poetry Magazine",
       "cover_image": "https://s3-us-east-2.amazonaws.com/cdn-test.poetryfoundation.org/content/images/8860b89bc1c96d531ea2aad695b8e4b17cb249af.jpeg",
       "reading_progress": 0.10772043313176767,
-      "last_fetched": "2025-12-12T02:04:30.208Z"
+      "last_fetched": "2025-12-14T02:11:12.224Z"
     }
   },
   {
@@ -3200,7 +3311,7 @@
       "reading_time": "3 min read",
       "site_name": "linkedin.com",
       "cover_image": "https://static.licdn.com/aero-v1/sc/h/c45fy346jw096z9pbphyyhdz7",
-      "last_fetched": "2025-12-12T02:04:30.208Z"
+      "last_fetched": "2025-12-14T02:11:12.224Z"
     }
   },
   {
@@ -3256,7 +3367,7 @@
       "reading_time": "1 min read",
       "site_name": "mypoeticside.com",
       "reading_progress": 1,
-      "last_fetched": "2025-12-12T02:04:30.208Z"
+      "last_fetched": "2025-12-14T02:11:12.224Z"
     }
   },
   {
@@ -3281,7 +3392,7 @@
     "metadata": {
       "site_name": "YouTube",
       "cover_image": "https://i.ytimg.com/vi/r3560y2LKMU/maxresdefault.jpg",
-      "last_fetched": "2025-12-12T02:04:30.208Z"
+      "last_fetched": "2025-12-14T02:11:12.224Z"
     }
   },
   {
@@ -3310,7 +3421,7 @@
       "site_name": "linkedin.com",
       "cover_image": "https://media.licdn.com/dms/image/v2/D5612AQFd_lQu2RaFdw/article-cover_image-shrink_600_2000/B56Zn5582PJoAQ-/0/1760834343002?e=2147483647&v=beta&t=NtH2zxQ4JKscwxL5OE_zCPWezWOclLywjQxfCr5sDhM",
       "reading_progress": 0.9359380552280147,
-      "last_fetched": "2025-12-12T02:04:30.208Z"
+      "last_fetched": "2025-12-14T02:11:12.224Z"
     }
   },
   {
@@ -3338,7 +3449,7 @@
       "reading_time": "3 min read",
       "site_name": "linkedin.com",
       "cover_image": "https://static.licdn.com/aero-v1/sc/h/c45fy346jw096z9pbphyyhdz7",
-      "last_fetched": "2025-12-12T02:04:30.208Z"
+      "last_fetched": "2025-12-14T02:11:12.224Z"
     }
   },
   {
@@ -3369,7 +3480,7 @@
       "site_name": "readwise-upload-pdf",
       "cover_image": "https://readwise-assets.s3.amazonaws.com/media/reader/parsed_document_assets/1819822/_ra-ASGi_eUFT_lWZO4jCzF--AAMyiZ7MK3mJ2fkL-0-cover-1819822.png",
       "reading_progress": 0.027777777777777776,
-      "last_fetched": "2025-12-12T02:04:30.208Z"
+      "last_fetched": "2025-12-14T02:11:12.224Z"
     }
   },
   {
@@ -3398,7 +3509,7 @@
       "reading_time": "5 min read",
       "site_name": "activism.net",
       "reading_progress": 1,
-      "last_fetched": "2025-12-12T02:04:30.208Z"
+      "last_fetched": "2025-12-14T02:11:12.224Z"
     }
   },
   {
@@ -3449,7 +3560,7 @@
       "reading_time": "4 min read",
       "site_name": "Platform Engineering",
       "cover_image": "https://platformengineering.com/wp-content/uploads/2025/05/How-Platform-Engineering-is-Redefining-DevOps-in-2025_resized.jpg",
-      "last_fetched": "2025-12-12T02:04:30.208Z"
+      "last_fetched": "2025-12-14T02:11:12.224Z"
     }
   },
   {
@@ -3478,7 +3589,7 @@
       "reading_time": "1 min read",
       "site_name": "linkedin.com",
       "cover_image": "https://static.licdn.com/aero-v1/sc/h/c45fy346jw096z9pbphyyhdz7",
-      "last_fetched": "2025-12-12T02:04:30.208Z"
+      "last_fetched": "2025-12-14T02:11:12.224Z"
     }
   },
   {
@@ -3526,7 +3637,7 @@
       "reading_time": "3 min read",
       "site_name": "TheFarSide.com",
       "cover_image": "https://assets.thefarside.com/assets/packs/media/images/brand/logo/tfs-share-default-a7b076808488053c10116ff0605a39a1.jpg",
-      "last_fetched": "2025-12-12T02:04:30.208Z"
+      "last_fetched": "2025-12-14T02:11:12.224Z"
     }
   },
   {
@@ -3586,7 +3697,7 @@
       "site_name": "A Space to Think: Notes on Software Development",
       "cover_image": "https://substackcdn.com/image/fetch/$s_!9hR8!,w_1200,h_600,c_fill,f_jpg,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fbaac74c8-e2d3-4d54-8a56-f7b40ddf2cfc_1536x1024.png",
       "reading_progress": 0.9684378854451415,
-      "last_fetched": "2025-12-12T02:04:30.208Z"
+      "last_fetched": "2025-12-14T02:11:12.224Z"
     }
   },
   {
@@ -3614,7 +3725,7 @@
       "site_name": "holochain.org",
       "cover_image": "https://readwise-assets.s3.amazonaws.com/media/reader/parsed_document_assets/239255881/RS0AqMiBzpVPv7fZwI9CLNwK0FwI7nKvTLa_O1G11js-cove_5RRsiwg.png",
       "reading_progress": 0.02247191011235955,
-      "last_fetched": "2025-12-12T02:04:30.208Z"
+      "last_fetched": "2025-12-14T02:11:12.224Z"
     }
   },
   {
@@ -3645,7 +3756,7 @@
       "site_name": "holochain.org",
       "cover_image": "https://readwise-assets.s3.amazonaws.com/media/reader/parsed_document_assets/239255899/19RzeKXLhZ0sOYXmRt6PkkwXNwSFa1dFGbr-7TG2GnU-cove_GBYGMKP.png",
       "reading_progress": 0.25,
-      "last_fetched": "2025-12-12T02:04:30.208Z"
+      "last_fetched": "2025-12-14T02:11:12.224Z"
     }
   },
   {
@@ -3673,7 +3784,7 @@
     "metadata": {
       "site_name": "YouTube",
       "cover_image": "https://i.ytimg.com/vi/JZiXsMBcV-E/maxresdefault.jpg",
-      "last_fetched": "2025-12-12T02:04:30.208Z"
+      "last_fetched": "2025-12-14T02:11:12.224Z"
     }
   },
   {
@@ -3702,7 +3813,7 @@
       "word_count": 29,
       "reading_time": "1 min read",
       "site_name": "Forbes.com",
-      "last_fetched": "2025-12-12T02:04:30.208Z"
+      "last_fetched": "2025-12-14T02:11:12.224Z"
     }
   },
   {
@@ -3732,7 +3843,7 @@
       "reading_time": "2 min read",
       "site_name": "linkedin.com",
       "cover_image": "https://static.licdn.com/aero-v1/sc/h/c45fy346jw096z9pbphyyhdz7",
-      "last_fetched": "2025-12-12T02:04:30.208Z"
+      "last_fetched": "2025-12-14T02:11:12.224Z"
     }
   },
   {
@@ -3760,7 +3871,7 @@
       "word_count": 515,
       "reading_time": "3 min read",
       "site_name": "Gaia-X Hub Germany",
-      "last_fetched": "2025-12-12T02:04:30.208Z"
+      "last_fetched": "2025-12-14T02:11:12.224Z"
     }
   },
   {
@@ -3786,7 +3897,7 @@
       "reading_time": "112 min read",
       "site_name": "Oxide and Friends",
       "cover_image": "https://img.transistor.fm/4eSrii-l0zYfhuwNC5cfYd8f69OrSYgO5YGFbWC0S3c/rs:fill:0:0:1/w:800/h:800/q:60/mb:500000/aHR0cHM6Ly9pbWct/dXBsb2FkLXByb2R1/Y3Rpb24udHJhbnNp/c3Rvci5mbS9hNmU0/YWYyMjU4NmRjMmRi/YTczMmZjYzI0NmMx/N2YwNy5wbmc.webp",
-      "last_fetched": "2025-12-12T02:04:30.208Z"
+      "last_fetched": "2025-12-14T02:11:12.224Z"
     }
   },
   {
@@ -3836,7 +3947,7 @@
     "metadata": {
       "site_name": "YouTube",
       "cover_image": "https://i.ytimg.com/vi/5Ai8UGx7QvQ/maxresdefault.jpg",
-      "last_fetched": "2025-12-12T02:04:30.208Z"
+      "last_fetched": "2025-12-14T02:11:12.224Z"
     }
   },
   {
@@ -3865,7 +3976,7 @@
       "site_name": "simonwillison.net",
       "cover_image": "https://static.simonwillison.net/static/2025/design-patterns-card.jpg",
       "reading_progress": 1,
-      "last_fetched": "2025-12-12T02:04:30.208Z"
+      "last_fetched": "2025-12-14T02:11:12.224Z"
     }
   },
   {
@@ -3897,7 +4008,7 @@
       "site_name": "simonwillison.net",
       "cover_image": "https://static.simonwillison.net/static/2025/lethaltrifecta.jpg",
       "reading_progress": 1,
-      "last_fetched": "2025-12-12T02:04:30.208Z"
+      "last_fetched": "2025-12-14T02:11:12.224Z"
     }
   },
   {
@@ -3924,7 +4035,7 @@
       "word_count": 1093,
       "reading_time": "6 min read",
       "site_name": "Association for Computing Machinery",
-      "last_fetched": "2025-12-12T02:04:30.208Z"
+      "last_fetched": "2025-12-14T02:11:12.224Z"
     }
   },
   {
@@ -3953,7 +4064,7 @@
       "reading_time": "3 min read",
       "site_name": "Schneier on Security",
       "reading_progress": 1,
-      "last_fetched": "2025-12-12T02:04:30.208Z"
+      "last_fetched": "2025-12-14T02:11:12.224Z"
     }
   },
   {
@@ -3981,7 +4092,7 @@
       "site_name": "readwise-upload-pdf",
       "cover_image": "https://readwise-assets.s3.amazonaws.com/media/reader/parsed_document_assets/315506754/1r8aYQgJpPfIm5Cf4G0Y9_ECnrNP8LzLIb6TWJmGrAI-cove_RqFspfs.png",
       "reading_progress": 0.14285714285714285,
-      "last_fetched": "2025-12-12T02:04:30.208Z"
+      "last_fetched": "2025-12-14T02:11:12.224Z"
     }
   },
   {
@@ -4031,7 +4142,7 @@
       "reading_time": "2 min read",
       "site_name": "linkedin.com",
       "cover_image": "https://static.licdn.com/aero-v1/sc/h/c45fy346jw096z9pbphyyhdz7",
-      "last_fetched": "2025-12-12T02:04:30.208Z"
+      "last_fetched": "2025-12-14T02:11:12.224Z"
     }
   },
   {
@@ -4090,7 +4201,7 @@
       "site_name": "Lars Lofgren",
       "cover_image": "http://larslofgren.com/wp-content/uploads/2025/10/rcoding-bootcamp-homepage.png",
       "reading_progress": 0.22763577437793495,
-      "last_fetched": "2025-12-12T02:04:30.208Z"
+      "last_fetched": "2025-12-14T02:11:12.224Z"
     }
   },
   {
@@ -4118,7 +4229,7 @@
       "reading_time": "2 min read",
       "site_name": "linkedin.com",
       "cover_image": "https://static.licdn.com/aero-v1/sc/h/c45fy346jw096z9pbphyyhdz7",
-      "last_fetched": "2025-12-12T02:04:30.208Z"
+      "last_fetched": "2025-12-14T02:11:12.224Z"
     }
   },
   {
@@ -4168,7 +4279,7 @@
       "site_name": "InfoQ",
       "cover_image": "https://res.infoq.com/presentations/architecture-best-practices/en/card_header_image/gregor-hohpe-twitter-card-1756297866716.jpg",
       "reading_progress": 0.8851978390305657,
-      "last_fetched": "2025-12-12T02:04:30.208Z"
+      "last_fetched": "2025-12-14T02:11:12.224Z"
     }
   },
   {
@@ -4195,7 +4306,7 @@
       "word_count": 1036,
       "reading_time": "6 min read",
       "site_name": "Risk and Cyber ",
-      "last_fetched": "2025-12-12T02:04:30.208Z"
+      "last_fetched": "2025-12-14T02:11:12.224Z"
     }
   },
   {
@@ -4635,7 +4746,7 @@
       "reading_time": "1 min read",
       "site_name": "chrispiech.github.io",
       "reading_progress": 1,
-      "last_fetched": "2025-12-12T02:04:30.208Z"
+      "last_fetched": "2025-12-14T02:11:12.224Z"
     }
   },
   {
