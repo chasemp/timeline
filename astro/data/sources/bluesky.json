@@ -1,5 +1,21 @@
 [
   {
+    "id": "bluesky:3mabdsuueac27",
+    "type": "bluesky",
+    "timestamp": "2025-12-18T14:04:49.485Z",
+    "title": "sketchplanations.com/truth-and-be...",
+    "summary": "sketchplanations.com/truth-and-be... — Discovering Truth and Beauty and Sharing it with others",
+    "url": "https://bsky.app/profile/chase523.bsky.social/post/3mabdsuueac27",
+    "embed_uri": "at://did:plc:7whslkj667kgto2x246o4stl/app.bsky.feed.post/3mabdsuueac27",
+    "embed_cid": "bafyreihtrhpwy5yurye4gvflkxgkjtffnwxpme6pf6n3cmarusamz5pb7e",
+    "content_html": "<p>sketchplanations.com/truth-and-be...</p>\n          <div style=\"margin: 16px 0; border: 1px solid var(--border, #d4c4a8); border-radius: 8px; overflow: hidden; background: var(--card-bg, #fdfbf7);\">\n            <img src=\"/assets/cached-images/bluesky/c6b81781a6095f6c306fd9897c0de99f.jpeg\" alt=\"Discovering Truth and Beauty and Sharing it with others\" style=\"width: 100%; height: auto; display: block; max-height: 200px; object-fit: cover;\">\n            <div style=\"padding: 12px;\">\n              <div style=\"font-weight: 600; margin-bottom: 4px; color: var(--text, #3d2817);\">Discovering Truth and Beauty and Sharing it with others</div>\n              <div style=\"font-size: 13px; color: var(--muted, #7a6b5d); margin-bottom: 8px;\">This post is sketch 900 of Sketchplanations, according to my numbering. To mark that, I've been reflecting and wanted to share what I've learned from over a decade of this project. It's my longest pos...</div>\n              <div style=\"font-size: 12px; color: var(--accent, #c17a4f); overflow: hidden; text-overflow: ellipsis; white-space: nowrap;\">🔗 https://sketchplanations.com/truth-and-beauty</div>\n            </div>\n          </div>",
+    "metadata": {
+      "likes": 0,
+      "reposts": 0,
+      "replies": 0
+    }
+  },
+  {
     "id": "bluesky:3m77h3e4ezc2g",
     "type": "bluesky",
     "timestamp": "2025-12-05T02:32:44.010Z",
