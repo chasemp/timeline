@@ -1,5 +1,53 @@
 [
   {
+    "id": "bluesky:3mbprejbll22x",
+    "type": "bluesky",
+    "timestamp": "2026-01-06T01:09:47.923Z",
+    "title": "media.ccc.de/v/39c3-the-h...",
+    "summary": "media.ccc.de/v/39c3-the-h... — The Heartbreak Machine: Nazis in the Echo Chamber",
+    "url": "https://bsky.app/profile/chase523.bsky.social/post/3mbprejbll22x",
+    "embed_uri": "at://did:plc:7whslkj667kgto2x246o4stl/app.bsky.feed.post/3mbprejbll22x",
+    "embed_cid": "bafyreidaqovjhqbiosyhf3wfqkxsdeofpg6rkgdck3phjump5owwesaqe4",
+    "content_html": "<p>media.ccc.de/v/39c3-the-h...</p>\n          <div style=\"margin: 16px 0; border: 1px solid var(--border, #d4c4a8); border-radius: 8px; overflow: hidden; background: var(--card-bg, #fdfbf7);\">\n            <img src=\"/assets/cached-images/bluesky/3f6b782a670b85d7e2cb1069c8610343.jpeg\" alt=\"The Heartbreak Machine: Nazis in the Echo Chamber\" style=\"width: 100%; height: auto; display: block; max-height: 200px; object-fit: cover;\">\n            <div style=\"padding: 12px;\">\n              <div style=\"font-weight: 600; margin-bottom: 4px; color: var(--text, #3d2817);\">The Heartbreak Machine: Nazis in the Echo Chamber</div>\n              <div style=\"font-size: 13px; color: var(--muted, #7a6b5d); margin-bottom: 8px;\">WhiteDate ist eine Plattform weißer Suprematist:innen, die sich an Rassist:innen und Antisemit:innen richtet – und auf veralteter Infrast...</div>\n              <div style=\"font-size: 12px; color: var(--accent, #c17a4f); overflow: hidden; text-overflow: ellipsis; white-space: nowrap;\">🔗 https://media.ccc.de/v/39c3-the-heartbreak-machine-nazis-in-the-echo-chamber#t=42</div>\n            </div>\n          </div>",
+    "metadata": {
+      "likes": 0,
+      "reposts": 0,
+      "replies": 0
+    }
+  },
+  {
+    "id": "bluesky:3mbpqqrqcck2x",
+    "type": "bluesky",
+    "timestamp": "2026-01-06T00:58:45.705Z",
+    "title": "AGENTS.md",
+    "summary": "AGENTS.md — AGENTS.md",
+    "url": "https://bsky.app/profile/chase523.bsky.social/post/3mbpqqrqcck2x",
+    "embed_uri": "at://did:plc:7whslkj667kgto2x246o4stl/app.bsky.feed.post/3mbpqqrqcck2x",
+    "embed_cid": "bafyreid26rdsiek54o76gsv3m235uoqkblw72djboscr6t42svwjl7qm3q",
+    "content_html": "<p>AGENTS.md</p>\n          <div style=\"margin: 16px 0; border: 1px solid var(--border, #d4c4a8); border-radius: 8px; overflow: hidden; background: var(--card-bg, #fdfbf7);\">\n            <img src=\"/assets/cached-images/bluesky/99734dd545917a8119658934bd36a6d8.jpeg\" alt=\"AGENTS.md\" style=\"width: 100%; height: auto; display: block; max-height: 200px; object-fit: cover;\">\n            <div style=\"padding: 12px;\">\n              <div style=\"font-weight: 600; margin-bottom: 4px; color: var(--text, #3d2817);\">AGENTS.md</div>\n              <div style=\"font-size: 13px; color: var(--muted, #7a6b5d); margin-bottom: 8px;\">AGENTS.md is a simple, open format for guiding coding agents. Think of it as a README for agents.</div>\n              <div style=\"font-size: 12px; color: var(--accent, #c17a4f); overflow: hidden; text-overflow: ellipsis; white-space: nowrap;\">🔗 http://AGENTS.md</div>\n            </div>\n          </div>",
+    "metadata": {
+      "likes": 0,
+      "reposts": 0,
+      "replies": 0
+    }
+  },
+  {
+    "id": "bluesky:3mbnjmi5tvc2s",
+    "type": "bluesky",
+    "timestamp": "2026-01-05T03:45:45.777Z",
+    "title": "www.youtube.com/watch?v=e0pR...",
+    "summary": "www.youtube.com/watch?v=e0pR... — My 10 Items For Alone Season 11 In Detail (Arctic Circle)",
+    "url": "https://bsky.app/profile/chase523.bsky.social/post/3mbnjmi5tvc2s",
+    "embed_uri": "at://did:plc:7whslkj667kgto2x246o4stl/app.bsky.feed.post/3mbnjmi5tvc2s",
+    "embed_cid": "bafyreibaxltzvpc5yrnn7kpoyu2fbsmumo3wqhfzmlt7qmtum7nabkcmia",
+    "content_html": "<p>www.youtube.com/watch?v=e0pR...</p>\n          <div style=\"margin: 16px 0; border: 1px solid var(--border, #d4c4a8); border-radius: 8px; overflow: hidden; background: var(--card-bg, #fdfbf7);\">\n            <img src=\"/assets/cached-images/bluesky/3ba69bd97b117bd6a284bd0c446951b3.jpeg\" alt=\"My 10 Items For Alone Season 11 In Detail (Arctic Circle)\" style=\"width: 100%; height: auto; display: block; max-height: 200px; object-fit: cover;\">\n            <div style=\"padding: 12px;\">\n              <div style=\"font-weight: 600; margin-bottom: 4px; color: var(--text, #3d2817);\">My 10 Items For Alone Season 11 In Detail (Arctic Circle)</div>\n              <div style=\"font-size: 13px; color: var(--muted, #7a6b5d); margin-bottom: 8px;\">YouTube video by William Larkham Jr (Bigland Trapper)</div>\n              <div style=\"font-size: 12px; color: var(--accent, #c17a4f); overflow: hidden; text-overflow: ellipsis; white-space: nowrap;\">🔗 https://www.youtube.com/watch?v=e0pRAOCSN1U</div>\n            </div>\n          </div>",
+    "metadata": {
+      "likes": 0,
+      "reposts": 0,
+      "replies": 0
+    }
+  },
+  {
     "id": "bluesky:3mbikbs2bnc2y",
     "type": "bluesky",
     "timestamp": "2026-01-03T04:14:22.097Z",
