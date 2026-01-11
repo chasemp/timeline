@@ -84,6 +84,28 @@
     }
   },
   {
+    "id": "blog:intentionally-remote-15-years-of-this-lifestyle",
+    "type": "blog",
+    "source": "markdown",
+    "timestamp": "2026-01-10T00:00:00.000Z",
+    "title": "Intentionally Remote: 15 Years Of This Lifestyle",
+    "summary": "",
+    "url": "/Blog/intentionally-remote-15-years-of-this-lifestyle/",
+    "canonical_url": "/Blog/intentionally-remote-15-years-of-this-lifestyle/",
+    "author": null,
+    "tags": [
+      "Remote Work",
+      "Career",
+      "Lifestyle"
+    ],
+    "media": [],
+    "content_html": "<!-- Your content goes here -->\n\n",
+    "content_text": null,
+    "embed_uri": null,
+    "embed_cid": null,
+    "metadata": null
+  },
+  {
     "id": "readwise:01kej0e3t9dhab13zk29n02cj3",
     "type": "saved",
     "source": null,
