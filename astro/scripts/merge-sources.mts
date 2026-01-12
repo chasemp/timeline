@@ -33,13 +33,13 @@ function detectType(entry: any) {
     return 'primer';
   }
 
-  // LinkedIn content from Readwise (saved articles) should stay as 'saved' (Read category)
+  // LinkedIn content from Readwise (saved articles) should stay as 'saved' (Shared category)
   // These are OTHER people's posts that you read, not your own posts
   // Your own LinkedIn posts would come from a different source (e.g., markdown files)
   if (baseType === 'saved') {
     const isLinkedIn = siteName.includes('linkedin') || url.includes('linkedin.com') || url.includes('lnkd.in');
     if (isLinkedIn) {
-      // All LinkedIn content from Readwise stays as 'saved' (Read category)
+      // All LinkedIn content from Readwise stays as 'saved' (Shared category)
       // This includes posts, articles, recommendations, etc. that you saved/read
       return 'saved';
     }

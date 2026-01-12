@@ -42,9 +42,7 @@ const formatShortDate = (timestamp: string) => {
   <ol class="list" role="list" data-pagefind-body>
     <!-- Today marker -->
     <li class="row today-marker">
-      <div class="spine">
-        <span class="dot today-dot" title="Today"></span>
-      </div>
+      <span class="dot today-dot" title="Today"></span>
       <div class="today-label">
         <span class="today-text">Today</span>
         <time class="today-date">{new Date().toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}</time>
@@ -53,10 +51,8 @@ const formatShortDate = (timestamp: string) => {
     
     {sorted.map((item) => (
       <li id={`node-${item.id.replace(/[^a-zA-Z0-9-]/g, '-')}`} class={`row type-${item.type}`} data-type={item.type} data-id={item.id} data-hashtags={item.hashtags?.join(',') || ''}>
-        <div class="spine">
-          <span class="dot" data-dot-type={item.type} data-timestamp={item.timestamp} title={new Date(item.timestamp).toLocaleString()}></span>
-        </div>
         <button class="card" data-id={item.id} data-type={item.type} data-url={item.type === 'blog' ? `/blog/${item.id.replace('blog:', '')}` : (item.type === 'primer' ? `/primer/${item.id.replace('readwise:', '')}` : (item.url || ''))} aria-haspopup="dialog">
+          <span class="card-top-bar" data-card-type={item.type} data-timestamp={item.timestamp} title={new Date(item.timestamp).toLocaleString()}></span>
           <div class="meta">
             <span class="type">{typeDisplayName(item.type)}</span>
             <time datetime={item.timestamp}>{formatShortDate(item.timestamp)}</time>
@@ -116,40 +112,62 @@ const formatShortDate = (timestamp: string) => {
   .empty-state strong { color: var(--accent); }
   .reset-link { color: var(--accent); text-decoration: underline; cursor: pointer; font-weight: 600; }
   .reset-link:hover { opacity: 0.8; }
-  .list { list-style: none; margin: 0; padding: 0; position: relative; }
-  .row { display: grid; grid-template-columns: 24px 1fr; gap: 12px; align-items: start; margin: 12px 0; transition: background-color 0.3s ease; }
-  .row.node-highlighted { background-color: rgba(193, 122, 79, 0.15); border-radius: 8px; padding: 8px; margin: 4px 0; }
-  .spine { position: relative; height: 100%; }
-  .spine::before { content: ""; position: absolute; top: 0; bottom: 0; left: 11px; width: 2px; background: var(--spine); }
-  .dot { position: absolute; left: 5px; top: 10px; width: 12px; height: 12px; border-radius: 50%; background: var(--accent); box-shadow: 0 0 0 3px var(--bg); cursor: pointer; transition: transform 0.2s, box-shadow 0.2s; border: 1px solid rgba(0,0,0,0.1); }
-  .dot:hover { transform: scale(1.4); box-shadow: 0 0 0 4px var(--bg), 0 0 16px currentColor; }
-  .dot[data-dot-type="blog"]::after { content: "📝"; position: absolute; top: -2px; left: -2px; font-size: 16px; opacity: 0; transition: opacity 0.2s; pointer-events: none; }
-  .dot[data-dot-type="saved"]::after { content: "🔖"; position: absolute; top: -2px; left: -2px; font-size: 16px; opacity: 0; transition: opacity 0.2s; pointer-events: none; }
-  .dot[data-dot-type="bluesky"]::after { content: "🦋"; position: absolute; top: -2px; left: -2px; font-size: 16px; opacity: 0; transition: opacity 0.2s; pointer-events: none; }
-  .dot[data-dot-type="pixelfed"]::after { content: "📷"; position: absolute; top: -2px; left: -2px; font-size: 16px; opacity: 0; transition: opacity 0.2s; pointer-events: none; }
-  .dot[data-dot-type="hackernews"]::after { content: "💬"; position: absolute; top: -2px; left: -2px; font-size: 16px; opacity: 0; transition: opacity 0.2s; pointer-events: none; }
-  .dot[data-dot-type="posts"]::after { content: "🦋"; position: absolute; top: -2px; left: -2px; font-size: 16px; opacity: 0; transition: opacity 0.2s; pointer-events: none; }
-  .dot[data-dot-type="release"]::after { content: "🏷️"; position: absolute; top: -2px; left: -2px; font-size: 16px; opacity: 0; transition: opacity 0.2s; pointer-events: none; }
-  .dot[data-dot-type="wikipedia"]::after { content: "🌐"; position: absolute; top: -2px; left: -2px; font-size: 16px; opacity: 0; transition: opacity 0.2s; pointer-events: none; }
-  .dot[data-dot-type="contributions"]::after { content: "🌐"; position: absolute; top: -2px; left: -2px; font-size: 16px; opacity: 0; transition: opacity 0.2s; pointer-events: none; }
-  .dot[data-dot-type="linkedin"]::after { content: "💼"; position: absolute; top: -2px; left: -2px; font-size: 16px; opacity: 0; transition: opacity 0.2s; pointer-events: none; }
-  .dot:hover::after { opacity: 1; }
-  .dot[data-dot-type="blog"] { background: #5d4037; color: #5d4037; }
-  .dot[data-dot-type="saved"] { background: #7cb342; color: #7cb342; }
-  .dot[data-dot-type="bluesky"] { background: #1e88e5; color: #1e88e5; }
-  .dot[data-dot-type="pixelfed"] { background: #e91e63; color: #e91e63; }
-  .dot[data-dot-type="hackernews"] { background: #ff6600; color: #ff6600; }
-  .dot[data-dot-type="posts"] { background: #42a5f5; color: #42a5f5; }
-  .dot[data-dot-type="release"] { background: #fb8c00; color: #fb8c00; }
-  .dot[data-dot-type="wikipedia"] { background: #636466; color: #636466; }
-  .dot[data-dot-type="contributions"] { background: #9c27b0; color: #9c27b0; }
-  .dot[data-dot-type="linkedin"] { background: #0a66c2; color: #0a66c2; }
+  
+  /* Timeline list with centered vertical line */
+  .list { 
+    list-style: none; 
+    margin: 0; 
+    padding: 0; 
+    position: relative; 
+  }
+  .list::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    background: var(--spine);
+    z-index: 0;
+  }
+  
+  /* Each row - card centered */
+  .row { 
+    position: relative;
+    margin: 0;
+    padding-top: 16px;
+    transition: background-color 0.3s ease; 
+  }
+  .row.node-highlighted { background-color: rgba(193, 122, 79, 0.15); border-radius: 8px; }
+  
+  /* Today dot - only for today marker */
+  .dot { 
+    position: absolute; 
+    left: 50%; 
+    top: 0;
+    transform: translateX(-50%);
+    width: 14px; 
+    height: 14px; 
+    border-radius: 50%; 
+    background: var(--accent); 
+    box-shadow: 0 0 0 3px var(--bg); 
+    cursor: default; 
+    border: 1px solid rgba(0,0,0,0.1); 
+    z-index: 2;
+  }
   
   /* Today marker styles */
-  .today-marker { margin-bottom: 24px; }
-  .today-dot { background: var(--accent); cursor: default; animation: pulse 2s ease-in-out infinite; }
-  .today-dot:hover { transform: none; box-shadow: 0 0 0 3px var(--bg); }
-  .today-label { display: flex; align-items: baseline; gap: 8px; }
+  .today-marker { padding-top: 12px; margin-bottom: 12px; }
+  .today-dot { background: var(--accent); cursor: default; animation: pulse 2s ease-in-out infinite; top: 0; }
+  .today-dot:hover { transform: translateX(-50%); box-shadow: 0 0 0 3px var(--bg); }
+  .today-label { 
+    display: flex; 
+    align-items: center; 
+    justify-content: center;
+    gap: 8px; 
+    padding-top: 8px;
+  }
   .today-text { font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; font-size: 13px; color: var(--accent); font-family: system-ui, sans-serif; }
   .today-date { color: var(--muted); font-size: 13px; font-family: system-ui, sans-serif; }
   @keyframes pulse {
@@ -157,8 +175,81 @@ const formatShortDate = (timestamp: string) => {
     50% { box-shadow: 0 0 0 3px var(--bg), 0 0 0 6px var(--accent), 0 0 16px var(--accent); }
   }
   
-  .card { text-align: left; background: var(--card-bg); color: var(--text); border: 1px solid var(--border); border-radius: 8px; padding: 14px; cursor: pointer; width: 100%; transition: all 0.2s; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
-  .card:hover { border-color: var(--accent); box-shadow: 0 2px 8px rgba(0,0,0,0.1); transform: translateY(-1px); }
+  /* Card styles */
+  .card { 
+    text-align: left; 
+    background: var(--card-bg); 
+    color: var(--text); 
+    border: 1px solid var(--border); 
+    border-radius: 8px; 
+    padding: 14px; 
+    padding-top: 18px; /* Extra space for top bar */
+    cursor: pointer; 
+    width: 100%; 
+    transition: all 0.2s; 
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05); 
+    position: relative; 
+    z-index: 1;
+    overflow: visible;
+  }
+  .card:hover { box-shadow: 0 2px 8px rgba(0,0,0,0.1); transform: translateY(-1px); }
+  
+  /* Top bar - hover target for tooltip */
+  .card-top-bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    border-radius: 8px 8px 0 0;
+    cursor: pointer;
+    z-index: 3;
+    transition: all 0.2s ease;
+  }
+  .card-top-bar:hover {
+    height: 6px;
+    filter: brightness(1.2);
+  }
+  
+  /* Emoji indicator on top bar hover */
+  .card-top-bar::after {
+    content: "";
+    position: absolute;
+    top: -16px;
+    right: 12px;
+    font-size: 20px;
+    opacity: 0;
+    transition: opacity 0.2s;
+    pointer-events: none;
+  }
+  .card-top-bar:hover::after { opacity: 1; }
+  
+  /* Top bar colors by type */
+  .card-top-bar[data-card-type="blog"] { background: #5d4037; }
+  .card-top-bar[data-card-type="saved"] { background: #7cb342; }
+  .card-top-bar[data-card-type="primer"] { background: #7e57c2; }
+  .card-top-bar[data-card-type="bluesky"] { background: #1e88e5; }
+  .card-top-bar[data-card-type="pixelfed"] { background: #e91e63; }
+  .card-top-bar[data-card-type="hackernews"] { background: #ff6600; }
+  .card-top-bar[data-card-type="posts"] { background: #42a5f5; }
+  .card-top-bar[data-card-type="release"] { background: #fb8c00; }
+  .card-top-bar[data-card-type="wikipedia"] { background: #636466; }
+  .card-top-bar[data-card-type="contributions"] { background: #9c27b0; }
+  .card-top-bar[data-card-type="linkedin"] { background: #0a66c2; }
+  
+  /* Emoji by type on top bar hover */
+  .card-top-bar[data-card-type="blog"]::after { content: "📝"; }
+  .card-top-bar[data-card-type="saved"]::after { content: "🔖"; }
+  .card-top-bar[data-card-type="primer"]::after { content: "🧠"; }
+  .card-top-bar[data-card-type="bluesky"]::after { content: "🦋"; }
+  .card-top-bar[data-card-type="pixelfed"]::after { content: "📷"; }
+  .card-top-bar[data-card-type="hackernews"]::after { content: "💬"; }
+  .card-top-bar[data-card-type="posts"]::after { content: "🦋"; }
+  .card-top-bar[data-card-type="release"]::after { content: "🏷️"; }
+  .card-top-bar[data-card-type="wikipedia"]::after { content: "🌐"; }
+  .card-top-bar[data-card-type="contributions"]::after { content: "🌐"; }
+  .card-top-bar[data-card-type="linkedin"]::after { content: "💼"; }
+  
   .card-link { display: block; text-decoration: none; }
   .meta { display: flex; gap: 10px; font-size: 12px; color: var(--muted); font-family: system-ui, sans-serif; align-items: center; }
   .type { text-transform: uppercase; letter-spacing: .08em; font-weight: 600; }
@@ -270,7 +361,8 @@ const formatShortDate = (timestamp: string) => {
       const t = (row as HTMLElement).dataset.type;
       const hashtags = (row as HTMLElement).dataset.hashtags?.split(',').filter(Boolean) || [];
       
-      const typeMatch = allowed.size === 0 ? false : allowed.has(t!);
+      // Release items always show (not filterable, just labeled)
+      const typeMatch = t === 'release' || (allowed.size === 0 ? false : allowed.has(t!));
       const hashtagMatch = activeHashtags.size === 0 || hashtags.some(tag => activeHashtags.has(tag));
       
       (row as HTMLElement).style.display = (typeMatch && hashtagMatch) ? '' : 'none';
@@ -797,60 +889,61 @@ const formatShortDate = (timestamp: string) => {
   // Tooltips only for dots (removed from cards)
   // No tooltip function needed - using native title attribute on dots
 
-  // Enhanced tooltips for dots showing date with emoji
-    function showDotTooltip(dot: HTMLElement) {
-      const timestamp = dot.dataset.timestamp!;
-      const type = dot.dataset.dotType!;
-      const date = new Date(timestamp).toLocaleString('en-US', {
-        month: 'short',
-        day: 'numeric',
-        year: 'numeric',
-        hour: 'numeric',
-        minute: '2-digit',
-        hour12: true
-      });
+  // Enhanced tooltips for top bar showing date with emoji
+  function showCardTooltip(topBar: HTMLElement) {
+    const timestamp = topBar.dataset.timestamp!;
+    const type = topBar.dataset.cardType!;
+    const date = new Date(timestamp).toLocaleString('en-US', {
+      month: 'short',
+      day: 'numeric',
+      year: 'numeric',
+      hour: 'numeric',
+      minute: '2-digit',
+      hour12: true
+    });
 
-      const emojiMap: Record<string, string> = {
-        'blog': '📝',
-        'saved': '🔖',
-        'primer': '🧠',
-        'bluesky': '🦋',
-        'pixelfed': '📷',
-        'hackernews': '💬',
-        'posts': '🦋',
-        'release': '🏷️',
-        'wikipedia': '🌐',
-        'contributions': '🌐',
-        'linkedin': '💼'
-      };
+    const emojiMap: Record<string, string> = {
+      'blog': '📝',
+      'saved': '🔖',
+      'primer': '🧠',
+      'bluesky': '🦋',
+      'pixelfed': '📷',
+      'hackernews': '💬',
+      'posts': '🦋',
+      'release': '🏷️',
+      'wikipedia': '🌐',
+      'contributions': '🌐',
+      'linkedin': '💼'
+    };
 
-      const typeDisplayNames: Record<string, string> = {
-        'saved': 'Article Shared',
-        'primer': 'AI Topic Primer',
-        'bluesky': 'Posts',
-        'pixelfed': 'Photo',
-        'hackernews': 'Comment',
-        'posts': 'Posts',
-        'wikipedia': 'Contributions',
-        'contributions': 'Contributions',
-        'linkedin': 'LinkedIn'
-      };
+    const typeDisplayNames: Record<string, string> = {
+      'saved': 'Article Shared',
+      'primer': 'AI Topic Primer',
+      'bluesky': 'Posts',
+      'pixelfed': 'Photo',
+      'hackernews': 'Comment',
+      'posts': 'Posts',
+      'wikipedia': 'Contributions',
+      'contributions': 'Contributions',
+      'linkedin': 'LinkedIn'
+    };
     
     const emoji = emojiMap[type] || '';
     const displayName = typeDisplayNames[type] || type.toUpperCase();
     ttTitle.textContent = `${emoji} ${displayName}`;
     ttMeta.textContent = date;
-    positionTooltip(dot.getBoundingClientRect());
+    positionTooltip(topBar.getBoundingClientRect());
     tooltip.removeAttribute('hidden');
   }
-  function hideDotTooltip() {
+  function hideCardTooltip() {
     tooltip.setAttribute('hidden', '');
   }
 
-  document.querySelectorAll('.dot').forEach((dot) => {
-    const d = dot as HTMLElement;
-    d.addEventListener('mouseenter', () => showDotTooltip(d));
-    d.addEventListener('mouseleave', hideDotTooltip);
+  // Tooltip only shows on top bar hover, not whole card
+  document.querySelectorAll('.card-top-bar').forEach((topBar) => {
+    const tb = topBar as HTMLElement;
+    tb.addEventListener('mouseenter', () => showCardTooltip(tb));
+    tb.addEventListener('mouseleave', hideCardTooltip);
   });
 
   // Handle hash navigation (anchor links)
@@ -896,42 +989,62 @@ const formatShortDate = (timestamp: string) => {
   .empty-state strong { color: var(--accent); }
   .reset-link { color: var(--accent); text-decoration: underline; cursor: pointer; font-weight: 600; }
   .reset-link:hover { opacity: 0.8; }
-  .list { list-style: none; margin: 0; padding: 0; position: relative; }
-  .row { display: grid; grid-template-columns: 24px 1fr; gap: 12px; align-items: start; margin: 12px 0; transition: background-color 0.3s ease; }
-  .row.node-highlighted { background-color: rgba(193, 122, 79, 0.15); border-radius: 8px; padding: 8px; margin: 4px 0; }
-  .spine { position: relative; height: 100%; }
-  .spine::before { content: ""; position: absolute; top: 0; bottom: 0; left: 11px; width: 2px; background: var(--spine); }
-  .dot { position: absolute; left: 5px; top: 10px; width: 12px; height: 12px; border-radius: 50%; background: var(--accent); box-shadow: 0 0 0 3px var(--bg); cursor: pointer; transition: transform 0.2s, box-shadow 0.2s; border: 1px solid rgba(0,0,0,0.1); }
-  .dot:hover { transform: scale(1.4); box-shadow: 0 0 0 4px var(--bg), 0 0 16px currentColor; }
-  .dot[data-dot-type="blog"]::after { content: "📝"; position: absolute; top: -2px; left: -2px; font-size: 16px; opacity: 0; transition: opacity 0.2s; pointer-events: none; }
-    .dot[data-dot-type="saved"]::after { content: "🔖"; position: absolute; top: -2px; left: -2px; font-size: 16px; opacity: 0; transition: opacity 0.2s; pointer-events: none; }
-    .dot[data-dot-type="primer"]::after { content: "🧠"; position: absolute; top: -2px; left: -2px; font-size: 16px; opacity: 0; transition: opacity 0.2s; pointer-events: none; }
-  .dot[data-dot-type="bluesky"]::after { content: "🦋"; position: absolute; top: -2px; left: -2px; font-size: 16px; opacity: 0; transition: opacity 0.2s; pointer-events: none; }
-  .dot[data-dot-type="pixelfed"]::after { content: "📷"; position: absolute; top: -2px; left: -2px; font-size: 16px; opacity: 0; transition: opacity 0.2s; pointer-events: none; }
-  .dot[data-dot-type="hackernews"]::after { content: "💬"; position: absolute; top: -2px; left: -2px; font-size: 16px; opacity: 0; transition: opacity 0.2s; pointer-events: none; }
-  .dot[data-dot-type="posts"]::after { content: "🦋"; position: absolute; top: -2px; left: -2px; font-size: 16px; opacity: 0; transition: opacity 0.2s; pointer-events: none; }
-  .dot[data-dot-type="release"]::after { content: "🏷️"; position: absolute; top: -2px; left: -2px; font-size: 16px; opacity: 0; transition: opacity 0.2s; pointer-events: none; }
-  .dot[data-dot-type="wikipedia"]::after { content: "🌐"; position: absolute; top: -2px; left: -2px; font-size: 16px; opacity: 0; transition: opacity 0.2s; pointer-events: none; }
-  .dot[data-dot-type="contributions"]::after { content: "🌐"; position: absolute; top: -2px; left: -2px; font-size: 16px; opacity: 0; transition: opacity 0.2s; pointer-events: none; }
-  .dot[data-dot-type="linkedin"]::after { content: "💼"; position: absolute; top: -2px; left: -2px; font-size: 16px; opacity: 0; transition: opacity 0.2s; pointer-events: none; }
-  .dot:hover::after { opacity: 1; }
-  .dot[data-dot-type="blog"] { background: #5d4037; color: #5d4037; }
-    .dot[data-dot-type="saved"] { background: #7cb342; color: #7cb342; }
-    .dot[data-dot-type="primer"] { background: #7e57c2; color: #7e57c2; }
-  .dot[data-dot-type="bluesky"] { background: #1e88e5; color: #1e88e5; }
-  .dot[data-dot-type="pixelfed"] { background: #e91e63; color: #e91e63; }
-  .dot[data-dot-type="hackernews"] { background: #ff6600; color: #ff6600; }
-  .dot[data-dot-type="posts"] { background: #42a5f5; color: #42a5f5; }
-  .dot[data-dot-type="release"] { background: #fb8c00; color: #fb8c00; }
-  .dot[data-dot-type="wikipedia"] { background: #636466; color: #636466; }
-  .dot[data-dot-type="contributions"] { background: #9c27b0; color: #9c27b0; }
-  .dot[data-dot-type="linkedin"] { background: #0a66c2; color: #0a66c2; }
+  
+  /* Timeline list with centered vertical line */
+  .list { 
+    list-style: none; 
+    margin: 0; 
+    padding: 0; 
+    position: relative; 
+  }
+  .list::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    background: var(--spine);
+    z-index: 0;
+  }
+  
+  /* Each row - card centered */
+  .row { 
+    position: relative;
+    margin: 0;
+    padding-top: 16px;
+    transition: background-color 0.3s ease; 
+  }
+  .row.node-highlighted { background-color: rgba(193, 122, 79, 0.15); border-radius: 8px; }
+  
+  /* Today dot - only for today marker */
+  .dot { 
+    position: absolute; 
+    left: 50%; 
+    top: 0;
+    transform: translateX(-50%);
+    width: 14px; 
+    height: 14px; 
+    border-radius: 50%; 
+    background: var(--accent); 
+    box-shadow: 0 0 0 3px var(--bg); 
+    cursor: default; 
+    border: 1px solid rgba(0,0,0,0.1); 
+    z-index: 2;
+  }
   
   /* Today marker styles */
-  .today-marker { margin-bottom: 24px; }
-  .today-dot { background: var(--accent); cursor: default; animation: pulse 2s ease-in-out infinite; }
-  .today-dot:hover { transform: none; box-shadow: 0 0 0 3px var(--bg); }
-  .today-label { display: flex; align-items: baseline; gap: 8px; }
+  .today-marker { padding-top: 12px; margin-bottom: 12px; }
+  .today-dot { background: var(--accent); cursor: default; animation: pulse 2s ease-in-out infinite; top: 0; }
+  .today-dot:hover { transform: translateX(-50%); box-shadow: 0 0 0 3px var(--bg); }
+  .today-label { 
+    display: flex; 
+    align-items: center; 
+    justify-content: center;
+    gap: 8px; 
+    padding-top: 8px;
+  }
   .today-text { font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; font-size: 13px; color: var(--accent); font-family: system-ui, sans-serif; }
   .today-date { color: var(--muted); font-size: 13px; font-family: system-ui, sans-serif; }
   @keyframes pulse {
@@ -939,8 +1052,81 @@ const formatShortDate = (timestamp: string) => {
     50% { box-shadow: 0 0 0 3px var(--bg), 0 0 0 6px var(--accent), 0 0 16px var(--accent); }
   }
   
-  .card { text-align: left; background: var(--card-bg); color: var(--text); border: 1px solid var(--border); border-radius: 8px; padding: 14px; cursor: pointer; width: 100%; transition: all 0.2s; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
-  .card:hover { border-color: var(--accent); box-shadow: 0 2px 8px rgba(0,0,0,0.1); transform: translateY(-1px); }
+  /* Card styles */
+  .card { 
+    text-align: left; 
+    background: var(--card-bg); 
+    color: var(--text); 
+    border: 1px solid var(--border); 
+    border-radius: 8px; 
+    padding: 14px; 
+    padding-top: 18px; /* Extra space for top bar */
+    cursor: pointer; 
+    width: 100%; 
+    transition: all 0.2s; 
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05); 
+    position: relative; 
+    z-index: 1;
+    overflow: visible;
+  }
+  .card:hover { box-shadow: 0 2px 8px rgba(0,0,0,0.1); transform: translateY(-1px); }
+  
+  /* Top bar - hover target for tooltip */
+  .card-top-bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    border-radius: 8px 8px 0 0;
+    cursor: pointer;
+    z-index: 3;
+    transition: all 0.2s ease;
+  }
+  .card-top-bar:hover {
+    height: 6px;
+    filter: brightness(1.2);
+  }
+  
+  /* Emoji indicator on top bar hover */
+  .card-top-bar::after {
+    content: "";
+    position: absolute;
+    top: -16px;
+    right: 12px;
+    font-size: 20px;
+    opacity: 0;
+    transition: opacity 0.2s;
+    pointer-events: none;
+  }
+  .card-top-bar:hover::after { opacity: 1; }
+  
+  /* Top bar colors by type */
+  .card-top-bar[data-card-type="blog"] { background: #5d4037; }
+  .card-top-bar[data-card-type="saved"] { background: #7cb342; }
+  .card-top-bar[data-card-type="primer"] { background: #7e57c2; }
+  .card-top-bar[data-card-type="bluesky"] { background: #1e88e5; }
+  .card-top-bar[data-card-type="pixelfed"] { background: #e91e63; }
+  .card-top-bar[data-card-type="hackernews"] { background: #ff6600; }
+  .card-top-bar[data-card-type="posts"] { background: #42a5f5; }
+  .card-top-bar[data-card-type="release"] { background: #fb8c00; }
+  .card-top-bar[data-card-type="wikipedia"] { background: #636466; }
+  .card-top-bar[data-card-type="contributions"] { background: #9c27b0; }
+  .card-top-bar[data-card-type="linkedin"] { background: #0a66c2; }
+  
+  /* Emoji by type on top bar hover */
+  .card-top-bar[data-card-type="blog"]::after { content: "📝"; }
+  .card-top-bar[data-card-type="saved"]::after { content: "🔖"; }
+  .card-top-bar[data-card-type="primer"]::after { content: "🧠"; }
+  .card-top-bar[data-card-type="bluesky"]::after { content: "🦋"; }
+  .card-top-bar[data-card-type="pixelfed"]::after { content: "📷"; }
+  .card-top-bar[data-card-type="hackernews"]::after { content: "💬"; }
+  .card-top-bar[data-card-type="posts"]::after { content: "🦋"; }
+  .card-top-bar[data-card-type="release"]::after { content: "🏷️"; }
+  .card-top-bar[data-card-type="wikipedia"]::after { content: "🌐"; }
+  .card-top-bar[data-card-type="contributions"]::after { content: "🌐"; }
+  .card-top-bar[data-card-type="linkedin"]::after { content: "💼"; }
+  
   .card-link { display: block; text-decoration: none; }
   .meta { display: flex; gap: 10px; font-size: 12px; color: var(--muted); font-family: system-ui, sans-serif; align-items: center; }
   .type { text-transform: uppercase; letter-spacing: .08em; font-weight: 600; }
