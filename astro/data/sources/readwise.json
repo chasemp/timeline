@@ -1,5 +1,118 @@
 [
   {
+    "id": "readwise:01kfkevsyh738td3zszkjx812y",
+    "type": "saved",
+    "timestamp": "2026-01-22T18:18:29.899000+00:00",
+    "title": "Chase Pettet - CliftonStrengths 2026",
+    "summary": "Chase Pettet has strengths in building close relationships and working well with friends. He enjoys deep thinking and helping others grow. He is organized, flexible, and guided by strong core values.",
+    "url": "https://readwise.io/reader/document_raw_content/411765153",
+    "canonical_url": "https://readwise.io/reader/document_raw_content/411765153",
+    "author": "Chase Pettet",
+    "tags": [
+      "self",
+      "tech",
+      "fodder"
+    ],
+    "metadata": {
+      "word_count": 132,
+      "reading_time": "1 min read",
+      "site_name": "readwise-upload-pdf",
+      "cover_image": "https://readwise-assets.s3.amazonaws.com/media/reader/parsed_document_assets/411765153/nnvgQKWqT3jU4dqzh7MPCa6GJAcsbz3lynB8qsYwfC0-cove_819FPEO.png",
+      "last_fetched": "2026-01-23T02:09:27.888Z"
+    }
+  },
+  {
+    "id": "readwise:01kfkbba90f6zv22pjaa4eh3y0",
+    "type": "saved",
+    "timestamp": "2026-01-22T17:17:03.648000+00:00",
+    "title": "The Origins of Scrum Might Not Be What You Think They Are (Wisdom from Rafael Sabbagh)",
+    "summary": "Scrum was named after a rugby formation and introduced as a way to improve teamwork in product development. The idea of applying Scrum to software came from a 1990 book that first called this approach \"Scrum.\" Jeff Sutherland and Ken Schwaber later created the detailed Scrum framework we use today, building on these earlier ideas.",
+    "url": "https://guntherverheyen.com/2024/02/27/the-origins-of-scrum-might-not-be-what-you-think-they-are-wisdom-from-rafael-sabbagh/",
+    "canonical_url": "https://guntherverheyen.com/2024/02/27/the-origins-of-scrum-might-not-be-what-you-think-they-are-wisdom-from-rafael-sabbagh/",
+    "author": "Gunther",
+    "tags": [
+      "tech",
+      "prodsec",
+      "product",
+      "software"
+    ],
+    "metadata": {
+      "word_count": 1411,
+      "reading_time": "8 min read",
+      "site_name": "Ullizee-Inc",
+      "cover_image": "https://guntherverheyen.com/wp-content/uploads/2020/05/97-things-every-scrum-practitioner-should-know_cover-final.png",
+      "reading_progress": 0.7710480382001316,
+      "last_fetched": "2026-01-23T02:09:27.888Z"
+    }
+  },
+  {
+    "id": "readwise:01kfk5yt51z37e9jgacb3pr30d",
+    "type": "saved",
+    "timestamp": "2026-01-22T15:42:51.038000+00:00",
+    "title": "Universal Declaration of Human Rights",
+    "summary": "The Universal Declaration of Human Rights proclaims that all people are born free and equal in dignity and rights. It outlines various rights and freedoms that everyone is entitled to, such as life, liberty, and security, without discrimination. The Declaration aims to promote respect for these rights globally and encourages nations to ensure their protection through laws and education.",
+    "url": "https://en.wikisource.org/wiki/Universal_Declaration_of_Human_Rights",
+    "canonical_url": "https://en.wikisource.org/wiki/Universal_Declaration_of_Human_Rights",
+    "author": "wikisource.org",
+    "tags": [
+      "diy",
+      "life",
+      "self",
+      "classic"
+    ],
+    "metadata": {
+      "word_count": 1825,
+      "reading_time": "10 min read",
+      "site_name": "wikisource.org",
+      "last_fetched": "2026-01-23T02:09:27.888Z"
+    }
+  },
+  {
+    "id": "readwise:01kfk5a13pws5emf5kqcc8vfna",
+    "type": "saved",
+    "timestamp": "2026-01-22T15:32:26.931000+00:00",
+    "title": "\"I Am Prepared To Die\"",
+    "summary": "The struggle in South Africa was caused by unfair government policies that harmed African people and ignored peaceful protests. The African National Congress tried non-violence first, but violence became necessary because all peaceful options failed. The goal was to achieve freedom, equality, and full political rights for all Africans.",
+    "url": "https://law2.umkc.edu/faculty/projects/ftrials/mandela/mandelaspeech.html",
+    "canonical_url": "https://law2.umkc.edu/faculty/projects/ftrials/mandela/mandelaspeech.html",
+    "author": "umkc.edu",
+    "tags": [
+      "speech",
+      "classic"
+    ],
+    "metadata": {
+      "word_count": 10705,
+      "reading_time": "54 min read",
+      "site_name": "umkc.edu",
+      "reading_progress": 0.1585979778835912,
+      "last_fetched": "2026-01-23T02:09:27.888Z"
+    }
+  },
+  {
+    "id": "readwise:01kfk51y8s0wrkdfpt3eghax8n",
+    "type": "saved",
+    "timestamp": "2026-01-22T15:27:04.985000+00:00",
+    "title": "Jonathan Smart’s Post",
+    "summary": "Communities of Practice help people learn and connect by joining freely and sharing knowledge. They work best with regular meetings, open invites, and easy access to group materials. This approach supports natural leaders and makes big organizations feel smaller.",
+    "url": "https://www.linkedin.com/posts/jonathansmart_patterns-for-effective-cops-activity-7419715231892799489-34s3?utm_source=share&utm_medium=member_android&rcm=ACoAABA7PwgB0iKxrYkDf2yq5phKyiYm5EjipwM",
+    "canonical_url": "https://www.linkedin.com/posts/jonathansmart_patterns-for-effective-cops-activity-7419715231892799489-34s3?utm_source=share&utm_medium=member_android&rcm=ACoAABA7PwgB0iKxrYkDf2yq5phKyiYm5EjipwM",
+    "author": "Jonathan Smart",
+    "tags": [
+      "sec",
+      "tech",
+      "fodder",
+      "prodsec",
+      "software"
+    ],
+    "metadata": {
+      "word_count": 193,
+      "reading_time": "1 min read",
+      "site_name": "linkedin.com",
+      "cover_image": "https://static.licdn.com/aero-v1/sc/h/c45fy346jw096z9pbphyyhdz7",
+      "last_fetched": "2026-01-23T02:09:27.888Z"
+    }
+  },
+  {
     "id": "readwise:01kfgkn2yy8y0vr63w5nrky2d2",
     "type": "saved",
     "timestamp": "2026-01-21T15:44:29.148000+00:00",
@@ -21,7 +134,28 @@
       "site_name": "DevOps.com",
       "cover_image": "https://devops.com/wp-content/uploads/2020/04/DevOps-Chats-CloudBees-Remains-at-Top-of-DevOps-Market.jpg",
       "reading_progress": 0.3124836423020984,
-      "last_fetched": "2026-01-22T02:19:50.940Z"
+      "last_fetched": "2026-01-23T02:09:27.888Z"
+    }
+  },
+  {
+    "id": "readwise:01kfe5d4ve9wappz8yketbv6w4",
+    "type": "saved",
+    "timestamp": "2026-01-20T16:57:00.014000+00:00",
+    "title": "To get better at technical writing, lower your expectations",
+    "summary": "Technical writing should be as short and direct as possible because most readers skim. Lower your expectations: you cannot transfer deep understanding or make everyone agree with a document. Even a tiny clear point is valuable in large organizations.",
+    "url": "https://www.seangoedecke.com/technical-communication/",
+    "canonical_url": "https://www.seangoedecke.com/technical-communication/",
+    "author": "seangoedecke.com",
+    "tags": [
+      "prodsec",
+      "software"
+    ],
+    "metadata": {
+      "word_count": 1436,
+      "reading_time": "8 min read",
+      "site_name": "seangoedecke.com",
+      "reading_progress": 0.8166880304964705,
+      "last_fetched": "2026-01-23T02:09:27.888Z"
     }
   },
   {
@@ -43,7 +177,7 @@
       "word_count": 1172,
       "reading_time": "6 min read",
       "site_name": "rfc-editor.org",
-      "last_fetched": "2026-01-22T02:19:50.940Z"
+      "last_fetched": "2026-01-23T02:09:27.888Z"
     }
   },
   {
@@ -66,7 +200,7 @@
       "site_name": "linkedin.com",
       "cover_image": "https://media.licdn.com/dms/image/v2/D5612AQHnd8Ns0W1EUQ/article-cover_image-shrink_720_1280/B56ZvYdwwMIsAI-/0/1768863239451?e=2147483647&v=beta&t=sIUBVywQHieSCaXD2GX-RGXPy-XlagI7igQu6RzLSKg",
       "reading_progress": 0.9900650997391026,
-      "last_fetched": "2026-01-22T02:19:50.940Z"
+      "last_fetched": "2026-01-23T02:09:27.888Z"
     }
   },
   {
@@ -89,7 +223,7 @@
       "site_name": "henrikkarlsson.xyz",
       "cover_image": "https://substackcdn.com/image/fetch/w_1200,h_600,c_fill,f_jpg,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fd8bec767-3242-4428-a281-0cdc3182ff75_750x587.png",
       "reading_progress": 1,
-      "last_fetched": "2026-01-22T02:19:50.940Z"
+      "last_fetched": "2026-01-23T02:09:27.888Z"
     }
   },
   {
@@ -110,7 +244,7 @@
       "reading_time": "3 min read",
       "site_name": "linkedin.com",
       "cover_image": "https://static.licdn.com/aero-v1/sc/h/c45fy346jw096z9pbphyyhdz7",
-      "last_fetched": "2026-01-22T02:19:50.940Z"
+      "last_fetched": "2026-01-23T02:09:27.888Z"
     }
   },
   {
@@ -132,7 +266,7 @@
       "reading_time": "3 min read",
       "site_name": "linkedin.com",
       "cover_image": "https://media.licdn.com/dms/image/v2/D5622AQEH3l0IS3nWFQ/feedshare-shrink_800/B56ZumhrWvIgAg-/0/1768025406736?e=2147483647&v=beta&t=74R5MAJIfOxiOx3AL-peUeTvU9LY04GPMPfuYnrPyDE",
-      "last_fetched": "2026-01-22T02:19:50.940Z"
+      "last_fetched": "2026-01-23T02:09:27.888Z"
     }
   },
   {
@@ -157,7 +291,7 @@
       "site_name": "readwise-upload-pdf",
       "cover_image": "https://readwise-assets.s3.amazonaws.com/media/reader/parsed_document_assets/410721161/EdYnmaw2JVG7kezCkFT0m0aDKhTqf2MN3jL-LPPHuJE-cove_d46jYdh.png",
       "reading_progress": 0.3108703123416523,
-      "last_fetched": "2026-01-22T02:19:50.940Z"
+      "last_fetched": "2026-01-23T02:09:27.888Z"
     }
   },
   {
@@ -180,7 +314,7 @@
       "reading_time": "1 min read",
       "site_name": "linkedin.com",
       "cover_image": "https://static.licdn.com/aero-v1/sc/h/c45fy346jw096z9pbphyyhdz7",
-      "last_fetched": "2026-01-22T02:19:50.940Z"
+      "last_fetched": "2026-01-23T02:09:27.888Z"
     }
   },
   {
@@ -202,7 +336,7 @@
       "reading_time": "1 min read",
       "site_name": "Fair Source License",
       "cover_image": "https://fair.io/images/metaimage.png",
-      "last_fetched": "2026-01-22T02:19:50.940Z"
+      "last_fetched": "2026-01-23T02:09:27.888Z"
     }
   },
   {
@@ -226,7 +360,7 @@
       "site_name": "GitHub",
       "cover_image": "https://opengraph.githubassets.com/4e4b894a3f927d47eeef12277b895b84676aaa7ae65418e7d1c10dd306d52bb0/tailwindlabs/tailwindcss.com/pull/2388",
       "reading_progress": 0.9385047287349308,
-      "last_fetched": "2026-01-22T02:19:50.940Z"
+      "last_fetched": "2026-01-23T02:09:27.888Z"
     }
   },
   {
@@ -250,7 +384,7 @@
       "reading_time": "6 min read",
       "site_name": "charity.wtf",
       "cover_image": "https://substackcdn.com/image/fetch/$s_!41Lq!,w_1200,h_600,c_fill,f_jpg,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F097e02dc-5952-42ba-b532-d2efada0d4dc_768x1024.jpeg",
-      "last_fetched": "2026-01-22T02:19:50.940Z"
+      "last_fetched": "2026-01-23T02:09:27.888Z"
     }
   },
   {
@@ -271,7 +405,7 @@
       "reading_time": "6 min read",
       "site_name": "Medium",
       "cover_image": "https://miro.medium.com/v2/resize:fit:1024/1*Y7OxSMe_wDWIiSZpcXQYAw.jpeg",
-      "last_fetched": "2026-01-22T02:19:50.940Z"
+      "last_fetched": "2026-01-23T02:09:27.888Z"
     }
   },
   {
@@ -293,7 +427,7 @@
       "site_name": "Product Talk",
       "cover_image": "https://www.producttalk.org/content/images/size/w1200/2025/12/Claude-Code-Building-Blocks-1.png",
       "reading_progress": 0.49035903623377625,
-      "last_fetched": "2026-01-22T02:19:50.940Z"
+      "last_fetched": "2026-01-23T02:09:27.888Z"
     }
   },
   {
@@ -316,7 +450,7 @@
       "reading_time": "86 min read",
       "site_name": "National Institute of Standards and Technology",
       "cover_image": "https://readwise-assets.s3.amazonaws.com/media/reader/parsed_document_assets/406406759/SdscM9ixo2wihiekDDk1as1uOjj154QfcvFksBzTEEs-cove_xnDU6Yf.png",
-      "last_fetched": "2026-01-22T02:19:50.940Z"
+      "last_fetched": "2026-01-23T02:09:27.888Z"
     }
   },
   {
@@ -336,7 +470,7 @@
       "word_count": 329,
       "reading_time": "2 min read",
       "site_name": "nicruo.com",
-      "last_fetched": "2026-01-22T02:19:50.940Z"
+      "last_fetched": "2026-01-23T02:09:27.888Z"
     }
   },
   {
@@ -359,7 +493,7 @@
       "site_name": "TechCrunch",
       "cover_image": "https://techcrunch.com/wp-content/uploads/2015/11/jenga.jpg?resize=1200,800",
       "reading_progress": 1,
-      "last_fetched": "2026-01-22T02:19:50.940Z"
+      "last_fetched": "2026-01-23T02:09:27.888Z"
     }
   },
   {
@@ -382,7 +516,7 @@
       "reading_time": "11 min read",
       "site_name": "Back Alley Coder",
       "cover_image": "https://csuwildcat.github.io/_astro/passseed-logo.Dtrp9Ve4.jpg",
-      "last_fetched": "2026-01-22T02:19:50.940Z"
+      "last_fetched": "2026-01-23T02:09:27.888Z"
     }
   },
   {
@@ -403,7 +537,7 @@
       "word_count": 648,
       "reading_time": "4 min read",
       "site_name": "markpearl.co.za",
-      "last_fetched": "2026-01-22T02:19:50.940Z"
+      "last_fetched": "2026-01-23T02:09:27.888Z"
     }
   },
   {
@@ -428,7 +562,7 @@
       "site_name": "ineffable.co",
       "cover_image": "https://ineffable.co/cdn-cgi/image/width=1200,height=630,quality=80,format=auto,dpr=2/og/more-thinking-not-less",
       "reading_progress": 1,
-      "last_fetched": "2026-01-22T02:19:50.940Z"
+      "last_fetched": "2026-01-23T02:09:27.888Z"
     }
   },
   {
@@ -454,7 +588,7 @@
       "reading_time": "11 min read",
       "site_name": "The Cloudflare Blog",
       "cover_image": "https://cf-assets.www.cloudflare.com/zkvhlag99gkb/1XjzzmUMbNy2sRmFxvqHmF/878cf01bd8a4e79548200b76fc5414b8/BLOG-3097_OG.png",
-      "last_fetched": "2026-01-22T02:19:50.940Z"
+      "last_fetched": "2026-01-23T02:09:27.888Z"
     }
   },
   {
@@ -476,7 +610,7 @@
       "reading_time": "2 min read",
       "site_name": "The Singju Post",
       "reading_progress": 0.7832190101884595,
-      "last_fetched": "2026-01-22T02:19:50.940Z"
+      "last_fetched": "2026-01-23T02:09:27.888Z"
     }
   },
   {
@@ -500,7 +634,7 @@
       "site_name": "linkedin.com",
       "cover_image": "https://static.licdn.com/scds/common/u/images/email/artdeco/logos/96/linkedin-bug-color.png",
       "reading_progress": 0.9966363171253085,
-      "last_fetched": "2026-01-22T02:19:50.940Z"
+      "last_fetched": "2026-01-23T02:09:27.888Z"
     }
   },
   {
@@ -521,7 +655,7 @@
       "word_count": 1795,
       "reading_time": "9 min read",
       "site_name": "xent.com",
-      "last_fetched": "2026-01-22T02:19:50.940Z"
+      "last_fetched": "2026-01-23T02:09:27.888Z"
     }
   },
   {
@@ -543,7 +677,7 @@
       "site_name": "Outside Online",
       "cover_image": "https://www.outsideonline.com/wp-content/uploads/2025/08/Douglas1.jpg",
       "reading_progress": 1,
-      "last_fetched": "2026-01-22T02:19:50.940Z"
+      "last_fetched": "2026-01-23T02:09:27.888Z"
     }
   },
   {
@@ -567,7 +701,7 @@
       "site_name": "Tom's Hardware",
       "cover_image": "https://cdn.mos.cms.futurecdn.net/j5wSes9VymTFLBkLCAqarH-2000-80.jpg",
       "reading_progress": 1,
-      "last_fetched": "2026-01-22T02:19:50.940Z"
+      "last_fetched": "2026-01-23T02:09:27.888Z"
     }
   },
   {
@@ -591,7 +725,7 @@
       "reading_time": "2 min read",
       "site_name": "are.na",
       "reading_progress": 0.05352972511314179,
-      "last_fetched": "2026-01-22T02:19:50.940Z"
+      "last_fetched": "2026-01-23T02:09:27.888Z"
     }
   },
   {
@@ -612,7 +746,7 @@
       "reading_time": "8 min read",
       "site_name": "Substack",
       "reading_progress": 0.9742111318607295,
-      "last_fetched": "2026-01-22T02:19:50.940Z"
+      "last_fetched": "2026-01-23T02:09:27.888Z"
     }
   },
   {
@@ -638,7 +772,7 @@
       "reading_time": "2 min read",
       "site_name": "linkedin.com",
       "cover_image": "https://static.licdn.com/aero-v1/sc/h/c45fy346jw096z9pbphyyhdz7",
-      "last_fetched": "2026-01-22T02:19:50.940Z"
+      "last_fetched": "2026-01-23T02:09:27.888Z"
     }
   },
   {
@@ -663,7 +797,7 @@
       "site_name": "substack.com",
       "cover_image": "https://substackcdn.com/image/fetch/$s_!Qq4_!,w_1200,h_600,c_fill,f_jpg,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F6177bca6-9dc2-4f5e-b7b2-70c7d2f84c35_1024x1536.png",
       "reading_progress": 0.9848178092509695,
-      "last_fetched": "2026-01-22T02:19:50.940Z"
+      "last_fetched": "2026-01-23T02:09:27.888Z"
     }
   },
   {
@@ -687,7 +821,7 @@
       "site_name": "umbc.edu",
       "cover_image": "https://readwise-assets.s3.amazonaws.com/media/reader/parsed_document_assets/13869450/V7wqZo4xo2jAZEJBYQkZfqRswRMQezmOW2EjNlUHkk8-cover_H5EwE1e.png",
       "reading_progress": 0.7105769863858763,
-      "last_fetched": "2026-01-22T02:19:50.940Z"
+      "last_fetched": "2026-01-23T02:09:27.888Z"
     }
   },
   {
@@ -708,7 +842,7 @@
       "site_name": "usp.br",
       "cover_image": "https://readwise-assets.s3.amazonaws.com/media/reader/parsed_document_assets/403578949/OwA0W3tVBknHV23cw9EAKDKaTXCBU6cgBaUM200RBxo-cove_C3lAXxR.png",
       "reading_progress": 0.9090909090909091,
-      "last_fetched": "2026-01-22T02:19:50.940Z"
+      "last_fetched": "2026-01-23T02:09:27.888Z"
     }
   },
   {
@@ -729,7 +863,7 @@
     "metadata": {
       "site_name": "YouTube",
       "cover_image": "https://i.ytimg.com/vi/nvbidcaZpdU/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLCjz7gtxx6s5G00OqyIyX8s7liGFw",
-      "last_fetched": "2026-01-22T02:19:50.940Z"
+      "last_fetched": "2026-01-23T02:09:27.888Z"
     }
   },
   {
@@ -752,7 +886,7 @@
       "reading_time": "8 min read",
       "site_name": "quoteinvestigator.com",
       "reading_progress": 0.7003532730164044,
-      "last_fetched": "2026-01-22T02:19:50.940Z"
+      "last_fetched": "2026-01-23T02:09:27.888Z"
     }
   },
   {
@@ -775,7 +909,7 @@
       "reading_time": "20 min read",
       "site_name": "archive.org",
       "reading_progress": 0.9904648925612944,
-      "last_fetched": "2026-01-22T02:19:50.940Z"
+      "last_fetched": "2026-01-23T02:09:27.888Z"
     }
   },
   {
@@ -798,7 +932,7 @@
       "site_name": "wikipedia.org",
       "cover_image": "https://upload.wikimedia.org/wikipedia/en/7/7b/Our_Band_Could_Be_Your_Life_book_cover.jpg",
       "reading_progress": 0.7719098526966669,
-      "last_fetched": "2026-01-22T02:19:50.940Z"
+      "last_fetched": "2026-01-23T02:09:27.888Z"
     }
   },
   {
@@ -822,7 +956,7 @@
       "site_name": "A Space to Think: Notes on Software Development",
       "cover_image": "https://substackcdn.com/image/fetch/$s_!_nMM!,w_1200,h_600,c_fill,f_jpg,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F7460e174-6e95-4b2e-b749-179a746139c5_1536x1024.png",
       "reading_progress": 1,
-      "last_fetched": "2026-01-22T02:19:50.940Z"
+      "last_fetched": "2026-01-23T02:09:27.888Z"
     }
   },
   {
@@ -847,7 +981,7 @@
       "reading_time": "6 min read",
       "site_name": "theregister.com",
       "cover_image": "https://regmedia.co.uk/2025/02/11/shutterstock_kim_will_fix_it.jpg",
-      "last_fetched": "2026-01-22T02:19:50.940Z"
+      "last_fetched": "2026-01-23T02:09:27.888Z"
     }
   },
   {
@@ -868,7 +1002,7 @@
       "word_count": 1589,
       "reading_time": "8 min read",
       "site_name": "aphyr.com",
-      "last_fetched": "2026-01-22T02:19:50.940Z"
+      "last_fetched": "2026-01-23T02:09:27.888Z"
     }
   },
   {
@@ -891,7 +1025,7 @@
       "site_name": "Duke University",
       "cover_image": "https://web.law.duke.edu/sites/default/files/images/centers/cspd/pdd2025/PDDmontageRS.jpg",
       "reading_progress": 0.9514211499766715,
-      "last_fetched": "2026-01-22T02:19:50.940Z"
+      "last_fetched": "2026-01-23T02:09:27.888Z"
     }
   },
   {
@@ -914,7 +1048,7 @@
       "site_name": "Fortune Recommends",
       "cover_image": "https://fortune.com/img-assets/wp-content/uploads/2025/12/GettyImages-2224699898-e1764876128252.jpg?resize=1200,600",
       "reading_progress": 0.22549090832663585,
-      "last_fetched": "2026-01-22T02:19:50.940Z"
+      "last_fetched": "2026-01-23T02:09:27.888Z"
     }
   },
   {
@@ -936,7 +1070,7 @@
       "site_name": "The Atlantic",
       "cover_image": "https://cdn.theatlantic.com/thumbor/t8aiqYwBcekpN8fBUdVSemBJteo=/0x81:3000x1769/960x540/media/img/mt/2016/03/RTXPW7K/original.jpg",
       "reading_progress": 1,
-      "last_fetched": "2026-01-22T02:19:50.940Z"
+      "last_fetched": "2026-01-23T02:09:27.888Z"
     }
   },
   {
@@ -958,7 +1092,7 @@
       "site_name": "linkedin.com",
       "cover_image": "https://media.licdn.com/dms/image/v2/D4E12AQEuAcq3w4rIoQ/article-cover_image-shrink_720_1280/B4EZtaW2EFKMAI-/0/1766747497244?e=2147483647&v=beta&t=GMcChxROVIAHXiiAPU8gpWVIydL-PoQ683ON7Pjnemo",
       "reading_progress": 0.924339917103112,
-      "last_fetched": "2026-01-22T02:19:50.940Z"
+      "last_fetched": "2026-01-23T02:09:27.888Z"
     }
   },
   {
@@ -983,7 +1117,7 @@
       "site_name": "Caimito Agile Life",
       "cover_image": "https://gravatar.com/avatar/663d11426b0a187ddac59f8c17ce61b4?s=400&d=robohash&r=x",
       "reading_progress": 1,
-      "last_fetched": "2026-01-22T02:19:50.940Z"
+      "last_fetched": "2026-01-23T02:09:27.888Z"
     }
   },
   {
@@ -1005,7 +1139,7 @@
       "site_name": "linkedin.com",
       "cover_image": "https://static.licdn.com/aero-v1/sc/h/c45fy346jw096z9pbphyyhdz7",
       "reading_progress": 1,
-      "last_fetched": "2026-01-22T02:19:50.940Z"
+      "last_fetched": "2026-01-23T02:09:27.888Z"
     }
   },
   {
@@ -1028,7 +1162,7 @@
       "site_name": "Smithsonian Magazine",
       "cover_image": "https://th-thumbnailer.cdn-si-edu.com/2S4LxPwoM16DSHe3flIAJSkDcVg=/fit-in/1600x0/filters:focal(1500x1000:1501x1001)/https://tf-cmsv2-smithsonianmag-media.s3.amazonaws.com/filer_public/d2/f6/d2f60703-6ca8-4e64-b80b-f671be00d8ed/1_smithsonian_cormac_shoot_2_-1112.jpg",
       "reading_progress": 0.9960469853116053,
-      "last_fetched": "2026-01-22T02:19:50.940Z"
+      "last_fetched": "2026-01-23T02:09:27.888Z"
     }
   },
   {
@@ -1052,7 +1186,7 @@
       "site_name": "VaultSpeed",
       "cover_image": "https://imageio.forbes.com/specials-images/imageserve/6829ad74cc1961429b7f1024/0x0.jpg?format=jpg&height=900&width=1600&fit=bounds",
       "reading_progress": 0.984905450691847,
-      "last_fetched": "2026-01-22T02:19:50.940Z"
+      "last_fetched": "2026-01-23T02:09:27.888Z"
     }
   },
   {
@@ -1075,7 +1209,7 @@
       "site_name": "gwern.net",
       "cover_image": "https://gwern.net/doc/psychology/spaced-repetition/2013-memotrainerrr.png",
       "reading_progress": 0.09178521962056808,
-      "last_fetched": "2026-01-22T02:19:50.940Z"
+      "last_fetched": "2026-01-23T02:09:27.888Z"
     }
   },
   {
@@ -1097,7 +1231,7 @@
       "reading_time": "8 min read",
       "site_name": "miguelgrinberg.com",
       "cover_image": "https://blog.miguelgrinberg.com/static/cards/csrf-protection-without-tokens-or-hidden-form-fields.jpg",
-      "last_fetched": "2026-01-22T02:19:50.940Z"
+      "last_fetched": "2026-01-23T02:09:27.888Z"
     }
   },
   {
@@ -1118,7 +1252,7 @@
       "word_count": 1048,
       "reading_time": "6 min read",
       "site_name": "brooker.co.za",
-      "last_fetched": "2026-01-22T02:19:50.940Z"
+      "last_fetched": "2026-01-23T02:09:27.888Z"
     }
   },
   {
@@ -1138,7 +1272,7 @@
       "reading_time": "55 min read",
       "site_name": "NYU Law Review",
       "cover_image": "https://readwise-assets.s3.amazonaws.com/media/reader/parsed_document_assets/401744503/RdNDahprudPzAffXwIWWJgHo2Wrz4pk7XcPQVOFnDj0-cove_TG7Jx56.png",
-      "last_fetched": "2026-01-22T02:19:50.940Z"
+      "last_fetched": "2026-01-23T02:09:27.888Z"
     }
   },
   {
@@ -1160,7 +1294,7 @@
       "site_name": "New York Times",
       "cover_image": "https://static01.nyt.com/images/2014/07/03/us/GASKIN-obit/GASKIN-obit-articleLarge-v3.jpg?year=2014&h=400&w=600&s=5f24ab663223b9ed2c3ab32b160997f892a98df299807f63dd1b48bb96cadf20&k=ZQJBKqZ0VN",
       "reading_progress": 0.9569082896815241,
-      "last_fetched": "2026-01-22T02:19:50.940Z"
+      "last_fetched": "2026-01-23T02:09:27.888Z"
     }
   },
   {
@@ -1181,7 +1315,7 @@
       "site_name": "substack.com",
       "cover_image": "https://substackcdn.com/image/fetch/$s_!wLtC!,f_auto,q_auto:best,fl_progressive:steep/https%3A%2F%2Fthingofthings.substack.com%2Ftwitter%2Fsubscribe-card.jpg%3Fv%3D-1736013923%26version%3D9",
       "reading_progress": 0.9647990801419485,
-      "last_fetched": "2026-01-22T02:19:50.940Z"
+      "last_fetched": "2026-01-23T02:09:27.888Z"
     }
   },
   {
@@ -1201,7 +1335,7 @@
       "reading_time": "1 min read",
       "site_name": "linkedin.com",
       "cover_image": "https://static.licdn.com/aero-v1/sc/h/c45fy346jw096z9pbphyyhdz7",
-      "last_fetched": "2026-01-22T02:19:50.940Z"
+      "last_fetched": "2026-01-23T02:09:27.888Z"
     }
   },
   {
@@ -1222,7 +1356,7 @@
       "reading_time": "3 min read",
       "site_name": "linkedin.com",
       "cover_image": "https://media.licdn.com/dms/image/v2/D4E22AQFwWGdBN8pxFw/feedshare-shrink_800/B4EZtAqPBOHoAg-/0/1766316373221?e=2147483647&v=beta&t=eI9RsLQJWBtkt_2V7pyBAyKoI0K5TG1Hb5kUzNgkoKI",
-      "last_fetched": "2026-01-22T02:19:50.940Z"
+      "last_fetched": "2026-01-23T02:09:27.888Z"
     }
   },
   {
@@ -1243,7 +1377,7 @@
       "word_count": 2547,
       "reading_time": "13 min read",
       "site_name": "sigmod.org",
-      "last_fetched": "2026-01-22T02:19:50.940Z"
+      "last_fetched": "2026-01-23T02:09:27.888Z"
     }
   },
   {
@@ -1263,7 +1397,7 @@
       "reading_time": "8 min read",
       "site_name": "ABC Online",
       "cover_image": "https://live-production.wcms.abc-cdn.net.au/0fe4e7622fed25a826b51a036390aab5?impolicy=wcms_watermark_news&cropH=2015&cropW=3582&xPos=709&yPos=0&width=862&height=485&imformat=generic",
-      "last_fetched": "2026-01-22T02:19:50.940Z"
+      "last_fetched": "2026-01-23T02:09:27.888Z"
     }
   },
   {
@@ -1284,7 +1418,7 @@
       "reading_time": "2 min read",
       "site_name": "George Vrakas",
       "cover_image": "https://geovrakas.files.wordpress.com/2013/11/drriss-marrionn.jpg?w=630",
-      "last_fetched": "2026-01-22T02:19:50.940Z"
+      "last_fetched": "2026-01-23T02:09:27.888Z"
     }
   },
   {
@@ -1306,7 +1440,7 @@
       "site_name": "CreativeCyber",
       "cover_image": "https://static.wixstatic.com/media/186906_22764c5e9fe94aa38d8a1e3992672277~mv2.jpg/v1/fill/w_1000,h_559,al_c,q_85,usm_0.66_1.00_0.01/186906_22764c5e9fe94aa38d8a1e3992672277~mv2.jpg",
       "reading_progress": 1,
-      "last_fetched": "2026-01-22T02:19:50.940Z"
+      "last_fetched": "2026-01-23T02:09:27.888Z"
     }
   },
   {
@@ -1328,7 +1462,7 @@
       "reading_time": "4 min read",
       "site_name": "THE DIRT",
       "cover_image": "https://dirt.asla.org/wp-content/uploads/2018/10/data4.jpg",
-      "last_fetched": "2026-01-22T02:19:50.940Z"
+      "last_fetched": "2026-01-23T02:09:27.888Z"
     }
   },
   {
@@ -1350,7 +1484,7 @@
       "reading_time": "1 min read",
       "site_name": "linkedin.com",
       "cover_image": "https://media.licdn.com/dms/image/v2/D5622AQHlnoVw-kUYJA/feedshare-shrink_800/B56Zsy7QoGGkAo-/0/1766085954505?e=2147483647&v=beta&t=DI-q-IF8_W6Czmxma8IL5ZLZaimJqEQawUIk8z044Uo",
-      "last_fetched": "2026-01-22T02:19:50.940Z"
+      "last_fetched": "2026-01-23T02:09:27.888Z"
     }
   },
   {
@@ -1373,7 +1507,7 @@
       "site_name": "Bits about Money",
       "cover_image": "https://images.unsplash.com/photo-1594969155368-f19485a9d88c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxMTc3M3wwfDF8c2VhcmNofDh8fGRlcGFydG1lbnQlMjBzdG9yZXxlbnwwfHx8fDE2NDE1NzYzNDU&ixlib=rb-1.2.1&q=80&w=2000",
       "reading_progress": 0.4607701537690898,
-      "last_fetched": "2026-01-22T02:19:50.940Z"
+      "last_fetched": "2026-01-23T02:09:27.888Z"
     }
   },
   {
@@ -1393,7 +1527,7 @@
       "reading_time": "9 min read",
       "site_name": "Lena Reinhard",
       "cover_image": "http://static1.squarespace.com/static/62b0c1285db43e642e196116/62b0c7bd5b464b26b790bbc5/691484a7114f945871f1f197/1765899843609/paul-hanaoka-vp2apmPpkf8-unsplash.jpg?format=1500w",
-      "last_fetched": "2026-01-22T02:19:50.940Z"
+      "last_fetched": "2026-01-23T02:09:27.888Z"
     }
   },
   {
@@ -1418,7 +1552,7 @@
       "site_name": "readwise-upload-pdf",
       "cover_image": "https://readwise-assets.s3.amazonaws.com/media/reader/parsed_document_assets/166138801/bYLfmZCzGRMEfNuwgozylqmLcNRP7PwKiGqPFesG4XI-cove_cJTQReQ.png",
       "reading_progress": 1,
-      "last_fetched": "2026-01-22T02:19:50.940Z"
+      "last_fetched": "2026-01-23T02:09:27.888Z"
     }
   },
   {
@@ -1438,7 +1572,7 @@
       "word_count": 1441,
       "reading_time": "8 min read",
       "site_name": "google.com",
-      "last_fetched": "2026-01-22T02:19:50.940Z"
+      "last_fetched": "2026-01-23T02:09:27.888Z"
     }
   },
   {
@@ -1462,7 +1596,7 @@
       "reading_time": "4 min read",
       "site_name": "aikido.dev",
       "cover_image": "https://cdn.prod.website-files.com/642adcaf364024654c71df23/6942b76ef9f2b51ed4bedcd5_Aikido%20Listikkng%2081.png",
-      "last_fetched": "2026-01-22T02:19:50.940Z"
+      "last_fetched": "2026-01-23T02:09:27.888Z"
     }
   },
   {
@@ -1486,7 +1620,7 @@
       "site_name": "readwise-upload-pdf",
       "cover_image": "https://readwise-assets.s3.amazonaws.com/media/reader/parsed_document_assets/26867840/qxqCuwgqWBqfL0w9IHjZ0W725HF4y3j33Q_m0ykE_s0-cover_7alVUMH.png",
       "reading_progress": 1,
-      "last_fetched": "2026-01-22T02:19:50.940Z"
+      "last_fetched": "2026-01-23T02:09:27.888Z"
     }
   },
   {
@@ -1508,7 +1642,7 @@
       "reading_time": "2 min read",
       "site_name": "TeamViewer",
       "cover_image": "https://www.teamviewer.com/poster.png",
-      "last_fetched": "2026-01-22T02:19:50.940Z"
+      "last_fetched": "2026-01-23T02:09:27.888Z"
     }
   },
   {
@@ -1532,7 +1666,7 @@
       "reading_time": "10 min read",
       "site_name": "substack.com",
       "cover_image": "https://substackcdn.com/image/fetch/$s_!yh3t!,w_1200,h_600,c_fill,f_jpg,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F9c3372c0-0404-46ca-81d2-95269df41434_1500x855.png",
-      "last_fetched": "2026-01-22T02:19:50.940Z"
+      "last_fetched": "2026-01-23T02:09:27.888Z"
     }
   },
   {
@@ -1552,7 +1686,7 @@
       "site_name": "Nature",
       "cover_image": "https://readwise-assets.s3.amazonaws.com/media/reader/parsed_document_assets/399194338/H41oIyRWLNIUUh93B2EHUsxHZnqsGRh4qV4pPwd5NLk-cove_tiqrCpM.png",
       "reading_progress": 1,
-      "last_fetched": "2026-01-22T02:19:50.940Z"
+      "last_fetched": "2026-01-23T02:09:27.888Z"
     }
   },
   {
@@ -1575,7 +1709,7 @@
       "reading_time": "45 min read",
       "site_name": "licdn.com",
       "reading_progress": 0.31893691635747945,
-      "last_fetched": "2026-01-22T02:19:50.940Z"
+      "last_fetched": "2026-01-23T02:09:27.888Z"
     }
   },
   {
@@ -1597,7 +1731,7 @@
       "reading_time": "4 min read",
       "site_name": "kit.com",
       "cover_image": "https://embed.filekitcdn.com/e/rdNsVcMHQqQnUTRfH2WhM6/ftZprEXwpsJZPqAC8T7STS",
-      "last_fetched": "2026-01-22T02:19:50.940Z"
+      "last_fetched": "2026-01-23T02:09:27.888Z"
     }
   },
   {
@@ -1617,7 +1751,7 @@
       "word_count": 36329,
       "reading_time": "182 min read",
       "site_name": "Stanford Report",
-      "last_fetched": "2026-01-22T02:19:50.940Z"
+      "last_fetched": "2026-01-23T02:09:27.888Z"
     }
   },
   {
@@ -1642,7 +1776,7 @@
       "site_name": "University of Cambridge",
       "cover_image": "https://www.cam.ac.uk/sites/default/files/shorthand/252079/Kew9bLEih9/assets/uH1zNyCakC/bot1-social-cover.jpg",
       "reading_progress": 0.895671565587181,
-      "last_fetched": "2026-01-22T02:19:50.940Z"
+      "last_fetched": "2026-01-23T02:09:27.888Z"
     }
   },
   {
@@ -1665,7 +1799,7 @@
       "site_name": "Joan Westenberg",
       "cover_image": "https://www.joanwestenberg.com/content/images/size/w1200/2025/11/Joan-x-3--Cropped-.png",
       "reading_progress": 1,
-      "last_fetched": "2026-01-22T02:19:50.940Z"
+      "last_fetched": "2026-01-23T02:09:27.888Z"
     }
   },
   {
@@ -1684,7 +1818,7 @@
       "word_count": 1975,
       "reading_time": "10 min read",
       "site_name": "VPM",
-      "last_fetched": "2026-01-22T02:19:50.940Z"
+      "last_fetched": "2026-01-23T02:09:27.888Z"
     }
   },
   {
@@ -1707,7 +1841,7 @@
       "reading_time": "10 min read",
       "site_name": "ronjeffries.com",
       "reading_progress": 1,
-      "last_fetched": "2026-01-22T02:19:50.940Z"
+      "last_fetched": "2026-01-23T02:09:27.888Z"
     }
   },
   {
@@ -1729,7 +1863,7 @@
       "reading_time": "4 min read",
       "site_name": "theregister.com",
       "cover_image": "https://regmedia.co.uk/2016/07/13/shutterstock_dj_mixing_deck.jpg",
-      "last_fetched": "2026-01-22T02:19:50.940Z"
+      "last_fetched": "2026-01-23T02:09:27.888Z"
     }
   },
   {
@@ -1750,7 +1884,7 @@
       "reading_time": "32 min read",
       "site_name": "readwise-upload-epub",
       "reading_progress": 0.7086404210912518,
-      "last_fetched": "2026-01-22T02:19:50.940Z"
+      "last_fetched": "2026-01-23T02:09:27.888Z"
     }
   },
   {
@@ -1771,7 +1905,7 @@
       "reading_time": "1 min read",
       "site_name": "People Work",
       "cover_image": "https://people-work.io/cdn-cgi/image/format=auto,width=1200,height=630,fit=crop/assets/blog/ai-magnifies-clarity.webp",
-      "last_fetched": "2026-01-22T02:19:50.940Z"
+      "last_fetched": "2026-01-23T02:09:27.888Z"
     }
   },
   {
@@ -1795,7 +1929,7 @@
       "site_name": "readwise-upload-pdf",
       "cover_image": "https://readwise-assets.s3.amazonaws.com/media/reader/parsed_document_assets/397261313/JfcaUZbHr6ZLFQtDJGEPfQMTrdBm2iJ3Ua7U6QuU2QQ-cove_QYy7Zru.png",
       "reading_progress": 0.6666666666666666,
-      "last_fetched": "2026-01-22T02:19:50.940Z"
+      "last_fetched": "2026-01-23T02:09:27.888Z"
     }
   },
   {
@@ -1816,7 +1950,7 @@
       "reading_time": "1 min read",
       "site_name": "linkedin.com",
       "cover_image": "https://media.licdn.com/dms/image/v2/D5622AQEZvuI5mCxICQ/feedshare-shrink_2048_1536/B56ZsJ_Hn2LMAk-/0/1765399100174?e=2147483647&v=beta&t=Nb4n2NMlAni_klfUgan8l6n3pOyd2yuu-t-CsdRxNQQ",
-      "last_fetched": "2026-01-22T02:19:50.940Z"
+      "last_fetched": "2026-01-23T02:09:27.888Z"
     }
   },
   {
@@ -1837,7 +1971,7 @@
       "reading_time": "35 min read",
       "site_name": "readwise-upload-epub",
       "reading_progress": 0.14697549946265312,
-      "last_fetched": "2026-01-22T02:19:50.940Z"
+      "last_fetched": "2026-01-23T02:09:27.888Z"
     }
   },
   {
@@ -1860,7 +1994,7 @@
       "site_name": "Internet Archive",
       "cover_image": "https://archive.org/services/img/bstj62-7-2365",
       "reading_progress": 0.7738597302521241,
-      "last_fetched": "2026-01-22T02:19:50.940Z"
+      "last_fetched": "2026-01-23T02:09:27.888Z"
     }
   },
   {
@@ -1881,7 +2015,7 @@
       "word_count": 790,
       "reading_time": "4 min read",
       "site_name": "rlancemartin.github.io",
-      "last_fetched": "2026-01-22T02:19:50.940Z"
+      "last_fetched": "2026-01-23T02:09:27.888Z"
     }
   },
   {
@@ -1903,7 +2037,7 @@
       "word_count": 4643,
       "reading_time": "24 min read",
       "site_name": "beatworm.co.uk",
-      "last_fetched": "2026-01-22T02:19:50.940Z"
+      "last_fetched": "2026-01-23T02:09:27.888Z"
     }
   },
   {
@@ -1923,7 +2057,7 @@
       "word_count": 4334,
       "reading_time": "22 min read",
       "site_name": "Board of Governors of the Federal Reserve System",
-      "last_fetched": "2026-01-22T02:19:50.940Z"
+      "last_fetched": "2026-01-23T02:09:27.888Z"
     }
   },
   {
@@ -1945,7 +2079,7 @@
       "site_name": "slideshare.net",
       "cover_image": "https://cdn.slidesharecdn.com/ss_thumbnails/gforces-091124112052-phpapp01-thumbnail.jpg?width=640&height=640&fit=bounds",
       "reading_progress": 0.15310451332830388,
-      "last_fetched": "2026-01-22T02:19:50.940Z"
+      "last_fetched": "2026-01-23T02:09:27.888Z"
     }
   },
   {
@@ -1967,7 +2101,7 @@
       "site_name": "cleancommit.io",
       "cover_image": "https://cdn.cleancommit.io/blog/2022/12/test-driven-development-feature-image.jpg",
       "reading_progress": 0.8723944213630094,
-      "last_fetched": "2026-01-22T02:19:50.940Z"
+      "last_fetched": "2026-01-23T02:09:27.888Z"
     }
   },
   {
@@ -1987,7 +2121,7 @@
       "word_count": 328,
       "reading_time": "2 min read",
       "site_name": "nickvsnetworking.com",
-      "last_fetched": "2026-01-22T02:19:50.940Z"
+      "last_fetched": "2026-01-23T02:09:27.888Z"
     }
   },
   {
@@ -2013,7 +2147,7 @@
       "reading_time": "1 min read",
       "site_name": "linkedin.com",
       "cover_image": "https://media.licdn.com/dms/image/v2/D5622AQEUTtCNmIX_4Q/feedshare-shrink_800/B56ZqykDKvIcAg-/0/1763932386839?e=2147483647&v=beta&t=Ehz66Mx_BgfakT1SjTwVlv-GOsWKzGy_aBt1zhIaOg8",
-      "last_fetched": "2026-01-22T02:19:50.940Z"
+      "last_fetched": "2026-01-23T02:09:27.888Z"
     }
   },
   {
@@ -2034,7 +2168,7 @@
       "reading_time": "3 min read",
       "site_name": "the Guardian",
       "cover_image": "https://i.guim.co.uk/img/media/d5aa5e7f4e8c7722aa8a3071c786fdcc22b816d4/329_59_2710_2169/master/2710.jpg?width=1200&height=630&quality=85&auto=format&fit=crop&precrop=40:21,offset-x50,offset-y0&overlay-align=bottom%2Cleft&overlay-width=100p&overlay-base64=L2ltZy9zdGF0aWMvb3ZlcmxheXMvdGctZGVmYXVsdC5wbmc&enable=upscale&s=a201426a52d06bcd4591edaadd678b1f",
-      "last_fetched": "2026-01-22T02:19:50.940Z"
+      "last_fetched": "2026-01-23T02:09:27.888Z"
     }
   },
   {
@@ -2060,7 +2194,7 @@
       "site_name": "substack.com",
       "cover_image": "https://substackcdn.com/image/fetch/$s_!Flcw!,w_1200,h_600,c_fill,f_jpg,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fdb33bd01-e089-461c-8f09-4eb9a423429c_1024x675.jpeg",
       "reading_progress": 0.9513237990824569,
-      "last_fetched": "2026-01-22T02:19:50.940Z"
+      "last_fetched": "2026-01-23T02:09:27.888Z"
     }
   },
   {
@@ -2083,7 +2217,7 @@
       "reading_time": "12 min read",
       "site_name": "Pharmaceutical Online",
       "cover_image": "https://vertassets.blob.core.windows.net/image/167e6a0d/167e6a0d-8f59-4965-ac82-3e23311728d5/team_of_professionals_gettyimages_511917982.jpg",
-      "last_fetched": "2026-01-22T02:19:50.940Z"
+      "last_fetched": "2026-01-23T02:09:27.888Z"
     }
   },
   {
@@ -2106,7 +2240,7 @@
       "reading_time": "9 min read",
       "site_name": "eng-leadership.com",
       "cover_image": "https://substackcdn.com/image/fetch/$s_!5VXq!,w_1200,h_600,c_fill,f_jpg,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F95b8eac4-caf2-47d4-8f71-025ff7214d69_2000x788.jpeg",
-      "last_fetched": "2026-01-22T02:19:50.940Z"
+      "last_fetched": "2026-01-23T02:09:27.888Z"
     }
   },
   {
@@ -2130,7 +2264,7 @@
       "reading_time": "2 min read",
       "site_name": "linkedin.com",
       "cover_image": "https://media.licdn.com/dms/image/v2/C5612AQEawDFensNZ0Q/article-cover_image-shrink_600_2000/article-cover_image-shrink_600_2000/0/1520177921782?e=2147483647&v=beta&t=mcwk7DIULgWJSTZkwKmTBGIySYTEKJBdSYFwz0ltXrw",
-      "last_fetched": "2026-01-22T02:19:50.940Z"
+      "last_fetched": "2026-01-23T02:09:27.888Z"
     }
   },
   {
@@ -2152,7 +2286,7 @@
       "reading_time": "1 min read",
       "site_name": "David Jasso",
       "cover_image": "https://i0.wp.com/david-jasso.com/wp-content/uploads/2024/04/shutterstock_1666821223.jpg?fit=1200%2C896&ssl=1",
-      "last_fetched": "2026-01-22T02:19:50.940Z"
+      "last_fetched": "2026-01-23T02:09:27.888Z"
     }
   },
   {
@@ -2174,7 +2308,7 @@
       "word_count": 2984,
       "reading_time": "15 min read",
       "site_name": "htmx.org",
-      "last_fetched": "2026-01-22T02:19:50.940Z"
+      "last_fetched": "2026-01-23T02:09:27.888Z"
     }
   },
   {
@@ -2194,7 +2328,7 @@
       "reading_time": "3 min read",
       "site_name": "Federal Reserve Bank of Richmond",
       "cover_image": "https://www.richmondfed.org/-/media/RichmondFedOrg/assets/images/standard/2021/piggybank_surplus_pisi.jpg",
-      "last_fetched": "2026-01-22T02:19:50.940Z"
+      "last_fetched": "2026-01-23T02:09:27.888Z"
     }
   },
   {
@@ -2216,7 +2350,7 @@
       "reading_time": "3 min read",
       "site_name": "linkedin.com",
       "cover_image": "https://static.licdn.com/aero-v1/sc/h/c45fy346jw096z9pbphyyhdz7",
-      "last_fetched": "2026-01-22T02:19:50.940Z"
+      "last_fetched": "2026-01-23T02:09:27.888Z"
     }
   },
   {
@@ -2236,7 +2370,7 @@
       "reading_time": "10 min read",
       "site_name": "oneusefulthing.org",
       "cover_image": "https://substackcdn.com/image/fetch/$s_!f-5x!,w_1200,h_600,c_fill,f_jpg,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fe20744fc-7146-409d-8eff-519e9a2d13d7_2181x1296.png",
-      "last_fetched": "2026-01-22T02:19:50.940Z"
+      "last_fetched": "2026-01-23T02:09:27.888Z"
     }
   },
   {
@@ -2257,7 +2391,7 @@
       "reading_time": "1 min read",
       "site_name": "linkedin.com",
       "cover_image": "https://static.licdn.com/aero-v1/sc/h/c45fy346jw096z9pbphyyhdz7",
-      "last_fetched": "2026-01-22T02:19:50.940Z"
+      "last_fetched": "2026-01-23T02:09:27.888Z"
     }
   },
   {
@@ -2276,7 +2410,7 @@
       "site_name": "ScreenRant",
       "cover_image": "https://static1.srcdn.com/wordpress/wp-content/uploads/2023/07/mark-brooks-hox-pox-featured-image.jpg",
       "reading_progress": 0.9608092809525349,
-      "last_fetched": "2026-01-22T02:19:50.940Z"
+      "last_fetched": "2026-01-23T02:09:27.888Z"
     }
   },
   {
@@ -2300,7 +2434,7 @@
       "site_name": "Unsupervised Learning",
       "cover_image": "https://danielmiessler.com/images/ai-influence-level-ail-miessler-1.0.png",
       "reading_progress": 0.7163966941653189,
-      "last_fetched": "2026-01-22T02:19:50.940Z"
+      "last_fetched": "2026-01-23T02:09:27.888Z"
     }
   },
   {
@@ -2322,7 +2456,7 @@
       "site_name": "A Space to Think: Notes on Software Development",
       "cover_image": "https://substackcdn.com/image/fetch/$s_!AKkU!,w_1200,h_600,c_fill,f_jpg,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fbf84de55-1778-4fa6-98fc-32a1b47bd061_1536x1024.png",
       "reading_progress": 0.9514073060851241,
-      "last_fetched": "2026-01-22T02:19:50.940Z"
+      "last_fetched": "2026-01-23T02:09:27.888Z"
     }
   },
   {
@@ -2338,7 +2472,7 @@
       "software"
     ],
     "metadata": {
-      "last_fetched": "2026-01-22T02:19:50.940Z"
+      "last_fetched": "2026-01-23T02:09:27.888Z"
     }
   },
   {
@@ -2361,7 +2495,7 @@
       "site_name": "Harvard Business Review",
       "cover_image": "https://hbr.org/resources/images/article_assets/2017/12/R1801L_BURTON.png",
       "reading_progress": 1,
-      "last_fetched": "2026-01-22T02:19:50.940Z"
+      "last_fetched": "2026-01-23T02:09:27.888Z"
     }
   },
   {
@@ -2383,7 +2517,7 @@
       "site_name": "Maria Sukhareva",
       "cover_image": "https://substackcdn.com/image/fetch/$s_!RigY!,w_1200,h_600,c_fill,f_jpg,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F13dd12e8-71f9-4212-aaf7-df707edde887_1920x1080.png",
       "reading_progress": 1,
-      "last_fetched": "2026-01-22T02:19:50.940Z"
+      "last_fetched": "2026-01-23T02:09:27.888Z"
     }
   },
   {
@@ -2404,7 +2538,7 @@
       "site_name": "The Atlantic",
       "cover_image": "https://cdn.theatlantic.com/thumbor/i3iaOWNqVZz1utMLPF8FjZS7EeA=/0x0:2169x1220/960x540/media/img/mt/2022/05/GettyImages_499067060/original.jpg",
       "reading_progress": 1,
-      "last_fetched": "2026-01-22T02:19:50.940Z"
+      "last_fetched": "2026-01-23T02:09:27.888Z"
     }
   },
   {
@@ -2421,14 +2555,13 @@
       "fodder",
       "primer"
     ],
-    "content_html": "<div class=\"full-content\"><div class=\"rw-pdf-text-view\">\n<h1>\n<b>\n    The Programmatic Imperative: A Comprehensive Guide to AdTech Architecture, Execution, and the Future of Identity\n   </b>\n</h1>\n<p block-type=\"Text\">\n   The digital advertising technology ecosystem (AdTech) represents a dynamic fusion of high-frequency trading, sophisticated data science, and rapidly evolving regulatory compliance. This report serves as a detailed guide, breaking down the foundational architecture, detailing the technical realities of programmatic execution, analyzing the systemic challenges of transparency and identity, and charting the critical strategic trajectory for the industry, particularly as it intersects with web browser technology and core business growth models.\n  </p>\n<h1>\n<b>\n    Chapter 1: The Foundational Architecture of Programmatic Advertising\n   </b>\n</h1>\n<p block-type=\"Text\">\n   This chapter establishes the core components and transaction mechanics that underpin modern digital advertising, setting the stage for discussions on efficiency and complexity.\n  </p>\n<h4>\n<b>\n    1.1. Defining Programmatic: Automation and Algorithmic Trading\n   </b>\n</h4>\n<p block-type=\"Text\">\n   Programmatic advertising fundamentally relies on algorithmic software to automate the buying and selling of digital ad space, thereby replacing the traditional, time-consuming methods that involved manual requests for proposals (RFPs), quotes, and negotiation. 1\n  </p>\n<p block-type=\"Text\">\n<b>\n    The Shift from Manual to Automated Buying:\n   </b>\n   Before programmatic systems, an advertiser wanting to place a banner ad on fifty different websites had to use a highly manual, human-driven process: they would send individual\n   <b>\n    Requests for Proposals (RFPs)\n   </b>\n   to each\n  </p>\n<p block-type=\"Text\">\n   publisher, wait for price quotes, negotiate placements, and manually sign contracts and arrange payments. This was slow, inefficient, and often resulted in missed opportunities. Programmatic systems replaced this lengthy process with automated, algorithmic software that can buy and sell digital ad space instantly, often in the time it takes for a webpage to load.\n   <sup>\n    1\n   </sup>\n   This algorithmic approach, powered by automation, artificial intelligence (AI), and machine learning, enables improved targeting accuracy and greater efficiency in campaign execution. 3\n  </p>\n<p block-type=\"Text\">\n   The roots of this system trace back to the mid-1990s with the introduction of Ad Servers (circa 1995/1996) and Ad Networks (circa 1996).\n   <sup>\n    4\n   </sup>\n   A significant evolutionary leap occurred with the introduction of\n   <b>\n    Cost Per Click (CPC)\n   </b>\n   pricing, a model where the advertiser only pays when a user actively clicks on their ad, as offered by Google's AdWords platform. This approach, which, alongside the\n   <b>\n    Google Display Network\n   </b>\n   (Google's expansive network of partner websites and apps where ads can be placed), democratized access to ad placements based on audience segments.\n   <sup>\n    5\n   </sup>\n   However, the modern programmatic paradigm, as currently understood, solidified around 2007 with the emergence of ad exchanges utilizing\n   <b>\n    Real-Time Bidding (RTB)\n   </b>\n   capabilities.\n   <sup>\n    4\n   </sup>\n   Over time, this architecture has refined further with features such as programmatic direct and private marketplaces, offering more customized control over ad placement and audience targeting. 5\n  </p>\n<h3>\n<b>\n    1.2. The Demand Side: Function and Role of Demand-Side Platforms (DSPs)\n   </b>\n</h3>\n<p block-type=\"Text\">\n<b>\n    Demand-Side Platforms (DSPs)\n   </b>\n   are specialized software systems utilized by advertisers and their agencies. Their core function is to allow the programmatic purchase of digital ad inventory (ad space) across a vast array of ad exchanges and Supply-Side Platforms (SSPs) in real time.\n   <sup>\n    7\n   </sup>\n   Through their self-service, cloud-based interfaces, DSPs provide the essential tools necessary for ad buyers to manage bids, optimize creative assets, and execute complex, omnichannel advertising campaigns based on data-driven insights. 7\n  </p>\n<p block-type=\"Text\">\n<b>\n    The Advertiser's Flow:\n   </b>\n   From an advertiser's perspective, the advertising process begins here, on the DSP. The advertiser logs into the DSP's interface, which acts as their central dashboard. They perform the following steps: 7\n  </p>\n<p block-type=\"ListGroup\">\n</p><ul>\n<li block-type=\"ListItem\">\n     1.\n     <b>\n      Define Audience and Goal:\n     </b>\n     They define their ideal customer (e.g., \"Homeowners in Seattle interested in eco-friendly products\") and set a specific campaign objective (e.g., increase brand recognition or drive sales).\n    </li>\n<li block-type=\"ListItem\">\n     2.\n     <b>\n      Set Budget and Pricing:\n     </b>\n     They set a total budget for the campaign and specify their bidding strategy (e.g., targeting a maximum\n     <b>\n      Cost-Per-Mille\n     </b>\n     or\n     <b>\n      CPM\n     </b>\n     , which is the cost\n    </li>\n</ul>\n<p block-type=\"Text\">\n   for 1,000 ad views).\n  </p>\n<p block-type=\"ListGroup\">\n</p><ul>\n<li block-type=\"ListItem\">\n     3.\n     <b>\n      Upload Assets:\n     </b>\n     They upload the actual ad creative (the image, video, or banner).\n    </li>\n<li block-type=\"ListItem\">\n     4.\n     <b>\n      Automated Execution:\n     </b>\n     The DSP then takes this instruction set and automatically prepares to execute billions of bidding decisions across the internet on behalf of the advertiser. 7\n    </li>\n</ul>\n<p block-type=\"Text\">\n   A critical feature of the DSP's operation is its seamless integration with Data Management Platforms (DMPs). DMPs allow advertisers to leverage first-party, second-party, and third-party audience data to enrich campaign targeting capabilities.\n   <sup>\n    7\n   </sup>\n   This data is used by the DSP to analyze the impression opportunity against criteria such as demographics, browsing behavior, and location, determining whether to bid and at what price.\n   <sup>\n    7\n   </sup>\n   Commercially, DSPs typically rely on performance-focused pricing models, such as Cost-Per-Action (CPA) or Cost-Per-Mille (CPM), enabling advertisers to align their payment structure with their campaign objectives. 8\n  </p>\n<h2>\n<b>\n    1.3. The Supply Side: Function and Role of Supply-Side Platforms (SSPs)\n   </b>\n</h2>\n<p block-type=\"Text\">\n   In contrast to DSPs,\n   <b>\n    Supply-Side Platforms (SSPs)\n   </b>\n   are utilized by online publishers (the owners of websites and mobile apps). The SSP is the mirror image of the DSP; its primary role is to manage, sell, and optimize the publisher's available ad space—or inventory—with the explicit goal of maximizing revenue yield. 8\n  </p>\n<p block-type=\"Text\">\n   The SSP facilitates the transaction flow by allowing publishers to connect their ad inventory, defining specific formats, placements, and crucial pricing rules (floor prices).\n   <sup>\n    8\n   </sup>\n   When a user visits a site, the SSP receives an ad request and broadcasts it to multiple integrated DSPs and ad exchanges.\n   <sup>\n    8\n   </sup>\n   To ensure the ad space is sold at its highest potential value, SSPs employ dynamic pricing models, constantly adjusting prices based on real-time market demand and competition. 8\n  </p>\n<h4>\n<b>\n    1.4. The Exchange Layer and Real-Time Bidding (RTB) Mechanics\n   </b>\n</h4>\n<p block-type=\"Text\">\n   Ad Exchanges function as the core marketplace, facilitating the programmatic trading of ad inventory between the buyers (DSPs) and sellers (SSPs).\n   <sup>\n    8\n   </sup>\n<b>\n    Real-Time Bidding (RTB)\n   </b>\n   is the transaction mechanism that powers this marketplace.\n  </p>\n<h4>\n   Analogy: The Digital Stock Exchange\n  </h4>\n<p block-type=\"Text\">\n   Think of the Ad Exchange as a virtual stock exchange where digital ad space is traded. In this exchange, millions of auctions happen every second, with milliseconds to execute a deal before the page finishes loading.\n  </p>\n<h4>\n<b>\n    The RTB Process (Occurs in Milliseconds):\n   </b>\n</h4>\n<p block-type=\"ListGroup\">\n</p><ul>\n<li block-type=\"ListItem\">\n     1.\n     <b>\n      Request Initiation:\n     </b>\n     A user lands on a webpage, triggering the publisher's\n     <b>\n      SSP\n     </b>\n     to send an ad request to the Ad Exchange. 7\n    </li>\n<li block-type=\"ListItem\">\n     2.\n     <b>\n      Broadcast and Analysis:\n     </b>\n     The Ad Exchange transmits this bid request to the multiple integrated\n     <b>\n      DSPs\n     </b>\n     .\n     <sup>\n      7\n     </sup>\n     Each DSP, analyzing the impression based on its advertiser's targeting criteria, campaign goals, and budget, determines if and how much to bid. 7\n    </li>\n<li block-type=\"ListItem\">\n     3.\n     <b>\n      Auction and Selection:\n     </b>\n     The SSP or Ad Exchange receives the bids and selects the highest bidder that meets the publisher's defined pricing and quality requirements. 8\n    </li>\n<li block-type=\"ListItem\">\n     4.\n     <b>\n      Ad Serving:\n     </b>\n     The winning advertiser's creative is then passed back through the supply chain (DSP $\\rightarrow$ Ad Exchange $\\rightarrow$ SSP) to be displayed on the publisher's site to the user. 7\n    </li>\n</ul>\n<p block-type=\"Text\">\n   The fundamental architecture of the programmatic ecosystem dictates a deep, inherent commercial conflict. DSPs are engineered to maximize buyer efficiency (acquiring impressions at the lowest effective CPA), while SSPs are engineered to maximize seller yield (achieving the highest possible CPM/floor price).\n   <sup>\n    8\n   </sup>\n   This divergence in core objectives guarantees continuous market friction and drives constant pressure on intermediary fees. Since both parties utilize proprietary algorithms and AI to optimize outcomes for their clients, any existing opacity or lack of transparency in auction mechanics or fee disclosure will inevitably be exploited by these algorithms to gain a competitive advantage. This structural tension is a primary contributor to the complexity and lack of transparency observed deeper in the programmatic supply chain.\n  </p>\n<table>\n<tbody>\n<tr>\n<th>\n      Component\n     </th>\n<th>\n      Primary\n      <br/>\n      User\n     </th>\n<th>\n      Core\n      <br/>\n      Function\n     </th>\n<th>\n      Primary\n      <br/>\n      Goal\n     </th>\n</tr>\n<tr>\n<td>\n      Demand-Side\n      <br/>\n      Platform\n      <br/>\n      (DSP)\n     </td>\n<td>\n      Advertisers/Agenci\n      <br/>\n      es\n     </td>\n<td>\n      Buying\n      <br/>\n      inventory;\n      <br/>\n      optimizing\n      <br/>\n      bids\n      <br/>\n      and\n      <br/>\n      targeting.\n     </td>\n<td>\n      Maximize\n      <br/>\n      ROI\n      <br/>\n      (Efficiency)\n     </td>\n</tr>\n<tr>\n<td>\n      Supply-Side\n      <br/>\n      Platform\n      <br/>\n      (SSP)\n     </td>\n<td>\n      Publishers\n     </td>\n<td>\n      Selling\n      <br/>\n      inventory;\n      <br/>\n      maximizing\n      <br/>\n      yield\n      <br/>\n      and\n      <br/>\n      managing\n      <br/>\n      price\n      <br/>\n      floors.\n     </td>\n<td>\n      Maximize\n      <br/>\n      Revenue\n      <br/>\n      (Yield)\n     </td>\n</tr>\n</tbody>\n</table>\n<p block-type=\"Text\">\n   Core Components of the Programmatic Ecosystem\n  </p>\n<table>\n<tbody>\n<tr>\n<th>\n      Ad\n      <br/>\n      Exchange\n      <br/>\n      Both\n     </th>\n<th>\n      Marketplace\n      <br/>\n      facilitating\n      <br/>\n      real-time\n      <br/>\n      auctions\n      <br/>\n      between\n      <br/>\n      DSPs\n      <br/>\n      and\n      <br/>\n      SSPs.\n     </th>\n<th>\n      Liquidity\n      <br/>\n      and\n      <br/>\n      Price\n      <br/>\n      Discovery\n     </th>\n</tr>\n</tbody>\n</table>\n<h1>\n<b>\n    Chapter 2: Programmatic Execution and Auction Dynamics\n   </b>\n</h1>\n<p block-type=\"Text\">\n   This chapter details the technological evolution of the auction environment, addressing performance, transparency, and the expansion into new media types like Connected TV and Retail Media.\n  </p>\n<h4>\n<b>\n    2.1. Evolution from Waterfall to Header Bidding\n   </b>\n</h4>\n<p block-type=\"Text\">\n   The initial system used by publishers to sell ads was called the\n   <b>\n    \"waterfall\" auction\n   </b>\n   method. This system was sequential and highly inefficient.\n  </p>\n<p block-type=\"Text\">\n<b>\n    Understanding the Waterfall Method:\n   </b>\n   Imagine a publisher (a website owner) having an ad spot to fill. They would offer it to their demand partners (Ad Networks or Exchanges) one by one, ranked based on historical performance or average price. They would offer the ad spot to the highest-paying partner first. If that partner declined or failed to bid (the water did not fill the bucket), the ad request would then cascade down, in sequential order, to the second partner, then the third, and so on, down a \"waterfall\" of demand partners.\n   <sup>\n    10\n   </sup>\n   This created significant inefficiency because a high-paying bidder placed lower in the waterfall might never have received the chance to bid, often resulting in unsold inventory or impressions being sold at unnecessarily low prices. 11\n  </p>\n<p block-type=\"Text\">\n   The introduction of\n   <b>\n    Header Bidding\n   </b>\n   (starting around 2014) revolutionized this process by creating a simultaneous auction. Instead of offering the ad spot sequentially, Header Bidding allows the publisher to send out\n   <i>\n    simultaneous\n   </i>\n   bid requests to multiple ad exchanges and\n   <b>\n    Supply-Side Platforms (SSPs)\n   </b>\n   at the exact same time.\n   <sup>\n    12\n   </sup>\n   This approach fosters a highly competitive environment—like an open, single auction block where all buyers shout their best price at once—driving up the value of ad slots and ensuring the publisher achieves the best price available in the market.\n   <sup>\n    11\n   </sup>\n   This shift effectively heralded the \"end of the publisher\n  </p>\n<p block-type=\"Text\">\n   waterfall,\" maximizing revenue from each impression and democratizing the auction process.\n   <sup>\n    11\n   </sup>\n   Publishers using header bidding have reported a 30–40% increase in ad revenue. 4\n  </p>\n<h3>\n<b>\n    2.2. Header Bidding Mechanics: Client-Side vs. Server-Side Implementation\n   </b>\n</h3>\n<p block-type=\"Text\">\n   Header bidding implementations generally fall into two categories, presenting a critical trade-off between performance (latency) and identity matching (revenue):\n  </p>\n<h4>\n<b>\n    Client-Side Header Bidding (CSHB)\n   </b>\n</h4>\n<p block-type=\"Text\">\n   With\n   <b>\n    Client-Side Header Bidding (CSHB)\n   </b>\n   , the auction logic is executed directly within the user's web browser (the \"client\") using a piece of code, or \"wrapper,\" placed in the header of the webpage. While CSHB provides publishers with superior control and transparency over the process, allowing them to choose buyers using these header-bidding wrappers 14 , it suffers from significant performance drawbacks. Running multiple concurrent bid requests strains the browser's limited resources, leading to higher\n   <b>\n    latency\n   </b>\n   (time delay) and potentially slowing page load times.\n   <sup>\n    10\n   </sup>\n   Studies indicate that even a one-second delay in page load time can reduce conversions by 7%. 10\n  </p>\n<p block-type=\"Text\">\n   However, CSHB maintains a distinct advantage in\n   <b>\n    identity resolution\n   </b>\n   . Since the bidding happens right inside the browser, user IDs (like cookies) go through fewer technical synchronization steps, resulting in higher \"cookie matching rates.\" Advertisers are consistently willing to pay more for an impression when they can positively identify the user, meaning higher match rates translate directly into greater revenue per impression for the publisher. 15\n  </p>\n<h4>\n<b>\n    Server-Side Header Bidding (SSHB)\n   </b>\n</h4>\n<p block-type=\"Text\">\n<b>\n    Server-Side Header Bidding (SSHB)\n   </b>\n   addresses the latency issue by\n   <b>\n    offloading the auction logic\n   </b>\n   from the user's browser to a dedicated, high-resource server managed by a vendor. Because servers possess greater power and resources than browsers, this configuration significantly improves performance and reduces latency, which is particularly beneficial for slow-loading formats like video ads.\n   <sup>\n    14\n   </sup>\n   Additionally, removing browser limitations allows\n  </p>\n<p block-type=\"Text\">\n   publishers to include a much higher number of demand partners in the auction. 15\n  </p>\n<p block-type=\"Text\">\n   The drawback of SSHB is a reduction in publisher control and a hit to revenue. The auction process occurs on the vendor's server, meaning the auction mechanics and bid data are proprietary and less accessible to the publisher, effectively putting them \"at the mercy of the vendor.\"\n   <sup>\n    14\n   </sup>\n   Furthermore, because user IDs must be synced across additional servers, the cookie matching rates are typically lower compared to CSHB, resulting in less revenue per impression since fewer users are identifiable to the buyer. 15\n  </p>\n<p block-type=\"Text\">\n   The tension between maximizing price discovery (header bidding success) and maintaining user experience (low latency) creates a perpetual cycle of technological correction. Header bidding solved the inefficiency of the waterfall, but its client-side implementation introduced a new source of friction—latency. The adoption of SSHB to solve latency, in turn, eroded identity matching and transparency, demonstrating that every technical advancement in the programmatic chain necessitates subsequent innovation to manage its unintended side effects.\n  </p>\n<table>\n<tbody>\n<tr>\n<th>\n      Feature\n     </th>\n<th>\n      Client-Side\n      <br/>\n      Header\n      <br/>\n      Bidding\n      <br/>\n      (CSHB)\n     </th>\n<th>\n      Server-Side\n      <br/>\n      Header\n      <br/>\n      Bidding\n      <br/>\n      (SSHB)\n     </th>\n</tr>\n<tr>\n<th>\n      Auction\n      <br/>\n      Location\n     </th>\n<th>\n      User's\n      <br/>\n      Web\n      <br/>\n      Browser\n     </th>\n<th>\n      Separate\n      <br/>\n      Auction\n      <br/>\n      Server\n      <br/>\n      (Hosted\n      <br/>\n      by\n      <br/>\n      Vendor)\n     </th>\n</tr>\n<tr>\n<th>\n      Latency\n      <br/>\n      Impact\n     </th>\n<th>\n      Higher\n      <br/>\n      (Browser\n      <br/>\n      resource\n      <br/>\n      strain)\n     </th>\n<th>\n      Lower\n      <br/>\n      (Faster\n      <br/>\n      page\n      <br/>\n      load,\n      <br/>\n      better\n      <br/>\n      for\n      <br/>\n      video)\n     </th>\n</tr>\n<tr>\n<th>\n      Cookie\n      <br/>\n      Matching\n      <br/>\n      Rate\n     </th>\n<th>\n      Higher\n      <br/>\n      (Fewer\n      <br/>\n      sync\n      <br/>\n      opportunities)\n     </th>\n<th>\n      Lower\n      <br/>\n      (Requires\n      <br/>\n      additional\n      <br/>\n      server\n      <br/>\n      syncs)\n     </th>\n</tr>\n<tr>\n<th>\n      Demand\n      <br/>\n      Partner\n      <br/>\n      Limit\n     </th>\n<th>\n      Limited\n      <br/>\n      (By\n      <br/>\n      browser\n      <br/>\n      connections)\n     </th>\n<th>\n      High\n      <br/>\n      (Server\n      <br/>\n      resources\n      <br/>\n      are\n      <br/>\n      higher)\n     </th>\n</tr>\n<tr>\n<th>\n      Publisher\n      <br/>\n      Transparency\n     </th>\n<th>\n      High\n      <br/>\n      (Direct\n      <br/>\n      control\n      <br/>\n      over\n      <br/>\n      buyers/wrapper)\n     </th>\n<th>\n      Lower\n      <br/>\n      (Auction\n      <br/>\n      logic\n      <br/>\n      is\n      <br/>\n      proprietary/vendor-controll\n      <br/>\n      ed)\n     </th>\n</tr>\n</tbody>\n</table>\n<p block-type=\"Text\">\n   Header Bidding Implementation Comparison\n  </p>\n<h4>\n<b>\n    2.3. Hybrid Models and Latency Optimization Strategies\n   </b>\n</h4>\n<p block-type=\"Text\">\n   To navigate the critical trade-off between latency and identity matching, the evolution of header bidding has introduced hybrid models. These models combine the strengths of both CSHB and SSHB, typically using client-side integration for high-value, identity-rich partners and server-side integration for high-volume demand partners.\n   <sup>\n    10\n   </sup>\n   This strategy helps manage latency while maximizing revenue.\n  </p>\n<p block-type=\"Text\">\n   Efficiency and performance optimization are paramount. Techniques such as asynchronous header bidding (allowing bids to come in simultaneously without blocking page content from loading) and optimizing timeout settings are employed to manage latency without sacrificing revenue opportunities.\n   <sup>\n    10\n   </sup>\n   These strategies help publishers maintain a swift website experience for users, which is crucial for both user experience and SEO rankings. 10\n  </p>\n<h3>\n<b>\n    2.4. Programmatic Expansion: Connected TV (CTV) and Retail Media Networks (RMNs)\n   </b>\n</h3>\n<p block-type=\"Text\">\n   Programmatic technology continues to expand beyond desktop and mobile display into premium, high-growth media channels.\n  </p>\n<h4>\n<b>\n    Connected TV (CTV)\n   </b>\n</h4>\n<p block-type=\"Text\">\n<b>\n    Programmatic TV\n   </b>\n   applies data and automation to the television ad buying process (ads shown on streaming services accessed via\n   <b>\n    Connected TV\n   </b>\n   or smart devices), enabling advertisers to target consumers with greater efficiency than traditional demographic measurements allow.\n   <sup>\n    16\n   </sup>\n   Advertisers can specify highly targeted audiences—such as females between 24 and 35 with a specific income level who own a dog—achieving a level of precision previously unobtainable in linear TV.\n   <sup>\n    16\n   </sup>\n   However, as with other digital channels, CTV, along with mobile, must contend with persistent issues of consumer privacy and ad fraud. 17\n  </p>\n<p block-type=\"Text\">\n<b>\n    Retail Media Networks (RMNs)\n   </b>\n</p>\n<p block-type=\"Text\">\n<b>\n    Retail Media Networks (RMNs)\n   </b>\n   are advertising platforms established by retailers to sell ad space on their digital channels (e.g., e-commerce sites, apps) to third-party brands.\n   <sup>\n    18\n   </sup>\n   These networks are strategically positioned because they operate on proprietary, high-intent first-party shopper data. 18\n  </p>\n<p block-type=\"Text\">\n   RMNs offer a powerful mechanism for data arbitrage. Because these ads reach shoppers at or near the point of purchase, the conversion intent is exceptionally high, translating into tangible outcomes and potentially higher return on ad spend (ROAS).\n   <sup>\n    19\n   </sup>\n   The critical advantage RMNs possess is\n   <b>\n    closed-loop measurement\n   </b>\n   , where the retailer ties ad impressions directly to transactions using customer data.\n   <sup>\n    19\n   </sup>\n   This provides brands with granular attribution metrics like sales lift, conversion rate, and incremental revenue based on actual sales data, rather than relying on proxy metrics like clicks or impressions that struggle with attribution clarity. 19\n  </p>\n<p block-type=\"Text\">\n   RMNs are increasingly integrating with demand-side platforms (DSPs) and ad tech firms to allow programmatic access to their inventory, enabling brands to efficiently manage retail media alongside other programmatic campaigns.\n   <sup>\n    19\n   </sup>\n   This capability allows retailers to function as powerful, specialized Walled Gardens, challenging general display platforms by offering verifiable Cost Per Acquisition (CPA) certainty.\n  </p>\n<h1>\n<b>\n    Chapter 3: Economic Models and Core Performance Metrics\n   </b>\n</h1>\n<p block-type=\"Text\">\n   This chapter outlines the key commercial frameworks used for buying and selling media, correlating financial risk, campaign goals, and the fundamental measurement standards required for campaign validation.\n  </p>\n<h4>\n<b>\n    3.1. Cost-Per-Mille (CPM)\n   </b>\n</h4>\n<p block-type=\"Text\">\n<b>\n    Cost-Per-Mille (CPM)\n   </b>\n   , meaning cost per thousand impressions (the term\n   <i>\n    mille\n   </i>\n   is Latin for thousand), is the most common model for selling display ad inventory. Under this model, advertisers pay a set price for every one thousand times their ad is loaded and served to a user.\n   <sup>\n    8\n   </sup>\n   CPM is primarily employed for brand awareness campaigns where the core objective is to maximize exposure and reach. The competitive environment fostered by header bidding\n  </p>\n<p block-type=\"Text\">\n   often leads to higher CPMs for publishers, increasing their overall yield. 5\n  </p>\n<h4>\n<b>\n    3.2. Cost-Per-Click (CPC) / Pay-Per-Click (PPC)\n   </b>\n</h4>\n<p block-type=\"Text\">\n<b>\n    Cost-Per-Click (CPC)\n   </b>\n   is a pricing model where the advertiser pays only when a user actively clicks on the advertisement.\n   <sup>\n    6\n   </sup>\n   This model, also known as\n   <b>\n    Pay-Per-Click (PPC)\n   </b>\n   , is widely used in paid search advertising, such as Google Ads.\n   <sup>\n    6\n   </sup>\n   For publishers, the CPC model presents a relatively low financial risk, as they receive payment simply for the user's click rather than having to wait for a complex conversion event. 20\n  </p>\n<h4>\n<b>\n    3.3. Cost-Per-Action (CPA) / Cost-Per-Acquisition\n   </b>\n</h4>\n<p block-type=\"Text\">\n<b>\n    Cost-Per-Action (CPA)\n   </b>\n   , also known as cost-per-acquisition, requires the advertiser to pay only after a user successfully completes a pre-determined, high-value action, such as a purchase, application download, or signup.\n   <sup>\n    20\n   </sup>\n   CPA is highly popular among brand marketers and affiliate businesses because the payment is directly tied to the desired conversion outcome, offering a clear link to return on investment (ROI). 20\n  </p>\n<p block-type=\"Text\">\n   The progression from CPM (awareness) to CPC (engagement) to CPA (conversion) represents a funnel of financial risk transfer. While CPA is ideal for advertisers, it is the highest-risk model for publishers, who must bear the uncertainty and risk until the point of conversion is reached.\n   <sup>\n    20\n   </sup>\n   The escalating demand for transparent, guaranteed outcomes pushes media buyers to favor channels that can reliably deliver CPA, such as RMNs or programmatic direct deals, which provide conversion certainty, attracting budget away from less accountable display inventory.\n  </p>\n<h4>\n<b>\n    3.4. Measurement Standards: Viewability and Impression Quality\n   </b>\n</h4>\n<p block-type=\"Text\">\n   To ensure the fiduciary integrity of ad spend, core measurement standards must be enforced.\n   <b>\n    Viewability\n   </b>\n   is a critical metric that measures the likelihood of an ad being actually seen by a user, distinguishing it from simply being loaded in the page code.\n   <sup>\n    21\n   </sup>\n   Viewability is essential for validating the expenditure made under CPM contracts and mitigating common ad fraud\n  </p>\n<p block-type=\"Text\">\n   practices.\n  </p>\n<p block-type=\"Text\">\n   The Interactive Advertising Bureau (IAB) mandates specific viewability criteria:\n  </p>\n<p block-type=\"ListGroup\">\n</p><ul>\n<li block-type=\"ListItem\">\n<b>\n      Display Ads:\n     </b>\n     At least 50% of the ad's pixels must be in view on the user's screen for a minimum duration of one continuous second. 21\n    </li>\n<li block-type=\"ListItem\">\n<b>\n      Video Ads:\n     </b>\n     At least 50% of the ad's pixels must be in view for a minimum of two consecutive seconds. 21\n    </li>\n</ul>\n<p block-type=\"Text\">\n   If an impression meets these criteria, it is classified as a \"viewable impression\".\n   <sup>\n    22\n   </sup>\n   Ads may be served but not viewed for several reasons, including the ad taking too long to load, the user scrolling away, or the deployment of ad-blocking plugins. 22\n  </p>\n<p block-type=\"Text\">\n   Viewability standards act as a fiduciary control mechanism, essential for establishing contractual quality in the CPM model. They directly combat numerous forms of ad fraud, which costs the industry billions annually.\n   <sup>\n    22\n   </sup>\n   Common fraud techniques include ad stacking (loading multiple ads in a single visible slot where only one is visible), displaying ads in 1x1 pixel iframes, or placing ads outside the viewport area.\n   <sup>\n    22\n   </sup>\n   Without robust standards and enforcement, the CPM model would lack the necessary trust to attract high-value brand budgets.\n  </p>\n<h1>\n<b>\n    Chapter 4: Data, Identity, and the Supply Chain Transparency Crisis\n   </b>\n</h1>\n<p block-type=\"Text\">\n   Data is the lifeblood of programmatic advertising. This chapter examines the categorization of data assets, the architectural pivot required for modern management, and the systemic opacity that challenges the supply chain.\n  </p>\n<h4>\n<b>\n    4.1. Defining Data Assets: First, Second, and Third-Party Data Value\n   </b>\n</h4>\n<p block-type=\"Text\">\n   Digital advertising relies on different categories of customer data, differentiated primarily by their relationship to the customer and their reliability: 23\n  </p>\n<p block-type=\"Text\">\n   ●\n   <b>\n    First-Party Data (1P):\n   </b>\n   Collected directly by a company from its own customers with consent.\n   <sup>\n    24\n   </sup>\n   This data is individual, highly accurate, and reliable, providing the foundation for direct customer relationships.\n   <sup>\n    24\n   </sup>\n   Organizations that prioritize the use of 1P data for\n  </p>\n<p block-type=\"Text\">\n   marketing functions have demonstrated significant performance benefits, including up to a 2.9X revenue uplift and a 1.5X increase in cost savings.\n  </p>\n<p block-type=\"ListGroup\">\n</p><ul>\n<li block-type=\"ListItem\">\n<b>\n      Second-Party Data (2P):\n     </b>\n     Data obtained directly from a trusted partner, maintaining high accuracy and consent status, similar to 1P data.\n     <sup>\n      24\n     </sup>\n     Examples include media publishers selling customer data to advertisers or grocery stores sharing loyalty data with a credit card company. 24\n    </li>\n<li block-type=\"ListItem\">\n<b>\n      Third-Party Data (3P):\n     </b>\n     Data purchased from external data brokers. It is often aggregated, possesses lower accuracy and reliability, and its method of consent collection is frequently unknown. 24\n    </li>\n</ul>\n<p block-type=\"Text\">\n   The role of\n   <b>\n    data brokers\n   </b>\n   in the 3P market is pervasive. These organizations collect vast amounts of raw personal information—both online and offline—analyze it, and sell comprehensive dossiers to advertisers, financial entities, and other companies.\n   <sup>\n    25\n   </sup>\n   This collected information spans basic details (name, email) to highly sensitive and intrusive personal details, including geolocation, income level, political preferences, and health data. 25 These brokers often operate with minimal oversight, leveraging secret algorithms to build detailed profiles on millions of citizens, leading to the risk of a \"scored society\" where individuals are algorithmically evaluated without their knowledge, impacting everything from credit rates to job eligibility. 26\n  </p>\n<h2>\n<b>\n    4.2. Data Management Architecture: DMPs vs. CDPs\n   </b>\n</h2>\n<p block-type=\"Text\">\n   The transition away from 3P data necessitates a clear understanding of data management architecture:\n  </p>\n<p block-type=\"ListGroup\">\n</p><ul>\n<li block-type=\"ListItem\">\n<b>\n      Data Management Platforms (DMPs):\n     </b>\n     Historically focused on collecting and storing high-volume, anonymous data elements (such as cookies and segmented customer IDs) for short periods of time.\n     <sup>\n      27\n     </sup>\n     DMPs are optimized for digital channels and effective for identifying broad audience segments and driving new prospects. 27\n    </li>\n<li block-type=\"ListItem\">\n<b>\n      Customer Data Platforms (CDPs):\n     </b>\n     Focus on collecting structured, long-term, specific first-party data, particularly Personally Identifiable Information (PII) like email addresses.\n     <sup>\n      27\n     </sup>\n     CDPs build persistent, accurate customer profiles and are designed to share and draw data seamlessly with any system (e.g., CRM or DMP) across online and offline interactions.\n     <sup>\n      27\n     </sup>\n     CDPs are vital for retention, personalization efforts, and long-term customer relationship nurturing. 28\n    </li>\n</ul>\n<p block-type=\"Text\">\n   The strategic pivot toward CDPs and 1P data is a necessary defensive move mandated by regulatory environments such as GDPR and CCPA. The significant ROI attributed to 1P data use serves as a key economic offset against the massive compliance costs and the\n  </p>\n<p block-type=\"Text\">\n   diminishing utility and legal risk associated with unreliable 3P data. By concentrating control over the data source (1P), the CDP effectively shields a brand from relying on the fragile, opaque 3P supply chain.\n  </p>\n<h4>\n<b>\n    4.3. Advertising Identifiers (IDs)\n   </b>\n</h4>\n<p block-type=\"Text\">\n   In the mobile app ecosystem, unique user identifiers function similarly to cookies on the web. These\n   <b>\n    Advertising IDs\n   </b>\n   (e.g., Apple's Identifier for Advertisers or IDFA, and Google's Google Advertising ID or GAID) are assigned to a mobile device and are used by advertising services to personalize offers and track user movements, habits, and app usage. 29 Importantly, these identifiers are user-resettable and user-deletable, providing consumers with greater control. 29\n  </p>\n<p block-type=\"Text\">\n   The landscape of mobile identity was dramatically reshaped by Apple's iOS 14.5 update, which introduced the App Tracking Transparency (ATT) framework. This framework requires applications to explicitly ask users for permission to track their IDFA, severely limiting cross-app tracking capabilities and triggering an industry-wide pivot in mobile marketing strategies. 29\n  </p>\n<h4>\n<b>\n    4.4. The Transparency Imperative: Ad Fraud and IAB Standards\n   </b>\n</h4>\n<p block-type=\"Text\">\n   The programmatic ecosystem requires continuous auditing and standardization to mitigate widespread ad fraud. Fraudulent tactics include ad stacking (serving multiple ads in one visible slot), displaying ads outside the user's viewport, and placing ads in 1x1 pixel iframes. 22\n  </p>\n<p block-type=\"Text\">\n   To combat unauthorized inventory sales and spoofing, the IAB Tech Lab developed the ads.txt specification. This standard requires publishers to post a public text file listing all authorized digital sellers of their inventory, bringing much-needed transparency to the programmatic sales process.\n   <sup>\n    31\n   </sup>\n   For applications distributed through mobile or Connected TV app stores, the companion specification, app-ads.txt, is utilized.\n   <sup>\n    32\n   </sup>\n   These standards are authentic because they can only be posted and managed by the web administrator, making them difficult to corrupt. 31\n  </p>\n<h4>\n<b>\n    4.5. The \"Unknown Delta\": Tracing the Supply Chain Leakage\n   </b>\n</h4>\n<p block-type=\"Text\">\n   Despite industry efforts toward transparency, the programmatic supply chain suffers from systemic opacity. Comprehensive studies, such as those conducted by ISBA, highlight a critical failure point: an average of 15% of advertiser programmatic spend, ranging from 0% to 86% across supply chains, falls into an \"\n   <b>\n    unknown delta\n   </b>\n   ,\" meaning the funds cannot be definitively attributed to a specific party or publisher.\n   <sup>\n    13\n   </sup>\n   On average, studies show publishers receive only about 51% of advertiser spend. 33\n  </p>\n<p block-type=\"Text\">\n   This 15% leakage fundamentally undermines the premise of programmatic efficiency. The unknown delta is believed to be a combination of several opaque practices:\n  </p>\n<p block-type=\"ListGroup\">\n</p><ul>\n<li block-type=\"ListItem\">\n     DSP and SSP fees that are not visible or disclosed in transaction log data. 15\n    </li>\n<li block-type=\"ListItem\">\n     Post-auction bid shading, where DSP algorithms save the advertiser money by bidding below the maximum possible clearing price, creating non-transparent profit pools. 15\n    </li>\n<li block-type=\"ListItem\">\n     Inventory reselling and arbitrage between multiple technical vendors, adding layers of non-essential fees. 15\n    </li>\n<li block-type=\"ListItem\">\n     Limitations and inconsistencies in data sharing and formatting across the supply chain, which prevent effective reconciliation. 13\n    </li>\n</ul>\n<p block-type=\"Text\">\n   The problem is exacerbated by the fact that the industry's heavy reliance on tools like ads.txt can sometimes be exploited by supply mediators or resellers who manipulate bids, contributing to this 15% delta.\n   <sup>\n    34\n   </sup>\n   The analysis suggests that the only way to mitigate this financially punitive opacity is for strategic leaders to invest in direct supply path optimization (SPO) and pursue direct contractual relationships with publishers.\n   <sup>\n    15\n   </sup>\n   This structural investment is necessary to restore fiduciary trust in the channel.\n  </p>\n<p block-type=\"Text\">\n   Factors Contributing to the Programmatic \"Unknown Delta\" (Avg. 15%)\n  </p>\n<table>\n<tbody>\n<tr>\n<th>\n      Contributory\n      <br/>\n      Factor\n     </th>\n<th>\n      Description\n     </th>\n<th>\n      Impact\n      <br/>\n      on\n      <br/>\n      Fiduciary\n      <br/>\n      Trust\n     </th>\n</tr>\n<tr>\n<td>\n      Non-Visible\n      <br/>\n      Tech\n      <br/>\n      Fees\n     </td>\n<td>\n      DSP,\n      <br/>\n      SSP,\n      <br/>\n      and\n      <br/>\n      Ad\n      <br/>\n      Exchange\n      <br/>\n      service\n      <br/>\n      fees\n      <br/>\n      hidden\n      <br/>\n      from\n      <br/>\n      log-level\n      <br/>\n      data\n      <br/>\n      or\n      <br/>\n      aggregated\n      <br/>\n      in\n      <br/>\n      reports.\n     </td>\n<td>\n      Obscures\n      <br/>\n      true\n      <br/>\n      cost\n      <br/>\n      of\n      <br/>\n      media\n      <br/>\n      transaction.\n     </td>\n</tr>\n<tr>\n<td>\n      Post-Auction\n      <br/>\n      Bid\n      <br/>\n      Shading\n     </td>\n<td>\n      DSPs\n      <br/>\n      using\n      <br/>\n      machine\n      <br/>\n      learning\n      <br/>\n      to\n      <br/>\n      bid\n      <br/>\n      lower\n      <br/>\n      than\n      <br/>\n      the\n      <br/>\n      maximum\n      <br/>\n      win\n      <br/>\n      price\n      <br/>\n      to\n      <br/>\n      save\n      <br/>\n      the\n      <br/>\n      advertiser\n      <br/>\n      money,\n      <br/>\n      obscuring\n      <br/>\n      the\n      <br/>\n      actual\n     </td>\n<td>\n      Creates\n      <br/>\n      a\n      <br/>\n      non-transparent\n      <br/>\n      profit\n      <br/>\n      pool\n      <br/>\n      in\n      <br/>\n      the\n      <br/>\n      transaction.\n     </td>\n</tr>\n</tbody>\n</table>\n<table>\n<tbody>\n<tr>\n<th>\n</th>\n<th>\n      clearing\n      <br/>\n      price.\n     </th>\n<th>\n</th>\n</tr>\n<tr>\n<td>\n      Inventory\n      <br/>\n      Reselling\n     </td>\n<td>\n      Inventory\n      <br/>\n      sold\n      <br/>\n      and\n      <br/>\n      resold\n      <br/>\n      across\n      <br/>\n      multiple\n      <br/>\n      exchanges/networks\n      <br/>\n      before\n      <br/>\n      reaching\n      <br/>\n      the\n      <br/>\n      DSP.\n     </td>\n<td>\n      Adds\n      <br/>\n      non-essential\n      <br/>\n      tech\n      <br/>\n      fees\n      <br/>\n      and\n      <br/>\n      obscures\n      <br/>\n      the\n      <br/>\n      path\n      <br/>\n      of\n      <br/>\n      funds.\n     </td>\n</tr>\n<tr>\n<td>\n      Data\n      <br/>\n      Inconsistency\n     </td>\n<td>\n      Lack\n      <br/>\n      of\n      <br/>\n      industry\n      <br/>\n      consistency\n      <br/>\n      in\n      <br/>\n      data\n      <br/>\n      sharing\n      <br/>\n      13\n      <br/>\n      formats\n      <br/>\n      and\n      <br/>\n      log\n      <br/>\n      data.\n     </td>\n<td>\n      Prevents\n      <br/>\n      auditors\n      <br/>\n      from\n      <br/>\n      reconciling\n      <br/>\n      total\n      <br/>\n      spend\n      <br/>\n      to\n      <br/>\n      total\n      <br/>\n      publisher\n      <br/>\n      revenue.\n     </td>\n</tr>\n</tbody>\n</table>\n<h1>\n<b>\n    Chapter 5: Market Structure: The Walled Gardens vs. Independent AdTech\n   </b>\n</h1>\n<p block-type=\"Text\">\n   The digital advertising market is bifurcated into two distinct structural models: the proprietary Walled Gardens and the independent Open Web ecosystem.\n  </p>\n<h4>\n<b>\n    5.1. The Rise of Walled Gardens (WG)\n   </b>\n</h4>\n<p block-type=\"Text\">\n<b>\n    Walled Gardens\n   </b>\n   are operated by large technology platforms—primarily Google, Meta (Facebook), and Amazon—which collectively hold a dominant market position, projected to capture over 50% of the burgeoning global advertising market (forecasted to exceed $1 trillion). 35\n  </p>\n<p block-type=\"Text\">\n   These platforms are characterized by vertical integration, utilizing proprietary ad tech solutions and leveraging massive, exclusive first-party datasets derived from user search behavior, purchase history, and social interactions.\n   <sup>\n    36\n   </sup>\n   This scale and access to unique, high-quality data enable unparalleled targeting precision and superior campaign performance metrics within their domains.\n  </p>\n<h4>\n<b>\n    5.2. Operational Differences: Transparency and Data Access Constraints\n   </b>\n</h4>\n<p block-type=\"Text\">\n   The trade-off for utilizing the Walled Gardens' precision is a significant sacrifice of transparency and control. WGs operate like \"black boxes,\" revealing only aggregate-level insights for measurement and attribution, and strictly limiting client access to the underlying first-party data.\n   <sup>\n    37\n   </sup>\n   Advertisers face strict vendor lock-in, receiving a standardized solution with limited scope for customization compared to open APIs. 11\n  </p>\n<p block-type=\"Text\">\n   The rationale for this market structure rests on the price of precision versus the price of fiduciary control. Advertisers tolerate this opacity because the targeting precision often delivers superior short-term ROI. However, sophisticated advertisers are increasingly wary of sacrificing data ownership and measurement independence, creating the strategic opportunity for independent AdTech players.\n  </p>\n<h4>\n<b>\n    5.3. The Independent AdTech Ecosystem\n   </b>\n</h4>\n<p block-type=\"Text\">\n   The\n   <b>\n    Open Web\n   </b>\n   —the ecosystem of publisher websites and apps monetized by third-party ad technology—stands in direct contrast to the Walled Gardens. This ecosystem comprises independent entities including DSPs, SSPs, ad exchanges, DMPs, and identity resolution vendors. 37\n  </p>\n<p block-type=\"Text\">\n   Independent AdTech competes primarily on transparency, control, and interoperability. They provide clients with more open access to measurement and attribution data, offer superior technical support, and allow clients to maintain ownership of their first-party data, often providing log-level data for reconciliation, particularly in header bidding environments.\n   <sup>\n    11\n   </sup>\n   The Trade Desk (TTD), for instance, is a leading independent DSP that empowers buyers with a self-service, cloud-based platform utilizing advanced artificial intelligence (Koa) to enhance decisioning and efficiently extend audience reach. 38\n  </p>\n<h4>\n<b>\n    5.4. Strategic Implications of Market Consolidation\n   </b>\n</h4>\n<p block-type=\"Text\" class=\"has-continuation\">\n   The AdTech industry is undergoing a significant phase of consolidation, expected to accelerate into 2025.\n   <sup>\n    39\n   </sup>\n   This movement is driven by a convergence of technological, regulatory, and economic factors. The soaring compliance costs associated with global regulations (GDPR, CCPA) and the technical overhaul required by cookie deprecation have created insurmountable barriers to entry and survival for smaller vendors.\n   <sup>\n    39\n   </sup>\n   Companies are\n  </p>\n<p block-type=\"Text\">\n   merging to pool technical talent, unify infrastructure, and compete with bundled, full-stack offerings that rival the integrated solutions of the Walled Gardens. 39\n  </p>\n<p block-type=\"Text\">\n   For advertisers, consolidation presents a double-edged sword: while it may simplify operational complexity, it raises pressing concerns about opaque auctions, vendor lock-in, diminished transparency, and potentially rising technology fees.\n   <sup>\n    39\n   </sup>\n   Strategic preparedness necessitates adopting diversified strategies and prioritizing transparent partners to maintain agility and mitigate rising costs.\n   <sup>\n    39\n   </sup>\n   Furthermore, privacy regulations, by increasing the financial and legal overhead of data handling, functionally act as an economic catalyst for this market concentration, inadvertently reinforcing the power of large entities that can absorb these costs.\n  </p>\n<h1>\n<b>\n    Chapter 6: The Future of Identity: Privacy, Regulation, and Technological Adaptation\n   </b>\n</h1>\n<p block-type=\"Text\">\n   The deprecation of third-party cookies and global regulatory changes have initiated a profound structural re-architecture of AdTech, shifting the focus from third-party tracking to privacy-preserving identity solutions.\n  </p>\n<h3>\n<b>\n    6.1. Regulatory Pressure: Global Compliance and the Mandate for Consent\n   </b>\n</h3>\n<p block-type=\"Text\">\n   Global regulations mandate strict handling of consumer data, forcing the entire AdTech ecosystem to reevaluate collection, storage, and utilization practices. 40\n  </p>\n<p block-type=\"ListGroup\">\n</p><ul>\n<li block-type=\"ListItem\">\n<b>\n      GDPR (European Union):\n     </b>\n     Implemented in 2018, the\n     <b>\n      General Data Protection Regulation\n     </b>\n     demands explicit user consent before collecting personal data, granting users the right to access, correct, or delete their information.\n     <sup>\n      40\n     </sup>\n     This has significantly limited the methods by which companies, particularly those relying on third-party data, can collect and process information. 40\n    </li>\n<li block-type=\"ListItem\">\n<b>\n      CCPA (California):\n     </b>\n     The\n     <b>\n      California Consumer Privacy Act\n     </b>\n     similarly grants consumers control over their personal information, imposing strict scrutiny on data used by programmatic advertising, including geolocation data and browsing history. 41\n    </li>\n</ul>\n<p block-type=\"Text\">\n   Compliance requires robust technical measures, including data de-identification. However, early attempts at anonymization, such as removing directory information under HIPAA\n  </p>\n<p block-type=\"Text\">\n   standards, proved inadequate, as researchers demonstrated that \"quasi-identifiers\" (like gender or birthdate) could be combined with other data sets to re-identify individuals. 42 Modern standards demand layers of administrative and technical controls to mitigate risks across the data lifecycle. 43\n  </p>\n<h4>\n<b>\n    6.2. The Cookieless Transition and Browser-Level Changes\n   </b>\n</h4>\n<p block-type=\"Text\">\n   The phasing out of\n   <b>\n    third-party cookies\n   </b>\n   in browsers like Chrome (anticipated timeline shifts around 2025) is driven by escalating user privacy concerns.\n   <sup>\n    44\n   </sup>\n<b>\n    Cookies\n   </b>\n   are small blocks of data created by a web server and placed on the user's device to track browsing activity, store preferences, or maintain login state.\n   <sup>\n    46\n   </sup>\n<b>\n    Third-party cookies\n   </b>\n   are specifically used by ad tech vendors to track users across multiple unaffiliated websites to compile long-term records of their browsing history.\n   <sup>\n    46\n   </sup>\n   The impact of their deprecation on digital marketing is substantial: cross-site behavioral targeting becomes extremely difficult, retargeting campaigns lose efficacy, and traditional attribution models require alternative tracking solutions. 45\n  </p>\n<h4>\n<b>\n    6.3. Emerging Identity Solutions\n   </b>\n</h4>\n<p block-type=\"Text\">\n   In response to the identity crisis, several alternatives are gaining prominence:\n  </p>\n<p block-type=\"ListGroup\">\n</p><ul>\n<li block-type=\"ListItem\">\n<b>\n      Universal IDs (UIDs):\n     </b>\n     These solutions emerge as a direct replacement for third-party cookies. They use authenticated user identifiers, typically hashed email addresses, to create persistent, privacy-compliant IDs that can be used for tracking across the open web. 48\n    </li>\n<li block-type=\"ListItem\">\n<b>\n      Contextual Targeting:\n     </b>\n     This method involves placing ads based purely on the content and context of the webpage itself, rather than using personal data derived from historical user behavior.\n     <sup>\n      48\n     </sup>\n     Because contextual targeting inherently bypasses most privacy concerns, it is experiencing a significant resurgence, leveraging AI to match ad content precisely to editorial relevance. 48\n    </li>\n</ul>\n<h3>\n<b>\n    6.4. Google's Privacy Sandbox: The Mechanics of Topics API and Protected Audience API\n   </b>\n</h3>\n<p block-type=\"Text\">\n   Google's\n   <b>\n    Privacy Sandbox\n   </b>\n   is a set of standards designed to protect user privacy while allowing advertisers and publishers to maintain programmatic functionalities such as targeting, measurement, and reporting. 48\n  </p>\n<p block-type=\"ListGroup\">\n</p><ul>\n<li block-type=\"ListItem\">\n<b>\n      Protected Audience API (PAAPI):\n     </b>\n     Formerly known as FLEDGE, this API mandates a profound decentralization of the auction process. It operates by storing advertiser-defined user interest groups (e.g., \"Travel Enthusiasts\") locally on the user's device, based on on-device analysis of browsing activity.\n     <sup>\n      30\n     </sup>\n     The core function is an on-device auction, which runs locally on the browser between interest group ads and general (non-interest group) ads.\n     <sup>\n      51\n     </sup>\n     This mechanism ensures that companies cannot track individual users across the web via third-party cookies, as personal data is processed anonymously and locally. 50\n    </li>\n<li block-type=\"ListItem\">\n<b>\n      Topics API:\n     </b>\n     Provides a complementary, coarse signal about a user's recent interests to the DSP, enabling broad targeting categories without revealing specific browsing history. 50\n    </li>\n</ul>\n<p block-type=\"Text\">\n   The PAAPI represents the most defining architectural shift in recent history, transferring high-stakes audience intelligence from centralized DSP servers directly to the individual user's browser. This forces open web DSPs to transition from centralized bidding hubs to suppliers of advanced bidding algorithms designed for on-device execution. Publishers retain some control and can opt out of the PAAPI by setting Permissions-Policy HTTP headers in their responses. 51\n  </p>\n<h4>\n<b>\n    6.5. Data Collaboration: Implementing Data Clean Rooms (DCRs)\n   </b>\n</h4>\n<p block-type=\"Text\">\n<b>\n    Data Clean Rooms (DCRs)\n   </b>\n   are specialized, secure environments designed to allow multiple parties (brands, publishers, and retailers) to analyze and match their respective first-party datasets for targeting, frequency capping, measurement, and attribution purposes.\n   <sup>\n    48\n   </sup>\n   The DCR protects individual privacy by ensuring that raw Personally Identifiable Information (PII) is never exposed to external partners.\n  </p>\n<p block-type=\"Text\">\n   The DCR market is rapidly expanding due to the approaching end of third-party cookies. 48 DCRs are offered by the Walled Gardens (Google, Meta, Amazon) to measure campaigns within their ecosystems, by independent vendors, or are custom-built by large content owners and brands. 48\n  </p>\n<p block-type=\"Text\" class=\"has-continuation\">\n   DCRs are the independent ecosystem's most potent technical countermeasure against the attribution advantage held by Walled Gardens. Since Walled Gardens leverage their proprietary 1P data for closed-loop measurement (Chapter 2), the Open Web requires a privacy-compliant solution to achieve the same level of cross-platform attribution certainty.\n  </p>\n<p block-type=\"Text\">\n   DCRs provide this essential function, allowing media buyers to confidently justify budgets on the open web with verifiable, secure measurement. 49\n  </p>\n<h2>\n<b>\n    Chapter 7: Strategic Scaling and Business Growth Concepts\n   </b>\n</h2>\n<p block-type=\"Text\">\n   This final chapter connects the technical realities of AdTech execution to high-level strategic scaling models used by investors and startup founders.\n  </p>\n<h4>\n<b>\n    7.1. Viral Growth Mechanics: Defining and Calculating the K-Factor\n   </b>\n</h4>\n<p block-type=\"Text\">\n   The\n   <b>\n    K-factor\n   </b>\n   , or viral coefficient, is a critical metric borrowed from epidemiology and applied in app marketing and startup growth. It defines the organic growth rate of a product by measuring how many new users, on average, each existing user introduces to the system (K &gt; 1 signifies sustained exponential growth). 52\n  </p>\n<p block-type=\"Text\">\n   The K-factor is calculated by combining the \"contagiousness\" of the product (how many invites are sent per user) with the conversion effectiveness of each invite. A high K-factor holds profound strategic significance because it dramatically reduces a company's reliance on expensive, paid programmatic acquisition channels.\n  </p>\n<h4>\n<b>\n    7.2. The 'Hockey Stick' Analogy: Achieving Exponential Growth in AdTech\n   </b>\n</h4>\n<p block-type=\"Text\">\n   The term\n   <b>\n    'Hockey Stick Growth'\n   </b>\n   describes the ideal trajectory for high-growth businesses, characterized by an initial phase of slow, steady growth followed by a sharp and rapid increase in key metrics such as revenue or user base. This term is used because the growth curve resembles a hockey stick lying flat and then abruptly rising upward.\n  </p>\n<p block-type=\"Text\" class=\"has-continuation\">\n   Achieving this inflection point requires a strong alignment of critical factors: a defined product-market fit, capitalization on favorable market timing (such as the shift to CTV or RMNs), positive word-of-mouth, and well-executed marketing strategies. This trajectory is the\n  </p>\n<p block-type=\"Text\">\n   hallmark of a successful, high-growth business model.\n  </p>\n<h3>\n<b>\n    7.3. Operationalizing Growth: Aligning AdTech Execution with Strategic Scaling\n   </b>\n</h3>\n<p block-type=\"Text\">\n   Programmatic platforms are essential for driving the initial acquisition necessary to build momentum toward the exponential 'hockey stick' phase. DSPs facilitate precision targeting and scale, finding the specific, high-value audience segments critical for early adoption.\n  </p>\n<p block-type=\"Text\">\n   The highest strategic value is realized when a company moves beyond linear acquisition costs (CPA) and integrates programmatic targeting with viral mechanics. The true metric for sustainable growth is the effective cost of acquisition, factoring in the K-factor. If programmatic spend efficiently acquires users who possess a high K-factor, the effective cost per acquired user drops dramatically, accelerating the company's trajectory toward exponential growth. Investment in programmatic efficiency is therefore directly tied to the fundamental viral potential of the underlying product.\n  </p>\n<p block-type=\"Text\">\n   To sustain this exponential growth post-inflection, focus shifts from initial acquisition to retention, risk mitigation, and continuous innovation. In the AdTech context, this means leveraging control over 1P data via a CDP to deepen customer relationships, continuously adapting to privacy regulations, and minimizing the operational losses stemming from supply chain leakage (the Unknown Delta).\n  </p>\n<h3>\n<b>\n    Conclusions and Strategic Recommendations\n   </b>\n</h3>\n<p block-type=\"Text\">\n   The modern AdTech landscape is defined by efficiency born from complexity, where technological advancements constantly introduce new trade-offs between performance, identity, and transparency. The analysis reveals several critical, interconnected dynamics that must drive strategic planning:\n  </p>\n<p block-type=\"Text\">\n   1.\n   <b>\n    Fiduciary Imperative Over Efficiency:\n   </b>\n   The systemic failure represented by the average 15%\n   <b>\n    Unknown Delta\n   </b>\n   demonstrates that optimization for price alone is insufficient. Strategic leaders must view investment in direct supply path relationships and transparent infrastructure (like private marketplaces or custom DCRs) as a non-negotiable fiduciary cost necessary to restore trust and accountability in media spend, regardless of the perceived operational simplicity offered by opaque intermediaries.\n  </p>\n<p block-type=\"ListGroup\">\n</p><ul>\n<li block-type=\"ListItem\">\n     2.\n     <b>\n      The Identity Decentralization Threat:\n     </b>\n     Google's\n     <b>\n      Protected Audience API (PAAPI)\n     </b>\n     represents a fundamental transfer of audience targeting control from the AdTech vendor's server to the consumer's browser. The long-term success of independent DSPs hinges on their ability to transition from centralized data hubs to highly specialized\n     <b>\n      algorithm suppliers\n     </b>\n     capable of generating superior bidding logic for on-device execution. Failure to master this decentralized identity model risks complete obsolescence in the Open Web.\n    </li>\n<li block-type=\"ListItem\">\n     3.\n     <b>\n      Data Clean Rooms as the Attribution Bridge:\n     </b>\n     As Walled Gardens continue to dominate based on their superior closed-loop measurement, the independent Open Web must secure its own attribution capabilities.\n     <b>\n      Data Clean Rooms (DCRs)\n     </b>\n     offer the necessary privacy-preserving mechanism to securely match first-party data across publishers and brands, allowing media buyers to confidently justify Open Web budgets with comparable ROI certainty previously reserved for proprietary ecosystems.\n    </li>\n<li block-type=\"ListItem\">\n     4.\n     <b>\n      K-Factor as the Programmatic Multiplier:\n     </b>\n     Programmatic spend must be viewed not merely as a cost of acquisition, but as an investment in scaling viral growth. Strategic planning should prioritize utilizing the precision of DSPs and the fidelity of\n     <b>\n      First-Party Data (via CDPs)\n     </b>\n     to target lookalike audiences that exhibit a demonstrably high\n     <b>\n      K-factor\n     </b>\n     . The optimal AdTech execution accelerates the transition to the\n     <b>\n      'Hockey Stick'\n     </b>\n     phase, where the cost of acquisition is minimized by organic user referrals.\n    </li>\n</ul>\n<h4>\n<b>\n    Works cited\n   </b>\n</h4>\n<p block-type=\"ListGroup\" class=\"has-continuation\">\n</p><ul>\n<li block-type=\"ListItem\">\n     1. The Beginner's Guide to Programmatic Advertising  Digital Marketing Institute, accessed November 14, 2025,\n     <a href=\"https://digitalmarketinginstitute.com/blog/the-beginners-guide-to-programmatic-advertising\">\n      https://digitalmarketinginstitute.com/blog/the-beginners-guide-to-programmatic\n     </a>\n<a href=\"https://digitalmarketinginstitute.com/blog/the-beginners-guide-to-programmatic-advertising\">\n      -advertising\n     </a>\n</li>\n<li block-type=\"ListItem\">\n     2. Comparing CTR, CPV, CPA, CPC &amp; CPM: A Guide to Ad Metrics  Pathlabs, accessed November 14, 2025,\n     <a href=\"https://www.pathlabs.com/blog/cpm-vs-cpc-vs-cpa\">\n      https://www.pathlabs.com/blog/cpm-vs-cpc-vs-cpa\n     </a>\n</li>\n<li block-type=\"ListItem\">\n     3. The Evolution of Programmatic Advertising  Gourmet Ads, accessed November 14, 2025,\n     <a href=\"https://www.gourmetads.com/articles/the-evolution-of-programmatic-advertising/\">\n      https://www.gourmetads.com/articles/the-evolution-of-programmatic-advertisin\n     </a>\n<a href=\"https://www.gourmetads.com/articles/the-evolution-of-programmatic-advertising/\">\n      g/\n     </a>\n</li>\n<li block-type=\"ListItem\">\n     4. Ad Networks vs Ad Exchanges: The History of Programmatic Advertising  AdButler, accessed November 14, 2025,\n     <a href=\"https://www.adbutler.com/blog/article/ad-networks-vs-ad-exchanges-the-history-of-programmatic-advertising/\">\n      https://www.adbutler.com/blog/article/ad-networks-vs-ad-exchanges-the-histor\n     </a>\n<a href=\"https://www.adbutler.com/blog/article/ad-networks-vs-ad-exchanges-the-history-of-programmatic-advertising/\">\n      y-of-programmatic-advertising/\n     </a>\n</li>\n<li block-type=\"ListItem\">\n     5. The History of Programmatic Advertising: From Banner Ads to AI-Driven Campaigns - Agility, accessed November 14, 2025,\n     <a href=\"https://agilityads.com/blog/history-of-programmatic-advertising\">\n      https://agilityads.com/blog/history-of-programmatic-advertising\n     </a>\n</li>\n<li block-type=\"ListItem\">\n     6. What is a Retail Media Network and Why is it Important?  Amazon Ads, accessed November 14, 2025,\n     <a href=\"https://advertising.amazon.com/blog/retail-media-networks\">\n      https://advertising.amazon.com/blog/retail-media-networks\n     </a>\n</li>\n<li block-type=\"ListItem\">\n     7. DSP vs SSP: Programmatic Advertising Guide 2025  Improvado, accessed November 14, 2025,\n     <a href=\"https://improvado.io/blog/dsp-vs-ssp-programmatic-guide\">\n      https://improvado.io/blog/dsp-vs-ssp-programmatic-guide\n     </a>\n</li>\n</ul>\n<p block-type=\"ListGroup\">\n</p><ul>\n<li block-type=\"ListItem\">\n     8. DSP, SSP, and Ad Exchange: What's the Difference?  MNTN, accessed November 14, 2025,\n     <a href=\"https://mountain.com/blog/dsp-ssp-ad-exchange/\">\n      https://mountain.com/blog/dsp-ssp-ad-exchange/\n     </a>\n</li>\n<li block-type=\"ListItem\">\n     9. Fact Sheet | The Trade Desk, accessed November 14, 2025,\n     <a href=\"https://www.thetradedesk.com/assets/general/TTD-Fact-Sheet_121718.pdf\">\n      https://www.thetradedesk.com/assets/general/TTD-Fact-Sheet_121718.pdf\n     </a>\n</li>\n<li block-type=\"ListItem\">\n     10. The Future of Header Bidding: Is It Still the Best Option?  Lupon Media, accessed November 14, 2025,\n     <a href=\"https://luponmedia.com/2025/02/11/the-future-of-header-bidding-is-it-still-the-best-option/\">\n      https://luponmedia.com/2025/02/11/the-future-of-header-bidding-is-it-still-the\n     </a>\n<a href=\"https://luponmedia.com/2025/02/11/the-future-of-header-bidding-is-it-still-the-best-option/\">\n      best-option/\n     </a>\n</li>\n<li block-type=\"ListItem\">\n     11. The Evolution of Programmatic Header Bidding: A Comprehensive Overview  Newor Media, accessed November 14, 2025,\n     <a href=\"https://newormedia.com/blog/evolution_of_programmatic_header_bidding/\">\n      https://newormedia.com/blog/evolution_of_programmatic_header_bidding/\n     </a>\n</li>\n<li block-type=\"ListItem\">\n     12. Header Bidding vs RTB: Maximizing Your Ad Revenue Strategy  Waytogrow, accessed November 14, 2025,\n    </li>\n</ul>\n<p block-type=\"Text\">\n<a href=\"https://www.waytogrow.com/blog/header-bidding-vs-rtb/\">\n    https://www.waytogrow.com/blog/header-bidding-vs-rtb/\n   </a>\n</p>\n<p block-type=\"ListGroup\">\n</p><ul>\n<li block-type=\"ListItem\">\n     13. Header Bidding vs Real-Time Bidding (RTB): What's the Difference?  MNTN, accessed November 14, 2025,\n     <a href=\"https://mountain.com/blog/header-bidding-vs-rtb/\">\n      https://mountain.com/blog/header-bidding-vs-rtb/\n     </a>\n</li>\n<li block-type=\"ListItem\">\n     14. Client-Side vs Server-Side Header Bidding: Pros and Cons  Clearcode Blog, accessed November 14, 2025,\n     <a href=\"https://clearcode.cc/blog/pros-cons-client-side-server-side-header-bidding/\">\n      https://clearcode.cc/blog/pros-cons-client-side-server-side-header-bidding/\n     </a>\n</li>\n<li block-type=\"ListItem\">\n     15. Header Bidding: Client vs Server-side  DV Publisher Suite, accessed November 14, 2025,\n     <a href=\"https://pub.doubleverify.com/blog/deciding-between-client-and-server-side-header-bidding/\">\n      https://pub.doubleverify.com/blog/deciding-between-client-and-server-side-hea\n     </a>\n</li>\n</ul>\n<p block-type=\"Text\">\n<a href=\"https://pub.doubleverify.com/blog/deciding-between-client-and-server-side-header-bidding/\">\n    der-bidding/\n   </a>\n</p>\n<p block-type=\"ListGroup\" class=\"has-continuation\">\n</p><ul>\n<li block-type=\"ListItem\">\n     16. Understanding the Work of Data Brokers and Their Impact on Data Privacy  TrustArc, accessed November 14, 2025,\n     <a href=\"https://trustarc.com/resource/data-brokers-impact-data-privacy/\">\n      https://trustarc.com/resource/data-brokers-impact-data-privacy/\n     </a>\n</li>\n<li block-type=\"ListItem\">\n     17. A Complete Guide to CPM Vs CPC Vs CPA Vs CPI Vs CPV  Publift, accessed November 14, 2025,\n     <a href=\"https://www.publift.com/adteach/what-are-cpm-cpc-cpa-ctr\">\n      https://www.publift.com/adteach/what-are-cpm-cpc-cpa-ctr\n     </a>\n</li>\n<li block-type=\"ListItem\">\n     18. Advertising ID  Wikipedia, accessed November 14, 2025,\n     <a href=\"https://en.wikipedia.org/wiki/Advertising_ID\">\n      https://en.wikipedia.org/wiki/Advertising_ID\n     </a>\n</li>\n<li block-type=\"ListItem\">\n     19. Ad Fraud and Viewability  The AdTech Book by Clearcode, accessed November 14, 2025,\n     <a href=\"https://adtechbook.clearcode.cc/ad-fraud-and-viewability/\">\n      https://adtechbook.clearcode.cc/ad-fraud-and-viewability/\n     </a>\n</li>\n<li block-type=\"ListItem\">\n     20. First, Second and Third-Party Data: How Are They Different?  CDP.com, accessed November 14, 2025,\n     <a href=\"https://cdp.com/articles/the-difference-between-first-party-second-party-and-third-party-data/\">\n      https://cdp.com/articles/the-difference-between-first-party-second-party-and-t\n     </a>\n<a href=\"https://cdp.com/articles/the-difference-between-first-party-second-party-and-third-party-data/\">\n      hird-party-data/\n     </a>\n</li>\n<li block-type=\"ListItem\">\n     21. Global ad revenue to top $1 trillion, dominated by Google and Meta | MarTech, accessed November 14, 2025,\n     <a href=\"https://martech.org/global-ad-revenue-to-top-1-trillion-dominated-by-google-and-meta/\">\n      https://martech.org/global-ad-revenue-to-top-1-trillion-dominated-by-google-a\n     </a>\n<a href=\"https://martech.org/global-ad-revenue-to-top-1-trillion-dominated-by-google-and-meta/\">\n      nd-meta/\n     </a>\n</li>\n<li block-type=\"ListItem\">\n     22. 'Murky programmatic delta': 88% of ads can't be tracked says new PwC, ISBA investigation, accessed November 14, 2025,\n     <a href=\"https://www.mi-3.com.au/07-05-2020/murky-programmatic-delta-88-ads-cant-be-tracked-says-new-pwc-isba-investigation\">\n      https://www.mi-3.com.au/07-05-2020/murky-programmatic-delta-88-ads-cant\n     </a>\n<a href=\"https://www.mi-3.com.au/07-05-2020/murky-programmatic-delta-88-ads-cant-be-tracked-says-new-pwc-isba-investigation\">\n      be-tracked-says-new-pwc-isba-investigation\n     </a>\n</li>\n</ul>\n<p block-type=\"ListGroup\">\n</p><ul>\n<li block-type=\"ListItem\">\n     23. Problems with Programmatic Advertising: Exploring the Unknown Delta  PubMatic, accessed November 14, 2025,\n     <a href=\"https://pubmatic.com/news/exploring-the-unknown-delta-where-15-of-ad-dollars-vanish/\">\n      https://pubmatic.com/news/exploring-the-unknown-delta-where-15-of-ad-dollar\n     </a>\n<a href=\"https://pubmatic.com/news/exploring-the-unknown-delta-where-15-of-ad-dollars-vanish/\">\n      s-vanish/\n     </a>\n</li>\n<li block-type=\"ListItem\">\n     24. The marketer's guide to first-party data  AppsFlyer, accessed November 14, 2025,\n     <a href=\"https://www.appsflyer.com/resources/guides/marketers-first-party-data/\">\n      https://www.appsflyer.com/resources/guides/marketers-first-party-data/\n     </a>\n</li>\n<li block-type=\"ListItem\">\n     25. Advertising ID  Play Console Help  Google Help, accessed November 14, 2025,\n     <a href=\"https://support.google.com/googleplay/android-developer/answer/6048248?hl=en\">\n      https://support.google.com/googleplay/android-developer/answer/6048248?hl=e\n     </a>\n<a href=\"https://support.google.com/googleplay/android-developer/answer/6048248?hl=en\">\n      n\n     </a>\n</li>\n<li block-type=\"ListItem\">\n     26. Walled Gardens in Advertising Explained | LiveRamp, accessed November 14, 2025,\n     <a href=\"https://liveramp.uk/walled-gardens-advertising-explained/\">\n      https://liveramp.uk/walled-gardens-advertising-explained/\n     </a>\n</li>\n<li block-type=\"ListItem\">\n     27. Data Brokers  EPIC  Electronic Privacy Information Center, accessed November 14, 2025,\n     <a href=\"https://epic.org/issues/consumer-privacy/data-brokers/\">\n      https://epic.org/issues/consumer-privacy/data-brokers/\n     </a>\n</li>\n<li block-type=\"ListItem\">\n     28. CDP vs DMP  Oracle, accessed November 14, 2025,\n     <a href=\"https://www.oracle.com/cx/customer-data-platform/what-is-cdp/cdp-vs-dmp/\">\n      https://www.oracle.com/cx/customer-data-platform/what-is-cdp/cdp-vs-dmp/\n     </a>\n</li>\n<li block-type=\"ListItem\">\n     29. What is Ads.txt and How Does It Work?  SmartyAds, accessed November 14, 2025,\n     <a href=\"https://smartyads.com/blog/the-new-standard-of-programmatic-security-ads-txt\">\n      https://smartyads.com/blog/the-new-standard-of-programmatic-security-ads-tx\n     </a>\n<a href=\"https://smartyads.com/blog/the-new-standard-of-programmatic-security-ads-txt\">\n      t\n     </a>\n</li>\n<li block-type=\"ListItem\">\n     30. Protected Audience API and AdSense  Google Help, accessed November 14, 2025,\n     <a href=\"https://support.google.com/adsense/answer/12570693?hl=en\">\n      https://support.google.com/adsense/answer/12570693?hl=en\n     </a>\n</li>\n<li block-type=\"ListItem\">\n     31. Why First-Party Data is Important and How Marketers Can Collect and Use it, accessed November 14, 2025,\n     <a href=\"https://digitalmarketinginstitute.com/blog/why-first-party-data-is-more-important-than-ever-and-how-to-use-it\">\n      https://digitalmarketinginstitute.com/blog/why-first-party-data-is-more-importan\n     </a>\n<a href=\"https://digitalmarketinginstitute.com/blog/why-first-party-data-is-more-important-than-ever-and-how-to-use-it\">\n      t-than-ever-and-how-to-use-it\n     </a>\n</li>\n<li block-type=\"ListItem\">\n     32. The Consolidation of Ad Tech in 2025  BRAVE | The person behind the pixel, accessed November 14, 2025,\n     <a href=\"https://www.thebrave.io/programmatic-trends/the-consolidation-of-ad-tech-in-2025-what-it-means-for-advertisers/\">\n      https://www.thebrave.io/programmatic-trends/the-consolidation-of-ad-tech-in-2\n     </a>\n<a href=\"https://www.thebrave.io/programmatic-trends/the-consolidation-of-ad-tech-in-2025-what-it-means-for-advertisers/\">\n      025-what-it-means-for-advertisers/\n     </a>\n</li>\n<li block-type=\"ListItem\">\n     33. Common Challenges in Programmatic Header Bidding and How to Overcome Them, accessed November 14, 2025,\n     <a href=\"https://newormedia.com/blog/challenges-in-programmatic-header-bidding-and-how-to-overcome/\">\n      https://newormedia.com/blog/challenges-in-programmatic-header-bidding-and\n     </a>\n<a href=\"https://newormedia.com/blog/challenges-in-programmatic-header-bidding-and-how-to-overcome/\">\n      how-to-overcome/\n     </a>\n</li>\n<li block-type=\"ListItem\">\n     34. Retail media networks: what they are, how they work, and why they matter in 2026, accessed November 14, 2025,\n     <a href=\"https://www.aidigital.com/blog/retail-media-networks\">\n      https://www.aidigital.com/blog/retail-media-networks\n     </a>\n</li>\n<li block-type=\"ListItem\">\n     35. The Cookieless Future is Here: What Marketers Need to Know in 2025  emfluence, accessed November 14, 2025,\n     <a href=\"https://emfluence.com/blog/the-cookieless-future-is-here-what-marketers-need-to-know-in-2025\">\n      https://emfluence.com/blog/the-cookieless-future-is-here-what-marketers-need\n     </a>\n<a href=\"https://emfluence.com/blog/the-cookieless-future-is-here-what-marketers-need-to-know-in-2025\">\n      -to-know-in-2025\n     </a>\n</li>\n<li block-type=\"ListItem\">\n     36. Do we still need to prepare for a cookieless future or not?  Decentriq, accessed November 14, 2025,\n     <a href=\"https://www.decentriq.com/article/should-you-be-preparing-for-a-cookieless-world\">\n      https://www.decentriq.com/article/should-you-be-preparing-for-a-cookieless-w\n     </a>\n<a href=\"https://www.decentriq.com/article/should-you-be-preparing-for-a-cookieless-world\">\n      orld\n     </a>\n</li>\n<li block-type=\"ListItem\">\n     37. accessed November 14, 2025,\n    </li>\n</ul>\n<p block-type=\"Text\">\n<a href=\"https://cdp.com/articles/the-difference-between-first-party-second-party-and-third-party-data/#:~:text=Customer%20data%20comes%20in%20all,one%E2%80%94zero%2Dparty%20data.\">\n    https://cdp.com/articles/the-difference-between-first-party-second-party-and-t\n   </a>\n<a href=\"https://cdp.com/articles/the-difference-between-first-party-second-party-and-third-party-data/#:~:text=Customer%20data%20comes%20in%20all,one%E2%80%94zero%2Dparty%20data.\">\n    hird-party-data/#:~:text=Customer%20data%20comes%20in%20all,one%E2%80\n   </a>\n<a href=\"https://cdp.com/articles/the-difference-between-first-party-second-party-and-third-party-data/#:~:text=Customer%20data%20comes%20in%20all,one%E2%80%94zero%2Dparty%20data.\">\n    %94zero%2Dparty%20data.\n   </a>\n</p>\n<p block-type=\"ListGroup\">\n</p><ul>\n<li block-type=\"ListItem\">\n     38. ISBA PROGRAMMATIC SUPPLY CHAIN TRANSPARENCY STUDY, accessed November 14, 2025,\n     <a href=\"https://www.isba.org.uk/system/files/media/documents/2020-12/executive-summary-programmatic-supply-chain-transparency-study.pdf\">\n      https://www.isba.org.uk/system/files/media/documents/2020-12/executive-summ\n     </a>\n<a href=\"https://www.isba.org.uk/system/files/media/documents/2020-12/executive-summary-programmatic-supply-chain-transparency-study.pdf\">\n      ary-programmatic-supply-chain-transparency-study.pdf\n     </a>\n</li>\n<li block-type=\"ListItem\">\n     39. What is viewability | AppsFlyer mobile glossary, accessed November 14, 2025,\n     <a href=\"https://www.appsflyer.com/glossary/viewability/\">\n      https://www.appsflyer.com/glossary/viewability/\n     </a>\n</li>\n<li block-type=\"ListItem\">\n     40. CDP vs DMP: How They're Different + Which Is Right for You | Twilio Segment, accessed November 14, 2025,\n     <a href=\"https://segment.com/resources/cdp/cdp-vs-dmp/\">\n      https://segment.com/resources/cdp/cdp-vs-dmp/\n     </a>\n</li>\n<li block-type=\"ListItem\">\n     41. The Impact of Privacy Regulations in Ad Tech in 2025  Aditude, accessed November 14, 2025,\n     <a href=\"https://www.aditude.com/blog/the-impact-of-privacy-regulations-in-ad-tech-in-2025\">\n      https://www.aditude.com/blog/the-impact-of-privacy-regulations-in-ad-tech-in-\n     </a>\n</li>\n<li block-type=\"ListItem\">\n<a href=\"https://www.aditude.com/blog/the-impact-of-privacy-regulations-in-ad-tech-in-2025\">\n      2025\n     </a>\n     42. Data clean rooms: What they are and how they benefits marketers and advertisers, accessed November 14, 2025,\n     <a href=\"https://www.emarketer.com/learningcenter/guides/definition-data-clean-rooms/\">\n      https://www.emarketer.com/learningcenter/guides/definition-data-clean-rooms/\n     </a>\n</li>\n<li block-type=\"ListItem\">\n     43. A new standard for anonymization  IAPP, accessed November 14, 2025,\n     <a href=\"https://iapp.org/news/a/a-new-standard-for-anonymization\">\n      https://iapp.org/news/a/a-new-standard-for-anonymization\n     </a>\n</li>\n<li block-type=\"ListItem\">\n     44. What is a Data Clean Room and How Does It Work?  Avenga, accessed November 14, 2025,\n     <a href=\"https://www.avenga.com/magazine/data-clean-room/\">\n      https://www.avenga.com/magazine/data-clean-room/\n     </a>\n</li>\n<li block-type=\"ListItem\">\n     45. What is K-factor? | AppsFlyer marketing glossary, accessed November 14, 2025,\n     <a href=\"https://www.appsflyer.com/glossary/k-factor/\">\n      https://www.appsflyer.com/glossary/k-factor/\n     </a>\n</li>\n<li block-type=\"ListItem\">\n     46. ads.txt Specification Version 1.0.3  IAB Tech Lab, accessed November 14, 2025,\n     <a href=\"https://iabtechlab.com/wp-content/uploads/2021/03/ads.txt-1.0.3.pdf\">\n      https://iabtechlab.com/wp-content/uploads/2021/03/ads.txt-1.0.3.pdf\n     </a>\n</li>\n<li block-type=\"ListItem\">\n     47. What is K-Factor  Unity, accessed November 14, 2025,\n     <a href=\"https://unity.com/glossary/k-factor\">\n      https://unity.com/glossary/k-factor\n     </a>\n</li>\n<li block-type=\"ListItem\">\n     48. California Consumer Privacy Act (CCPA): The Definitive Guide  Kevel, accessed November 14, 2025,\n     <a href=\"https://www.kevel.com/blog/ccpa-ad-tech\">\n      https://www.kevel.com/blog/ccpa-ad-tech\n     </a>\n</li>\n<li block-type=\"ListItem\">\n     49. Anonymity, De-Identification, and the Accuracy of Data | Harvard Online, accessed November 14, 2025,\n     <a href=\"https://harvardonline.harvard.edu/blog/anonymity-de-identification-accuracy-data\">\n      https://harvardonline.harvard.edu/blog/anonymity-de-identification-accuracy-dat\n     </a>\n<a href=\"https://harvardonline.harvard.edu/blog/anonymity-de-identification-accuracy-data\">\n      a\n     </a>\n</li>\n<li block-type=\"ListItem\">\n     50. What is Protected Audience API?  Publift, accessed November 14, 2025,\n     <a href=\"https://www.publift.com/blog/protected-audience-api\">\n      https://www.publift.com/blog/protected-audience-api\n     </a>\n</li>\n<li block-type=\"ListItem\">\n     51. The Rise of Google, Meta, Amazon, and Youtube in Advertising  Quartr, accessed November 14, 2025,\n     <a href=\"https://quartr.com/insights/company-research/the-rise-of-google-meta-amazon-and-youtube-in-advertising\">\n      https://quartr.com/insights/company-research/the-rise-of-google-meta-amazon\n     </a>\n<a href=\"https://quartr.com/insights/company-research/the-rise-of-google-meta-amazon-and-youtube-in-advertising\">\n      and-youtube-in-advertising\n     </a>\n</li>\n<li block-type=\"ListItem\">\n     52. What does Hockey Stick Growth mean?  Landon Howell, accessed November 14, 2025,\n     <a href=\"https://www.landonhowell.com/startup-jargon/hockey-stick-growth\">\n      https://www.landonhowell.com/startup-jargon/hockey-stick-growth\n     </a>\n</li>\n</ul>\n</div></div>",
     "metadata": {
       "word_count": 7504,
       "reading_time": "38 min read",
       "site_name": "readwise-upload-pdf",
       "cover_image": "https://readwise-assets.s3.amazonaws.com/media/reader/parsed_document_assets/387584459/kbsnxKPhDtQ1-FRYVyziyCxUDMP3IrAy570oOv-Xvio-cove_tS70Js6.png",
       "reading_progress": 0.039336187417899404,
-      "last_fetched": "2026-01-22T02:19:50.940Z"
+      "last_fetched": "2026-01-23T02:09:27.888Z"
     }
   },
   {
@@ -2451,7 +2584,7 @@
       "reading_time": "2 min read",
       "site_name": "simonwillison.net",
       "cover_image": "https://static.simonwillison.net/static/2025/gpt-5-pelican.png",
-      "last_fetched": "2026-01-22T02:19:50.940Z"
+      "last_fetched": "2026-01-23T02:09:27.888Z"
     }
   },
   {
@@ -2472,7 +2605,7 @@
       "reading_time": "4 min read",
       "site_name": "McSweeney's Internet Tendency",
       "cover_image": "http://tendency-prod.nyc3.cdn.digitaloceanspaces.com/eax6aqylo1aeta3aemdazof1d76m",
-      "last_fetched": "2026-01-22T02:19:50.940Z"
+      "last_fetched": "2026-01-23T02:09:27.888Z"
     }
   },
   {
@@ -2492,7 +2625,7 @@
       "reading_time": "18 min read",
       "site_name": "readwise-upload-pdf",
       "cover_image": "https://readwise-assets.s3.amazonaws.com/media/reader/parsed_document_assets/385805432/wemsjIOjjtFV_Eho5JLN_ZV2LUpGA9jfXDldeewPpgA-cove_KuOyRnB.png",
-      "last_fetched": "2026-01-22T02:19:50.940Z"
+      "last_fetched": "2026-01-23T02:09:27.888Z"
     }
   },
   {
@@ -2511,7 +2644,7 @@
       "word_count": 22,
       "reading_time": "1 min read",
       "site_name": "Medium",
-      "last_fetched": "2026-01-22T02:19:50.940Z"
+      "last_fetched": "2026-01-23T02:09:27.888Z"
     }
   },
   {
@@ -2532,7 +2665,7 @@
       "word_count": 737,
       "reading_time": "4 min read",
       "site_name": "bollier.org",
-      "last_fetched": "2026-01-22T02:19:50.940Z"
+      "last_fetched": "2026-01-23T02:09:27.888Z"
     }
   },
   {
@@ -2552,7 +2685,7 @@
       "reading_time": "4 min read",
       "site_name": "justice.gov",
       "cover_image": "https://www.justice.gov/themes/custom/usdoj_uswds/images/metatag-image--press-release.png",
-      "last_fetched": "2026-01-22T02:19:50.940Z"
+      "last_fetched": "2026-01-23T02:09:27.888Z"
     }
   },
   {
@@ -2574,7 +2707,7 @@
       "word_count": 1300,
       "reading_time": "7 min read",
       "site_name": "EngSec Labs",
-      "last_fetched": "2026-01-22T02:19:50.940Z"
+      "last_fetched": "2026-01-23T02:09:27.888Z"
     }
   },
   {
@@ -2597,7 +2730,7 @@
       "site_name": "Anchore",
       "cover_image": "https://anchore.com/wp-content/uploads/2023/03/image7.png",
       "reading_progress": 0.841794613445493,
-      "last_fetched": "2026-01-22T02:19:50.940Z"
+      "last_fetched": "2026-01-23T02:09:27.888Z"
     }
   },
   {
@@ -2620,7 +2753,7 @@
       "site_name": "resilientcyber.io",
       "cover_image": "https://substackcdn.com/image/fetch/w_1200,h_600,c_fill,f_jpg,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F8d539da4-c808-4b5d-a2e0-84bd88b7c2cd_1220x1368.png",
       "reading_progress": 1,
-      "last_fetched": "2026-01-22T02:19:50.940Z"
+      "last_fetched": "2026-01-23T02:09:27.888Z"
     }
   },
   {
@@ -2643,7 +2776,7 @@
       "site_name": "New York Times",
       "cover_image": "https://static01.nyt.com/newsgraphics/images/icons/defaultPromoCrop.png?year=2001",
       "reading_progress": 1,
-      "last_fetched": "2026-01-22T02:19:50.940Z"
+      "last_fetched": "2026-01-23T02:09:27.888Z"
     }
   },
   {
@@ -2667,7 +2800,7 @@
       "site_name": "Check Point Research",
       "cover_image": "https://research.checkpoint.com/wp-content/uploads/2025/02/bybit-1092x624px.jpg",
       "reading_progress": 1,
-      "last_fetched": "2026-01-22T02:19:50.940Z"
+      "last_fetched": "2026-01-23T02:09:27.888Z"
     }
   },
   {
@@ -2688,7 +2821,7 @@
       "reading_time": "23 min read",
       "site_name": "codegood.co",
       "reading_progress": 0.9956414588973693,
-      "last_fetched": "2026-01-22T02:19:50.940Z"
+      "last_fetched": "2026-01-23T02:09:27.888Z"
     }
   },
   {
@@ -2710,7 +2843,7 @@
       "reading_time": "22 min read",
       "site_name": "codegood.co",
       "reading_progress": 0.9925275321316551,
-      "last_fetched": "2026-01-22T02:19:50.940Z"
+      "last_fetched": "2026-01-23T02:09:27.888Z"
     }
   },
   {
@@ -2728,7 +2861,7 @@
       "reading_time": "14 min read",
       "site_name": "The Atlantic",
       "cover_image": "https://cdn.theatlantic.com/thumbor/iNkQfPvzvk5IDIM5Txol81mAoJk=/440x0:1562x1403/648x810/media/img/2023/09/28/CC_Kirsch_VonNeumannHP/original.jpg",
-      "last_fetched": "2026-01-22T02:19:50.940Z"
+      "last_fetched": "2026-01-23T02:09:27.888Z"
     }
   },
   {
@@ -2749,7 +2882,7 @@
       "site_name": "The Spectator",
       "cover_image": "https://www.spectator.co.uk/wp-content/uploads/2021/10/Von-Neumann.jpg",
       "reading_progress": 1,
-      "last_fetched": "2026-01-22T02:19:50.940Z"
+      "last_fetched": "2026-01-23T02:09:27.888Z"
     }
   },
   {
@@ -2770,7 +2903,7 @@
       "reading_time": "89 min read",
       "site_name": "sofiatopia.org",
       "reading_progress": 0.9990946879554785,
-      "last_fetched": "2026-01-22T02:19:50.940Z"
+      "last_fetched": "2026-01-23T02:09:27.888Z"
     }
   },
   {
@@ -2791,7 +2924,7 @@
       "reading_time": "32 min read",
       "site_name": "Colossus - Business Podcasts",
       "cover_image": "https://joincolossus.com/wp-content/uploads/2025/11/Cursor-preview-card.jpg",
-      "last_fetched": "2026-01-22T02:19:50.940Z"
+      "last_fetched": "2026-01-23T02:09:27.888Z"
     }
   },
   {
@@ -2814,7 +2947,7 @@
       "site_name": "matthew-shaw.github.io",
       "cover_image": "https://matthew-shaw.github.io/assets/images/social/blog/posts/lean-wastes.png",
       "reading_progress": 0.6811887835968172,
-      "last_fetched": "2026-01-22T02:19:50.940Z"
+      "last_fetched": "2026-01-23T02:09:27.888Z"
     }
   },
   {
@@ -2836,7 +2969,7 @@
       "site_name": "whitney.org",
       "cover_image": "https://whitneymedia.org/assets/image/830136/large_holly_herndon.jpg",
       "reading_progress": 1,
-      "last_fetched": "2026-01-22T02:19:50.940Z"
+      "last_fetched": "2026-01-23T02:09:27.888Z"
     }
   },
   {
@@ -2860,7 +2993,7 @@
       "site_name": "substack.com",
       "cover_image": "https://substackcdn.com/image/fetch/$s_!9QZn!,w_1200,h_600,c_fill,f_jpg,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F5109c958-0b2d-4ca3-9aa0-a87b80f422dd_1956x1592.png",
       "reading_progress": 0.9310575031661938,
-      "last_fetched": "2026-01-22T02:19:50.940Z"
+      "last_fetched": "2026-01-23T02:09:27.888Z"
     }
   },
   {
@@ -2883,7 +3016,7 @@
       "reading_time": "28 min read",
       "site_name": "frankchimero.com",
       "reading_progress": 0.02308370125386589,
-      "last_fetched": "2026-01-22T02:19:50.940Z"
+      "last_fetched": "2026-01-23T02:09:27.888Z"
     }
   },
   {
@@ -2906,7 +3039,7 @@
       "site_name": "Medium",
       "cover_image": "https://miro.medium.com/v2/resize:fit:1200/1*eFcWkhqwW4tlCux10hD3gw.png",
       "reading_progress": 0.9081500505968515,
-      "last_fetched": "2026-01-22T02:19:50.940Z"
+      "last_fetched": "2026-01-23T02:09:27.888Z"
     }
   },
   {
@@ -2930,7 +3063,7 @@
       "site_name": "linkedin.com",
       "cover_image": "https://media.licdn.com/dms/image/sync/v2/D4E27AQE33_aGxur2FQ/articleshare-shrink_1280_800/B4EZpIiDD_IUAQ-/0/1762153478278?e=2147483647&v=beta&t=Dej-O_Hu1KRAMchccb4WlIX57Gp6o2GKwe4wSgwI7ow",
       "reading_progress": 0.869256154830599,
-      "last_fetched": "2026-01-22T02:19:50.940Z"
+      "last_fetched": "2026-01-23T02:09:27.888Z"
     }
   },
   {
@@ -2951,7 +3084,7 @@
       "site_name": "linkedin.com",
       "cover_image": "https://media.licdn.com/dms/image/v2/D4E22AQFi1r1TdOdpkQ/feedshare-shrink_2048_1536/B4EZoGmQFXKsAw-/0/1761047283005?e=2147483647&v=beta&t=nqsE2YVVRJYYe1kUWcoFWCP5AwnziGXVdYw6PDDlRTg",
       "reading_progress": 1,
-      "last_fetched": "2026-01-22T02:19:50.940Z"
+      "last_fetched": "2026-01-23T02:09:27.888Z"
     }
   },
   {
@@ -2973,7 +3106,7 @@
       "reading_time": "24 min read",
       "site_name": "readwise-upload-epub",
       "reading_progress": 0.6786467654230761,
-      "last_fetched": "2026-01-22T02:19:50.940Z"
+      "last_fetched": "2026-01-23T02:09:27.888Z"
     }
   },
   {
@@ -2994,7 +3127,7 @@
       "site_name": "Big Think",
       "cover_image": "https://bigthink.com/wp-content/uploads/2022/11/BT_thumb_template-54.jpg?resize=1200,630",
       "reading_progress": 0.43471706882996286,
-      "last_fetched": "2026-01-22T02:19:50.940Z"
+      "last_fetched": "2026-01-23T02:09:27.888Z"
     }
   },
   {
@@ -3009,7 +3142,7 @@
       "classic"
     ],
     "metadata": {
-      "last_fetched": "2026-01-22T02:19:50.940Z"
+      "last_fetched": "2026-01-23T02:09:27.888Z"
     }
   },
   {
@@ -3031,7 +3164,7 @@
       "reading_time": "16 min read",
       "site_name": "I, Cringely - on technology",
       "reading_progress": 1,
-      "last_fetched": "2026-01-22T02:19:50.940Z"
+      "last_fetched": "2026-01-23T02:09:27.888Z"
     }
   },
   {
@@ -3051,7 +3184,7 @@
       "word_count": 1263,
       "reading_time": "7 min read",
       "site_name": "fourmilab.ch",
-      "last_fetched": "2026-01-22T02:19:50.940Z"
+      "last_fetched": "2026-01-23T02:09:27.888Z"
     }
   },
   {
@@ -3073,7 +3206,7 @@
       "site_name": "joemag.dev",
       "cover_image": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg0Ko_HfgsgHZCIIbQddBTTVrGcFC2QEu7h8UJDmFaGqhFQ_qJzIQivqwT5RwSHKehkNkRwqpCbgPcPJFYDhoasKRlgO7ulFZfqFM9mXIjdqHyYjc7Z4A9NsA6rE735nuWbVpi192DzFcJqK92sHVHptZHh36-KxbO8yPUSA2E9KA9sjR-DgaRzypvZqQ0/w1200-h630-p-k-no-nu/Screenshot%202025-10-22%20at%206.38.56%E2%80%AFPM.png",
       "reading_progress": 0.9815895131844721,
-      "last_fetched": "2026-01-22T02:19:50.940Z"
+      "last_fetched": "2026-01-23T02:09:27.888Z"
     }
   },
   {
@@ -3095,7 +3228,7 @@
       "site_name": "A Space to Think: Notes on Software Development",
       "cover_image": "https://substackcdn.com/image/fetch/$s_!DSuu!,w_1200,h_600,c_fill,f_jpg,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F386428a1-9461-4e8f-979a-ad01557460fb_1024x1024.png",
       "reading_progress": 0.979453900899685,
-      "last_fetched": "2026-01-22T02:19:50.940Z"
+      "last_fetched": "2026-01-23T02:09:27.888Z"
     }
   },
   {
@@ -3119,7 +3252,7 @@
       "site_name": "The Security Brutalist",
       "cover_image": "http://securitybrutalist.com/brutalist-black.png",
       "reading_progress": 1,
-      "last_fetched": "2026-01-22T02:19:50.940Z"
+      "last_fetched": "2026-01-23T02:09:27.888Z"
     }
   },
   {
@@ -3135,7 +3268,7 @@
       "prodsec"
     ],
     "metadata": {
-      "last_fetched": "2026-01-22T02:19:50.940Z"
+      "last_fetched": "2026-01-23T02:09:27.888Z"
     }
   },
   {
@@ -3157,7 +3290,7 @@
       "reading_time": "4 min read",
       "site_name": "virginia.edu",
       "reading_progress": 1,
-      "last_fetched": "2026-01-22T02:19:50.940Z"
+      "last_fetched": "2026-01-23T02:09:27.888Z"
     }
   },
   {
@@ -3172,7 +3305,7 @@
       "tool"
     ],
     "metadata": {
-      "last_fetched": "2026-01-22T02:19:50.940Z"
+      "last_fetched": "2026-01-23T02:09:27.888Z"
     }
   },
   {
@@ -3187,7 +3320,7 @@
       "tool"
     ],
     "metadata": {
-      "last_fetched": "2026-01-22T02:19:50.940Z"
+      "last_fetched": "2026-01-23T02:09:27.888Z"
     }
   },
   {
@@ -3209,7 +3342,7 @@
       "site_name": "X (formerly Twitter)",
       "cover_image": "https://pbs.twimg.com/profile_images/1643941027898613760/gyhYEOCE.jpg",
       "reading_progress": 0.9541502489036752,
-      "last_fetched": "2026-01-22T02:19:50.940Z"
+      "last_fetched": "2026-01-23T02:09:27.888Z"
     }
   },
   {
@@ -3230,7 +3363,7 @@
       "word_count": 2424,
       "reading_time": "13 min read",
       "site_name": "Risk and Cyber ",
-      "last_fetched": "2026-01-22T02:19:50.940Z"
+      "last_fetched": "2026-01-23T02:09:27.888Z"
     }
   },
   {
@@ -3251,7 +3384,7 @@
       "site_name": "Medium",
       "cover_image": "https://miro.medium.com/v2/1*kFrc4tBFM_tCis-2Ic87WA.png",
       "reading_progress": 1,
-      "last_fetched": "2026-01-22T02:19:50.940Z"
+      "last_fetched": "2026-01-23T02:09:27.888Z"
     }
   },
   {
@@ -3271,7 +3404,7 @@
       "reading_time": "11 min read",
       "site_name": "charity.wtf",
       "cover_image": "https://i0.wp.com/charity.wtf/wp-content/uploads/2025/10/srebunny.png?fit=800%2C1200&ssl=1",
-      "last_fetched": "2026-01-22T02:19:50.940Z"
+      "last_fetched": "2026-01-23T02:09:27.888Z"
     }
   },
   {
@@ -3295,7 +3428,7 @@
       "reading_time": "2 min read",
       "site_name": "Geoffrey Huntley",
       "cover_image": "https://ghuntley.com/content/images/size/w1200/2025/06/3ea367ed-cae3-454a-840f-134531dea1fd.jpg",
-      "last_fetched": "2026-01-22T02:19:50.940Z"
+      "last_fetched": "2026-01-23T02:09:27.888Z"
     }
   },
   {
@@ -3314,7 +3447,7 @@
     "metadata": {
       "site_name": "YouTube",
       "cover_image": "https://i.ytimg.com/vi/GaoLU6zKaws/maxresdefault.jpg?sqp=-oaymwEmCIAKENAF8quKqQMa8AEB-AH-CYAC0AWKAgwIABABGHIgXig8MA8=&rs=AOn4CLCKStWVT21BP5p1tmla_jf5mKAAsg",
-      "last_fetched": "2026-01-22T02:19:50.940Z"
+      "last_fetched": "2026-01-23T02:09:27.888Z"
     }
   },
   {
@@ -3333,7 +3466,7 @@
       "site_name": "readwise-upload-pdf",
       "cover_image": "https://readwise-assets.s3.amazonaws.com/media/reader/parsed_document_assets/182351867/4vEmTQVboZoyDgNLyrDhOyyh_GHf7VfKLF2BbicAYSo-cove_OC4apiS.png",
       "reading_progress": 0.14285714285714285,
-      "last_fetched": "2026-01-22T02:19:50.940Z"
+      "last_fetched": "2026-01-23T02:09:27.888Z"
     }
   },
   {
@@ -3355,7 +3488,7 @@
       "site_name": "mit.edu",
       "cover_image": "https://readwise-assets.s3.amazonaws.com/media/reader/parsed_document_assets/381278089/IbjsyTHH3cEMIruS5Fy75Zu7z8opHnHIDp7XEK1Pw4c-cove_IjHUkO6.png",
       "reading_progress": 0.9545454545454546,
-      "last_fetched": "2026-01-22T02:19:50.940Z"
+      "last_fetched": "2026-01-23T02:09:27.888Z"
     }
   },
   {
@@ -3377,7 +3510,7 @@
       "word_count": 1755,
       "reading_time": "9 min read",
       "site_name": "swarthmore.edu",
-      "last_fetched": "2026-01-22T02:19:50.940Z"
+      "last_fetched": "2026-01-23T02:09:27.888Z"
     }
   },
   {
@@ -3397,7 +3530,7 @@
       "word_count": 592,
       "reading_time": "3 min read",
       "site_name": "Elon University",
-      "last_fetched": "2026-01-22T02:19:50.940Z"
+      "last_fetched": "2026-01-23T02:09:27.888Z"
     }
   },
   {
@@ -3420,7 +3553,7 @@
       "site_name": "The Cloudflare Blog",
       "cover_image": "https://cf-assets.www.cloudflare.com/zkvhlag99gkb/1jrfu33HdXerVZwRnD2cRj/8c93d0f47c32635fb98e28d64cd10364/Keeping_the_Internet_fast_and_secure-_introducing_Merkle_Tree_Certificates-OG.png",
       "reading_progress": 1,
-      "last_fetched": "2026-01-22T02:19:50.940Z"
+      "last_fetched": "2026-01-23T02:09:27.888Z"
     }
   },
   {
@@ -3442,7 +3575,7 @@
       "reading_time": "2 min read",
       "site_name": "consensus.app",
       "cover_image": "https://consensus.app/api/og/threads/eyJ0aXRsZSI6IkxvbmcgSG91cnMgSW1wYWN0IERldmVsb3BlciBQcm9kdWN0aXZpdHkiLCJ0aHJlYWRJZCI6InRsTHZpTjVkUVBDcnRrVFRHaVVNdXciLCJzZWFyY2hJZCI6ImxYelFzcHRmU0hXYW1GemtzT2VmZkEifQ%3D%3D",
-      "last_fetched": "2026-01-22T02:19:50.940Z"
+      "last_fetched": "2026-01-23T02:09:27.888Z"
     }
   },
   {
@@ -3469,7 +3602,7 @@
       "site_name": "Signal Messenger",
       "cover_image": "https://signal.org/assets/og/og-image-ff2096df535eee499356de64b19fa8cebb9681ab1e78cca7330e7f8b8d5ec6d5.png",
       "reading_progress": 1,
-      "last_fetched": "2026-01-22T02:19:50.940Z"
+      "last_fetched": "2026-01-23T02:09:27.888Z"
     }
   },
   {
@@ -3491,7 +3624,7 @@
       "reading_time": "7 min read",
       "site_name": "The New Stack",
       "cover_image": "https://cdn.thenewstack.io/media/2025/10/54fc1732-matthew-meckes-2.jpg",
-      "last_fetched": "2026-01-22T02:19:50.940Z"
+      "last_fetched": "2026-01-23T02:09:27.888Z"
     }
   },
   {
@@ -3514,7 +3647,7 @@
       "site_name": "readwise-upload-pdf",
       "cover_image": "https://readwise-assets.s3.amazonaws.com/media/reader/parsed_document_assets/378761449/1WdzDITgulw1_aiYMoaxjyagIEwZekkRbv0U0LIYqzw-cove_5BbUyHA.png",
       "reading_progress": 0.5714285714285714,
-      "last_fetched": "2026-01-22T02:19:50.940Z"
+      "last_fetched": "2026-01-23T02:09:27.888Z"
     }
   },
   {
@@ -3534,7 +3667,7 @@
       "word_count": 3617,
       "reading_time": "19 min read",
       "site_name": "Amazon Web Services, Inc.",
-      "last_fetched": "2026-01-22T02:19:50.940Z"
+      "last_fetched": "2026-01-23T02:09:27.888Z"
     }
   },
   {
@@ -3556,7 +3689,7 @@
       "reading_time": "1 min read",
       "site_name": "linkedin.com",
       "cover_image": "https://media.licdn.com/dms/image/v2/D4E22AQGo8ZZuHK2njw/feedshare-shrink_800/B4EZoH86M3GYAo-/0/1761069999450?e=2147483647&v=beta&t=5BCmKV1vljit7wQ94Zu5w4QrVTTkirP2frAbAhcI7mM",
-      "last_fetched": "2026-01-22T02:19:50.940Z"
+      "last_fetched": "2026-01-23T02:09:27.888Z"
     }
   },
   {
@@ -3577,7 +3710,7 @@
       "site_name": "Poetry Magazine",
       "cover_image": "https://s3-us-east-2.amazonaws.com/cdn-test.poetryfoundation.org/content/images/8860b89bc1c96d531ea2aad695b8e4b17cb249af.jpeg",
       "reading_progress": 0.10772043313176767,
-      "last_fetched": "2026-01-22T02:19:50.940Z"
+      "last_fetched": "2026-01-23T02:09:27.888Z"
     }
   },
   {
@@ -3600,7 +3733,7 @@
       "reading_time": "3 min read",
       "site_name": "linkedin.com",
       "cover_image": "https://static.licdn.com/aero-v1/sc/h/c45fy346jw096z9pbphyyhdz7",
-      "last_fetched": "2026-01-22T02:19:50.940Z"
+      "last_fetched": "2026-01-23T02:09:27.888Z"
     }
   },
   {
@@ -3620,7 +3753,7 @@
       "reading_time": "1 min read",
       "site_name": "mypoeticside.com",
       "reading_progress": 1,
-      "last_fetched": "2026-01-22T02:19:50.940Z"
+      "last_fetched": "2026-01-23T02:09:27.888Z"
     }
   },
   {
@@ -3639,7 +3772,7 @@
     "metadata": {
       "site_name": "YouTube",
       "cover_image": "https://i.ytimg.com/vi/r3560y2LKMU/maxresdefault.jpg",
-      "last_fetched": "2026-01-22T02:19:50.940Z"
+      "last_fetched": "2026-01-23T02:09:27.888Z"
     }
   },
   {
@@ -3661,7 +3794,7 @@
       "site_name": "linkedin.com",
       "cover_image": "https://media.licdn.com/dms/image/v2/D5612AQFd_lQu2RaFdw/article-cover_image-shrink_600_2000/B56Zn5582PJoAQ-/0/1760834343002?e=2147483647&v=beta&t=NtH2zxQ4JKscwxL5OE_zCPWezWOclLywjQxfCr5sDhM",
       "reading_progress": 0.9359380552280147,
-      "last_fetched": "2026-01-22T02:19:50.940Z"
+      "last_fetched": "2026-01-23T02:09:27.888Z"
     }
   },
   {
@@ -3682,7 +3815,7 @@
       "reading_time": "3 min read",
       "site_name": "linkedin.com",
       "cover_image": "https://static.licdn.com/aero-v1/sc/h/c45fy346jw096z9pbphyyhdz7",
-      "last_fetched": "2026-01-22T02:19:50.940Z"
+      "last_fetched": "2026-01-23T02:09:27.888Z"
     }
   },
   {
@@ -3707,7 +3840,7 @@
       "site_name": "readwise-upload-pdf",
       "cover_image": "https://readwise-assets.s3.amazonaws.com/media/reader/parsed_document_assets/1819822/_ra-ASGi_eUFT_lWZO4jCzF--AAMyiZ7MK3mJ2fkL-0-cover-1819822.png",
       "reading_progress": 0.027777777777777776,
-      "last_fetched": "2026-01-22T02:19:50.940Z"
+      "last_fetched": "2026-01-23T02:09:27.888Z"
     }
   },
   {
@@ -3730,7 +3863,7 @@
       "reading_time": "5 min read",
       "site_name": "activism.net",
       "reading_progress": 1,
-      "last_fetched": "2026-01-22T02:19:50.940Z"
+      "last_fetched": "2026-01-23T02:09:27.888Z"
     }
   },
   {
@@ -3753,7 +3886,7 @@
       "reading_time": "4 min read",
       "site_name": "Platform Engineering",
       "cover_image": "https://platformengineering.com/wp-content/uploads/2025/05/How-Platform-Engineering-is-Redefining-DevOps-in-2025_resized.jpg",
-      "last_fetched": "2026-01-22T02:19:50.940Z"
+      "last_fetched": "2026-01-23T02:09:27.888Z"
     }
   },
   {
@@ -3775,7 +3908,7 @@
       "reading_time": "1 min read",
       "site_name": "linkedin.com",
       "cover_image": "https://static.licdn.com/aero-v1/sc/h/c45fy346jw096z9pbphyyhdz7",
-      "last_fetched": "2026-01-22T02:19:50.940Z"
+      "last_fetched": "2026-01-23T02:09:27.888Z"
     }
   },
   {
@@ -3795,7 +3928,7 @@
       "reading_time": "3 min read",
       "site_name": "TheFarSide.com",
       "cover_image": "https://assets.thefarside.com/assets/packs/media/images/brand/logo/tfs-share-default-a7b076808488053c10116ff0605a39a1.jpg",
-      "last_fetched": "2026-01-22T02:19:50.940Z"
+      "last_fetched": "2026-01-23T02:09:27.888Z"
     }
   },
   {
@@ -3819,7 +3952,7 @@
       "site_name": "A Space to Think: Notes on Software Development",
       "cover_image": "https://substackcdn.com/image/fetch/$s_!9hR8!,w_1200,h_600,c_fill,f_jpg,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fbaac74c8-e2d3-4d54-8a56-f7b40ddf2cfc_1536x1024.png",
       "reading_progress": 0.9684378854451415,
-      "last_fetched": "2026-01-22T02:19:50.940Z"
+      "last_fetched": "2026-01-23T02:09:27.888Z"
     }
   },
   {
@@ -3841,7 +3974,7 @@
       "site_name": "holochain.org",
       "cover_image": "https://readwise-assets.s3.amazonaws.com/media/reader/parsed_document_assets/239255881/RS0AqMiBzpVPv7fZwI9CLNwK0FwI7nKvTLa_O1G11js-cove_5RRsiwg.png",
       "reading_progress": 0.02247191011235955,
-      "last_fetched": "2026-01-22T02:19:50.940Z"
+      "last_fetched": "2026-01-23T02:09:27.888Z"
     }
   },
   {
@@ -3866,7 +3999,7 @@
       "site_name": "holochain.org",
       "cover_image": "https://readwise-assets.s3.amazonaws.com/media/reader/parsed_document_assets/239255899/19RzeKXLhZ0sOYXmRt6PkkwXNwSFa1dFGbr-7TG2GnU-cove_GBYGMKP.png",
       "reading_progress": 0.25,
-      "last_fetched": "2026-01-22T02:19:50.940Z"
+      "last_fetched": "2026-01-23T02:09:27.888Z"
     }
   },
   {
@@ -3888,7 +4021,7 @@
     "metadata": {
       "site_name": "YouTube",
       "cover_image": "https://i.ytimg.com/vi/JZiXsMBcV-E/maxresdefault.jpg",
-      "last_fetched": "2026-01-22T02:19:50.940Z"
+      "last_fetched": "2026-01-23T02:09:27.888Z"
     }
   },
   {
@@ -3911,7 +4044,7 @@
       "word_count": 29,
       "reading_time": "1 min read",
       "site_name": "Forbes.com",
-      "last_fetched": "2026-01-22T02:19:50.940Z"
+      "last_fetched": "2026-01-23T02:09:27.888Z"
     }
   },
   {
@@ -3934,7 +4067,7 @@
       "reading_time": "2 min read",
       "site_name": "linkedin.com",
       "cover_image": "https://static.licdn.com/aero-v1/sc/h/c45fy346jw096z9pbphyyhdz7",
-      "last_fetched": "2026-01-22T02:19:50.940Z"
+      "last_fetched": "2026-01-23T02:09:27.888Z"
     }
   },
   {
@@ -3956,7 +4089,7 @@
       "word_count": 515,
       "reading_time": "3 min read",
       "site_name": "Gaia-X Hub Germany",
-      "last_fetched": "2026-01-22T02:19:50.940Z"
+      "last_fetched": "2026-01-23T02:09:27.888Z"
     }
   },
   {
@@ -3976,7 +4109,7 @@
       "reading_time": "112 min read",
       "site_name": "Oxide and Friends",
       "cover_image": "https://img.transistor.fm/4eSrii-l0zYfhuwNC5cfYd8f69OrSYgO5YGFbWC0S3c/rs:fill:0:0:1/w:800/h:800/q:60/mb:500000/aHR0cHM6Ly9pbWct/dXBsb2FkLXByb2R1/Y3Rpb24udHJhbnNp/c3Rvci5mbS9hNmU0/YWYyMjU4NmRjMmRi/YTczMmZjYzI0NmMx/N2YwNy5wbmc.webp",
-      "last_fetched": "2026-01-22T02:19:50.940Z"
+      "last_fetched": "2026-01-23T02:09:27.888Z"
     }
   },
   {
@@ -3998,7 +4131,7 @@
     "metadata": {
       "site_name": "YouTube",
       "cover_image": "https://i.ytimg.com/vi/5Ai8UGx7QvQ/maxresdefault.jpg",
-      "last_fetched": "2026-01-22T02:19:50.940Z"
+      "last_fetched": "2026-01-23T02:09:27.888Z"
     }
   },
   {
@@ -4021,7 +4154,7 @@
       "site_name": "simonwillison.net",
       "cover_image": "https://static.simonwillison.net/static/2025/design-patterns-card.jpg",
       "reading_progress": 1,
-      "last_fetched": "2026-01-22T02:19:50.940Z"
+      "last_fetched": "2026-01-23T02:09:27.888Z"
     }
   },
   {
@@ -4047,7 +4180,7 @@
       "site_name": "simonwillison.net",
       "cover_image": "https://static.simonwillison.net/static/2025/lethaltrifecta.jpg",
       "reading_progress": 1,
-      "last_fetched": "2026-01-22T02:19:50.940Z"
+      "last_fetched": "2026-01-23T02:09:27.888Z"
     }
   },
   {
@@ -4068,7 +4201,7 @@
       "word_count": 1093,
       "reading_time": "6 min read",
       "site_name": "Association for Computing Machinery",
-      "last_fetched": "2026-01-22T02:19:50.940Z"
+      "last_fetched": "2026-01-23T02:09:27.888Z"
     }
   },
   {
@@ -4091,7 +4224,7 @@
       "reading_time": "3 min read",
       "site_name": "Schneier on Security",
       "reading_progress": 1,
-      "last_fetched": "2026-01-22T02:19:50.940Z"
+      "last_fetched": "2026-01-23T02:09:27.888Z"
     }
   },
   {
@@ -4113,7 +4246,7 @@
       "site_name": "readwise-upload-pdf",
       "cover_image": "https://readwise-assets.s3.amazonaws.com/media/reader/parsed_document_assets/315506754/1r8aYQgJpPfIm5Cf4G0Y9_ECnrNP8LzLIb6TWJmGrAI-cove_RqFspfs.png",
       "reading_progress": 0.14285714285714285,
-      "last_fetched": "2026-01-22T02:19:50.940Z"
+      "last_fetched": "2026-01-23T02:09:27.888Z"
     }
   },
   {
@@ -4134,7 +4267,7 @@
       "reading_time": "2 min read",
       "site_name": "linkedin.com",
       "cover_image": "https://static.licdn.com/aero-v1/sc/h/c45fy346jw096z9pbphyyhdz7",
-      "last_fetched": "2026-01-22T02:19:50.940Z"
+      "last_fetched": "2026-01-23T02:09:27.888Z"
     }
   },
   {
@@ -4157,7 +4290,7 @@
       "site_name": "Lars Lofgren",
       "cover_image": "http://larslofgren.com/wp-content/uploads/2025/10/rcoding-bootcamp-homepage.png",
       "reading_progress": 0.22763577437793495,
-      "last_fetched": "2026-01-22T02:19:50.940Z"
+      "last_fetched": "2026-01-23T02:09:27.888Z"
     }
   },
   {
@@ -4178,7 +4311,7 @@
       "reading_time": "2 min read",
       "site_name": "linkedin.com",
       "cover_image": "https://static.licdn.com/aero-v1/sc/h/c45fy346jw096z9pbphyyhdz7",
-      "last_fetched": "2026-01-22T02:19:50.940Z"
+      "last_fetched": "2026-01-23T02:09:27.888Z"
     }
   },
   {
@@ -4200,7 +4333,7 @@
       "site_name": "InfoQ",
       "cover_image": "https://res.infoq.com/presentations/architecture-best-practices/en/card_header_image/gregor-hohpe-twitter-card-1756297866716.jpg",
       "reading_progress": 0.8851978390305657,
-      "last_fetched": "2026-01-22T02:19:50.940Z"
+      "last_fetched": "2026-01-23T02:09:27.888Z"
     }
   },
   {
@@ -4221,7 +4354,7 @@
       "word_count": 1036,
       "reading_time": "6 min read",
       "site_name": "Risk and Cyber ",
-      "last_fetched": "2026-01-22T02:19:50.940Z"
+      "last_fetched": "2026-01-23T02:09:27.888Z"
     }
   },
   {
@@ -4307,7 +4440,7 @@
       "reading_time": "1 min read",
       "site_name": "chrispiech.github.io",
       "reading_progress": 1,
-      "last_fetched": "2026-01-22T02:19:50.940Z"
+      "last_fetched": "2026-01-23T02:09:27.888Z"
     }
   },
   {
