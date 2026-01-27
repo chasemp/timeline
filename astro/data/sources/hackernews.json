@@ -1,5 +1,23 @@
 [
   {
+    "id": "hackernews:46761934",
+    "type": "hackernews",
+    "timestamp": "2026-01-26T04:39:21.000Z",
+    "title": "First, make me care",
+    "summary": "Great example, thanks for sharing.",
+    "url": "https://gwern.net/blog/2026/make-me-care",
+    "canonical_url": "https://news.ycombinator.com/item?id=46761934",
+    "tags": [],
+    "content_html": "Great example, thanks for sharing.",
+    "metadata": {
+      "parent_id": 46758061,
+      "comment_url": "https://news.ycombinator.com/item?id=46761934",
+      "story_id": 46757067,
+      "story_title": "First, make me care",
+      "story_url": "https://gwern.net/blog/2026/make-me-care"
+    }
+  },
+  {
     "id": "hackernews:46174399",
     "type": "hackernews",
     "timestamp": "2025-12-06T16:10:58.000Z",

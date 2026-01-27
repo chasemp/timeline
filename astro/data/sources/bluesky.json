@@ -1,5 +1,21 @@
 [
   {
+    "id": "bluesky:3mddmlhktlc2x",
+    "type": "bluesky",
+    "timestamp": "2026-01-26T16:02:38.695Z",
+    "title": "bikepacking.com/news/alex-pr...",
+    "summary": "bikepacking.com/news/alex-pr... — Alex Pretti, Killed by ICE, Was One of Us",
+    "url": "https://bsky.app/profile/chase523.bsky.social/post/3mddmlhktlc2x",
+    "embed_uri": "at://did:plc:7whslkj667kgto2x246o4stl/app.bsky.feed.post/3mddmlhktlc2x",
+    "embed_cid": "bafyreiclfayv5kvs6oe25imoj4nozslu6dc6ervirj2kc2ggqdyvq3mkqu",
+    "content_html": "<p>bikepacking.com/news/alex-pr...</p>\n          <div style=\"margin: 16px 0; border: 1px solid var(--border, #d4c4a8); border-radius: 8px; overflow: hidden; background: var(--card-bg, #fdfbf7);\">\n            <img src=\"/assets/cached-images/bluesky/85c61748ea1f7486214b737788dbe93c.jpeg\" alt=\"Alex Pretti, Killed by ICE, Was One of Us\" style=\"width: 100%; height: auto; display: block; max-height: 200px; object-fit: cover;\">\n            <div style=\"padding: 12px;\">\n              <div style=\"font-weight: 600; margin-bottom: 4px; color: var(--text, #3d2817);\">Alex Pretti, Killed by ICE, Was One of Us</div>\n              <div style=\"font-size: 13px; color: var(--muted, #7a6b5d); margin-bottom: 8px;\">Yesterday morning in Minneapolis, ICE agents murdered a member of our community, 37-year-old Alex Pretti. Learn more here...</div>\n              <div style=\"font-size: 12px; color: var(--accent, #c17a4f); overflow: hidden; text-overflow: ellipsis; white-space: nowrap;\">🔗 https://bikepacking.com/news/alex-pretti-tribute/</div>\n            </div>\n          </div>",
+    "metadata": {
+      "likes": 0,
+      "reposts": 0,
+      "replies": 0
+    }
+  },
+  {
     "id": "bluesky:3md3wwwtk7c2v",
     "type": "bluesky",
     "timestamp": "2026-01-23T14:46:43.316Z",
