@@ -1,5 +1,21 @@
 [
   {
+    "id": "bluesky:3mdhdxqj6gk2o",
+    "type": "bluesky",
+    "timestamp": "2026-01-28T03:39:06.006Z",
+    "title": "Playing from 11:00",
+    "summary": "Playing from 11:00\nopen.spotify.com/episode/6gvx... — Vic Michaelis",
+    "url": "https://bsky.app/profile/chase523.bsky.social/post/3mdhdxqj6gk2o",
+    "embed_uri": "at://did:plc:7whslkj667kgto2x246o4stl/app.bsky.feed.post/3mdhdxqj6gk2o",
+    "embed_cid": "bafyreib25hcuoilwklq2ljbetumwkgqicerc5mqdyehveoysxpw73lpgzi",
+    "content_html": "<p>Playing from 11:00<br>open.spotify.com/episode/6gvx...</p>\n          <div style=\"margin: 16px 0; border: 1px solid var(--border, #d4c4a8); border-radius: 8px; overflow: hidden; background: var(--card-bg, #fdfbf7);\">\n            <img src=\"/assets/cached-images/bluesky/1f16da37ef80f6dd34bc20715f6e4d55.jpeg\" alt=\"Vic Michaelis\" style=\"width: 100%; height: auto; display: block; max-height: 200px; object-fit: cover;\">\n            <div style=\"padding: 12px;\">\n              <div style=\"font-weight: 600; margin-bottom: 4px; color: var(--text, #3d2817);\">Vic Michaelis</div>\n              \n              <div style=\"font-size: 12px; color: var(--accent, #c17a4f); overflow: hidden; text-overflow: ellipsis; white-space: nowrap;\">🔗 https://open.spotify.com/episode/6gvxjqGCOVDERyiMiBg05H?si=A97gpSqPTp2X3bLj5dfNyA&t=660&ct=614</div>\n            </div>\n          </div>",
+    "metadata": {
+      "likes": 1,
+      "reposts": 0,
+      "replies": 0
+    }
+  },
+  {
     "id": "bluesky:3mddmlhktlc2x",
     "type": "bluesky",
     "timestamp": "2026-01-26T16:02:38.695Z",
