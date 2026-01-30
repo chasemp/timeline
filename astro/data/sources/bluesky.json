@@ -1,5 +1,21 @@
 [
   {
+    "id": "bluesky:3mdlvd44uqc2f",
+    "type": "bluesky",
+    "timestamp": "2026-01-29T23:00:19.852Z",
+    "title": "www.youtube.com/watch?v=OqEe...",
+    "summary": "www.youtube.com/watch?v=OqEe... — If Russ Ackoff had given a TED Talk...",
+    "url": "https://bsky.app/profile/chase523.bsky.social/post/3mdlvd44uqc2f",
+    "embed_uri": "at://did:plc:7whslkj667kgto2x246o4stl/app.bsky.feed.post/3mdlvd44uqc2f",
+    "embed_cid": "bafyreihcyckx7aphqc7n2klgqkpj2x44ots7xdnjznmxk3ewhipdtdfwqm",
+    "content_html": "<p>www.youtube.com/watch?v=OqEe...</p>\n          <div style=\"margin: 16px 0; border: 1px solid var(--border, #d4c4a8); border-radius: 8px; overflow: hidden; background: var(--card-bg, #fdfbf7);\">\n            <img src=\"/assets/cached-images/bluesky/850ef690bfd75b24431450f901cf4037.jpeg\" alt=\"If Russ Ackoff had given a TED Talk...\" style=\"width: 100%; height: auto; display: block; max-height: 200px; object-fit: cover;\">\n            <div style=\"padding: 12px;\">\n              <div style=\"font-weight: 600; margin-bottom: 4px; color: var(--text, #3d2817);\">If Russ Ackoff had given a TED Talk...</div>\n              <div style=\"font-size: 13px; color: var(--muted, #7a6b5d); margin-bottom: 8px;\">YouTube video by Steven Brant</div>\n              <div style=\"font-size: 12px; color: var(--accent, #c17a4f); overflow: hidden; text-overflow: ellipsis; white-space: nowrap;\">🔗 https://www.youtube.com/watch?v=OqEeIG8aPPk&t=274s</div>\n            </div>\n          </div>",
+    "metadata": {
+      "likes": 0,
+      "reposts": 0,
+      "replies": 0
+    }
+  },
+  {
     "id": "bluesky:3mdhdxqj6gk2o",
     "type": "bluesky",
     "timestamp": "2026-01-28T03:39:06.006Z",
