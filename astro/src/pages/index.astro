@@ -189,7 +189,7 @@ const allHashtags = Object.entries(hashtagCounts)
         <div class="filters" role="group" aria-label="Content types">
           <label title="Bookmarks, posts, and social content"><input type="checkbox" name="type" value="saved,bluesky,pixelfed,hackernews,linkedin,primer" checked> Shared</label>
           <label title="Technical writing and essays"><input type="checkbox" name="type" value="blog" checked> Written</label>
-          <label title="Contributions to Wikipedia and other platforms"><input type="checkbox" name="type" value="wikipedia" checked> Contributed</label>
+          <label title="Contributions to Wikipedia and other platforms"><input type="checkbox" name="type" value="wikipedia,release" checked> Contributed</label>
         </div>
       </div>
     </section>
@@ -723,7 +723,8 @@ const allHashtags = Object.entries(hashtagCounts)
       '#pixelfed': ['saved', 'bluesky', 'pixelfed', 'hackernews', 'linkedin', 'primer'], // Shared category
       '#hackernews': ['saved', 'bluesky', 'pixelfed', 'hackernews', 'linkedin', 'primer'], // Shared category
       '#linkedin': ['blog', 'saved', 'bluesky', 'pixelfed', 'hackernews', 'linkedin', 'primer'], // LinkedIn can be in Written or Shared
-      '#wikipedia': ['wikipedia']
+      '#wikipedia': ['wikipedia'],
+      '#release': ['wikipedia', 'release']
     };
     return hashtagToTypes[hashtag] || [];
   }
