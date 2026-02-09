@@ -506,32 +506,50 @@ const formatShortDate = (timestamp: string) => {
         }
       }
       
-      // YouTube embed detection - check url, summary, and content_html
+      // YouTube embed detection - check metadata, url, content_html, then summary
       let youtubeEmbed = '';
-      // Match YouTube URLs with or without protocol, including truncated ones
-      const youtubeUrlPattern = /(?:https?:\/\/)?(?:www\.)?(?:youtube\.com\/watch\?v=|youtu\.be\/)([a-zA-Z0-9_-]+)/i;
+      const youtubeUrlPattern = /(?:https?:\/\/)?(?:www\.)?(?:youtube\.com\/watch\?v=|youtu\.be\/)([a-zA-Z0-9_-]{5,})/i;
       let videoId = null;
-      
-      // Check entry.url first
-      if (entry.url && (entry.url.includes('youtube.com/watch') || entry.url.includes('youtu.be/'))) {
+
+      // Check metadata.video_id first (most reliable, set during fetch)
+      if (entry.metadata?.video_id) {
+        videoId = entry.metadata.video_id;
+      }
+
+      // Check entry.url
+      if (!videoId && entry.url && (entry.url.includes('youtube.com/watch') || entry.url.includes('youtu.be/'))) {
         const match = entry.url.match(youtubeUrlPattern);
         if (match) videoId = match[1];
       }
-      
-      // Check summary if no video ID found
+
+      // Check content_html (has full URLs, unlike truncated summary)
+      if (!videoId && entry.content_html) {
+        const match = entry.content_html.match(youtubeUrlPattern);
+        if (match) videoId = match[1];
+      }
+
+      // Check summary last (may have truncated URLs)
       if (!videoId && entry.summary) {
         const match = entry.summary.match(youtubeUrlPattern);
         if (match) videoId = match[1];
       }
       
-      // Check content_html if still no video ID found
-      if (!videoId && entry.content_html) {
-        const match = entry.content_html.match(youtubeUrlPattern);
-        if (match) videoId = match[1];
-      }
-      
       if (videoId) {
-        youtubeEmbed = `<div class="video-embed"><iframe width="560" height="315" src="https://www.youtube.com/embed/${videoId}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>`;
+        const youtubeUrl = `https://www.youtube.com/watch?v=${videoId}`;
+        const thumbUrl = `https://img.youtube.com/vi/${videoId}/hqdefault.jpg`;
+        youtubeEmbed = `
+          <div class="video-embed">
+            <div class="youtube-preview" data-video-id="${videoId}">
+              <img src="${thumbUrl}" alt="YouTube video thumbnail" class="youtube-thumb" loading="lazy">
+              <button class="youtube-play-btn" aria-label="Play video">
+                <svg viewBox="0 0 68 48" width="68" height="48">
+                  <path d="M66.52,7.74c-0.78-2.93-2.49-5.41-5.42-6.19C55.79,.13,34,0,34,0S12.21,.13,6.9,1.55C3.97,2.33,2.27,4.81,1.48,7.74C0.06,13.05,0,24,0,24s0.06,10.95,1.48,16.26c0.78,2.93,2.49,5.41,5.42,6.19C12.21,47.87,34,48,34,48s21.79-0.13,27.1-1.55c2.93-0.78,4.64-3.26,5.42-6.19C67.94,34.95,68,24,68,24S67.94,13.05,66.52,7.74z" fill="#FF0000"></path>
+                  <path d="M 45,24 27,14 27,34" fill="#fff"></path>
+                </svg>
+              </button>
+            </div>
+            <a href="${youtubeUrl}" target="_blank" rel="noopener" class="youtube-direct-link">Watch on YouTube ↗</a>
+          </div>`;
       }
       
       // Display images for Pixelfed and Bluesky posts
@@ -614,6 +632,23 @@ const formatShortDate = (timestamp: string) => {
     
     panelContent.innerHTML = content;
     
+    // Add click handler for YouTube play button
+    const ytPreview = panelContent.querySelector('.youtube-preview') as HTMLElement;
+    if (ytPreview) {
+      ytPreview.addEventListener('click', () => {
+        const vid = ytPreview.dataset.videoId;
+        if (!vid) return;
+        const iframe = document.createElement('iframe');
+        iframe.width = '560';
+        iframe.height = '315';
+        iframe.src = `https://www.youtube-nocookie.com/embed/${vid}?autoplay=1`;
+        iframe.setAttribute('frameborder', '0');
+        iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
+        iframe.allowFullscreen = true;
+        ytPreview.replaceWith(iframe);
+      });
+    }
+
     // Add click handlers to detail hashtags
     panelContent.querySelectorAll('.detail-hashtag').forEach((tagEl) => {
       tagEl.addEventListener('click', (e) => {
@@ -1162,19 +1197,67 @@ const formatShortDate = (timestamp: string) => {
   .tooltip-meta { font-size: 12px; color: var(--muted); font-family: system-ui, sans-serif; }
   
   /* YouTube video embed */
-  .video-embed { 
-    margin: 20px 0; 
+  .video-embed {
+    margin: 20px 0;
     max-width: 100%;
     overflow: hidden;
     box-sizing: border-box;
   }
-  .video-embed iframe { 
-    width: 100% !important; 
-    max-width: 100% !important; 
-    height: auto !important; 
-    aspect-ratio: 16 / 9; 
+  .video-embed iframe {
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+    aspect-ratio: 16 / 9;
     border-radius: 8px;
     box-sizing: border-box;
+  }
+  .youtube-preview {
+    position: relative;
+    cursor: pointer;
+    border-radius: 8px;
+    overflow: hidden;
+    aspect-ratio: 16 / 9;
+    background: #000;
+  }
+  .youtube-preview:hover .youtube-play-btn svg path:first-child {
+    fill: #f00;
+    opacity: 1;
+  }
+  .youtube-thumb {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+  .youtube-play-btn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    filter: drop-shadow(0 2px 8px rgba(0,0,0,0.4));
+    transition: transform 0.2s;
+  }
+  .youtube-preview:hover .youtube-play-btn {
+    transform: translate(-50%, -50%) scale(1.1);
+  }
+  .youtube-play-btn svg path:first-child {
+    fill: rgba(0,0,0,0.7);
+    transition: fill 0.2s;
+  }
+  .youtube-direct-link {
+    display: inline-block;
+    margin-top: 8px;
+    font-size: 13px;
+    color: var(--accent, #c17a4f);
+    text-decoration: none;
+    font-weight: 600;
+  }
+  .youtube-direct-link:hover {
+    text-decoration: underline;
   }
   
   /* Detail media (images from Pixelfed/Bluesky) */
