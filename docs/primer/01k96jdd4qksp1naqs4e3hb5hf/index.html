@@ -2,14 +2,22 @@
 Everything is derived from cryptographic hashes and stored in isolated paths, enabling atomic upgrades and instant rollbacks.  
 This design improves reliability and reproducibility but requires a learning curve and has practical challenges with non-FHS software."><link rel="canonical" href="https://timeline.523.life/primer/01k96jdd4qksp1naqs4e3hb5hf"><meta name="astro-view-transitions-enabled" content="true"><meta name="astro-view-transitions-fallback" content="animate"><!-- Theme initialization script - runs before page renders to prevent flash --><script>
     (function() {
-      const stored = localStorage.getItem('theme');
-      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-      const theme = stored || (prefersDark ? 'dark' : 'light');
+      function getCookie(name) {
+        const nameEQ = name + "=";
+        const ca = document.cookie.split(';');
+        for (let i = 0; i < ca.length; i++) {
+          let c = ca[i];
+          while (c.charAt(0) === ' ') c = c.substring(1, c.length);
+          if (c.indexOf(nameEQ) === 0) return c.substring(nameEQ.length, c.length);
+        }
+        return null;
+      }
+      const theme = getCookie('theme') || 'dark';
       document.documentElement.setAttribute('data-theme', theme);
     })();
   </script><style>.astro-route-announcer{position:absolute;left:0;top:0;clip:rect(0 0 0 0);clip-path:inset(50%);overflow:hidden;white-space:nowrap;width:1px;height:1px}
 </style>
-<link rel="stylesheet" href="/_astro/_id_.D8Ugsexl.css"><script type="module" src="/_astro/hoisted.BTYD7KfK.js"></script></head> <body data-astro-cid-uj4so23n> <main data-astro-cid-uj4so23n> <header class="header" data-astro-cid-uj4so23n> <nav class="header-nav" data-astro-cid-uj4so23n> <a href="/" class="back-link" data-astro-cid-uj4so23n>← Go to timeline</a> <span class="about-header" data-astro-cid-uj4so23n>This is content from <a href="https://523.life" data-astro-cid-uj4so23n>Chase Pettet</a> and part of my public timeline</span> <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme" data-astro-cid-uj4so23n> <span class="sun-icon" data-astro-cid-uj4so23n>☀️</span> <span class="moon-icon" data-astro-cid-uj4so23n>🌙</span> </button> </nav> <div class="meta" data-astro-cid-uj4so23n> <span class="type" data-astro-cid-uj4so23n>AI Topic Primer</span> · <time datetime="2025-11-04T04:36:13.633000+00:00" data-astro-cid-uj4so23n>11/4/2025</time>  · 📰 readwise-upload-epub  · ✍️ Chase &quot;Prompts&quot; Pettet  · 🕐 24 min read </div> <h1 data-astro-cid-uj4so23n>The Nix System Paradigm: Architecture, Reliability...</h1> </header> <div class="summary" data-astro-cid-uj4so23n> <p data-astro-cid-uj4so23n>NixOS uses a purely functional, declarative model to build and manage the whole system as reproducible, immutable artifacts.  
+<link rel="stylesheet" href="/_astro/_id_.D8Ugsexl.css"><script type="module" src="/_astro/hoisted.C0WxBEZI.js"></script></head> <body data-astro-cid-uj4so23n> <main data-astro-cid-uj4so23n> <header class="header" data-astro-cid-uj4so23n> <nav class="header-nav" data-astro-cid-uj4so23n> <a href="/" class="back-link" data-astro-cid-uj4so23n>← Go to timeline</a> <span class="about-header" data-astro-cid-uj4so23n>This is content from <a href="https://523.life" data-astro-cid-uj4so23n>Chase Pettet</a> and part of my public timeline</span> <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme" data-astro-cid-uj4so23n> <span class="sun-icon" data-astro-cid-uj4so23n>☀️</span> <span class="moon-icon" data-astro-cid-uj4so23n>🌙</span> </button> </nav> <div class="meta" data-astro-cid-uj4so23n> <span class="type" data-astro-cid-uj4so23n>AI Topic Primer</span> · <time datetime="2025-11-04T04:36:13.633000+00:00" data-astro-cid-uj4so23n>11/4/2025</time>  · 📰 readwise-upload-epub  · ✍️ Chase &quot;Prompts&quot; Pettet  · 🕐 24 min read </div> <h1 data-astro-cid-uj4so23n>The Nix System Paradigm: Architecture, Reliability...</h1> </header> <div class="summary" data-astro-cid-uj4so23n> <p data-astro-cid-uj4so23n>NixOS uses a purely functional, declarative model to build and manage the whole system as reproducible, immutable artifacts.  
 Everything is derived from cryptographic hashes and stored in isolated paths, enabling atomic upgrades and instant rollbacks.  
 This design improves reliability and reproducibility but requires a learning curve and has practical challenges with non-FHS software.</p> </div>  <hr class="content-divider" data-astro-cid-uj4so23n> <article class="content" data-astro-cid-uj4so23n><p>Full content not available.</p></article> <div class="comments-section" id="comments-section" data-astro-cid-uj4so23n> <div class="giscus" id="giscus-container" data-astro-cid-uj4so23n></div> </div> <footer class="post-footer" data-astro-cid-uj4so23n> <a href="/" class="back-link" data-astro-cid-uj4so23n>← Go to timeline</a> </footer> </main>   <script src="https://giscus.app/client.js" data-repo="chasemp/timeline" data-repo-id="R_kgDOQDOMbA" data-category="Ideas" data-category-id="DIC_kwDOQDOMbM4CxLZb" data-mapping="pathname" data-strict="0" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="bottom" data-theme="/giscus-custom.css" data-lang="en" crossorigin="anonymous" async>
     </script> <script>

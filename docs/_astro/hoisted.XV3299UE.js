@@ -1,1 +1,0 @@
-import"./ViewTransitions.astro_astro_type_script_index_0_lang.BScVxmeO.js";const e=document.getElementById("theme-toggle");function n(t){document.documentElement.setAttribute("data-theme",t),localStorage.setItem("theme",t)}e?.addEventListener("click",()=>{const t=document.documentElement.getAttribute("data-theme")||"dark";n(t==="dark"?"light":"dark")});
