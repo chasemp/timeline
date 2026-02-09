@@ -177,11 +177,10 @@ const allHashtags = Object.entries(hashtagCounts)
             </button>
             <div class="hashtag-dropdown-menu" id="hashtag-dropdown-menu" hidden role="listbox" aria-label="Select hashtags">
               {allHashtags.map(({ tag, count }) => (
-                <label class="hashtag-option">
-                  <input type="checkbox" value={tag} data-hashtag={tag} />
+                <div class="hashtag-option" role="option" aria-selected="false" data-hashtag={tag} tabindex="0">
                   <span class="hashtag-text">{tag.replace('#', '')}</span>
-                  <span class="hashtag-count">{count}</span>
-                </label>
+                  <span class="hashtag-count" data-hashtag-count={tag}>{count}</span>
+                </div>
               ))}
             </div>
           </div>
@@ -364,9 +363,11 @@ const allHashtags = Object.entries(hashtagCounts)
   .filters label:has(input:checked):hover { background: var(--panel); }
   .filters input[type="checkbox"] { position: absolute; opacity: 0; width: 0; height: 0; pointer-events: none; }
   
-  .hashtag-dropdown-wrapper { position: relative; flex-shrink: 0; width: 140px; }
-  .hashtag-dropdown-button { width: 100%; background: var(--card-bg); padding: 8px 12px; border-radius: 8px; border: 1px solid var(--border); color: var(--text); font-size: 14px; cursor: pointer; transition: all 0.2s; font-family: Georgia, "Times New Roman", serif; display: flex; align-items: center; gap: 6px; justify-content: space-between; }
-  .hashtag-dropdown-button:hover { background: var(--panel); border-color: var(--accent); }
+  .hashtag-dropdown-wrapper { position: relative; flex-shrink: 0; }
+  .hashtag-dropdown-button { background: var(--card-bg); padding: 6px 12px; border-radius: 999px; border: 1px solid var(--border); color: var(--muted); font-size: 14px; cursor: pointer; transition: all 0.2s; display: flex; align-items: center; gap: 6px; }
+  .hashtag-dropdown-button:hover { background: var(--panel); border-color: var(--accent); color: var(--text); }
+  .hashtag-dropdown-button[aria-expanded="true"] { border-color: var(--accent); border-width: 2px; color: var(--text); }
+  .hashtag-dropdown-button.has-selection { border-color: var(--accent); border-width: 2px; color: var(--text); }
   .hashtag-dropdown-button.flash-notification { animation: flashPulse 0.6s ease-out; }
   @keyframes flashPulse {
     0%, 100% { transform: scale(1); box-shadow: 0 0 0 0 var(--accent); }
@@ -374,17 +375,19 @@ const allHashtags = Object.entries(hashtagCounts)
     50% { transform: scale(1); box-shadow: 0 0 0 8px rgba(193, 122, 79, 0.1); }
   }
   .dropdown-label { font-weight: 600; }
-  .selected-count { background: var(--accent); color: var(--bg); padding: 2px 8px; border-radius: 999px; font-size: 12px; font-weight: 600; }
+  .selected-count { background: var(--accent); color: var(--bg); padding: 1px 6px; border-radius: 999px; font-size: 11px; font-weight: 600; }
   .dropdown-arrow { font-size: 10px; transition: transform 0.2s; }
   .hashtag-dropdown-button[aria-expanded="true"] .dropdown-arrow { transform: rotate(180deg); }
-  .hashtag-dropdown-menu { position: absolute; top: 100%; right: 0; margin-top: 4px; background: var(--panel); border: 1px solid var(--border); border-radius: 8px; box-shadow: 0 4px 16px rgba(0,0,0,0.15); max-height: 300px; overflow-y: auto; z-index: 100; min-width: 220px; }
-  .hashtag-option { display: flex; align-items: center; justify-content: center; gap: 8px; padding: 10px 16px; cursor: pointer; transition: background 0.2s; border-bottom: 1px solid var(--border); }
+  .hashtag-dropdown-menu { position: absolute; top: 100%; left: 50%; transform: translateX(-50%); margin-top: 4px; background: var(--panel); border: 1px solid var(--border); border-radius: 8px; box-shadow: 0 4px 16px rgba(0,0,0,0.15); max-height: 300px; overflow-y: auto; z-index: 100; min-width: 200px; }
+  .hashtag-option { display: flex; align-items: center; gap: 8px; padding: 8px 14px; cursor: pointer; transition: all 0.15s; border-bottom: 1px solid var(--border); }
   .hashtag-option:first-child { border-radius: 8px 8px 0 0; }
   .hashtag-option:last-child { border-bottom: none; border-radius: 0 0 8px 8px; }
   .hashtag-option:hover { background: var(--card-bg); }
-  .hashtag-option input[type="checkbox"] { margin: 0; accent-color: var(--accent); flex-shrink: 0; }
-  .hashtag-option .hashtag-text { flex: 1; font-size: 13px; color: var(--text); font-family: system-ui, sans-serif; text-align: center; }
-  .hashtag-option .hashtag-count { opacity: 0.6; font-size: 11px; color: var(--muted); font-family: system-ui, sans-serif; flex-shrink: 0; }
+  .hashtag-option.selected { background: var(--card-bg); color: var(--accent); }
+  .hashtag-option.selected .hashtag-text { color: var(--accent); font-weight: 600; }
+  .hashtag-option.selected .hashtag-count { color: var(--accent); opacity: 0.8; }
+  .hashtag-option .hashtag-text { flex: 1; font-size: 13px; color: var(--text); font-family: system-ui, sans-serif; }
+  .hashtag-option .hashtag-count { opacity: 0.5; font-size: 11px; color: var(--muted); font-family: system-ui, sans-serif; flex-shrink: 0; }
   
   /* Panel styles */
   .panel { 
@@ -589,8 +592,7 @@ const allHashtags = Object.entries(hashtagCounts)
     .search-container { flex: 1 1 100%; max-width: none; }
     .filter-actions-stacked { flex-direction: row; gap: 12px; height: auto; }
     .filters-row { justify-content: center; }
-    .hashtag-dropdown-wrapper { width: auto; }
-    .hashtag-dropdown-menu { right: auto; left: 0; }
+    .hashtag-dropdown-menu { left: 0; transform: none; }
     .header h1 { padding-right: 60px; font-size: 28px; }
     .theme-toggle { padding: 6px 10px; font-size: 16px; }
   }
@@ -712,7 +714,7 @@ const allHashtags = Object.entries(hashtagCounts)
   const hashtagDropdownBtn = document.getElementById('hashtag-dropdown-btn');
   const hashtagDropdownMenu = document.getElementById('hashtag-dropdown-menu');
   const selectedCountBadge = document.getElementById('selected-hashtag-count');
-  const hashtagCheckboxes = document.querySelectorAll('.hashtag-option input[type="checkbox"]') as NodeListOf<HTMLInputElement>;
+  const hashtagOptions = document.querySelectorAll('.hashtag-option[data-hashtag]') as NodeListOf<HTMLElement>;
 
   // Helper function to get checkbox value(s) for a hashtag
   function getCheckboxValuesForHashtag(hashtag: string): string[] {
@@ -734,19 +736,19 @@ const allHashtags = Object.entries(hashtagCounts)
     checkboxes.forEach((input) => input.checked = true);
     
     // Clear all selected hashtags
-    hashtagCheckboxes.forEach((checkbox) => checkbox.checked = false);
+    hashtagOptions.forEach((opt) => { opt.classList.remove('selected'); opt.setAttribute('aria-selected', 'false'); });
     selectedHashtags.clear();
     updateHashtagFilters();
-    
+
     updateFilters();
   });
-  
+
   // None button - clears content types, labels, AND search
   document.getElementById('select-none')?.addEventListener('click', () => {
     checkboxes.forEach((input) => input.checked = false);
-    
+
     // Clear all selected hashtags
-    hashtagCheckboxes.forEach((checkbox) => checkbox.checked = false);
+    hashtagOptions.forEach((opt) => { opt.classList.remove('selected'); opt.setAttribute('aria-selected', 'false'); });
     selectedHashtags.clear();
     updateHashtagFilters();
     
@@ -761,16 +763,18 @@ const allHashtags = Object.entries(hashtagCounts)
   });
 
   function updateHashtagFilters() {
-    document.dispatchEvent(new CustomEvent('hashtag:changed', { 
-      detail: { hashtags: Array.from(selectedHashtags) } 
+    document.dispatchEvent(new CustomEvent('hashtag:changed', {
+      detail: { hashtags: Array.from(selectedHashtags) }
     }));
-    
-    // Update count badge
+
+    // Update count badge and button state
     if (selectedHashtags.size > 0) {
       selectedCountBadge!.textContent = selectedHashtags.size.toString();
       selectedCountBadge!.removeAttribute('hidden');
+      hashtagDropdownBtn?.classList.add('has-selection');
     } else {
       selectedCountBadge!.setAttribute('hidden', '');
+      hashtagDropdownBtn?.classList.remove('has-selection');
     }
   }
 
@@ -788,21 +792,24 @@ const allHashtags = Object.entries(hashtagCounts)
     }
   });
 
-  // Handle checkbox changes
-  hashtagCheckboxes.forEach((checkbox) => {
-    checkbox.addEventListener('change', () => {
-      const hashtag = checkbox.dataset.hashtag!;
-      
-      if (checkbox.checked) {
+  // Handle option clicks (toggle selection)
+  hashtagOptions.forEach((option) => {
+    option.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const hashtag = option.dataset.hashtag!;
+      const isSelected = selectedHashtags.has(hashtag);
+
+      if (!isSelected) {
         selectedHashtags.add(hashtag);
-        
+        option.classList.add('selected');
+        option.setAttribute('aria-selected', 'true');
+
         // Auto-check the corresponding categories when a hashtag is selected
         const requiredTypes = getCheckboxValuesForHashtag(hashtag);
         if (requiredTypes.length > 0) {
           let needsUpdate = false;
           checkboxes.forEach((categoryCheckbox) => {
             const categoryTypes = expandCheckboxValue(categoryCheckbox.value);
-            // Check if this category checkbox includes any of the required types
             if (categoryTypes.some(type => requiredTypes.includes(type)) && !categoryCheckbox.checked) {
               categoryCheckbox.checked = true;
               needsUpdate = true;
@@ -814,10 +821,20 @@ const allHashtags = Object.entries(hashtagCounts)
         }
       } else {
         selectedHashtags.delete(hashtag);
+        option.classList.remove('selected');
+        option.setAttribute('aria-selected', 'false');
       }
-      
+
       updateHashtagFilters();
       updateCardHashtagStyles();
+    });
+
+    // Keyboard support
+    option.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        option.click();
+      }
     });
   });
 
@@ -849,10 +866,16 @@ const allHashtags = Object.entries(hashtagCounts)
       }
     }
     
-    // Update corresponding checkbox in dropdown
-    const checkbox = Array.from(hashtagCheckboxes).find(cb => cb.dataset.hashtag === hashtag);
-    if (checkbox) {
-      checkbox.checked = selectedHashtags.has(hashtag);
+    // Update corresponding option in dropdown
+    const option = Array.from(hashtagOptions).find(opt => opt.dataset.hashtag === hashtag);
+    if (option) {
+      if (selectedHashtags.has(hashtag)) {
+        option.classList.add('selected');
+        option.setAttribute('aria-selected', 'true');
+      } else {
+        option.classList.remove('selected');
+        option.setAttribute('aria-selected', 'false');
+      }
     }
     
     updateHashtagFilters();
@@ -879,6 +902,39 @@ const allHashtags = Object.entries(hashtagCounts)
 
   // Initialize hashtag styles on load
   updateCardHashtagStyles();
+
+  // Dynamic label counts based on visible (type-filtered) rows
+  function updateLabelCounts() {
+    const counts: Record<string, number> = {};
+    document.querySelectorAll('.row').forEach((row) => {
+      const el = row as HTMLElement;
+      // Count rows that pass the type filter (visible or only hidden by hashtag filter)
+      // We check type filter directly to avoid circular dependency with hashtag filter
+      const rowType = el.dataset.type;
+      const checkedTypes = Array.from(document.querySelectorAll('input[name="type"]:checked') as NodeListOf<HTMLInputElement>)
+        .flatMap(i => i.value.split(',').filter(Boolean));
+      const typeAllowed = checkedTypes.length === 0 ? false : checkedTypes.includes(rowType!);
+      if (!typeAllowed) return;
+
+      const hashtags = el.dataset.hashtags?.split(',').filter(Boolean) || [];
+      hashtags.forEach(tag => {
+        counts[tag] = (counts[tag] || 0) + 1;
+      });
+    });
+
+    hashtagOptions.forEach((option) => {
+      const tag = option.dataset.hashtag!;
+      const countEl = option.querySelector('.hashtag-count') as HTMLElement;
+      if (countEl) {
+        const count = counts[tag] || 0;
+        countEl.textContent = count.toString();
+      }
+    });
+  }
+
+  // Update counts on filter changes and initial load
+  updateLabelCounts();
+  document.addEventListener('filters:changed', () => updateLabelCounts());
 
   // Close dropdown when clicking outside
   document.addEventListener('click', (e) => {
