@@ -39,7 +39,7 @@ const formatShortDate = (timestamp: string) => {
     <p>I seem to have traveled back to before there was content on this page.</p>
     <p><a href="#" class="reset-link" id="reset-machine">Reset machine</a> to continue</p>
   </div>
-  <ol class="list" role="list" data-pagefind-body>
+  <ol class="list" role="list">
     <!-- Today marker -->
     <li class="row today-marker">
       <span class="dot today-dot" title="Today"></span>
@@ -80,15 +80,11 @@ const formatShortDate = (timestamp: string) => {
             </div>
           )}
           {item.hashtags && item.hashtags.length > 0 && (
-            <div class="card-hashtags" data-pagefind-weight="2">
+            <div class="card-hashtags">
               {item.hashtags.map((tag: string) => (
                 <span class="card-hashtag" data-hashtag={tag} onclick="event.stopPropagation(); window.dispatchEvent(new CustomEvent('hashtag:click', { detail: { tag: this.dataset.hashtag } }));" role="button" tabindex="0">{tag}</span>
               ))}
             </div>
-          )}
-          {/* Hidden text for better Pagefind indexing of tags */}
-          {item.hashtags && item.hashtags.length > 0 && (
-            <span class="sr-only" data-pagefind-meta="tags">{item.hashtags.map((t: string) => t.replace('#', '')).join(' ')}</span>
           )}
         </button>
       </li>
@@ -291,10 +287,37 @@ const formatShortDate = (timestamp: string) => {
   const typesParam = (params.get('types') ?? '').split(',').filter(Boolean);
 
   let activeHashtags = new Set<string>();
+  let activeSearchQuery = '';
   const emptyState = document.getElementById('empty-state');
   const timelineList = document.querySelector('.list');
   const currentDateEl = document.getElementById('current-date');
   const resetMachine = document.getElementById('reset-machine');
+
+  // Build a search index from timeline data for fast text matching
+  const timelineData = (window as any).__TIMELINE__ || [];
+  const searchIndex = new Map<string, string>();
+  timelineData.forEach((item: any) => {
+    const parts = [
+      item.title || '',
+      item.summary || '',
+      (item.hashtags || []).join(' '),
+      (item.tags || []).join(' '),
+      item.author || '',
+      item.metadata?.site_name || '',
+      item.content_text || '',
+      // Strip HTML tags from content_html for text search
+      (item.content_html || '').replace(/<[^>]*>/g, ' '),
+    ];
+    searchIndex.set(item.id, parts.join(' ').toLowerCase());
+  });
+
+  function itemMatchesSearch(itemId: string, query: string): boolean {
+    if (!query) return true;
+    const text = searchIndex.get(itemId) || '';
+    // Support multi-word search: all terms must match
+    const terms = query.split(/\s+/).filter(Boolean);
+    return terms.every(term => text.includes(term));
+  }
 
   // Set current date in empty state
   if (currentDateEl) {
@@ -347,16 +370,20 @@ const formatShortDate = (timestamp: string) => {
     const checkboxValues = Array.from(document.querySelectorAll('input[name="type"]') as NodeListOf<HTMLInputElement>).map(i=>i.value);
     const expandedDefaults = checkboxValues.flatMap(v => v.split(',').filter(Boolean));
     const allowed = new Set(typesParam.length ? typesParam : expandedDefaults);
-    
+
     document.querySelectorAll('.row').forEach((row) => {
-      const t = (row as HTMLElement).dataset.type;
-      const hashtags = (row as HTMLElement).dataset.hashtags?.split(',').filter(Boolean) || [];
-      
+      const el = row as HTMLElement;
+      const t = el.dataset.type;
+      const id = el.dataset.id;
+      const hashtags = el.dataset.hashtags?.split(',').filter(Boolean) || [];
+
       const typeMatch = allowed.size === 0 ? false : allowed.has(t!);
       const hashtagMatch = activeHashtags.size === 0 || hashtags.some(tag => activeHashtags.has(tag));
-      
-      (row as HTMLElement).style.display = (typeMatch && hashtagMatch) ? '' : 'none';
+      const searchMatch = !activeSearchQuery || (id ? itemMatchesSearch(id, activeSearchQuery) : true);
+
+      el.style.display = (typeMatch && hashtagMatch && searchMatch) ? '' : 'none';
     });
+    highlightSearchTerms();
     checkIfEmpty();
   }
   applyFilters();
@@ -364,14 +391,18 @@ const formatShortDate = (timestamp: string) => {
   document.addEventListener('filters:changed', (e: any) => {
     const allowed = new Set(e.detail.types.length ? e.detail.types : []);
     document.querySelectorAll('.row').forEach((row) => {
-      const t = (row as HTMLElement).dataset.type;
-      const hashtags = (row as HTMLElement).dataset.hashtags?.split(',').filter(Boolean) || [];
-      
+      const el = row as HTMLElement;
+      const t = el.dataset.type;
+      const id = el.dataset.id;
+      const hashtags = el.dataset.hashtags?.split(',').filter(Boolean) || [];
+
       const typeMatch = allowed.size === 0 ? false : allowed.has(t!);
       const hashtagMatch = activeHashtags.size === 0 || hashtags.some(tag => activeHashtags.has(tag));
-      
-      (row as HTMLElement).style.display = (typeMatch && hashtagMatch) ? '' : 'none';
+      const searchMatch = !activeSearchQuery || (id ? itemMatchesSearch(id, activeSearchQuery) : true);
+
+      el.style.display = (typeMatch && hashtagMatch && searchMatch) ? '' : 'none';
     });
+    highlightSearchTerms();
     checkIfEmpty();
   });
 
@@ -379,6 +410,73 @@ const formatShortDate = (timestamp: string) => {
     activeHashtags = new Set(e.detail.hashtags);
     applyFilters();
   });
+
+  document.addEventListener('search:changed', (e: any) => {
+    activeSearchQuery = e.detail.query || '';
+    applyFilters();
+  });
+
+  function highlightSearchTerms() {
+    // Remove existing highlights
+    document.querySelectorAll('.card .search-highlight').forEach(mark => {
+      const parent = mark.parentNode;
+      if (parent) {
+        parent.replaceChild(document.createTextNode(mark.textContent || ''), mark);
+        parent.normalize();
+      }
+    });
+
+    if (!activeSearchQuery) return;
+
+    const terms = activeSearchQuery.split(/\s+/).filter(Boolean);
+    if (terms.length === 0) return;
+
+    // Escape regex special chars
+    const escaped = terms.map(t => t.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'));
+    const regex = new RegExp(`(${escaped.join('|')})`, 'gi');
+
+    // Highlight in visible cards' title, summary, and hashtag text
+    document.querySelectorAll('.row').forEach(row => {
+      const el = row as HTMLElement;
+      if (el.style.display === 'none') return;
+
+      const targets = el.querySelectorAll('.title, .summary, .card-hashtag');
+      targets.forEach(target => {
+        highlightTextNode(target as HTMLElement, regex);
+      });
+    });
+  }
+
+  function highlightTextNode(element: HTMLElement, regex: RegExp) {
+    const walker = document.createTreeWalker(element, NodeFilter.SHOW_TEXT, null);
+    const textNodes: Text[] = [];
+    let node: Node | null;
+    while (node = walker.nextNode()) {
+      textNodes.push(node as Text);
+    }
+    textNodes.forEach(textNode => {
+      const text = textNode.textContent || '';
+      if (!regex.test(text)) return;
+      regex.lastIndex = 0; // Reset regex state
+      const fragment = document.createDocumentFragment();
+      let lastIndex = 0;
+      let match: RegExpExecArray | null;
+      while ((match = regex.exec(text)) !== null) {
+        if (match.index > lastIndex) {
+          fragment.appendChild(document.createTextNode(text.slice(lastIndex, match.index)));
+        }
+        const mark = document.createElement('mark');
+        mark.className = 'search-highlight';
+        mark.textContent = match[0];
+        fragment.appendChild(mark);
+        lastIndex = regex.lastIndex;
+      }
+      if (lastIndex < text.length) {
+        fragment.appendChild(document.createTextNode(text.slice(lastIndex)));
+      }
+      textNode.parentNode?.replaceChild(fragment, textNode);
+    });
+  }
 
   const panel = document.getElementById('detail-panel')!;
   const panelContent = document.getElementById('panel-content')!;

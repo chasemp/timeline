@@ -8,7 +8,6 @@
     "dev:fetch": "npm run generate && astro dev",
     "build": "astro build",
     "build:fetch": "npm run generate && astro build",
-    "postbuild": "npx pagefind --site dist",
     "preview": "astro preview",
     "fetch:readwise": "node --experimental-strip-types scripts/fetch-readwise-reader.mts",
     "fetch:blog": "node --experimental-strip-types scripts/fetch-blog.mts",
@@ -35,7 +34,6 @@
     "@types/node": "^20.12.12",
     "@types/turndown": "^5.0.6",
     "jsdom": "^27.1.0",
-    "pagefind": "^1.4.0",
     "turndown": "^7.2.2",
     "typescript": "^5.6.2"
   }
