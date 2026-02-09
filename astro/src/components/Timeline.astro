@@ -574,7 +574,15 @@ const formatShortDate = (timestamp: string) => {
       }
       
       const mainContent = entry.summary ? `<p>${entry.summary}</p>` : '';
-      const titleHtml = entry.title ? `<h3 class="detail-title">${entry.title}</h3>` : '';
+      let titleHtml = '';
+      if (entry.title) {
+        if (entry.type === 'hackernews' && (entry.url || entry.metadata?.story_url)) {
+          const articleUrl = entry.metadata?.story_url || entry.url;
+          titleHtml = `<h3 class="detail-title"><a href="${articleUrl}" target="_blank" rel="noopener" class="title-link">${entry.title} ↗</a></h3>`;
+        } else {
+          titleHtml = `<h3 class="detail-title">${entry.title}</h3>`;
+        }
+      }
       
       // Build hashtags display
       let hashtagsHtml = '';
@@ -1195,6 +1203,10 @@ const formatShortDate = (timestamp: string) => {
   .highlights-list { margin: 16px 0; padding-left: 24px; list-style: disc; }
   .highlights-list li { margin: 12px 0; color: var(--text); line-height: 1.6; }
   
+  /* HackerNews article title link in detail panel */
+  :global(.detail-title .title-link) { text-decoration: none; color: var(--accent); transition: color 0.2s; }
+  :global(.detail-title .title-link:hover) { text-decoration: underline; }
+
   /* HackerNews direct comment link */
   .comment-direct-link { margin: 16px 0; padding: 12px; background: rgba(255, 102, 0, 0.1); border-left: 3px solid #ff6600; border-radius: 4px; }
   .comment-direct-link a { color: #ff6600; font-weight: 600; text-decoration: none; font-size: 14px; }
