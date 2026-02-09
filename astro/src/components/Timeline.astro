@@ -254,12 +254,12 @@ const formatShortDate = (timestamp: string) => {
   .preview-image { width: 126px; height: 126px; border-radius: 8px; object-fit: cover; border: 1px solid var(--border); transition: transform 0.2s; }
   .preview-image:hover { transform: scale(1.05); }
   .image-count { position: absolute; top: -6px; right: -6px; background: var(--accent); color: var(--bg); font-size: 10px; font-weight: 600; padding: 2px 4px; border-radius: 8px; min-width: 16px; text-align: center; line-height: 1; }
-  /* Pixelfed dynamic image sizing - fills card width */
-  .pixelfed-media { display: grid; grid-template-columns: 1fr; gap: 4px; margin: 10px 0 4px; }
+  /* Pixelfed image sizing - constrained grid, no hover effect */
+  .pixelfed-media { display: grid; grid-template-columns: 1fr; gap: 4px; margin: 10px 0 4px; max-width: 320px; }
   .pixelfed-media:has(.preview-image:nth-child(2)) { grid-template-columns: 1fr 1fr; }
   .pixelfed-media .preview-image { width: 100%; height: auto; aspect-ratio: 1; max-height: none; }
   .pixelfed-media:not(:has(.preview-image:nth-child(2))) .preview-image { aspect-ratio: 4 / 3; }
-  .pixelfed-media .preview-image:hover { transform: scale(1.02); }
+  .pixelfed-media .preview-image:hover { transform: none; }
   .title { font-weight: 600; margin-top: 6px; color: var(--text); line-height: 1.4; }
   .title-link { text-decoration: none; color: var(--text); display: block; transition: color 0.2s; }
   .title-link:hover { color: var(--accent); text-decoration: underline; }
@@ -1281,12 +1281,12 @@ const formatShortDate = (timestamp: string) => {
   .preview-image { width: 126px; height: 126px; border-radius: 8px; object-fit: cover; border: 1px solid var(--border); transition: transform 0.2s; }
   .preview-image:hover { transform: scale(1.05); }
   .image-count { position: absolute; top: -6px; right: -6px; background: var(--accent); color: var(--bg); font-size: 10px; font-weight: 600; padding: 2px 4px; border-radius: 8px; min-width: 16px; text-align: center; line-height: 1; }
-  /* Pixelfed dynamic image sizing - fills card width */
-  .pixelfed-media { display: grid; grid-template-columns: 1fr; gap: 4px; margin: 10px 0 4px; }
+  /* Pixelfed image sizing - constrained grid, no hover effect */
+  .pixelfed-media { display: grid; grid-template-columns: 1fr; gap: 4px; margin: 10px 0 4px; max-width: 320px; }
   .pixelfed-media:has(.preview-image:nth-child(2)) { grid-template-columns: 1fr 1fr; }
   .pixelfed-media .preview-image { width: 100%; height: auto; aspect-ratio: 1; max-height: none; }
   .pixelfed-media:not(:has(.preview-image:nth-child(2))) .preview-image { aspect-ratio: 4 / 3; }
-  .pixelfed-media .preview-image:hover { transform: scale(1.02); }
+  .pixelfed-media .preview-image:hover { transform: none; }
   .title { font-weight: 600; margin-top: 6px; color: var(--text); line-height: 1.4; }
   .title-link { text-decoration: none; color: var(--text); display: block; transition: color 0.2s; }
   .title-link:hover { color: var(--accent); text-decoration: underline; }
