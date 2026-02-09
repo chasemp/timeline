@@ -42,9 +42,17 @@ function shouldDisableComments(post: any): boolean {
   <!-- Theme initialization script - runs before page renders to prevent flash -->
   <script is:inline>
     (function() {
-      const stored = localStorage.getItem('theme');
-      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-      const theme = stored || (prefersDark ? 'dark' : 'light');
+      function getCookie(name) {
+        const nameEQ = name + "=";
+        const ca = document.cookie.split(';');
+        for (let i = 0; i < ca.length; i++) {
+          let c = ca[i];
+          while (c.charAt(0) === ' ') c = c.substring(1, c.length);
+          if (c.indexOf(nameEQ) === 0) return c.substring(nameEQ.length, c.length);
+        }
+        return null;
+      }
+      const theme = getCookie('theme') || 'dark';
       document.documentElement.setAttribute('data-theme', theme);
     })();
   </script>
@@ -93,14 +101,20 @@ function shouldDisableComments(post: any): boolean {
 </main>
 
 <script>
-  // Theme toggle functionality
+  // Theme toggle functionality with cookie support (matches index.astro)
   const toggle = document.getElementById('theme-toggle');
-  
+
+  function setCookie(name: string, value: string, days = 365) {
+    const expires = new Date();
+    expires.setTime(expires.getTime() + (days * 24 * 60 * 60 * 1000));
+    document.cookie = `${name}=${value};expires=${expires.toUTCString()};path=/;domain=.523.life`;
+  }
+
   function updateTheme(theme: string) {
     document.documentElement.setAttribute('data-theme', theme);
-    localStorage.setItem('theme', theme);
+    setCookie('theme', theme);
   }
-  
+
   toggle?.addEventListener('click', () => {
     const current = document.documentElement.getAttribute('data-theme') || 'dark';
     updateTheme(current === 'dark' ? 'light' : 'dark');
