@@ -135,12 +135,6 @@ const allHashtags = Object.entries(hashtagCounts)
   <meta http-equiv="Pragma" content="no-cache">
   <meta http-equiv="Expires" content="0">
   <link rel="alternate" type="application/rss+xml" title="Chase Pettet's Timeline" href="/rss.xml" />
-  {!isDev && (
-    <>
-      <link href="/pagefind/pagefind-ui.css" rel="stylesheet">
-      <script is:inline src="/pagefind/pagefind-ui.js"></script>
-    </>
-  )}
   <ViewTransitions />
 </head>
 <body data-version={VERSION}>
@@ -157,7 +151,12 @@ const allHashtags = Object.entries(hashtagCounts)
 
     <section class="controls" aria-label="Filters">
       <div class="search-row">
-        <div id="search-container" class="search-container"></div>
+        <div class="search-container">
+          <div class="search-input-wrapper">
+            <input type="search" id="search-input" class="search-input" placeholder="Search timeline..." autocomplete="off" />
+            <button id="search-clear" class="search-clear" hidden aria-label="Clear search">Clear</button>
+          </div>
+        </div>
         <div class="filter-actions-stacked">
           <button id="select-all" class="filter-action">All</button>
           <button id="select-none" class="filter-action">Clear</button>
@@ -292,44 +291,12 @@ const allHashtags = Object.entries(hashtagCounts)
     --search-highlight-text: #fdfbf7;
   }
   
-  /* Pagefind search result styling for both themes */
-  :root[data-theme="dark"] mark,
-  :root[data-theme="dark"] .pagefind-ui mark,
-  :root:not([data-theme]) mark,
-  :root:not([data-theme]) .pagefind-ui mark {
+  /* Search highlight styling */
+  mark, .search-highlight {
     background-color: var(--search-highlight-bg) !important;
     color: var(--search-highlight-text) !important;
-  }
-  
-  :root[data-theme="light"] mark,
-  :root[data-theme="light"] .pagefind-ui mark {
-    background-color: var(--search-highlight-bg) !important;
-    color: var(--search-highlight-text) !important;
-  }
-  
-  /* Pagefind search results text styling for dark mode */
-  :root[data-theme="dark"] .pagefind-ui__result-title,
-  :root:not([data-theme]) .pagefind-ui__result-title {
-    color: var(--accent) !important;
-  }
-  :root[data-theme="dark"] .pagefind-ui__result-excerpt,
-  :root:not([data-theme]) .pagefind-ui__result-excerpt {
-    color: var(--text) !important;
-  }
-  :root[data-theme="dark"] .pagefind-ui__result-link,
-  :root:not([data-theme]) .pagefind-ui__result-link {
-    color: var(--text) !important;
-  }
-  :root[data-theme="dark"] .pagefind-ui__message,
-  :root:not([data-theme]) .pagefind-ui__message {
-    color: var(--muted) !important;
-  }
-  :root[data-theme="dark"] .pagefind-ui,
-  :root:not([data-theme]) .pagefind-ui {
-    --pagefind-ui-text: var(--text);
-    --pagefind-ui-background: var(--bg);
-    --pagefind-ui-border: var(--border);
-    --pagefind-ui-primary: var(--accent);
+    border-radius: 2px;
+    padding: 0 1px;
   }
   html, body { margin: 0; padding: 0; background: var(--bg); color: var(--text); font: 16px/1.6 Georgia, "Times New Roman", serif; transition: background-color 0.3s ease, color 0.3s ease; }
   main { max-width: 1200px; margin: 0 auto; padding: 24px; display: grid; grid-template-columns: 1fr minmax(320px, 420px); gap: 24px; }
@@ -349,7 +316,14 @@ const allHashtags = Object.entries(hashtagCounts)
   .home-link:hover { opacity: 0.7; text-decoration: underline; }
   .controls { position: sticky; top: 0; background: var(--bg); padding: 12px 0; z-index: 10; backdrop-filter: blur(8px); margin-bottom: 12px; min-height: 100px; border-bottom: 1px solid transparent; }
   .search-row { display: flex; gap: 12px; align-items: center; justify-content: center; margin-bottom: 12px; }
-  .search-container { min-width: 200px; max-width: 450px; min-height: 40px; flex-shrink: 0; }
+  .search-container { min-width: 200px; max-width: 450px; min-height: 40px; flex-shrink: 0; flex: 1; }
+  .search-input-wrapper { position: relative; display: flex; align-items: center; }
+  .search-input { width: 100%; padding: 10px 16px; padding-right: 60px; border: 2px solid var(--border); border-radius: 8px; background: var(--card-bg); color: var(--text); font-size: 16px; font-family: Georgia, "Times New Roman", serif; outline: none; transition: border-color 0.2s; box-sizing: border-box; }
+  .search-input:focus { border-color: var(--accent); }
+  .search-input::placeholder { color: var(--muted); opacity: 0.7; }
+  .search-clear { position: absolute; right: 8px; background: transparent; border: none; color: var(--muted); font-size: 13px; cursor: pointer; padding: 4px 8px; font-family: Georgia, "Times New Roman", serif; transition: color 0.2s; }
+  .search-clear:hover { color: var(--accent); }
+  .search-result-count { color: var(--muted); font-size: 13px; margin-top: 4px; font-family: system-ui, sans-serif; }
   .filter-actions-stacked { display: flex; flex-direction: column; gap: 2px; height: 40px; justify-content: center; }
   .filter-action { background: transparent; padding: 0; border: none; color: var(--text); font-size: 12px; cursor: pointer; transition: all 0.2s; font-family: Georgia, "Times New Roman", serif; font-weight: 600; text-decoration: underline; text-decoration-color: transparent; line-height: 1.2; }
   .filter-action:hover { color: var(--accent); text-decoration-color: var(--accent); }
@@ -642,26 +616,22 @@ const allHashtags = Object.entries(hashtagCounts)
     }
   });
 
-  // Initialize Pagefind search
-  window.addEventListener('DOMContentLoaded', () => {
-    // Only initialize Pagefind if it's available (production builds)
-    if (window.PagefindUI) {
-      new window.PagefindUI({ 
-        element: "#search-container",
-        showSubResults: true,
-        showImages: false,
-        excerptLength: 15,
-        translations: {
-          placeholder: "Search timeline..."
-        }
-      });
-    } else {
-      // In dev mode, show a placeholder message
-      const container = document.getElementById('search-container');
-      if (container) {
-        container.innerHTML = '<div style="padding: 10px; color: var(--muted); font-size: 14px; text-align: center;">Search available in production build</div>';
-      }
-    }
+  // Custom client-side search
+  const searchInput = document.getElementById('search-input') as HTMLInputElement;
+  const searchClear = document.getElementById('search-clear') as HTMLButtonElement;
+  let searchQuery = '';
+
+  searchInput?.addEventListener('input', () => {
+    searchQuery = searchInput.value.trim().toLowerCase();
+    searchClear.hidden = searchQuery.length === 0;
+    document.dispatchEvent(new CustomEvent('search:changed', { detail: { query: searchQuery } }));
+  });
+
+  searchClear?.addEventListener('click', () => {
+    searchInput.value = '';
+    searchQuery = '';
+    searchClear.hidden = true;
+    document.dispatchEvent(new CustomEvent('search:changed', { detail: { query: '' } }));
   });
 
   const params = new URLSearchParams(location.search);
@@ -751,10 +721,10 @@ const allHashtags = Object.entries(hashtagCounts)
     updateHashtagFilters();
     
     // Clear search box
-    const searchInput = document.querySelector('.pagefind-ui__search-input') as HTMLInputElement;
-    if (searchInput) {
-      searchInput.value = '';
-      searchInput.dispatchEvent(new Event('input', { bubbles: true }));
+    const searchEl = document.getElementById('search-input') as HTMLInputElement;
+    if (searchEl) {
+      searchEl.value = '';
+      searchEl.dispatchEvent(new Event('input', { bubbles: true }));
     }
     
     updateFilters();
