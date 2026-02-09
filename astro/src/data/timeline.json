@@ -647,14 +647,15 @@
     "author": null,
     "tags": [],
     "media": [],
-    "content_html": "<p>www.youtube.com/watch?v=OqEe...</p>\n          <div style=\"margin: 16px 0; border: 1px solid var(--border, #d4c4a8); border-radius: 8px; overflow: hidden; background: var(--card-bg, #fdfbf7);\">\n            <img src=\"/assets/cached-images/bluesky/850ef690bfd75b24431450f901cf4037.jpeg\" alt=\"If Russ Ackoff had given a TED Talk...\" style=\"width: 100%; height: auto; display: block; max-height: 200px; object-fit: cover;\">\n            <div style=\"padding: 12px;\">\n              <div style=\"font-weight: 600; margin-bottom: 4px; color: var(--text, #3d2817);\">If Russ Ackoff had given a TED Talk...</div>\n              <div style=\"font-size: 13px; color: var(--muted, #7a6b5d); margin-bottom: 8px;\">YouTube video by Steven Brant</div>\n              <div style=\"font-size: 12px; color: var(--accent, #c17a4f); overflow: hidden; text-overflow: ellipsis; white-space: nowrap;\">🔗 https://www.youtube.com/watch?v=OqEeIG8aPPk&t=274s</div>\n            </div>\n          </div>",
+    "content_html": "<p>www.youtube.com/watch?v=OqEe...</p>\n          <a href=\"https://www.youtube.com/watch?v=OqEeIG8aPPk&t=274s\" target=\"_blank\" rel=\"noopener\" style=\"text-decoration: none; color: inherit; display: block;\"><div style=\"margin: 16px 0; border: 1px solid var(--border, #d4c4a8); border-radius: 8px; overflow: hidden; background: var(--card-bg, #fdfbf7);\">\n            <img src=\"/assets/cached-images/bluesky/850ef690bfd75b24431450f901cf4037.jpeg\" alt=\"If Russ Ackoff had given a TED Talk...\" style=\"width: 100%; height: auto; display: block; max-height: 200px; object-fit: cover;\">\n            <div style=\"padding: 12px;\">\n              <div style=\"font-weight: 600; margin-bottom: 4px; color: var(--text, #3d2817);\">If Russ Ackoff had given a TED Talk...</div>\n              <div style=\"font-size: 13px; color: var(--muted, #7a6b5d); margin-bottom: 8px;\">YouTube video by Steven Brant</div>\n              <div style=\"font-size: 12px; color: var(--accent, #c17a4f); overflow: hidden; text-overflow: ellipsis; white-space: nowrap;\">🔗 https://www.youtube.com/watch?v=OqEeIG8aPPk&t=274s</div>\n            </div>\n          </div></a>",
     "content_text": null,
     "embed_uri": "at://did:plc:7whslkj667kgto2x246o4stl/app.bsky.feed.post/3mdlvd44uqc2f",
     "embed_cid": "bafyreihcyckx7aphqc7n2klgqkpj2x44ots7xdnjznmxk3ewhipdtdfwqm",
     "metadata": {
       "likes": 0,
       "reposts": 0,
-      "replies": 0
+      "replies": 0,
+      "video_id": "OqEeIG8aPPk"
     }
   },
   {
@@ -1140,14 +1141,15 @@
     "author": null,
     "tags": [],
     "media": [],
-    "content_html": "<p>youtu.be/Oo1v_HI_4Dk?...<br><br>It's amazing how many of these are teachers.  Teachers change lives.</p>\n          <div style=\"margin: 16px 0; border: 1px solid var(--border, #d4c4a8); border-radius: 8px; overflow: hidden; background: var(--card-bg, #fdfbf7);\">\n            <img src=\"/assets/cached-images/bluesky/75f003ecf15a3f129fd2716f40f95bea.jpeg\" alt=\"15 Minutes of Celebrities Meeting Old Friends From Their Past\" style=\"width: 100%; height: auto; display: block; max-height: 200px; object-fit: cover;\">\n            <div style=\"padding: 12px;\">\n              <div style=\"font-weight: 600; margin-bottom: 4px; color: var(--text, #3d2817);\">15 Minutes of Celebrities Meeting Old Friends From Their Past</div>\n              <div style=\"font-size: 13px; color: var(--muted, #7a6b5d); margin-bottom: 8px;\">YouTube video by Famous People Worldwide</div>\n              <div style=\"font-size: 12px; color: var(--accent, #c17a4f); overflow: hidden; text-overflow: ellipsis; white-space: nowrap;\">🔗 https://youtu.be/Oo1v_HI_4Dk?si=nfT1Kx2a6L6wuoeR</div>\n            </div>\n          </div>",
+    "content_html": "<p>youtu.be/Oo1v_HI_4Dk?...<br><br>It's amazing how many of these are teachers.  Teachers change lives.</p>\n          <a href=\"https://youtu.be/Oo1v_HI_4Dk?si=nfT1Kx2a6L6wuoeR\" target=\"_blank\" rel=\"noopener\" style=\"text-decoration: none; color: inherit; display: block;\"><div style=\"margin: 16px 0; border: 1px solid var(--border, #d4c4a8); border-radius: 8px; overflow: hidden; background: var(--card-bg, #fdfbf7);\">\n            <img src=\"/assets/cached-images/bluesky/75f003ecf15a3f129fd2716f40f95bea.jpeg\" alt=\"15 Minutes of Celebrities Meeting Old Friends From Their Past\" style=\"width: 100%; height: auto; display: block; max-height: 200px; object-fit: cover;\">\n            <div style=\"padding: 12px;\">\n              <div style=\"font-weight: 600; margin-bottom: 4px; color: var(--text, #3d2817);\">15 Minutes of Celebrities Meeting Old Friends From Their Past</div>\n              <div style=\"font-size: 13px; color: var(--muted, #7a6b5d); margin-bottom: 8px;\">YouTube video by Famous People Worldwide</div>\n              <div style=\"font-size: 12px; color: var(--accent, #c17a4f); overflow: hidden; text-overflow: ellipsis; white-space: nowrap;\">🔗 https://youtu.be/Oo1v_HI_4Dk?si=nfT1Kx2a6L6wuoeR</div>\n            </div>\n          </div></a>",
     "content_text": null,
     "embed_uri": "at://did:plc:7whslkj667kgto2x246o4stl/app.bsky.feed.post/3md3wwwtk7c2v",
     "embed_cid": "bafyreiejq5jizdrihwbd3l7d7uswdxnvgknsmhz5ltya25ysybn6ma7oc4",
     "metadata": {
       "likes": 0,
       "reposts": 0,
-      "replies": 0
+      "replies": 0,
+      "video_id": "Oo1v_HI_4Dk"
     }
   },
   {
@@ -2029,14 +2031,15 @@
     "author": null,
     "tags": [],
     "media": [],
-    "content_html": "<p>www.youtube.com/watch?v=DUiZ...</p>\n          <div style=\"margin: 16px 0; border: 1px solid var(--border, #d4c4a8); border-radius: 8px; overflow: hidden; background: var(--card-bg, #fdfbf7);\">\n            <img src=\"/assets/cached-images/bluesky/c298d560dfbda7e7e88b05148b8382fc.jpeg\" alt=\"Towards the next generation OWASP CRS ruleset language\" style=\"width: 100%; height: auto; display: block; max-height: 200px; object-fit: cover;\">\n            <div style=\"padding: 12px;\">\n              <div style=\"font-weight: 600; margin-bottom: 4px; color: var(--text, #3d2817);\">Towards the next generation OWASP CRS ruleset language</div>\n              <div style=\"font-size: 13px; color: var(--muted, #7a6b5d); margin-bottom: 8px;\">YouTube video by OWASP Foundation</div>\n              <div style=\"font-size: 12px; color: var(--accent, #c17a4f); overflow: hidden; text-overflow: ellipsis; white-space: nowrap;\">🔗 https://www.youtube.com/watch?v=DUiZxW5FCEQ</div>\n            </div>\n          </div>",
+    "content_html": "<p>www.youtube.com/watch?v=DUiZ...</p>\n          <a href=\"https://www.youtube.com/watch?v=DUiZxW5FCEQ\" target=\"_blank\" rel=\"noopener\" style=\"text-decoration: none; color: inherit; display: block;\"><div style=\"margin: 16px 0; border: 1px solid var(--border, #d4c4a8); border-radius: 8px; overflow: hidden; background: var(--card-bg, #fdfbf7);\">\n            <img src=\"/assets/cached-images/bluesky/c298d560dfbda7e7e88b05148b8382fc.jpeg\" alt=\"Towards the next generation OWASP CRS ruleset language\" style=\"width: 100%; height: auto; display: block; max-height: 200px; object-fit: cover;\">\n            <div style=\"padding: 12px;\">\n              <div style=\"font-weight: 600; margin-bottom: 4px; color: var(--text, #3d2817);\">Towards the next generation OWASP CRS ruleset language</div>\n              <div style=\"font-size: 13px; color: var(--muted, #7a6b5d); margin-bottom: 8px;\">YouTube video by OWASP Foundation</div>\n              <div style=\"font-size: 12px; color: var(--accent, #c17a4f); overflow: hidden; text-overflow: ellipsis; white-space: nowrap;\">🔗 https://www.youtube.com/watch?v=DUiZxW5FCEQ</div>\n            </div>\n          </div></a>",
     "content_text": null,
     "embed_uri": "at://did:plc:7whslkj667kgto2x246o4stl/app.bsky.feed.post/3mbw765kkh224",
     "embed_cid": "bafyreigeasqvnxeipf5tftulvcekigrn7wyqs3qlu25qutpyklbdyf3bhi",
     "metadata": {
       "likes": 0,
       "reposts": 0,
-      "replies": 0
+      "replies": 0,
+      "video_id": "DUiZxW5FCEQ"
     }
   },
   {
@@ -2452,14 +2455,15 @@
     "author": null,
     "tags": [],
     "media": [],
-    "content_html": "<p>www.youtube.com/watch?v=e0pR...</p>\n          <div style=\"margin: 16px 0; border: 1px solid var(--border, #d4c4a8); border-radius: 8px; overflow: hidden; background: var(--card-bg, #fdfbf7);\">\n            <img src=\"/assets/cached-images/bluesky/3ba69bd97b117bd6a284bd0c446951b3.jpeg\" alt=\"My 10 Items For Alone Season 11 In Detail (Arctic Circle)\" style=\"width: 100%; height: auto; display: block; max-height: 200px; object-fit: cover;\">\n            <div style=\"padding: 12px;\">\n              <div style=\"font-weight: 600; margin-bottom: 4px; color: var(--text, #3d2817);\">My 10 Items For Alone Season 11 In Detail (Arctic Circle)</div>\n              <div style=\"font-size: 13px; color: var(--muted, #7a6b5d); margin-bottom: 8px;\">YouTube video by William Larkham Jr (Bigland Trapper)</div>\n              <div style=\"font-size: 12px; color: var(--accent, #c17a4f); overflow: hidden; text-overflow: ellipsis; white-space: nowrap;\">🔗 https://www.youtube.com/watch?v=e0pRAOCSN1U</div>\n            </div>\n          </div>",
+    "content_html": "<p>www.youtube.com/watch?v=e0pR...</p>\n          <a href=\"https://www.youtube.com/watch?v=e0pRAOCSN1U\" target=\"_blank\" rel=\"noopener\" style=\"text-decoration: none; color: inherit; display: block;\"><div style=\"margin: 16px 0; border: 1px solid var(--border, #d4c4a8); border-radius: 8px; overflow: hidden; background: var(--card-bg, #fdfbf7);\">\n            <img src=\"/assets/cached-images/bluesky/3ba69bd97b117bd6a284bd0c446951b3.jpeg\" alt=\"My 10 Items For Alone Season 11 In Detail (Arctic Circle)\" style=\"width: 100%; height: auto; display: block; max-height: 200px; object-fit: cover;\">\n            <div style=\"padding: 12px;\">\n              <div style=\"font-weight: 600; margin-bottom: 4px; color: var(--text, #3d2817);\">My 10 Items For Alone Season 11 In Detail (Arctic Circle)</div>\n              <div style=\"font-size: 13px; color: var(--muted, #7a6b5d); margin-bottom: 8px;\">YouTube video by William Larkham Jr (Bigland Trapper)</div>\n              <div style=\"font-size: 12px; color: var(--accent, #c17a4f); overflow: hidden; text-overflow: ellipsis; white-space: nowrap;\">🔗 https://www.youtube.com/watch?v=e0pRAOCSN1U</div>\n            </div>\n          </div></a>",
     "content_text": null,
     "embed_uri": "at://did:plc:7whslkj667kgto2x246o4stl/app.bsky.feed.post/3mbnjmi5tvc2s",
     "embed_cid": "bafyreibaxltzvpc5yrnn7kpoyu2fbsmumo3wqhfzmlt7qmtum7nabkcmia",
     "metadata": {
       "likes": 0,
       "reposts": 0,
-      "replies": 0
+      "replies": 0,
+      "video_id": "e0pRAOCSN1U"
     }
   },
   {
@@ -2586,14 +2590,15 @@
     "author": null,
     "tags": [],
     "media": [],
-    "content_html": "<p>www.youtube.com/watch?v=Pheb...</p>\n          <div style=\"margin: 16px 0; border: 1px solid var(--border, #d4c4a8); border-radius: 8px; overflow: hidden; background: var(--card-bg, #fdfbf7);\">\n            <img src=\"/assets/cached-images/bluesky/b89e5fcc1dadf7ae1562b1b37d642a4b.jpeg\" alt=\"Writer Annie Ernaux: \"I'm not trying to make it beautiful; I'm trying to make it right.\"\" style=\"width: 100%; height: auto; display: block; max-height: 200px; object-fit: cover;\">\n            <div style=\"padding: 12px;\">\n              <div style=\"font-weight: 600; margin-bottom: 4px; color: var(--text, #3d2817);\">Writer Annie Ernaux: \"I'm not trying to make it beautiful; I'm trying to make it right.\"</div>\n              <div style=\"font-size: 13px; color: var(--muted, #7a6b5d); margin-bottom: 8px;\">YouTube video by Louisiana Channel</div>\n              <div style=\"font-size: 12px; color: var(--accent, #c17a4f); overflow: hidden; text-overflow: ellipsis; white-space: nowrap;\">🔗 https://www.youtube.com/watch?v=PhebfDs4dUA</div>\n            </div>\n          </div>",
+    "content_html": "<p>www.youtube.com/watch?v=Pheb...</p>\n          <a href=\"https://www.youtube.com/watch?v=PhebfDs4dUA\" target=\"_blank\" rel=\"noopener\" style=\"text-decoration: none; color: inherit; display: block;\"><div style=\"margin: 16px 0; border: 1px solid var(--border, #d4c4a8); border-radius: 8px; overflow: hidden; background: var(--card-bg, #fdfbf7);\">\n            <img src=\"/assets/cached-images/bluesky/b89e5fcc1dadf7ae1562b1b37d642a4b.jpeg\" alt=\"Writer Annie Ernaux: \"I'm not trying to make it beautiful; I'm trying to make it right.\"\" style=\"width: 100%; height: auto; display: block; max-height: 200px; object-fit: cover;\">\n            <div style=\"padding: 12px;\">\n              <div style=\"font-weight: 600; margin-bottom: 4px; color: var(--text, #3d2817);\">Writer Annie Ernaux: \"I'm not trying to make it beautiful; I'm trying to make it right.\"</div>\n              <div style=\"font-size: 13px; color: var(--muted, #7a6b5d); margin-bottom: 8px;\">YouTube video by Louisiana Channel</div>\n              <div style=\"font-size: 12px; color: var(--accent, #c17a4f); overflow: hidden; text-overflow: ellipsis; white-space: nowrap;\">🔗 https://www.youtube.com/watch?v=PhebfDs4dUA</div>\n            </div>\n          </div></a>",
     "content_text": null,
     "embed_uri": "at://did:plc:7whslkj667kgto2x246o4stl/app.bsky.feed.post/3mbikbs2bnc2y",
     "embed_cid": "bafyreiayavjdi5qhgvdgt3sxiyqhujdgf3zhr5gmctjfwhm4dh46uxajvm",
     "metadata": {
       "likes": 0,
       "reposts": 0,
-      "replies": 0
+      "replies": 0,
+      "video_id": "PhebfDs4dUA"
     }
   },
   {
@@ -5457,14 +5462,15 @@
     "author": null,
     "tags": [],
     "media": [],
-    "content_html": "<p>www.youtube.com/watch?v=4__g...</p>\n          <div style=\"margin: 16px 0; border: 1px solid var(--border, #d4c4a8); border-radius: 8px; overflow: hidden; background: var(--card-bg, #fdfbf7);\">\n            <img src=\"/assets/cached-images/bluesky/55e27cc5b22da63a76c71df17b603b9c.jpeg\" alt=\"Yann LeCun: We Won't Reach AGI By Scaling Up LLMS\" style=\"width: 100%; height: auto; display: block; max-height: 200px; object-fit: cover;\">\n            <div style=\"padding: 12px;\">\n              <div style=\"font-weight: 600; margin-bottom: 4px; color: var(--text, #3d2817);\">Yann LeCun: We Won't Reach AGI By Scaling Up LLMS</div>\n              <div style=\"font-size: 13px; color: var(--muted, #7a6b5d); margin-bottom: 8px;\">YouTube video by Alex Kantrowitz</div>\n              <div style=\"font-size: 12px; color: var(--accent, #c17a4f); overflow: hidden; text-overflow: ellipsis; white-space: nowrap;\">🔗 https://www.youtube.com/watch?v=4__gg83s_Do</div>\n            </div>\n          </div>",
+    "content_html": "<p>www.youtube.com/watch?v=4__g...</p>\n          <a href=\"https://www.youtube.com/watch?v=4__gg83s_Do\" target=\"_blank\" rel=\"noopener\" style=\"text-decoration: none; color: inherit; display: block;\"><div style=\"margin: 16px 0; border: 1px solid var(--border, #d4c4a8); border-radius: 8px; overflow: hidden; background: var(--card-bg, #fdfbf7);\">\n            <img src=\"/assets/cached-images/bluesky/55e27cc5b22da63a76c71df17b603b9c.jpeg\" alt=\"Yann LeCun: We Won't Reach AGI By Scaling Up LLMS\" style=\"width: 100%; height: auto; display: block; max-height: 200px; object-fit: cover;\">\n            <div style=\"padding: 12px;\">\n              <div style=\"font-weight: 600; margin-bottom: 4px; color: var(--text, #3d2817);\">Yann LeCun: We Won't Reach AGI By Scaling Up LLMS</div>\n              <div style=\"font-size: 13px; color: var(--muted, #7a6b5d); margin-bottom: 8px;\">YouTube video by Alex Kantrowitz</div>\n              <div style=\"font-size: 12px; color: var(--accent, #c17a4f); overflow: hidden; text-overflow: ellipsis; white-space: nowrap;\">🔗 https://www.youtube.com/watch?v=4__gg83s_Do</div>\n            </div>\n          </div></a>",
     "content_text": null,
     "embed_uri": "at://did:plc:7whslkj667kgto2x246o4stl/app.bsky.feed.post/3m5th5qzj2s2n",
     "embed_cid": "bafyreifqdpvu4ku3oiog7zfbzbwvykvemiu2fdli43bz6drkkekq24a6qq",
     "metadata": {
       "likes": 0,
       "reposts": 0,
-      "replies": 0
+      "replies": 0,
+      "video_id": "4__gg83s_Do"
     }
   },
   {
@@ -6217,14 +6223,15 @@
     "author": null,
     "tags": [],
     "media": [],
-    "content_html": "<p>www.youtube.com/watch?v=8Ew7...</p>\n          <div style=\"margin: 16px 0; border: 1px solid var(--border, #d4c4a8); border-radius: 8px; overflow: hidden; background: var(--card-bg, #fdfbf7);\">\n            <img src=\"/assets/cached-images/bluesky/de996aa4cb65985390ca983a178df0f3.jpeg\" alt=\"The Very Best Of Hank Scorpio | Four Finger Discount\" style=\"width: 100%; height: auto; display: block; max-height: 200px; object-fit: cover;\">\n            <div style=\"padding: 12px;\">\n              <div style=\"font-weight: 600; margin-bottom: 4px; color: var(--text, #3d2817);\">The Very Best Of Hank Scorpio | Four Finger Discount</div>\n              <div style=\"font-size: 13px; color: var(--muted, #7a6b5d); margin-bottom: 8px;\">YouTube video by Torrent This TV</div>\n              <div style=\"font-size: 12px; color: var(--accent, #c17a4f); overflow: hidden; text-overflow: ellipsis; white-space: nowrap;\">🔗 https://www.youtube.com/watch?v=8Ew78KThLOY</div>\n            </div>\n          </div>",
+    "content_html": "<p>www.youtube.com/watch?v=8Ew7...</p>\n          <a href=\"https://www.youtube.com/watch?v=8Ew78KThLOY\" target=\"_blank\" rel=\"noopener\" style=\"text-decoration: none; color: inherit; display: block;\"><div style=\"margin: 16px 0; border: 1px solid var(--border, #d4c4a8); border-radius: 8px; overflow: hidden; background: var(--card-bg, #fdfbf7);\">\n            <img src=\"/assets/cached-images/bluesky/de996aa4cb65985390ca983a178df0f3.jpeg\" alt=\"The Very Best Of Hank Scorpio | Four Finger Discount\" style=\"width: 100%; height: auto; display: block; max-height: 200px; object-fit: cover;\">\n            <div style=\"padding: 12px;\">\n              <div style=\"font-weight: 600; margin-bottom: 4px; color: var(--text, #3d2817);\">The Very Best Of Hank Scorpio | Four Finger Discount</div>\n              <div style=\"font-size: 13px; color: var(--muted, #7a6b5d); margin-bottom: 8px;\">YouTube video by Torrent This TV</div>\n              <div style=\"font-size: 12px; color: var(--accent, #c17a4f); overflow: hidden; text-overflow: ellipsis; white-space: nowrap;\">🔗 https://www.youtube.com/watch?v=8Ew78KThLOY</div>\n            </div>\n          </div></a>",
     "content_text": null,
     "embed_uri": "at://did:plc:7whslkj667kgto2x246o4stl/app.bsky.feed.post/3m4wjpndxlk2b",
     "embed_cid": "bafyreihkl7ljhpc4mcpot7chkn7ht3urlvbck5rkogsqdck342rsadgqfy",
     "metadata": {
       "likes": 0,
       "reposts": 0,
-      "replies": 0
+      "replies": 0,
+      "video_id": "8Ew78KThLOY"
     }
   },
   {
@@ -6379,14 +6386,15 @@
     "author": null,
     "tags": [],
     "media": [],
-    "content_html": "<p>#classic<br><br>www.youtube.com/watch?v=ZSFD...</p>\n          <div style=\"margin: 16px 0; border: 1px solid var(--border, #d4c4a8); border-radius: 8px; overflow: hidden; background: var(--card-bg, #fdfbf7);\">\n            <img src=\"/assets/cached-images/bluesky/147fd1fa89a69deab6d0086d4c5dea3f.jpeg\" alt=\"How Open Source Projects Survive Poisonous People (And...\" style=\"width: 100%; height: auto; display: block; max-height: 200px; object-fit: cover;\">\n            <div style=\"padding: 12px;\">\n              <div style=\"font-weight: 600; margin-bottom: 4px; color: var(--text, #3d2817);\">How Open Source Projects Survive Poisonous People (And...</div>\n              <div style=\"font-size: 13px; color: var(--muted, #7a6b5d); margin-bottom: 8px;\">YouTube video by Google TechTalks</div>\n              <div style=\"font-size: 12px; color: var(--accent, #c17a4f); overflow: hidden; text-overflow: ellipsis; white-space: nowrap;\">🔗 https://www.youtube.com/watch?v=ZSFDm3UYkeE</div>\n            </div>\n          </div>",
+    "content_html": "<p>#classic<br><br>www.youtube.com/watch?v=ZSFD...</p>\n          <a href=\"https://www.youtube.com/watch?v=ZSFDm3UYkeE\" target=\"_blank\" rel=\"noopener\" style=\"text-decoration: none; color: inherit; display: block;\"><div style=\"margin: 16px 0; border: 1px solid var(--border, #d4c4a8); border-radius: 8px; overflow: hidden; background: var(--card-bg, #fdfbf7);\">\n            <img src=\"/assets/cached-images/bluesky/147fd1fa89a69deab6d0086d4c5dea3f.jpeg\" alt=\"How Open Source Projects Survive Poisonous People (And...\" style=\"width: 100%; height: auto; display: block; max-height: 200px; object-fit: cover;\">\n            <div style=\"padding: 12px;\">\n              <div style=\"font-weight: 600; margin-bottom: 4px; color: var(--text, #3d2817);\">How Open Source Projects Survive Poisonous People (And...</div>\n              <div style=\"font-size: 13px; color: var(--muted, #7a6b5d); margin-bottom: 8px;\">YouTube video by Google TechTalks</div>\n              <div style=\"font-size: 12px; color: var(--accent, #c17a4f); overflow: hidden; text-overflow: ellipsis; white-space: nowrap;\">🔗 https://www.youtube.com/watch?v=ZSFDm3UYkeE</div>\n            </div>\n          </div></a>",
     "content_text": null,
     "embed_uri": "at://did:plc:7whslkj667kgto2x246o4stl/app.bsky.feed.post/3m4ql24azbk2f",
     "embed_cid": "bafyreihm7d3qdw3dr6s3xwlz5hxzm4mg6qu744c6jda2ap5tjq56giucxu",
     "metadata": {
       "likes": 0,
       "reposts": 0,
-      "replies": 0
+      "replies": 0,
+      "video_id": "ZSFDm3UYkeE"
     }
   },
   {
@@ -7316,14 +7324,15 @@
     "author": null,
     "tags": [],
     "media": [],
-    "content_html": "<p>#meme<br><br>youtu.be/SZIC3kFKnqA?...</p>\n          <div style=\"margin: 16px 0; border: 1px solid var(--border, #d4c4a8); border-radius: 8px; overflow: hidden; background: var(--card-bg, #fdfbf7);\">\n            <img src=\"/assets/cached-images/bluesky/428b396da579c00246e6a05648db9225.jpeg\" alt=\"A Picture Of Me Became A Meme And Things Got Weird\" style=\"width: 100%; height: auto; display: block; max-height: 200px; object-fit: cover;\">\n            <div style=\"padding: 12px;\">\n              <div style=\"font-weight: 600; margin-bottom: 4px; color: var(--text, #3d2817);\">A Picture Of Me Became A Meme And Things Got Weird</div>\n              <div style=\"font-size: 13px; color: var(--muted, #7a6b5d); margin-bottom: 8px;\">YouTube video by STRANGE ÆONS</div>\n              <div style=\"font-size: 12px; color: var(--accent, #c17a4f); overflow: hidden; text-overflow: ellipsis; white-space: nowrap;\">🔗 https://youtu.be/SZIC3kFKnqA?si=VeN6pvH5JPz1LHFV</div>\n            </div>\n          </div>",
+    "content_html": "<p>#meme<br><br>youtu.be/SZIC3kFKnqA?...</p>\n          <a href=\"https://youtu.be/SZIC3kFKnqA?si=VeN6pvH5JPz1LHFV\" target=\"_blank\" rel=\"noopener\" style=\"text-decoration: none; color: inherit; display: block;\"><div style=\"margin: 16px 0; border: 1px solid var(--border, #d4c4a8); border-radius: 8px; overflow: hidden; background: var(--card-bg, #fdfbf7);\">\n            <img src=\"/assets/cached-images/bluesky/428b396da579c00246e6a05648db9225.jpeg\" alt=\"A Picture Of Me Became A Meme And Things Got Weird\" style=\"width: 100%; height: auto; display: block; max-height: 200px; object-fit: cover;\">\n            <div style=\"padding: 12px;\">\n              <div style=\"font-weight: 600; margin-bottom: 4px; color: var(--text, #3d2817);\">A Picture Of Me Became A Meme And Things Got Weird</div>\n              <div style=\"font-size: 13px; color: var(--muted, #7a6b5d); margin-bottom: 8px;\">YouTube video by STRANGE ÆONS</div>\n              <div style=\"font-size: 12px; color: var(--accent, #c17a4f); overflow: hidden; text-overflow: ellipsis; white-space: nowrap;\">🔗 https://youtu.be/SZIC3kFKnqA?si=VeN6pvH5JPz1LHFV</div>\n            </div>\n          </div></a>",
     "content_text": null,
     "embed_uri": "at://did:plc:7whslkj667kgto2x246o4stl/app.bsky.feed.post/3m45ifidl4c2j",
     "embed_cid": "bafyreiabhtjml6ep4goymtymlg2b33vffltcodilazenjtmjwuj6whbgfe",
     "metadata": {
       "likes": 0,
       "reposts": 0,
-      "replies": 0
+      "replies": 0,
+      "video_id": "SZIC3kFKnqA"
     }
   },
   {
@@ -7360,14 +7369,15 @@
     "author": null,
     "tags": [],
     "media": [],
-    "content_html": "<p>Every now and then I remember this standup set from Bernie Mac and have to watch it.  Adult comedy themes.   Always funny <br><br>www.youtube.com/watch?v=7JkP...</p>\n          <div style=\"margin: 16px 0; border: 1px solid var(--border, #d4c4a8); border-radius: 8px; overflow: hidden; background: var(--card-bg, #fdfbf7);\">\n            <img src=\"/assets/cached-images/bluesky/dc59d62bbb938c838fc8bbfc47f0695c.jpeg\" alt=\"Bernie Mac - I Ain't Scared Of You Mutha****!\" style=\"width: 100%; height: auto; display: block; max-height: 200px; object-fit: cover;\">\n            <div style=\"padding: 12px;\">\n              <div style=\"font-weight: 600; margin-bottom: 4px; color: var(--text, #3d2817);\">Bernie Mac - I Ain't Scared Of You Mutha****!</div>\n              <div style=\"font-size: 13px; color: var(--muted, #7a6b5d); margin-bottom: 8px;\">YouTube video by Willie D. Washington</div>\n              <div style=\"font-size: 12px; color: var(--accent, #c17a4f); overflow: hidden; text-overflow: ellipsis; white-space: nowrap;\">🔗 https://www.youtube.com/watch?v=7JkPx0gk6LE</div>\n            </div>\n          </div>",
+    "content_html": "<p>Every now and then I remember this standup set from Bernie Mac and have to watch it.  Adult comedy themes.   Always funny <br><br>www.youtube.com/watch?v=7JkP...</p>\n          <a href=\"https://www.youtube.com/watch?v=7JkPx0gk6LE\" target=\"_blank\" rel=\"noopener\" style=\"text-decoration: none; color: inherit; display: block;\"><div style=\"margin: 16px 0; border: 1px solid var(--border, #d4c4a8); border-radius: 8px; overflow: hidden; background: var(--card-bg, #fdfbf7);\">\n            <img src=\"/assets/cached-images/bluesky/dc59d62bbb938c838fc8bbfc47f0695c.jpeg\" alt=\"Bernie Mac - I Ain't Scared Of You Mutha****!\" style=\"width: 100%; height: auto; display: block; max-height: 200px; object-fit: cover;\">\n            <div style=\"padding: 12px;\">\n              <div style=\"font-weight: 600; margin-bottom: 4px; color: var(--text, #3d2817);\">Bernie Mac - I Ain't Scared Of You Mutha****!</div>\n              <div style=\"font-size: 13px; color: var(--muted, #7a6b5d); margin-bottom: 8px;\">YouTube video by Willie D. Washington</div>\n              <div style=\"font-size: 12px; color: var(--accent, #c17a4f); overflow: hidden; text-overflow: ellipsis; white-space: nowrap;\">🔗 https://www.youtube.com/watch?v=7JkPx0gk6LE</div>\n            </div>\n          </div></a>",
     "content_text": null,
     "embed_uri": "at://did:plc:7whslkj667kgto2x246o4stl/app.bsky.feed.post/3m44g7tmx6k24",
     "embed_cid": "bafyreickmb5jmr27cpd3nvzqzwayp7wrcimk6lzwai3l7t56higzplytqq",
     "metadata": {
       "likes": 0,
       "reposts": 0,
-      "replies": 0
+      "replies": 0,
+      "video_id": "7JkPx0gk6LE"
     }
   },
   {

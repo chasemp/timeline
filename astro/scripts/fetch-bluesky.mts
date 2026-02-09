@@ -56,6 +56,7 @@ interface TimelineEntry {
     likes: number;
     reposts: number;
     replies: number;
+    video_id?: string;
   };
 }
 
@@ -156,6 +157,7 @@ async function convertToTimelineEntry(post: BlueskyPost): Promise<TimelineEntry>
   // Check for media embeds
   let media: TimelineEntry['media'] = undefined;
   let contentHtml = `<p>${text.replace(/\n/g, '<br>')}</p>`;
+  let detectedVideoId: string | null = null;
   
   if (post.embed) {
     const embedType = post.embed.$type;
@@ -190,23 +192,37 @@ async function convertToTimelineEntry(post: BlueskyPost): Promise<TimelineEntry>
         const linkDesc = external.description || '';
         const linkUrl = external.uri || '';
         let linkThumb = external.thumb || '';
-        
-        // Cache thumbnail if present
-        if (linkThumb) {
+
+        // Detect YouTube links and extract video ID
+        const ytMatch = linkUrl.match(/(?:youtube\.com\/watch\?v=|youtu\.be\/)([a-zA-Z0-9_-]+)/i);
+        const videoId = ytMatch ? ytMatch[1] : null;
+        if (videoId) detectedVideoId = videoId;
+
+        if (videoId) {
+          // Use YouTube's high-quality thumbnail
+          const ytThumbUrl = `https://img.youtube.com/vi/${videoId}/hqdefault.jpg`;
+          linkThumb = await cacheImage(ytThumbUrl);
+
+          // Store video_id for frontend use
+          media = { type: 'external' as const, images: [linkThumb], alt: [linkTitle] };
+        } else if (linkThumb) {
+          // Cache thumbnail if present
           linkThumb = await cacheImage(linkThumb);
         }
-        
-        // Add external link card to content
+
+        // Add external link card to content (linked to source URL)
         contentHtml += `
-          <div style="margin: 16px 0; border: 1px solid var(--border, #d4c4a8); border-radius: 8px; overflow: hidden; background: var(--card-bg, #fdfbf7);">
-            ${linkThumb ? `<img src="${linkThumb}" alt="${linkTitle}" style="width: 100%; height: auto; display: block; max-height: 200px; object-fit: cover;">` : ''}
-            <div style="padding: 12px;">
-              ${linkTitle ? `<div style="font-weight: 600; margin-bottom: 4px; color: var(--text, #3d2817);">${linkTitle}</div>` : ''}
-              ${linkDesc ? `<div style="font-size: 13px; color: var(--muted, #7a6b5d); margin-bottom: 8px;">${linkDesc}</div>` : ''}
-              ${linkUrl ? `<div style="font-size: 12px; color: var(--accent, #c17a4f); overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">🔗 ${linkUrl}</div>` : ''}
+          <a href="${linkUrl}" target="_blank" rel="noopener" style="text-decoration: none; color: inherit; display: block;">
+            <div style="margin: 16px 0; border: 1px solid var(--border, #d4c4a8); border-radius: 8px; overflow: hidden; background: var(--card-bg, #fdfbf7); transition: box-shadow 0.2s;" onmouseover="this.style.boxShadow='0 2px 8px rgba(0,0,0,0.1)'" onmouseout="this.style.boxShadow='none'">
+              ${linkThumb ? `<img src="${linkThumb}" alt="${linkTitle}" style="width: 100%; height: auto; display: block; max-height: 200px; object-fit: cover;">` : ''}
+              <div style="padding: 12px;">
+                ${linkTitle ? `<div style="font-weight: 600; margin-bottom: 4px; color: var(--text, #3d2817);">${linkTitle}</div>` : ''}
+                ${linkDesc ? `<div style="font-size: 13px; color: var(--muted, #7a6b5d); margin-bottom: 8px;">${linkDesc}</div>` : ''}
+                ${linkUrl ? `<div style="font-size: 12px; color: var(--accent, #c17a4f); overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">🔗 ${linkUrl}</div>` : ''}
+              </div>
             </div>
-          </div>`;
-        
+          </a>`;
+
         // Enhance summary with link info
         if (linkTitle) {
           summary = `${text} — ${linkTitle}`;
@@ -235,7 +251,8 @@ async function convertToTimelineEntry(post: BlueskyPost): Promise<TimelineEntry>
     metadata: {
       likes: post.likeCount || 0,
       reposts: post.repostCount || 0,
-      replies: post.replyCount || 0
+      replies: post.replyCount || 0,
+      ...(detectedVideoId ? { video_id: detectedVideoId } : {})
     }
   };
 }
