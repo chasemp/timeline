@@ -361,8 +361,7 @@ const formatShortDate = (timestamp: string) => {
       const t = (row as HTMLElement).dataset.type;
       const hashtags = (row as HTMLElement).dataset.hashtags?.split(',').filter(Boolean) || [];
       
-      // Release items always show (not filterable, just labeled)
-      const typeMatch = t === 'release' || (allowed.size === 0 ? false : allowed.has(t!));
+      const typeMatch = allowed.size === 0 ? false : allowed.has(t!);
       const hashtagMatch = activeHashtags.size === 0 || hashtags.some(tag => activeHashtags.has(tag));
       
       (row as HTMLElement).style.display = (typeMatch && hashtagMatch) ? '' : 'none';
