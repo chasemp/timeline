@@ -1,5 +1,23 @@
 [
   {
+    "id": "hackernews:46961597",
+    "type": "hackernews",
+    "timestamp": "2026-02-10T15:58:26.000Z",
+    "title": "Jury told that Meta, Google 'engineered addiction' at landmark US trial",
+    "summary": "Users as prey is a terrifying but not unrealistic narrative. Thanks for sharing.",
+    "url": "https://techxplore.com/news/2026-02-jury-told-meta-google-addiction.html",
+    "canonical_url": "https://news.ycombinator.com/item?id=46961597",
+    "tags": [],
+    "content_html": "Users as prey is a terrifying but not unrealistic narrative.  Thanks for sharing.",
+    "metadata": {
+      "parent_id": 46960680,
+      "comment_url": "https://news.ycombinator.com/item?id=46961597",
+      "story_id": 46959832,
+      "story_title": "Jury told that Meta, Google 'engineered addiction' at landmark US trial",
+      "story_url": "https://techxplore.com/news/2026-02-jury-told-meta-google-addiction.html"
+    }
+  },
+  {
     "id": "hackernews:46761934",
     "type": "hackernews",
     "timestamp": "2026-01-26T04:39:21.000Z",
