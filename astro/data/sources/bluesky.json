@@ -1,5 +1,21 @@
 [
   {
+    "id": "bluesky:3mg3jew63tk2d",
+    "type": "bluesky",
+    "timestamp": "2026-03-02T14:59:34.878Z",
+    "title": "component.gallery",
+    "summary": "component.gallery — The Component Gallery",
+    "url": "https://bsky.app/profile/chase523.bsky.social/post/3mg3jew63tk2d",
+    "embed_uri": "at://did:plc:7whslkj667kgto2x246o4stl/app.bsky.feed.post/3mg3jew63tk2d",
+    "embed_cid": "bafyreig23r7rmego65wi5xdmpk7nkjzb7enmlvohklsjakc3ecqc53bfw4",
+    "content_html": "<p>component.gallery</p>\n          <a href=\"https://component.gallery/\" target=\"_blank\" rel=\"noopener\" style=\"text-decoration: none; color: inherit; display: block;\">\n            <div style=\"margin: 16px 0; border: 1px solid var(--border, #d4c4a8); border-radius: 8px; overflow: hidden; background: var(--card-bg, #fdfbf7); transition: box-shadow 0.2s;\" onmouseover=\"this.style.boxShadow='0 2px 8px rgba(0,0,0,0.1)'\" onmouseout=\"this.style.boxShadow='none'\">\n              <img src=\"/assets/cached-images/bluesky/b434be974fa6c041f10a14b068d8152b.jpeg\" alt=\"The Component Gallery\" style=\"width: 100%; height: auto; display: block; max-height: 200px; object-fit: cover;\">\n              <div style=\"padding: 12px;\">\n                <div style=\"font-weight: 600; margin-bottom: 4px; color: var(--text, #3d2817);\">The Component Gallery</div>\n                <div style=\"font-size: 13px; color: var(--muted, #7a6b5d); margin-bottom: 8px;\">An up-to-date repository of interface components based on examples from the world of design systems, designed to be a reference for anyone building user interfaces.</div>\n                <div style=\"font-size: 12px; color: var(--accent, #c17a4f); overflow: hidden; text-overflow: ellipsis; white-space: nowrap;\">🔗 https://component.gallery/</div>\n              </div>\n            </div>\n          </a>",
+    "metadata": {
+      "likes": 0,
+      "reposts": 0,
+      "replies": 0
+    }
+  },
+  {
     "id": "bluesky:3meqlcot3ek2e",
     "type": "bluesky",
     "timestamp": "2026-02-13T13:09:38.801Z",
