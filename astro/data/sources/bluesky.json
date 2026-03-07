@@ -1,5 +1,47 @@
 [
   {
+    "id": "bluesky:3mggmkdys622n",
+    "type": "bluesky",
+    "timestamp": "2026-03-07T00:55:35.504Z",
+    "title": "www.youtube.com/watch?v=4YJ3...",
+    "summary": "www.youtube.com/watch?v=4YJ3... — insane robot dance",
+    "url": "https://bsky.app/profile/chase523.bsky.social/post/3mggmkdys622n",
+    "embed_uri": "at://did:plc:7whslkj667kgto2x246o4stl/app.bsky.feed.post/3mggmkdys622n",
+    "embed_cid": "bafyreicyng4ubt4ljazeoejm57zkbl3q3kai2wsbdqonghctxwuyhdaqby",
+    "content_html": "<p>www.youtube.com/watch?v=4YJ3...</p>\n          <a href=\"https://www.youtube.com/watch?v=4YJ3BTKMILw\" target=\"_blank\" rel=\"noopener\" style=\"text-decoration: none; color: inherit; display: block;\">\n            <div style=\"margin: 16px 0; border: 1px solid var(--border, #d4c4a8); border-radius: 8px; overflow: hidden; background: var(--card-bg, #fdfbf7); transition: box-shadow 0.2s;\" onmouseover=\"this.style.boxShadow='0 2px 8px rgba(0,0,0,0.1)'\" onmouseout=\"this.style.boxShadow='none'\">\n              <img src=\"/assets/cached-images/bluesky/ff3e417053569d0d90726c78ea85ca2e.https:img.youtube.comvi4YJ3BTKMILwhqdefault.jpg\" alt=\"insane robot dance\" style=\"width: 100%; height: auto; display: block; max-height: 200px; object-fit: cover;\">\n              <div style=\"padding: 12px;\">\n                <div style=\"font-weight: 600; margin-bottom: 4px; color: var(--text, #3d2817);\">insane robot dance</div>\n                <div style=\"font-size: 13px; color: var(--muted, #7a6b5d); margin-bottom: 8px;\">YouTube video by phil23</div>\n                <div style=\"font-size: 12px; color: var(--accent, #c17a4f); overflow: hidden; text-overflow: ellipsis; white-space: nowrap;\">🔗 https://www.youtube.com/watch?v=4YJ3BTKMILw</div>\n              </div>\n            </div>\n          </a>",
+    "media": {
+      "type": "external",
+      "images": [
+        "/assets/cached-images/bluesky/ff3e417053569d0d90726c78ea85ca2e.https:img.youtube.comvi4YJ3BTKMILwhqdefault.jpg"
+      ],
+      "alt": [
+        "insane robot dance"
+      ]
+    },
+    "metadata": {
+      "likes": 0,
+      "reposts": 0,
+      "replies": 0,
+      "video_id": "4YJ3BTKMILw"
+    }
+  },
+  {
+    "id": "bluesky:3mgfff7x5zc2o",
+    "type": "bluesky",
+    "timestamp": "2026-03-06T13:14:47.553Z",
+    "title": "goomics.net",
+    "summary": "goomics.net — Goomics",
+    "url": "https://bsky.app/profile/chase523.bsky.social/post/3mgfff7x5zc2o",
+    "embed_uri": "at://did:plc:7whslkj667kgto2x246o4stl/app.bsky.feed.post/3mgfff7x5zc2o",
+    "embed_cid": "bafyreibodtkugu5tpg2hj5lnmuoynm5spvpe2evfhsqcqd4kdnz3thz2lq",
+    "content_html": "<p>goomics.net</p>\n          <a href=\"https://goomics.net/\" target=\"_blank\" rel=\"noopener\" style=\"text-decoration: none; color: inherit; display: block;\">\n            <div style=\"margin: 16px 0; border: 1px solid var(--border, #d4c4a8); border-radius: 8px; overflow: hidden; background: var(--card-bg, #fdfbf7); transition: box-shadow 0.2s;\" onmouseover=\"this.style.boxShadow='0 2px 8px rgba(0,0,0,0.1)'\" onmouseout=\"this.style.boxShadow='none'\">\n              \n              <div style=\"padding: 12px;\">\n                <div style=\"font-weight: 600; margin-bottom: 4px; color: var(--text, #3d2817);\">Goomics</div>\n                <div style=\"font-size: 13px; color: var(--muted, #7a6b5d); margin-bottom: 8px;\">Repository for the Goomics book project</div>\n                <div style=\"font-size: 12px; color: var(--accent, #c17a4f); overflow: hidden; text-overflow: ellipsis; white-space: nowrap;\">🔗 https://goomics.net/</div>\n              </div>\n            </div>\n          </a>",
+    "metadata": {
+      "likes": 0,
+      "reposts": 0,
+      "replies": 0
+    }
+  },
+  {
     "id": "bluesky:3mgamoz77mk2v",
     "type": "bluesky",
     "timestamp": "2026-03-04T15:42:13.521Z",
