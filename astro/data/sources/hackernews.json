@@ -1,5 +1,41 @@
 [
   {
+    "id": "hackernews:46961597",
+    "type": "hackernews",
+    "timestamp": "2026-02-10T15:58:26.000Z",
+    "title": "Jury told that Meta, Google 'engineered addiction' at landmark US trial",
+    "summary": "Users as prey is a terrifying but not unrealistic narrative. Thanks for sharing.",
+    "url": "https://techxplore.com/news/2026-02-jury-told-meta-google-addiction.html",
+    "canonical_url": "https://news.ycombinator.com/item?id=46961597",
+    "tags": [],
+    "content_html": "Users as prey is a terrifying but not unrealistic narrative.  Thanks for sharing.",
+    "metadata": {
+      "parent_id": 46960680,
+      "comment_url": "https://news.ycombinator.com/item?id=46961597",
+      "story_id": 46959832,
+      "story_title": "Jury told that Meta, Google 'engineered addiction' at landmark US trial",
+      "story_url": "https://techxplore.com/news/2026-02-jury-told-meta-google-addiction.html"
+    }
+  },
+  {
+    "id": "hackernews:46761934",
+    "type": "hackernews",
+    "timestamp": "2026-01-26T04:39:21.000Z",
+    "title": "First, make me care",
+    "summary": "Great example, thanks for sharing.",
+    "url": "https://gwern.net/blog/2026/make-me-care",
+    "canonical_url": "https://news.ycombinator.com/item?id=46761934",
+    "tags": [],
+    "content_html": "Great example, thanks for sharing.",
+    "metadata": {
+      "parent_id": 46758061,
+      "comment_url": "https://news.ycombinator.com/item?id=46761934",
+      "story_id": 46757067,
+      "story_title": "First, make me care",
+      "story_url": "https://gwern.net/blog/2026/make-me-care"
+    }
+  },
+  {
     "id": "hackernews:46174399",
     "type": "hackernews",
     "timestamp": "2025-12-06T16:10:58.000Z",
