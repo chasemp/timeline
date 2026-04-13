@@ -1,5 +1,21 @@
 [
   {
+    "id": "bluesky:3mj7u6a5ric27",
+    "type": "bluesky",
+    "timestamp": "2026-04-11T12:38:55.470Z",
+    "title": "opencode.ai",
+    "summary": "opencode.ai — OpenCode | The open source AI coding agent",
+    "url": "https://bsky.app/profile/chase523.bsky.social/post/3mj7u6a5ric27",
+    "embed_uri": "at://did:plc:7whslkj667kgto2x246o4stl/app.bsky.feed.post/3mj7u6a5ric27",
+    "embed_cid": "bafyreicrdmumqcjsuxor33r67ow63vfoytqniacfpvagjzifqja3ztsgou",
+    "content_html": "<p>opencode.ai</p>\n          <div style=\"margin: 16px 0; border: 1px solid var(--border, #d4c4a8); border-radius: 8px; overflow: hidden; background: var(--card-bg, #fdfbf7);\">\n            \n            <div style=\"padding: 12px;\">\n              <div style=\"font-weight: 600; margin-bottom: 4px; color: var(--text, #3d2817);\">OpenCode | The open source AI coding agent</div>\n              <div style=\"font-size: 13px; color: var(--muted, #7a6b5d); margin-bottom: 8px;\">OpenCode - The open source coding agent.</div>\n              <div style=\"font-size: 12px; color: var(--accent, #c17a4f); overflow: hidden; text-overflow: ellipsis; white-space: nowrap;\">🔗 https://opencode.ai/</div>\n            </div>\n          </div>",
+    "metadata": {
+      "likes": 0,
+      "reposts": 0,
+      "replies": 0
+    }
+  },
+  {
     "id": "bluesky:3mipq3ohw4c2e",
     "type": "bluesky",
     "timestamp": "2026-04-05T02:43:19.036Z",
