@@ -1,5 +1,21 @@
 [
   {
+    "id": "bluesky:3mjg7ioawfs2b",
+    "type": "bluesky",
+    "timestamp": "2026-04-14T01:17:35.388Z",
+    "title": "owasp.org/www-project-...",
+    "summary": "owasp.org/www-project-... — OWASP Agentic Skills Top 10 | OWASP Foundation",
+    "url": "https://bsky.app/profile/chase523.bsky.social/post/3mjg7ioawfs2b",
+    "embed_uri": "at://did:plc:7whslkj667kgto2x246o4stl/app.bsky.feed.post/3mjg7ioawfs2b",
+    "embed_cid": "bafyreidoxyh2cbvh5oekalean4yy4d5xix7lslaawmvkmjitrrqsfib6lm",
+    "content_html": "<p>owasp.org/www-project-...</p>\n          <div style=\"margin: 16px 0; border: 1px solid var(--border, #d4c4a8); border-radius: 8px; overflow: hidden; background: var(--card-bg, #fdfbf7);\">\n            \n            <div style=\"padding: 12px;\">\n              <div style=\"font-weight: 600; margin-bottom: 4px; color: var(--text, #3d2817);\">OWASP Agentic Skills Top 10 | OWASP Foundation</div>\n              <div style=\"font-size: 13px; color: var(--muted, #7a6b5d); margin-bottom: 8px;\">Security Risks and Mitigations for AI Agent Skills</div>\n              <div style=\"font-size: 12px; color: var(--accent, #c17a4f); overflow: hidden; text-overflow: ellipsis; white-space: nowrap;\">🔗 https://owasp.org/www-project-agentic-skills-top-10/#the-problem-a-crisis-already-in-progress</div>\n            </div>\n          </div>",
+    "metadata": {
+      "likes": 0,
+      "reposts": 0,
+      "replies": 0
+    }
+  },
+  {
     "id": "bluesky:3mj7u6a5ric27",
     "type": "bluesky",
     "timestamp": "2026-04-11T12:38:55.470Z",
