@@ -1,5 +1,33 @@
 [
   {
+    "id": "readwise:01kp8j2pwcx5e0mq43whdwvx6b",
+    "type": "saved",
+    "source": null,
+    "timestamp": "2026-04-15T12:32:55.692000+00:00",
+    "title": "Let’s not make the same mistakes with AI that we made with social media",
+    "summary": "The document warns against repeating the mistakes made with social media in the realm of artificial intelligence. It points out five key areas of concern: advertising, surveillance, virality, lock-in, and monopolization. The text highlights how AI could potentially exacerbate societal issues seen with social media, such as misinformation, manipulation, and monopolistic tendencies. It emphasizes the need for regulations and proactive measures to mitigate the negative impacts of AI before it becomes as unregulated and harmful as social media.",
+    "url": "https://www.technologyreview.com/2024/03/13/1089729/lets-not-make-the-same-mistakes-with-ai-that-we-made-with-social-media/",
+    "canonical_url": "https://www.technologyreview.com/2024/03/13/1089729/lets-not-make-the-same-mistakes-with-ai-that-we-made-with-social-media/",
+    "author": "Nathan E. Sanders\nBruce Schneier",
+    "tags": [
+      "ai",
+      "alt",
+      "tech"
+    ],
+    "media": [],
+    "content_html": null,
+    "content_text": null,
+    "embed_uri": null,
+    "embed_cid": null,
+    "metadata": {
+      "word_count": 2966,
+      "reading_time": "15 min read",
+      "site_name": "MIT Technology Review",
+      "cover_image": "https://wp.technologyreview.com/wp-content/uploads/2024/03/gold-rush2b.jpg?resize=1200,600",
+      "last_fetched": "2026-04-16T03:28:08.469Z"
+    }
+  },
+  {
     "id": "bluesky:3mjg7ioawfs2b",
     "type": "bluesky",
     "source": null,
@@ -70,7 +98,7 @@
       "reading_time": "1 min read",
       "site_name": "The Weather Report",
       "cover_image": "https://theweatherreport.ai/posts/must-read-microsoft-caught-31-companies-poisoning-ai-assistant-memory-through-summarize/preview.jpg",
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -102,7 +130,7 @@
       "site_name": "linkedin.com",
       "cover_image": "https://media.licdn.com/dms/image/v2/D4D12AQFp5IsaJ50Cpw/article-cover_image-shrink_720_1280/B4DZ1yKR26KwAI-/0/1775736805452?e=2147483647&v=beta&t=GwwcqVl9F3wcQAsuJkkNxWsWJUlkxnPNFBWXoWiO9uM",
       "reading_progress": 0.7983535033528874,
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -150,7 +178,7 @@
     "metadata": {
       "site_name": "YouTube",
       "cover_image": "https://i.ytimg.com/vi/jgx4J1z7POM/sddefault.jpg",
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -179,7 +207,7 @@
       "reading_time": "2 min read",
       "site_name": "linkedin.com",
       "cover_image": "https://static.licdn.com/aero-v1/sc/h/c45fy346jw096z9pbphyyhdz7",
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -207,7 +235,7 @@
       "reading_time": "4 min read",
       "site_name": "The Weather Report",
       "cover_image": "https://theweatherreport.ai/posts/anthropic-trustworthy-agents/preview.jpg",
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -234,7 +262,7 @@
       "reading_time": "13 min read",
       "site_name": "martinfowler.com",
       "cover_image": "https://martinfowler.com/logo-sq.png",
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -263,7 +291,7 @@
       "site_name": "linkedin.com",
       "cover_image": "https://static.licdn.com/aero-v1/sc/h/c45fy346jw096z9pbphyyhdz7",
       "reading_progress": 0.9405010813193168,
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -291,7 +319,7 @@
       "site_name": "X (formerly Twitter)",
       "cover_image": "https://pbs.twimg.com/profile_images/2017302152411066368/pQdZ-Il3.jpg",
       "reading_progress": 1,
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -321,7 +349,7 @@
       "reading_time": "2 min read",
       "site_name": "linkedin.com",
       "cover_image": "https://media.licdn.com/dms/image/v2/D5622AQFhKWuXe6WgQg/feedshare-shrink_1280/B56Z10eO4mGgAM-/0/1775775575873?e=2147483647&v=beta&t=_Y7KRi-StxXpgfwwR4vM1nteDNYAG9FPc-HoE4u_LUk",
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -352,7 +380,7 @@
       "site_name": "readwise-upload-pdf",
       "cover_image": "https://readwise-assets.s3.amazonaws.com/media/reader/parsed_document_assets/13665198/MvNea4_3PT5fID7T9vw65GQWH59uAk0NRhp27jGSHVw-cover_rA2D8E2.png",
       "reading_progress": 0.047619047619047616,
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -378,7 +406,7 @@
       "reading_time": "7 min read",
       "site_name": "the Guardian",
       "cover_image": "https://i.guim.co.uk/img/media/de0548738f508ca0ada015e6fd3ed26863f43453/0_0_1500_900/master/1500.jpg?width=1200&height=630&quality=85&auto=format&fit=crop&overlay-align=bottom%2Cleft&overlay-width=100p&overlay-base64=L2ltZy9zdGF0aWMvb3ZlcmxheXMvdGctZGVmYXVsdC5wbmc&enable=upscale&s=401fc20b87ba3abbb5345665f57653e0",
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -431,7 +459,7 @@
       "word_count": 2832,
       "reading_time": "15 min read",
       "site_name": "aphyr.com",
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -458,7 +486,7 @@
       "site_name": "University of Texas in Austin",
       "cover_image": "https://readwise-assets.s3.amazonaws.com/media/reader/parsed_document_assets/15012499/1GIWEBpZiHUjjk8PbCOjV91eSYs3CylCaqx9VYctaWY-cover_9BoEpPi.png",
       "reading_progress": 0.9848796059442884,
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -485,7 +513,7 @@
       "reading_time": "11 min read",
       "site_name": "substack.com",
       "cover_image": "https://substackcdn.com/image/fetch/$s_!Oq6u!,w_1200,h_675,c_fill,f_jpg,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Ff0c2bb5a-4f1e-4a61-9fc8-b390f9f8ec57_1080x1920.png",
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -540,7 +568,7 @@
       "reading_time": "354 min read",
       "site_name": "anthropic.com",
       "cover_image": "https://readwise-assets.s3.amazonaws.com/media/reader/parsed_document_assets/441628468/k9G2UhtH7tiSBNeDTFrmAeBc7IXgHspgkmNq0lSHJDs-cove_U1bVNjo.png",
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -567,7 +595,7 @@
       "word_count": 14003,
       "reading_time": "71 min read",
       "site_name": "anthropic.com",
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -596,7 +624,7 @@
       "reading_time": "14 min read",
       "site_name": "resilientcyber.io",
       "cover_image": "https://substackcdn.com/image/fetch/$s_!foq7!,w_1200,h_675,c_fill,f_jpg,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F611de0e1-233c-4dbe-b391-24666f7a909c_2816x1536.png",
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -668,7 +696,7 @@
     "embed_uri": null,
     "embed_cid": null,
     "metadata": {
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -696,7 +724,7 @@
     "embed_uri": null,
     "embed_cid": null,
     "metadata": {
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -720,7 +748,7 @@
     "embed_uri": null,
     "embed_cid": null,
     "metadata": {
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -770,7 +798,7 @@
     "embed_cid": null,
     "metadata": {
       "site_name": "Reuters",
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -798,7 +826,7 @@
       "reading_time": "6 min read",
       "site_name": "DEV Community",
       "cover_image": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fecldg12pwt3xr4ow01kd.png",
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -827,7 +855,7 @@
       "reading_time": "3 min read",
       "site_name": "linkedin.com",
       "cover_image": "https://media.licdn.com/dms/image/v2/D4E22AQFOY097q5QiOQ/feedshare-shrink_800/B4EZ04yv8NI8Ac-/0/1774774321605?e=2147483647&v=beta&t=BpdmG_bO7lqfgU2seuscEL4ad_Q015QzdjtLL3QUDOA",
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -855,7 +883,7 @@
       "reading_time": "9 min read",
       "site_name": "whoami.wiki",
       "cover_image": "https://whoami.wiki/blog/personal-encyclopedias/opengraph-image.png?v=2",
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -884,7 +912,7 @@
       "reading_time": "6 min read",
       "site_name": "Diff",
       "cover_image": "https://diff.wikimedia.org/wp-content/uploads/2026/03/Tetrapods_protecting_a_marina_on_Crete.jpg?fit=662%2C497",
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -964,7 +992,7 @@
       "reading_time": "66 min read",
       "site_name": "ACM SIGOPS Operating Systems Review",
       "cover_image": "https://dl.acm.org/cms/asset/5ee78f4f-88db-4b48-b96d-dc2d7c6b02a6/3762865.cover.jpg",
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -992,7 +1020,7 @@
       "reading_time": "1 min read",
       "site_name": "Creative Review",
       "cover_image": "https://creativereview.imgix.net/uploads/2025/03/le-chat-dark-mode.gif?auto=compress,format&crop=faces,entropy,edges&fit=crop&q=60&w=1920&h=1080",
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -1045,7 +1073,7 @@
       "site_name": "Systems & Signals",
       "cover_image": "https://substackcdn.com/image/fetch/$s_!cVIR!,w_1200,h_675,c_fill,f_jpg,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Ff4285a1f-118b-4083-a9ce-efc67b129bb2_1061x417.jpeg",
       "reading_progress": 0.9548494827671057,
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -1073,7 +1101,7 @@
       "reading_time": "8 min read",
       "site_name": "tecosystems",
       "cover_image": "http://redmonk.com/sogrady/files/2026/03/01_black_duck_2009_2017-1-1024x546.png",
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -1101,7 +1129,7 @@
       "reading_time": "15 min read",
       "site_name": "FUTURESEARCH",
       "cover_image": "https://futuresearch.ai/futuresearch-logo.webp",
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -1149,7 +1177,7 @@
       "reading_time": "5 min read",
       "site_name": "martinfowler.com",
       "cover_image": "https://martinfowler.com/logo-sq.png",
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -1282,7 +1310,7 @@
       "site_name": "linkedin.com",
       "cover_image": "https://static.licdn.com/aero-v1/sc/h/c45fy346jw096z9pbphyyhdz7",
       "reading_progress": 0.5400627239785096,
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -1335,7 +1363,7 @@
       "site_name": "WIRED",
       "cover_image": "https://media.wired.com/photos/677f9e879d0d5ec12dba3837/191:100/w_1280,c_limit/GettyImages-2192359273.jpg",
       "reading_progress": 1,
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -1363,7 +1391,7 @@
       "reading_time": "2 min read",
       "site_name": "linkedin.com",
       "cover_image": "https://static.licdn.com/aero-v1/sc/h/c45fy346jw096z9pbphyyhdz7",
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -1393,7 +1421,7 @@
       "reading_time": "4 min read",
       "site_name": "ChatGPT for teams",
       "cover_image": "https://glama.ai/generated-images/og?subTitle=I+prompt+injected+my+CONTRIBUTING.md+%E2%80%93+50%25+of+PRs+are+bots&title=Open+Source+Has+a+Bot+Problem",
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -1420,7 +1448,7 @@
       "reading_time": "13 min read",
       "site_name": "Sky News",
       "cover_image": "https://e3.365dm.com/25/11/1600x900/skynews-dxf-x-investigation_7073014.jpg?20251105170645",
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -1495,7 +1523,7 @@
       "site_name": "Sequoia Capital",
       "cover_image": "https://sequoiacap.com/wp-content/uploads/sites/6/2026/03/Autopilots-OG-3.jpg",
       "reading_progress": 0.9501095741328764,
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -1563,7 +1591,7 @@
       "site_name": "YouTube",
       "cover_image": "https://i.ytimg.com/vi/erfgEHHfFkU/maxresdefault.jpg",
       "reading_progress": 0.0715076920542891,
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -1592,7 +1620,7 @@
       "site_name": "martinfowler.com",
       "cover_image": "https://martinfowler.com/logo-sq.png",
       "reading_progress": 0.9880293808371053,
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -1623,7 +1651,7 @@
       "site_name": "fosdem.org",
       "cover_image": "https://fosdem.org/2026/assets/style/logo-gear-7204a6874eb0128932db10ff4030910401ac06f4e907f8b4a40da24ba592b252.png",
       "reading_progress": 1,
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -1651,7 +1679,7 @@
       "reading_time": "30 min read",
       "site_name": "sebastianraschka.com",
       "cover_image": "https://substackcdn.com/image/fetch/$s_!83ox!,w_1200,h_600,c_fill,f_jpg,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fd72e5a99-1a11-42b7-8831-8f5785ed2bc1_1600x1116.png",
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -1703,7 +1731,7 @@
       "word_count": 50,
       "reading_time": "1 min read",
       "site_name": "stopsloppypasta.ai",
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -1728,7 +1756,7 @@
       "word_count": 1255,
       "reading_time": "7 min read",
       "site_name": "alexerhardt.com",
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -1757,7 +1785,7 @@
       "site_name": "NPR",
       "cover_image": "https://media.npr.org/assets/img/2018/05/25/carpenter-gardener_wide-749c0e2b274bcdb4c18663124ca7fe61cc9436d1.jpg?s=1400",
       "reading_progress": 1,
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -1786,7 +1814,7 @@
       "reading_time": "5 min read",
       "site_name": "linkedin.com",
       "cover_image": "https://media.licdn.com/dms/image/v2/D4E12AQF9IPK425LMrg/article-cover_image-shrink_720_1280/B4EZz0LJyQHQAI-/0/1773623091140?e=2147483647&v=beta&t=kNRkCO5j4gZWikpC9F6J5nP1Urlhj9ksKhGo0qyES_s",
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -1839,7 +1867,7 @@
       "reading_time": "4 min read",
       "site_name": "IntelFusions",
       "cover_image": "https://rttribyzkostewwtvgth.supabase.co/storage/v1/object/public/article_images/oneplusherof.webp",
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -1869,7 +1897,7 @@
       "reading_time": "3 min read",
       "site_name": "linkedin.com",
       "cover_image": "https://static.licdn.com/aero-v1/sc/h/c45fy346jw096z9pbphyyhdz7",
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -1948,7 +1976,7 @@
       "site_name": "jsnover.com",
       "cover_image": "https://www.jsnover.com/blog/wp-content/uploads/2026/03/Boof.png",
       "reading_progress": 0.968925965058571,
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -1977,7 +2005,7 @@
       "reading_time": "2 min read",
       "site_name": "linkedin.com",
       "cover_image": "https://media.licdn.com/dms/image/v2/D4E22AQHWbTjH5F3Osw/feedshare-shrink_2048_1536/B4EZzjK723JcAk-/0/1773337820860?e=2147483647&v=beta&t=u3U9U7cdTGVCd4buF_N9WOtnQ_BwNx6f-sUAoJpQkr0",
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -2004,7 +2032,7 @@
       "reading_time": "10 min read",
       "site_name": "wikipedia.org",
       "cover_image": "https://upload.wikimedia.org/wikipedia/commons/8/87/Spinning_jenny.jpg",
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -2032,7 +2060,7 @@
       "word_count": 2031,
       "reading_time": "11 min read",
       "site_name": "Risk and Cyber ",
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -2060,7 +2088,7 @@
       "reading_time": "3 min read",
       "site_name": "QCon London 2024",
       "cover_image": "https://readwise-assets.s3.amazonaws.com/media/reader/parsed_document_assets/431024343/sWXwlBVpNUbSVMuJp9cR5ZCSIBV05PIB2lRJ8l9opsI-cove_YHDe1JT.png",
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -2088,7 +2116,7 @@
       "reading_time": "4 min read",
       "site_name": "Platformer",
       "cover_image": "https://www.platformer.news/content/images/size/w1200/2024/01/1500x500-1.jpeg",
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -2119,7 +2147,7 @@
       "site_name": "Linkstacks",
       "cover_image": "https://markmhendrickson.com/images/posts/when-the-chain-becomes-the-product-hero.png",
       "reading_progress": 1,
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -2148,7 +2176,7 @@
       "site_name": "Platformer",
       "cover_image": "https://www.platformer.news/content/images/size/w1200/2026/03/Screenshot-2026-03-09-at-10.59.42---AM.png",
       "reading_progress": 0.11277227904055778,
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -2175,7 +2203,7 @@
       "word_count": 140460,
       "reading_time": "703 min read",
       "site_name": "gutenberg.org",
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -2202,7 +2230,7 @@
       "reading_time": "45 min read",
       "site_name": "wikipedia.org",
       "cover_image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Principal%E2%80%93agent_problem_variantion_1.svg/1200px-Principal%E2%80%93agent_problem_variantion_1.svg.png",
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -2229,7 +2257,7 @@
       "reading_time": "3 min read",
       "site_name": "linkedin.com",
       "cover_image": "https://static.licdn.com/aero-v1/sc/h/c45fy346jw096z9pbphyyhdz7",
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -2279,7 +2307,7 @@
       "site_name": "YouTube",
       "cover_image": "https://i.ytimg.com/vi/T4Upf_B9RLQ/sddefault.jpg",
       "reading_progress": 0.39603014997615815,
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -2350,7 +2378,7 @@
       "reading_time": "4 min read",
       "site_name": "Luis Villa: Open Tech and Policy",
       "cover_image": "https://lu.is/images/CONTRACT-by-Steve-Snodgrass.jpg",
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -2379,7 +2407,7 @@
       "site_name": "nac-cna.ca",
       "cover_image": "https://naccnaca-stories.s3.amazonaws.com/3995/testament_640x397__max.jpg",
       "reading_progress": 0.9844427861685124,
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -2409,7 +2437,7 @@
       "reading_time": "9 min read",
       "site_name": "The GitHub Blog",
       "cover_image": "https://github.blog/wp-content/uploads/2026/02/546373902-0e39acc0-04db-40a3-85c4-71b4eddfe59e.jpg?fit=2400%2C1260",
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -2461,7 +2489,7 @@
       "site_name": "kk.org",
       "cover_image": "https://kk.org/wp-content/themes/kkdotorg/inc/images/og_default_1200.png",
       "reading_progress": 0.984393624892104,
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -2492,7 +2520,7 @@
       "reading_time": "12 min read",
       "site_name": "yudkowsky.net",
       "reading_progress": 1,
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -2522,7 +2550,7 @@
       "site_name": "Stanford Report",
       "cover_image": "https://readwise-assets.s3.amazonaws.com/media/reader/parsed_document_assets/427687886/3IbK6CxcBG0Z3ZOgCwH0-P2OJ6BRgIClXiTQf8kHyJg-cove_B50PGNe.png",
       "reading_progress": 0.8970499397036779,
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -2553,7 +2581,7 @@
       "site_name": "SvD.se",
       "cover_image": "https://svd.vgc.no/v2/images/e4d3cfec-f7dc-4461-aa32-108ea47f2621?h=630&q=80&upscale=true&w=1200&s=d82dc447eb031914967ea232d0aab8207eab5ef0",
       "reading_progress": 1,
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -2585,7 +2613,7 @@
       "site_name": "Djordje's Substack",
       "cover_image": "https://substackcdn.com/image/fetch/$s_!yXR9!,w_1200,h_675,c_fill,f_jpg,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fce2624e7-ebec-46f0-b079-0861168170e9_1830x1021.png",
       "reading_progress": 0.984855169189964,
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -2614,7 +2642,7 @@
       "site_name": "substack.com",
       "cover_image": "https://substackcdn.com/image/fetch/$s_!1fxK!,w_1200,h_600,c_fill,f_jpg,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F18d60643-eec3-4268-b19d-9866a1d66f8f_2607x1533.png",
       "reading_progress": 1,
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -2642,7 +2670,7 @@
       "site_name": "linkedin.com",
       "cover_image": "https://static.licdn.com/aero-v1/sc/h/c45fy346jw096z9pbphyyhdz7",
       "reading_progress": 1,
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -2671,7 +2699,7 @@
       "site_name": "YouTube",
       "cover_image": "https://i.ytimg.com/vi/btUbcsTbVA8/sddefault.jpg",
       "reading_progress": 0.13609348473851088,
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -2698,7 +2726,7 @@
       "reading_time": "4 min read",
       "site_name": "X (formerly Twitter)",
       "cover_image": "https://pbs.twimg.com/profile_images/1887065642261737472/QdLiAFfD.jpg",
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -2729,7 +2757,7 @@
       "site_name": "SiliconSnark",
       "cover_image": "https://www.siliconsnark.com/content/images/size/w1200/2026/03/ChatGPT-Image-Mar-1--2026--09_58_44-PM.png",
       "reading_progress": 1,
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -2758,7 +2786,7 @@
       "reading_time": "10 min read",
       "site_name": "The Atlantic",
       "cover_image": "https://cdn.theatlantic.com/thumbor/jR4AGwZ0AoLt1zvx9rBsrT18vek=/0x0:2000x1125/960x540/media/img/mt/2021/04/YahooVillaincolor3v2/original.jpg",
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -2784,7 +2812,7 @@
     "metadata": {
       "site_name": "YouTube",
       "cover_image": "https://i.ytimg.com/vi/AbSehcT19u0/sddefault.jpg?sqp=-oaymwEmCIAFEOAD8quKqQMa8AEB-AH-BIAC4AOKAgwIABABGGUgQChBMA8=&rs=AOn4CLBS0DKjR74fd54-lZ_eCpzb5nyJ7g",
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -2812,7 +2840,7 @@
       "site_name": "the Guardian",
       "cover_image": "https://i.guim.co.uk/img/media/5426e410425dfa173d930beb0b9a4adadfe2f4ca/0_0_5873_4699/master/5873.jpg?width=1200&height=630&quality=85&auto=format&fit=crop&precrop=40:21,offset-x50,offset-y0&overlay-align=bottom%2Cleft&overlay-width=100p&overlay-base64=L2ltZy9zdGF0aWMvb3ZlcmxheXMvdGctZGVmYXVsdC5wbmc&enable=upscale&s=a4540c968a3e7dba7a0e39adb4118268",
       "reading_progress": 1,
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -2861,7 +2889,7 @@
       "reading_time": "3 min read",
       "site_name": "Threat Road",
       "cover_image": "https://substackcdn.com/image/fetch/$s_!DksL!,w_1200,h_675,c_fill,f_jpg,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F9212e710-ab8b-4382-b2dc-51d86a120d39_914x508.jpeg",
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -2890,7 +2918,7 @@
       "site_name": "Vanderbilt University",
       "cover_image": "https://cdn.vanderbilt.edu/vu-URL/wp-content/uploads/sites/450/2025/05/21152306/Autonomic-physiological-coupling-of-the-global-fMRI-signal.jpeg",
       "reading_progress": 0.4875572006141847,
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -2917,7 +2945,7 @@
       "reading_time": "21 min read",
       "site_name": "The Public Domain Review",
       "cover_image": "https://pdr-assets.b-cdn.net/essays/typing-for-love-or-money/typing-thumb.jpg",
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -2942,7 +2970,7 @@
     "metadata": {
       "site_name": "YouTube",
       "cover_image": "https://i.ytimg.com/vi/mYD7Y9CXeUw/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLAg6naipgALsz_ARX7ZKfn-d2GoZA",
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -2972,7 +3000,7 @@
       "reading_time": "12 min read",
       "site_name": "linkedin.com",
       "cover_image": "https://static.licdn.com/aero-v1/sc/h/c45fy346jw096z9pbphyyhdz7",
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -2998,7 +3026,7 @@
       "word_count": 55,
       "reading_time": "1 min read",
       "site_name": "cern.ch",
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -3027,7 +3055,7 @@
       "reading_time": "1 min read",
       "site_name": "Amplifying",
       "cover_image": "https://amplifying.ai/opengraph-image.png?754b8483df2ac5d9",
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -3055,7 +3083,7 @@
       "reading_time": "4 min read",
       "site_name": "the Guardian",
       "cover_image": "https://i.guim.co.uk/img/media/13b25becf38eae040d804aba8ec782ba8cd66988/654_0_3335_2668/master/3335.jpg?width=1200&height=630&quality=85&auto=format&fit=crop&precrop=40:21,offset-x50,offset-y0&overlay-align=bottom%2Cleft&overlay-width=100p&overlay-base64=L2ltZy9zdGF0aWMvb3ZlcmxheXMvdGctZGVmYXVsdC5wbmc&enable=upscale&s=3489c87db87da769fb108a825e59ff73",
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -3082,7 +3110,7 @@
       "reading_time": "37 min read",
       "site_name": "citriniresearch.com",
       "cover_image": "https://substackcdn.com/image/fetch/$s_!rCTy!,w_1200,h_675,c_fill,f_jpg,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F9ede0b37-f3be-4787-90ff-10cb24719fdc_710x1119.jpeg",
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -3108,7 +3136,7 @@
       "reading_time": "5 min read",
       "site_name": "ransomware.live",
       "cover_image": "https://www.ransomware.live/ransomware.png",
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -3135,7 +3163,7 @@
       "word_count": 1558,
       "reading_time": "8 min read",
       "site_name": "st-minutiae.com",
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -3164,7 +3192,7 @@
       "reading_time": "1 min read",
       "site_name": "linkedin.com",
       "cover_image": "https://media.licdn.com/dms/image/v2/D4E22AQElVcXhdrWfwg/feedshare-shrink_800/B4EZyQAUb.GcAg-/0/1771942529155?e=2147483647&v=beta&t=aSjOpCTT6mF1imqh-ai5O0i7eGlxOzvWwLXEDk41q48",
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -3193,7 +3221,7 @@
       "site_name": "MIT OpenCourseWare",
       "cover_image": "https://readwise-assets.s3.amazonaws.com/media/reader/parsed_document_assets/48078007/KZ0CklNxL5i1uAerqvZafcPS5UB2sicMS_rwHhdtACw-cover_h6v9qIJ.png",
       "reading_progress": 1,
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -3219,7 +3247,7 @@
       "reading_time": "7 min read",
       "site_name": "IEEE Spectrum",
       "cover_image": "https://spectrum.ieee.org/media-library/image.jpg?id=64968905&width=1200&height=600&coordinates=0%2C11%2C0%2C239",
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -3246,7 +3274,7 @@
       "reading_time": "133 min read",
       "cover_image": "https://readwise-assets.s3.amazonaws.com/media/reader/parsed_document_assets/424082622/7PuyXhg5WO5C4qjDinj96_y-5ygrk2EdIOowQBWaD88-cove_wBeV53A.png",
       "reading_progress": 0.125,
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -3272,7 +3300,7 @@
       "reading_time": "23 min read",
       "site_name": "deadlanguagesociety.com",
       "cover_image": "https://substackcdn.com/image/fetch/$s_!94Uq!,w_1200,h_675,c_fill,f_jpg,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F5dddb379-4714-4730-bb8d-538c26e2d623_1600x1066.jpeg",
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -3297,7 +3325,7 @@
       "word_count": 630,
       "reading_time": "4 min read",
       "site_name": "susam.net",
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -3324,7 +3352,7 @@
       "reading_time": "10 min read",
       "site_name": "WIRED",
       "cover_image": "https://media.wired.com/photos/5933170e4cd5ce6f96c0c48a/191:100/w_1280,c_limit/linus-coffee.jpg",
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -3352,7 +3380,7 @@
       "reading_time": "1 min read",
       "site_name": "Codeberg.org",
       "cover_image": "https://codeberg.org/assets/img/logo.png",
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -3383,7 +3411,7 @@
       "reading_time": "3 min read",
       "site_name": "asktog.com",
       "reading_progress": 1,
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -3414,7 +3442,7 @@
       "reading_time": "6 min read",
       "site_name": "nomodes.com",
       "reading_progress": 0.8787856774329215,
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -3440,7 +3468,7 @@
       "reading_time": "7 min read",
       "site_name": "Psychology Today",
       "cover_image": "https://cdn2.psychologytoday.com/assets/styles/manual_crop_1_91_1_1528x800/public/teaser_image/blog_entry/2023-10/artificial-intelligence-gd5d57a76e_1920.jpg?itok=S6E7DOJl",
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -3466,7 +3494,7 @@
       "reading_time": "5 min read",
       "site_name": "juno-labs.com",
       "cover_image": "https://juno-labs.com/public/juno_logo.png",
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -3495,7 +3523,7 @@
       "reading_time": "1 min read",
       "site_name": "linkedin.com",
       "cover_image": "https://static.licdn.com/aero-v1/sc/h/c45fy346jw096z9pbphyyhdz7",
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -3523,7 +3551,7 @@
       "site_name": "Forbes",
       "cover_image": "https://imageio.forbes.com/specials-images/imageserve/6987797580bd40751cdddc8e/0x0.jpg?format=jpg&height=900&width=1600&fit=bounds",
       "reading_progress": 0.7646438528832846,
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -3551,7 +3579,7 @@
       "reading_time": "6 min read",
       "site_name": "Substack",
       "reading_progress": 1,
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -3578,7 +3606,7 @@
       "reading_time": "13 min read",
       "site_name": "handwiki.org",
       "cover_image": "https://handwiki.org/wiki/resources/assets/LogoHandwiki340.png",
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -3608,7 +3636,7 @@
       "reading_time": "8 min read",
       "site_name": "Engineering at Meta",
       "cover_image": "https://engineering.fb.com/wp-content/uploads/2025/10/Branching-in-a-Sapling-Monorepo.png",
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -3633,7 +3661,7 @@
       "word_count": 3267,
       "reading_time": "17 min read",
       "site_name": "no-bull.sh",
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -3659,7 +3687,7 @@
       "word_count": 848,
       "reading_time": "5 min read",
       "site_name": "ucsf.edu",
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -3687,7 +3715,7 @@
       "reading_time": "17 min read",
       "site_name": "substack.com",
       "cover_image": "https://substackcdn.com/image/fetch/$s_!BRKm!,w_1200,h_675,c_fill,f_jpg,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F1bc44ec5-79d2-45ad-bded-39fed70330e2_1666x1039.jpeg",
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -3715,7 +3743,7 @@
       "reading_time": "24 min read",
       "site_name": "davidwhitney.co.uk",
       "reading_progress": 0.8747293182190644,
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -3742,7 +3770,7 @@
       "reading_time": "3 min read",
       "site_name": "theregister.com",
       "cover_image": "https://regmedia.co.uk/2021/04/23/dog.jpg",
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -3770,7 +3798,7 @@
       "site_name": "Fortune Recommends",
       "cover_image": "https://fortune.com/img-assets/wp-content/uploads/2026/02/GettyImages-521488522-e1771352623863.jpg?resize=1200,600",
       "reading_progress": 1,
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -3799,7 +3827,7 @@
       "site_name": "Ars Technica",
       "cover_image": "https://cdn.arstechnica.net/wp-content/uploads/2020/08/Google-Messaging-mess-760x380.jpg",
       "reading_progress": 0.7989452096258766,
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -3827,7 +3855,7 @@
       "site_name": "stir.ac.uk",
       "cover_image": "https://readwise-assets.s3.amazonaws.com/media/reader/parsed_document_assets/421206140/OzA8q588Zu5impPofcOhmE34x7gq3r0ZIWfg1oUnpYc-cove_7ZzLf8S.png",
       "reading_progress": 1,
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -3854,7 +3882,7 @@
       "site_name": "YouTube",
       "cover_image": "https://i.ytimg.com/vi/uI-hgSE5QIw/sddefault.jpg",
       "reading_progress": 0.19925140415078463,
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -3881,7 +3909,7 @@
       "word_count": 1043,
       "reading_time": "6 min read",
       "site_name": "University of Texas in Austin",
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -3911,7 +3939,7 @@
       "site_name": "readwise-upload-pdf",
       "cover_image": "https://readwise-assets.s3.amazonaws.com/media/reader/parsed_document_assets/3846438/VsgtGDVbFANBsHzNtGZXw5dp5qtYN0lK1E6LiV3oAdI-cover-3846438.png",
       "reading_progress": 0.4,
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -3941,7 +3969,7 @@
       "reading_time": "13 min read",
       "site_name": "paulosman.me",
       "reading_progress": 1,
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -3968,7 +3996,7 @@
       "reading_time": "3 min read",
       "site_name": "Law360",
       "cover_image": "https://www.law360.com/images/law360-stacked.png",
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -4020,7 +4048,7 @@
       "reading_time": "6 min read",
       "site_name": "martinfowler.com",
       "cover_image": "https://martinfowler.com/logo-sq.png",
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -4049,7 +4077,7 @@
       "reading_time": "17 min read",
       "site_name": "martinfowler.com",
       "cover_image": "https://martinfowler.com/articles/exploring-gen-ai/donkey-card.png",
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -4079,7 +4107,7 @@
       "reading_time": "8 min read",
       "site_name": "The Shamblog",
       "cover_image": "https://theshamblog.com/wp-content/uploads/2026/02/img_6595.jpg",
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -4107,7 +4135,7 @@
       "word_count": 10401,
       "reading_time": "53 min read",
       "site_name": "wikipedia.org",
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -4137,7 +4165,7 @@
       "site_name": "Daeus Jorento",
       "cover_image": "https://s0.wp.com/i/blank.jpg?m=1383295312i",
       "reading_progress": 1,
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -4192,7 +4220,7 @@
       "site_name": "jamesdrandall.com",
       "cover_image": "https://www.jamesdrandall.com/posts/the_thing_i_loved_has_changed/metadata.png",
       "reading_progress": 0.9961424252783956,
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -4219,7 +4247,7 @@
       "reading_time": "8 min read",
       "site_name": "MIT Technology Review",
       "cover_image": "https://wp.technologyreview.com/wp-content/uploads/2026/02/260205_moltbook-hero.jpg?resize=1200,600",
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -4251,7 +4279,7 @@
       "site_name": "linkedin.com",
       "cover_image": "https://static.licdn.com/aero-v1/sc/h/c45fy346jw096z9pbphyyhdz7",
       "reading_progress": 1,
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -4282,7 +4310,7 @@
       "site_name": "The Middle Distance ",
       "cover_image": "https://substackcdn.com/image/fetch/$s_!HzII!,w_1200,h_675,c_fill,f_jpg,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fe373b320-57cb-4c0b-afe0-58d72dea3e07_6000x4000.heic",
       "reading_progress": 1,
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -4308,7 +4336,7 @@
       "word_count": 4645,
       "reading_time": "24 min read",
       "site_name": "IETF Datatracker",
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -4336,7 +4364,7 @@
       "reading_time": "21 min read",
       "site_name": "iankduncan.com",
       "cover_image": "https://iankduncan.com/portrait.jpg",
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -4366,7 +4394,7 @@
       "site_name": "James Clear",
       "cover_image": "https://jamesclear.com/wp-content/uploads/2020/11/jc-twitter.png",
       "reading_progress": 0.4440079113384041,
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -4395,7 +4423,7 @@
       "reading_time": "4 min read",
       "site_name": "robbowley.net",
       "reading_progress": 0.9405520568974488,
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -4422,7 +4450,7 @@
       "reading_time": "5 min read",
       "site_name": "404 Media",
       "cover_image": "https://www.404media.co/content/images/size/w1200/2026/01/Screenshot-2026-01-31-185109-1.png",
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -4452,7 +4480,7 @@
       "reading_time": "145 min read",
       "site_name": "moltbook",
       "cover_image": "https://moltbook.com/opengraph-image?456d992ddc0a4ab5",
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -4485,7 +4513,7 @@
       "reading_time": "6 min read",
       "site_name": "simonwillison.net",
       "cover_image": "https://static.simonwillison.net/static/2026/moltbook-card.jpg",
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -4513,7 +4541,7 @@
       "reading_time": "8 min read",
       "site_name": "ken’s Substack",
       "cover_image": "https://substackcdn.com/image/fetch/$s_!hSGl!,w_1200,h_600,c_fill,f_jpg,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F071ff6d6-974b-4dce-9531-99c05f2b4ccd_585x517.png",
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -4561,7 +4589,7 @@
       "word_count": 1102,
       "reading_time": "6 min read",
       "site_name": "jeffgeerling.com",
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -4589,7 +4617,7 @@
       "reading_time": "2 min read",
       "site_name": "linkedin.com",
       "cover_image": "https://static.licdn.com/aero-v1/sc/h/c45fy346jw096z9pbphyyhdz7",
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -4617,7 +4645,7 @@
       "word_count": 19,
       "reading_time": "1 min read",
       "site_name": "mozilla.org",
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -4646,7 +4674,7 @@
       "reading_time": "2 min read",
       "site_name": "darknetdiaries.com",
       "cover_image": "https://darknetdiaries.com/imgs/courthouse.jpg",
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -4671,7 +4699,7 @@
       "site_name": "YouTube",
       "cover_image": "https://i.ytimg.com/vi_webp/OL8DyVusLeE/hqdefault.webp",
       "reading_progress": 1,
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -4701,7 +4729,7 @@
       "reading_time": "14 min read",
       "site_name": "The Systems Thinker",
       "cover_image": "https://thesystemsthinker.com/wp-content/uploads/images/ln-products/Image%20100501.jpg",
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -4750,7 +4778,7 @@
       "reading_time": "14 min read",
       "site_name": "substack.com",
       "cover_image": "https://substackcdn.com/image/fetch/$s_!GW-a!,w_1200,h_675,c_fill,f_jpg,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F51aab99a-900c-4f17-9666-e6ec24e0c621_847x387.jpeg",
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -4778,7 +4806,7 @@
       "reading_time": "6 min read",
       "site_name": "Wait But Why",
       "cover_image": "https://149909199.v2.pressablecdn.com/wp-content/uploads/2015/12/Tail-End-F.png",
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -4806,7 +4834,7 @@
       "reading_time": "13 min read",
       "site_name": "haxx.se",
       "cover_image": "https://daniel.haxx.se/blog/wp-content/uploads/2025/10/sourcecode.jpg",
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -4836,7 +4864,7 @@
       "reading_time": "13 min read",
       "site_name": "lesswrong.com",
       "cover_image": "https://res.cloudinary.com/lesswrong-2-0/image/upload/v1654295382/new_mississippi_river_fjdmww.jpg",
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -4887,7 +4915,7 @@
       "reading_time": "14 min read",
       "site_name": "The Architect Elevator",
       "cover_image": "https://architectelevator.com/assets/img/metaphor_banner.png",
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -4915,7 +4943,7 @@
       "site_name": "Medium",
       "cover_image": "https://miro.medium.com/v2/resize:fit:960/1*S7Y2nXI7MmSrE4HXQU0CEw.png",
       "reading_progress": 0.991933708574784,
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -4964,7 +4992,7 @@
       "word_count": 267,
       "reading_time": "2 min read",
       "site_name": "cultivate-caring.community",
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -4992,7 +5020,7 @@
       "word_count": 29,
       "reading_time": "1 min read",
       "site_name": "johnpcutler.github.io",
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -5020,7 +5048,7 @@
       "reading_time": "14 min read",
       "site_name": "Ibrahim Diallo Blog",
       "cover_image": "https://cdn.idiallo.com/images/assets/353/thumb.jpg",
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -5071,7 +5099,7 @@
       "word_count": 883,
       "reading_time": "5 min read",
       "site_name": "shreevatsa.net",
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -5097,7 +5125,7 @@
       "word_count": 419,
       "reading_time": "3 min read",
       "site_name": "rselbach.com",
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -5147,7 +5175,7 @@
       "reading_time": "1 min read",
       "site_name": "readwise-upload-pdf",
       "cover_image": "https://readwise-assets.s3.amazonaws.com/media/reader/parsed_document_assets/411765153/nnvgQKWqT3jU4dqzh7MPCa6GJAcsbz3lynB8qsYwfC0-cove_819FPEO.png",
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -5177,7 +5205,7 @@
       "site_name": "Ullizee-Inc",
       "cover_image": "https://guntherverheyen.com/wp-content/uploads/2020/05/97-things-every-scrum-practitioner-should-know_cover-final.png",
       "reading_progress": 0.7710480382001316,
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -5205,7 +5233,7 @@
       "word_count": 1825,
       "reading_time": "10 min read",
       "site_name": "wikisource.org",
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -5232,7 +5260,7 @@
       "reading_time": "54 min read",
       "site_name": "umkc.edu",
       "reading_progress": 0.1585979778835912,
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -5263,7 +5291,7 @@
       "reading_time": "1 min read",
       "site_name": "linkedin.com",
       "cover_image": "https://static.licdn.com/aero-v1/sc/h/c45fy346jw096z9pbphyyhdz7",
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -5294,7 +5322,7 @@
       "site_name": "DevOps.com",
       "cover_image": "https://devops.com/wp-content/uploads/2020/04/DevOps-Chats-CloudBees-Remains-at-Top-of-DevOps-Market.jpg",
       "reading_progress": 0.3124836423020984,
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -5321,7 +5349,7 @@
       "reading_time": "8 min read",
       "site_name": "seangoedecke.com",
       "reading_progress": 0.8166880304964705,
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -5397,7 +5425,7 @@
       "word_count": 1172,
       "reading_time": "6 min read",
       "site_name": "rfc-editor.org",
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -5427,7 +5455,7 @@
       "site_name": "linkedin.com",
       "cover_image": "https://media.licdn.com/dms/image/v2/D5612AQHnd8Ns0W1EUQ/article-cover_image-shrink_720_1280/B56ZvYdwwMIsAI-/0/1768863239451?e=2147483647&v=beta&t=sIUBVywQHieSCaXD2GX-RGXPy-XlagI7igQu6RzLSKg",
       "reading_progress": 0.9900650997391026,
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -5456,7 +5484,7 @@
       "site_name": "henrikkarlsson.xyz",
       "cover_image": "https://substackcdn.com/image/fetch/w_1200,h_600,c_fill,f_jpg,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fd8bec767-3242-4428-a281-0cdc3182ff75_750x587.png",
       "reading_progress": 1,
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -5484,7 +5512,7 @@
       "reading_time": "3 min read",
       "site_name": "linkedin.com",
       "cover_image": "https://static.licdn.com/aero-v1/sc/h/c45fy346jw096z9pbphyyhdz7",
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -5513,7 +5541,7 @@
       "reading_time": "3 min read",
       "site_name": "linkedin.com",
       "cover_image": "https://media.licdn.com/dms/image/v2/D5622AQEH3l0IS3nWFQ/feedshare-shrink_800/B56ZumhrWvIgAg-/0/1768025406736?e=2147483647&v=beta&t=74R5MAJIfOxiOx3AL-peUeTvU9LY04GPMPfuYnrPyDE",
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -5544,7 +5572,7 @@
       "site_name": "readwise-upload-pdf",
       "cover_image": "https://readwise-assets.s3.amazonaws.com/media/reader/parsed_document_assets/410721161/EdYnmaw2JVG7kezCkFT0m0aDKhTqf2MN3jL-LPPHuJE-cove_d46jYdh.png",
       "reading_progress": 0.3108703123416523,
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -5574,7 +5602,7 @@
       "reading_time": "1 min read",
       "site_name": "linkedin.com",
       "cover_image": "https://static.licdn.com/aero-v1/sc/h/c45fy346jw096z9pbphyyhdz7",
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -5724,7 +5752,7 @@
       "reading_time": "1 min read",
       "site_name": "Fair Source License",
       "cover_image": "https://fair.io/images/metaimage.png",
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -5778,7 +5806,7 @@
       "site_name": "GitHub",
       "cover_image": "https://opengraph.githubassets.com/4e4b894a3f927d47eeef12277b895b84676aaa7ae65418e7d1c10dd306d52bb0/tailwindlabs/tailwindcss.com/pull/2388",
       "reading_progress": 0.9385047287349308,
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -5808,7 +5836,7 @@
       "reading_time": "6 min read",
       "site_name": "charity.wtf",
       "cover_image": "https://substackcdn.com/image/fetch/$s_!41Lq!,w_1200,h_600,c_fill,f_jpg,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F097e02dc-5952-42ba-b532-d2efada0d4dc_768x1024.jpeg",
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -5835,7 +5863,7 @@
       "reading_time": "6 min read",
       "site_name": "Medium",
       "cover_image": "https://miro.medium.com/v2/resize:fit:1024/1*Y7OxSMe_wDWIiSZpcXQYAw.jpeg",
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -5910,7 +5938,7 @@
       "site_name": "Product Talk",
       "cover_image": "https://www.producttalk.org/content/images/size/w1200/2025/12/Claude-Code-Building-Blocks-1.png",
       "reading_progress": 0.49035903623377625,
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -5938,7 +5966,7 @@
       "reading_time": "86 min read",
       "site_name": "National Institute of Standards and Technology",
       "cover_image": "https://readwise-assets.s3.amazonaws.com/media/reader/parsed_document_assets/406406759/SdscM9ixo2wihiekDDk1as1uOjj154QfcvFksBzTEEs-cove_xnDU6Yf.png",
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -5986,7 +6014,7 @@
       "word_count": 329,
       "reading_time": "2 min read",
       "site_name": "nicruo.com",
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -6015,7 +6043,7 @@
       "site_name": "TechCrunch",
       "cover_image": "https://techcrunch.com/wp-content/uploads/2015/11/jenga.jpg?resize=1200,800",
       "reading_progress": 1,
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -6068,7 +6096,7 @@
       "reading_time": "11 min read",
       "site_name": "Back Alley Coder",
       "cover_image": "https://csuwildcat.github.io/_astro/passseed-logo.Dtrp9Ve4.jpg",
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -6095,7 +6123,7 @@
       "word_count": 648,
       "reading_time": "4 min read",
       "site_name": "markpearl.co.za",
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -6150,7 +6178,7 @@
       "site_name": "ineffable.co",
       "cover_image": "https://ineffable.co/cdn-cgi/image/width=1200,height=630,quality=80,format=auto,dpr=2/og/more-thinking-not-less",
       "reading_progress": 1,
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -6182,7 +6210,7 @@
       "reading_time": "11 min read",
       "site_name": "The Cloudflare Blog",
       "cover_image": "https://cf-assets.www.cloudflare.com/zkvhlag99gkb/1XjzzmUMbNy2sRmFxvqHmF/878cf01bd8a4e79548200b76fc5414b8/BLOG-3097_OG.png",
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -6210,7 +6238,7 @@
       "reading_time": "2 min read",
       "site_name": "The Singju Post",
       "reading_progress": 0.7832190101884595,
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -6285,7 +6313,7 @@
       "site_name": "linkedin.com",
       "cover_image": "https://static.licdn.com/scds/common/u/images/email/artdeco/logos/96/linkedin-bug-color.png",
       "reading_progress": 0.9966363171253085,
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -6312,7 +6340,7 @@
       "word_count": 1795,
       "reading_time": "9 min read",
       "site_name": "xent.com",
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -6411,7 +6439,7 @@
       "site_name": "Outside Online",
       "cover_image": "https://www.outsideonline.com/wp-content/uploads/2025/08/Douglas1.jpg",
       "reading_progress": 1,
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -6441,7 +6469,7 @@
       "site_name": "Tom's Hardware",
       "cover_image": "https://cdn.mos.cms.futurecdn.net/j5wSes9VymTFLBkLCAqarH-2000-80.jpg",
       "reading_progress": 1,
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -6495,7 +6523,7 @@
       "reading_time": "2 min read",
       "site_name": "are.na",
       "reading_progress": 0.05352972511314179,
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -6592,7 +6620,7 @@
       "reading_time": "8 min read",
       "site_name": "Substack",
       "reading_progress": 0.9742111318607295,
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -6625,7 +6653,7 @@
       "reading_time": "2 min read",
       "site_name": "linkedin.com",
       "cover_image": "https://static.licdn.com/aero-v1/sc/h/c45fy346jw096z9pbphyyhdz7",
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -6656,7 +6684,7 @@
       "site_name": "substack.com",
       "cover_image": "https://substackcdn.com/image/fetch/$s_!Qq4_!,w_1200,h_600,c_fill,f_jpg,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F6177bca6-9dc2-4f5e-b7b2-70c7d2f84c35_1024x1536.png",
       "reading_progress": 0.9848178092509695,
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -6686,7 +6714,7 @@
       "site_name": "umbc.edu",
       "cover_image": "https://readwise-assets.s3.amazonaws.com/media/reader/parsed_document_assets/13869450/V7wqZo4xo2jAZEJBYQkZfqRswRMQezmOW2EjNlUHkk8-cover_H5EwE1e.png",
       "reading_progress": 0.7105769863858763,
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -6714,7 +6742,7 @@
       "site_name": "usp.br",
       "cover_image": "https://readwise-assets.s3.amazonaws.com/media/reader/parsed_document_assets/403578949/OwA0W3tVBknHV23cw9EAKDKaTXCBU6cgBaUM200RBxo-cove_C3lAXxR.png",
       "reading_progress": 0.9090909090909091,
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -6741,7 +6769,7 @@
     "metadata": {
       "site_name": "YouTube",
       "cover_image": "https://i.ytimg.com/vi/nvbidcaZpdU/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLCjz7gtxx6s5G00OqyIyX8s7liGFw",
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -6770,7 +6798,7 @@
       "reading_time": "8 min read",
       "site_name": "quoteinvestigator.com",
       "reading_progress": 0.7003532730164044,
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -6799,7 +6827,7 @@
       "reading_time": "20 min read",
       "site_name": "archive.org",
       "reading_progress": 0.9904648925612944,
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -6828,7 +6856,7 @@
       "site_name": "wikipedia.org",
       "cover_image": "https://upload.wikimedia.org/wikipedia/en/7/7b/Our_Band_Could_Be_Your_Life_book_cover.jpg",
       "reading_progress": 0.7719098526966669,
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -6882,7 +6910,7 @@
       "site_name": "A Space to Think: Notes on Software Development",
       "cover_image": "https://substackcdn.com/image/fetch/$s_!_nMM!,w_1200,h_600,c_fill,f_jpg,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F7460e174-6e95-4b2e-b749-179a746139c5_1536x1024.png",
       "reading_progress": 1,
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -6913,7 +6941,7 @@
       "reading_time": "6 min read",
       "site_name": "theregister.com",
       "cover_image": "https://regmedia.co.uk/2025/02/11/shutterstock_kim_will_fix_it.jpg",
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -6940,7 +6968,7 @@
       "word_count": 1589,
       "reading_time": "8 min read",
       "site_name": "aphyr.com",
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -6993,7 +7021,7 @@
       "site_name": "Duke University",
       "cover_image": "https://web.law.duke.edu/sites/default/files/images/centers/cspd/pdd2025/PDDmontageRS.jpg",
       "reading_progress": 0.9514211499766715,
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -7022,7 +7050,7 @@
       "site_name": "Fortune Recommends",
       "cover_image": "https://fortune.com/img-assets/wp-content/uploads/2025/12/GettyImages-2224699898-e1764876128252.jpg?resize=1200,600",
       "reading_progress": 0.22549090832663585,
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -7050,7 +7078,7 @@
       "site_name": "The Atlantic",
       "cover_image": "https://cdn.theatlantic.com/thumbor/t8aiqYwBcekpN8fBUdVSemBJteo=/0x81:3000x1769/960x540/media/img/mt/2016/03/RTXPW7K/original.jpg",
       "reading_progress": 1,
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -7079,7 +7107,7 @@
       "site_name": "linkedin.com",
       "cover_image": "https://media.licdn.com/dms/image/v2/D4E12AQEuAcq3w4rIoQ/article-cover_image-shrink_720_1280/B4EZtaW2EFKMAI-/0/1766747497244?e=2147483647&v=beta&t=GMcChxROVIAHXiiAPU8gpWVIydL-PoQ683ON7Pjnemo",
       "reading_progress": 0.924339917103112,
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -7158,7 +7186,7 @@
       "site_name": "Caimito Agile Life",
       "cover_image": "https://gravatar.com/avatar/663d11426b0a187ddac59f8c17ce61b4?s=400&d=robohash&r=x",
       "reading_progress": 1,
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -7187,7 +7215,7 @@
       "site_name": "linkedin.com",
       "cover_image": "https://static.licdn.com/aero-v1/sc/h/c45fy346jw096z9pbphyyhdz7",
       "reading_progress": 1,
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -7264,7 +7292,7 @@
       "site_name": "Smithsonian Magazine",
       "cover_image": "https://th-thumbnailer.cdn-si-edu.com/2S4LxPwoM16DSHe3flIAJSkDcVg=/fit-in/1600x0/filters:focal(1500x1000:1501x1001)/https://tf-cmsv2-smithsonianmag-media.s3.amazonaws.com/filer_public/d2/f6/d2f60703-6ca8-4e64-b80b-f671be00d8ed/1_smithsonian_cormac_shoot_2_-1112.jpg",
       "reading_progress": 0.9960469853116053,
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -7294,7 +7322,7 @@
       "site_name": "VaultSpeed",
       "cover_image": "https://imageio.forbes.com/specials-images/imageserve/6829ad74cc1961429b7f1024/0x0.jpg?format=jpg&height=900&width=1600&fit=bounds",
       "reading_progress": 0.984905450691847,
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -7323,7 +7351,7 @@
       "site_name": "gwern.net",
       "cover_image": "https://gwern.net/doc/psychology/spaced-repetition/2013-memotrainerrr.png",
       "reading_progress": 0.09178521962056808,
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -7351,7 +7379,7 @@
       "reading_time": "8 min read",
       "site_name": "miguelgrinberg.com",
       "cover_image": "https://blog.miguelgrinberg.com/static/cards/csrf-protection-without-tokens-or-hidden-form-fields.jpg",
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -7378,7 +7406,7 @@
       "word_count": 1048,
       "reading_time": "6 min read",
       "site_name": "brooker.co.za",
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -7404,7 +7432,7 @@
       "reading_time": "55 min read",
       "site_name": "NYU Law Review",
       "cover_image": "https://readwise-assets.s3.amazonaws.com/media/reader/parsed_document_assets/401744503/RdNDahprudPzAffXwIWWJgHo2Wrz4pk7XcPQVOFnDj0-cove_TG7Jx56.png",
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -7432,7 +7460,7 @@
       "site_name": "New York Times",
       "cover_image": "https://static01.nyt.com/images/2014/07/03/us/GASKIN-obit/GASKIN-obit-articleLarge-v3.jpg?year=2014&h=400&w=600&s=5f24ab663223b9ed2c3ab32b160997f892a98df299807f63dd1b48bb96cadf20&k=ZQJBKqZ0VN",
       "reading_progress": 0.9569082896815241,
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -7459,7 +7487,7 @@
       "site_name": "substack.com",
       "cover_image": "https://substackcdn.com/image/fetch/$s_!wLtC!,f_auto,q_auto:best,fl_progressive:steep/https%3A%2F%2Fthingofthings.substack.com%2Ftwitter%2Fsubscribe-card.jpg%3Fv%3D-1736013923%26version%3D9",
       "reading_progress": 0.9647990801419485,
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -7486,7 +7514,7 @@
       "reading_time": "1 min read",
       "site_name": "linkedin.com",
       "cover_image": "https://static.licdn.com/aero-v1/sc/h/c45fy346jw096z9pbphyyhdz7",
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -7514,7 +7542,7 @@
       "reading_time": "3 min read",
       "site_name": "linkedin.com",
       "cover_image": "https://media.licdn.com/dms/image/v2/D4E22AQFwWGdBN8pxFw/feedshare-shrink_800/B4EZtAqPBOHoAg-/0/1766316373221?e=2147483647&v=beta&t=eI9RsLQJWBtkt_2V7pyBAyKoI0K5TG1Hb5kUzNgkoKI",
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -7541,7 +7569,7 @@
       "word_count": 2547,
       "reading_time": "13 min read",
       "site_name": "sigmod.org",
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -7567,7 +7595,7 @@
       "reading_time": "8 min read",
       "site_name": "ABC Online",
       "cover_image": "https://live-production.wcms.abc-cdn.net.au/0fe4e7622fed25a826b51a036390aab5?impolicy=wcms_watermark_news&cropH=2015&cropW=3582&xPos=709&yPos=0&width=862&height=485&imformat=generic",
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -7594,7 +7622,7 @@
       "reading_time": "2 min read",
       "site_name": "George Vrakas",
       "cover_image": "https://geovrakas.files.wordpress.com/2013/11/drriss-marrionn.jpg?w=630",
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -7622,7 +7650,7 @@
       "site_name": "CreativeCyber",
       "cover_image": "https://static.wixstatic.com/media/186906_22764c5e9fe94aa38d8a1e3992672277~mv2.jpg/v1/fill/w_1000,h_559,al_c,q_85,usm_0.66_1.00_0.01/186906_22764c5e9fe94aa38d8a1e3992672277~mv2.jpg",
       "reading_progress": 1,
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -7650,7 +7678,7 @@
       "reading_time": "4 min read",
       "site_name": "THE DIRT",
       "cover_image": "https://dirt.asla.org/wp-content/uploads/2018/10/data4.jpg",
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -7679,7 +7707,7 @@
       "reading_time": "1 min read",
       "site_name": "linkedin.com",
       "cover_image": "https://media.licdn.com/dms/image/v2/D5622AQHlnoVw-kUYJA/feedshare-shrink_800/B56Zsy7QoGGkAo-/0/1766085954505?e=2147483647&v=beta&t=DI-q-IF8_W6Czmxma8IL5ZLZaimJqEQawUIk8z044Uo",
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -7708,7 +7736,7 @@
       "site_name": "Bits about Money",
       "cover_image": "https://images.unsplash.com/photo-1594969155368-f19485a9d88c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxMTc3M3wwfDF8c2VhcmNofDh8fGRlcGFydG1lbnQlMjBzdG9yZXxlbnwwfHx8fDE2NDE1NzYzNDU&ixlib=rb-1.2.1&q=80&w=2000",
       "reading_progress": 0.4607701537690898,
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -7734,7 +7762,7 @@
       "reading_time": "9 min read",
       "site_name": "Lena Reinhard",
       "cover_image": "http://static1.squarespace.com/static/62b0c1285db43e642e196116/62b0c7bd5b464b26b790bbc5/691484a7114f945871f1f197/1765899843609/paul-hanaoka-vp2apmPpkf8-unsplash.jpg?format=1500w",
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -7789,7 +7817,7 @@
       "site_name": "readwise-upload-pdf",
       "cover_image": "https://readwise-assets.s3.amazonaws.com/media/reader/parsed_document_assets/166138801/bYLfmZCzGRMEfNuwgozylqmLcNRP7PwKiGqPFesG4XI-cove_cJTQReQ.png",
       "reading_progress": 1,
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -7815,7 +7843,7 @@
       "word_count": 1441,
       "reading_time": "8 min read",
       "site_name": "google.com",
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -7845,7 +7873,7 @@
       "reading_time": "4 min read",
       "site_name": "aikido.dev",
       "cover_image": "https://cdn.prod.website-files.com/642adcaf364024654c71df23/6942b76ef9f2b51ed4bedcd5_Aikido%20Listikkng%2081.png",
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -7898,7 +7926,7 @@
       "site_name": "readwise-upload-pdf",
       "cover_image": "https://readwise-assets.s3.amazonaws.com/media/reader/parsed_document_assets/26867840/qxqCuwgqWBqfL0w9IHjZ0W725HF4y3j33Q_m0ykE_s0-cover_7alVUMH.png",
       "reading_progress": 1,
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -7926,7 +7954,7 @@
       "reading_time": "2 min read",
       "site_name": "TeamViewer",
       "cover_image": "https://www.teamviewer.com/poster.png",
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -7980,7 +8008,7 @@
       "reading_time": "10 min read",
       "site_name": "substack.com",
       "cover_image": "https://substackcdn.com/image/fetch/$s_!yh3t!,w_1200,h_600,c_fill,f_jpg,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F9c3372c0-0404-46ca-81d2-95269df41434_1500x855.png",
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -8007,7 +8035,7 @@
       "site_name": "Nature",
       "cover_image": "https://readwise-assets.s3.amazonaws.com/media/reader/parsed_document_assets/399194338/H41oIyRWLNIUUh93B2EHUsxHZnqsGRh4qV4pPwd5NLk-cove_tiqrCpM.png",
       "reading_progress": 1,
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -8036,7 +8064,7 @@
       "reading_time": "45 min read",
       "site_name": "licdn.com",
       "reading_progress": 0.31893691635747945,
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -8064,7 +8092,7 @@
       "reading_time": "4 min read",
       "site_name": "kit.com",
       "cover_image": "https://embed.filekitcdn.com/e/rdNsVcMHQqQnUTRfH2WhM6/ftZprEXwpsJZPqAC8T7STS",
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -8090,7 +8118,7 @@
       "word_count": 36329,
       "reading_time": "182 min read",
       "site_name": "Stanford Report",
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -8121,7 +8149,7 @@
       "site_name": "University of Cambridge",
       "cover_image": "https://www.cam.ac.uk/sites/default/files/shorthand/252079/Kew9bLEih9/assets/uH1zNyCakC/bot1-social-cover.jpg",
       "reading_progress": 0.895671565587181,
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -8150,7 +8178,7 @@
       "site_name": "Joan Westenberg",
       "cover_image": "https://www.joanwestenberg.com/content/images/size/w1200/2025/11/Joan-x-3--Cropped-.png",
       "reading_progress": 1,
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -8175,7 +8203,7 @@
       "word_count": 1975,
       "reading_time": "10 min read",
       "site_name": "VPM",
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -8204,7 +8232,7 @@
       "reading_time": "10 min read",
       "site_name": "ronjeffries.com",
       "reading_progress": 1,
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -8232,7 +8260,7 @@
       "reading_time": "4 min read",
       "site_name": "theregister.com",
       "cover_image": "https://regmedia.co.uk/2016/07/13/shutterstock_dj_mixing_deck.jpg",
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -8259,7 +8287,7 @@
       "reading_time": "32 min read",
       "site_name": "readwise-upload-epub",
       "reading_progress": 0.7086404210912518,
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -8286,7 +8314,7 @@
       "reading_time": "1 min read",
       "site_name": "People Work",
       "cover_image": "https://people-work.io/cdn-cgi/image/format=auto,width=1200,height=630,fit=crop/assets/blog/ai-magnifies-clarity.webp",
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -8316,7 +8344,7 @@
       "site_name": "readwise-upload-pdf",
       "cover_image": "https://readwise-assets.s3.amazonaws.com/media/reader/parsed_document_assets/397261313/JfcaUZbHr6ZLFQtDJGEPfQMTrdBm2iJ3Ua7U6QuU2QQ-cove_QYy7Zru.png",
       "reading_progress": 0.6666666666666666,
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -8392,7 +8420,7 @@
       "reading_time": "1 min read",
       "site_name": "linkedin.com",
       "cover_image": "https://media.licdn.com/dms/image/v2/D5622AQEZvuI5mCxICQ/feedshare-shrink_2048_1536/B56ZsJ_Hn2LMAk-/0/1765399100174?e=2147483647&v=beta&t=Nb4n2NMlAni_klfUgan8l6n3pOyd2yuu-t-CsdRxNQQ",
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -8469,7 +8497,7 @@
       "reading_time": "35 min read",
       "site_name": "readwise-upload-epub",
       "reading_progress": 0.14697549946265312,
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -8498,7 +8526,7 @@
       "site_name": "Internet Archive",
       "cover_image": "https://archive.org/services/img/bstj62-7-2365",
       "reading_progress": 0.7738597302521241,
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -8525,7 +8553,7 @@
       "word_count": 790,
       "reading_time": "4 min read",
       "site_name": "rlancemartin.github.io",
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -8577,7 +8605,7 @@
       "word_count": 4643,
       "reading_time": "24 min read",
       "site_name": "beatworm.co.uk",
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -8603,7 +8631,7 @@
       "word_count": 4334,
       "reading_time": "22 min read",
       "site_name": "Board of Governors of the Federal Reserve System",
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -8655,7 +8683,7 @@
       "site_name": "slideshare.net",
       "cover_image": "https://cdn.slidesharecdn.com/ss_thumbnails/gforces-091124112052-phpapp01-thumbnail.jpg?width=640&height=640&fit=bounds",
       "reading_progress": 0.15310451332830388,
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -8683,7 +8711,7 @@
       "site_name": "cleancommit.io",
       "cover_image": "https://cdn.cleancommit.io/blog/2022/12/test-driven-development-feature-image.jpg",
       "reading_progress": 0.8723944213630094,
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -8709,7 +8737,7 @@
       "word_count": 328,
       "reading_time": "2 min read",
       "site_name": "nickvsnetworking.com",
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -8790,7 +8818,7 @@
       "reading_time": "1 min read",
       "site_name": "linkedin.com",
       "cover_image": "https://media.licdn.com/dms/image/v2/D5622AQEUTtCNmIX_4Q/feedshare-shrink_800/B56ZqykDKvIcAg-/0/1763932386839?e=2147483647&v=beta&t=Ehz66Mx_BgfakT1SjTwVlv-GOsWKzGy_aBt1zhIaOg8",
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -8817,7 +8845,7 @@
       "reading_time": "3 min read",
       "site_name": "the Guardian",
       "cover_image": "https://i.guim.co.uk/img/media/d5aa5e7f4e8c7722aa8a3071c786fdcc22b816d4/329_59_2710_2169/master/2710.jpg?width=1200&height=630&quality=85&auto=format&fit=crop&precrop=40:21,offset-x50,offset-y0&overlay-align=bottom%2Cleft&overlay-width=100p&overlay-base64=L2ltZy9zdGF0aWMvb3ZlcmxheXMvdGctZGVmYXVsdC5wbmc&enable=upscale&s=a201426a52d06bcd4591edaadd678b1f",
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -8881,7 +8909,7 @@
       "site_name": "substack.com",
       "cover_image": "https://substackcdn.com/image/fetch/$s_!Flcw!,w_1200,h_600,c_fill,f_jpg,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fdb33bd01-e089-461c-8f09-4eb9a423429c_1024x675.jpeg",
       "reading_progress": 0.9513237990824569,
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -8910,7 +8938,7 @@
       "reading_time": "12 min read",
       "site_name": "Pharmaceutical Online",
       "cover_image": "https://vertassets.blob.core.windows.net/image/167e6a0d/167e6a0d-8f59-4965-ac82-3e23311728d5/team_of_professionals_gettyimages_511917982.jpg",
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -8939,7 +8967,7 @@
       "reading_time": "9 min read",
       "site_name": "eng-leadership.com",
       "cover_image": "https://substackcdn.com/image/fetch/$s_!5VXq!,w_1200,h_600,c_fill,f_jpg,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F95b8eac4-caf2-47d4-8f71-025ff7214d69_2000x788.jpeg",
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -8970,7 +8998,7 @@
       "reading_time": "2 min read",
       "site_name": "linkedin.com",
       "cover_image": "https://media.licdn.com/dms/image/v2/C5612AQEawDFensNZ0Q/article-cover_image-shrink_600_2000/article-cover_image-shrink_600_2000/0/1520177921782?e=2147483647&v=beta&t=mcwk7DIULgWJSTZkwKmTBGIySYTEKJBdSYFwz0ltXrw",
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -9046,7 +9074,7 @@
       "reading_time": "1 min read",
       "site_name": "David Jasso",
       "cover_image": "https://i0.wp.com/david-jasso.com/wp-content/uploads/2024/04/shutterstock_1666821223.jpg?fit=1200%2C896&ssl=1",
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -9075,7 +9103,7 @@
       "reading_time": "15 min read",
       "site_name": "htmx.org",
       "reading_progress": 0.00636654453124509,
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -9101,7 +9129,7 @@
       "reading_time": "3 min read",
       "site_name": "Federal Reserve Bank of Richmond",
       "cover_image": "https://www.richmondfed.org/-/media/RichmondFedOrg/assets/images/standard/2021/piggybank_surplus_pisi.jpg",
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -9130,7 +9158,7 @@
       "reading_time": "3 min read",
       "site_name": "linkedin.com",
       "cover_image": "https://static.licdn.com/aero-v1/sc/h/c45fy346jw096z9pbphyyhdz7",
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -9181,7 +9209,7 @@
       "reading_time": "10 min read",
       "site_name": "oneusefulthing.org",
       "cover_image": "https://substackcdn.com/image/fetch/$s_!f-5x!,w_1200,h_600,c_fill,f_jpg,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fe20744fc-7146-409d-8eff-519e9a2d13d7_2181x1296.png",
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -9231,7 +9259,7 @@
       "reading_time": "1 min read",
       "site_name": "linkedin.com",
       "cover_image": "https://static.licdn.com/aero-v1/sc/h/c45fy346jw096z9pbphyyhdz7",
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -9256,7 +9284,7 @@
       "site_name": "ScreenRant",
       "cover_image": "https://static1.srcdn.com/wordpress/wp-content/uploads/2023/07/mark-brooks-hox-pox-featured-image.jpg",
       "reading_progress": 0.9608092809525349,
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -9286,7 +9314,7 @@
       "site_name": "Unsupervised Learning",
       "cover_image": "https://danielmiessler.com/images/ai-influence-level-ail-miessler-1.0.png",
       "reading_progress": 0.7163966941653189,
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -9314,7 +9342,7 @@
       "site_name": "A Space to Think: Notes on Software Development",
       "cover_image": "https://substackcdn.com/image/fetch/$s_!AKkU!,w_1200,h_600,c_fill,f_jpg,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fbf84de55-1778-4fa6-98fc-32a1b47bd061_1536x1024.png",
       "reading_progress": 0.9514073060851241,
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -9338,7 +9366,7 @@
     "embed_uri": null,
     "embed_cid": null,
     "metadata": {
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -9367,7 +9395,7 @@
       "site_name": "Harvard Business Review",
       "cover_image": "https://hbr.org/resources/images/article_assets/2017/12/R1801L_BURTON.png",
       "reading_progress": 1,
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -9417,7 +9445,7 @@
       "site_name": "Maria Sukhareva",
       "cover_image": "https://substackcdn.com/image/fetch/$s_!RigY!,w_1200,h_600,c_fill,f_jpg,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F13dd12e8-71f9-4212-aaf7-df707edde887_1920x1080.png",
       "reading_progress": 1,
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -9444,7 +9472,7 @@
       "site_name": "The Atlantic",
       "cover_image": "https://cdn.theatlantic.com/thumbor/i3iaOWNqVZz1utMLPF8FjZS7EeA=/0x0:2169x1220/960x540/media/img/mt/2022/05/GettyImages_499067060/original.jpg",
       "reading_progress": 1,
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -9473,7 +9501,7 @@
       "site_name": "readwise-upload-pdf",
       "cover_image": "https://readwise-assets.s3.amazonaws.com/media/reader/parsed_document_assets/387584459/kbsnxKPhDtQ1-FRYVyziyCxUDMP3IrAy570oOv-Xvio-cove_tS70Js6.png",
       "reading_progress": 0.039336187417899404,
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -9502,7 +9530,7 @@
       "reading_time": "2 min read",
       "site_name": "simonwillison.net",
       "cover_image": "https://static.simonwillison.net/static/2025/gpt-5-pelican.png",
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -9529,7 +9557,7 @@
       "reading_time": "4 min read",
       "site_name": "McSweeney's Internet Tendency",
       "cover_image": "http://tendency-prod.nyc3.cdn.digitaloceanspaces.com/eax6aqylo1aeta3aemdazof1d76m",
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -9556,7 +9584,7 @@
       "reading_time": "18 min read",
       "site_name": "readwise-upload-pdf",
       "cover_image": "https://readwise-assets.s3.amazonaws.com/media/reader/parsed_document_assets/385805432/wemsjIOjjtFV_Eho5JLN_ZV2LUpGA9jfXDldeewPpgA-cove_KuOyRnB.png",
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -9582,7 +9610,7 @@
       "word_count": 22,
       "reading_time": "1 min read",
       "site_name": "Medium",
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -9609,7 +9637,7 @@
       "word_count": 737,
       "reading_time": "4 min read",
       "site_name": "bollier.org",
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -9635,7 +9663,7 @@
       "reading_time": "4 min read",
       "site_name": "justice.gov",
       "cover_image": "https://www.justice.gov/themes/custom/usdoj_uswds/images/metatag-image--press-release.png",
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -9663,7 +9691,7 @@
       "word_count": 1300,
       "reading_time": "7 min read",
       "site_name": "EngSec Labs",
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -9692,7 +9720,7 @@
       "site_name": "Anchore",
       "cover_image": "https://anchore.com/wp-content/uploads/2023/03/image7.png",
       "reading_progress": 0.841794613445493,
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -9721,7 +9749,7 @@
       "site_name": "resilientcyber.io",
       "cover_image": "https://substackcdn.com/image/fetch/w_1200,h_600,c_fill,f_jpg,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F8d539da4-c808-4b5d-a2e0-84bd88b7c2cd_1220x1368.png",
       "reading_progress": 1,
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -9774,7 +9802,7 @@
       "site_name": "New York Times",
       "cover_image": "https://static01.nyt.com/newsgraphics/images/icons/defaultPromoCrop.png?year=2001",
       "reading_progress": 1,
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -9803,7 +9831,7 @@
       "site_name": "Check Point Research",
       "cover_image": "https://research.checkpoint.com/wp-content/uploads/2025/02/bybit-1092x624px.jpg",
       "reading_progress": 1,
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -9830,7 +9858,7 @@
       "reading_time": "23 min read",
       "site_name": "codegood.co",
       "reading_progress": 0.9956414588973693,
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -9858,7 +9886,7 @@
       "reading_time": "22 min read",
       "site_name": "codegood.co",
       "reading_progress": 0.9925275321316551,
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -9882,7 +9910,7 @@
       "reading_time": "14 min read",
       "site_name": "The Atlantic",
       "cover_image": "https://cdn.theatlantic.com/thumbor/iNkQfPvzvk5IDIM5Txol81mAoJk=/440x0:1562x1403/648x810/media/img/2023/09/28/CC_Kirsch_VonNeumannHP/original.jpg",
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -9909,7 +9937,7 @@
       "site_name": "The Spectator",
       "cover_image": "https://www.spectator.co.uk/wp-content/uploads/2021/10/Von-Neumann.jpg",
       "reading_progress": 1,
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -9936,7 +9964,7 @@
       "reading_time": "89 min read",
       "site_name": "sofiatopia.org",
       "reading_progress": 0.9990946879554785,
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -9963,7 +9991,7 @@
       "reading_time": "32 min read",
       "site_name": "Colossus - Business Podcasts",
       "cover_image": "https://joincolossus.com/wp-content/uploads/2025/11/Cursor-preview-card.jpg",
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -9992,7 +10020,7 @@
       "site_name": "matthew-shaw.github.io",
       "cover_image": "https://matthew-shaw.github.io/assets/images/social/blog/posts/lean-wastes.png",
       "reading_progress": 0.6811887835968172,
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -10068,7 +10096,7 @@
       "site_name": "whitney.org",
       "cover_image": "https://whitneymedia.org/assets/image/830136/large_holly_herndon.jpg",
       "reading_progress": 1,
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -10098,7 +10126,7 @@
       "site_name": "substack.com",
       "cover_image": "https://substackcdn.com/image/fetch/$s_!9QZn!,w_1200,h_600,c_fill,f_jpg,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F5109c958-0b2d-4ca3-9aa0-a87b80f422dd_1956x1592.png",
       "reading_progress": 0.9310575031661938,
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -10127,7 +10155,7 @@
       "reading_time": "28 min read",
       "site_name": "frankchimero.com",
       "reading_progress": 0.02308370125386589,
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -10178,7 +10206,7 @@
       "site_name": "Medium",
       "cover_image": "https://miro.medium.com/v2/resize:fit:1200/1*eFcWkhqwW4tlCux10hD3gw.png",
       "reading_progress": 0.9081500505968515,
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -10209,7 +10237,7 @@
       "site_name": "linkedin.com",
       "cover_image": "https://media.licdn.com/dms/image/sync/v2/D4E27AQE33_aGxur2FQ/articleshare-shrink_1280_800/B4EZpIiDD_IUAQ-/0/1762153478278?e=2147483647&v=beta&t=Dej-O_Hu1KRAMchccb4WlIX57Gp6o2GKwe4wSgwI7ow",
       "reading_progress": 0.869256154830599,
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -10261,7 +10289,7 @@
       "site_name": "linkedin.com",
       "cover_image": "https://media.licdn.com/dms/image/v2/D4E22AQFi1r1TdOdpkQ/feedshare-shrink_2048_1536/B4EZoGmQFXKsAw-/0/1761047283005?e=2147483647&v=beta&t=nqsE2YVVRJYYe1kUWcoFWCP5AwnziGXVdYw6PDDlRTg",
       "reading_progress": 1,
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -10289,7 +10317,7 @@
       "reading_time": "24 min read",
       "site_name": "readwise-upload-epub",
       "reading_progress": 0.6786467654230761,
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -10362,7 +10390,7 @@
       "site_name": "Big Think",
       "cover_image": "https://bigthink.com/wp-content/uploads/2022/11/BT_thumb_template-54.jpg?resize=1200,630",
       "reading_progress": 0.43471706882996286,
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -10385,7 +10413,7 @@
     "embed_uri": null,
     "embed_cid": null,
     "metadata": {
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -10413,7 +10441,7 @@
       "reading_time": "16 min read",
       "site_name": "I, Cringely - on technology",
       "reading_progress": 1,
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -10439,7 +10467,7 @@
       "word_count": 1263,
       "reading_time": "7 min read",
       "site_name": "fourmilab.ch",
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -10491,7 +10519,7 @@
       "site_name": "joemag.dev",
       "cover_image": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg0Ko_HfgsgHZCIIbQddBTTVrGcFC2QEu7h8UJDmFaGqhFQ_qJzIQivqwT5RwSHKehkNkRwqpCbgPcPJFYDhoasKRlgO7ulFZfqFM9mXIjdqHyYjc7Z4A9NsA6rE735nuWbVpi192DzFcJqK92sHVHptZHh36-KxbO8yPUSA2E9KA9sjR-DgaRzypvZqQ0/w1200-h630-p-k-no-nu/Screenshot%202025-10-22%20at%206.38.56%E2%80%AFPM.png",
       "reading_progress": 0.9815895131844721,
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -10519,7 +10547,7 @@
       "site_name": "A Space to Think: Notes on Software Development",
       "cover_image": "https://substackcdn.com/image/fetch/$s_!DSuu!,w_1200,h_600,c_fill,f_jpg,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F386428a1-9461-4e8f-979a-ad01557460fb_1024x1024.png",
       "reading_progress": 0.979453900899685,
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -10549,7 +10577,7 @@
       "site_name": "The Security Brutalist",
       "cover_image": "http://securitybrutalist.com/brutalist-black.png",
       "reading_progress": 1,
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -10621,7 +10649,7 @@
     "embed_uri": null,
     "embed_cid": null,
     "metadata": {
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -10673,7 +10701,7 @@
       "reading_time": "4 min read",
       "site_name": "virginia.edu",
       "reading_progress": 1,
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -10696,7 +10724,7 @@
     "embed_uri": null,
     "embed_cid": null,
     "metadata": {
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -10719,7 +10747,7 @@
     "embed_uri": null,
     "embed_cid": null,
     "metadata": {
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -10747,7 +10775,7 @@
       "site_name": "X (formerly Twitter)",
       "cover_image": "https://pbs.twimg.com/profile_images/1643941027898613760/gyhYEOCE.jpg",
       "reading_progress": 0.9541502489036752,
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -10774,7 +10802,7 @@
       "word_count": 2424,
       "reading_time": "13 min read",
       "site_name": "Risk and Cyber ",
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -10801,7 +10829,7 @@
       "site_name": "Medium",
       "cover_image": "https://miro.medium.com/v2/1*kFrc4tBFM_tCis-2Ic87WA.png",
       "reading_progress": 1,
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -10827,7 +10855,7 @@
       "reading_time": "11 min read",
       "site_name": "charity.wtf",
       "cover_image": "https://i0.wp.com/charity.wtf/wp-content/uploads/2025/10/srebunny.png?fit=800%2C1200&ssl=1",
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -10856,7 +10884,7 @@
       "reading_time": "2 min read",
       "site_name": "Geoffrey Huntley",
       "cover_image": "https://ghuntley.com/content/images/size/w1200/2025/06/3ea367ed-cae3-454a-840f-134531dea1fd.jpg",
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -10880,7 +10908,7 @@
     "metadata": {
       "site_name": "YouTube",
       "cover_image": "https://i.ytimg.com/vi/GaoLU6zKaws/maxresdefault.jpg?sqp=-oaymwEmCIAKENAF8quKqQMa8AEB-AH-CYAC0AWKAgwIABABGHIgXig8MA8=&rs=AOn4CLCKStWVT21BP5p1tmla_jf5mKAAsg",
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -10929,7 +10957,7 @@
       "site_name": "readwise-upload-pdf",
       "cover_image": "https://readwise-assets.s3.amazonaws.com/media/reader/parsed_document_assets/182351867/4vEmTQVboZoyDgNLyrDhOyyh_GHf7VfKLF2BbicAYSo-cove_OC4apiS.png",
       "reading_progress": 0.14285714285714285,
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -10982,7 +11010,7 @@
       "site_name": "mit.edu",
       "cover_image": "https://readwise-assets.s3.amazonaws.com/media/reader/parsed_document_assets/381278089/IbjsyTHH3cEMIruS5Fy75Zu7z8opHnHIDp7XEK1Pw4c-cove_IjHUkO6.png",
       "reading_progress": 0.9545454545454546,
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -11010,7 +11038,7 @@
       "word_count": 1755,
       "reading_time": "9 min read",
       "site_name": "swarthmore.edu",
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -11036,7 +11064,7 @@
       "word_count": 592,
       "reading_time": "3 min read",
       "site_name": "Elon University",
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -11065,7 +11093,7 @@
       "site_name": "The Cloudflare Blog",
       "cover_image": "https://cf-assets.www.cloudflare.com/zkvhlag99gkb/1jrfu33HdXerVZwRnD2cRj/8c93d0f47c32635fb98e28d64cd10364/Keeping_the_Internet_fast_and_secure-_introducing_Merkle_Tree_Certificates-OG.png",
       "reading_progress": 1,
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -11093,7 +11121,7 @@
       "reading_time": "2 min read",
       "site_name": "consensus.app",
       "cover_image": "https://consensus.app/api/og/threads/eyJ0aXRsZSI6IkxvbmcgSG91cnMgSW1wYWN0IERldmVsb3BlciBQcm9kdWN0aXZpdHkiLCJ0aHJlYWRJZCI6InRsTHZpTjVkUVBDcnRrVFRHaVVNdXciLCJzZWFyY2hJZCI6ImxYelFzcHRmU0hXYW1GemtzT2VmZkEifQ%3D%3D",
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -11226,7 +11254,7 @@
       "site_name": "Signal Messenger",
       "cover_image": "https://signal.org/assets/og/og-image-ff2096df535eee499356de64b19fa8cebb9681ab1e78cca7330e7f8b8d5ec6d5.png",
       "reading_progress": 1,
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -11320,7 +11348,7 @@
       "reading_time": "7 min read",
       "site_name": "The New Stack",
       "cover_image": "https://cdn.thenewstack.io/media/2025/10/54fc1732-matthew-meckes-2.jpg",
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -11349,7 +11377,7 @@
       "site_name": "readwise-upload-pdf",
       "cover_image": "https://readwise-assets.s3.amazonaws.com/media/reader/parsed_document_assets/378761449/1WdzDITgulw1_aiYMoaxjyagIEwZekkRbv0U0LIYqzw-cove_5BbUyHA.png",
       "reading_progress": 0.5714285714285714,
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -11375,7 +11403,7 @@
       "word_count": 3617,
       "reading_time": "19 min read",
       "site_name": "Amazon Web Services, Inc.",
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -11404,7 +11432,7 @@
       "reading_time": "1 min read",
       "site_name": "linkedin.com",
       "cover_image": "https://media.licdn.com/dms/image/v2/D4E22AQGo8ZZuHK2njw/feedshare-shrink_800/B4EZoH86M3GYAo-/0/1761069999450?e=2147483647&v=beta&t=5BCmKV1vljit7wQ94Zu5w4QrVTTkirP2frAbAhcI7mM",
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -11461,7 +11489,7 @@
       "site_name": "Poetry Magazine",
       "cover_image": "https://s3-us-east-2.amazonaws.com/cdn-test.poetryfoundation.org/content/images/8860b89bc1c96d531ea2aad695b8e4b17cb249af.jpeg",
       "reading_progress": 0.10772043313176767,
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -11491,7 +11519,7 @@
       "reading_time": "3 min read",
       "site_name": "linkedin.com",
       "cover_image": "https://static.licdn.com/aero-v1/sc/h/c45fy346jw096z9pbphyyhdz7",
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -11547,7 +11575,7 @@
       "reading_time": "1 min read",
       "site_name": "mypoeticside.com",
       "reading_progress": 1,
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -11572,7 +11600,7 @@
     "metadata": {
       "site_name": "YouTube",
       "cover_image": "https://i.ytimg.com/vi/r3560y2LKMU/maxresdefault.jpg",
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -11601,7 +11629,7 @@
       "site_name": "linkedin.com",
       "cover_image": "https://media.licdn.com/dms/image/v2/D5612AQFd_lQu2RaFdw/article-cover_image-shrink_600_2000/B56Zn5582PJoAQ-/0/1760834343002?e=2147483647&v=beta&t=NtH2zxQ4JKscwxL5OE_zCPWezWOclLywjQxfCr5sDhM",
       "reading_progress": 0.9359380552280147,
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -11629,7 +11657,7 @@
       "reading_time": "3 min read",
       "site_name": "linkedin.com",
       "cover_image": "https://static.licdn.com/aero-v1/sc/h/c45fy346jw096z9pbphyyhdz7",
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -11660,7 +11688,7 @@
       "site_name": "readwise-upload-pdf",
       "cover_image": "https://readwise-assets.s3.amazonaws.com/media/reader/parsed_document_assets/1819822/_ra-ASGi_eUFT_lWZO4jCzF--AAMyiZ7MK3mJ2fkL-0-cover-1819822.png",
       "reading_progress": 0.027777777777777776,
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -11689,7 +11717,7 @@
       "reading_time": "5 min read",
       "site_name": "activism.net",
       "reading_progress": 1,
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -11740,7 +11768,7 @@
       "reading_time": "4 min read",
       "site_name": "Platform Engineering",
       "cover_image": "https://platformengineering.com/wp-content/uploads/2025/05/How-Platform-Engineering-is-Redefining-DevOps-in-2025_resized.jpg",
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -11769,7 +11797,7 @@
       "reading_time": "1 min read",
       "site_name": "linkedin.com",
       "cover_image": "https://static.licdn.com/aero-v1/sc/h/c45fy346jw096z9pbphyyhdz7",
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -11817,7 +11845,7 @@
       "reading_time": "3 min read",
       "site_name": "TheFarSide.com",
       "cover_image": "https://assets.thefarside.com/assets/packs/media/images/brand/logo/tfs-share-default-a7b076808488053c10116ff0605a39a1.jpg",
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -11877,7 +11905,7 @@
       "site_name": "A Space to Think: Notes on Software Development",
       "cover_image": "https://substackcdn.com/image/fetch/$s_!9hR8!,w_1200,h_600,c_fill,f_jpg,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fbaac74c8-e2d3-4d54-8a56-f7b40ddf2cfc_1536x1024.png",
       "reading_progress": 0.9684378854451415,
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -11905,7 +11933,7 @@
       "site_name": "holochain.org",
       "cover_image": "https://readwise-assets.s3.amazonaws.com/media/reader/parsed_document_assets/239255881/RS0AqMiBzpVPv7fZwI9CLNwK0FwI7nKvTLa_O1G11js-cove_5RRsiwg.png",
       "reading_progress": 0.02247191011235955,
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -11936,7 +11964,7 @@
       "site_name": "holochain.org",
       "cover_image": "https://readwise-assets.s3.amazonaws.com/media/reader/parsed_document_assets/239255899/19RzeKXLhZ0sOYXmRt6PkkwXNwSFa1dFGbr-7TG2GnU-cove_GBYGMKP.png",
       "reading_progress": 0.25,
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -11964,7 +11992,7 @@
     "metadata": {
       "site_name": "YouTube",
       "cover_image": "https://i.ytimg.com/vi/JZiXsMBcV-E/maxresdefault.jpg",
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -11993,7 +12021,7 @@
       "word_count": 29,
       "reading_time": "1 min read",
       "site_name": "Forbes.com",
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -12023,7 +12051,7 @@
       "reading_time": "2 min read",
       "site_name": "linkedin.com",
       "cover_image": "https://static.licdn.com/aero-v1/sc/h/c45fy346jw096z9pbphyyhdz7",
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -12127,7 +12155,7 @@
     "metadata": {
       "site_name": "YouTube",
       "cover_image": "https://i.ytimg.com/vi/5Ai8UGx7QvQ/maxresdefault.jpg",
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -12156,7 +12184,7 @@
       "site_name": "simonwillison.net",
       "cover_image": "https://static.simonwillison.net/static/2025/design-patterns-card.jpg",
       "reading_progress": 1,
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -12188,7 +12216,7 @@
       "site_name": "simonwillison.net",
       "cover_image": "https://static.simonwillison.net/static/2025/lethaltrifecta.jpg",
       "reading_progress": 1,
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -12215,7 +12243,7 @@
       "word_count": 1093,
       "reading_time": "6 min read",
       "site_name": "Association for Computing Machinery",
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -12244,7 +12272,7 @@
       "reading_time": "3 min read",
       "site_name": "Schneier on Security",
       "reading_progress": 1,
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -12272,7 +12300,7 @@
       "site_name": "readwise-upload-pdf",
       "cover_image": "https://readwise-assets.s3.amazonaws.com/media/reader/parsed_document_assets/315506754/1r8aYQgJpPfIm5Cf4G0Y9_ECnrNP8LzLIb6TWJmGrAI-cove_RqFspfs.png",
       "reading_progress": 0.14285714285714285,
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -12381,7 +12409,7 @@
       "site_name": "Lars Lofgren",
       "cover_image": "http://larslofgren.com/wp-content/uploads/2025/10/rcoding-bootcamp-homepage.png",
       "reading_progress": 0.22763577437793495,
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -12459,7 +12487,7 @@
       "site_name": "InfoQ",
       "cover_image": "https://res.infoq.com/presentations/architecture-best-practices/en/card_header_image/gregor-hohpe-twitter-card-1756297866716.jpg",
       "reading_progress": 0.8851978390305657,
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
@@ -13087,7 +13115,7 @@
       "word_count": 16362,
       "reading_time": "82 min read",
       "site_name": "laputan.org",
-      "last_fetched": "2026-04-15T03:19:58.690Z"
+      "last_fetched": "2026-04-16T03:28:08.469Z"
     }
   },
   {
