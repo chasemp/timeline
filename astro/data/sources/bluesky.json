@@ -1,5 +1,21 @@
 [
   {
+    "id": "bluesky:3mjxa3isb3k2f",
+    "type": "bluesky",
+    "timestamp": "2026-04-20T19:43:22.750Z",
+    "title": "www.youtube.com/watch?v=CyyL...",
+    "summary": "www.youtube.com/watch?v=CyyL... — This is not the AI we were promised | The Royal Society",
+    "url": "https://bsky.app/profile/chase523.bsky.social/post/3mjxa3isb3k2f",
+    "embed_uri": "at://did:plc:7whslkj667kgto2x246o4stl/app.bsky.feed.post/3mjxa3isb3k2f",
+    "embed_cid": "bafyreicmxsgakop4k65xwb7dwnedhp36fjw3nkhvpdbx32pgvy4lca5bs4",
+    "content_html": "<p>www.youtube.com/watch?v=CyyL...</p>\n          <div style=\"margin: 16px 0; border: 1px solid var(--border, #d4c4a8); border-radius: 8px; overflow: hidden; background: var(--card-bg, #fdfbf7);\">\n            <img src=\"/assets/cached-images/bluesky/237a0551e68c7398cf503d90b74d2128.https:cdn.bsky.appimgfeed_thumbnailplaindid:plc:7whslkj667kgto2x246o4stlbafkreidonbcvhb6gvoujz7u5mv2ibqemh53yssthao2pm2bhhunq4bairq\" alt=\"This is not the AI we were promised | The Royal Society\" style=\"width: 100%; height: auto; display: block; max-height: 200px; object-fit: cover;\">\n            <div style=\"padding: 12px;\">\n              <div style=\"font-weight: 600; margin-bottom: 4px; color: var(--text, #3d2817);\">This is not the AI we were promised | The Royal Society</div>\n              <div style=\"font-size: 13px; color: var(--muted, #7a6b5d); margin-bottom: 8px;\">YouTube video by The Royal Society</div>\n              <div style=\"font-size: 12px; color: var(--accent, #c17a4f); overflow: hidden; text-overflow: ellipsis; white-space: nowrap;\">🔗 https://www.youtube.com/watch?v=CyyL0yDhr7I</div>\n            </div>\n          </div>",
+    "metadata": {
+      "likes": 0,
+      "reposts": 0,
+      "replies": 0
+    }
+  },
+  {
     "id": "bluesky:3mjg7ioawfs2b",
     "type": "bluesky",
     "timestamp": "2026-04-14T01:17:35.388Z",
