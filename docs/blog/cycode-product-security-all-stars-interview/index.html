@@ -1,0 +1,55 @@
+<!DOCTYPE html><html lang="en" data-astro-cid-4sn4zg3r> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Cycode Product Security All Stars: Interview — timeline.523.life</title><meta name="description" content="Cycode Product Security All Stars: Interview"><link rel="canonical" href="https://timeline.523.life/blog/cycode-product-security-all-stars-interview"><meta name="astro-view-transitions-enabled" content="true"><meta name="astro-view-transitions-fallback" content="animate"><!-- Theme initialization script - runs before page renders to prevent flash --><script>
+    (function() {
+      const stored = localStorage.getItem('theme');
+      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      const theme = stored || (prefersDark ? 'dark' : 'light');
+      document.documentElement.setAttribute('data-theme', theme);
+    })();
+  </script><style>.astro-route-announcer{position:absolute;left:0;top:0;clip:rect(0 0 0 0);clip-path:inset(50%);overflow:hidden;white-space:nowrap;width:1px;height:1px}
+</style>
+<link rel="stylesheet" href="/_astro/_slug_.PR2ftYmk.css"><script type="module" src="/_astro/hoisted.XV3299UE.js"></script></head> <body data-astro-cid-4sn4zg3r> <main data-astro-cid-4sn4zg3r> <header class="header" data-astro-cid-4sn4zg3r> <nav class="header-nav" data-astro-cid-4sn4zg3r> <a href="/" class="back-link" data-astro-cid-4sn4zg3r>← Go to timeline</a> <span class="about-header" data-astro-cid-4sn4zg3r>This is content from <a href="https://523.life" data-astro-cid-4sn4zg3r>Chase Pettet</a> and part of my public timeline</span> <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme" data-astro-cid-4sn4zg3r> <span class="sun-icon" data-astro-cid-4sn4zg3r>☀️</span> <span class="moon-icon" data-astro-cid-4sn4zg3r>🌙</span> </button> </nav> <div class="meta" data-astro-cid-4sn4zg3r> <span class="type" data-astro-cid-4sn4zg3r>blog</span> · <time datetime="2026-04-30T12:00:00.000Z" data-astro-cid-4sn4zg3r>4/30/2026</time>  </div> <h1 data-astro-cid-4sn4zg3r>Cycode Product Security All Stars: Interview</h1> </header>  <article class="content" data-astro-cid-4sn4zg3r><p><img src="/assets/images/post/cycode-allstar-card.png" alt="Cycode Product Security All Stars 2026 — Chase Pettet"></p>
+<p>I was honored to be recognized by <a href="https://cycode.com/">Cycode</a> as part of their <em>Product Security All Stars</em> award. As part of that recognition, I sat down for an interview covering how I think about security work, where AI is changing the shape of the problem, and what holds up (or doesn&#39;t) in modern product security practice. The Q&amp;A is reproduced below.</p>
+<h2>What&#39;s the one book, podcast, or idea that fundamentally changed how you think about security, and why does it still hold up today?</h2>
+<p>I don&#39;t have a singular book or podcast. What changed how I think is more of a mental exercise I built over time. I call it the &quot;root-end principle,&quot; inspired by something oddly specific: bagged salad. You always get those inedible root ends mixed in. And I found myself thinking, what would it actually take to remove those entirely? New machinery, oversight, process changes... real cost.</p>
+<p>That became a way of thinking about product decisions. Not everything imperfect is worth fixing. Every control has a cost, and every decision reflects what an organization is willing to tolerate.</p>
+<p>So in security conversations, I ask: is this a real risk to users, or just something that offends my professional sensibilities? Only one of those matters. It&#39;s a way to stay grounded and focused on actual harm, not theoretical perfection.</p>
+<h2>What is the best piece of advice you have ever been given that you still apply to your career today?</h2>
+<p>The best advice I&#39;ve ever received was that the only way to succeed is to succeed sustainably. Security work is endless. There&#39;s always more to fix, more to investigate, more to improve. If you approach it by constantly grinding, you burn out, and worse, you become ineffective.</p>
+<p>That really shows up in incident response. The instinct is to swarm the problem, but if an incident runs long enough, exhausted responders become a liability. The right move is often to rotate people out, not pile more in.</p>
+<p>An exhausted defender is an attacker&#39;s best friend, so you have to manage your energy like a finite resource. Progress isn&#39;t about intensity, it&#39;s about direction and consistency over time.</p>
+<h2>In your view, what is the single most important non-technical skill an &quot;All-Star&quot; must possess to influence a modern organization?</h2>
+<p>Integrity. You can&#39;t fake it, and once it&#39;s gone, you don&#39;t get it back. It&#39;s what enables everything else, particularly humility and transparency.</p>
+<p>In security, you&#39;re constantly part of risk trade-off decisions. People need to believe that you&#39;re being honest, that you don&#39;t have a hidden agenda, and that you&#39;re not trying to block progress for its own sake.</p>
+<p>I often say: security&#39;s job isn&#39;t to stop you from jumping into the gorilla enclosure, it&#39;s to make sure you understand that you&#39;re doing it. That only works if people trust you. And trust starts with integrity.</p>
+<h2>What is the &quot;silent&quot; threat at the product layer that isn&#39;t getting enough boardroom attention yet?</h2>
+<p>The biggest under-discussed risk isn&#39;t just AI itself; it&#39;s what happens when we start outsourcing judgment to it. AI systems are built to converge toward the mean, and they&#39;re excellent at producing &quot;average&quot; answers. But security (and decision-making in general) often depends on recognizing edge cases and applying context.</p>
+<p>What worries me is the slow drift toward treating AI as a final decision-maker. Not just for implementation details, but for strategy and judgment. You can imagine subtle, persistent manipulations, like a long-term prompt injection that biases decisions in small ways. Would anyone notice? Maybe not.</p>
+<p>We&#39;ve seen this pattern before. Early concerns about Wikipedia weren&#39;t really about accuracy, they were about people replacing judgment with convenience. AI risks taking that even further.</p>
+<p>If we adopt its limitations as our own, eventually that catches up with us.</p>
+<h2>What is one widely accepted Product Security &quot;best practice&quot; that you believe is actually an anti-pattern in the age of AI, and what should replace it?</h2>
+<p>Static least privilege, as we often implement it, is mostly baloney. In theory, it makes sense. In practice, it&#39;s vague and constantly shifting. What does &quot;least&quot; actually mean? The permissions someone needs in five minutes are different from what they need in a month. It is like the loitering and jaywalking of the security world. We pull it out when it&#39;s convenient, but it has very little fixed meaning in a practical business context.</p>
+<p>What we end up with is a compromise that feels safe but isn&#39;t clearly defined or consistently enforced. More importantly, it can actively work against what organizations say they want: innovation, collaboration, and discovery. Those things require context and exposure, not restriction to the bare minimum.</p>
+<p>This creates a huge disadvantage in the era of AI and innovation. Discovery and collaboration cannot happen with the bare minimum of rights and context. It&#39;s pretty untenable. If you want the developer, or AI agent, to put the pieces together and come up with a working solution, you need to expose them to more than the minimum information.</p>
+<p>I&#39;m not arguing for &quot;maximum privilege.&quot; But we need to be honest: what we call least privilege today is often a loose proxy, not a precise control, and sometimes it delivers more friction than value.</p>
+<h2>Agentic AI can now autonomously write code, find vulnerabilities, and ship fixes without a human in the loop. Does that excite you, and what does it mean for the humans on your team?</h2>
+<p>It&#39;s both exciting and terrifying... but mostly exciting. This is another foundational shift. The scale of output changes, but the core problem doesn&#39;t. We still have a software factory, and it still needs assurance.</p>
+<p>What does change is who participates. I&#39;ve started using the term &quot;software creators&quot; instead of developers, because more people (across finance, operations, everywhere) are now generating code.</p>
+<p>That means responsibility expands, too. If you&#39;re creating software, you&#39;re accountable for its outcomes, whether you wrote every line yourself or not.</p>
+<p>So the future isn&#39;t about removing humans, but about redefining their role, and making sure the systems we build can operate safely at a scale we can no longer manually control.</p>
+<p><img src="/assets/images/post/cycode-allstar-quote.png" alt="Pull quote from the interview"></p>
+</article> <div class="comments-section" id="comments-section" data-astro-cid-4sn4zg3r> <div class="giscus" id="giscus-container" data-astro-cid-4sn4zg3r></div> </div> <footer class="post-footer" data-astro-cid-4sn4zg3r> <a href="/" class="back-link" data-astro-cid-4sn4zg3r>← Go to timeline</a>  </footer> </main>   <script src="https://giscus.app/client.js" data-repo="chasemp/timeline" data-repo-id="R_kgDOQDOMbA" data-category="Ideas" data-category-id="DIC_kwDOQDOMbM4CxLZb" data-mapping="pathname" data-strict="0" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="bottom" data-theme="/giscus-custom.css" data-lang="en" crossorigin="anonymous" async>
+    </script> <script>
+      window.addEventListener('load', () => {
+        const container = document.getElementById('giscus-container');
+        const commentsSection = document.getElementById('comments-section');
+        
+        setTimeout(() => {
+          if (container && commentsSection) {
+            const hasContent = container.innerHTML.trim() !== '';
+            if (!hasContent) {
+              commentsSection.style.display = 'none';
+            }
+          }
+        }, 10000);
+      });
+    </script>   </body> </html>
