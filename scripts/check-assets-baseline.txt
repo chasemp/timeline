@@ -1,0 +1,13 @@
+# Known-missing asset references — pre-existing breaks documented here so the
+# check-assets.sh ratchet doesn't block deploys on them. To resolve an entry:
+# either restore the image under astro/public/assets/... and remove the line
+# here, or remove the reference from the markdown post and remove the line
+# here. New breaks (anything not in this list) will fail deploy.
+#
+# Format: one URL path per line. Lines starting with # and blank lines ignored.
+/assets/images/post/okta-mfa-factors.png
+/assets/images/post/onelogin-issue-70.png
+/assets/images/post/onelogin-issues.png
+/assets/images/post/onelogin-updates.png
+/assets/images/post/openapi-readme-header.png
+/assets/images/post/rube-goldberg-napkin.png

@@ -5,6 +5,11 @@
 
 set -e
 
+# Pre-flight: every /assets/... ref in markdown/ must resolve under astro/public/.
+# Fails on new broken refs; pre-existing breaks are baselined in scripts/check-assets-baseline.txt.
+echo "🔎 Checking markdown asset references..."
+"$(dirname "$0")/scripts/check-assets.sh"
+
 echo "🚀 Building Astro site..."
 cd astro
 
