@@ -1,5 +1,37 @@
 [
   {
+    "id": "bluesky:3mmhqon6og22r",
+    "type": "bluesky",
+    "timestamp": "2026-05-22T20:13:23.823Z",
+    "title": "www.youtube.com/watch?v=7sEH...",
+    "summary": "www.youtube.com/watch?v=7sEH... — Buffalo Bills Joke - Joe Pera",
+    "url": "https://bsky.app/profile/chase523.bsky.social/post/3mmhqon6og22r",
+    "embed_uri": "at://did:plc:7whslkj667kgto2x246o4stl/app.bsky.feed.post/3mmhqon6og22r",
+    "embed_cid": "bafyreih7qb6ci76yy4eo4ld6r3wely7mtqmgtmibis2jl4o2sajfyip2o4",
+    "content_html": "<p>www.youtube.com/watch?v=7sEH...</p>\n          <div style=\"margin: 16px 0; border: 1px solid var(--border, #d4c4a8); border-radius: 8px; overflow: hidden; background: var(--card-bg, #fdfbf7);\">\n            <img src=\"/assets/cached-images/bluesky/e212a1cc2751fc8ce6e46375da82aa1b.https:cdn.bsky.appimgfeed_thumbnailplaindid:plc:7whslkj667kgto2x246o4stlbafkreicgpz3qfh3o2ev5ovvhsfzny6uihan4i6ck2dlg72csfy6fr4r4sq\" alt=\"Buffalo Bills Joke - Joe Pera\" style=\"width: 100%; height: auto; display: block; max-height: 200px; object-fit: cover;\">\n            <div style=\"padding: 12px;\">\n              <div style=\"font-weight: 600; margin-bottom: 4px; color: var(--text, #3d2817);\">Buffalo Bills Joke - Joe Pera</div>\n              <div style=\"font-size: 13px; color: var(--muted, #7a6b5d); margin-bottom: 8px;\">YouTube video by Joe Pera</div>\n              <div style=\"font-size: 12px; color: var(--accent, #c17a4f); overflow: hidden; text-overflow: ellipsis; white-space: nowrap;\">🔗 https://www.youtube.com/watch?v=7sEHv-iKrYU</div>\n            </div>\n          </div>",
+    "metadata": {
+      "likes": 0,
+      "reposts": 0,
+      "replies": 0
+    }
+  },
+  {
+    "id": "bluesky:3mmeoklvlhc2t",
+    "type": "bluesky",
+    "timestamp": "2026-05-21T14:57:21.561Z",
+    "title": "www.youtube.com/watch?v=dC6v...",
+    "summary": "www.youtube.com/watch?v=dC6v... — AI + Open Source: The New Software Supply Chain",
+    "url": "https://bsky.app/profile/chase523.bsky.social/post/3mmeoklvlhc2t",
+    "embed_uri": "at://did:plc:7whslkj667kgto2x246o4stl/app.bsky.feed.post/3mmeoklvlhc2t",
+    "embed_cid": "bafyreiglbydhuu33pv4vyg4cf5r6t3wm6r6hbp74tfvdfanyqpo73isr6u",
+    "content_html": "<p>www.youtube.com/watch?v=dC6v...</p>\n          <div style=\"margin: 16px 0; border: 1px solid var(--border, #d4c4a8); border-radius: 8px; overflow: hidden; background: var(--card-bg, #fdfbf7);\">\n            <img src=\"/assets/cached-images/bluesky/cf6f000585b210dba420c6a07405f032.https:cdn.bsky.appimgfeed_thumbnailplaindid:plc:7whslkj667kgto2x246o4stlbafkreiauwkqxwiiwqo4rsoab33uzdsvt6jh7faem4aeie22nhuv7hmrzse\" alt=\"AI + Open Source: The New Software Supply Chain\" style=\"width: 100%; height: auto; display: block; max-height: 200px; object-fit: cover;\">\n            <div style=\"padding: 12px;\">\n              <div style=\"font-weight: 600; margin-bottom: 4px; color: var(--text, #3d2817);\">AI + Open Source: The New Software Supply Chain</div>\n              <div style=\"font-size: 13px; color: var(--muted, #7a6b5d); margin-bottom: 8px;\">YouTube video by KubeCrash Cloud Native Crash Courses</div>\n              <div style=\"font-size: 12px; color: var(--accent, #c17a4f); overflow: hidden; text-overflow: ellipsis; white-space: nowrap;\">🔗 https://www.youtube.com/watch?v=dC6v2-iJB48</div>\n            </div>\n          </div>",
+    "metadata": {
+      "likes": 0,
+      "reposts": 0,
+      "replies": 0
+    }
+  },
+  {
     "id": "bluesky:3mlugr4k6cs2y",
     "type": "bluesky",
     "timestamp": "2026-05-15T03:55:14.591Z",
