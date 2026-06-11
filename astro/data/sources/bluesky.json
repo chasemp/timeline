@@ -1,5 +1,21 @@
 [
   {
+    "id": "bluesky:3mnwst2ct322j",
+    "type": "bluesky",
+    "timestamp": "2026-06-10T13:26:46.995Z",
+    "title": "isaiprofitable.com",
+    "summary": "isaiprofitable.com — Is AI Profitable Yet?",
+    "url": "https://bsky.app/profile/chase523.bsky.social/post/3mnwst2ct322j",
+    "embed_uri": "at://did:plc:7whslkj667kgto2x246o4stl/app.bsky.feed.post/3mnwst2ct322j",
+    "embed_cid": "bafyreihryzr6uv2njs5rdzfbh3eqdfl5bc6drjrqjtrhkyx5hjrcnyimbm",
+    "content_html": "<p>isaiprofitable.com</p>\n          <div style=\"margin: 16px 0; border: 1px solid var(--border, #d4c4a8); border-radius: 8px; overflow: hidden; background: var(--card-bg, #fdfbf7);\">\n            \n            <div style=\"padding: 12px;\">\n              <div style=\"font-weight: 600; margin-bottom: 4px; color: var(--text, #3d2817);\">Is AI Profitable Yet?</div>\n              \n              <div style=\"font-size: 12px; color: var(--accent, #c17a4f); overflow: hidden; text-overflow: ellipsis; white-space: nowrap;\">🔗 https://isaiprofitable.com/</div>\n            </div>\n          </div>",
+    "metadata": {
+      "likes": 0,
+      "reposts": 0,
+      "replies": 0
+    }
+  },
+  {
     "id": "bluesky:3mna7n3tmwk2y",
     "type": "bluesky",
     "timestamp": "2026-06-01T13:44:51.930Z",
