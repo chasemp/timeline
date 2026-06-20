@@ -1,5 +1,37 @@
 [
   {
+    "id": "bluesky:3mooezefu3s2c",
+    "type": "bluesky",
+    "timestamp": "2026-06-19T22:23:40.243Z",
+    "title": "clearsky.app?ref=blog.ele...",
+    "summary": "clearsky.app?ref=blog.ele... — ClearSky",
+    "url": "https://bsky.app/profile/chase523.bsky.social/post/3mooezefu3s2c",
+    "embed_uri": "at://did:plc:7whslkj667kgto2x246o4stl/app.bsky.feed.post/3mooezefu3s2c",
+    "embed_cid": "bafyreieusiamq3tncs6qonbmktlrpytntwmg43jngqodawcbfgomf457ia",
+    "content_html": "<p>clearsky.app?ref=blog.ele...</p>\n          <div style=\"margin: 16px 0; border: 1px solid var(--border, #d4c4a8); border-radius: 8px; overflow: hidden; background: var(--card-bg, #fdfbf7);\">\n            <img src=\"/assets/cached-images/bluesky/43f2209cfaf37171e0d636d132ac6e5b.https:cdn.bsky.appimgfeed_thumbnailplaindid:plc:7whslkj667kgto2x246o4stlbafkreibqg4od3jvz5qzmpwyi6fprn3qfu2l5l5nadrkywr3zm2duxxf3ee\" alt=\"ClearSky\" style=\"width: 100%; height: auto; display: block; max-height: 200px; object-fit: cover;\">\n            <div style=\"padding: 12px;\">\n              <div style=\"font-weight: 600; margin-bottom: 4px; color: var(--text, #3d2817);\">ClearSky</div>\n              <div style=\"font-size: 13px; color: var(--muted, #7a6b5d); margin-bottom: 8px;\">ClearSky - Bringing information closer to you</div>\n              <div style=\"font-size: 12px; color: var(--accent, #c17a4f); overflow: hidden; text-overflow: ellipsis; white-space: nowrap;\">🔗 https://clearsky.app/?ref=blog.elenarossini.com</div>\n            </div>\n          </div>",
+    "metadata": {
+      "likes": 0,
+      "reposts": 0,
+      "replies": 0
+    }
+  },
+  {
+    "id": "bluesky:3monmzrsbtk2h",
+    "type": "bluesky",
+    "timestamp": "2026-06-19T15:14:24.478Z",
+    "title": "youtu.be/PV8krTEQIXQ?...",
+    "summary": "youtu.be/PV8krTEQIXQ?... — Randy Feltface - Ernest Hemmingway in 3 and a half mins",
+    "url": "https://bsky.app/profile/chase523.bsky.social/post/3monmzrsbtk2h",
+    "embed_uri": "at://did:plc:7whslkj667kgto2x246o4stl/app.bsky.feed.post/3monmzrsbtk2h",
+    "embed_cid": "bafyreidr3cvm3fkwk7cu366mneeasvpcfos5z6suvrgu6vcfsgdoim73zi",
+    "content_html": "<p>youtu.be/PV8krTEQIXQ?...</p>\n          <div style=\"margin: 16px 0; border: 1px solid var(--border, #d4c4a8); border-radius: 8px; overflow: hidden; background: var(--card-bg, #fdfbf7);\">\n            <img src=\"/assets/cached-images/bluesky/f0609cb7e0b512869b03b6eb2c0fcb9e.https:cdn.bsky.appimgfeed_thumbnailplaindid:plc:7whslkj667kgto2x246o4stlbafkreib7xuyus76gkk7kdsb5zxc2fgnm55nterbusmn2cvksswgt7oz4cu\" alt=\"Randy Feltface - Ernest Hemmingway in 3 and a half mins\" style=\"width: 100%; height: auto; display: block; max-height: 200px; object-fit: cover;\">\n            <div style=\"padding: 12px;\">\n              <div style=\"font-weight: 600; margin-bottom: 4px; color: var(--text, #3d2817);\">Randy Feltface - Ernest Hemmingway in 3 and a half mins</div>\n              <div style=\"font-size: 13px; color: var(--muted, #7a6b5d); margin-bottom: 8px;\">YouTube video by Joe Earle</div>\n              <div style=\"font-size: 12px; color: var(--accent, #c17a4f); overflow: hidden; text-overflow: ellipsis; white-space: nowrap;\">🔗 https://youtu.be/PV8krTEQIXQ?si=WJcO7ym9w96oZDK3</div>\n            </div>\n          </div>",
+    "metadata": {
+      "likes": 0,
+      "reposts": 0,
+      "replies": 0
+    }
+  },
+  {
     "id": "bluesky:3mokwlxxyvk2d",
     "type": "bluesky",
     "timestamp": "2026-06-18T13:27:39.398Z",
