@@ -1,5 +1,46 @@
 [
   {
+    "id": "bluesky:3msoc7fc27s2v",
+    "type": "bluesky",
+    "timestamp": "2026-08-09T19:14:07.779Z",
+    "title": "craftinginterpreters.com",
+    "summary": "craftinginterpreters.com — Crafting Interpreters",
+    "url": "https://bsky.app/profile/chase523.bsky.social/post/3msoc7fc27s2v",
+    "embed_uri": "at://did:plc:7whslkj667kgto2x246o4stl/app.bsky.feed.post/3msoc7fc27s2v",
+    "embed_cid": "bafyreia346gjurgj5jwguaoyo73woztkix6xrqtmsfbm3xtl6gnj524otm",
+    "content_html": "<p>craftinginterpreters.com</p>\n          <div style=\"margin: 16px 0; border: 1px solid var(--border, #d4c4a8); border-radius: 8px; overflow: hidden; background: var(--card-bg, #fdfbf7);\">\n            \n            <div style=\"padding: 12px;\">\n              <div style=\"font-weight: 600; margin-bottom: 4px; color: var(--text, #3d2817);\">Crafting Interpreters</div>\n              \n              <div style=\"font-size: 12px; color: var(--accent, #c17a4f); overflow: hidden; text-overflow: ellipsis; white-space: nowrap;\">🔗 https://craftinginterpreters.com/</div>\n            </div>\n          </div>",
+    "metadata": {
+      "likes": 0,
+      "reposts": 0,
+      "replies": 0
+    }
+  },
+  {
+    "id": "bluesky:3msnvdtbiks24",
+    "type": "bluesky",
+    "timestamp": "2026-08-09T15:23:57.989Z",
+    "title": "",
+    "summary": "",
+    "url": "https://bsky.app/profile/chase523.bsky.social/post/3msnvdtbiks24",
+    "embed_uri": "at://did:plc:7whslkj667kgto2x246o4stl/app.bsky.feed.post/3msnvdtbiks24",
+    "embed_cid": "bafyreibilsebdqoia5akqd6ghwz3fdtliohxpbspn64zvd75lsom7tt5mi",
+    "content_html": "<p></p><img src=\"/assets/cached-images/bluesky/29866ae2cac5daabe465210b3c2e5c0f.https:cdn.bsky.appimgfeed_fullsizeplaindid:plc:7whslkj667kgto2x246o4stlbafkreihhuyvjoizbd3bor4jxeris4hj3cafmx47ujc4hgzaigqvefdcinq\" alt=\"Image from post\" style=\"max-width: 100%; margin: 12px 0; border-radius: 8px;\">",
+    "media": {
+      "type": "image",
+      "images": [
+        "/assets/cached-images/bluesky/29866ae2cac5daabe465210b3c2e5c0f.https:cdn.bsky.appimgfeed_fullsizeplaindid:plc:7whslkj667kgto2x246o4stlbafkreihhuyvjoizbd3bor4jxeris4hj3cafmx47ujc4hgzaigqvefdcinq"
+      ],
+      "alt": [
+        ""
+      ]
+    },
+    "metadata": {
+      "likes": 0,
+      "reposts": 0,
+      "replies": 0
+    }
+  },
+  {
     "id": "bluesky:3msm5qzuzn22q",
     "type": "bluesky",
     "timestamp": "2026-08-08T22:49:11.603Z",
