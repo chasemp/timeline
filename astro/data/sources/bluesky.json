@@ -1,5 +1,267 @@
 [
   {
+    "id": "bluesky:3mt5p4ckof22h",
+    "type": "bluesky",
+    "timestamp": "2026-08-15T22:14:58.969Z",
+    "title": "Love these two together",
+    "summary": "Love these two together",
+    "url": "https://bsky.app/profile/chase523.bsky.social/post/3mt5p4ckof22h",
+    "embed_uri": "at://did:plc:7whslkj667kgto2x246o4stl/app.bsky.feed.post/3mt5p4ckof22h",
+    "embed_cid": "bafyreibsbbddg7wvlnlrkvgozahcmrkjzilw5bzlzaavkyue7aaxak7jtu",
+    "content_html": "<p>Love these two together</p>",
+    "metadata": {
+      "likes": 0,
+      "reposts": 0,
+      "replies": 0
+    }
+  },
+  {
+    "id": "bluesky:3mt5mcoam3k2y",
+    "type": "bluesky",
+    "timestamp": "2026-08-15T21:24:51.326Z",
+    "title": "The newest reader is pretty cool",
+    "summary": "The newest reader is pretty cool",
+    "url": "https://bsky.app/profile/chase523.bsky.social/post/3mt5mcoam3k2y",
+    "embed_uri": "at://did:plc:7whslkj667kgto2x246o4stl/app.bsky.feed.post/3mt5mcoam3k2y",
+    "embed_cid": "bafyreievequs4tj3wdjywgvizdkxuxeynj7fmiin3ahfm4c2djpogyg4di",
+    "content_html": "<p>The newest reader is pretty cool</p>",
+    "metadata": {
+      "likes": 2,
+      "reposts": 0,
+      "replies": 0
+    }
+  },
+  {
+    "id": "bluesky:3mt5m3l4ymc2y",
+    "type": "bluesky",
+    "timestamp": "2026-08-15T21:20:53.178Z",
+    "title": "",
+    "summary": "",
+    "url": "https://bsky.app/profile/chase523.bsky.social/post/3mt5m3l4ymc2y",
+    "embed_uri": "at://did:plc:7whslkj667kgto2x246o4stl/app.bsky.feed.post/3mt5m3l4ymc2y",
+    "embed_cid": "bafyreibcbcgppamnnasjaeqma3w4sjrbnrqbehyy5guyphk5iaq7fp67ka",
+    "content_html": "<p></p><img src=\"/assets/cached-images/bluesky/5a77df0dde3e7b98b4d0bf75ed212c41.https:cdn.bsky.appimgfeed_fullsizeplaindid:plc:7whslkj667kgto2x246o4stlbafkreiedifnnyxkc6rnegby4sfk4s2hmxndzv3u2nl2vp37bewtn2i4d4u\" alt=\"Image from post\" style=\"max-width: 100%; margin: 12px 0; border-radius: 8px;\">",
+    "media": {
+      "type": "image",
+      "images": [
+        "/assets/cached-images/bluesky/5a77df0dde3e7b98b4d0bf75ed212c41.https:cdn.bsky.appimgfeed_fullsizeplaindid:plc:7whslkj667kgto2x246o4stlbafkreiedifnnyxkc6rnegby4sfk4s2hmxndzv3u2nl2vp37bewtn2i4d4u"
+      ],
+      "alt": [
+        ""
+      ]
+    },
+    "metadata": {
+      "likes": 0,
+      "reposts": 0,
+      "replies": 0
+    }
+  },
+  {
+    "id": "bluesky:3mt5kurya3k2y",
+    "type": "bluesky",
+    "timestamp": "2026-08-15T20:59:11.743Z",
+    "title": "I want a romcom titled: When \"thousands of unread message...",
+    "summary": "I want a romcom titled: When \"thousands of unread messages\" meets \"compulsive inbox-zero\".\n\nA love story for the ages.",
+    "url": "https://bsky.app/profile/chase523.bsky.social/post/3mt5kurya3k2y",
+    "embed_uri": "at://did:plc:7whslkj667kgto2x246o4stl/app.bsky.feed.post/3mt5kurya3k2y",
+    "embed_cid": "bafyreidcbyfs2oe22ifxfwn6df5eh3jaajcecsliztgymgmtmorwizp2ca",
+    "content_html": "<p>I want a romcom titled: When \"thousands of unread messages\" meets \"compulsive inbox-zero\".<br><br>A love story for the ages.</p>",
+    "metadata": {
+      "likes": 1,
+      "reposts": 0,
+      "replies": 0
+    }
+  },
+  {
+    "id": "bluesky:3mt5kfpmiq22y",
+    "type": "bluesky",
+    "timestamp": "2026-08-15T20:50:45.944Z",
+    "title": "I'm pretty sick and tired of the constant UI/UX changes t...",
+    "summary": "I'm pretty sick and tired of the constant UI/UX changes to basic utilitarian apps and no support for an ecosystem of equal alternative front ends.  Google Photos needs to do exactly the things it d...",
+    "url": "https://bsky.app/profile/chase523.bsky.social/post/3mt5kfpmiq22y",
+    "embed_uri": "at://did:plc:7whslkj667kgto2x246o4stl/app.bsky.feed.post/3mt5kfpmiq22y",
+    "embed_cid": "bafyreiate2h2ckljdiejyj7cppv4e6kq3wlgcnq3ork2zynpksefmax7vy",
+    "content_html": "<p>I'm pretty sick and tired of the constant UI/UX changes to basic utilitarian apps and no support for an ecosystem of equal alternative front ends.  Google Photos needs to do exactly the things it did for me 5 years ago, but they must have redesigned it at least as many times.</p>",
+    "metadata": {
+      "likes": 2,
+      "reposts": 0,
+      "replies": 1
+    }
+  },
+  {
+    "id": "bluesky:3mt5jznvrwk2y",
+    "type": "bluesky",
+    "timestamp": "2026-08-15T20:44:01.487Z",
+    "title": "",
+    "summary": "",
+    "url": "https://bsky.app/profile/chase523.bsky.social/post/3mt5jznvrwk2y",
+    "embed_uri": "at://did:plc:7whslkj667kgto2x246o4stl/app.bsky.feed.post/3mt5jznvrwk2y",
+    "embed_cid": "bafyreidfdgb7xt7g64q3oem34qimtgp2j66ugq6nivmuq3tbphshk5vfqa",
+    "content_html": "<p></p>",
+    "metadata": {
+      "likes": 1,
+      "reposts": 0,
+      "replies": 0
+    }
+  },
+  {
+    "id": "bluesky:3mt54auiepk2y",
+    "type": "bluesky",
+    "timestamp": "2026-08-15T16:37:30.894Z",
+    "title": "open.spotify.com/track/5J1d24...",
+    "summary": "open.spotify.com/track/5J1d24... — I Love You Because",
+    "url": "https://bsky.app/profile/chase523.bsky.social/post/3mt54auiepk2y",
+    "embed_uri": "at://did:plc:7whslkj667kgto2x246o4stl/app.bsky.feed.post/3mt54auiepk2y",
+    "embed_cid": "bafyreib4nhdjdo7r7hfnalrze7prf2ufzsp6f2dfpn77r5hke7dhhrqnti",
+    "content_html": "<p>open.spotify.com/track/5J1d24...</p>\n          <div style=\"margin: 16px 0; border: 1px solid var(--border, #d4c4a8); border-radius: 8px; overflow: hidden; background: var(--card-bg, #fdfbf7);\">\n            <img src=\"/assets/cached-images/bluesky/c875e166e5b5dd5af2fcde71ab92149a.https:cdn.bsky.appimgfeed_thumbnailplaindid:plc:7whslkj667kgto2x246o4stlbafkreifuvb5v3sdnmiycgfrqdjmkbxit4fcbiqhbbh53ghlcltm4cg2a4y\" alt=\"I Love You Because\" style=\"width: 100%; height: auto; display: block; max-height: 200px; object-fit: cover;\">\n            <div style=\"padding: 12px;\">\n              <div style=\"font-weight: 600; margin-bottom: 4px; color: var(--text, #3d2817);\">I Love You Because</div>\n              <div style=\"font-size: 13px; color: var(--muted, #7a6b5d); margin-bottom: 8px;\">Leon Payne · A Living Legend Of Country Music · Song · 2005</div>\n              <div style=\"font-size: 12px; color: var(--accent, #c17a4f); overflow: hidden; text-overflow: ellipsis; white-space: nowrap;\">🔗 https://open.spotify.com/track/5J1d24zt3bs2KrN4p7vlwl?si=pU8UxF3BQfibdkqc3uzqKA&utm_source=copy-link&sci=spotify%3Acard-config%3A3nk8Mciey6xneQUjFlsPbm</div>\n            </div>\n          </div>",
+    "metadata": {
+      "likes": 0,
+      "reposts": 0,
+      "replies": 0
+    }
+  },
+  {
+    "id": "bluesky:3mt546otnes2y",
+    "type": "bluesky",
+    "timestamp": "2026-08-15T16:36:17.859Z",
+    "title": "www.youtube.com/watch?v=V6_F...",
+    "summary": "www.youtube.com/watch?v=V6_F... — The Highwaymen on Holmes 1991",
+    "url": "https://bsky.app/profile/chase523.bsky.social/post/3mt546otnes2y",
+    "embed_uri": "at://did:plc:7whslkj667kgto2x246o4stl/app.bsky.feed.post/3mt546otnes2y",
+    "embed_cid": "bafyreiamtzktqr3orxuxh5b6ue5mnohk5kp5gyheahow7uhl2ovxxr2ueu",
+    "content_html": "<p>www.youtube.com/watch?v=V6_F...</p>\n          <div style=\"margin: 16px 0; border: 1px solid var(--border, #d4c4a8); border-radius: 8px; overflow: hidden; background: var(--card-bg, #fdfbf7);\">\n            <img src=\"/assets/cached-images/bluesky/e93d65e6a6b8ccf6e0c0ca98da3ecd03.https:cdn.bsky.appimgfeed_thumbnailplaindid:plc:7whslkj667kgto2x246o4stlbafkreihl7g627uxnquunzicrqlyobgdw5o3s3c6hlooty3iyfpesrcwlb4\" alt=\"The Highwaymen on Holmes 1991\" style=\"width: 100%; height: auto; display: block; max-height: 200px; object-fit: cover;\">\n            <div style=\"padding: 12px;\">\n              <div style=\"font-weight: 600; margin-bottom: 4px; color: var(--text, #3d2817);\">The Highwaymen on Holmes 1991</div>\n              <div style=\"font-size: 13px; color: var(--muted, #7a6b5d); margin-bottom: 8px;\">YouTube video by kristoffersonrules</div>\n              <div style=\"font-size: 12px; color: var(--accent, #c17a4f); overflow: hidden; text-overflow: ellipsis; white-space: nowrap;\">🔗 https://www.youtube.com/watch?v=V6_FWKLuY2s</div>\n            </div>\n          </div>",
+    "metadata": {
+      "likes": 0,
+      "reposts": 0,
+      "replies": 0
+    }
+  },
+  {
+    "id": "bluesky:3mt52rkjc3224",
+    "type": "bluesky",
+    "timestamp": "2026-08-15T16:11:03.380Z",
+    "title": "",
+    "summary": "",
+    "url": "https://bsky.app/profile/chase523.bsky.social/post/3mt52rkjc3224",
+    "embed_uri": "at://did:plc:7whslkj667kgto2x246o4stl/app.bsky.feed.post/3mt52rkjc3224",
+    "embed_cid": "bafyreif3rvkcw4i3bz2jlsmzxvejvry7lovxibzerl55ov5ihujxchln4m",
+    "content_html": "<p></p><img src=\"/assets/cached-images/bluesky/ded7edc0cf1b6783347379f914883824.https:cdn.bsky.appimgfeed_fullsizeplaindid:plc:7whslkj667kgto2x246o4stlbafkreicfvpdhye264c4qoeztbl573irronmwjkljafjynq2jggmqylagwe\" alt=\"Image from post\" style=\"max-width: 100%; margin: 12px 0; border-radius: 8px;\">",
+    "media": {
+      "type": "image",
+      "images": [
+        "/assets/cached-images/bluesky/ded7edc0cf1b6783347379f914883824.https:cdn.bsky.appimgfeed_fullsizeplaindid:plc:7whslkj667kgto2x246o4stlbafkreicfvpdhye264c4qoeztbl573irronmwjkljafjynq2jggmqylagwe"
+      ],
+      "alt": [
+        ""
+      ]
+    },
+    "metadata": {
+      "likes": 0,
+      "reposts": 0,
+      "replies": 0
+    }
+  },
+  {
+    "id": "bluesky:3mt52c7owkk24",
+    "type": "bluesky",
+    "timestamp": "2026-08-15T16:02:28.712Z",
+    "title": "",
+    "summary": "",
+    "url": "https://bsky.app/profile/chase523.bsky.social/post/3mt52c7owkk24",
+    "embed_uri": "at://did:plc:7whslkj667kgto2x246o4stl/app.bsky.feed.post/3mt52c7owkk24",
+    "embed_cid": "bafyreicowgwru3o5o3vlxxa3bbrisq3lwsj3ulcbjuhwgx4o2v4w4sdlpm",
+    "content_html": "<p></p><img src=\"/assets/cached-images/bluesky/c298b557e48a03c519c7ed42e6b7154f.https:cdn.bsky.appimgfeed_fullsizeplaindid:plc:7whslkj667kgto2x246o4stlbafkreidydiu62qdbrzpgowv7kml7xquhhbdsbwmo7pt7n7pznnaqrm7wd4\" alt=\"Image from post\" style=\"max-width: 100%; margin: 12px 0; border-radius: 8px;\"><img src=\"/assets/cached-images/bluesky/9360005ab0e7c320804f4511b876c1bc.https:cdn.bsky.appimgfeed_fullsizeplaindid:plc:7whslkj667kgto2x246o4stlbafkreibeqry4vx2q4kp576ewca64lknuwomp6dvl6bhdgs5zoh7yhnnkmq\" alt=\"Image from post\" style=\"max-width: 100%; margin: 12px 0; border-radius: 8px;\">",
+    "media": {
+      "type": "image",
+      "images": [
+        "/assets/cached-images/bluesky/c298b557e48a03c519c7ed42e6b7154f.https:cdn.bsky.appimgfeed_fullsizeplaindid:plc:7whslkj667kgto2x246o4stlbafkreidydiu62qdbrzpgowv7kml7xquhhbdsbwmo7pt7n7pznnaqrm7wd4",
+        "/assets/cached-images/bluesky/9360005ab0e7c320804f4511b876c1bc.https:cdn.bsky.appimgfeed_fullsizeplaindid:plc:7whslkj667kgto2x246o4stlbafkreibeqry4vx2q4kp576ewca64lknuwomp6dvl6bhdgs5zoh7yhnnkmq"
+      ],
+      "alt": [
+        "",
+        ""
+      ]
+    },
+    "metadata": {
+      "likes": 0,
+      "reposts": 0,
+      "replies": 0
+    }
+  },
+  {
+    "id": "bluesky:3mt4xf6t53c24",
+    "type": "bluesky",
+    "timestamp": "2026-08-15T15:10:27.240Z",
+    "title": "Damn, this is how it's done",
+    "summary": "Damn, this is how it's done\n\nwww.youtube.com/watch?v=_BSC... — ''SOMETHING ON YOUR MIND'' - SAMANTHA FISH BAND,   march 30, 2013",
+    "url": "https://bsky.app/profile/chase523.bsky.social/post/3mt4xf6t53c24",
+    "embed_uri": "at://did:plc:7whslkj667kgto2x246o4stl/app.bsky.feed.post/3mt4xf6t53c24",
+    "embed_cid": "bafyreieienxeufq2v4lk5573ytitzqr22fdjsdvk2y3aeqbjduq42q7urm",
+    "content_html": "<p>Damn, this is how it's done<br><br>www.youtube.com/watch?v=_BSC...</p>\n          <div style=\"margin: 16px 0; border: 1px solid var(--border, #d4c4a8); border-radius: 8px; overflow: hidden; background: var(--card-bg, #fdfbf7);\">\n            <img src=\"/assets/cached-images/bluesky/20df7335a9bd57fe14a8cf6feb8814cf.https:cdn.bsky.appimgfeed_thumbnailplaindid:plc:7whslkj667kgto2x246o4stlbafkreihu5x67kz27kmg6wgceh5j4avhh6exiwbzdvj45rf55l6y7tjzh6q\" alt=\"''SOMETHING ON YOUR MIND'' - SAMANTHA FISH BAND,   march 30, 2013\" style=\"width: 100%; height: auto; display: block; max-height: 200px; object-fit: cover;\">\n            <div style=\"padding: 12px;\">\n              <div style=\"font-weight: 600; margin-bottom: 4px; color: var(--text, #3d2817);\">''SOMETHING ON YOUR MIND'' - SAMANTHA FISH BAND,   march 30, 2013</div>\n              <div style=\"font-size: 13px; color: var(--muted, #7a6b5d); margin-bottom: 8px;\">YouTube video by bluzdudemi</div>\n              <div style=\"font-size: 12px; color: var(--accent, #c17a4f); overflow: hidden; text-overflow: ellipsis; white-space: nowrap;\">🔗 https://www.youtube.com/watch?v=_BSCS_hl0iA</div>\n            </div>\n          </div>",
+    "metadata": {
+      "likes": 0,
+      "reposts": 0,
+      "replies": 0
+    }
+  },
+  {
+    "id": "bluesky:3mt4wzixzqk24",
+    "type": "bluesky",
+    "timestamp": "2026-08-15T15:03:55.234Z",
+    "title": "And, among other things, led to this.  Art is often cumul...",
+    "summary": "And, among other things, led to this.  Art is often cumulative.\n\nwww.youtube.com/watch?v=GL9r...",
+    "url": "https://bsky.app/profile/chase523.bsky.social/post/3mt4wzixzqk24",
+    "embed_uri": "at://did:plc:7whslkj667kgto2x246o4stl/app.bsky.feed.post/3mt4wzixzqk24",
+    "embed_cid": "bafyreibjy2tg3rdmfmf6cq6p6gik2mfxmcpvrnysfh3in7eg4pzmd3kcxy",
+    "content_html": "<p>And, among other things, led to this.  Art is often cumulative.<br><br>www.youtube.com/watch?v=GL9r...</p>",
+    "metadata": {
+      "likes": 0,
+      "reposts": 0,
+      "replies": 0
+    }
+  },
+  {
+    "id": "bluesky:3mt4wucyvos24",
+    "type": "bluesky",
+    "timestamp": "2026-08-15T15:01:01.199Z",
+    "title": "This is great.",
+    "summary": "This is great.",
+    "url": "https://bsky.app/profile/chase523.bsky.social/post/3mt4wucyvos24",
+    "embed_uri": "at://did:plc:7whslkj667kgto2x246o4stl/app.bsky.feed.post/3mt4wucyvos24",
+    "embed_cid": "bafyreicqykrppn3phkbmgwmncy6ufuzkdk4vq4lpj7xijeuuwf4ekjchui",
+    "content_html": "<p>This is great.</p>",
+    "metadata": {
+      "likes": 1,
+      "reposts": 0,
+      "replies": 0
+    }
+  },
+  {
+    "id": "bluesky:3mt4uexrdxc2u",
+    "type": "bluesky",
+    "timestamp": "2026-08-15T14:16:38.613Z",
+    "title": "She was pretty damn great, J.D. the opener as well.",
+    "summary": "She was pretty damn great, J.D. the opener as well.",
+    "url": "https://bsky.app/profile/chase523.bsky.social/post/3mt4uexrdxc2u",
+    "embed_uri": "at://did:plc:7whslkj667kgto2x246o4stl/app.bsky.feed.post/3mt4uexrdxc2u",
+    "embed_cid": "bafyreicd2hhjmv3gmrd6qyko2ylijkifco7qpbhlns6nys6oh7de3ffc7m",
+    "content_html": "<p>She was pretty damn great, J.D. the opener as well.</p><img src=\"/assets/cached-images/bluesky/1ccf216a162330fdf4f7159f1632a61c.https:cdn.bsky.appimgfeed_fullsizeplaindid:plc:7whslkj667kgto2x246o4stlbafkreial7qakj7c5r3yeiei2jyybiuhmawt3ywq2a6z5toefgntln246py\" alt=\"Image from post\" style=\"max-width: 100%; margin: 12px 0; border-radius: 8px;\">",
+    "media": {
+      "type": "image",
+      "images": [
+        "/assets/cached-images/bluesky/1ccf216a162330fdf4f7159f1632a61c.https:cdn.bsky.appimgfeed_fullsizeplaindid:plc:7whslkj667kgto2x246o4stlbafkreial7qakj7c5r3yeiei2jyybiuhmawt3ywq2a6z5toefgntln246py"
+      ],
+      "alt": [
+        ""
+      ]
+    },
+    "metadata": {
+      "likes": 1,
+      "reposts": 0,
+      "replies": 0
+    }
+  },
+  {
     "id": "bluesky:3mt3ceoi4gk2h",
     "type": "bluesky",
     "timestamp": "2026-08-14T23:21:41.786Z",
