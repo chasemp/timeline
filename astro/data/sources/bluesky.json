@@ -1,5 +1,167 @@
 [
   {
+    "id": "bluesky:3muglgh7vo22f",
+    "type": "bluesky",
+    "timestamp": "2026-09-01T04:28:13.712Z",
+    "title": "I like that I can edit interaction settings on a post dow...",
+    "summary": "I like that I can edit interaction settings on a post down the road after posting.",
+    "url": "https://bsky.app/profile/chase523.bsky.social/post/3muglgh7vo22f",
+    "embed_uri": "at://did:plc:7whslkj667kgto2x246o4stl/app.bsky.feed.post/3muglgh7vo22f",
+    "embed_cid": "bafyreidv5yt7apwqvlkraladqpdm7ole3nbarlf3jmydx2zvyuxxydu4ki",
+    "content_html": "<p>I like that I can edit interaction settings on a post down the road after posting.</p>",
+    "metadata": {
+      "likes": 0,
+      "reposts": 0,
+      "replies": 0
+    }
+  },
+  {
+    "id": "bluesky:3mugl7n67js2f",
+    "type": "bluesky",
+    "timestamp": "2026-09-01T04:24:25.067Z",
+    "title": "It's really neat that you can detach your post from someo...",
+    "summary": "It's really neat that you can detach your post from someone else's use of it.",
+    "url": "https://bsky.app/profile/chase523.bsky.social/post/3mugl7n67js2f",
+    "embed_uri": "at://did:plc:7whslkj667kgto2x246o4stl/app.bsky.feed.post/3mugl7n67js2f",
+    "embed_cid": "bafyreie5u3dpaoll5ljovabmm7mzxxpvtdfs47qgfwfvqsk32yjxcvoamu",
+    "content_html": "<p>It's really neat that you can detach your post from someone else's use of it.</p>",
+    "metadata": {
+      "likes": 0,
+      "reposts": 0,
+      "replies": 0
+    }
+  },
+  {
+    "id": "bluesky:3mugkvbtx322f",
+    "type": "bluesky",
+    "timestamp": "2026-09-01T04:18:37.653Z",
+    "title": "Ok, so you can report your own repost, but only if it's n...",
+    "summary": "Ok, so you can report your own repost, but only if it's not a repost of yourself originally.\n\nJournal\n\nDay 1: reporting myself has not been the cake walk I assumed",
+    "url": "https://bsky.app/profile/chase523.bsky.social/post/3mugkvbtx322f",
+    "embed_uri": "at://did:plc:7whslkj667kgto2x246o4stl/app.bsky.feed.post/3mugkvbtx322f",
+    "embed_cid": "bafyreibi5msnopaazqj5s647nkalkgqx5fxkzbh2ggm53ke2corjxfhoeu",
+    "content_html": "<p>Ok, so you can report your own repost, but only if it's not a repost of yourself originally.<br><br>Journal<br><br>Day 1: reporting myself has not been the cake walk I assumed</p>",
+    "metadata": {
+      "likes": 1,
+      "reposts": 0,
+      "replies": 0
+    }
+  },
+  {
+    "id": "bluesky:3mugkqsdlyk2f",
+    "type": "bluesky",
+    "timestamp": "2026-09-01T04:16:07.170Z",
+    "title": "Highly offensive good sir",
+    "summary": "Highly offensive good sir",
+    "url": "https://bsky.app/profile/chase523.bsky.social/post/3mugkqsdlyk2f",
+    "embed_uri": "at://did:plc:7whslkj667kgto2x246o4stl/app.bsky.feed.post/3mugkqsdlyk2f",
+    "embed_cid": "bafyreibh3oz3ayxay4ri5lmt62jad7fbpm4rln2nat2h4w36i67byzggbe",
+    "content_html": "<p>Highly offensive good sir</p>",
+    "metadata": {
+      "likes": 0,
+      "reposts": 0,
+      "replies": 0
+    }
+  },
+  {
+    "id": "bluesky:3mugkpg2ffs2f",
+    "type": "bluesky",
+    "timestamp": "2026-09-01T04:15:20.731Z",
+    "title": "post of some nonsense",
+    "summary": "post of some nonsense",
+    "url": "https://bsky.app/profile/chase523.bsky.social/post/3mugkpg2ffs2f",
+    "embed_uri": "at://did:plc:7whslkj667kgto2x246o4stl/app.bsky.feed.post/3mugkpg2ffs2f",
+    "embed_cid": "bafyreibbptvml6zbdc6kspr5bingvejkew2y3yrgfkcmswsmxfsr4lz23i",
+    "content_html": "<p>post of some nonsense</p>",
+    "metadata": {
+      "likes": 0,
+      "reposts": 0,
+      "replies": 0
+    }
+  },
+  {
+    "id": "bluesky:3mugixxfyvc2q",
+    "type": "bluesky",
+    "timestamp": "2026-09-01T03:44:19.889Z",
+    "title": "My eye was caught by a feel good clip from the movie 'You...",
+    "summary": "My eye was caught by a feel good clip from the movie 'You're Not You' over lunch.  \"Oh, I'll watch a few minutes\". \n\nLight hearted comedy?  No. \n\nMasterful drama that had me choking up while config...",
+    "url": "https://bsky.app/profile/chase523.bsky.social/post/3mugixxfyvc2q",
+    "embed_uri": "at://did:plc:7whslkj667kgto2x246o4stl/app.bsky.feed.post/3mugixxfyvc2q",
+    "embed_cid": "bafyreiednl5abppoo4ejx245tmresbropp56dq6r3x4gfssiohfwxb7cp4",
+    "content_html": "<p>My eye was caught by a feel good clip from the movie 'You're Not You' over lunch.  \"Oh, I'll watch a few minutes\". <br><br>Light hearted comedy?  No. <br><br>Masterful drama that had me choking up while configuring Jira in the afternoon?  Yes.  <br><br>The movie is an emotional workout.  I'm tired. But art.</p>",
+    "metadata": {
+      "likes": 0,
+      "reposts": 0,
+      "replies": 0
+    }
+  },
+  {
+    "id": "bluesky:3mugijczi3c2q",
+    "type": "bluesky",
+    "timestamp": "2026-09-01T03:36:08.745Z",
+    "title": "#booksky",
+    "summary": "#booksky\n\nI feel funny saying this, as I would never mean to insult the man, but I thought John Cleese was my favorite #MontyPython until I read Eric Idles autobiography and realized so many of the...",
+    "url": "https://bsky.app/profile/chase523.bsky.social/post/3mugijczi3c2q",
+    "embed_uri": "at://did:plc:7whslkj667kgto2x246o4stl/app.bsky.feed.post/3mugijczi3c2q",
+    "embed_cid": "bafyreig55ovzx76vs64ykpo7u446gguykrjadbmus2mol22fht4iek6yqe",
+    "content_html": "<p>#booksky<br><br>I feel funny saying this, as I would never mean to insult the man, but I thought John Cleese was my favorite #MontyPython until I read Eric Idles autobiography and realized so many of the things I have loved are from his mind.<br><br>Life is, after all, a piece of shit, when you look at it.</p>",
+    "metadata": {
+      "likes": 4,
+      "reposts": 0,
+      "replies": 0
+    }
+  },
+  {
+    "id": "bluesky:3muggtchtx22q",
+    "type": "bluesky",
+    "timestamp": "2026-09-01T03:05:56.216Z",
+    "title": "",
+    "summary": "",
+    "url": "https://bsky.app/profile/chase523.bsky.social/post/3muggtchtx22q",
+    "embed_uri": "at://did:plc:7whslkj667kgto2x246o4stl/app.bsky.feed.post/3muggtchtx22q",
+    "embed_cid": "bafyreialjnrth5lks3drxuoj5c34tkvzcxdpfaodoqhgadneky2dlsa6va",
+    "content_html": "<p></p><img src=\"/assets/cached-images/bluesky/02ec2840f9a12534310b6087db18ed9b.https:cdn.bsky.appimgfeed_fullsizeplaindid:plc:7whslkj667kgto2x246o4stlbafkreihp2up7axxara5j66ybuzvps4zxs5md5cewa6qoni2dfi6zgefzs4\" alt=\"Image from post\" style=\"max-width: 100%; margin: 12px 0; border-radius: 8px;\">",
+    "media": {
+      "type": "image",
+      "images": [
+        "/assets/cached-images/bluesky/02ec2840f9a12534310b6087db18ed9b.https:cdn.bsky.appimgfeed_fullsizeplaindid:plc:7whslkj667kgto2x246o4stlbafkreihp2up7axxara5j66ybuzvps4zxs5md5cewa6qoni2dfi6zgefzs4"
+      ],
+      "alt": [
+        ""
+      ]
+    },
+    "metadata": {
+      "likes": 0,
+      "reposts": 0,
+      "replies": 0
+    }
+  },
+  {
+    "id": "bluesky:3muga2nsbe22u",
+    "type": "bluesky",
+    "timestamp": "2026-09-01T01:04:46.776Z",
+    "title": "",
+    "summary": "",
+    "url": "https://bsky.app/profile/chase523.bsky.social/post/3muga2nsbe22u",
+    "embed_uri": "at://did:plc:7whslkj667kgto2x246o4stl/app.bsky.feed.post/3muga2nsbe22u",
+    "embed_cid": "bafyreiclomqkk7oc6rewkifk3vsv2ngl4ayvjlttk3oruvcl2hotttgidi",
+    "content_html": "<p></p><img src=\"/assets/cached-images/bluesky/4f4b8e4a1eb95dca3625376d7897e3cb.https:cdn.bsky.appimgfeed_fullsizeplaindid:plc:7whslkj667kgto2x246o4stlbafkreiemy7s3dexy2jxfhultwmhyiewhidjgi4fe4sr7o2n4haxahxt5wa\" alt=\"Image from post\" style=\"max-width: 100%; margin: 12px 0; border-radius: 8px;\">",
+    "media": {
+      "type": "image",
+      "images": [
+        "/assets/cached-images/bluesky/4f4b8e4a1eb95dca3625376d7897e3cb.https:cdn.bsky.appimgfeed_fullsizeplaindid:plc:7whslkj667kgto2x246o4stlbafkreiemy7s3dexy2jxfhultwmhyiewhidjgi4fe4sr7o2n4haxahxt5wa"
+      ],
+      "alt": [
+        ""
+      ]
+    },
+    "metadata": {
+      "likes": 0,
+      "reposts": 0,
+      "replies": 0
+    }
+  },
+  {
     "id": "bluesky:3mudkbb4lqs2n",
     "type": "bluesky",
     "timestamp": "2026-08-30T23:29:26.580Z",
