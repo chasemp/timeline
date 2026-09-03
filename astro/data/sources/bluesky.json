@@ -1,5 +1,46 @@
 [
   {
+    "id": "bluesky:3mukxt6t26c2q",
+    "type": "bluesky",
+    "timestamp": "2026-09-02T22:20:44.965Z",
+    "title": "@blackskyweb.xyz is building an interconnected suite of p...",
+    "summary": "@blackskyweb.xyz is building an interconnected suite of products reshaping how people connect, participate, organize, and transact online.\n\nWe’re looking for a Head of Design to lead and shape how our products and brands look, feel, and work.\n\nplease circulate widely. blackskyweb.xyz/about/jobs/h... — Head of Design",
+    "url": "https://bsky.app/profile/rude1.blacksky.team/post/3mukxt6t26c2q",
+    "embed_uri": "at://did:plc:w4xbfzo7kqfes5zb7r6qv3rw/app.bsky.feed.post/3mukxt6t26c2q",
+    "embed_cid": "bafyreigyulqrik2kpso23544mcvo5ywff5dvt6f6zx3ef3icbu6iu54rg4",
+    "content_html": "<p>@blackskyweb.xyz is building an interconnected suite of products reshaping how people connect, participate, organize, and transact online.<br><br>We’re looking for a Head of Design to lead and shape how our products and brands look, feel, and work.<br><br>please circulate widely. blackskyweb.xyz/about/jobs/h...</p>\n          <div style=\"margin: 16px 0; border: 1px solid var(--border, #d4c4a8); border-radius: 8px; overflow: hidden; background: var(--card-bg, #fdfbf7);\">\n            \n            <div style=\"padding: 12px;\">\n              <div style=\"font-weight: 600; margin-bottom: 4px; color: var(--text, #3d2817);\">Head of Design</div>\n              <div style=\"font-size: 13px; color: var(--muted, #7a6b5d); margin-bottom: 8px;\">Product, brand, and visual identity About Blacksky Algorithms Blacksky Algorithms is building an interconnected suite of products reshaping how people connect, participate, organize, and transact onli...</div>\n              <div style=\"font-size: 12px; color: var(--accent, #c17a4f); overflow: hidden; text-overflow: ellipsis; white-space: nowrap;\">🔗 https://blackskyweb.xyz/about/jobs/head-of-design/</div>\n            </div>\n          </div>",
+    "metadata": {
+      "likes": 175,
+      "reposts": 137,
+      "replies": 3
+    }
+  },
+  {
+    "id": "bluesky:3muj6ao7l3k25",
+    "type": "bluesky",
+    "timestamp": "2026-09-02T05:10:20.276Z",
+    "title": "",
+    "summary": "",
+    "url": "https://bsky.app/profile/chase523.bsky.social/post/3muj6ao7l3k25",
+    "embed_uri": "at://did:plc:7whslkj667kgto2x246o4stl/app.bsky.feed.post/3muj6ao7l3k25",
+    "embed_cid": "bafyreiajxacxhn4qjrhvundhljfeqamy2jbzkfsjbim4qzesguvg6tzp5q",
+    "content_html": "<p></p><img src=\"/assets/cached-images/bluesky/511c3b1971ed8b14fe7984a8e2d1dc78.https:cdn.bsky.appimgfeed_fullsizeplaindid:plc:7whslkj667kgto2x246o4stlbafkreie34rqwknybxoujs2ggtjz5xg4vbtiqntkwr2dkn3wtolp54ln4qa\" alt=\"Image from post\" style=\"max-width: 100%; margin: 12px 0; border-radius: 8px;\">",
+    "media": {
+      "type": "image",
+      "images": [
+        "/assets/cached-images/bluesky/511c3b1971ed8b14fe7984a8e2d1dc78.https:cdn.bsky.appimgfeed_fullsizeplaindid:plc:7whslkj667kgto2x246o4stlbafkreie34rqwknybxoujs2ggtjz5xg4vbtiqntkwr2dkn3wtolp54ln4qa"
+      ],
+      "alt": [
+        ""
+      ]
+    },
+    "metadata": {
+      "likes": 0,
+      "reposts": 0,
+      "replies": 0
+    }
+  },
+  {
     "id": "bluesky:3muinebej2s2a",
     "type": "bluesky",
     "timestamp": "2026-09-02T00:08:07.423Z",
