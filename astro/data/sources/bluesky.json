@@ -1,5 +1,46 @@
 [
   {
+    "id": "bluesky:3n25yfoe5qk2k",
+    "type": "bluesky",
+    "timestamp": "2026-11-13T02:57:38.399Z",
+    "title": "",
+    "summary": "",
+    "url": "https://bsky.app/profile/chase523.bsky.social/post/3n25yfoe5qk2k",
+    "embed_uri": "at://did:plc:7whslkj667kgto2x246o4stl/app.bsky.feed.post/3n25yfoe5qk2k",
+    "embed_cid": "bafyreihv6nc6dnghfwggni3cl4s3mm6aocrbxae2ki6jksvyrgqxdpipru",
+    "content_html": "<p></p><img src=\"/assets/cached-images/bluesky/2e273effcb51cc40011cbc0525baef3d.https:cdn.bsky.appimgfeed_fullsizeplaindid:plc:7whslkj667kgto2x246o4stlbafkreiaf6fbtijbwis2pktxtgjh2ffl6wqwhemgsqobt2ybak47siyg4rm\" alt=\"Image from post\" style=\"max-width: 100%; margin: 12px 0; border-radius: 8px;\">",
+    "media": {
+      "type": "image",
+      "images": [
+        "/assets/cached-images/bluesky/2e273effcb51cc40011cbc0525baef3d.https:cdn.bsky.appimgfeed_fullsizeplaindid:plc:7whslkj667kgto2x246o4stlbafkreiaf6fbtijbwis2pktxtgjh2ffl6wqwhemgsqobt2ybak47siyg4rm"
+      ],
+      "alt": [
+        ""
+      ]
+    },
+    "metadata": {
+      "likes": 0,
+      "reposts": 0,
+      "replies": 0
+    }
+  },
+  {
+    "id": "bluesky:3n25xnmiykc2k",
+    "type": "bluesky",
+    "timestamp": "2026-11-13T02:44:11.155Z",
+    "title": "www.youtube.com/watch?v=C48h...",
+    "summary": "www.youtube.com/watch?v=C48h... — Alan Watts - Myth of Myself Full Lecture Part 1 - Alan Watts Organization Official",
+    "url": "https://bsky.app/profile/chase523.bsky.social/post/3n25xnmiykc2k",
+    "embed_uri": "at://did:plc:7whslkj667kgto2x246o4stl/app.bsky.feed.post/3n25xnmiykc2k",
+    "embed_cid": "bafyreihsu2l22sw4qbwwg5ddwxqkptp6irlfdolrqptwkhu75gdzk7e5zu",
+    "content_html": "<p>www.youtube.com/watch?v=C48h...</p>\n          <div style=\"margin: 16px 0; border: 1px solid var(--border, #d4c4a8); border-radius: 8px; overflow: hidden; background: var(--card-bg, #fdfbf7);\">\n            <img src=\"/assets/cached-images/bluesky/79fe863db57d4a2dc0c52a511748927e.https:cdn.bsky.appimgfeed_thumbnailplaindid:plc:7whslkj667kgto2x246o4stlbafkreiaqyag34hb2s2xhvkue73udmvxpy63gasrlznuy7imq6yox4w6kqq\" alt=\"Alan Watts - Myth of Myself Full Lecture Part 1 - Alan Watts Organization Official\" style=\"width: 100%; height: auto; display: block; max-height: 200px; object-fit: cover;\">\n            <div style=\"padding: 12px;\">\n              <div style=\"font-weight: 600; margin-bottom: 4px; color: var(--text, #3d2817);\">Alan Watts - Myth of Myself Full Lecture Part 1 - Alan Watts Organization Official</div>\n              <div style=\"font-size: 13px; color: var(--muted, #7a6b5d); margin-bottom: 8px;\">YouTube video by Official Alan Watts Org</div>\n              <div style=\"font-size: 12px; color: var(--accent, #c17a4f); overflow: hidden; text-overflow: ellipsis; white-space: nowrap;\">🔗 https://www.youtube.com/watch?v=C48hI9Qb2q4</div>\n            </div>\n          </div>",
+    "metadata": {
+      "likes": 0,
+      "reposts": 0,
+      "replies": 0
+    }
+  },
+  {
     "id": "bluesky:3mzzbgo6g5c2g",
     "type": "bluesky",
     "timestamp": "2026-11-11T05:55:56.743Z",
